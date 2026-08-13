@@ -1,0 +1,18 @@
+schema: unilab.robot-model/v1
+model_id: dobot-cr5
+source:
+  repository: uni-lab-assets/robots/dobot/ros2_v4
+  path: dobot_rviz/urdf/cr5_robot.urdf
+  exact_ref: c3aa880cbfc58734bc6dd22069a122a51d56fc9c
+  sha256: c4ef7e9cc781a95fd1d161ec5c35d1ccb2597194dcad77f13cf992fd863b014a
+kinematic_joints:
+  - cr5_joint_1
+  - cr5_joint_2
+  - cr5_joint_3
+  - cr5_joint_4
+  - cr5_joint_5
+  - cr5_joint_6
+forbidden_joints:
+  - arm_base_joint
+moveit_group: cr5_arm
+rviz_required: false

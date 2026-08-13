@@ -10,6 +10,7 @@
 ```text
 unilab-robot-contracts     L0：指令、后端、观测、硬件配置和点位解析合同
 unilab-arm-cr7             L1：CR7 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
+unilab-arm-cr5             L1：CR5 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
 unilab-end-effector-sim    L1：夹爪与快换工具的可替换仿真 Adapter
 unilab-rail-linear         L1：单轴导轨型号、行程及 PLC/仿真 Adapter
 unilab-rail-mounted-arm    L2：厂商无关 rail-then-arm 协调、互锁和端点租约
