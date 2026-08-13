@@ -11,6 +11,8 @@ from unilab_robot_contracts import (
     CommandJournal,
     HardwareProfile,
     JointSpecification,
+    PLCAdapterProfile,
+    PLCProgramSet,
     ResolvedMotionTarget,
     RobotExecutionBackend,
     SafetyInterlockObservation,
@@ -97,21 +99,25 @@ def create_plc_backend(
     """把领域部署资产组合成 CR5 PLC Backend。"""
 
     common = adapter_data["arm"]
+    program_set = PLCProgramSet.from_mapping(program_data)
+    adapter_profile = PLCAdapterProfile.from_mapping(
+        adapter_data,
+        program_set=program_set,
+    )
     programs = {
         str(target_ref): PLCProgramBinding(
-            program_number=int(program["program_number"]),
+            program_number=adapter_profile.programs[str(target_ref)].selector,
             command_variable=str(common["command_variable"]),
             write_done_variable=str(common["write_done_variable"]),
             completion_variable=str(common["completion_variable"]),
             home_variable=str(common["home_variable"]),
             write_allowed_variable=str(common["write_allowed_variable"]),
-            parameter_variables={
-                str(name): str(value)
-                for name, value in program.get("parameter_variables", {}).items()
-            },
+            parameter_variables=adapter_profile.programs[
+                str(target_ref)
+            ].parameter_variables,
             timeout_s=float(common.get("timeout_s", 300.0)),
         )
-        for target_ref, program in program_data["programs"].items()
+        for target_ref in program_set.programs
     }
     return PLCBackend(
         port=port,
@@ -147,6 +153,8 @@ def create_moveit_commissioning_adapter(
     point_set_revision: str,
     hardware_profile_digest: str,
     tool_context_digest: str,
+    commissioning_velocity_limit: float,
+    commissioning_acceleration_limit: float,
 ) -> MoveItCommissioningAdapter:
     """创建与生产后端共享 MoveIt2 客户端的统一维护调试 Adapter。"""
 
@@ -160,6 +168,8 @@ def create_moveit_commissioning_adapter(
         point_set_revision=point_set_revision,
         hardware_profile_digest=hardware_profile_digest,
         tool_context_digest=tool_context_digest,
+        commissioning_velocity_limit=commissioning_velocity_limit,
+        commissioning_acceleration_limit=commissioning_acceleration_limit,
     )
 
 
@@ -167,6 +177,7 @@ def create_tcp_sdk_backend(
     *,
     port: Any,
     endpoint_ids: frozenset[str],
+    targets: Mapping[str, ResolvedMotionTarget],
 ) -> TcpSdkBackend:
     """创建受限的 CR5 TCP/SDK 执行后端。
 
@@ -175,4 +186,4 @@ def create_tcp_sdk_backend(
     异常：端口通信和完成见证错误由后端在执行时按 UNKNOWN 语义处理。
     """
 
-    return TcpSdkBackend(port=port, endpoint_ids=endpoint_ids)
+    return TcpSdkBackend(port=port, endpoint_ids=endpoint_ids, targets=targets)

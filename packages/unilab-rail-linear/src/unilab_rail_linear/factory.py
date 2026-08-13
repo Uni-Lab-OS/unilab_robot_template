@@ -18,6 +18,7 @@ MODULE_VERSION = "0.1.0"
 class RailModelDescriptor:
     """组合模型所需的型号固有轴和挂载点名称。"""
 
+    model_ref: str
     axis_joint: str
     base_link: str
     carriage_link: str
@@ -25,6 +26,7 @@ class RailModelDescriptor:
 
 
 MODEL_DESCRIPTOR = RailModelDescriptor(
+    model_ref="package://unilab_rail_linear/models/model.yaml",
     axis_joint="rail_joint",
     base_link="rail_base",
     carriage_link="rail_carriage",

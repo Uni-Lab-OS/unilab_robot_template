@@ -23,6 +23,7 @@ from unilab_robot_contracts import (
     ActionKind,
     BackendKind,
     BackendStatus,
+    CartesianPose,
     CommandRejectedError,
     CommandResult,
     CommandState,
@@ -36,11 +37,10 @@ from unilab_robot_contracts import (
     ObservationState,
     PhysicalSettlementEvidence,
     RailStateObservation,
-    RobotCommand,
-    SafetyInterlockObservation,
-    CartesianPose,
     ResolvedCartesianTarget,
     ResolvedJointTarget,
+    RobotCommand,
+    SafetyInterlockObservation,
     SQLiteCommandJournal,
 )
 
@@ -69,6 +69,8 @@ def _profile(*, endpoints: frozenset[str] | None = None) -> HardwareProfile:
         backend=BackendKind.PLC,
         endpoint_ids=endpoints or frozenset({"arm:cr7", "rail:a"}),
         interlock_mode=InterlockMode.VALIDATED_HARDWARE_INTERLOCK,
+        commissioning_velocity_limit=0.25,
+        commissioning_acceleration_limit=0.25,
     )
 
 
@@ -149,6 +151,8 @@ def test_production_profile_rejects_observed_only_interlock() -> None:
             backend=BackendKind.PLC,
             endpoint_ids=frozenset({"arm:cr7"}),
             interlock_mode=InterlockMode.OBSERVED_ONLY,
+            commissioning_velocity_limit=0.25,
+            commissioning_acceleration_limit=0.25,
         )
 
 
@@ -647,7 +651,16 @@ def test_tcp_sdk_backend_uses_the_same_robot_command() -> None:
     """TCP/SDK 后端直接复用 RobotCommand，不引入后端特化公开动作。"""
 
     port = _SDKPort()
-    backend = TcpSdkBackend(port=port, endpoint_ids=frozenset({"arm:cr7"}))
+    target = ResolvedJointTarget(
+        "S04.pick.approach",
+        (0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ("S04.pick.approach",),
+    )
+    backend = TcpSdkBackend(
+        port=port,
+        endpoint_ids=frozenset({"arm:cr7"}),
+        targets={target.target_ref: target},
+    )
 
     result = backend.execute(_command("sdk-1"))
 
@@ -672,9 +685,37 @@ def test_tcp_sdk_backend_rejects_unbound_success_receipt_as_unknown() -> None:
             del target_ref, parameters, command_id
             return {"state": "succeeded", "completed": True}
 
+    target = ResolvedJointTarget(
+        "S04.pick.approach",
+        (0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ("S04.pick.approach",),
+    )
     backend = TcpSdkBackend(
-        port=UnboundReceiptPort(), endpoint_ids=frozenset({"arm:cr7"})
+        port=UnboundReceiptPort(),
+        endpoint_ids=frozenset({"arm:cr7"}),
+        targets={target.target_ref: target},
     )
 
     with pytest.raises(DispatchUnknownError, match="command_id 不匹配"):
         backend.execute(_command("sdk-unbound"))
+
+
+def test_tcp_sdk_backend_exposes_confirmed_controlled_stop() -> None:
+    """TCP/SDK 后端必须把厂家停止确认投影为同一命令的 canceled。"""
+
+    target = ResolvedJointTarget(
+        "S04.pick.approach",
+        (0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ("S04.pick.approach",),
+    )
+    backend = TcpSdkBackend(
+        port=_SDKPort(),
+        endpoint_ids=frozenset({"arm:cr7"}),
+        targets={target.target_ref: target},
+    )
+
+    result = backend.request_stop("sdk-stop", "维护人员请求受控停止")
+
+    assert result.command_id == "sdk-stop"
+    assert result.state is CommandState.CANCELED
+    assert backend.reconcile("sdk-stop") == result

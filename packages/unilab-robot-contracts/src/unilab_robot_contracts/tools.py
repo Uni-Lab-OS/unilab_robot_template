@@ -54,6 +54,10 @@ class ToolDefinition:
             digest=digest,
             mount_to_tcp=self.mount_to_tcp,
             attachment_generation=attachment_generation,
+            planning_scene={
+                "collision_asset_ref": self.collision_asset_ref,
+                "model_digest": self.model_digest,
+            },
         )
 
 
@@ -99,9 +103,7 @@ class EndEffectorPort(Protocol):
     def observe(self) -> GripperObservation:
         """读取夹爪和负载观测。"""
 
-    def grip(
-        self, command_id: str, *, payload_profile: str
-    ) -> CommandResult:
+    def grip(self, command_id: str, *, payload_profile: str) -> CommandResult:
         """抓取指定负载类型并返回完成见证。"""
 
     def release(self, command_id: str) -> CommandResult:

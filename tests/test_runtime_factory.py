@@ -37,18 +37,27 @@ class ModuleRef:
 
 
 @dataclass(frozen=True)
+class AssetRef:
+    """测试 manifest 的 exact 资产引用。"""
+
+    path: Path
+    digest: str
+
+
+@dataclass(frozen=True)
 class Manifest:
     """TCP/SDK standalone 运行时所需的最小清单。"""
 
     deployment_id: str
     profile: HardwareProfile
     arm: ModuleRef
+    assets: dict[str, AssetRef]
     rail: None = None
 
     def asset_path(self, name: str) -> Path:
-        """TCP/SDK 不读取部署文件；意外读取即使测试失败。"""
+        """返回 TCP/SDK 与 MoveIt 共用的 PointSet v3 资产。"""
 
-        raise AssertionError(f"TCP/SDK 不应读取资产: {name}")
+        return self.assets[name].path
 
 
 class FakeSdkPort:
@@ -83,8 +92,8 @@ class FakeSdkPort:
         return True
 
 
-def _manifest(endpoint: str = "tcp:cr7:test") -> Manifest:
-    """创建不依赖领域包的 TCP/SDK standalone 清单。"""
+def _manifest(tmp_path: Path, endpoint: str = "tcp:cr7:test") -> Manifest:
+    """创建使用 PointSet v3 的 TCP/SDK standalone 清单。"""
 
     profile = HardwareProfile(
         profile_id="tcp-sdk-test",
@@ -93,6 +102,52 @@ def _manifest(endpoint: str = "tcp:cr7:test") -> Manifest:
         backend=BackendKind.TCP_SDK,
         endpoint_ids=frozenset({endpoint}),
         interlock_mode=InterlockMode.SIMULATION,
+        commissioning_velocity_limit=0.25,
+        commissioning_acceleration_limit=0.25,
+    )
+    point_set = tmp_path / "points.yaml"
+    point_set.write_text(
+        """schema: unilab.robot-point-set/v3
+revision: sdk-points@1.0.0
+components:
+  arm:
+    model_ref: package://unilab_arm_cr7/models/model.yaml
+    tool_context_ref: sdk-tool
+installation_calibration:
+  revision: sdk-installation@1.0.0
+  digest: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+global:
+  arm:
+    standby: {type: joint_positions, value: [0, 0, 0, 0, 0, 0]}
+position1:
+  device_ref: deck.position1
+  targets:
+    approach:
+      arm: {type: joint_positions, value: [0, 0, 0, 0, 0, 0]}
+""",
+        encoding="utf-8",
+    )
+    tool = tmp_path / "tool.yaml"
+    tool.write_text(
+        """schema: unilab.tool-context/v1
+context_id: sdk-tool
+attachment_generation: 1
+mount_to_tcp:
+  xyz_m: [0, 0, 0]
+  orientation_xyzw: [0, 0, 0, 1]
+""",
+        encoding="utf-8",
+    )
+    calibration = tmp_path / "calibration.yaml"
+    calibration.write_text(
+        """schema: unilab.installation-calibration/v1
+revision: sdk-installation@1.0.0
+frames:
+  device:deck.position1:
+    xyz_m: [0, 0, 0]
+    orientation_xyzw: [0, 0, 0, 1]
+""",
+        encoding="utf-8",
     )
     return Manifest(
         "tcp-sdk-test",
@@ -103,6 +158,11 @@ def _manifest(endpoint: str = "tcp:cr7:test") -> Manifest:
             frozenset({endpoint}),
             "unilab_arm_cr7",
         ),
+        {
+            "point_set": AssetRef(point_set, "b" * 64),
+            "tool_context": AssetRef(tool, "d" * 64),
+            "installation_calibration": AssetRef(calibration, "c" * 64),
+        },
     )
 
 
@@ -125,7 +185,7 @@ def _safety() -> SafetyInterlockObservation:
 def test_runtime_selects_tcp_sdk_without_domain_branch(tmp_path: Path) -> None:
     """HardwareProfile 的 TCP/SDK 判断只发生在共享运行时。"""
 
-    manifest = _manifest()
+    manifest = _manifest(tmp_path)
     requirements = runtime_requirements(manifest)
     sdk = FakeSdkPort()
     binding = create_runtime(
@@ -143,7 +203,28 @@ def test_runtime_selects_tcp_sdk_without_domain_branch(tmp_path: Path) -> None:
         payload_profile="beaker",
         source_boot_id="test-boot",
         monotonic_sequence=1,
-        segments=(MotionSegment("approach", "position1.approach"),),
+        segments=(
+            MotionSegment(
+                "approach",
+                "position1.approach",
+                {"phase_kind": "arm_move", "payload_state": "empty"},
+            ),
+            MotionSegment(
+                "pick",
+                "end_effector.grip",
+                {"phase_kind": "end_effector", "payload_state": "loaded"},
+            ),
+            MotionSegment(
+                "observe-payload",
+                "end_effector.payload.loaded",
+                {"phase_kind": "observe", "payload_state": "loaded"},
+            ),
+            MotionSegment(
+                "retract",
+                "position1.approach",
+                {"phase_kind": "arm_move", "payload_state": "loaded"},
+            ),
+        ),
     )
 
     try:
@@ -155,7 +236,7 @@ def test_runtime_selects_tcp_sdk_without_domain_branch(tmp_path: Path) -> None:
     assert requirements.variable_port is False
     assert requirements.moveit_client is False
     assert result.state is CommandState.SUCCEEDED
-    assert sdk.targets == ["position1.approach"]
+    assert sdk.targets == ["position1.approach", "position1.approach"]
 
 
 def test_workspace_has_no_legacy_second_execution_surface() -> None:

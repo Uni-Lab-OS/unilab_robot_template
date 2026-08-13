@@ -54,6 +54,8 @@ class MoveItCommissioningAdapter:
         point_set_revision: str,
         hardware_profile_digest: str,
         tool_context_digest: str,
+        commissioning_velocity_limit: float = 0.25,
+        commissioning_acceleration_limit: float = 0.25,
         group_name: str | None = None,
     ) -> None:
         """冻结 exact 型号、点位版本、硬件配置和工具上下文。"""
@@ -73,6 +75,12 @@ class MoveItCommissioningAdapter:
         self.point_set_revision = point_set_revision
         self.hardware_profile_digest = hardware_profile_digest
         self.tool_context_digest = tool_context_digest
+        self.commissioning_velocity_limit = float(commissioning_velocity_limit)
+        self.commissioning_acceleration_limit = float(commissioning_acceleration_limit)
+        if not 0.0 < self.commissioning_velocity_limit <= 0.30:
+            raise ValueError("HardwareProfile 调试速度上限必须位于 (0, 0.30]")
+        if not 0.0 < self.commissioning_acceleration_limit <= 0.30:
+            raise ValueError("HardwareProfile 调试加速度上限必须位于 (0, 0.30]")
         self.group_name = group_name or str(model.planning_group)
         self._fingerprints: dict[str, str] = {}
         self._results: dict[str, CommandResult] = {}
@@ -182,11 +190,7 @@ class MoveItCommissioningAdapter:
             result = CommandResult(
                 command.command_id,
                 CommandState.CANCELED if confirmed else CommandState.EXECUTION_UNKNOWN,
-                (
-                    "MoveIt 已确认维护运动停止"
-                    if confirmed
-                    else "MoveIt 停止确认不明"
-                ),
+                ("MoveIt 已确认维护运动停止" if confirmed else "MoveIt 停止确认不明"),
                 {"target_command_id": command.target_command_id},
             )
             self._remember(command, result)
@@ -234,12 +238,20 @@ class MoveItCommissioningAdapter:
         self._remember(command, result)
         return result
 
-    def _command_rejection(
-        self, command: CommissioningCommand
-    ) -> CommandResult | None:
+    def _command_rejection(self, command: CommissioningCommand) -> CommandResult | None:
         """校验所有无需物理派发即可确定的命令约束。"""
 
         message: str | None = None
+        if isinstance(
+            command,
+            (MoveTargetCommand, MovePoseCommand, JointJogCommand, TcpJogCommand),
+        ):
+            if command.velocity_scale > self.commissioning_velocity_limit:
+                message = "维护速度超过活动 HardwareProfile 上限"
+            elif command.acceleration_scale > self.commissioning_acceleration_limit:
+                message = "维护加速度超过活动 HardwareProfile 上限"
+        if message is not None:
+            return CommandResult(command.command_id, CommandState.REJECTED, message)
         if isinstance(command, MoveTargetCommand):
             if command.target_revision != self.point_set_revision:
                 message = "move_target 点位版本与活动 PointSet 不一致"
@@ -248,7 +260,10 @@ class MoveItCommissioningAdapter:
         elif isinstance(command, MovePoseCommand):
             if command.tool_context_digest != self.tool_context_digest:
                 message = "move_pose ToolContext digest 与活动工具不一致"
-            elif command.pose_input.frame_ref not in {"arm_base", self.model.base_frame}:
+            elif command.pose_input.frame_ref not in {
+                "arm_base",
+                self.model.base_frame,
+            }:
                 message = "move_pose 尚未配置到 arm_base 的静态变换"
         elif isinstance(command, JointJogCommand):
             joint_specs = {
@@ -270,7 +285,9 @@ class MoveItCommissioningAdapter:
                     target = current + command.direction.sign * command.step_si
                     if specification.lower is not None and target < specification.lower:
                         message = "joint_jog 目标低于型号关节限位"
-                    elif specification.upper is not None and target > specification.upper:
+                    elif (
+                        specification.upper is not None and target > specification.upper
+                    ):
                         message = "joint_jog 目标高于型号关节限位"
         elif isinstance(command, TcpJogCommand):
             if self.commissioning_snapshot().tcp_pose is None:
@@ -281,17 +298,13 @@ class MoveItCommissioningAdapter:
             return None
         return CommandResult(command.command_id, CommandState.REJECTED, message)
 
-    def _execute_move_target(
-        self, command: MoveTargetCommand
-    ) -> Mapping[str, Any]:
+    def _execute_move_target(self, command: MoveTargetCommand) -> Mapping[str, Any]:
         """校验活动点位版本并派发一个已解析目标。"""
 
         target = self.targets[command.target_ref]
         return self._execute_target(command, target)
 
-    def _execute_joint_jog(
-        self, command: JointJogCommand
-    ) -> Mapping[str, Any]:
+    def _execute_joint_jog(self, command: JointJogCommand) -> Mapping[str, Any]:
         """从完整当前状态生成只改变一个关节的有限低速目标。"""
 
         snapshot = self.commissioning_snapshot()
@@ -317,12 +330,7 @@ class MoveItCommissioningAdapter:
             joint_names=self.model.joint_names,
             target=target,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="joint_ptp"),
         )
         observed = self.commissioning_snapshot().joint_positions
         if observed is None:
@@ -347,12 +355,7 @@ class MoveItCommissioningAdapter:
             xyz_m=pose.xyz_m,
             orientation_xyzw=pose.orientation_xyzw,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _execute_tcp_jog(self, command: TcpJogCommand) -> Mapping[str, Any]:
@@ -369,8 +372,7 @@ class MoveItCommissioningAdapter:
         else:
             axis_index = {"x": 0, "y": 1, "z": 2}[command.axis.value]
             translation = tuple(
-                signed_step if index == axis_index else 0.0
-                for index in range(3)
+                signed_step if index == axis_index else 0.0 for index in range(3)
             )
             delta = RigidTransform(translation, (0.0, 0.0, 0.0, 1.0))
         if command.frame_ref == "tool":
@@ -392,12 +394,7 @@ class MoveItCommissioningAdapter:
             xyz_m=target.translation_m,
             orientation_xyzw=target.orientation_xyzw,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _pre_dispatch_rejection(
@@ -444,18 +441,13 @@ class MoveItCommissioningAdapter:
     ) -> Mapping[str, Any]:
         """把已解析目标派发到唯一 MoveGroup 端口。"""
 
-        parameters = {
-            "speed": command.velocity_scale,
-            "acceleration": command.acceleration_scale,
-            "motion_profile_ref": command.motion_profile_ref,
-        }
         if isinstance(target, ResolvedJointTarget):
             return self.port.execute_joint_target(
                 group_name=self.group_name,
                 joint_names=self.model.joint_names,
                 target=target.joint_positions,
                 command_id=command.command_id,
-                parameters=parameters,
+                parameters=_commissioning_parameters(command, primitive="joint_ptp"),
             )
         if not isinstance(target, ResolvedCartesianTarget):
             raise TypeError("MoveIt 调试只接受已解析运动目标")
@@ -465,7 +457,7 @@ class MoveItCommissioningAdapter:
             xyz_m=target.pose.xyz_m,
             orientation_xyzw=target.pose.orientation_xyzw,
             command_id=command.command_id,
-            parameters=parameters,
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _remember(self, command: CommissioningCommand, result: CommandResult) -> None:
@@ -491,6 +483,26 @@ def _cartesian_pose(value: object) -> CartesianPose | None:
         xyz,
         orientation,
     )
+
+
+def _commissioning_parameters(
+    command: MoveTargetCommand | MovePoseCommand | JointJogCommand | TcpJogCommand,
+    *,
+    primitive: str,
+) -> Mapping[str, Any]:
+    """把维护命令展开为 MoveIt 唯一接受的冻结运动参数。"""
+
+    return {
+        "motion_profile_ref": command.motion_profile_ref,
+        "primitive": primitive,
+        "velocity_scale": command.velocity_scale,
+        "acceleration_scale": command.acceleration_scale,
+        "position_tolerance_m": 0.001,
+        "orientation_tolerance_rad": 0.01,
+        "collision_check": True,
+        "cartesian_path": primitive == "cartesian_linear",
+        "commissioning_kind": command.kind.value,
+    }
 
 
 __all__ = ["MoveItCommissioningAdapter", "MoveItCommissioningClientPort"]

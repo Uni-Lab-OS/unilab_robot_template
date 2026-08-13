@@ -9,6 +9,7 @@ description = "Uni-Lab 厂商无关机械臂运行时选择、装配与端点租
 requires-python = ">=3.11"
 dependencies = [
   "PyYAML>=6.0",
+  "unilab-end-effector-sim>=0.1,<0.2",
   "unilab-rail-mounted-arm>=0.1,<0.2",
   "unilab-robot-contracts>=0.1,<0.2",
 ]

@@ -9,6 +9,9 @@ from unilab_robot_contracts import (
     CommandResult,
     CommandState,
     DispatchUnknownError,
+    ResolvedCartesianTarget,
+    ResolvedJointTarget,
+    ResolvedMotionTarget,
     RobotCommand,
 )
 
@@ -29,20 +32,35 @@ class RobotSDKPort(Protocol):
     def request_stop(self, command_id: str, reason: str) -> bool:
         """请求普通停止并返回是否已确认。"""
 
+
 class TcpSdkBackend(BackendObservationMixin):
     """把厂家 TCP/SDK 收敛到 RobotExecutionBackend。"""
 
-    def __init__(self, *, port: RobotSDKPort, endpoint_ids: frozenset[str]) -> None:
-        """注入受限 SDK port 和物理端点。"""
+    def __init__(
+        self,
+        *,
+        port: RobotSDKPort,
+        endpoint_ids: frozenset[str],
+        targets: Mapping[str, ResolvedMotionTarget],
+    ) -> None:
+        """注入受限 SDK port、物理端点和已解析 PointSet 目标。"""
 
         self.port = port
         self.endpoint_ids = endpoint_ids
+        self.targets = dict(targets)
         self._results: dict[str, CommandResult] = {}
         self._initialize_observation()
 
     def execute(self, command: RobotCommand) -> CommandResult:
         """顺序执行内部段；通信异常按派发歧义处理。"""
 
+        missing = [
+            segment.target_ref
+            for segment in command.segments
+            if segment.target_ref not in self.targets
+        ]
+        if missing:
+            raise ValueError(f"TCP/SDK PointSet 缺少 target_ref: {missing}")
         self._active_command_id = command.command_id
         outputs: list[Mapping[str, Any]] = []
         try:
@@ -51,7 +69,12 @@ class TcpSdkBackend(BackendObservationMixin):
                     validate_completion_receipt(
                         self.port.execute_target(
                             segment.target_ref,
-                            segment.parameters,
+                            {
+                                **segment.parameters,
+                                "resolved_target": _resolved_target_payload(
+                                    self.targets[segment.target_ref]
+                                ),
+                            },
                             command.command_id,
                         ),
                         command_id=command.command_id,
@@ -74,6 +97,9 @@ class TcpSdkBackend(BackendObservationMixin):
     def reconcile(self, command_id: str) -> CommandResult:
         """通过厂家命令查询接口对账，不自动重发。"""
 
+        known = self._results.get(command_id)
+        if known is not None and known.state.terminal:
+            return known
         observed = self.port.query_command(command_id)
         if observed is None:
             return CommandResult(
@@ -98,7 +124,7 @@ class TcpSdkBackend(BackendObservationMixin):
         return result
 
     def request_stop(self, command_id: str, reason: str) -> CommandResult:
-        """只有厂家明确确认停止时才结算 canceled。"""
+        """请求厂家普通停止；未确认时保持执行不确定（execution_unknown）。"""
 
         confirmed = self.port.request_stop(command_id, reason)
         state = CommandState.CANCELED if confirmed else CommandState.EXECUTION_UNKNOWN
@@ -107,3 +133,21 @@ class TcpSdkBackend(BackendObservationMixin):
         )
         self._results[command_id] = result
         return result
+
+
+def _resolved_target_payload(target: ResolvedMotionTarget) -> Mapping[str, Any]:
+    """把类型化绝对目标投影成厂商 SDK Adapter 可翻译的 SI 参数。"""
+
+    if isinstance(target, ResolvedJointTarget):
+        return {
+            "type": "joint_positions",
+            "joint_positions_si": list(target.joint_positions),
+        }
+    if isinstance(target, ResolvedCartesianTarget):
+        return {
+            "type": "cartesian_pose",
+            "frame_ref": target.pose.frame_ref,
+            "xyz_m": list(target.pose.xyz_m),
+            "orientation_xyzw": list(target.pose.orientation_xyzw),
+        }
+    raise TypeError(f"不支持的已解析目标类型: {type(target)!r}")

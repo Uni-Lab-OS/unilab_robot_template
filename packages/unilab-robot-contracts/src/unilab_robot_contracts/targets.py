@@ -1,14 +1,14 @@
-"""把版本化机械臂点位资产解析为执行 Adapter 可接受的确定目标。"""
+"""把规范机械臂目标解析为执行 Adapter 可接受的绝对目标。"""
 
 from __future__ import annotations
 
 import math
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Protocol, TypeAlias
 
-from .geometry import RigidTransform, quaternion_multiply
+from .geometry import RigidTransform
 
 
 class JointType(str, Enum):
@@ -20,7 +20,7 @@ class JointType(str, Enum):
 
     @property
     def canonical_unit(self) -> str:
-        """旋转关节返回 rad，平移关节返回 m。"""
+        """返回该关节类型唯一允许的 SI 单位。"""
 
         return "m" if self is JointType.PRISMATIC else "rad"
 
@@ -80,6 +80,7 @@ class ToolContext:
     digest: str
     mount_to_tcp: RigidTransform
     attachment_generation: int
+    planning_scene: Mapping[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         """校验工具身份、64 位摘要和正附着代次。"""
@@ -87,12 +88,16 @@ class ToolContext:
         if not self.context_id.strip():
             raise ValueError("ToolContext.context_id 不能为空")
         if len(self.digest) != 64 or any(
-            character not in "0123456789abcdef"
-            for character in self.digest.lower()
+            character not in "0123456789abcdef" for character in self.digest.lower()
         ):
             raise ValueError("ToolContext.digest 必须是 64 位 SHA-256")
-        if isinstance(self.attachment_generation, bool) or self.attachment_generation < 1:
+        if (
+            isinstance(self.attachment_generation, bool)
+            or self.attachment_generation < 1
+        ):
             raise ValueError("ToolContext.attachment_generation 必须是正整数")
+        if not isinstance(self.planning_scene, Mapping):
+            raise TypeError("ToolContext.planning_scene 必须是对象")
 
 
 class ArmTargetModel(Protocol):
@@ -121,7 +126,7 @@ class ResolvedJointTarget:
 
 @dataclass(frozen=True, slots=True)
 class ResolvedCartesianTarget:
-    """已展开全部相对依赖的绝对 TCP 目标。"""
+    """已展开全部相对依赖并转换到机械臂基座的绝对 TCP 目标。"""
 
     target_ref: str
     pose: CartesianPose
@@ -132,69 +137,59 @@ class ResolvedCartesianTarget:
 ResolvedMotionTarget: TypeAlias = ResolvedJointTarget | ResolvedCartesianTarget
 
 
-class MotionTargetResolver:
-    """隐藏 point-set 结构、FK 和递归变换的共享深模块。"""
+class ArmTargetResolver:
+    """隐藏关节限位、FK、静态坐标变换和相对引用的共享深模块。"""
 
     def __init__(
         self,
-        point_set: Mapping[str, Any],
+        targets: Mapping[str, Mapping[str, Any]],
         *,
         model: ArmTargetModel,
         tool_context: ToolContext,
+        frame_transforms: Mapping[str, RigidTransform] | None = None,
         max_reference_depth: int = 16,
         max_delta_translation_m: float = 1.0,
     ) -> None:
-        """冻结 v2 点位资产、精确型号和工具上下文。
+        """冻结规范目标、精确型号、工具上下文和静态坐标变换。
 
-        参数：点位资产、型号运动学接口、工具上下文、最大引用深度和单段偏移上限。
-        返回：无。
-        异常：schema、型号、工具或点位结构不匹配时抛出 ``ValueError``。
+        参数：``targets`` 使用稳定 target ref；``frame_transforms`` 把设备局部
+        坐标转换到型号基座坐标。返回：无。异常：目标、限位或变换不合法时
+        抛出 ``ValueError``。本类不识别 PointSet Schema、库位（Site）或导轨。
         """
 
-        if point_set.get("schema") != "unilab.arm-point-set/v2":
-            raise ValueError("point-set schema 必须为 unilab.arm-point-set/v2")
-        if "joint_names" in point_set:
-            raise ValueError("v2 point-set 禁止重复 joint_names")
-        if str(point_set.get("compatible_model_ref", "")) != model.model_ref:
-            raise ValueError("point-set compatible_model_ref 与型号不一致")
-        if str(point_set.get("tool_context_ref", "")) != tool_context.context_id:
-            raise ValueError("point-set tool_context_ref 与活动 ToolContext 不一致")
         if isinstance(max_reference_depth, bool) or max_reference_depth < 1:
             raise ValueError("max_reference_depth 必须是正整数")
         if not math.isfinite(max_delta_translation_m) or max_delta_translation_m <= 0.0:
             raise ValueError("max_delta_translation_m 必须是正有限数")
-        self.revision = str(point_set.get("revision", "")).strip()
-        if not self.revision:
-            raise ValueError("point-set revision 不能为空")
         self.model = model
         self.tool_context = tool_context
         self.max_reference_depth = max_reference_depth
         self.max_delta_translation_m = max_delta_translation_m
-        self._targets = _flatten_targets(point_set.get("targets"))
-        targets_with_unit = tuple(
-            target_ref
-            for target_ref, target in self._targets.items()
-            if "unit" in target
-        )
-        if targets_with_unit:
-            raise ValueError(
-                "v2 point-set 禁止 target-level unit: "
-                + ", ".join(targets_with_unit)
-            )
+        self._targets = {
+            str(target_ref): _mapping(target, str(target_ref))
+            for target_ref, target in targets.items()
+        }
+        if not self._targets:
+            raise ValueError("机械臂目标集合不能为空")
+        if any("unit" in target for target in self._targets.values()):
+            raise ValueError("目标不得重复 unit；单位由精确型号和字段名拥有")
+        transforms = dict(frame_transforms or {})
+        transforms.setdefault(model.base_frame, RigidTransform.identity())
+        transforms.setdefault("arm_base", RigidTransform.identity())
+        self._frame_transforms = transforms
         self._resolved: dict[str, ResolvedMotionTarget] = {}
 
     def resolve(self, target_ref: str) -> ResolvedMotionTarget:
-        """把一个稳定引用解析为关节目标或绝对 TCP 目标。
+        """把一个稳定引用解析为关节目标或基座坐标系绝对 TCP 目标。
 
-        参数：``target_ref`` 是 ``<target-group>.<waypoint>`` 稳定引用。
-        返回：解析后的不可变运动目标。
-        异常：引用缺失、成环、越界或坐标不兼容时抛出 ``ValueError``。
+        参数：``target_ref`` 是调用者拥有的稳定引用。返回：不可变解析目标。
+        异常：引用缺失、成环、越界或坐标变换缺失时抛出 ``ValueError``。
         """
 
         return self._resolve(str(target_ref), visiting=())
 
     def resolve_all(self) -> Mapping[str, ResolvedMotionTarget]:
-        """解析并返回资产中的全部目标，确保激活阶段发现坏引用。"""
+        """解析全部目标，使坏引用在激活而非物理派发阶段失败。"""
 
         for target_ref in self._targets:
             self.resolve(target_ref)
@@ -219,9 +214,7 @@ class MotionTargetResolver:
         try:
             raw = self._targets[target_ref]
         except KeyError as exc:
-            raise ValueError(f"point-set 缺少 target_ref: {target_ref}") from exc
-        if "unit" in raw:
-            raise ValueError(f"{target_ref} 禁止 target-level unit；单位由关节类型决定")
+            raise ValueError(f"目标集合缺少 target_ref: {target_ref}") from exc
         target_type = str(raw.get("type", ""))
         if target_type == "joint_positions":
             resolved = self._resolve_joint(target_ref, raw)
@@ -245,7 +238,7 @@ class MotionTargetResolver:
     ) -> ResolvedJointTarget:
         """按型号拥有的关节类型、顺序和 SI 限位解析数组。"""
 
-        values = _numeric_sequence(raw.get("value"), "joint_positions.value")
+        values = numeric_sequence(raw.get("value"), "joint_positions.value")
         if len(values) != len(self.model.joint_specs):
             raise ValueError(
                 f"{target_ref} 关节数量必须为 {len(self.model.joint_specs)}"
@@ -268,17 +261,18 @@ class MotionTargetResolver:
         target_ref: str,
         raw: Mapping[str, Any],
     ) -> ResolvedCartesianTarget:
-        """解析已经在机械臂基座坐标系中表达的绝对 TCP 位姿。"""
+        """把明确来源坐标系中的绝对 TCP 位姿转换到机械臂基座。"""
 
         frame_ref = str(raw.get("frame_ref", ""))
-        self._require_base_frame(target_ref, frame_ref)
-        transform = _transform_value(raw.get("value"), target_ref)
+        source_to_base = self._frame_transform(target_ref, frame_ref)
+        local_pose = transform_value(raw.get("value"), target_ref)
+        goal = source_to_base.compose(local_pose)
         return ResolvedCartesianTarget(
             target_ref,
             CartesianPose(
                 self.model.base_frame,
-                transform.translation_m,
-                transform.orientation_xyzw,
+                goal.translation_m,
+                goal.orientation_xyzw,
             ),
             (target_ref,),
             None,
@@ -302,14 +296,15 @@ class MotionTargetResolver:
                 base.joint_positions,
                 self.tool_context,
             )
-            self._require_base_frame(relative_to, base_pose.frame_ref)
+            if base_pose.frame_ref != self.model.base_frame:
+                raise ValueError(f"{relative_to} FK 没有返回型号基座坐标系")
             source_chain = base.source_chain
             ik_seed = base.joint_positions
         else:
             base_pose = base.pose
             source_chain = base.source_chain
             ik_seed = base.ik_seed
-        delta = _transform_value(raw.get("value"), target_ref)
+        delta = transform_value(raw.get("value"), target_ref)
         magnitude = math.sqrt(sum(value * value for value in delta.translation_m))
         if magnitude > self.max_delta_translation_m:
             raise ValueError(
@@ -320,18 +315,18 @@ class MotionTargetResolver:
         if frame_ref == "reference_target":
             goal = base_pose.transform.compose(delta)
         else:
-            self._require_base_frame(target_ref, frame_ref)
+            frame_to_base = self._frame_transform(target_ref, frame_ref)
+            rotated_translation = frame_to_base.rotate_vector(delta.translation_m)
             translated = tuple(
-                base_pose.xyz_m[index] + delta.translation_m[index]
+                base_pose.xyz_m[index] + rotated_translation[index]
                 for index in range(3)
             )
-            goal = RigidTransform(
-                translated,
-                quaternion_multiply(
-                    delta.orientation_xyzw,
-                    base_pose.orientation_xyzw,
-                ),
-            )
+            if delta.orientation_xyzw != (0.0, 0.0, 0.0, 1.0):
+                raise ValueError(
+                    f"{target_ref} 非 reference_target 坐标的旋转增量不受支持；"
+                    "请发布绝对 orientation_xyzw"
+                )
+            goal = RigidTransform(translated, base_pose.orientation_xyzw)
         return ResolvedCartesianTarget(
             target_ref,
             CartesianPose(
@@ -343,59 +338,41 @@ class MotionTargetResolver:
             ik_seed,
         )
 
-    def _require_base_frame(self, target_ref: str, frame_ref: str) -> None:
-        """只接受型号声明的基座框架或通用 ``arm_base`` 别名。"""
+    def _frame_transform(self, target_ref: str, frame_ref: str) -> RigidTransform:
+        """返回来源坐标到机械臂基座的已校准静态变换。"""
 
-        if frame_ref not in {"arm_base", self.model.base_frame}:
+        if not frame_ref.strip():
+            raise ValueError(f"{target_ref} frame_ref 不能为空")
+        try:
+            return self._frame_transforms[frame_ref]
+        except KeyError as exc:
             raise ValueError(
-                f"{target_ref} frame_ref={frame_ref!r} 未配置静态坐标变换"
-            )
+                f"{target_ref} frame_ref={frame_ref!r} 缺少精确安装标定"
+            ) from exc
 
 
-def _flatten_targets(value: Any) -> dict[str, Mapping[str, Any]]:
-    """把 ``targets.<group>.waypoints`` 展开为稳定目标引用索引。"""
-
-    groups = _mapping(value, "targets")
-    flattened: dict[str, Mapping[str, Any]] = {}
-    for group_name, group_value in groups.items():
-        group_id = str(group_name).strip()
-        if not group_id:
-            raise ValueError("point-set target group 名称不能为空")
-        group = _mapping(group_value, f"targets.{group_id}")
-        waypoints = _mapping(group.get("waypoints"), f"targets.{group_id}.waypoints")
-        for waypoint_name, waypoint_value in waypoints.items():
-            waypoint_id = str(waypoint_name).strip()
-            target_ref = f"{group_id}.{waypoint_id}"
-            if not waypoint_id or target_ref in flattened:
-                raise ValueError(f"重复或空 target_ref: {target_ref}")
-            flattened[target_ref] = _mapping(waypoint_value, target_ref)
-    if not flattened:
-        raise ValueError("point-set 至少包含一个 waypoint")
-    return flattened
-
-
-def _transform_value(value: Any, target_ref: str) -> RigidTransform:
+def transform_value(value: Any, target_ref: str) -> RigidTransform:
     """解析目标中的米制平移和 XYZW 四元数，并拒绝非单位四元数。"""
 
     data = _mapping(value, f"{target_ref}.value")
-    xyz = _numeric_sequence(data.get("xyz_m"), f"{target_ref}.value.xyz_m")
-    orientation = _numeric_sequence(
+    xyz = numeric_sequence(data.get("xyz_m"), f"{target_ref}.value.xyz_m")
+    orientation = numeric_sequence(
         data.get("orientation_xyzw"),
         f"{target_ref}.value.orientation_xyzw",
     )
     if len(xyz) != 3 or len(orientation) != 4:
         raise ValueError(f"{target_ref} 必须包含 xyz_m[3] 和 orientation_xyzw[4]")
-    norm = math.sqrt(sum(value * value for value in orientation))
+    norm = math.sqrt(sum(item * item for item in orientation))
     if not math.isclose(norm, 1.0, rel_tol=0.0, abs_tol=1e-6):
         raise ValueError(f"{target_ref} orientation_xyzw 必须是单位四元数")
     return RigidTransform(xyz, orientation)
 
 
-def _numeric_sequence(value: Any, field: str) -> tuple[float, ...]:
+def numeric_sequence(value: Any, field: str) -> tuple[float, ...]:
     """把 YAML 数值列表转换为有限浮点元组。"""
 
     if isinstance(value, (str, bytes)):
-        raise ValueError(f"{field} 必须是数值列表")
+        raise TypeError(f"{field} 必须是数值列表")
     try:
         normalized = tuple(float(item) for item in value)
     except (TypeError, ValueError) as exc:
@@ -406,21 +383,23 @@ def _numeric_sequence(value: Any, field: str) -> tuple[float, ...]:
 
 
 def _mapping(value: Any, field: str) -> Mapping[str, Any]:
-    """要求一个 YAML 字段是对象。"""
+    """要求一个配置字段是对象。"""
 
     if not isinstance(value, Mapping):
-        raise ValueError(f"{field} 必须是对象")
+        raise TypeError(f"{field} 必须是对象")
     return value
 
 
 __all__ = [
     "ArmTargetModel",
+    "ArmTargetResolver",
     "CartesianPose",
     "JointSpecification",
     "JointType",
-    "MotionTargetResolver",
     "ResolvedCartesianTarget",
     "ResolvedJointTarget",
     "ResolvedMotionTarget",
     "ToolContext",
+    "numeric_sequence",
+    "transform_value",
 ]

@@ -40,6 +40,7 @@ from .commissioning_pose import (
 from .errors import CommandRejectedError, DispatchUnknownError, EndpointConflictError
 from .execution_backend import BackendStatus, RobotExecutionBackend
 from .geometry import RigidTransform
+from .grid import RailTargetModel, ResolvedGridCell, resolve_affine_grid
 from .hardware_profile import (
     BackendKind,
     DeploymentMode,
@@ -48,18 +49,56 @@ from .hardware_profile import (
 )
 from .journal import CommandJournal, InMemoryCommandJournal, SQLiteCommandJournal
 from .modules import ArmModulePort, RailModulePort
+from .motion_profiles import (
+    AccessMotionPolicy,
+    MotionPrimitive,
+    MotionProfile,
+    MotionProfileCatalog,
+    RailMotionProfile,
+)
 from .observations import (
     EndEffectorObservation,
     ObservationState,
     RailStateObservation,
     SafetyInterlockObservation,
 )
+from .plc_programs import (
+    PLCAdapterProfile,
+    PLCProgramAdapterBinding,
+    PLCProgramDefinition,
+    PLCProgramSet,
+)
+from .point_sets import (
+    AccessMotionBlock,
+    InstallationCalibration,
+    ResolvedPointTarget,
+    ResolvedRailTarget,
+    RobotPointSetResolver,
+)
+from .qualifications import (
+    PointQualification,
+    ProgramQualification,
+    QualificationCatalog,
+    QualificationScope,
+    SiteOperationQualification,
+)
+from .site_access import (
+    ResolvedSiteAccessBinding,
+    SiteAccessActivation,
+    SiteAccessDeclaration,
+    SiteExecutionKind,
+    SiteLocator,
+    SiteOperationDeclaration,
+    SiteTopologySnapshot,
+    TopologySite,
+    parse_site_access_declarations,
+)
 from .targets import (
     ArmTargetModel,
+    ArmTargetResolver,
     CartesianPose,
     JointSpecification,
     JointType,
-    MotionTargetResolver,
     ResolvedCartesianTarget,
     ResolvedJointTarget,
     ResolvedMotionTarget,
@@ -73,14 +112,24 @@ from .tools import (
     ToolContextActivator,
     ToolDefinition,
 )
+from .workcell_plans import (
+    AccessMotionPlanCompiler,
+    ResolvedWorkCellPlan,
+    WorkCellPhaseKind,
+    WorkCellPlanPhase,
+)
 
 __all__ = [
     "COMMISSIONING_PROTOCOL_VERSION",
     "EULER_ROTATION_CONVENTION",
+    "AccessMotionBlock",
+    "AccessMotionPlanCompiler",
+    "AccessMotionPolicy",
     "ActionKind",
     "AngleUnit",
     "ArmModulePort",
     "ArmTargetModel",
+    "ArmTargetResolver",
     "BackendKind",
     "BackendStatus",
     "CartesianPose",
@@ -104,33 +153,59 @@ __all__ = [
     "GripperObservation",
     "HardwareProfile",
     "InMemoryCommandJournal",
+    "InstallationCalibration",
     "InterlockMode",
     "JointJogCommand",
     "JointSpecification",
     "JointType",
     "MotionDirection",
+    "MotionPrimitive",
+    "MotionProfile",
+    "MotionProfileCatalog",
     "MotionSegment",
-    "MotionTargetResolver",
     "MovePoseCommand",
     "MoveTargetCommand",
     "ObservationState",
+    "PLCAdapterProfile",
+    "PLCProgramAdapterBinding",
+    "PLCProgramDefinition",
+    "PLCProgramSet",
     "PhysicalSettlementEvidence",
     "PickAction",
     "PlaceAction",
+    "PointQualification",
     "PourAction",
+    "ProgramQualification",
+    "QualificationCatalog",
+    "QualificationScope",
     "RailModulePort",
+    "RailMotionProfile",
     "RailStateObservation",
+    "RailTargetModel",
     "ResolvedCartesianTarget",
+    "ResolvedGridCell",
     "ResolvedJointTarget",
     "ResolvedMotionTarget",
+    "ResolvedPointTarget",
+    "ResolvedRailTarget",
+    "ResolvedSiteAccessBinding",
+    "ResolvedWorkCellPlan",
     "ResourceSlotRef",
     "RigidTransform",
     "RobotCommand",
     "RobotCommissioningPort",
     "RobotExecutionBackend",
+    "RobotPointSetResolver",
     "SQLiteCommandJournal",
     "SafetyInterlockObservation",
+    "SiteAccessActivation",
+    "SiteAccessDeclaration",
+    "SiteExecutionKind",
+    "SiteLocator",
+    "SiteOperationDeclaration",
+    "SiteOperationQualification",
     "SiteRef",
+    "SiteTopologySnapshot",
     "TcpAxis",
     "TcpJogCommand",
     "ToolAttachmentObservation",
@@ -138,4 +213,9 @@ __all__ = [
     "ToolContext",
     "ToolContextActivator",
     "ToolDefinition",
+    "TopologySite",
+    "WorkCellPhaseKind",
+    "WorkCellPlanPhase",
+    "parse_site_access_declarations",
+    "resolve_affine_grid",
 ]

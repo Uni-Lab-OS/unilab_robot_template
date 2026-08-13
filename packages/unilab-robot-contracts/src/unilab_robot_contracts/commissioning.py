@@ -229,8 +229,8 @@ class _FiniteMotionCommand(_CommissioningCommandBase):
             ("velocity_scale", self.velocity_scale),
             ("acceleration_scale", self.acceleration_scale),
         ):
-            if not math.isfinite(value) or not 0.0 < value <= 0.25:
-                raise ValueError(f"维护运动 {name} 必须位于 (0, 0.25]")
+            if not math.isfinite(value) or not 0.0 < value <= 0.30:
+                raise ValueError(f"维护运动 {name} 必须位于 (0, 0.30]")
 
 
 @dataclass(frozen=True, slots=True)
@@ -271,7 +271,7 @@ class MovePoseCommand(_FiniteMotionCommand):
 
         _FiniteMotionCommand.__post_init__(self)
         if not isinstance(self.pose_input, CommissioningPoseInput):
-            raise ValueError("move_pose 必须包含 CommissioningPoseInput")
+            raise TypeError("move_pose 必须包含 CommissioningPoseInput")
         if not self.tool_context_digest.strip():
             raise ValueError("move_pose 必须绑定 tool_context_digest")
 

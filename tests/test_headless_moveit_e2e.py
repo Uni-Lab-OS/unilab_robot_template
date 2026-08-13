@@ -71,7 +71,9 @@ class HeadlessMoveItClient:
             "tcp_pose": dict(self.pose),
         }
 
-    def move_to_configuration(self, *, joint_positions: list[float], joint_names: list[str]) -> None:
+    def move_to_configuration(
+        self, *, joint_positions: list[float], joint_names: list[str]
+    ) -> None:
         assert len(joint_names) == 6
         self.joints = list(joint_positions)
 
@@ -97,19 +99,32 @@ class HeadlessMoveItClient:
         }
 
 
-def test_headless_moveit_manifest_can_open_session_and_move_target(tmp_path: Path) -> None:
+def test_headless_moveit_manifest_can_open_session_and_move_target(
+    tmp_path: Path,
+) -> None:
     """完整运行时不启动 RViz，也能解析点位并执行维护目标。"""
 
     points = tmp_path / "points.yaml"
     points.write_text(
-        """schema: unilab.arm-point-set/v2
+        """schema: unilab.robot-point-set/v3
 revision: headless-demo@1.0.0
-compatible_model_ref: package://unilab_arm_cr7/models/model.yaml
-tool_context_ref: tool-demo
-targets:
-  position1:
-    waypoints:
-      ready:
+components:
+  arm:
+    model_ref: package://unilab_arm_cr7/models/model.yaml
+    tool_context_ref: tool-demo
+installation_calibration:
+  revision: headless-calibration@1.0.0
+  digest: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+global:
+  arm:
+    standby:
+      type: joint_positions
+      value: [0.0, -0.2, 0.3, 0.0, 0.2, 0.0]
+demo:
+  device_ref: deck.demo
+  targets:
+    ready:
+      arm:
         type: joint_positions
         value: [0.0, -0.2, 0.3, 0.0, 0.2, 0.0]
 """,
@@ -123,6 +138,28 @@ attachment_generation: 1
 mount_to_tcp:
   xyz_m: [0.0, 0.0, 0.1]
   orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+planning_scene:
+  attached_body_id: tool-demo
+  parent_link: cr7_link_6
+  collision_primitives:
+    - primitive_id: demo-envelope
+      shape: box
+      size_m: [0.1, 0.1, 0.1]
+      pose:
+        xyz_m: [0.0, 0.0, 0.05]
+        orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+  allowed_touch_links: [cr7_link_6]
+""",
+        encoding="utf-8",
+    )
+    calibration = tmp_path / "calibration.yaml"
+    calibration.write_text(
+        """schema: unilab.installation-calibration/v1
+revision: headless-calibration@1.0.0
+frames:
+  device:deck.demo:
+    xyz_m: [0.0, 0.0, 0.0]
+    orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
 """,
         encoding="utf-8",
     )
@@ -134,6 +171,8 @@ mount_to_tcp:
         BackendKind.MOVEIT,
         frozenset({endpoint}),
         InterlockMode.SIMULATION,
+        0.25,
+        0.25,
     )
     manifest = Manifest(
         "headless-e2e",
@@ -145,8 +184,9 @@ mount_to_tcp:
             "unilab_arm_cr7",
         ),
         {
-            "arm_point_set": AssetRef(points, "e" * 64),
+            "point_set": AssetRef(points, "e" * 64),
             "tool_context": AssetRef(tool, "f" * 64),
+            "installation_calibration": AssetRef(calibration, "c" * 64),
         },
     )
     client = HeadlessMoveItClient()
@@ -155,7 +195,9 @@ mount_to_tcp:
         RuntimeDependencies(
             runtime_root=tmp_path / "runtime",
             moveit_client=client,
-            qualified_joint_names=tuple(f"robot_cr7_joint_{index}" for index in range(1, 7)),
+            qualified_joint_names=tuple(
+                f"robot_cr7_joint_{index}" for index in range(1, 7)
+            ),
         ),
     )
     session = binding.open_maintenance_session("e2e-operator")
@@ -169,7 +211,7 @@ mount_to_tcp:
                 "maintenance-slow",
                 0.05,
                 0.05,
-                "position1.ready",
+                "demo.ready",
                 "headless-demo@1.0.0",
             )
         )

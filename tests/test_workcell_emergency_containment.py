@@ -52,6 +52,8 @@ def _profile() -> HardwareProfile:
         backend=BackendKind.PLC,
         endpoint_ids=frozenset({"arm:cr7", "rail:a"}),
         interlock_mode=InterlockMode.OBSERVED_ONLY,
+        commissioning_velocity_limit=0.25,
+        commissioning_acceleration_limit=0.25,
     )
 
 

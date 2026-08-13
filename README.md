@@ -15,7 +15,7 @@ unilab-end-effector-sim    L1：夹爪与快换工具的可替换仿真 Adapter
 unilab-rail-linear         L1：单轴导轨型号、行程及 PLC/仿真 Adapter
 unilab-rail-mounted-arm    L2：厂商无关 rail-then-arm 协调、互锁和端点租约
 unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模块
-领域部署包                 L3：exact manifest、SiteAccessBinding、点位、标定和安全参数
+领域部署包                 L3：exact manifest、SiteAccessDeclaration、点位、标定和资格资产
 ```
 
 领域仓库不应复制通用 Adapter、运行时路由或 WorkCell 状态机。机械臂型号包不保存现场点位、Warehouse 传感器地址或 Site 绑定。
@@ -31,9 +31,17 @@ unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模�
 
 ## 点位
 
-型号包拥有规范关节顺序、类型和限位。L3 点位资产使用 `unilab.arm-point-set/v2`，不重复保存 `joint_names` 或 target-level `unit`。`joint_positions` 的每个值按型号关节类型解释为 SI 单位；`cartesian_delta` 可相对关节点（先通过 FK 转换）或另一个 delta 点递归展开。
+型号包拥有规范关节顺序、类型和限位。L3 点位资产只使用
+`unilab.robot-point-set/v3`，按 `global` 与稳定 `device_ref` 分组；单机械臂省略
+`rail`，机械臂+导轨复用同一 Schema。点位不重复保存 `joint_names` 或
+target-level `unit`：关节值由 exact 型号按 SI 解释，发布态笛卡尔位姿统一为
+m/XYZW。
 
-示例见 `config/arm_point_set.v2.example.yaml`。生产点位、工具上下文和安装标定必须由 exact digest 原子锁定。
+规则阵列采用三锚点仿射生成、稀疏单格修正和可选 rail
+default/groups/overrides；标准抓放使用类型化 `AccessMotionBlock/v1`，不允许用
+YAML 列表自定义危险执行顺序。示例见
+`config/robot_point_set.v3.example.yaml`。生产点位、运动策略、工具上下文、安装
+标定和资格资产必须由 exact digest 原子锁定。
 
 ## 本地维护闭环
 
