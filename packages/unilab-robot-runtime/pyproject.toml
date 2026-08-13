@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-robot-runtime"
+version = "0.1.0"
+description = "Uni-Lab 厂商无关机械臂运行时选择、装配与端点租约"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0",
+  "unilab-rail-mounted-arm>=0.1,<0.2",
+  "unilab-robot-contracts>=0.1,<0.2",
+]
+
+[project.scripts]
+unilab-robot-maintenance = "unilab_robot_runtime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

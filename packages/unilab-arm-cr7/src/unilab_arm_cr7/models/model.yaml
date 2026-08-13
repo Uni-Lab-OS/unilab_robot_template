@@ -1,0 +1,18 @@
+schema: unilab.robot-model/v1
+model_id: dobot-cr7
+source:
+  repository: uni-lab-assets/robots/dobot/ros2_v4
+  path: dobot_rviz/urdf/cr7_robot.urdf
+  exact_ref: 37730d08b08c74061ae10d4fa5565b4c4c914885
+  sha256: c64ced0cdcb2654dc07190dc0b9c4d3db813a9515507a69c5c027d82547c14c7
+kinematic_joints:
+  - cr7_joint_1
+  - cr7_joint_2
+  - cr7_joint_3
+  - cr7_joint_4
+  - cr7_joint_5
+  - cr7_joint_6
+forbidden_joints:
+  - arm_base_joint
+moveit_group: cr7_arm
+rviz_required: false

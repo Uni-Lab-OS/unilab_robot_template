@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-end-effector-sim"
+version = "0.1.0"
+description = "Uni-Lab 夹爪与快换工具的厂商无关仿真 Adapter"
+requires-python = ">=3.11"
+dependencies = ["unilab-robot-contracts>=0.1,<0.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

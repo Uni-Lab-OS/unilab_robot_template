@@ -1,0 +1,13 @@
+schema: unilab.robot-model/v1
+model_id: szlab-linear-rail-a
+source:
+  repository: Uni-Lab-SZLab
+  path: szlab_poly_studio/devices/szlab_mixer_robot/models/joint_limit.yaml
+  exact_ref: 575ddaa81e63f2c62427140ccfc9c2c1823caa8b
+  sha256: 3979dbd17e44a073b35cf97247ddf6388a6daf85cb8180c7044c407b99ed8c60
+axis:
+  name: rail_joint
+  direction: [1.0, 0.0, 0.0]
+  travel_m: [0.0, 2.25]
+  velocity_limit_m_s: 0.25
+qualification: simulation-and-maintenance-only

@@ -1,0 +1,32 @@
+schema: unilab.arm-point-set/v2
+revision: cr7-example@2.0.0
+compatible_model_ref: package://unilab_arm_cr7/models/model.yaml
+tool_context_ref: parallel-gripper@1.0.0
+targets:
+  position1:
+    description: position1
+    waypoints:
+      ready:
+        type: joint_positions
+        value: [0.0, -0.7, 1.2, 0.0, 0.9, 0.0]
+      interaction_origin:
+        type: cartesian_pose
+        frame_ref: arm_base
+        value:
+          xyz_m: [0.40, 0.10, 0.25]
+          orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+      approach:
+        type: cartesian_delta
+        relative_to: position1.interaction_origin
+        frame_ref: arm_base
+        value:
+          xyz_m: [0.0, 0.0, 0.10]
+          orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+      interaction:
+        type: cartesian_delta
+        relative_to: position1.approach
+        frame_ref: reference_target
+        value:
+          xyz_m: [0.0, 0.0, -0.10]
+          orientation_xyzw: [0.0, 0.0, 0.0, 1.0]
+qualification: example-only

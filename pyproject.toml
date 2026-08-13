@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-robotics-workspace"
+version = "0.1.0"
+description = "Uni-Lab 多 distribution Robotics monorepo 开发工作区"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Proprietary"}
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = [
+  "packages/unilab-robot-contracts/src",
+  "packages/unilab-arm-cr7/src",
+  "packages/unilab-end-effector-sim/src",
+  "packages/unilab-rail-linear/src",
+  "packages/unilab-rail-mounted-arm/src",
+  "packages/unilab-robot-runtime/src",
+]

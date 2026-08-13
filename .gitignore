@@ -1,0 +1,11 @@
+*.sqlite3
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+*.egg-info/
+build/
+install/
+log/
+unilabos_data/
