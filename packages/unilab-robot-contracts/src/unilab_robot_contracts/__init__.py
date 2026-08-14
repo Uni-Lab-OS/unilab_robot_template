@@ -72,9 +72,13 @@ from .plc_programs import (
 from .point_sets import (
     AccessMotionBlock,
     InstallationCalibration,
+    PointSetCatalogEntry,
     ResolvedPointTarget,
     ResolvedRailTarget,
     RobotPointSetResolver,
+    bump_point_set_revision,
+    patch_authored_joint_target_yaml,
+    revise_authored_joint_target,
 )
 from .qualifications import (
     PointQualification,
@@ -176,6 +180,7 @@ __all__ = [
     "PickAction",
     "PlaceAction",
     "PointQualification",
+    "PointSetCatalogEntry",
     "PourAction",
     "ProgramQualification",
     "QualificationCatalog",
@@ -218,6 +223,9 @@ __all__ = [
     "TopologySite",
     "WorkCellPhaseKind",
     "WorkCellPlanPhase",
+    "bump_point_set_revision",
     "parse_site_access_declarations",
+    "patch_authored_joint_target_yaml",
     "resolve_affine_grid",
+    "revise_authored_joint_target",
 ]

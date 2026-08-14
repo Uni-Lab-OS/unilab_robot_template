@@ -2,15 +2,21 @@
 
 from __future__ import annotations
 
+import copy
 import math
-from collections.abc import Mapping
+import re
+from collections.abc import Mapping, Sequence
+from io import StringIO
 from typing import Any
+
+import yaml
 
 from .geometry import RigidTransform
 from .grid import RailTargetModel, resolve_affine_grid
 from .point_set_types import (
     AccessMotionBlock,
     InstallationCalibration,
+    PointSetCatalogEntry,
     ResolvedPointTarget,
     ResolvedRailTarget,
 )
@@ -33,7 +39,11 @@ from .targets import (
     ResolvedCartesianTarget,
     ResolvedMotionTarget,
     ToolContext,
+    numeric_sequence,
 )
+
+_REVISION_PATTERN = re.compile(r"^(?P<name>.+)@(?P<version>\d+(?:\.\d+)*)$")
+_INTERACTION_SUFFIXES = (".interaction_seed", ".interaction")
 
 
 class RobotPointSetResolver:
@@ -80,6 +90,7 @@ class RobotPointSetResolver:
             calibration,
         )
         self._arm_raw: dict[str, Mapping[str, Any]] = {}
+        self._source_points: dict[str, str] = {}
         self._rail_targets: dict[str, ResolvedRailTarget] = {}
         self._point_targets: dict[str, ResolvedPointTarget] = {}
         self._access_raw: dict[str, tuple[Mapping[str, Any], str]] = {}
@@ -125,12 +136,56 @@ class RobotPointSetResolver:
         return dict(self._point_targets)
 
     def resolve_arm_target(self, target_ref: str) -> ResolvedMotionTarget:
-        """按内部或全局稳定引用返回已解析机械臂目标。"""
+        """按稳定 target_ref 或作者层 ``source_point`` 返回已解析机械臂目标。"""
 
-        try:
-            return self._arm_targets[str(target_ref)]
-        except KeyError as exc:
-            raise ValueError(f"PointSet v3 缺少 arm target_ref: {target_ref}") from exc
+        key = str(target_ref).strip()
+        if not key:
+            raise ValueError("PointSet v3 target_ref 不能为空")
+        resolved = self._arm_targets.get(key)
+        if resolved is not None:
+            return resolved
+        sourced = self._source_points.get(key)
+        if sourced is not None:
+            return self._arm_targets[sourced]
+        raise ValueError(f"PointSet v3 缺少 arm target_ref: {target_ref}")
+
+    def authoring_catalog(self) -> tuple[PointSetCatalogEntry, ...]:
+        """返回作者层 ``joint_positions`` 目录，不展开接近偏移或阵列派生点。"""
+
+        expected = len(self.arm_model.joint_specs)
+        entries: list[PointSetCatalogEntry] = []
+        for target_ref, raw in self._arm_raw.items():
+            kind = str(raw.get("type", "")).strip()
+            if kind != "joint_positions":
+                continue
+            joints = numeric_sequence(raw.get("value"), f"{target_ref}.value")
+            if len(joints) != expected:
+                raise ValueError(
+                    f"{target_ref} 关节数量与 exact Arm 型号不一致"
+                )
+            entries.append(
+                PointSetCatalogEntry(
+                    target_ref,
+                    str(raw.get("source_point", "")).strip(),
+                    kind,
+                    True,
+                    joints,
+                    self._rail_for_arm_ref(target_ref),
+                    _catalog_group_ref(target_ref),
+                )
+            )
+        return tuple(sorted(entries, key=lambda item: item.target_ref))
+
+    def _rail_for_arm_ref(self, arm_ref: str) -> float | None:
+        """把作者层机械臂引用关联到同一复合点的导轨 SI 位置。"""
+
+        if arm_ref in self._rail_targets:
+            return self._rail_targets[arm_ref].position_si
+        compound = _compound_point_ref(arm_ref)
+        point = self._point_targets.get(compound)
+        if point is not None:
+            return point.rail_position_si
+        return None
 
     def _collect_global(self, value: Any) -> None:
         """收集不属于 Device 或库位（Site）的类型化全局目标。"""
@@ -144,7 +199,7 @@ class RobotPointSetResolver:
         arm_targets = mapping(global_targets.get("arm", {}), "global.arm")
         for name, raw in arm_targets.items():
             target_ref = f"global.arm.{name}"
-            self._arm_raw[target_ref] = target_mapping(raw, target_ref)
+            self._register_arm_raw(target_ref, target_mapping(raw, target_ref))
         rail_targets = mapping(global_targets.get("rail", {}), "global.rail")
         for name, raw in rail_targets.items():
             target_ref = f"global.rail.{name}"
@@ -194,7 +249,7 @@ class RobotPointSetResolver:
             target_ref = f"{group_ref}.transit.{target_name}"
             if target_ref in self._arm_raw:
                 raise ValueError(f"重复 transit target_ref: {target_ref}")
-            self._arm_raw[target_ref] = target_mapping(raw, target_ref)
+            self._register_arm_raw(target_ref, target_mapping(raw, target_ref))
 
     def _collect_explicit_targets(
         self,
@@ -232,18 +287,21 @@ class RobotPointSetResolver:
                     frame_ref = str(access.get("frame_ref", "")).strip()
                     if not frame_ref:
                         raise ValueError(f"{target_ref}.access.frame_ref 不能为空")
-                    self._arm_raw[seed_ref] = normalized_arm
-                    self._arm_raw[arm_target_ref] = {
-                        "type": "cartesian_delta",
-                        "relative_to": seed_ref,
-                        "frame_ref": frame_ref,
-                        "value": {
-                            "xyz_m": [0.0, 0.0, 0.0],
-                            "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+                    self._register_arm_raw(seed_ref, normalized_arm)
+                    self._register_arm_raw(
+                        arm_target_ref,
+                        {
+                            "type": "cartesian_delta",
+                            "relative_to": seed_ref,
+                            "frame_ref": frame_ref,
+                            "value": {
+                                "xyz_m": [0.0, 0.0, 0.0],
+                                "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+                            },
                         },
-                    }
+                    )
                 else:
-                    self._arm_raw[arm_target_ref] = normalized_arm
+                    self._register_arm_raw(arm_target_ref, normalized_arm)
             rail_position = (
                 None
                 if "rail" not in target
@@ -292,14 +350,17 @@ class RobotPointSetResolver:
             arm_target_ref = (
                 f"{target_ref}.interaction" if access_raw is not None else target_ref
             )
-            self._arm_raw[arm_target_ref] = {
-                "type": "cartesian_pose",
-                "frame_ref": frame_ref,
-                "value": {
-                    "xyz_m": list(cell.xyz_m),
-                    "orientation_xyzw": list(cell.orientation_xyzw),
+            self._register_arm_raw(
+                arm_target_ref,
+                {
+                    "type": "cartesian_pose",
+                    "frame_ref": frame_ref,
+                    "value": {
+                        "xyz_m": list(cell.xyz_m),
+                        "orientation_xyzw": list(cell.orientation_xyzw),
+                    },
                 },
-            }
+            )
             if cell.rail_position_si is not None:
                 self._rail_targets[target_ref] = ResolvedRailTarget(
                     target_ref,
@@ -347,15 +408,18 @@ class RobotPointSetResolver:
             ("approach", approach_offset),
         ):
             phase_ref = f"{target_ref}.{phase}"
-            self._arm_raw[phase_ref] = {
-                "type": "cartesian_delta",
-                "relative_to": interaction_ref,
-                "frame_ref": frame_ref,
-                "value": {
-                    "xyz_m": list(offset),
-                    "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+            self._register_arm_raw(
+                phase_ref,
+                {
+                    "type": "cartesian_delta",
+                    "relative_to": interaction_ref,
+                    "frame_ref": frame_ref,
+                    "value": {
+                        "xyz_m": list(offset),
+                        "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+                    },
                 },
-            }
+            )
         self._access_raw[target_ref] = (raw, interaction_ref)
 
     def _finish_point_targets(self) -> None:
@@ -436,6 +500,14 @@ class RobotPointSetResolver:
                 stable_digest(payload),
             )
 
+    def _register_arm_raw(self, target_ref: str, raw: Mapping[str, Any]) -> None:
+        """登记一个机械臂作者目标，并索引可选的 ``source_point``。"""
+
+        self._arm_raw[target_ref] = raw
+        source = str(raw.get("source_point", "")).strip()
+        if source:
+            self._source_points.setdefault(source, target_ref)
+
     def _rail_position(self, value: Any, field: str) -> float:
         """解析普通目标的直接 SI 导轨位置并验证型号行程。"""
 
@@ -458,10 +530,236 @@ class RobotPointSetResolver:
         return position
 
 
+def revise_authored_joint_target(
+    point_set: Mapping[str, Any],
+    target_ref: str,
+    joint_positions_si: Sequence[float],
+    *,
+    joint_count: int,
+) -> dict[str, Any]:
+    """把一条作者层 ``joint_positions`` 更新为新的型号顺序 SI 值并提升 revision。
+
+    参数：完整 PointSet 映射、稳定 ``target_ref``、型号顺序关节 SI 和关节数量。
+    返回：可写回 YAML 的新映射。异常：目标不是作者层关节、数量不匹配或
+    revision 无法提升时失败关闭。安全：不展开或写入 AccessMotionBlock 派生点。
+    """
+
+    if not isinstance(joint_count, int) or isinstance(joint_count, bool) or joint_count < 1:
+        raise ValueError("exact Arm 型号关节数量必须是正整数")
+    joints = numeric_sequence(joint_positions_si, "joint_positions_si")
+    if len(joints) != joint_count:
+        raise ValueError("示教关节数量与 exact Arm 型号不一致")
+    revised = _mutable_mapping(point_set)
+    node = _authored_joint_node(revised, target_ref)
+    existing = numeric_sequence(node.get("value"), f"{target_ref}.value")
+    if len(existing) != joint_count:
+        raise ValueError(f"{target_ref} 关节数量与 exact Arm 型号不一致")
+    node["value"] = [float(item) for item in joints]
+    revised["revision"] = bump_point_set_revision(str(revised.get("revision", "")))
+    return revised
+
+
+def patch_authored_joint_target_yaml(
+    text: str,
+    target_ref: str,
+    joint_positions_si: Sequence[float],
+    *,
+    joint_count: int,
+) -> str:
+    """在原文上只替换 ``revision`` 和目标 ``value`` 标量，保留其余注释与排版。
+
+    参数：PointSet YAML 原文、稳定 ``target_ref``、型号顺序关节 SI 和关节数量。
+    返回：可原子写回的新文本。异常：目标不可写、节点不是标量序列或
+    revision 无法提升时失败关闭。安全：不重排其它点位，不展开派生点。
+    """
+
+    loaded = yaml.safe_load(text)
+    if not isinstance(loaded, Mapping):
+        raise TypeError("PointSet YAML 根节点必须是对象")
+    revised = revise_authored_joint_target(
+        loaded,
+        target_ref,
+        joint_positions_si,
+        joint_count=joint_count,
+    )
+    path, _node = _authored_joint_location(loaded, target_ref)
+    root = yaml.compose(StringIO(text), Loader=yaml.SafeLoader)
+    if not isinstance(root, yaml.MappingNode):
+        raise TypeError("PointSet YAML 根节点必须是对象")
+    revision_node = _compose_child(root, "revision")
+    if not isinstance(revision_node, yaml.ScalarNode):
+        raise ValueError("PointSet revision 必须是标量")
+    value_node = root
+    for key in (*path, "value"):
+        value_node = _compose_child(value_node, key)
+    if not isinstance(value_node, yaml.SequenceNode):
+        raise ValueError(f"{target_ref}.value 必须是 YAML 序列")
+    if len(value_node.value) != joint_count:
+        raise ValueError(f"{target_ref}.value 关节数量与 exact Arm 型号不一致")
+    updated = revised
+    for key in path:
+        updated = updated[key]
+    new_values = numeric_sequence(updated.get("value"), f"{target_ref}.value")
+    replacements = [
+        (
+            revision_node.start_mark.index,
+            revision_node.end_mark.index,
+            str(revised["revision"]),
+        )
+    ]
+    for item_node, number in zip(value_node.value, new_values, strict=True):
+        if not isinstance(item_node, yaml.ScalarNode):
+            raise ValueError(f"{target_ref}.value 必须全部是标量")
+        replacements.append(
+            (
+                item_node.start_mark.index,
+                item_node.end_mark.index,
+                _format_joint_si(number),
+            )
+        )
+    replacements.sort(key=lambda item: item[0], reverse=True)
+    patched = text
+    for start, end, token in replacements:
+        patched = patched[:start] + token + patched[end:]
+    return patched
+
+
+def bump_point_set_revision(revision: str) -> str:
+    """把 ``name@x.y.z`` 的最后一段数字加一，保持作者身份前缀。"""
+
+    match = _REVISION_PATTERN.fullmatch(str(revision).strip())
+    if match is None:
+        raise ValueError("PointSet revision 必须为 name@数字版本")
+    parts = match.group("version").split(".")
+    parts[-1] = str(int(parts[-1]) + 1)
+    return f"{match.group('name')}@{'.'.join(parts)}"
+
+
+def _authored_joint_node(point_set: dict[str, Any], target_ref: str) -> dict[str, Any]:
+    """定位可写回的作者层 ``joint_positions`` 节点，拒绝派生接近点。"""
+
+    _path, node = _authored_joint_location(point_set, target_ref)
+    return node
+
+
+def _authored_joint_location(
+    point_set: Mapping[str, Any],
+    target_ref: str,
+) -> tuple[tuple[str, ...], dict[str, Any]]:
+    """返回作者层关节节点的文档键路径及其可写映射。"""
+
+    key = str(target_ref).strip()
+    if not key:
+        raise ValueError("PointSet v3 target_ref 不能为空")
+    global_arm = _mapping_dict(
+        _mapping_dict(point_set.get("global"), "global").get("arm", {}),
+        "global.arm",
+    )
+    prefix = "global.arm."
+    if key.startswith(prefix):
+        name = key[len(prefix):]
+        return ("global", "arm", name), _require_joint_node(global_arm.get(name), key)
+    for group_name, group_value in point_set.items():
+        if group_name in RESERVED_POINT_SET_KEYS:
+            continue
+        group = _mapping_dict(group_value, group_name)
+        transit = _mapping_dict(group.get("transit", {}), f"{group_name}.transit")
+        transit_prefix = f"{group_name}.transit."
+        if key.startswith(transit_prefix):
+            name = key[len(transit_prefix):]
+            return (
+                (group_name, "transit", name),
+                _require_joint_node(transit.get(name), key),
+            )
+        targets = _mapping_dict(group.get("targets", {}), f"{group_name}.targets")
+        group_access = group.get("access")
+        for name, target_value in targets.items():
+            target = _mapping_dict(target_value, f"{group_name}.{name}")
+            arm = target.get("arm")
+            if not isinstance(arm, dict):
+                continue
+            compound = f"{group_name}.{name}"
+            has_access = target.get("access", group_access) is not None
+            authored = f"{compound}.interaction_seed" if has_access else compound
+            if key in {authored, compound, f"{compound}.interaction"}:
+                return (
+                    (group_name, "targets", name, "arm"),
+                    _require_joint_node(arm, key),
+                )
+    raise ValueError(f"PointSet v3 没有可写回的 joint_positions 目标: {key}")
+
+
+def _compose_child(node: yaml.Node, key: str) -> yaml.Node:
+    """按键取出 YAML compose 映射的子节点。"""
+
+    if not isinstance(node, yaml.MappingNode):
+        raise ValueError(f"PointSet YAML 路径 {key} 不是对象")
+    for item_key, item_value in node.value:
+        if isinstance(item_key, yaml.ScalarNode) and item_key.value == key:
+            return item_value
+    raise ValueError(f"PointSet YAML 缺少键 {key}")
+
+
+def _format_joint_si(value: float) -> str:
+    """把关节 SI 写成定点小数，去掉无意义的尾零。"""
+
+    text = f"{float(value):.12f}".rstrip("0")
+    if text.endswith("."):
+        text += "0"
+    if text == "-0.0":
+        return "0.0"
+    return text
+
+
+def _require_joint_node(value: Any, target_ref: str) -> dict[str, Any]:
+    """要求节点是可写的 ``joint_positions`` 对象。"""
+
+    if not isinstance(value, dict) or str(value.get("type", "")) != "joint_positions":
+        raise ValueError(f"PointSet v3 没有可写回的 joint_positions 目标: {target_ref}")
+    return value
+
+
+def _catalog_group_ref(target_ref: str) -> str:
+    """把作者层机械臂引用投影为界面分组键。"""
+
+    trimmed = _compound_point_ref(target_ref)
+    if trimmed.startswith("global.arm."):
+        return "global.arm"
+    if ".transit." in trimmed:
+        return trimmed.rsplit(".", 1)[0]
+    return trimmed.rsplit(".", 1)[0]
+
+
+def _compound_point_ref(target_ref: str) -> str:
+    """去掉 interaction 后缀，得到复合点或全局/transit 引用。"""
+
+    for suffix in _INTERACTION_SUFFIXES:
+        if target_ref.endswith(suffix):
+            return target_ref[: -len(suffix)]
+    return target_ref
+
+
+def _mutable_mapping(value: Mapping[str, Any]) -> dict[str, Any]:
+    """深拷贝 PointSet 映射，使示教写回不修改调用方原对象。"""
+
+    return copy.deepcopy(dict(value))
+
+
+def _mapping_dict(value: Any, field: str) -> dict[str, Any]:
+    """把 YAML 对象投影为可写 dict。"""
+
+    raw = mapping(value, field)
+    return raw if isinstance(raw, dict) else dict(raw)
+
+
 __all__ = [
     "AccessMotionBlock",
     "InstallationCalibration",
+    "PointSetCatalogEntry",
     "ResolvedPointTarget",
     "ResolvedRailTarget",
     "RobotPointSetResolver",
+    "bump_point_set_revision",
+    "patch_authored_joint_target_yaml",
+    "revise_authored_joint_target",
 ]

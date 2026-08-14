@@ -13,9 +13,12 @@ from unilab_robot_contracts import (
     JointSpecification,
     JointType,
     ResolvedCartesianTarget,
+    ResolvedJointTarget,
     RigidTransform,
     RobotPointSetResolver,
     ToolContext,
+    patch_authored_joint_target_yaml,
+    revise_authored_joint_target,
 )
 
 
@@ -105,6 +108,7 @@ def _base_point_set() -> dict[str, object]:
                 "standby": {
                     "type": "joint_positions",
                     "value": [0.0, 0.2],
+                    "source_point": "P-standby",
                 },
                 "rail_transfer_safe": {
                     "type": "joint_positions",
@@ -174,6 +178,20 @@ def _resolver(point_set: dict[str, object] | None = None) -> RobotPointSetResolv
         calibration=_calibration(),
         rail_model=_RailModel(),
     )
+
+
+def test_resolve_arm_target_accepts_authored_source_point() -> None:
+    """作者层 source_point 必须由 PointSet 解析器解析，不能在站点代码写死别名。"""
+
+    resolver = _resolver()
+    by_ref = resolver.resolve_arm_target("global.arm.standby")
+    by_source = resolver.resolve_arm_target("P-standby")
+
+    assert isinstance(by_ref, ResolvedJointTarget)
+    assert by_source.target_ref == "global.arm.standby"
+    assert by_source.joint_positions == by_ref.joint_positions
+    with pytest.raises(ValueError, match="缺少 arm target_ref"):
+        resolver.resolve_arm_target("missing-point")
 
 
 def test_affine_grid_uses_three_anchors_sparse_correction_and_rail_precedence() -> None:
@@ -333,3 +351,146 @@ def test_invalid_v3_assets_fail_closed(mutate: object, message: str) -> None:
     mutate(point_set)  # type: ignore[operator]
     with pytest.raises(ValueError, match=message):
         _resolver(point_set)
+
+
+def _fixture_point_set() -> dict[str, object]:
+    """返回含 transit 与带 access 的显式关节交互点的作者资产。"""
+
+    point_set = _base_point_set()
+    point_set.pop("group-rack")
+    point_set["fixture"] = {
+        "device_ref": "deck.fixture",
+        "transit": {
+            "ready": {"type": "joint_positions", "value": [0.0, 0.1]}
+        },
+        "targets": {
+            "slot-1": {
+                "rail": {"position_si": 0.4},
+                "arm": {
+                    "type": "joint_positions",
+                    "value": [math.pi / 2.0, 0.2],
+                    "source_point": "P-slot",
+                },
+                "access": {
+                    "type": "access_motion_block/v1",
+                    "frame_ref": "arm_base",
+                    "entry_offset_xyz_m": [0.1, 0.0, 0.1],
+                    "approach_offset_xyz_m": [0.0, 0.0, 0.1],
+                    "transit_in": ["fixture.transit.ready"],
+                },
+            }
+        },
+    }
+    return point_set
+
+
+def test_authoring_catalog_lists_joint_positions_and_omits_access_offsets() -> None:
+    """调试目录只暴露作者层关节目标，不把 entry/approach 或阵列展开成可写点。"""
+
+    catalog = _resolver().authoring_catalog()
+    refs = tuple(entry.target_ref for entry in catalog)
+
+    assert refs == ("global.arm.rail_transfer_safe", "global.arm.standby")
+    standby = next(entry for entry in catalog if entry.target_ref == "global.arm.standby")
+    assert standby.source_point == "P-standby"
+    assert standby.editable is True
+    assert standby.kind == "joint_positions"
+    assert standby.joint_positions_si == (0.0, 0.2)
+    assert standby.group_ref == "global.arm"
+
+
+def test_authoring_catalog_includes_interaction_seed_and_rail() -> None:
+    """带 AccessMotionBlock 的显式关节点应以 interaction_seed 进入目录。"""
+
+    catalog = _resolver(_fixture_point_set()).authoring_catalog()
+    seed = next(
+        entry
+        for entry in catalog
+        if entry.target_ref == "fixture.slot-1.interaction_seed"
+    )
+
+    assert seed.source_point == "P-slot"
+    assert seed.rail_position_si == pytest.approx(0.4)
+    assert seed.joint_positions_si == pytest.approx((math.pi / 2.0, 0.2))
+    assert "fixture.slot-1.entry" not in {entry.target_ref for entry in catalog}
+    assert "fixture.slot-1.approach" not in {entry.target_ref for entry in catalog}
+
+
+def test_revise_authored_joint_target_updates_seed_and_bumps_revision() -> None:
+    """示教写回只改作者层 value，并提升 PointSet revision。"""
+
+    original = _fixture_point_set()
+    revised = revise_authored_joint_target(
+        original,
+        "fixture.slot-1.interaction_seed",
+        (0.3, 0.4),
+        joint_count=2,
+    )
+
+    assert original["revision"] == "test-points@3.0.0"
+    assert revised["revision"] == "test-points@3.0.1"
+    assert revised["fixture"]["targets"]["slot-1"]["arm"]["value"] == [0.3, 0.4]
+    seed = _resolver(revised).resolve_arm_target("fixture.slot-1.interaction_seed")
+    assert isinstance(seed, ResolvedJointTarget)
+    assert seed.joint_positions == pytest.approx((0.3, 0.4))
+
+
+def test_patch_authored_joint_target_yaml_rewrites_only_revision_and_that_value() -> None:
+    """示教写回只替换 revision 标量和目标关节列表，其它注释与点位原文不变。"""
+
+    original = """schema: unilab.robot-point-set/v3
+revision: demo@1.2.3
+# keep this author comment
+description: untouched prose
+global:
+  arm:
+    home:
+      type: joint_positions
+      value:
+      - 0.100000000000
+      - 0.200000000000
+      source_point: P1
+    standby:
+      type: joint_positions
+      value:
+      - 0.300000000000
+      - 0.400000000000
+      source_point: P2
+"""
+    patched = patch_authored_joint_target_yaml(
+        original,
+        "global.arm.home",
+        (0.5, 0.6),
+        joint_count=2,
+    )
+
+    assert "# keep this author comment" in patched
+    assert "description: untouched prose" in patched
+    assert "revision: demo@1.2.4" in patched
+    assert "      - 0.300000000000\n      - 0.400000000000\n      source_point: P2" in patched
+    assert original.split("standby:")[1] == patched.split("standby:")[1]
+    home_value = patched.split("home:")[1].split("standby:")[0]
+    assert "- 0.5\n" in home_value or "- 0.500000000000" in home_value
+    assert "- 0.6\n" in home_value or "- 0.600000000000" in home_value
+    assert "- 0.100000000000" not in home_value
+
+
+def test_revise_authored_joint_target_rejects_access_offsets_and_wrong_count() -> None:
+    """派生接近点和关节数量错误不得写回 PointSet。"""
+
+    point_set = _fixture_point_set()
+    with pytest.raises(ValueError, match="没有可写回"):
+        revise_authored_joint_target(
+            point_set,
+            "fixture.slot-1.entry",
+            (0.3, 0.4),
+            joint_count=2,
+        )
+    with pytest.raises(ValueError, match="关节数量"):
+        revise_authored_joint_target(
+            point_set,
+            "global.arm.standby",
+            (0.1,),
+            joint_count=2,
+        )
+

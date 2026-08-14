@@ -7,6 +7,7 @@ name = "unilab-robot-contracts"
 version = "0.1.0"
 description = "Uni-Lab 厂商无关机械臂命令、观测与执行后端合同"
 requires-python = ">=3.11"
+dependencies = ["pyyaml"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

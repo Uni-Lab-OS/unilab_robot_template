@@ -58,6 +58,19 @@ class AccessMotionBlock:
 
 
 @dataclass(frozen=True, slots=True)
+class PointSetCatalogEntry:
+    """作者层可调试目录中的一条关节目标，不含 AccessMotionBlock 派生点。"""
+
+    target_ref: str
+    source_point: str
+    kind: str
+    editable: bool
+    joint_positions_si: tuple[float, ...]
+    rail_position_si: float | None
+    group_ref: str
+
+
+@dataclass(frozen=True, slots=True)
 class ResolvedPointTarget:
     """一个设备点位包解析后的机械臂、导轨和接近运动块。"""
 
@@ -73,6 +86,7 @@ class ResolvedPointTarget:
 __all__ = [
     "AccessMotionBlock",
     "InstallationCalibration",
+    "PointSetCatalogEntry",
     "ResolvedPointTarget",
     "ResolvedRailTarget",
 ]

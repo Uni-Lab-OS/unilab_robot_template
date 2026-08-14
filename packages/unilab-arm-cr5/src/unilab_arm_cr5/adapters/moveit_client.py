@@ -222,17 +222,13 @@ class MoveIt2ClientPort:
                 "xyz_m": list(observed_tcp.translation_m),
                 "orientation_xyzw": list(observed_tcp.orientation_xyzw),
             }
-        stamp = getattr(getattr(joint_state, "header", None), "stamp", None)
-        seconds = (
-            float(getattr(stamp, "sec", 0.0))
-            + float(getattr(stamp, "nanosec", 0.0)) / 1_000_000_000.0
-        )
-        if seconds <= 0.0:
-            seconds = time.time()
+        # CommissioningSnapshot.is_fresh() 按接收时钟判断，不能用 ROS header stamp。
+        # compute_fk 会阻塞；工位 URDF 变大后 FK 常超过 max_age_s=0.5s。
+        received_at = time.time()
         state = self.client.query_state()
         state_name = str(getattr(state, "name", state)).lower()
         return {
-            "observed_at": seconds,
+            "observed_at": received_at,
             "max_age_s": 0.5,
             "source": "moveit2:joint_states+compute_fk",
             "online": bool(ordered and tcp_pose is not None),
