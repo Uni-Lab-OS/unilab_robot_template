@@ -12,7 +12,11 @@ from .factory import (
     create_plc_backend,
     create_tcp_sdk_backend,
 )
-from .moveit_model import MoveItModelBundle, build_moveit_model
+from .moveit_model import (
+    MoveItModelBundle,
+    build_joint_state_name_map,
+    build_moveit_model,
+)
 from .standalone_device import StandaloneArmDevice
 
 __version__ = MODULE_VERSION
@@ -25,6 +29,7 @@ __all__ = [
     "ArmModule",
     "MoveItModelBundle",
     "StandaloneArmDevice",
+    "build_joint_state_name_map",
     "build_moveit_model",
     "create_arm_module",
     "create_moveit_backend",

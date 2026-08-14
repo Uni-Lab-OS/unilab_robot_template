@@ -12,6 +12,9 @@ kinematic_joints:
   - cr7_joint_4
   - cr7_joint_5
   - cr7_joint_6
+joint_state_sources:
+  canonical: [cr7_joint_1, cr7_joint_2, cr7_joint_3, cr7_joint_4, cr7_joint_5, cr7_joint_6]
+  dobot_sdk_v1: [J1, J2, J3, J4, J5, J6]
 forbidden_joints:
   - arm_base_joint
 moveit_group: cr7_arm

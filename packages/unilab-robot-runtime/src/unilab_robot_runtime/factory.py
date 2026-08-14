@@ -285,6 +285,9 @@ def _create_moveit_runtime(
         tool_context_digest=tool_context.digest,
         commissioning_velocity_limit=manifest.profile.commissioning_velocity_limit,
         commissioning_acceleration_limit=manifest.profile.commissioning_acceleration_limit,
+        joint_completion_tolerance_si=(
+            manifest.profile.commissioning_joint_completion_tolerance_si
+        ),
     )
     binding = _create_standalone_arm(
         manifest,

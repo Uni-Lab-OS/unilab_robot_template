@@ -156,6 +156,29 @@ def test_production_profile_rejects_observed_only_interlock() -> None:
         )
 
 
+@pytest.mark.parametrize("stale_after_s", (0.49, 5.01))
+def test_hardware_profile_rejects_joint_state_stale_window_outside_contract(
+    stale_after_s: float,
+) -> None:
+    """关节反馈过期阈值只能由 HardwareProfile 在冻结范围内声明。"""
+
+    with pytest.raises(ValueError, match="joint_state_stale_after_s"):
+        replace(_profile(), joint_state_stale_after_s=stale_after_s)
+
+
+@pytest.mark.parametrize("tolerance_si", (0.0, 0.0101))
+def test_hardware_profile_rejects_joint_completion_tolerance_outside_contract(
+    tolerance_si: float,
+) -> None:
+    """关节点动完成容差必须由 HardwareProfile 在窄范围内声明。"""
+
+    with pytest.raises(ValueError, match="joint_completion_tolerance_si"):
+        replace(
+            _profile(),
+            commissioning_joint_completion_tolerance_si=tolerance_si,
+        )
+
+
 def test_standalone_production_rejects_non_hardware_safety_observation() -> None:
     """即使 profile 名义合规，单机械臂也不得接受普通遥测伪装的生产许可。"""
 

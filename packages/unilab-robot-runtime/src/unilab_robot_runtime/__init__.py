@@ -2,7 +2,12 @@
 
 from .access_motion_backend import AccessMotionBackend
 from .activation_store import FrozenRobotActivation, RobotActivationStore
-from .binding import MaintenanceSession, RuntimeBinding, build_test_runtime
+from .binding import (
+    MaintenanceSession,
+    RuntimeBinding,
+    bind_commissioning_runtime,
+    build_test_runtime,
+)
 from .factory import (
     RuntimeDependencies,
     RuntimeRequirements,
@@ -38,6 +43,7 @@ __all__ = [
     "RuntimeRequirements",
     "ValidatedPointSet",
     "arm_model_descriptor",
+    "bind_commissioning_runtime",
     "build_test_runtime",
     "create_runtime",
     "load_point_set",

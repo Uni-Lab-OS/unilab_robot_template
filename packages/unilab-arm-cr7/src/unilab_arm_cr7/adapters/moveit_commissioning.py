@@ -56,6 +56,7 @@ class MoveItCommissioningAdapter:
         tool_context_digest: str,
         commissioning_velocity_limit: float = 0.25,
         commissioning_acceleration_limit: float = 0.25,
+        joint_completion_tolerance_si: float = 0.002,
         group_name: str | None = None,
     ) -> None:
         """冻结 exact 型号、点位版本、硬件配置和工具上下文。"""
@@ -77,10 +78,13 @@ class MoveItCommissioningAdapter:
         self.tool_context_digest = tool_context_digest
         self.commissioning_velocity_limit = float(commissioning_velocity_limit)
         self.commissioning_acceleration_limit = float(commissioning_acceleration_limit)
+        self.joint_completion_tolerance_si = float(joint_completion_tolerance_si)
         if not 0.0 < self.commissioning_velocity_limit <= 0.30:
             raise ValueError("HardwareProfile 调试速度上限必须位于 (0, 0.30]")
         if not 0.0 < self.commissioning_acceleration_limit <= 0.30:
             raise ValueError("HardwareProfile 调试加速度上限必须位于 (0, 0.30]")
+        if not 0.0 < self.joint_completion_tolerance_si <= 0.01:
+            raise ValueError("HardwareProfile 调试关节完成容差必须位于 (0, 0.01]")
         self.group_name = group_name or str(model.planning_group)
         self._fingerprints: dict[str, str] = {}
         self._results: dict[str, CommandResult] = {}
@@ -336,7 +340,7 @@ class MoveItCommissioningAdapter:
         if observed is None:
             raise RuntimeError("joint_jog 完成后无法读取完整关节状态")
         actual = tuple(item.position_si for item in observed)
-        tolerance = 1e-6
+        tolerance = self.joint_completion_tolerance_si
         for candidate_index, (before, after) in enumerate(
             zip(current, actual, strict=True)
         ):

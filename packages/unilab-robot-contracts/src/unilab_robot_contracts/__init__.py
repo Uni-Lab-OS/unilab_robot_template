@@ -47,6 +47,7 @@ from .hardware_profile import (
     HardwareProfile,
     InterlockMode,
 )
+from .joint_state import JointStateNameMap
 from .journal import CommandJournal, InMemoryCommandJournal, SQLiteCommandJournal
 from .modules import ArmModulePort, RailModulePort
 from .motion_profiles import (
@@ -157,6 +158,7 @@ __all__ = [
     "InterlockMode",
     "JointJogCommand",
     "JointSpecification",
+    "JointStateNameMap",
     "JointType",
     "MotionDirection",
     "MotionPrimitive",

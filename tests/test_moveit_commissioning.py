@@ -119,6 +119,17 @@ class FakeCommissioningMoveGroup:
         }
 
 
+class ApproximateJointReadbackMoveGroup(FakeCommissioningMoveGroup):
+    """模拟控制器在完成后按自身容差停在目标附近。"""
+
+    def execute_joint_target(self, **kwargs: Any) -> Mapping[str, Any]:
+        """派发成功后给读回值加入小于 Profile 容差的确定性误差。"""
+
+        receipt = super().execute_joint_target(**kwargs)
+        self.joints = [value + 0.0008 for value in self.joints]
+        return receipt
+
+
 def test_move_target_uses_versioned_point_and_low_speed_profile() -> None:
     """维护目标移动必须校验版本/profile，并走无 RViz MoveGroup 端口。"""
 
@@ -185,6 +196,38 @@ def test_joint_jog_changes_only_selected_exact_model_joint() -> None:
 
     assert result.state is CommandState.SUCCEEDED
     assert port.joints == [0.0, -0.02, 0.0, 0.0, 0.0, 0.0]
+
+
+def test_joint_jog_accepts_profile_owned_completion_tolerance() -> None:
+    """MoveIt 成功且六轴读回处于 HardwareProfile 容差内时应物理结算成功。"""
+
+    port = ApproximateJointReadbackMoveGroup()
+    adapter = MoveItCommissioningAdapter(
+        port=port,
+        model=MODEL_DESCRIPTOR,
+        targets={},
+        point_set_revision="cr7-moveit-sim@1.0.0",
+        hardware_profile_digest="profile-digest",
+        tool_context_digest="tool-digest",
+        joint_completion_tolerance_si=0.002,
+    )
+    command = JointJogCommand(
+        command_id="commissioning-joint-tolerant-1",
+        hardware_profile_digest="profile-digest",
+        source_boot_id="boot-1",
+        monotonic_sequence=3,
+        motion_profile_ref="maintenance-slow",
+        velocity_scale=0.05,
+        acceleration_scale=0.05,
+        joint_ref="cr7_joint_6",
+        direction=MotionDirection.POSITIVE,
+        step_si=0.02,
+    )
+
+    result = adapter.execute_commissioning(command)
+
+    assert result.state is CommandState.SUCCEEDED
+    assert adapter.commissioning_snapshot().execution_fenced is False
 
 
 def test_move_pose_uses_normalized_absolute_pose_and_tool_digest() -> None:

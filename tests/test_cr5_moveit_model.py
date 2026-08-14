@@ -6,7 +6,10 @@ import xml.etree.ElementTree as ET
 
 import pytest
 from unilab_arm_cr5 import MODEL_DESCRIPTOR
-from unilab_arm_cr5.moveit_model import build_moveit_model
+from unilab_arm_cr5.moveit_model import (
+    build_joint_state_name_map,
+    build_moveit_model,
+)
 from unilab_robot_contracts import RigidTransform, ToolContext
 
 
@@ -35,6 +38,13 @@ def test_cr5_moveit_model_is_six_axis_and_headless() -> None:
     assert srdf.find("group").attrib["name"] == "robot_a_cr5_arm"
     assert tuple(bundle.kinematics) == ("robot_a_cr5_arm",)
     assert bundle.rviz_required is False
+    assert "world_mount_joint" in bundle.execution_urdf
+    assert "world_mount_joint" not in bundle.render_urdf
+    assert "ros2_control" not in bundle.render_urdf
+    assert "robot_a/meshes/base_link.STL" in bundle.render_urdf
+    assert "file://" not in bundle.render_urdf
+    assert "file://" in bundle.execution_urdf
+    assert len(bundle.topology_digest) == 64
 
 
 def test_cr5_moveit_model_qualifies_controller_and_joint_names() -> None:
@@ -55,6 +65,34 @@ def test_cr5_moveit_model_qualifies_controller_and_joint_names() -> None:
     assert set(first.joint_limits["joint_limits"]) == {
         f"robot_a_cr5_joint_{index}" for index in range(1, 7)
     }
+    assert first.qualified_joint_names == tuple(
+        f"robot_a_cr5_joint_{index}" for index in range(1, 7)
+    )
+    assert first.topology_digest != second.topology_digest
+
+
+def test_cr5_joint_feedback_requires_exact_complete_mapping() -> None:
+    """SDK/PLC 只有在型号包声明 exact 映射后才能成为观测。"""
+
+    mapping = build_joint_state_name_map(
+        device_id="robot_a",
+        source="dobot_sdk_v1",
+    )
+
+    assert mapping.qualify(
+        ("J1", "J2", "J3", "J4", "J5", "J6"),
+        (0.0, 0.1, 0.2, 0.3, 0.4, 0.5),
+    ) == {
+        f"robot_a_cr5_joint_{index}": pytest.approx((index - 1) / 10)
+        for index in range(1, 7)
+    }
+    with pytest.raises(ValueError, match="missing"):
+        mapping.qualify(("J1", "J2"), (0.0, 0.1))
+    with pytest.raises(ValueError, match="未验证 joint-state source"):
+        build_joint_state_name_map(
+            device_id="robot_a",
+            source="unverified_plc_register_order",
+        )
 
 
 def test_cr5_moveit_model_owns_exact_source_and_mesh_assets() -> None:
@@ -63,7 +101,7 @@ def test_cr5_moveit_model_owns_exact_source_and_mesh_assets() -> None:
     bundle = build_moveit_model(device_id="robot_a")
 
     assert bundle.source_digest == (
-        "c4ef7e9cc781a95fd1d161ec5c35d1ccb2597194dcad77f13cf992fd863b014a"
+        "8c8b9ea935fd83122b19b572c84d107e81b4864d4310c94d0906cc361e7631c2"
     )
     assert len(bundle.mesh_paths) == 7
     assert all(path.is_file() for path in bundle.mesh_paths)

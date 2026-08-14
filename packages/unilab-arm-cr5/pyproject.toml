@@ -7,7 +7,7 @@ name = "unilab-arm-cr5"
 version = "0.1.0"
 description = "Dobot CR5 可替换机械臂模块及 PLC/TCP-SDK/MoveIt 后端"
 requires-python = ">=3.11"
-dependencies = ["unilab-robot-contracts>=0.1,<0.2"]
+dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -3,18 +3,25 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import xml.etree.ElementTree as ET
 from collections.abc import Mapping
+from copy import deepcopy
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
+
+import yaml
+from unilab_robot_contracts import JointStateNameMap
 
 from .adapters.moveit import CR5_JOINT_NAMES
 
 _DEVICE_ID = re.compile(r"^[A-Za-z0-9_]+$")
-_SOURCE_DIGEST = "c4ef7e9cc781a95fd1d161ec5c35d1ccb2597194dcad77f13cf992fd863b014a"
+_SOURCE_DIGEST = "8c8b9ea935fd83122b19b572c84d107e81b4864d4310c94d0906cc361e7631c2"
 _MODEL_ROOT = Path(__file__).resolve().parent / "models"
+_MODEL_DESCRIPTOR = _MODEL_ROOT / "model.yaml"
 _SOURCE_URDF = _MODEL_ROOT / "cr5_robot.urdf"
 _MESH_ROOT = _MODEL_ROOT / "meshes" / "cr5"
 _LINK_NAMES = {
@@ -43,9 +50,10 @@ _DISABLED_COLLISIONS = (
 
 @dataclass(frozen=True, slots=True)
 class MoveItModelBundle:
-    """交给 OS 单一 ROS Launch owner 的完整六轴模型与参数。"""
+    """执行与渲染共享命名/拓扑、但隔离世界安装的六轴模型。"""
 
-    urdf: str
+    execution_urdf: str
+    render_urdf: str
     srdf: str
     ros2_controllers: dict[str, Any]
     moveit_controllers: dict[str, Any]
@@ -53,7 +61,52 @@ class MoveItModelBundle:
     joint_limits: dict[str, Any]
     source_digest: str
     mesh_paths: tuple[Path, ...]
+    qualified_joint_names: tuple[str, ...]
+    topology_digest: str
     rviz_required: bool = False
+
+    @property
+    def urdf(self) -> str:
+        """为现有 MoveIt Launch 调用方保留执行 URDF 别名。"""
+
+        return self.execution_urdf
+
+
+def build_joint_state_name_map(
+    *,
+    device_id: str,
+    source: str = "canonical",
+) -> JointStateNameMap:
+    """按型号包已验证 source 构造 CR5 exact 反馈映射。"""
+
+    raw_to_canonical = _load_joint_state_source_mappings().get(str(source))
+    if raw_to_canonical is None:
+        raise ValueError(f"CR5 型号包未验证 joint-state source: {source}")
+    return JointStateNameMap(
+        device_id=str(device_id).strip(),
+        canonical_joint_names=CR5_JOINT_NAMES,
+        raw_to_canonical=raw_to_canonical,
+    )
+
+
+@lru_cache(maxsize=1)
+def _load_joint_state_source_mappings() -> dict[str, dict[str, str]]:
+    """从型号描述符加载受 digest 约束的原始关节名白名单。"""
+
+    data = yaml.safe_load(_MODEL_DESCRIPTOR.read_text(encoding="utf-8")) or {}
+    canonical = tuple(str(value) for value in data.get("kinematic_joints", ()))
+    if canonical != CR5_JOINT_NAMES:
+        raise ValueError("CR5 model.yaml 的 kinematic_joints 与型号实现漂移")
+    sources = data.get("joint_state_sources")
+    if not isinstance(sources, Mapping) or not sources:
+        raise ValueError("CR5 model.yaml 缺少 joint_state_sources")
+    mappings: dict[str, dict[str, str]] = {}
+    for source, raw_names in sources.items():
+        names = tuple(str(value) for value in raw_names)
+        if len(names) != len(canonical) or len(set(names)) != len(names):
+            raise ValueError(f"CR5 joint-state source 非 exact 六轴: {source}")
+        mappings[str(source)] = dict(zip(names, canonical, strict=True))
+    return mappings
 
 
 def build_moveit_model(
@@ -86,17 +139,29 @@ def build_moveit_model(
         raise ValueError("CR5 mesh 资产缺失: " + ", ".join(missing_meshes))
 
     prefix = f"{normalized_device_id}_"
-    root = ET.fromstring(source_bytes)
-    root.set("name", f"{normalized_device_id}_cr5")
-    _qualify_robot_tree(root, prefix=prefix, mesh_paths=mesh_paths)
-    root.insert(0, _world_mount_joint(prefix, position, rotation))
-    _append_mock_ros2_control(root, prefix=prefix)
+    render_root = ET.fromstring(source_bytes)
+    render_root.set("name", f"{normalized_device_id}_cr5")
+    _qualify_robot_tree(render_root, prefix=prefix, mesh_paths=mesh_paths)
+    execution_root = deepcopy(render_root)
+    _rewrite_render_mesh_uris(
+        render_root,
+        device_id=normalized_device_id,
+    )
+    execution_root.insert(0, _world_mount_joint(prefix, position, rotation))
+    _append_mock_ros2_control(execution_root, prefix=prefix)
 
-    qualified_joints = tuple(f"{prefix}{name}" for name in CR5_JOINT_NAMES)
+    name_map = build_joint_state_name_map(device_id=normalized_device_id)
+    qualified_joints = name_map.qualified_joint_names
+    topology_digest = _topology_digest(
+        device_id=normalized_device_id,
+        source_digest=source_digest,
+        qualified_joint_names=qualified_joints,
+    )
     planning_group = f"{prefix}cr5_arm"
     controller_name = f"{prefix}cr5_controller"
     return MoveItModelBundle(
-        urdf=ET.tostring(root, encoding="unicode"),
+        execution_urdf=ET.tostring(execution_root, encoding="unicode"),
+        render_urdf=ET.tostring(render_root, encoding="unicode"),
         srdf=_build_srdf(prefix=prefix, planning_group=planning_group),
         ros2_controllers=_ros2_controllers(
             controller_name=controller_name,
@@ -126,7 +191,31 @@ def build_moveit_model(
         },
         source_digest=source_digest,
         mesh_paths=mesh_paths,
+        qualified_joint_names=qualified_joints,
+        topology_digest=topology_digest,
     )
+
+
+def _topology_digest(
+    *,
+    device_id: str,
+    source_digest: str,
+    qualified_joint_names: tuple[str, ...],
+) -> str:
+    """生成不受安装位姿和本地路径影响的运动学拓扑摘要。"""
+
+    payload = json.dumps(
+        {
+            "device_id": device_id,
+            "model": "cr5",
+            "source_digest": source_digest,
+            "joint_names": qualified_joint_names,
+        },
+        ensure_ascii=True,
+        separators=(",", ":"),
+        sort_keys=True,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 def _qualify_robot_tree(
@@ -164,6 +253,14 @@ def _qualify_robot_tree(
         if path is None:
             raise ValueError(f"CR5 URDF 引用了未锁定 mesh: {name}")
         mesh.set("filename", path.resolve().as_uri())
+
+
+def _rewrite_render_mesh_uris(root: ET.Element, *, device_id: str) -> None:
+    """把渲染 mesh 改为相对实例 URL，执行 URDF 继续使用本机路径。"""
+
+    for mesh in root.findall(".//mesh"):
+        name = Path(mesh.attrib["filename"]).name
+        mesh.set("filename", f"{device_id}/meshes/{name}")
 
 
 def _world_mount_joint(
@@ -283,4 +380,8 @@ def _moveit_controllers(
     }
 
 
-__all__ = ["MoveItModelBundle", "build_moveit_model"]
+__all__ = [
+    "MoveItModelBundle",
+    "build_joint_state_name_map",
+    "build_moveit_model",
+]
