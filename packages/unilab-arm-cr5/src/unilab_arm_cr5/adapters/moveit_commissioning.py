@@ -129,6 +129,24 @@ class MoveItCommissioningAdapter:
 
         return self.point_set_revision
 
+    def replace_point_set(
+        self,
+        targets: Mapping[str, ResolvedMotionTarget],
+        point_set_revision: str,
+    ) -> None:
+        """热替换活动 PointSet，不重建 MoveIt 客户端。"""
+
+        revision = str(point_set_revision).strip()
+        if not revision:
+            raise ValueError("MoveIt 调试必须绑定点位版本")
+        normalized: dict[str, ResolvedMotionTarget] = {}
+        for target_ref, target in targets.items():
+            if target_ref != target.target_ref:
+                raise ValueError(f"MoveIt 调试 target_ref 索引漂移: {target_ref}")
+            normalized[target_ref] = target
+        self.targets = normalized
+        self.point_set_revision = revision
+
     def commissioning_snapshot(self) -> CommissioningSnapshot:
         """把 MoveGroup 控制器状态规范化为统一调试快照。"""
 
@@ -220,24 +238,13 @@ class MoveItCommissioningAdapter:
                 )
                 self._remember(command, result)
                 return result
-            validate_completion_receipt(
-                receipt,
-                command_id=command.command_id,
-                source="MoveIt commissioning",
-            )
+            result = _command_result_from_receipt(command, receipt)
         # 传输、规划或回执验证的任意异常都可能发生在物理派发之后，必须保守 UNKNOWN。
         except Exception as exc:  # noqa: BLE001
             result = CommandResult(
                 command.command_id,
                 CommandState.EXECUTION_UNKNOWN,
                 f"MoveIt 调试派发结果不明: {exc}",
-            )
-        else:
-            result = CommandResult(
-                command.command_id,
-                CommandState.SUCCEEDED,
-                "MoveIt 调试运动完成",
-                receipt,
             )
         self._remember(command, result)
         return result
@@ -336,6 +343,8 @@ class MoveItCommissioningAdapter:
             command_id=command.command_id,
             parameters=_commissioning_parameters(command, primitive="joint_ptp"),
         )
+        if str(receipt.get("state", "")) != CommandState.SUCCEEDED.value:
+            return receipt
         observed = self.commissioning_snapshot().joint_positions
         if observed is None:
             raise RuntimeError("joint_jog 完成后无法读取完整关节状态")
@@ -471,6 +480,35 @@ class MoveItCommissioningAdapter:
         self._results[command.command_id] = result
         if result.state is CommandState.EXECUTION_UNKNOWN:
             self._fenced_command_ids.add(command.command_id)
+
+
+def _command_result_from_receipt(
+    command: CommissioningCommand, receipt: Mapping[str, Any]
+) -> CommandResult:
+    """把 MoveIt 已知终态回执投影为命令结果；歧义回执仍抛给 UNKNOWN 路径。"""
+
+    if str(receipt.get("command_id", "")) != command.command_id:
+        raise ValueError("MoveIt commissioning 回执 command_id 不匹配")
+    state = str(receipt.get("state", ""))
+    if state == CommandState.FAILED.value:
+        message = str(receipt.get("message") or "").strip() or "MoveIt 返回失败终态"
+        return CommandResult(
+            command.command_id,
+            CommandState.FAILED,
+            message,
+            dict(receipt),
+        )
+    validate_completion_receipt(
+        receipt,
+        command_id=command.command_id,
+        source="MoveIt commissioning",
+    )
+    return CommandResult(
+        command.command_id,
+        CommandState.SUCCEEDED,
+        "MoveIt 调试运动完成",
+        receipt,
+    )
 
 
 def _cartesian_pose(value: object) -> CartesianPose | None:

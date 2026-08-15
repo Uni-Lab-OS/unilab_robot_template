@@ -56,8 +56,6 @@ class MoveIt2ClientPort:
             "group_name": group_name,
         }
         self._results[command_id] = result
-        if not completed:
-            raise RuntimeError(result["message"])
         return result
 
     def execute_cartesian_target(
@@ -115,8 +113,6 @@ class MoveIt2ClientPort:
             "target_type": "cartesian_pose",
         }
         self._results[command_id] = result
-        if not completed:
-            raise RuntimeError(result["message"])
         return result
 
     def _apply_motion_profile(self, parameters: Mapping[str, Any]) -> None:
