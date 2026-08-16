@@ -15,7 +15,7 @@ from .factory import MODEL_DESCRIPTOR, build_joint_state_name_map
 
 _DEVICE_ID = re.compile(r"^[A-Za-z0-9_]+$")
 _MODEL_YAML = Path(__file__).resolve().parent / "models" / "model.yaml"
-_SOURCE_DIGEST = "306ec8276ce27eacd6b3a42c0bba856e1423de9996a170b44706b32fcf0a59ed"
+_SOURCE_DIGEST = "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d"
 _MODEL_ID = "szlab-linear-rail-a"
 
 
@@ -28,6 +28,7 @@ class RailKinematicModelBundle:
     qualified_joint_names: tuple[str, ...]
     topology_digest: str
     mesh_paths: tuple[Path, ...] = ()
+    mount_link: str = ""
 
 
 def build_kinematic_model(
@@ -92,6 +93,7 @@ def build_kinematic_model(
             source_digest=_SOURCE_DIGEST,
             qualified_joint_names=qualified,
         ),
+        mount_link=carriage,
     )
 
 

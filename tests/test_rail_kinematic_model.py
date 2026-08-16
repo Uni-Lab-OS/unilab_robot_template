@@ -42,11 +42,12 @@ def test_rail_kinematic_model_declares_one_prismatic_joint() -> None:
 
     assert movable == ("rail_rail_joint",)
     assert first.qualified_joint_names == ("rail_rail_joint",)
+    assert first.mount_link == "rail_rail_carriage"
     assert "cr5_joint" not in first.render_urdf
     assert first.topology_digest != second.topology_digest
     assert len(first.topology_digest) == 64
     assert first.source_digest == (
-        "306ec8276ce27eacd6b3a42c0bba856e1423de9996a170b44706b32fcf0a59ed"
+        "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d"
     )
 
 
