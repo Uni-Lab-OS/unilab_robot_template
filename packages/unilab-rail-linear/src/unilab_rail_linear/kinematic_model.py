@@ -49,7 +49,7 @@ def build_kinematic_model(
     normalized = str(device_id).strip()
     if _DEVICE_ID.fullmatch(normalized) is None:
         raise ValueError("device_id 只能包含英文、数字和下划线")
-    actual_digest = hashlib.sha256(_MODEL_YAML.read_bytes()).hexdigest()
+    actual_digest = _source_file_digest(_MODEL_YAML)
     if actual_digest != _SOURCE_DIGEST:
         raise ValueError("导轨 model.yaml 源摘要漂移")
 
@@ -95,6 +95,18 @@ def build_kinematic_model(
         ),
         mount_link=carriage,
     )
+
+
+def _source_file_digest(path: Path) -> str:
+    """对型号描述符做换行无关摘要。
+
+    参数：``path`` 是 ``model.yaml``。返回：规范化为 LF 后的 SHA-256。
+    异常：文件不可读时传播 ``OSError``。安全：Windows CRLF 检出不得被当成
+    型号漂移；内容变化仍会改变摘要。
+    """
+
+    normalized = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return hashlib.sha256(normalized).hexdigest()
 
 
 def _topology_digest(

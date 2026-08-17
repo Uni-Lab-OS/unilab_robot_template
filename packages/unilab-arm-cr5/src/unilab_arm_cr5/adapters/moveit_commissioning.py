@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import time
 from collections.abc import Mapping, Sequence
 from typing import Any, Protocol
@@ -57,6 +58,7 @@ class MoveItCommissioningAdapter:
         commissioning_velocity_limit: float = 0.25,
         commissioning_acceleration_limit: float = 0.25,
         joint_completion_tolerance_si: float = 0.002,
+        joint_readback_timeout_s: float = 0.5,
         group_name: str | None = None,
     ) -> None:
         """冻结 exact 型号、点位版本、硬件配置和工具上下文。"""
@@ -85,6 +87,9 @@ class MoveItCommissioningAdapter:
             raise ValueError("HardwareProfile 调试加速度上限必须位于 (0, 0.30]")
         if not 0.0 < self.joint_completion_tolerance_si <= 0.01:
             raise ValueError("HardwareProfile 调试关节完成容差必须位于 (0, 0.01]")
+        self.joint_readback_timeout_s = float(joint_readback_timeout_s)
+        if not 0.0 <= self.joint_readback_timeout_s <= 2.0:
+            raise ValueError("joint_jog 读回等待必须位于 [0, 2] 秒")
         self.group_name = group_name or str(model.planning_group)
         self._fingerprints: dict[str, str] = {}
         self._results: dict[str, CommandResult] = {}
@@ -345,18 +350,38 @@ class MoveItCommissioningAdapter:
         )
         if str(receipt.get("state", "")) != CommandState.SUCCEEDED.value:
             return receipt
-        observed = self.commissioning_snapshot().joint_positions
-        if observed is None:
-            raise RuntimeError("joint_jog 完成后无法读取完整关节状态")
-        actual = tuple(item.position_si for item in observed)
-        tolerance = self.joint_completion_tolerance_si
-        for candidate_index, (before, after) in enumerate(
-            zip(current, actual, strict=True)
-        ):
-            expected = target[candidate_index] if candidate_index == index else before
-            if abs(after - expected) > tolerance:
-                raise RuntimeError("joint_jog 完成见证与关节读回不一致")
-        return receipt
+        if self._joint_jog_reached(current, index, target):
+            return receipt
+        return {
+            **dict(receipt),
+            "state": CommandState.FAILED.value,
+            "completed": False,
+            "message": "joint_jog 完成见证与关节读回不一致",
+        }
+
+    def _joint_jog_reached(
+        self,
+        current: Sequence[float],
+        moved_index: int,
+        target: Sequence[float],
+    ) -> bool:
+        """MoveIt 成功后等到 /joint_states 跟上目标；仿真发布周期是 20ms。"""
+
+        deadline = time.monotonic() + self.joint_readback_timeout_s
+        while True:
+            observed = self.commissioning_snapshot().joint_positions
+            if observed is not None and _joint_jog_matches(
+                self.model.joint_specs,
+                current,
+                tuple(item.position_si for item in observed),
+                moved_index,
+                target,
+                self.joint_completion_tolerance_si,
+            ):
+                return True
+            if time.monotonic() >= deadline:
+                return False
+            time.sleep(0.02)
 
     def _execute_move_pose(self, command: MovePoseCommand) -> Mapping[str, Any]:
         """执行一次不写入 PointSet 的规范绝对 TCP 位姿。"""
@@ -480,6 +505,41 @@ class MoveItCommissioningAdapter:
         self._results[command.command_id] = result
         if result.state is CommandState.EXECUTION_UNKNOWN:
             self._fenced_command_ids.add(command.command_id)
+
+
+def _revolute_joint_error(actual: float, expected: float, specification: Any) -> float:
+    """最短角误差：±2π 行程或 continuous 关节的读回可能折到对侧。"""
+
+    linear = abs(actual - expected)
+    joint_type = getattr(specification, "joint_type", None)
+    lower = getattr(specification, "lower", None)
+    upper = getattr(specification, "upper", None)
+    wraps = getattr(joint_type, "value", joint_type) == "continuous" or (
+        lower is not None
+        and upper is not None
+        and (upper - lower) >= 2.0 * math.pi - 1e-3
+    )
+    if not wraps:
+        return linear
+    wrapped = abs((actual - expected + math.pi) % (2.0 * math.pi) - math.pi)
+    return min(linear, wrapped)
+
+
+def _joint_jog_matches(
+    specifications: Sequence[Any],
+    before: Sequence[float],
+    after: Sequence[float],
+    moved_index: int,
+    target: Sequence[float],
+    tolerance: float,
+) -> bool:
+    """验证只有被点动关节到达目标，其余关节仍在容差内。"""
+
+    for index, (previous, actual) in enumerate(zip(before, after, strict=True)):
+        expected = target[index] if index == moved_index else previous
+        if _revolute_joint_error(actual, expected, specifications[index]) > tolerance:
+            return False
+    return True
 
 
 def _command_result_from_receipt(
