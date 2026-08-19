@@ -42,7 +42,9 @@ def build_kinematic_model(
     参数：``device_id`` 是 Graph 实例身份；``position``/``rotation`` 由 Graph
     拥有，渲染 URDF 与 CR5 render 一样不写入世界安装。返回：完全限定关节名、
     拓扑摘要和本地 URDF。异常：非法 Device id 或型号描述符漂移时拒绝。
-    安全：只声明导轨自己的一根轴，不并入机械臂关节。
+    安全：只声明导轨自己的一根轴，不并入机械臂关节。滑座
+    ``mount_link`` 必须保留为空 link：它是机械臂挂载点，外观由静态外壳
+    STL 负责，不得再放无材质占位盒（urdf-loader / RViz 会画成红方块）。
     """
 
     del position, rotation
@@ -63,12 +65,7 @@ def build_kinematic_model(
     velocity = MODEL_DESCRIPTOR.velocity_limit_m_s
     robot = ET.Element("robot", {"name": f"{normalized}_rail"})
     ET.SubElement(robot, "link", {"name": base})
-    _append_box_link(
-        robot,
-        carriage,
-        size=(0.32, 0.28, 0.05),
-        origin_xyz=(0.0, 0.0, 0.175),
-    )
+    ET.SubElement(robot, "link", {"name": carriage})
     joint = ET.SubElement(robot, "joint", {"name": joint_name, "type": "prismatic"})
     ET.SubElement(joint, "parent", {"link": base})
     ET.SubElement(joint, "child", {"link": carriage})
@@ -129,30 +126,6 @@ def _topology_digest(
         sort_keys=True,
     )
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
-
-
-def _append_box_link(
-    robot: ET.Element,
-    name: str,
-    *,
-    size: tuple[float, float, float],
-    origin_xyz: tuple[float, float, float] = (0.0, 0.0, 0.0),
-) -> None:
-    """为渲染 URDF 追加一个本地 box link，不引用外部 mesh。"""
-
-    link = ET.SubElement(robot, "link", {"name": name})
-    visual = ET.SubElement(link, "visual")
-    ET.SubElement(
-        visual,
-        "origin",
-        {"xyz": f"{origin_xyz[0]} {origin_xyz[1]} {origin_xyz[2]}", "rpy": "0 0 0"},
-    )
-    geometry = ET.SubElement(visual, "geometry")
-    ET.SubElement(
-        geometry,
-        "box",
-        {"size": f"{size[0]} {size[1]} {size[2]}"},
-    )
 
 
 __all__ = ["RailKinematicModelBundle", "build_kinematic_model"]
