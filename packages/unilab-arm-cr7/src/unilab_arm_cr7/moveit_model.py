@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 import xml.etree.ElementTree as ET
 from collections.abc import Mapping
@@ -114,13 +115,17 @@ def build_moveit_model(
     device_id: str,
     position: Mapping[str, Any] | None = None,
     rotation: Mapping[str, Any] | None = None,
+    mount_yaw_deg: float = 0.0,
 ) -> MoveItModelBundle:
     """构造带 Device 命名空间和世界安装位姿的 CR7 MoveIt 模型。
 
     参数：``device_id`` 是 Graph 实例身份；``position`` 以毫米给出世界位置；
-    ``rotation`` 以弧度给出 XYZ 欧拉角。返回：六轴 URDF/SRDF、mock 控制器和
-    MoveIt 参数。异常：非法 Device id、源 URDF 摘要漂移或 mesh 缺失时拒绝。
-    安全：模型只包含 CR7 六个旋转关节；不创建导轨轴、RViz 或硬件安全许可。
+    ``rotation`` 以弧度给出 XYZ 欧拉角；``mount_yaw_deg`` 是导轨滑座上绕 Z
+    的固定安装偏航（度），写入 ``type=fixed`` 关节，运行时不变。返回：六轴
+    URDF/SRDF、mock 控制器和 MoveIt 参数。异常：非法 Device id、源 URDF 摘要
+    漂移、mesh 缺失或安装偏航非有限值时拒绝。
+    安全：模型只包含 CR7 六个旋转关节；安装偏航不是第七轴，也不创建导轨轴、
+    RViz 或硬件安全许可。
     """
 
     normalized_device_id = str(device_id).strip()
@@ -137,6 +142,7 @@ def build_moveit_model(
     missing_meshes = tuple(path.name for path in mesh_paths if not path.is_file())
     if missing_meshes:
         raise ValueError("CR7 mesh 资产缺失: " + ", ".join(missing_meshes))
+    normalized_yaw_deg = _normalize_mount_yaw_deg(mount_yaw_deg)
 
     prefix = f"{normalized_device_id}_"
     render_root = ET.fromstring(source_bytes)
@@ -146,6 +152,16 @@ def build_moveit_model(
     _rewrite_render_mesh_uris(
         render_root,
         device_id=normalized_device_id,
+    )
+    _insert_fixed_mount_yaw(
+        execution_root,
+        prefix=prefix,
+        mount_yaw_deg=normalized_yaw_deg,
+    )
+    _insert_fixed_mount_yaw(
+        render_root,
+        prefix=prefix,
+        mount_yaw_deg=normalized_yaw_deg,
     )
     execution_root.insert(0, _world_mount_joint(prefix, position, rotation))
     _append_mock_ros2_control(execution_root, prefix=prefix)
@@ -268,7 +284,7 @@ def _world_mount_joint(
     position: Mapping[str, Any] | None,
     rotation: Mapping[str, Any] | None,
 ) -> ET.Element:
-    """创建 world 到型号基座的固定安装关节。"""
+    """创建 world 到固定安装偏航连杆的固定安装关节。"""
 
     xyz = _vector(position, scale=0.001)
     rpy = _vector(rotation, scale=1.0)
@@ -278,8 +294,41 @@ def _world_mount_joint(
     )
     ET.SubElement(joint, "origin", {"xyz": xyz, "rpy": rpy})
     ET.SubElement(joint, "parent", {"link": "world"})
-    ET.SubElement(joint, "child", {"link": f"{prefix}device_link"})
+    ET.SubElement(joint, "child", {"link": f"{prefix}mount_yaw_link"})
     return joint
+
+
+def _normalize_mount_yaw_deg(value: object) -> float:
+    """把导轨滑座上的 Z 安装偏航规范为有限角度（度）。"""
+
+    yaw = float(value)
+    if not math.isfinite(yaw):
+        raise ValueError("mount_yaw_deg 必须是有限角度（度）")
+    return yaw
+
+
+def _insert_fixed_mount_yaw(
+    root: ET.Element,
+    *,
+    prefix: str,
+    mount_yaw_deg: float,
+) -> None:
+    """插入绕 Z 的固定安装关节；该角运行时不变，不是第七轴。"""
+
+    yaw_link = f"{prefix}mount_yaw_link"
+    ET.SubElement(root, "link", {"name": yaw_link})
+    joint = ET.SubElement(
+        root,
+        "joint",
+        {"name": f"{prefix}mount_yaw_joint", "type": "fixed"},
+    )
+    ET.SubElement(
+        joint,
+        "origin",
+        {"xyz": "0 0 0", "rpy": f"0 0 {math.radians(mount_yaw_deg)}"},
+    )
+    ET.SubElement(joint, "parent", {"link": yaw_link})
+    ET.SubElement(joint, "child", {"link": f"{prefix}device_link"})
 
 
 def _vector(value: Mapping[str, Any] | None, *, scale: float) -> str:

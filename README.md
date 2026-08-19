@@ -20,6 +20,14 @@ unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模�
 
 领域仓库不应复制通用 Adapter、运行时路由或 WorkCell 状态机。机械臂型号包不保存现场点位、Warehouse 传感器地址或 Site 绑定。
 
+领域仓如何引用本仓（两个 `@device`、导轨父级、禁止合一体 MoveIt）见
+`.cursor/skills/use-unilab-arm-package/`。权威样本是 `Uni-Lab-pTLC`，不要按现场即兴拼 URDF。
+检查器：
+
+```bash
+python .cursor/skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py --domain ../Uni-Lab-pTLC
+```
+
 ## 公共边界
 
 - FE/Workflow 只使用厂商无关的 `pick`、`place`、`pour`。

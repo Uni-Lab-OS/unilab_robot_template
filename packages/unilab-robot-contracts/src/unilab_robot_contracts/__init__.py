@@ -77,6 +77,7 @@ from .point_sets import (
     ResolvedRailTarget,
     RobotPointSetResolver,
     bump_point_set_revision,
+    patch_authored_composite_target_yaml,
     patch_authored_joint_target_yaml,
     revise_authored_joint_target,
 )
@@ -225,6 +226,7 @@ __all__ = [
     "WorkCellPlanPhase",
     "bump_point_set_revision",
     "parse_site_access_declarations",
+    "patch_authored_composite_target_yaml",
     "patch_authored_joint_target_yaml",
     "resolve_affine_grid",
     "revise_authored_joint_target",

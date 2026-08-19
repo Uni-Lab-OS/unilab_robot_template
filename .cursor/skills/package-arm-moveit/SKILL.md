@@ -124,7 +124,7 @@ rviz_required: false
 - Root `pyproject.toml` → `pythonpath`: `packages/unilab-arm-<slug>/src`
 - `.github/workflows/quality.yml` → `pip install -e packages/unilab-arm-<slug>`
 - `README.md` L1 row for the new arm
-- Domain packages (e.g. SZLab) that should use it: add dependency + optional `@device(model={type: package_moveit, provider: "unilab_arm_<slug>.moveit_model:build_moveit_model", source_digest: "..."})` — only when user asks to wire L3
+- Domain packages that should use it: do **not** invent the L3 wiring here. Follow `use-unilab-arm-package` (pTLC sample + `check_domain_arm_assembly.py`). Provider string is `unilab_arm_<slug>:build_moveit_model`.
 
 ### 7. Tests
 

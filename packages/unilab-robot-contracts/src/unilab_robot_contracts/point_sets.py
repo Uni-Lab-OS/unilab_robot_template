@@ -624,6 +624,83 @@ def patch_authored_joint_target_yaml(
     return patched
 
 
+def patch_authored_composite_target_yaml(
+    text: str,
+    target_ref: str,
+    joint_positions_si: Sequence[float],
+    rail_position_si: float | None,
+    *,
+    joint_count: int,
+    expected_revision: str | None = None,
+) -> str:
+    """原子更新一个 PointSet v3 作者目标的机械臂与可选导轨位置。
+
+    参数：YAML 原文、稳定复合目标引用、型号顺序关节 SI、可选导轨 SI、
+    exact Arm 关节数和调用方已读取的修订。返回：只提升一次修订的新原文。
+    异常：修订冲突、目标不可写、导轨节点缺失或数值无效时失败关闭。
+    """
+
+    loaded = yaml.safe_load(text)
+    if not isinstance(loaded, Mapping):
+        raise TypeError("PointSet YAML 根节点必须是对象")
+    current_revision = str(loaded.get("revision", "")).strip()
+    if expected_revision is not None and str(expected_revision).strip() != current_revision:
+        raise ValueError(
+            f"PointSet 修订冲突: expected={expected_revision!r}, actual={current_revision!r}"
+        )
+    revised = revise_authored_joint_target(
+        loaded,
+        target_ref,
+        joint_positions_si,
+        joint_count=joint_count,
+    )
+    arm_path, _arm_node = _authored_joint_location(loaded, target_ref)
+    rail_path = (*arm_path[:-1], "rail", "position_si")
+    rail_value: float | None = None
+    if rail_position_si is not None:
+        rail_value = float(rail_position_si)
+        if not math.isfinite(rail_value):
+            raise ValueError("rail_position_si 必须是有限数")
+        node: Any = revised
+        for key in rail_path[:-1]:
+            node = _mapping_dict(node.get(key), ".".join(rail_path[:-1]))
+        if rail_path[-1] not in node:
+            raise ValueError(f"{target_ref} 没有可写回的 rail.position_si")
+        node[rail_path[-1]] = rail_value
+
+    root = yaml.compose(StringIO(text), Loader=yaml.SafeLoader)
+    if not isinstance(root, yaml.MappingNode):
+        raise TypeError("PointSet YAML 根节点必须是对象")
+    replacements: list[tuple[int, int, str]] = []
+    revision_node = _compose_child(root, "revision")
+    replacements.append(
+        (revision_node.start_mark.index, revision_node.end_mark.index, str(revised["revision"]))
+    )
+    value_node = root
+    for key in (*arm_path, "value"):
+        value_node = _compose_child(value_node, key)
+    if not isinstance(value_node, yaml.SequenceNode) or len(value_node.value) != joint_count:
+        raise ValueError(f"{target_ref}.value 关节数量与 exact Arm 型号不一致")
+    joints = numeric_sequence(joint_positions_si, "joint_positions_si")
+    for item_node, number in zip(value_node.value, joints, strict=True):
+        replacements.append(
+            (item_node.start_mark.index, item_node.end_mark.index, _format_joint_si(number))
+        )
+    if rail_value is not None:
+        rail_node = root
+        for key in rail_path:
+            rail_node = _compose_child(rail_node, key)
+        if not isinstance(rail_node, yaml.ScalarNode):
+            raise ValueError(f"{target_ref}.rail.position_si 必须是标量")
+        replacements.append(
+            (rail_node.start_mark.index, rail_node.end_mark.index, _format_joint_si(rail_value))
+        )
+    patched = text
+    for start, end, token in sorted(replacements, reverse=True):
+        patched = patched[:start] + token + patched[end:]
+    return patched
+
+
 def bump_point_set_revision(revision: str) -> str:
     """把 ``name@x.y.z`` 的最后一段数字加一，保持作者身份前缀。"""
 
@@ -760,6 +837,7 @@ __all__ = [
     "ResolvedRailTarget",
     "RobotPointSetResolver",
     "bump_point_set_revision",
+    "patch_authored_composite_target_yaml",
     "patch_authored_joint_target_yaml",
     "revise_authored_joint_target",
 ]

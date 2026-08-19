@@ -9,6 +9,40 @@ from typing import Any
 from unilab_robot_contracts import CommandState, RigidTransform, ToolContext
 
 
+_MOVEIT_ERROR_DETAILS = {
+    -31: ("NO_IK_SOLUTION", "没有可用的逆运动学解"),
+    -30: ("ABORT", "MoveIt 主动中止"),
+    -29: ("CRASH", "MoveIt 进程异常退出"),
+    -25: ("COMMUNICATION_FAILURE", "MoveIt 通信失败"),
+    -24: ("SENSOR_INFO_STALE", "传感器信息过期"),
+    -23: ("ROBOT_STATE_STALE", "机械臂状态过期"),
+    -22: ("COLLISION_CHECKING_UNAVAILABLE", "碰撞检测不可用"),
+    -21: ("FRAME_TRANSFORM_FAILURE", "坐标变换失败"),
+    -19: ("INVALID_OBJECT_NAME", "碰撞对象名称无效"),
+    -18: ("INVALID_LINK_NAME", "机械臂连杆名称无效"),
+    -17: ("INVALID_ROBOT_STATE", "机械臂状态无效"),
+    -16: ("INVALID_GOAL_CONSTRAINTS", "目标约束无效"),
+    -15: ("INVALID_GROUP_NAME", "规划组名称无效"),
+    -14: ("GOAL_CONSTRAINTS_VIOLATED", "目标状态违反约束"),
+    -13: ("GOAL_VIOLATES_PATH_CONSTRAINTS", "目标状态违反路径约束"),
+    -12: ("GOAL_IN_COLLISION", "目标状态碰撞"),
+    -11: ("START_STATE_VIOLATES_PATH_CONSTRAINTS", "起始状态违反路径约束"),
+    -10: ("START_STATE_IN_COLLISION", "起始状态碰撞"),
+    -7: ("PREEMPTED", "规划或执行被抢占"),
+    -6: ("TIMED_OUT", "规划或执行超时"),
+    -5: ("UNABLE_TO_AQUIRE_SENSOR_DATA", "无法取得传感器数据"),
+    -4: ("CONTROL_FAILED", "控制器执行失败"),
+    -3: (
+        "MOTION_PLAN_INVALIDATED_BY_ENVIRONMENT_CHANGE",
+        "环境变化使运动计划失效",
+    ),
+    -2: ("INVALID_MOTION_PLAN", "运动计划无效"),
+    -1: ("PLANNING_FAILED", "规划失败，MoveIt 未提供更细原因"),
+    99999: ("FAILURE", "MoveIt 通用失败"),
+}
+_CARTESIAN_FRACTION_THRESHOLD = 1.0
+
+
 class MoveIt2ClientPort:
     """只依赖 MoveIt action/service 客户端，不拥有 RViz 或可视化生命周期。"""
 
@@ -48,13 +82,23 @@ class MoveIt2ClientPort:
         finally:
             self._active_command_id = None
         state = CommandState.SUCCEEDED if completed else CommandState.FAILED
+        message, error_code, error_name, cartesian_fraction = _moveit_result_detail(
+            self.client,
+            completed,
+            inspect_cartesian_plan=False,
+        )
         result = {
             "command_id": command_id,
             "state": state.value,
             "completed": completed,
-            "message": "MoveIt 完成" if completed else "MoveIt 返回失败终态",
+            "message": message,
             "group_name": group_name,
         }
+        if error_code is not None:
+            result["moveit_error_code"] = error_code
+            result["moveit_error_name"] = error_name
+        if cartesian_fraction is not None:
+            result["cartesian_fraction"] = cartesian_fraction
         self._results[command_id] = result
         return result
 
@@ -90,11 +134,13 @@ class MoveIt2ClientPort:
         self._apply_motion_profile(parameters)
         self._active_command_id = command_id
         try:
+            cartesian_path = bool(parameters.get("cartesian_path", False))
             self.client.move_to_pose(
                 position=mount_target.translation_m,
                 quat_xyzw=mount_target.orientation_xyzw,
                 frame_id=None,
-                cartesian=bool(parameters.get("cartesian_path", False)),
+                cartesian=cartesian_path,
+                cartesian_fraction_threshold=_CARTESIAN_FRACTION_THRESHOLD,
                 tolerance_position=float(parameters.get("position_tolerance_m", 0.001)),
                 tolerance_orientation=float(
                     parameters.get("orientation_tolerance_rad", 0.001)
@@ -104,14 +150,24 @@ class MoveIt2ClientPort:
         finally:
             self._active_command_id = None
         state = CommandState.SUCCEEDED if completed else CommandState.FAILED
+        message, error_code, error_name, cartesian_fraction = _moveit_result_detail(
+            self.client,
+            completed,
+            inspect_cartesian_plan=cartesian_path,
+        )
         result = {
             "command_id": command_id,
             "state": state.value,
             "completed": completed,
-            "message": "MoveIt 完成" if completed else "MoveIt 返回失败终态",
+            "message": message,
             "group_name": group_name,
             "target_type": "cartesian_pose",
         }
+        if error_code is not None:
+            result["moveit_error_code"] = error_code
+            result["moveit_error_name"] = error_name
+        if cartesian_fraction is not None:
+            result["cartesian_fraction"] = cartesian_fraction
         self._results[command_id] = result
         return result
 
@@ -254,3 +310,68 @@ class MoveIt2ClientPort:
         ):
             self._active_tool_context = tool_context
         return receipt
+
+
+def _moveit_result_detail(
+    client: Any,
+    completed: bool,
+    *,
+    inspect_cartesian_plan: bool,
+) -> tuple[str, int | None, str | None, float | None]:
+    """把 MoveIt 终态错误码翻译为可操作的规划/碰撞诊断。"""
+
+    if completed:
+        return "MoveIt 完成", None, None, None
+    cartesian_fraction: float | None = None
+    if inspect_cartesian_plan:
+        fraction_getter = getattr(client, "get_last_cartesian_fraction", None)
+        if callable(fraction_getter):
+            raw_fraction = fraction_getter()
+            if raw_fraction is not None:
+                cartesian_fraction = float(raw_fraction)
+        if (
+            cartesian_fraction is not None
+            and cartesian_fraction < _CARTESIAN_FRACTION_THRESHOLD
+        ):
+            percentage = cartesian_fraction * 100.0
+            return (
+                "MoveIt 笛卡尔规划路径覆盖率不足: "
+                f"{percentage:.6f}%（要求 100%）；可能是目标不可达、"
+                "起始状态/目标状态碰撞或路径中途碰撞",
+                None,
+                None,
+                cartesian_fraction,
+            )
+    getter = None
+    if inspect_cartesian_plan:
+        getter = getattr(client, "get_last_planning_error_code", None)
+    if not callable(getter):
+        getter = getattr(client, "get_last_execution_error_code", None)
+    if not callable(getter):
+        return (
+            "MoveIt 返回失败终态（未提供错误码）",
+            None,
+            None,
+            cartesian_fraction,
+        )
+    raw_error = getter()
+    raw_code = getattr(raw_error, "val", raw_error)
+    try:
+        code = int(raw_code)
+    except (TypeError, ValueError):
+        return (
+            "MoveIt 返回失败终态（错误码不可读）",
+            None,
+            None,
+            cartesian_fraction,
+        )
+    name, description = _MOVEIT_ERROR_DETAILS.get(
+        code,
+        ("UNKNOWN_MOVEIT_ERROR", "未识别的 MoveIt 错误码"),
+    )
+    return (
+        f"MoveIt 返回失败终态: {name} ({code})，{description}",
+        code,
+        name,
+        cartesian_fraction,
+    )
