@@ -6,7 +6,12 @@ import time
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-from unilab_robot_contracts import CommandState, RigidTransform, ToolContext
+from unilab_robot_contracts import (
+    CommandState,
+    RigidTransform,
+    ToolContext,
+    apply_moveit_planning_budget,
+)
 
 
 class MoveIt2ClientPort:
@@ -18,7 +23,7 @@ class MoveIt2ClientPort:
         names = tuple(str(name) for name in qualified_joint_names)
         if len(names) != 6:
             raise ValueError("MoveIt2ClientPort 只接受六轴机械臂")
-        self.client = client
+        self.client = apply_moveit_planning_budget(client)
         self.qualified_joint_names = names
         self._results: dict[str, Mapping[str, Any]] = {}
         self._active_command_id: str | None = None
@@ -90,11 +95,13 @@ class MoveIt2ClientPort:
         self._apply_motion_profile(parameters)
         self._active_command_id = command_id
         try:
+            cartesian = bool(parameters.get("cartesian_path", False))
             self.client.move_to_pose(
                 position=mount_target.translation_m,
                 quat_xyzw=mount_target.orientation_xyzw,
                 frame_id=None,
-                cartesian=bool(parameters.get("cartesian_path", False)),
+                cartesian=cartesian,
+                cartesian_fraction_threshold=0.99 if cartesian else 0.0,
                 tolerance_position=float(parameters.get("position_tolerance_m", 0.001)),
                 tolerance_orientation=float(
                     parameters.get("orientation_tolerance_rad", 0.001)

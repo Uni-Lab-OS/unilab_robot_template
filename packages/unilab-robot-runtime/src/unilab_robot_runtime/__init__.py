@@ -24,15 +24,27 @@ from .point_maintenance import (
     PublishedPointSet,
     ValidatedPointSet,
 )
+from unilab_robot_contracts import (
+    DEFAULT_ALLOWED_PLANNING_TIME_S,
+    DEFAULT_NUM_PLANNING_ATTEMPTS,
+    DEFAULT_PLAN_RETRY_ATTEMPTS,
+    MoveItPlanningBudget,
+    apply_moveit_planning_budget,
+    resolve_moveit_planning_budget,
+)
 
 __version__ = "0.1.0"
 
 __all__ = [
     "AccessMotionBackend",
+    "DEFAULT_ALLOWED_PLANNING_TIME_S",
+    "DEFAULT_NUM_PLANNING_ATTEMPTS",
+    "DEFAULT_PLAN_RETRY_ATTEMPTS",
     "FrozenRobotActivation",
     "MaintenanceSession",
     "ManipulationSequence",
     "ManipulationSequenceRunner",
+    "MoveItPlanningBudget",
     "PointMaintenanceService",
     "PointSetQualification",
     "PointTestEvidence",
@@ -42,10 +54,12 @@ __all__ = [
     "RuntimeDependencies",
     "RuntimeRequirements",
     "ValidatedPointSet",
+    "apply_moveit_planning_budget",
     "arm_model_descriptor",
     "bind_commissioning_runtime",
     "build_test_runtime",
     "create_runtime",
     "load_point_set",
+    "resolve_moveit_planning_budget",
     "runtime_requirements",
 ]

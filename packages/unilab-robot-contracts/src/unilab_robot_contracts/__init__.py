@@ -57,6 +57,14 @@ from .motion_profiles import (
     MotionProfileCatalog,
     RailMotionProfile,
 )
+from .moveit_planning_budget import (
+    DEFAULT_ALLOWED_PLANNING_TIME_S,
+    DEFAULT_NUM_PLANNING_ATTEMPTS,
+    DEFAULT_PLAN_RETRY_ATTEMPTS,
+    MoveItPlanningBudget,
+    apply_moveit_planning_budget,
+    resolve_moveit_planning_budget,
+)
 from .observations import (
     EndEffectorObservation,
     ObservationState,
@@ -170,6 +178,7 @@ __all__ = [
     "MotionProfile",
     "MotionProfileCatalog",
     "MotionSegment",
+    "MoveItPlanningBudget",
     "MovePoseCommand",
     "MoveTargetCommand",
     "ObservationState",
@@ -224,10 +233,15 @@ __all__ = [
     "TopologySite",
     "WorkCellPhaseKind",
     "WorkCellPlanPhase",
+    "DEFAULT_ALLOWED_PLANNING_TIME_S",
+    "DEFAULT_NUM_PLANNING_ATTEMPTS",
+    "DEFAULT_PLAN_RETRY_ATTEMPTS",
+    "apply_moveit_planning_budget",
     "bump_point_set_revision",
     "parse_site_access_declarations",
     "patch_authored_composite_target_yaml",
     "patch_authored_joint_target_yaml",
     "resolve_affine_grid",
+    "resolve_moveit_planning_budget",
     "revise_authored_joint_target",
 ]

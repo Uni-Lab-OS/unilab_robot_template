@@ -388,7 +388,12 @@ def _build_srdf(*, prefix: str, planning_group: str) -> str:
 def _ros2_controllers(
     *, controller_name: str, joint_names: tuple[str, ...]
 ) -> dict[str, Any]:
-    """生成 controller_manager 使用的完全限定控制器参数。"""
+    """生成 controller_manager 使用的完全限定控制器参数。
+
+    ``open_loop_control`` 对 mock 硬件是必需的：没有真实状态闭环时，
+    JointTrajectoryController 会把已发出的轨迹判成 ABORTED，RViz 仍能播放
+    规划轨迹，卡片却报设备动作失败。
+    """
 
     return {
         "controller_manager": {
@@ -403,6 +408,7 @@ def _ros2_controllers(
                 "joints": list(joint_names),
                 "command_interfaces": ["position"],
                 "state_interfaces": ["position", "velocity"],
+                "open_loop_control": True,
             }
         },
     }

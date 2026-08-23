@@ -6,7 +6,12 @@ import time
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-from unilab_robot_contracts import CommandState, RigidTransform, ToolContext
+from unilab_robot_contracts import (
+    CommandState,
+    RigidTransform,
+    ToolContext,
+    apply_moveit_planning_budget,
+)
 
 
 _MOVEIT_ERROR_DETAILS = {
@@ -52,7 +57,7 @@ class MoveIt2ClientPort:
         names = tuple(str(name) for name in qualified_joint_names)
         if len(names) != 6:
             raise ValueError("MoveIt2ClientPort 只接受六轴机械臂")
-        self.client = client
+        self.client = apply_moveit_planning_budget(client)
         self.qualified_joint_names = names
         self._results: dict[str, Mapping[str, Any]] = {}
         self._active_command_id: str | None = None
