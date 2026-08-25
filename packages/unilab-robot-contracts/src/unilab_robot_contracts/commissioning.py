@@ -284,7 +284,7 @@ class MovePoseCommand(_FiniteMotionCommand):
 
 @dataclass(frozen=True, slots=True)
 class TcpJogCommand(_FiniteMotionCommand):
-    """在基座或工具坐标系中执行一次有限 TCP 点动。"""
+    """在基座或工具坐标系中执行一次 TCP 点动。"""
 
     frame_ref: str
     axis: TcpAxis
@@ -292,14 +292,13 @@ class TcpJogCommand(_FiniteMotionCommand):
     step_si: float
 
     def __post_init__(self) -> None:
-        """按轴类型限制单次平移或旋转步长。"""
+        """校验坐标系以及正的有限 SI 步长。"""
 
         _FiniteMotionCommand.__post_init__(self)
         if self.frame_ref not in {"arm_base", "tool"}:
             raise ValueError("tcp_jog frame_ref 只允许 arm_base 或 tool")
-        maximum = math.radians(5.0) if self.axis.rotational else 0.01
-        if not math.isfinite(self.step_si) or not 0.0 < self.step_si <= maximum:
-            raise ValueError("tcp_jog 单次步长超过维护硬上限")
+        if not math.isfinite(self.step_si) or self.step_si <= 0.0:
+            raise ValueError("tcp_jog step_si 必须为正的有限数")
 
     @property
     def kind(self) -> CommissioningMotionKind:
@@ -313,8 +312,8 @@ class JointJogCommand(_FiniteMotionCommand):
     """只改变 exact Arm 型号中一个稳定关节引用的有限点动。
 
     ``step_si`` 的量纲由型号中的关节类型决定：转动关节为 rad，移动关节为 m。
-    协议不重复 ``joint_names``、关节类型或单位；实际单步上限、关节限位以及其余
-    关节锁定容差必须由 ``motion_profile_ref`` 与 exact Arm 型号共同校验。
+    协议不重复 ``joint_names``、关节类型或单位；关节限位以及其余关节锁定容差
+    必须由 ``motion_profile_ref`` 与 exact Arm 型号共同校验。
     """
 
     joint_ref: str
