@@ -26,6 +26,7 @@ from unilab_robot_contracts import (
     RigidTransform,
     TcpJogCommand,
     ToolContext,
+    ToolContextActivationReceipt,
 )
 from unilab_robot_contracts.geometry import quaternion_multiply
 
@@ -95,7 +96,10 @@ class MoveItCommissioningAdapter:
         self._results: dict[str, CommandResult] = {}
         self._fenced_command_ids: set[str] = set()
 
-    def activate_tool_context(self, tool_context: ToolContext) -> None:
+    def activate_tool_context(
+        self,
+        tool_context: ToolContext,
+    ) -> ToolContextActivationReceipt:
         """仅在空闲时更新 TCP/碰撞模型，并验证 PlanningScene 回读。"""
 
         snapshot = self.commissioning_snapshot()
@@ -115,6 +119,10 @@ class MoveItCommissioningAdapter:
         ):
             raise RuntimeError("PlanningScene 未确认同一 ToolContext 摘要与附着代次")
         self.tool_context_digest = tool_context.digest
+        return ToolContextActivationReceipt.from_mapping(
+            receipt,
+            source="moveit:planning-scene-readback",
+        )
 
     @property
     def commissioning_capabilities(self) -> CommissioningCapabilities:

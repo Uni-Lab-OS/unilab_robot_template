@@ -1,7 +1,17 @@
 """厂商和领域无关的 Robotics 运行时组合入口。"""
 
+from unilab_robot_contracts import (
+    DEFAULT_ALLOWED_PLANNING_TIME_S,
+    DEFAULT_NUM_PLANNING_ATTEMPTS,
+    DEFAULT_PLAN_RETRY_ATTEMPTS,
+    MoveItPlanningBudget,
+    apply_moveit_planning_budget,
+    resolve_moveit_planning_budget,
+)
+
 from .access_motion_backend import AccessMotionBackend
 from .activation_store import FrozenRobotActivation, RobotActivationStore
+from .attachment_projector import AttachmentProjector
 from .binding import (
     MaintenanceSession,
     RuntimeBinding,
@@ -24,22 +34,15 @@ from .point_maintenance import (
     PublishedPointSet,
     ValidatedPointSet,
 )
-from unilab_robot_contracts import (
-    DEFAULT_ALLOWED_PLANNING_TIME_S,
-    DEFAULT_NUM_PLANNING_ATTEMPTS,
-    DEFAULT_PLAN_RETRY_ATTEMPTS,
-    MoveItPlanningBudget,
-    apply_moveit_planning_budget,
-    resolve_moveit_planning_budget,
-)
 
 __version__ = "0.1.0"
 
 __all__ = [
-    "AccessMotionBackend",
     "DEFAULT_ALLOWED_PLANNING_TIME_S",
     "DEFAULT_NUM_PLANNING_ATTEMPTS",
     "DEFAULT_PLAN_RETRY_ATTEMPTS",
+    "AccessMotionBackend",
+    "AttachmentProjector",
     "FrozenRobotActivation",
     "MaintenanceSession",
     "ManipulationSequence",
