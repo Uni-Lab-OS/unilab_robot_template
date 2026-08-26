@@ -95,12 +95,19 @@ class SimulatedToolChanger:
 class SimulatedGripper:
     """依赖已锁紧快换工具的开合夹爪仿真。"""
 
-    def __init__(self, *, tool_changer: SimulatedToolChanger) -> None:
-        """绑定快换观测并从张开、无负载状态启动。"""
+    def __init__(
+        self,
+        *,
+        tool_changer: SimulatedToolChanger,
+        initial_holding_payload: bool = False,
+    ) -> None:
+        """绑定快换观测，并从装配方已对账的仿真负载状态启动。"""
 
+        if not isinstance(initial_holding_payload, bool):
+            raise TypeError("initial_holding_payload 必须是布尔值")
         self.tool_changer = tool_changer
-        self._closed = False
-        self._holding = False
+        self._closed = initial_holding_payload
+        self._holding = initial_holding_payload
         self._results: dict[str, CommandResult] = {}
 
     def observe(self) -> GripperObservation:

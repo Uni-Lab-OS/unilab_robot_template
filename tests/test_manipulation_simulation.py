@@ -69,3 +69,30 @@ def test_pick_sequence_changes_tool_then_moves_and_grips() -> None:
     assert tool_changer.observe().tool_ref == "parallel-gripper"
     assert adapter.tool_context_digest == tool_changer.active_tool_context.digest
     assert len(result.output["steps"]) == 7
+
+
+def test_simulated_gripper_restores_confirmed_attachment_state() -> None:
+    """仿真重启时可恢复已由 PlanningScene 对账确认的持料状态。"""
+
+    tool_changer = SimulatedToolChanger(
+        tools={
+            "parallel-gripper": ToolDefinition(
+                tool_ref="parallel-gripper",
+                model_digest="b" * 64,
+                mount_to_tcp=RigidTransform(
+                    (0.0, 0.0, 0.12),
+                    (0.0, 0.0, 0.0, 1.0),
+                ),
+                collision_asset_ref="package://gripper/model.stl",
+            )
+        }
+    )
+    tool_changer.change_tool("activate", tool_ref="parallel-gripper")
+
+    gripper = SimulatedGripper(
+        tool_changer=tool_changer,
+        initial_holding_payload=True,
+    )
+
+    assert gripper.observe().closed is True
+    assert gripper.observe().holding_payload is True

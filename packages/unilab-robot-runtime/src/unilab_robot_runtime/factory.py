@@ -87,6 +87,7 @@ class RuntimeDependencies:
     attachment_source_boot_id: str = ""
     robot_symbol: str = ""
     tool_definition: ToolDefinition | None = None
+    simulation_holding_payload: bool = False
 
 
 def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
@@ -599,7 +600,15 @@ def _manipulation_ports(
     )
     if not attached.success:
         raise ValueError(f"仿真快换初始化失败: {attached.message}")
-    return SimulatedGripper(tool_changer=changer), changer
+    if not isinstance(dependencies.simulation_holding_payload, bool):
+        raise TypeError("simulation_holding_payload 必须是布尔值")
+    return (
+        SimulatedGripper(
+            tool_changer=changer,
+            initial_holding_payload=dependencies.simulation_holding_payload,
+        ),
+        changer,
+    )
 
 
 def load_point_set(
