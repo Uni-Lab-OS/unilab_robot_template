@@ -24,6 +24,7 @@ from .commands import (
     CommandState,
     MotionSegment,
     PhysicalSettlementEvidence,
+    RailMoveCommand,
     RobotCommand,
 )
 from .commissioning import (
@@ -59,7 +60,12 @@ from .hardware_profile import (
     InterlockMode,
 )
 from .joint_state import JointStateNameMap
-from .journal import CommandJournal, InMemoryCommandJournal, SQLiteCommandJournal
+from .journal import (
+    CommandJournal,
+    InMemoryCommandJournal,
+    SQLiteCommandJournal,
+    settle_unknown_as_canceled,
+)
 from .modules import ArmModulePort, RailModulePort
 from .motion_profiles import (
     AccessMotionPolicy,
@@ -221,6 +227,7 @@ __all__ = [
     "QualificationScope",
     "RailModulePort",
     "RailMotionProfile",
+    "RailMoveCommand",
     "RailStateObservation",
     "RailTargetModel",
     "ResolvedCartesianTarget",
@@ -238,6 +245,7 @@ __all__ = [
     "RobotExecutionBackend",
     "RobotPointSetResolver",
     "SQLiteCommandJournal",
+    "settle_unknown_as_canceled",
     "SafetyInterlockObservation",
     "SiteAccessActivation",
     "SiteAccessDeclaration",

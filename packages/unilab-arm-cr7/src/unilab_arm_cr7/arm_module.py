@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from collections.abc import Callable, Mapping
 
 from unilab_robot_contracts import (
     CommandJournal,
@@ -16,6 +16,7 @@ from unilab_robot_contracts import (
     RobotCommand,
     RobotExecutionBackend,
     SafetyInterlockObservation,
+    settle_unknown_as_canceled,
 )
 
 
@@ -55,6 +56,34 @@ class ArmModule:
         """返回该机械臂是否仍有未物理结算命令。"""
 
         return bool(self.journal.fenced_command_ids())
+
+    def fenced_command_ids(self) -> tuple[str, ...]:
+        """返回私有账本全部未物理结算命令身份。"""
+
+        return self.journal.fenced_command_ids()
+
+    def get_command(self, command_id: str) -> CommandResult | None:
+        """只读返回机械臂公共命令投影。"""
+
+        return self.journal.get(command_id)
+
+    def resolve_unknown_as_canceled(
+        self,
+        command_id: str,
+        *,
+        witness_id: str,
+        reason: str,
+        source: str,
+    ) -> CommandResult:
+        """用操作员物理空闲见证结算 standalone Arm Fence。"""
+
+        return settle_unknown_as_canceled(
+            self.journal,
+            command_id,
+            witness_id=witness_id,
+            reason=reason,
+            source=source,
+        )
 
     def execute(self, command: RobotCommand) -> CommandResult:
         """幂等执行一个已解析命令，歧义时保留 Fence 且不重放。
@@ -119,6 +148,17 @@ class ArmModule:
         ):
             return interrupted
         return self.journal.update(result)
+
+    def validate_before_dispatch(self, command: RobotCommand) -> None:
+        """让 WorkCell 在导轨移动前调用后端的无物理作用预校验。"""
+
+        if command.hardware_profile_digest != self.profile.digest:
+            raise CommandRejectedError("HardwareProfile digest 不匹配")
+        if self.has_unsettled_fence:
+            raise CommandRejectedError("机械臂存在未物理结算 Fence")
+        validator = getattr(self.backend, "validate_before_dispatch", None)
+        if callable(validator):
+            validator(command)
 
     def request_controlled_stop(
         self, command_id: str, reason: str
@@ -188,6 +228,26 @@ class ArmModule:
     ) -> CommandResult:
         """用人工或设备精确回执结算 UNKNOWN；不会触发物理重放。"""
 
+        preparer = getattr(self.backend, "prepare_unknown_settlement", None)
+        if callable(preparer):
+            prepared = preparer(result.command_id)
+            if not isinstance(prepared, Mapping):
+                raise CommandRejectedError("后端 UNKNOWN 结算输出必须是对象")
+            conflicts = {
+                key
+                for key in prepared
+                if key in result.output and result.output[key] != prepared[key]
+            }
+            if conflicts:
+                raise CommandRejectedError(
+                    f"后端 UNKNOWN 结算输出与控制面冲突: {sorted(conflicts)}"
+                )
+            result = CommandResult(
+                result.command_id,
+                result.state,
+                result.message,
+                {**dict(result.output), **dict(prepared)},
+            )
         return self.journal.settle(result, evidence)
 
     def _pre_dispatch_rejection(self) -> str | None:

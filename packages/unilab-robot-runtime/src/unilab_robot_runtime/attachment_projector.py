@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import math
 import time
+from collections.abc import Mapping
+from typing import Any
 
 from unilab_robot_contracts import (
     AnchorKind,
@@ -157,6 +159,61 @@ class AttachmentProjector:
             command_ref=command_ref,
             job_ref=job_ref,
             context_digest=profile.digest,
+        )
+
+    def project_payload_transition(
+        self,
+        *,
+        transition: Mapping[str, Any],
+        payload_ref: str,
+        robot_ref: str,
+        command_ref: str,
+        job_ref: str | None = None,
+    ) -> KinematicAttachmentProjection:
+        """把 AccessMotionBackend 的已证实转移编译为通用附着投影。
+
+        该入口只接受包含场景回读局部位姿、Profile 摘要、完整 link、代次和
+        新鲜窗口的转移；领域包不得补默认位姿或重判物理证据。
+        """
+
+        scene_receipt = transition.get("scene_receipt")
+        if not isinstance(scene_receipt, Mapping):
+            raise TypeError("payload_attachment.scene_receipt 必须是对象")
+        raw_pose = scene_receipt.get("local_pose")
+        if not isinstance(raw_pose, Mapping):
+            raise TypeError("PayloadPlanningScene 回读缺少 local_pose")
+        try:
+            local_pose = RigidTransform(
+                tuple(float(value) for value in raw_pose["xyz_m"]),
+                tuple(float(value) for value in raw_pose["orientation_xyzw"]),
+            )
+            state = AttachmentState(str(transition["state"]))
+            evidence = AttachmentEvidence(str(transition["evidence"]))
+            generation = int(transition["attachment_generation"])
+            observed_at = float(transition["observed_at"])
+            stale_after_s = float(transition["stale_after_s"])
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError("payload_attachment 转移字段无效") from error
+        parent_link = str(transition.get("parent_link") or "").strip()
+        context_digest = str(
+            scene_receipt.get("payload_profile_digest") or ""
+        ).strip()
+        if not parent_link or not context_digest:
+            raise ValueError("payload_attachment 缺少 parent_link 或 Profile 摘要")
+        return self._projection(
+            kind=AttachmentKind.MATERIAL_PAYLOAD,
+            child_ref=payload_ref,
+            parent_ref=robot_ref,
+            anchor=KinematicAnchor(AnchorKind.LINK, parent_link),
+            local_pose=local_pose,
+            state=state,
+            evidence=evidence,
+            attachment_generation=generation,
+            observed_at=observed_at,
+            stale_after_s=stale_after_s,
+            command_ref=command_ref,
+            job_ref=job_ref,
+            context_digest=context_digest,
         )
 
     def _projection(

@@ -65,6 +65,8 @@ class RuntimeRequirements:
     robot_sdk_port: bool = False
     end_effector_port: bool = False
     tool_changer_port: bool = False
+    payload_planning_scene_port: bool = False
+    rail_axis_port: bool = False
 
 
 @dataclass(frozen=True)
@@ -75,10 +77,16 @@ class RuntimeDependencies:
     variable_port: Any = None
     moveit_client: Any = None
     qualified_joint_names: tuple[str, ...] | None = None
+    tool_collision_asset_resolver: Callable[[str], str | Path] | None = None
     robot_sdk_port: Any = None
     end_effector_port: Any = None
     tool_changer_port: Any = None
+    payload_planning_scene_port: Any = None
+    rail_axis_port: Any = None
     safety_observation: Callable[[], SafetyInterlockObservation] | None = None
+    attachment_source_boot_id: str = ""
+    robot_symbol: str = ""
+    tool_definition: ToolDefinition | None = None
 
 
 def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
@@ -94,13 +102,18 @@ def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
     backend = manifest.profile.backend
     if backend is BackendKind.PLC:
         return RuntimeRequirements(variable_port=True)
-    if manifest.rail is not None:
-        raise ValueError("非 PLC 的 RailMountedArm 尚无受支持的异构 Rail Adapter")
     if backend is BackendKind.MOVEIT:
+        if (
+            manifest.rail is not None
+            and manifest.profile.mode is not DeploymentMode.SIMULATION
+        ):
+            raise ValueError("MoveIt RailMountedArm 目前只允许包内仿真导轨")
         return RuntimeRequirements(
             moveit_client=True,
             end_effector_port=manifest.profile.mode is not DeploymentMode.SIMULATION,
             tool_changer_port=manifest.profile.mode is not DeploymentMode.SIMULATION,
+            payload_planning_scene_port=True,
+            rail_axis_port=manifest.rail is not None,
         )
     if backend is BackendKind.TCP_SDK:
         return RuntimeRequirements(
@@ -131,6 +144,13 @@ def create_runtime(
         raise ValueError("非仿真 PointSet runtime 必须注入独立 EndEffectorPort")
     if requirements.tool_changer_port and dependencies.tool_changer_port is None:
         raise ValueError("非仿真 PointSet runtime 必须注入独立 ToolChangerPort")
+    if (
+        requirements.payload_planning_scene_port
+        and dependencies.payload_planning_scene_port is None
+    ):
+        raise ValueError("MoveIt runtime 必须注入 PayloadPlanningScenePort")
+    if requirements.rail_axis_port and dependencies.rail_axis_port is None:
+        raise ValueError("MoveIt RailMountedArm 必须注入唯一 RailAxisPort")
     if requirements.moveit_client:
         if dependencies.moveit_client is None or not dependencies.qualified_joint_names:
             raise ValueError("MoveIt runtime 必须注入 client 与完整关节名")
@@ -250,8 +270,16 @@ def _create_moveit_runtime(
 ) -> RuntimeBinding:
     """装配 headless MoveIt standalone Arm；RViz 不参与生命周期。"""
 
+    simulation_interlock: SimulationInterlockProvider | None = None
     safety_observation = dependencies.safety_observation
-    if safety_observation is None:
+    if manifest.rail is not None:
+        if manifest.profile.mode is not DeploymentMode.SIMULATION:
+            raise ValueError("MoveIt 导轨组合目前只支持 simulation profile")
+        if safety_observation is not None:
+            raise ValueError("MoveIt 导轨仿真必须使用包内互斥许可，不接受外部替换")
+        simulation_interlock = SimulationInterlockProvider()
+        safety_observation = simulation_interlock.read
+    elif safety_observation is None:
         if manifest.profile.mode is not DeploymentMode.SIMULATION:
             raise ValueError("非仿真 MoveIt 必须注入真实安全观测")
         safety_observation = _standalone_simulation_safety
@@ -264,6 +292,7 @@ def _create_moveit_runtime(
         endpoint_ids=manifest.arm.endpoint_ids,
         targets=targets,
         qualified_joint_names=dependencies.qualified_joint_names,
+        collision_asset_resolver=dependencies.tool_collision_asset_resolver,
     )
     end_effector, tool_changer = _manipulation_ports(
         manifest,
@@ -275,6 +304,8 @@ def _create_moveit_runtime(
         end_effector=end_effector,
         tool_changer=tool_changer,
         expected_tool_context=tool_context,
+        payload_planning_scene=dependencies.payload_planning_scene_port,
+        require_payload_collision=True,
     )
     commissioning = arm_impl.create_moveit_commissioning_adapter(
         moveit_client=dependencies.moveit_client,
@@ -288,21 +319,128 @@ def _create_moveit_runtime(
         joint_completion_tolerance_si=(
             manifest.profile.commissioning_joint_completion_tolerance_si
         ),
+        collision_asset_resolver=dependencies.tool_collision_asset_resolver,
     )
-    binding = _create_standalone_arm(
-        manifest,
-        arm_impl,
-        backend,
-        safety_observation,
-        runtime_root,
-        commissioning_port=commissioning,
-    )
+    if manifest.rail is None:
+        binding = _create_standalone_arm(
+            manifest,
+            arm_impl,
+            backend,
+            safety_observation,
+            runtime_root,
+            commissioning_port=commissioning,
+        )
+    else:
+        if simulation_interlock is None:
+            raise RuntimeError("MoveIt 导轨仿真互锁未完成装配")
+        arm = arm_impl.create_arm_module(
+            backend=backend,
+            profile=manifest.profile,
+            journal=SQLiteCommandJournal(runtime_root / "arm-private.sqlite3"),
+            safety_observation=safety_observation,
+        )
+        rail_data = _load_yaml(
+            manifest.asset_path("rail_target_set"),
+            "unilab.rail-target-set/v1",
+        )
+        rail_impl = _module_impl(manifest.rail, kind="rail")
+        rail_port = _SimulationInterlockRailPort(
+            dependencies.rail_axis_port,
+            target_data=rail_data,
+            on_settled=simulation_interlock.rail_settled,
+        )
+        rail = rail_impl.create_module_from_port(
+            port=rail_port,
+            target_data=rail_data,
+        )
+        coordinator = RailMountedArmCoordinator(
+            arm=arm,
+            rail=rail,
+            profile=manifest.profile,
+            journal=SQLiteCommandJournal(runtime_root / "public-commands.sqlite3"),
+            safety_observation=safety_observation,
+        )
+        runtime = SimulationRailMountedArmRuntime(
+            coordinator=coordinator,
+            interlock=simulation_interlock,
+        )
+        binding = bind_runtime(
+            runtime,
+            coordinator.endpoint_ids,
+            owner_id=manifest.deployment_id,
+            rail_mounted=True,
+            commissioning_port=commissioning,
+            deployment_mode=manifest.profile.mode,
+        )
     try:
-        commissioning.activate_tool_context(tool_context)
+        activation_receipt = commissioning.activate_tool_context(tool_context)
     except Exception:
         binding.close()
         raise
+    if dependencies.tool_definition is not None:
+        if not dependencies.attachment_source_boot_id.strip():
+            binding.close()
+            raise ValueError("工具附着投影缺少 source_boot_id")
+        if not dependencies.robot_symbol.strip():
+            binding.close()
+            raise ValueError("工具附着投影缺少 robot_symbol")
+        from .attachment_projector import AttachmentProjector
+
+        projection = AttachmentProjector(
+            source="unilab-robot-runtime",
+            source_boot_id=dependencies.attachment_source_boot_id,
+        ).project_tool_attached(
+            robot_ref=dependencies.robot_symbol,
+            definition=dependencies.tool_definition,
+            observation=tool_changer.observe(),
+            context=tool_context,
+            activation_receipt=activation_receipt,
+        )
+        binding.initial_attachment_projections = (projection.as_dict(),)
     return binding
+
+
+class _SimulationInterlockRailPort:
+    """只在外部仿真轴回读同一命令已稳定后切换机械臂许可。"""
+
+    def __init__(
+        self,
+        port: Any,
+        *,
+        target_data: Mapping[str, Any],
+        on_settled: Callable[[str], None],
+    ) -> None:
+        del target_data
+        self._port = port
+        self._on_settled = on_settled
+        self.endpoint_ids = port.endpoint_ids
+        self._active_command_id: str | None = None
+        self._active_target_ref: str | None = None
+        self._notified_command_id: str | None = None
+
+    def move(self, command_id: str, target_ref: str) -> None:
+        self._active_command_id = command_id
+        self._active_target_ref = target_ref
+        self._notified_command_id = None
+        self._port.move(command_id, target_ref)
+
+    def observe(self) -> Any:
+        observation = self._port.observe()
+        if (
+            observation.state is ObservationState.KNOWN
+            and observation.moving is False
+            and observation.settled is True
+            and observation.target_ref == self._active_target_ref
+            and observation.completed_command_id == self._active_command_id
+            and self._active_command_id is not None
+            and self._notified_command_id != self._active_command_id
+        ):
+            self._on_settled(self._active_command_id)
+            self._notified_command_id = self._active_command_id
+        return observation
+
+    def request_stop(self, command_id: str) -> bool:
+        return bool(self._port.request_stop(command_id))
 
 
 def _create_tcp_sdk_runtime(
@@ -401,13 +539,20 @@ def _load_tool_context(manifest: RuntimeManifest) -> ToolContext:
     orientation = tuple(float(value) for value in transform.get("orientation_xyzw", ()))
     if len(xyz) != 3 or len(orientation) != 4:
         raise ValueError("ToolContext 必须包含 xyz_m[3] 与 orientation_xyzw[4]")
+    planning_scene = dict(data.get("planning_scene") or {})
+    mount_link = str(data.get("mount_link") or "").strip()
+    parent_link = str(planning_scene.get("parent_link") or "").strip()
+    if mount_link and parent_link and mount_link != parent_link:
+        raise ValueError("ToolContext.mount_link 与 planning_scene.parent_link 不一致")
+    if mount_link:
+        planning_scene["parent_link"] = mount_link
     asset_ref = manifest.assets["tool_context"]
     return ToolContext(
         context_id=str(data["context_id"]),
         digest=str(asset_ref.digest),
         mount_to_tcp=RigidTransform(xyz, orientation),
         attachment_generation=int(data["attachment_generation"]),
-        planning_scene=dict(data.get("planning_scene") or {}),
+        planning_scene=planning_scene,
     )
 
 
@@ -495,8 +640,8 @@ def _load_installation_calibration(
         "unilab.installation-calibration/v1",
     )
     frames = data.get("frames")
-    if not isinstance(frames, Mapping) or not frames:
-        raise ValueError("InstallationCalibration.frames 必须是非空对象")
+    if not isinstance(frames, Mapping):
+        raise TypeError("InstallationCalibration.frames 必须是对象")
     transforms: dict[str, RigidTransform] = {}
     for frame_ref, value in frames.items():
         if not isinstance(value, Mapping):

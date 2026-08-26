@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+import pytest
 from unilab_robot_contracts import (
     BackendKind,
     CommandState,
@@ -97,6 +98,19 @@ class HeadlessMoveItClient:
             "tool_context_digest": context.digest,
             "attachment_generation": context.attachment_generation,
         }
+
+
+class EmptyPayloadPlanningScene:
+    """维护点动不触发 pick/place，但 MoveIt 运行时仍必须显式装配该端口。"""
+
+    def snapshot(self) -> list[dict[str, Any]]:
+        return []
+
+    def attach_payload(self, **_kwargs: Any) -> dict[str, Any]:
+        raise AssertionError("维护点动不应挂载负载")
+
+    def detach_payload(self, **_kwargs: Any) -> dict[str, Any]:
+        raise AssertionError("维护点动不应解除负载")
 
 
 def test_headless_moveit_manifest_can_open_session_and_move_target(
@@ -190,14 +204,20 @@ frames:
         },
     )
     client = HeadlessMoveItClient()
+    common_dependencies = {
+        "runtime_root": tmp_path / "runtime",
+        "moveit_client": client,
+        "qualified_joint_names": tuple(
+            f"robot_cr7_joint_{index}" for index in range(1, 7)
+        ),
+    }
+    with pytest.raises(ValueError, match="PayloadPlanningScenePort"):
+        create_runtime(manifest, RuntimeDependencies(**common_dependencies))
     binding = create_runtime(
         manifest,
         RuntimeDependencies(
-            runtime_root=tmp_path / "runtime",
-            moveit_client=client,
-            qualified_joint_names=tuple(
-                f"robot_cr7_joint_{index}" for index in range(1, 7)
-            ),
+            **common_dependencies,
+            payload_planning_scene_port=EmptyPayloadPlanningScene(),
         ),
     )
     session = binding.open_maintenance_session("e2e-operator")

@@ -123,6 +123,8 @@ class PayloadCollisionProfile:
     center_of_mass_m: tuple[float, float, float]
     root_to_grasp: RigidTransform
     collision_asset_ref: str | None = None
+    collision_asset_digest: str | None = None
+    collision_asset_scale: float = 1.0
     collision_primitives: tuple[CollisionPrimitive, ...] = ()
 
     def __post_init__(self) -> None:
@@ -136,11 +138,21 @@ class PayloadCollisionProfile:
         if len(center) != 3 or not all(math.isfinite(value) for value in center):
             raise ValueError("PayloadCollisionProfile.center_of_mass_m 必须包含三个有限数")
         asset = (self.collision_asset_ref or "").strip()
+        asset_digest = (self.collision_asset_digest or "").strip()
+        asset_scale = float(self.collision_asset_scale)
         primitives = tuple(self.collision_primitives)
         if not asset and not primitives:
             raise ValueError("PayloadCollisionProfile 必须包含碰撞资产或保守基元")
+        if bool(asset) != bool(asset_digest):
+            raise ValueError("碰撞资产引用和 collision_asset_digest 必须同时提供")
+        if asset_digest and _DIGEST.fullmatch(asset_digest) is None:
+            raise ValueError("collision_asset_digest 必须是 SHA-256")
+        if not math.isfinite(asset_scale) or asset_scale <= 0.0:
+            raise ValueError("collision_asset_scale 必须是正有限数")
         object.__setattr__(self, "center_of_mass_m", center)
         object.__setattr__(self, "collision_asset_ref", asset or None)
+        object.__setattr__(self, "collision_asset_digest", asset_digest or None)
+        object.__setattr__(self, "collision_asset_scale", asset_scale)
         object.__setattr__(self, "collision_primitives", primitives)
 
     def as_planning_scene(self) -> dict[str, Any]:
@@ -161,6 +173,8 @@ class PayloadCollisionProfile:
         }
         if self.collision_asset_ref is not None:
             result["collision_asset_ref"] = self.collision_asset_ref
+            result["collision_asset_digest"] = self.collision_asset_digest
+            result["collision_asset_scale"] = self.collision_asset_scale
         return result
 
 

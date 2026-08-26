@@ -25,6 +25,7 @@ _MODEL_ROOT = Path(__file__).resolve().parent / "models"
 _MODEL_DESCRIPTOR = _MODEL_ROOT / "model.yaml"
 _SOURCE_URDF = _MODEL_ROOT / "cr7_robot.urdf"
 _MESH_ROOT = _MODEL_ROOT / "meshes" / "cr7"
+_FLANGE_FRAME = "cr7_tool0"
 _LINK_NAMES = {
     "dummy_link": "device_link",
     "base_link": "cr7_base",
@@ -148,6 +149,7 @@ def build_moveit_model(
     render_root = ET.fromstring(source_bytes)
     render_root.set("name", f"{normalized_device_id}_cr7")
     _qualify_robot_tree(render_root, prefix=prefix, mesh_paths=mesh_paths)
+    _append_flange_frame(render_root, prefix=prefix)
     execution_root = deepcopy(render_root)
     _rewrite_render_mesh_uris(
         render_root,
@@ -226,12 +228,28 @@ def _topology_digest(
             "model": "cr7",
             "source_digest": source_digest,
             "joint_names": qualified_joint_names,
+            "flange_frame": _FLANGE_FRAME,
         },
         ensure_ascii=True,
         separators=(",", ":"),
         sort_keys=True,
     )
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def _append_flange_frame(root: ET.Element, *, prefix: str) -> None:
+    """在第六轴末端增加可按 Device 唯一限定的规范法兰 frame。"""
+
+    qualified_flange = f"{prefix}{_FLANGE_FRAME}"
+    ET.SubElement(root, "link", {"name": qualified_flange})
+    joint = ET.SubElement(
+        root,
+        "joint",
+        {"name": f"{qualified_flange}_joint", "type": "fixed"},
+    )
+    ET.SubElement(joint, "origin", {"xyz": "0 0 0", "rpy": "0 0 0"})
+    ET.SubElement(joint, "parent", {"link": f"{prefix}cr7_link_6"})
+    ET.SubElement(joint, "child", {"link": qualified_flange})
 
 
 def _qualify_robot_tree(
@@ -369,7 +387,7 @@ def _build_srdf(*, prefix: str, planning_group: str) -> str:
         "chain",
         {
             "base_link": f"{prefix}device_link",
-            "tip_link": f"{prefix}cr7_link_6",
+            "tip_link": f"{prefix}{_FLANGE_FRAME}",
         },
     )
     for left, right, reason in _DISABLED_COLLISIONS:

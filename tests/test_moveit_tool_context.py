@@ -19,10 +19,17 @@ class _Client:
         self.max_velocity = 1.0
         self.max_acceleration = 1.0
         self.pose: tuple[float, ...] | None = None
+        self.collision_asset_resolver: Any = None
 
-    def apply_tool_context(self, context: ToolContext) -> Mapping[str, Any]:
+    def apply_tool_context(
+        self,
+        context: ToolContext,
+        *,
+        collision_asset_resolver: Any = None,
+    ) -> Mapping[str, Any]:
         """返回精确绑定摘要与附着代次的确认。"""
 
+        self.collision_asset_resolver = collision_asset_resolver
         return {
             "applied": True,
             "tool_context_digest": context.digest,
@@ -116,3 +123,21 @@ def test_moveit_refuses_tool_without_planning_scene_geometry() -> None:
 
     with pytest.raises(ValueError, match="PlanningScene"):
         port.apply_tool_context(incomplete)
+
+
+def test_moveit_passes_domain_asset_resolver_to_os_tool_scene() -> None:
+    """Robotics 只转交受信资产解析器，不在通用包解释领域 URI。"""
+
+    client = _Client()
+    resolver = lambda reference: reference
+    port = MoveIt2ClientPort(
+        client,
+        qualified_joint_names=tuple(
+            f"robot_cr7_joint_{index}" for index in range(1, 7)
+        ),
+        collision_asset_resolver=resolver,
+    )
+
+    port.apply_tool_context(_tool_context())
+
+    assert client.collision_asset_resolver is resolver

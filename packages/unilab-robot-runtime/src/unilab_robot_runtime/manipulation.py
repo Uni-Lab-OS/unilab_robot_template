@@ -93,10 +93,11 @@ class ManipulationSequenceRunner:
         if not tool_result.success:
             return _sequence_failure(sequence.sequence_id, tool_result, steps)
         attachment = self.tool_changer.observe()
+        attachment_age = time.time() - attachment.observed_at
         if (
             attachment.tool_ref != sequence.tool_ref
             or attachment.locked is not True
-            or time.time() - attachment.observed_at > attachment.max_age_s
+            or not 0.0 <= attachment_age <= attachment.max_age_s
         ):
             return CommandResult(
                 sequence.sequence_id,
@@ -124,7 +125,11 @@ class ManipulationSequenceRunner:
         if not grip.success:
             return _sequence_failure(sequence.sequence_id, grip, steps)
         observation = self.end_effector.observe()
-        if observation.holding_payload is not True:
+        observation_age = time.time() - observation.observed_at
+        if (
+            observation.holding_payload is not True
+            or not 0.0 <= observation_age <= observation.max_age_s
+        ):
             return CommandResult(
                 sequence.sequence_id,
                 CommandState.EXECUTION_UNKNOWN,

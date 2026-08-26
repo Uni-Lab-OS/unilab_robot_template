@@ -225,6 +225,7 @@ def test_runtime_selects_tcp_sdk_without_domain_branch(tmp_path: Path) -> None:
                 {"phase_kind": "arm_move", "payload_state": "loaded"},
             ),
         ),
+        metadata={"payload_instance_ref": "payload-runtime-1"},
     )
 
     try:

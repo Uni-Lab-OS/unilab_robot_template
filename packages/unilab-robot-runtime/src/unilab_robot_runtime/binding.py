@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field
 from threading import RLock
 from typing import Any
+from uuid import UUID
 
 from unilab_rail_mounted_arm import EndpointLease, EndpointLeaseRegistry
 from unilab_robot_contracts import (
@@ -13,6 +15,7 @@ from unilab_robot_contracts import (
     CommissioningSnapshot,
     DeploymentMode,
     PhysicalSettlementEvidence,
+    RailMoveCommand,
     RobotCommand,
     RobotCommissioningPort,
 )
@@ -29,6 +32,7 @@ class RuntimeBinding:
     rail_mounted: bool
     commissioning_port: RobotCommissioningPort | None = None
     deployment_mode: DeploymentMode | None = None
+    initial_attachment_projections: tuple[Mapping[str, Any], ...] = ()
     _lock: RLock = field(default_factory=RLock, init=False, repr=False)
     _closed: bool = field(default=False, init=False, repr=False)
     _maintenance_owner: str | None = field(default=None, init=False, repr=False)
@@ -54,6 +58,25 @@ class RuntimeBinding:
                     raise ValueError("RailMountedArm 命令必须解析出 rail_target_ref")
                 return self.runtime.execute(command, rail_target_ref=rail_target_ref)
             return self.runtime.execute(command)
+
+    def move_rail(self, command: RailMoveCommand) -> CommandResult:
+        """把 rail-only 命令交给当前唯一 WorkCell Coordinator。
+
+        参数：已冻结 target-ref 的持久导轨命令。返回：Coordinator 权威结果。
+        异常：standalone Arm、维护占用或已关闭运行时均失败关闭。
+        """
+
+        with self._lock:
+            if self._closed:
+                raise RuntimeError("Robot runtime 已关闭")
+            if self._maintenance_owner is not None:
+                raise RuntimeError("维护会话占用物理端点，拒绝生产动作")
+            if not self.rail_mounted:
+                raise RuntimeError("standalone Arm 不支持导轨动作")
+            mover = getattr(self.runtime, "move_rail", None)
+            if not callable(mover):
+                raise TypeError("WorkCell runtime 未实现统一导轨动作")
+            return mover(command)
 
     def request_controlled_stop(
         self,
@@ -102,6 +125,55 @@ class RuntimeBinding:
             if arm_result is not None or arm_evidence is not None:
                 raise ValueError("standalone Arm 结算不得传入 WorkCell 私有见证")
             return self.runtime.settle_unknown(result, evidence)
+
+    def get_command(self, command_id: str) -> CommandResult | None:
+        """只读返回统一 Runtime 的公共命令投影。"""
+
+        reader = getattr(self.runtime, "get_command", None)
+        if not callable(reader):
+            return None
+        return reader(str(command_id).strip())
+
+    def unknown_command_ids(self) -> tuple[str, ...]:
+        """返回统一 Runtime 尚未物理结算的公共命令身份。"""
+
+        reader = getattr(self.runtime, "fenced_command_ids", None)
+        if not callable(reader):
+            return ()
+        return tuple(str(value) for value in reader())
+
+    def resolve_unknown_as_canceled(
+        self,
+        command_id: str,
+        *,
+        resolution_command_uuid: str,
+        reason: str,
+    ) -> dict[str, Any]:
+        """把 OS 操作员确认转为可信物理结算见证，不触发任何运动。"""
+
+        normalized_resolution = str(UUID(str(resolution_command_uuid)))
+        resolver = getattr(self.runtime, "resolve_unknown_as_canceled", None)
+        if not callable(resolver):
+            raise TypeError("Robot runtime 不支持 UNKNOWN 人工结算")
+        with self._lock:
+            if self._closed:
+                raise RuntimeError("Robot runtime 已关闭")
+            result = resolver(
+                str(command_id).strip(),
+                witness_id=normalized_resolution,
+                reason=str(reason).strip(),
+                source="os-control-plane:operator-confirmed-physical-idle",
+            )
+        return {
+            "command_id": result.command_id,
+            "state": result.state.name,
+            "success": result.success,
+            "message": result.message,
+            "runtime_output": dict(result.output),
+            "resolution_committed": True,
+            "previous_state": "UNKNOWN",
+            "resolution_command_uuid": normalized_resolution,
+        }
 
     def close(self) -> None:
         """仅在没有未物理结算 Fence 时释放物理端点租约。"""
@@ -234,6 +306,7 @@ class MaintenanceSession:
             return
         self._binding._close_maintenance(self.owner_id)
         self._closed = True
+
 
 def bind_runtime(
     runtime: Any,

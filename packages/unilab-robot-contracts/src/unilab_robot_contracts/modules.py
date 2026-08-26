@@ -19,8 +19,14 @@ class ArmModulePort(Protocol):
     def has_unsettled_fence(self) -> bool:
         """是否存在未物理结算的本地派发阻断。"""
 
+    def fenced_command_ids(self) -> tuple[str, ...]:
+        """返回机械臂私有账本中全部未结算命令身份。"""
+
     def execute(self, command: RobotCommand) -> CommandResult:
         """执行已解析的机械臂命令。"""
+
+    def validate_before_dispatch(self, command: RobotCommand) -> None:
+        """在组合设备任何轴运动前完成无物理作用预校验。"""
 
     def request_controlled_stop(
         self, command_id: str, reason: str

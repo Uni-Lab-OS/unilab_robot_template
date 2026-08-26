@@ -110,6 +110,17 @@ def create_simulation_module(
     )
 
 
+def create_module_from_port(
+    *,
+    port: Any,
+    target_data: Mapping[str, Any],
+) -> RailModule:
+    """把领域组合根注入的标准 RailAxisPort 装配为通用单轴模块。"""
+
+    target_values = _validated_target_values(target_data)
+    return RailModule(port=port, allowed_targets=frozenset(target_values))
+
+
 def _validated_target_values(target_data: Mapping[str, Any]) -> dict[str, float]:
     """解析导轨目标并验证全部数值位于型号固有行程内。"""
 

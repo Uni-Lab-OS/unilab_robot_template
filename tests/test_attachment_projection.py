@@ -164,6 +164,31 @@ def test_payload_projection_uses_grasp_frame_and_tiered_evidence() -> None:
     assert projection.context_digest == _payload().digest
 
 
+def test_backend_payload_transition_requires_explicit_scene_local_pose() -> None:
+    """领域组合根不得替统一运行时猜测负载相对末端的单位位姿。"""
+
+    projector = AttachmentProjector(
+        source="robot-runtime",
+        source_boot_id="boot-1",
+    )
+    transition = {
+        "state": "attached",
+        "evidence": "observed",
+        "attachment_generation": 1,
+        "parent_link": "robot_cr7_tool0",
+        "observed_at": time.time(),
+        "stale_after_s": 1.0,
+        "scene_receipt": {"payload_profile_digest": "c" * 64},
+    }
+    with pytest.raises(TypeError, match="local_pose"):
+        projector.project_payload_transition(
+            transition=transition,
+            payload_ref="payload.example-01",
+            robot_ref="robot-main",
+            command_ref="pick-1",
+        )
+
+
 def test_weak_payload_evidence_requires_exact_fresh_command_receipt() -> None:
     """同代次的旧命令回执不得被下一次抓取复用。"""
 
@@ -236,6 +261,20 @@ def test_payload_profile_rejects_missing_collision_geometry() -> None:
             mass_kg=0.1,
             center_of_mass_m=(0.0, 0.0, 0.0),
             root_to_grasp=RigidTransform.identity(),
+        )
+
+
+def test_payload_mesh_requires_a_versioned_asset_digest() -> None:
+    """MoveIt mesh 引用不得脱离内容摘要单独进入 Profile。"""
+
+    with pytest.raises(ValueError, match="必须同时提供"):
+        PayloadCollisionProfile(
+            profile_ref="beaker@mesh-v1",
+            digest="e" * 64,
+            mass_kg=0.2,
+            center_of_mass_m=(0.0, 0.0, 0.04),
+            root_to_grasp=RigidTransform.identity(),
+            collision_asset_ref="package://beaker/base_link.stl",
         )
 
 

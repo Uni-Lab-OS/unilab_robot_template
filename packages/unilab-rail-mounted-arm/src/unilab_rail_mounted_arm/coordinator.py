@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from collections.abc import Callable, Mapping
 from dataclasses import replace
 from threading import RLock
 
@@ -16,9 +16,12 @@ from unilab_robot_contracts import (
     DispatchUnknownError,
     HardwareProfile,
     PhysicalSettlementEvidence,
-    RobotCommand,
     RailModulePort,
+    RailMoveCommand,
+    RailStateObservation,
+    RobotCommand,
     SafetyInterlockObservation,
+    settle_unknown_as_canceled,
 )
 
 
@@ -65,87 +68,120 @@ class RailMountedArmCoordinator:
 
         return bool(self.journal.fenced_command_ids()) or self.arm.has_unsettled_fence
 
+    def fenced_command_ids(self) -> tuple[str, ...]:
+        """返回可由控制面对账的公共命令身份，不泄漏私有 ``:arm`` 身份。"""
+
+        command_ids = set(self.journal.fenced_command_ids())
+        for private_id in self.arm.fenced_command_ids():
+            command_ids.add(
+                private_id.removesuffix(":arm")
+                if private_id.endswith(":arm")
+                else private_id
+            )
+        return tuple(sorted(command_ids))
+
+    def get_command(self, command_id: str) -> CommandResult | None:
+        """只读返回公共命令投影，供 OS 控制面识别命令所有权。"""
+
+        return self.journal.get(command_id)
+
+    def resolve_unknown_as_canceled(
+        self,
+        command_id: str,
+        *,
+        witness_id: str,
+        reason: str,
+        source: str,
+    ) -> CommandResult:
+        """用操作员确认的物理空闲见证结算公共及可选私有 Fence。"""
+
+        normalized_id = str(command_id).strip()
+        normalized_witness = str(witness_id).strip()
+        normalized_reason = str(reason).strip()
+        normalized_source = str(source).strip()
+        if not all(
+            (normalized_id, normalized_witness, normalized_reason, normalized_source)
+        ):
+            raise CommandRejectedError("UNKNOWN 人工结算缺少命令、见证、理由或来源")
+        with self._execution_lock:
+            existing = self.journal.get(normalized_id)
+            if existing is None:
+                raise CommandRejectedError("WorkCell UNKNOWN 命令不存在")
+            if existing.state is CommandState.CANCELED:
+                return settle_unknown_as_canceled(
+                    self.journal,
+                    normalized_id,
+                    witness_id=normalized_witness,
+                    reason=normalized_reason,
+                    source=normalized_source,
+                )
+            if (
+                existing.state is not CommandState.EXECUTION_UNKNOWN
+                or not self.journal.is_fenced(normalized_id)
+            ):
+                raise CommandRejectedError("只允许结算仍被 Fence 阻断的 execution_unknown")
+
+            private_id = f"{normalized_id}:arm"
+            private_fences = set(self.arm.fenced_command_ids())
+            unexpected = private_fences.difference({private_id})
+            if unexpected:
+                raise CommandRejectedError(
+                    f"机械臂私有账本存在其他未结算命令: {sorted(unexpected)}"
+                )
+            confirmed_output: dict[str, object] = {}
+            if private_id in private_fences:
+                private_result = self.arm.settle_unknown(
+                    CommandResult(
+                        private_id,
+                        CommandState.CANCELED,
+                        f"操作员确认 WorkCell 已物理停止: {normalized_reason}",
+                    ),
+                    PhysicalSettlementEvidence(
+                        private_id,
+                        CommandState.CANCELED,
+                        f"{normalized_witness}:arm",
+                        normalized_source,
+                    ),
+                )
+                confirmed_output.update(dict(private_result.output))
+
+            return settle_unknown_as_canceled(
+                self.journal,
+                normalized_id,
+                witness_id=normalized_witness,
+                reason=normalized_reason,
+                source=normalized_source,
+                confirmed_output=confirmed_output,
+            )
+
     def execute(self, command: RobotCommand, *, rail_target_ref: str) -> CommandResult:
         """执行 rail-then-arm，并在任何派发后歧义上保留 Claim/Fence 语义。
 
         参数：公共 RobotCommand 与独立导轨目标。返回：同一公共 command_id 的结果。异常：无；错误收敛为 rejected 或 execution_unknown。
         """
 
-        if command.hardware_profile_digest != self.profile.digest:
-            return CommandResult(
-                command.command_id,
-                CommandState.REJECTED,
-                "WorkCell profile digest 不匹配",
-            )
-        if self.journal.get(command.command_id) is None:
-            fenced = self.journal.fenced_command_ids()
-            if fenced:
-                return CommandResult(
-                    command.command_id,
-                    CommandState.REJECTED,
-                    f"WorkCell 存在未物理结算命令，禁止新派发: {fenced}",
-                )
+        preflight = self._accept_rail_command(command, rail_target_ref)
+        if preflight is not None:
+            return preflight
         try:
-            created, existing = self.journal.accept(command)
+            self.arm.validate_before_dispatch(command)
         except CommandRejectedError as exc:
-            return CommandResult(command.command_id, CommandState.REJECTED, str(exc))
-        if not created:
-            return existing
-        if rail_target_ref not in self.rail.allowed_targets:
             return self.journal.update(
                 CommandResult(
                     command.command_id,
                     CommandState.REJECTED,
-                    f"导轨 target-set 不包含: {rail_target_ref}",
-                )
-            )
-        if self.arm.has_unsettled_fence:
-            return self.journal.update(
-                CommandResult(
-                    command.command_id,
-                    CommandState.REJECTED,
-                    "机械臂私有账本存在未结算 Fence，导轨不得先行移动",
+                    f"机械臂派发前校验拒绝: {exc}",
                 )
             )
 
         with self._execution_lock:
-            interrupted = self._interrupted_result(command.command_id)
-            if interrupted is not None:
-                return interrupted
-            before = self._rail_phase_rejection()
-            if before:
-                return self.journal.update(
-                    CommandResult(command.command_id, CommandState.REJECTED, before)
-                )
-            running = self._mark_running(command.command_id, "RAIL_MOVING")
-            if running.state is not CommandState.RUNNING:
-                return running
-            self._set_active_phase(command.command_id, "rail")
-            try:
-                interrupted = self._interrupted_result(command.command_id)
-                if interrupted is not None:
-                    return interrupted
-                rail_observation = self.rail.move_and_settle(
-                    command.command_id, rail_target_ref
-                )
-            except Exception as exc:  # noqa: BLE001
-                detail = (
-                    str(exc)
-                    if isinstance(exc, DispatchUnknownError)
-                    else f"未分类派发后异常: {exc}"
-                )
-                return self._contain_unknown(
-                    command.command_id,
-                    reason="导轨阶段结果不明",
-                    detail=detail,
-                    phase="rail",
-                )
-            finally:
-                self._clear_active_phase(command.command_id, "rail")
-
-            interrupted = self._interrupted_result(command.command_id)
-            if interrupted is not None:
-                return interrupted
+            rail_observation, terminal = self._run_rail_phase(
+                command.command_id,
+                rail_target_ref,
+            )
+            if terminal is not None:
+                return terminal
+            assert rail_observation is not None
 
             after = self._arm_phase_rejection()
             if after:
@@ -187,6 +223,7 @@ class RailMountedArmCoordinator:
                         reason="机械臂阶段结果不明",
                         detail=arm_result.message,
                         phase="arm",
+                        confirmed_output=arm_result.output,
                     )
                 return self.journal.update(
                     CommandResult(
@@ -201,9 +238,138 @@ class RailMountedArmCoordinator:
                     command.command_id,
                     CommandState.SUCCEEDED,
                     "RAIL_SETTLED → ARM_COMPLETED",
-                    {"rail_target_ref": rail_observation.target_ref},
+                    {
+                        **dict(arm_result.output),
+                        "rail_target_ref": rail_observation.target_ref,
+                    },
                 )
             )
+
+    def move_rail(self, command: RailMoveCommand) -> CommandResult:
+        """通过同一 WorkCell Fence、互锁和到位见证只移动导轨。
+
+        参数：仅引用已发布 target-set 的持久导轨命令。返回：导轨到位且
+        安全许可已切回机械臂侧时成功；派发歧义保持 ``execution_unknown``。
+        """
+
+        preflight = self._accept_rail_command(command, command.target_ref)
+        if preflight is not None:
+            return preflight
+        with self._execution_lock:
+            rail_observation, terminal = self._run_rail_phase(
+                command.command_id,
+                command.target_ref,
+            )
+            if terminal is not None:
+                return terminal
+            assert rail_observation is not None
+            after = self._arm_phase_rejection()
+            if after:
+                return self._contain_unknown(
+                    command.command_id,
+                    reason="导轨到位后安全许可切换失败",
+                    detail=after,
+                    phase="between",
+                )
+            return self._finish_if_not_interrupted(
+                CommandResult(
+                    command.command_id,
+                    CommandState.SUCCEEDED,
+                    "RAIL_SETTLED",
+                    {
+                        "rail_target_ref": rail_observation.target_ref,
+                        "rail_position_si": rail_observation.position,
+                    },
+                )
+            )
+
+    def _accept_rail_command(
+        self,
+        command: RobotCommand | RailMoveCommand,
+        rail_target_ref: str,
+    ) -> CommandResult | None:
+        """在任何轴运动前完成公共 profile、Fence、幂等和目标校验。"""
+
+        if command.hardware_profile_digest != self.profile.digest:
+            return CommandResult(
+                command.command_id,
+                CommandState.REJECTED,
+                "WorkCell profile digest 不匹配",
+            )
+        if self.journal.get(command.command_id) is None:
+            fenced = self.journal.fenced_command_ids()
+            if fenced:
+                return CommandResult(
+                    command.command_id,
+                    CommandState.REJECTED,
+                    f"WorkCell 存在未物理结算命令，禁止新派发: {fenced}",
+                )
+        try:
+            created, existing = self.journal.accept(command)
+        except CommandRejectedError as exc:
+            return CommandResult(command.command_id, CommandState.REJECTED, str(exc))
+        if not created:
+            return existing
+        if rail_target_ref not in self.rail.allowed_targets:
+            return self.journal.update(
+                CommandResult(
+                    command.command_id,
+                    CommandState.REJECTED,
+                    f"导轨 target-set 不包含: {rail_target_ref}",
+                )
+            )
+        if self.arm.has_unsettled_fence:
+            return self.journal.update(
+                CommandResult(
+                    command.command_id,
+                    CommandState.REJECTED,
+                    "机械臂私有账本存在未结算 Fence，导轨不得先行移动",
+                )
+            )
+        return None
+
+    def _run_rail_phase(
+        self,
+        command_id: str,
+        rail_target_ref: str,
+    ) -> tuple[RailStateObservation | None, CommandResult | None]:
+        """执行唯一导轨阶段；复合动作和 rail-only 动作共同调用。"""
+
+        interrupted = self._interrupted_result(command_id)
+        if interrupted is not None:
+            return None, interrupted
+        before = self._rail_phase_rejection()
+        if before:
+            return None, self.journal.update(
+                CommandResult(command_id, CommandState.REJECTED, before)
+            )
+        running = self._mark_running(command_id, "RAIL_MOVING")
+        if running.state is not CommandState.RUNNING:
+            return None, running
+        self._set_active_phase(command_id, "rail")
+        try:
+            interrupted = self._interrupted_result(command_id)
+            if interrupted is not None:
+                return None, interrupted
+            observation = self.rail.move_and_settle(command_id, rail_target_ref)
+        except Exception as exc:  # noqa: BLE001
+            detail = (
+                str(exc)
+                if isinstance(exc, DispatchUnknownError)
+                else f"未分类派发后异常: {exc}"
+            )
+            return None, self._contain_unknown(
+                command_id,
+                reason="导轨阶段结果不明",
+                detail=detail,
+                phase="rail",
+            )
+        finally:
+            self._clear_active_phase(command_id, "rail")
+        interrupted = self._interrupted_result(command_id)
+        if interrupted is not None:
+            return None, interrupted
+        return observation, None
 
     def request_controlled_stop(
         self, command_id: str, *, reason: str
@@ -312,14 +478,17 @@ class RailMountedArmCoordinator:
         reason: str,
         detail: str,
         phase: str | None,
+        confirmed_output: Mapping[str, object] | None = None,
     ) -> CommandResult:
         """先持久阻断，再分别请求两模块停止并保存诊断结果。"""
 
+        confirmed = dict(confirmed_output or {})
         initial = CommandResult(
             command_id,
             CommandState.EXECUTION_UNKNOWN,
             f"{reason}: {detail}",
             {
+                **confirmed,
                 "controlled_stop": {
                     "status": "requesting",
                     "physical_settlement": False,
@@ -338,7 +507,7 @@ class RailMountedArmCoordinator:
             command_id,
             CommandState.EXECUTION_UNKNOWN,
             f"{reason}: {detail}；已请求普通受控停止，仍需可信物理结算",
-            {"controlled_stop": report},
+            {**confirmed, "controlled_stop": report},
         )
         try:
             return self.journal.update(result, fenced=True)

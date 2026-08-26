@@ -6,6 +6,7 @@ from .factory import (
     MODULE_KIND,
     MODULE_VERSION,
     build_joint_state_name_map,
+    create_module_from_port,
     create_plc_module,
     create_simulation_module,
 )
@@ -26,6 +27,7 @@ __all__ = [
     "StandaloneRailDevice",
     "build_joint_state_name_map",
     "build_kinematic_model",
+    "create_module_from_port",
     "create_plc_module",
     "create_simulation_module",
 ]

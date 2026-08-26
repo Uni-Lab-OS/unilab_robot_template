@@ -51,7 +51,13 @@ _CARTESIAN_FRACTION_THRESHOLD = 1.0
 class MoveIt2ClientPort:
     """只依赖 MoveIt action/service 客户端，不拥有 RViz 或可视化生命周期。"""
 
-    def __init__(self, client: Any, *, qualified_joint_names: Sequence[str]) -> None:
+    def __init__(
+        self,
+        client: Any,
+        *,
+        qualified_joint_names: Sequence[str],
+        collision_asset_resolver: Any = None,
+    ) -> None:
         """注入 OS/ROS 节点创建的 MoveIt2 客户端和完全限定的六轴关节名。"""
 
         names = tuple(str(name) for name in qualified_joint_names)
@@ -62,6 +68,7 @@ class MoveIt2ClientPort:
         self._results: dict[str, Mapping[str, Any]] = {}
         self._active_command_id: str | None = None
         self._active_tool_context: ToolContext | None = None
+        self._collision_asset_resolver = collision_asset_resolver
 
     def execute_joint_target(
         self,
@@ -304,7 +311,13 @@ class MoveIt2ClientPort:
         apply = getattr(self.client, "apply_tool_context", None)
         if not callable(apply):
             raise TypeError("当前 MoveIt2 客户端未实现 ToolContext PlanningScene 更新")
-        receipt = apply(tool_context)
+        if self._collision_asset_resolver is None:
+            receipt = apply(tool_context)
+        else:
+            receipt = apply(
+                tool_context,
+                collision_asset_resolver=self._collision_asset_resolver,
+            )
         if not isinstance(receipt, Mapping):
             raise TypeError("MoveIt2 ToolContext 更新缺少结构化确认")
         if (

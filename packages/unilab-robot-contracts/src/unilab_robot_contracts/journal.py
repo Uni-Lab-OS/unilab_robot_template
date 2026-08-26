@@ -7,12 +7,15 @@ import sqlite3
 from dataclasses import dataclass
 from pathlib import Path
 from threading import RLock
-from typing import Protocol
+from time import time
+from collections.abc import Mapping
+from typing import Any, Protocol
 
 from .commands import (
     CommandResult,
     CommandState,
     PhysicalSettlementEvidence,
+    RailMoveCommand,
     RobotCommand,
 )
 from .errors import CommandRejectedError
@@ -30,7 +33,9 @@ class JournalRecord:
 class CommandJournal(Protocol):
     """协调器与 standalone 模块共用的命令存储端口。"""
 
-    def accept(self, command: RobotCommand) -> tuple[bool, CommandResult]:
+    def accept(
+        self, command: RobotCommand | RailMoveCommand
+    ) -> tuple[bool, CommandResult]:
         """首次接受命令或返回精确重放；同 id 不同内容必须拒绝。"""
 
     def update(
@@ -62,7 +67,9 @@ class InMemoryCommandJournal:
         self._records: dict[str, JournalRecord] = {}
         self._lock = RLock()
 
-    def accept(self, command: RobotCommand) -> tuple[bool, CommandResult]:
+    def accept(
+        self, command: RobotCommand | RailMoveCommand
+    ) -> tuple[bool, CommandResult]:
         """持久接受命令，保证 command_id 的精确幂等。"""
 
         fingerprint = command.fingerprint()
@@ -181,7 +188,9 @@ class SQLiteCommandJournal:
         connection.row_factory = sqlite3.Row
         return connection
 
-    def accept(self, command: RobotCommand) -> tuple[bool, CommandResult]:
+    def accept(
+        self, command: RobotCommand | RailMoveCommand
+    ) -> tuple[bool, CommandResult]:
         """原子接受新命令或返回精确重放；同 id 不同摘要拒绝。"""
 
         fingerprint = command.fingerprint()
@@ -301,6 +310,80 @@ class SQLiteCommandJournal:
                 ),
             )
         return result
+
+
+def settle_unknown_as_canceled(
+    journal: CommandJournal,
+    command_id: str,
+    *,
+    witness_id: str,
+    reason: str,
+    source: str,
+    confirmed_output: Mapping[str, Any] | None = None,
+) -> CommandResult:
+    """以操作员确认的物理空闲见证审计式结算一条 UNKNOWN。"""
+
+    normalized_id = str(command_id).strip()
+    normalized_witness = str(witness_id).strip()
+    normalized_reason = str(reason).strip()
+    normalized_source = str(source).strip()
+    if not all((normalized_id, normalized_witness, normalized_reason, normalized_source)):
+        raise CommandRejectedError("UNKNOWN 人工结算缺少命令、见证、理由或来源")
+    existing = journal.get(normalized_id)
+    if existing is None:
+        raise CommandRejectedError("UNKNOWN 命令不存在")
+    audit = existing.output.get("manual_resolution")
+    if (
+        existing.state is CommandState.CANCELED
+        and isinstance(audit, dict)
+        and audit.get("witness_id") == normalized_witness
+        and audit.get("reason") == normalized_reason
+        and audit.get("source") == normalized_source
+    ):
+        return existing
+    if (
+        existing.state is not CommandState.EXECUTION_UNKNOWN
+        or not journal.is_fenced(normalized_id)
+    ):
+        raise CommandRejectedError("只允许结算仍被 Fence 阻断的 execution_unknown")
+    additions = dict(confirmed_output or {})
+    if "manual_resolution" in additions:
+        raise CommandRejectedError("物理后端不得覆盖控制面结算审计字段")
+    conflicts = {
+        key
+        for key in additions
+        if key in existing.output and existing.output[key] != additions[key]
+    }
+    if conflicts:
+        raise CommandRejectedError(
+            f"物理结算输出与既有 UNKNOWN 证据冲突: {sorted(conflicts)}"
+        )
+    resolved = CommandResult(
+        normalized_id,
+        CommandState.CANCELED,
+        f"操作员确认设备已物理停止: {normalized_reason}",
+        {
+            **dict(existing.output),
+            **additions,
+            "manual_resolution": {
+                "resolution": "canceled",
+                "reason": normalized_reason,
+                "witness_id": normalized_witness,
+                "source": normalized_source,
+                "previous_state": "UNKNOWN",
+                "resolved_at_unix": time(),
+            },
+        },
+    )
+    return journal.settle(
+        resolved,
+        PhysicalSettlementEvidence(
+            normalized_id,
+            CommandState.CANCELED,
+            normalized_witness,
+            normalized_source,
+        ),
+    )
 
 
 def _validate_transition(

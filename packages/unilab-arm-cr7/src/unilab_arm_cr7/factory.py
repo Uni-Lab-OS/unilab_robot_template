@@ -67,7 +67,7 @@ MODEL_DESCRIPTOR = ArmModelDescriptor(
     joint_specs=load_joint_specifications(),
     base_frame="arm_base",
     base_link="device_link",
-    tip_link="cr7_link_6",
+    tip_link="cr7_tool0",
     planning_group="cr7_arm",
 )
 
@@ -132,12 +132,15 @@ def create_moveit_backend(
     endpoint_ids: frozenset[str],
     targets: Mapping[str, ResolvedMotionTarget],
     qualified_joint_names: Sequence[str],
+    collision_asset_resolver: Any = None,
 ) -> MoveItBackend:
     """创建不启动 RViz 的 CR7 MoveIt Backend。"""
 
     return MoveItBackend(
         port=MoveIt2ClientPort(
-            moveit_client, qualified_joint_names=qualified_joint_names
+            moveit_client,
+            qualified_joint_names=qualified_joint_names,
+            collision_asset_resolver=collision_asset_resolver,
         ),
         endpoint_ids=endpoint_ids,
         targets=targets,
@@ -156,6 +159,7 @@ def create_moveit_commissioning_adapter(
     commissioning_velocity_limit: float,
     commissioning_acceleration_limit: float,
     joint_completion_tolerance_si: float = 0.002,
+    collision_asset_resolver: Any = None,
 ) -> MoveItCommissioningAdapter:
     """创建与生产后端共享 MoveIt2 客户端的统一维护调试 Adapter。"""
 
@@ -163,6 +167,7 @@ def create_moveit_commissioning_adapter(
         port=MoveIt2ClientPort(
             moveit_client,
             qualified_joint_names=qualified_joint_names,
+            collision_asset_resolver=collision_asset_resolver,
         ),
         model=MODEL_DESCRIPTOR,
         targets=targets,

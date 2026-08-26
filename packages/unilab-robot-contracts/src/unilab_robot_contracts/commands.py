@@ -123,6 +123,50 @@ class RobotCommand:
 
 
 @dataclass(frozen=True)
+class RailMoveCommand:
+    """组合工站内只移动导轨的持久命令；目标必须来自已发布 target-set。"""
+
+    command_id: str
+    hardware_profile_digest: str
+    source_boot_id: str
+    monotonic_sequence: int
+    target_ref: str
+
+    def __post_init__(self) -> None:
+        """拒绝空身份、空目标和无效序号。"""
+
+        required = (
+            self.command_id,
+            self.hardware_profile_digest,
+            self.source_boot_id,
+            self.target_ref,
+        )
+        if any(not value.strip() for value in required):
+            raise ValueError("RailMoveCommand 的身份、profile、boot_id 与 target_ref 不能为空")
+        if isinstance(self.monotonic_sequence, bool) or self.monotonic_sequence < 1:
+            raise ValueError("monotonic_sequence 必须是正整数")
+
+    def fingerprint(self) -> str:
+        """返回包含导轨目标的稳定请求摘要，用于精确幂等。"""
+
+        payload = json.dumps(
+            self.canonical_payload(),
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+        return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+    def canonical_payload(self) -> Mapping[str, Any]:
+        """返回可稳定序列化的导轨命令值。"""
+
+        payload = _jsonable(asdict(self))
+        if not isinstance(payload, Mapping):
+            raise TypeError("RailMoveCommand canonical payload 必须是对象")
+        return payload
+
+
+@dataclass(frozen=True)
 class CommandResult:
     """执行后端或协调器返回的权威命令投影。"""
 

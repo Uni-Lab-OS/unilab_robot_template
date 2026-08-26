@@ -133,6 +133,21 @@ class _RecordingBackend:
         )
 
 
+class _SettlementBackend(_RecordingBackend):
+    """在 UNKNOWN 结算前返回已确认 detached 转移的测试后端。"""
+
+    def prepare_unknown_settlement(self, command_id: str) -> Mapping[str, Any]:
+        """返回不含运动副作用的物理状态结算结果。"""
+
+        return {
+            "payload_attachment": {
+                "state": "detached",
+                "payload_instance_ref": "payload-a",
+                "settlement_command_id": command_id,
+            }
+        }
+
+
 def test_robot_command_rejects_site_or_raw_address_leak() -> None:
     """RobotCommand 必须拒绝 Site、Material 和原始地址泄漏。"""
 
@@ -325,6 +340,39 @@ def test_unknown_barrier_requires_explicit_physical_settlement(
         ),
     )
     assert journal.is_fenced(command.command_id) is False
+
+
+def test_arm_unknown_settlement_persists_backend_confirmed_output() -> None:
+    """ArmModule 必须在清 Fence 前持久化后端确认的 detached 转移。"""
+
+    journal = InMemoryCommandJournal()
+    command = _command("settle-with-detach")
+    journal.accept(command)
+    journal.update(
+        CommandResult(
+            command.command_id,
+            CommandState.EXECUTION_UNKNOWN,
+            "place result unknown",
+        )
+    )
+    arm = ArmModule(
+        backend=_SettlementBackend([]),
+        profile=_profile(endpoints=frozenset({"arm:cr7"})),
+        journal=journal,
+        safety_observation=lambda: _safety(rail=False, arm=True),
+    )
+    result = arm.settle_unknown(
+        CommandResult(command.command_id, CommandState.CANCELED, "settled"),
+        PhysicalSettlementEvidence(
+            command.command_id,
+            CommandState.CANCELED,
+            "witness-1",
+            "operator-inspection",
+        ),
+    )
+
+    assert result.output["payload_attachment"]["state"] == "detached"
+    assert journal.get(command.command_id) == result
 
 
 def test_duplicate_public_endpoint_activation_is_rejected() -> None:

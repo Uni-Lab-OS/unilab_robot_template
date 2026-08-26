@@ -9,6 +9,7 @@ from unilab_robot_contracts import (
     CommandResult,
     ObservationState,
     PhysicalSettlementEvidence,
+    RailMoveCommand,
     RobotCommand,
     SafetyInterlockObservation,
 )
@@ -96,10 +97,48 @@ class SimulationRailMountedArmRuntime:
 
         return self._coordinator.has_unsettled_fence
 
+    def fenced_command_ids(self) -> tuple[str, ...]:
+        """返回控制面可对账的公共 Fence 身份。"""
+
+        return self._coordinator.fenced_command_ids()
+
+    def get_command(self, command_id: str) -> CommandResult | None:
+        """只读返回公共命令投影。"""
+
+        return self._coordinator.get_command(command_id)
+
+    def resolve_unknown_as_canceled(
+        self,
+        command_id: str,
+        *,
+        witness_id: str,
+        reason: str,
+        source: str,
+    ) -> CommandResult:
+        """结算同一 Coordinator 的 UNKNOWN，并在清栅栏后复位仿真许可。"""
+
+        result = self._coordinator.resolve_unknown_as_canceled(
+            command_id,
+            witness_id=witness_id,
+            reason=reason,
+            source=source,
+        )
+        if not self._coordinator.has_unsettled_fence:
+            self._interlock.reset(command_id)
+        return result
+
     def execute(self, command: RobotCommand, *, rail_target_ref: str) -> CommandResult:
         """执行正式 rail-then-arm 流程，并在已结算终态后复位仿真许可。"""
 
         result = self._coordinator.execute(command, rail_target_ref=rail_target_ref)
+        if not self._coordinator.has_unsettled_fence:
+            self._interlock.reset(command.command_id)
+        return result
+
+    def move_rail(self, command: RailMoveCommand) -> CommandResult:
+        """执行同一 Coordinator 的 rail-only 流程并复位仿真许可。"""
+
+        result = self._coordinator.move_rail(command)
         if not self._coordinator.has_unsettled_fence:
             self._interlock.reset(command.command_id)
         return result

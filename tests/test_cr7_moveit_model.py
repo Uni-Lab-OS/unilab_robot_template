@@ -36,6 +36,12 @@ def test_cr7_moveit_model_is_six_axis_and_headless() -> None:
     assert "rail" not in bundle.urdf.lower()
     assert "rviz" not in bundle.urdf.lower()
     assert srdf.find("group").attrib["name"] == "robot_a_cr7_arm"
+    assert srdf.find("group/chain").attrib["tip_link"] == "robot_a_cr7_tool0"
+    assert urdf.find("link[@name='robot_a_cr7_tool0']") is not None
+    flange_joint = urdf.find("joint[@name='robot_a_cr7_tool0_joint']")
+    assert flange_joint is not None
+    assert flange_joint.find("parent").attrib["link"] == "robot_a_cr7_link_6"
+    assert flange_joint.find("child").attrib["link"] == "robot_a_cr7_tool0"
     assert tuple(bundle.kinematics) == ("robot_a_cr7_arm",)
     assert bundle.rviz_required is False
     assert "world_mount_joint" in bundle.execution_urdf
@@ -119,6 +125,7 @@ def test_cr7_descriptor_owns_joint_units_limits_and_forward_kinematics() -> None
     assert MODEL_DESCRIPTOR.joint_names == tuple(
         f"cr7_joint_{index}" for index in range(1, 7)
     )
+    assert MODEL_DESCRIPTOR.tip_link == "cr7_tool0"
     assert tuple(
         specification.joint_type.canonical_unit
         for specification in MODEL_DESCRIPTOR.joint_specs
