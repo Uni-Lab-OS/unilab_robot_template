@@ -524,10 +524,20 @@ def _interlock_binding(data: Mapping[str, Any]) -> InterlockBinding:
         rail_permitted_variable=str(data["rail_permitted_variable"]),
         arm_permitted_variable=str(data["arm_permitted_variable"]),
         concurrent_blocked_variable=str(data["concurrent_blocked_variable"]),
-        hardware_enforced=bool(data["hardware_enforced"]),
+        hardware_enforced=_required_bool(
+            data.get("hardware_enforced"), "interlock.hardware_enforced"
+        ),
         source=str(data["source"]),
         max_age_s=float(data.get("max_age_s", 0.5)),
     )
+
+
+def _required_bool(value: Any, field: str) -> bool:
+    """配置布尔值必须是真实 bool，禁止把字符串 ``false`` 解释为 True。"""
+
+    if not isinstance(value, bool):
+        raise TypeError(f"{field} 必须是 bool")
+    return value
 
 
 def _standalone_simulation_safety() -> SafetyInterlockObservation:
