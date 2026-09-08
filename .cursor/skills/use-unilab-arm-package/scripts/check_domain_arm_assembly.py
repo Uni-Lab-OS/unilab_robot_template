@@ -21,6 +21,12 @@ _DIGEST = re.compile(r"^[0-9a-f]{64}$")
 _ARM_PROVIDER = re.compile(
     r"^unilab_arm_(?P<slug>[a-z0-9]+):build_moveit_model$"
 )
+_DOMAIN_ARM_PROVIDER = re.compile(
+    r"^(?P<module>[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*):build_moveit_model$"
+)
+_DOMAIN_RAIL_JOINT_PROVIDER = re.compile(
+    r"^(?P<module>[A-Za-z_][A-Za-z0-9_]*(?:\.[A-Za-z_][A-Za-z0-9_]*)*):build_kinematic_model$"
+)
 _RAIL_JOINT_PROVIDER = "unilab_rail_linear:build_kinematic_model"
 _RAIL_BACKEND_FORBIDDEN = frozenset({"moveit", "moveit_sim"})
 _GRAPH_SKIP_SUBSTRINGS = (" copy",)
@@ -180,6 +186,19 @@ def _device_decorator_payload(
     return model, device_id
 
 
+def _is_allowed_arm_provider(provider: str) -> bool:
+    """Accept catalog or domain-owned MoveIt arm providers."""
+
+    normalized = str(provider).strip()
+    if _ARM_PROVIDER.fullmatch(normalized) is not None:
+        return True
+    match = _DOMAIN_ARM_PROVIDER.fullmatch(normalized)
+    if match is None:
+        return False
+    module = str(match.group("module"))
+    return not module.startswith("unilab_arm_")
+
+
 def _check_arm_model(arm: DeviceModel, report: Report) -> None:
     """机械臂模型必须是锁定 digest 的六轴 package_moveit。"""
 
@@ -188,9 +207,17 @@ def _check_arm_model(arm: DeviceModel, report: Report) -> None:
     if model.get("type") != "package_moveit":
         report.errors.append(f"{prefix}: type 必须是 package_moveit")
     provider = str(model.get("provider") or "")
-    if _ARM_PROVIDER.fullmatch(provider) is None:
+    if not _is_allowed_arm_provider(provider):
         report.errors.append(
-            f"{prefix}: provider 必须是 unilab_arm_<slug>:build_moveit_model，实际 {provider!r}"
+            f"{prefix}: provider 必须是 unilab_arm_<slug>:build_moveit_model "
+            f"或 <domain.module>:build_moveit_model，实际 {provider!r}"
+        )
+    elif (
+        _DOMAIN_ARM_PROVIDER.fullmatch(provider)
+        and _ARM_PROVIDER.fullmatch(provider) is None
+    ):
+        report.warnings.append(
+            f"{prefix}: 使用领域自有 arm provider；须实现 Robot Module API v1 并锁定 source_digest"
         )
     digest = str(model.get("source_digest") or "").lower()
     if _DIGEST.fullmatch(digest) is None:
@@ -216,9 +243,16 @@ def _check_rail_model(rail: DeviceModel, report: Report) -> None:
     if model.get("type") != "package_static":
         report.errors.append(f"{prefix}: 带关节的导轨 type 必须是 package_static")
     if str(model.get("joint_state_provider") or "") != _RAIL_JOINT_PROVIDER:
-        report.errors.append(
-            f"{prefix}: joint_state_provider 必须是 {_RAIL_JOINT_PROVIDER}"
-        )
+        joint_provider = str(model.get("joint_state_provider") or "")
+        if _DOMAIN_RAIL_JOINT_PROVIDER.fullmatch(joint_provider) is None:
+            report.errors.append(
+                f"{prefix}: joint_state_provider 必须是 {_RAIL_JOINT_PROVIDER} "
+                f"或 <domain.module>:build_kinematic_model，实际 {joint_provider!r}"
+            )
+        else:
+            report.warnings.append(
+                f"{prefix}: 使用领域自有 rail kinematic provider；须锁定 joint_state_source_digest"
+            )
     digest = str(model.get("joint_state_source_digest") or "").lower()
     if _DIGEST.fullmatch(digest) is None:
         report.errors.append(f"{prefix}: joint_state_source_digest 必须是 SHA-256")

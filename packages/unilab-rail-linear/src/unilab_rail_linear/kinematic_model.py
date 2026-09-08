@@ -2,33 +2,30 @@
 
 from __future__ import annotations
 
-import hashlib
-import json
-import re
-import xml.etree.ElementTree as ET
 from collections.abc import Mapping
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from unilab_robot_model_kit import (
+    PrismaticRailModelSpec,
+    RailKinematicModelBundle,
+    build_prismatic_rail_kinematic_model,
+)
+
 from .factory import MODEL_DESCRIPTOR, build_joint_state_name_map
 
-_DEVICE_ID = re.compile(r"^[A-Za-z0-9_]+$")
 _MODEL_YAML = Path(__file__).resolve().parent / "models" / "model.yaml"
 _SOURCE_DIGEST = "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d"
-_MODEL_ID = "szlab-linear-rail-a"
-
-
-@dataclass(frozen=True, slots=True)
-class RailKinematicModelBundle:
-    """供 OS 投影器和 FE 使用的单轴渲染模型。"""
-
-    render_urdf: str
-    source_digest: str
-    qualified_joint_names: tuple[str, ...]
-    topology_digest: str
-    mesh_paths: tuple[Path, ...] = ()
-    mount_link: str = ""
+_RAIL_SPEC = PrismaticRailModelSpec(
+    model_id="szlab-linear-rail-a",
+    model_descriptor_path=_MODEL_YAML,
+    expected_descriptor_digest=_SOURCE_DIGEST,
+    base_link=MODEL_DESCRIPTOR.base_link,
+    carriage_link=MODEL_DESCRIPTOR.carriage_link,
+    axis_joint=MODEL_DESCRIPTOR.axis_joint,
+    travel_m=MODEL_DESCRIPTOR.travel_m,
+    velocity_limit_m_s=MODEL_DESCRIPTOR.velocity_limit_m_s,
+)
 
 
 def build_kinematic_model(
@@ -37,95 +34,16 @@ def build_kinematic_model(
     position: Mapping[str, Any] | None = None,
     rotation: Mapping[str, Any] | None = None,
 ) -> RailKinematicModelBundle:
-    """构造 Device 命名空间下的单轴棱柱关节渲染 URDF。
+    """构造 Device 命名空间下的单轴棱柱关节渲染 URDF。"""
 
-    参数：``device_id`` 是 Graph 实例身份；``position``/``rotation`` 由 Graph
-    拥有，渲染 URDF 与 CR5 render 一样不写入世界安装。返回：完全限定关节名、
-    拓扑摘要和本地 URDF。异常：非法 Device id 或型号描述符漂移时拒绝。
-    安全：只声明导轨自己的一根轴，不并入机械臂关节。滑座
-    ``mount_link`` 必须保留为空 link：它是机械臂挂载点，外观由静态外壳
-    STL 负责，不得再放无材质占位盒（urdf-loader / RViz 会画成红方块）。
-    """
-
-    del position, rotation
-    normalized = str(device_id).strip()
-    if _DEVICE_ID.fullmatch(normalized) is None:
-        raise ValueError("device_id 只能包含英文、数字和下划线")
-    actual_digest = _source_file_digest(_MODEL_YAML)
-    if actual_digest != _SOURCE_DIGEST:
-        raise ValueError("导轨 model.yaml 源摘要漂移")
-
-    name_map = build_joint_state_name_map(device_id=normalized)
-    qualified = name_map.qualified_joint_names
-    prefix = f"{normalized}_"
-    base = f"{prefix}{MODEL_DESCRIPTOR.base_link}"
-    carriage = f"{prefix}{MODEL_DESCRIPTOR.carriage_link}"
-    joint_name = qualified[0]
-    lower, upper = MODEL_DESCRIPTOR.travel_m
-    velocity = MODEL_DESCRIPTOR.velocity_limit_m_s
-    robot = ET.Element("robot", {"name": f"{normalized}_rail"})
-    ET.SubElement(robot, "link", {"name": base})
-    ET.SubElement(robot, "link", {"name": carriage})
-    joint = ET.SubElement(robot, "joint", {"name": joint_name, "type": "prismatic"})
-    ET.SubElement(joint, "parent", {"link": base})
-    ET.SubElement(joint, "child", {"link": carriage})
-    ET.SubElement(joint, "origin", {"xyz": "0 0 0", "rpy": "0 0 0"})
-    ET.SubElement(joint, "axis", {"xyz": "1 0 0"})
-    ET.SubElement(
-        joint,
-        "limit",
-        {
-            "lower": f"{lower}",
-            "upper": f"{upper}",
-            "effort": "0",
-            "velocity": f"{velocity}",
-        },
+    name_map = build_joint_state_name_map(device_id=str(device_id).strip())
+    return build_prismatic_rail_kinematic_model(
+        _RAIL_SPEC,
+        device_id=device_id,
+        position=position,
+        rotation=rotation,
+        qualified_joint_name=name_map.qualified_joint_names[0],
     )
-    return RailKinematicModelBundle(
-        render_urdf=ET.tostring(robot, encoding="unicode"),
-        source_digest=_SOURCE_DIGEST,
-        qualified_joint_names=qualified,
-        topology_digest=_topology_digest(
-            device_id=normalized,
-            source_digest=_SOURCE_DIGEST,
-            qualified_joint_names=qualified,
-        ),
-        mount_link=carriage,
-    )
-
-
-def _source_file_digest(path: Path) -> str:
-    """对型号描述符做换行无关摘要。
-
-    参数：``path`` 是 ``model.yaml``。返回：规范化为 LF 后的 SHA-256。
-    异常：文件不可读时传播 ``OSError``。安全：Windows CRLF 检出不得被当成
-    型号漂移；内容变化仍会改变摘要。
-    """
-
-    normalized = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-    return hashlib.sha256(normalized).hexdigest()
-
-
-def _topology_digest(
-    *,
-    device_id: str,
-    source_digest: str,
-    qualified_joint_names: tuple[str, ...],
-) -> str:
-    """生成不受安装位姿和本地路径影响的运动学拓扑摘要。"""
-
-    payload = json.dumps(
-        {
-            "device_id": device_id,
-            "model": _MODEL_ID,
-            "source_digest": source_digest,
-            "joint_names": qualified_joint_names,
-        },
-        ensure_ascii=True,
-        separators=(",", ":"),
-        sort_keys=True,
-    )
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 __all__ = ["RailKinematicModelBundle", "build_kinematic_model"]

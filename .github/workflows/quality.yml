@@ -21,6 +21,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip build
           python -m pip install -e packages/unilab-robot-contracts
+          python -m pip install -e packages/unilab-robot-model-kit
           python -m pip install -e packages/unilab-arm-cr7
           python -m pip install -e packages/unilab-arm-cr5
           python -m pip install -e packages/unilab-end-effector-sim

@@ -6,8 +6,8 @@
 
 | 层 | 仓 / 包 | 允许拥有 | 禁止拥有 |
 |---|---|---|---|
-| L1 机械臂 | `unilab-arm-cr5` / `unilab-arm-cr7` | 六轴关节、限位、mesh、`build_moveit_model`、固定 `mount_yaw_joint` | 现场点位、库位（Site）、导轨棱柱轴、RViz 启动 |
-| L1 导轨 | `unilab-rail-linear` | 一根棱柱轴、`rail_base` / `rail_carriage`、`build_kinematic_model` | 六轴规划组、ros2_control、把臂当第七轴 |
+| L1 机械臂 | `unilab-arm-cr5` / `unilab-arm-cr7`，或**领域仓自有 arm 包** | 六轴关节、限位、mesh、`build_moveit_model`、固定 `mount_yaw_joint` | 现场点位、库位（Site）、导轨棱柱轴、RViz 启动 |
+| L1 导轨 | `unilab-rail-linear`，或**领域仓自有 rail 包** | 一根棱柱轴、`rail_base` / `rail_carriage`、`build_kinematic_model` | 六轴规划组、ros2_control、把臂当第七轴 |
 | L2 | `unilab-rail-mounted-arm` / runtime | 先导轨后臂的协调 | 领域工位编号 |
 | L3 领域仓 | pTLC / SZLab / 其它实验室包 | 物理图、静态外壳 STL、点位 digest、HardwareProfile | 改写 L1 URDF 拓扑、合一体 MoveIt |
 
@@ -16,12 +16,18 @@
 ```python
 model={
     "type": "package_moveit",
-    "provider": "unilab_arm_cr5:build_moveit_model",  # 或 unilab_arm_cr7
+    "provider": "unilab_arm_cr5:build_moveit_model",  # catalog
+    # 或 "my_lab_arm:build_moveit_model",              # 领域自有包
     "source_digest": "<model.yaml source.sha256，64 位小写 hex>",
 }
 ```
 
-- `provider` 必须是 `unilab_arm_<slug>:build_moveit_model`。不要写 `unilab_arm_<slug>.moveit_model:build_moveit_model` 以外的私有路径；公开导出以包根 `:` 符号为准（pTLC / CR7 均如此）。
+- **Catalog（推荐跨实验室复用）**：`provider` 必须是 `unilab_arm_<slug>:build_moveit_model`。
+- **领域自有型号**：`provider` 可以是 `<domain_python_package>:build_moveit_model`，但必须：
+  - 导出 Robot Module API v1（见 `domain-owned-arm-rail` SKILL）
+  - 用 `unilab-robot-model-kit` 组装 URDF/SRDF/mock control
+  - `source_digest` 锁定领域包 `models/model.yaml` 的 `source.sha256`
+- 不要写 `unilab_arm_<slug>.moveit_model:build_moveit_model` 这类私有子模块路径；公开导出以包根 `:` 符号为准。
 - `source_digest` 必须等于该型号 `models/model.yaml` 的 `source.sha256`。漂移则 OS 启动失败关闭。
 - 禁止 `type: xacro` / `workspace_xacro`。禁止模型字典出现 `arm_base_joint`。
 - 可选 `format`/`entry`：仅当领域仓**真有**可投影的本地 URDF 时再写；没有本地文件就不要写 `format: urdf` 空入口（否则工作区物料目录编译会要求 POSIX 相对路径）。
@@ -36,12 +42,14 @@ model={
     "type": "package_static",
     "provider": "<领域包>.static_layout:build_<rail>",
     "source_digest": "<外壳 STL 的 SHA-256>",
-    "joint_state_provider": "unilab_rail_linear:build_kinematic_model",
+    "joint_state_provider": "unilab_rail_linear:build_kinematic_model",  # catalog
+    # 或 "my_lab_rail:build_kinematic_model",                           # 领域自有包
     "joint_state_source_digest": "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d",
 }
 ```
 
-`joint_state_source_digest` 必须等于 `unilab-rail-linear` 的 `models/model.yaml` 源摘要（当前实现锁定值见上，漂移以该 yaml 为准）。
+- **Catalog**：`joint_state_provider` 为 `unilab_rail_linear:build_kinematic_model`，digest 见下。
+- **领域自有导轨运动学**：可为 `<domain_python_package>:build_kinematic_model`，须用 `unilab-robot-model-kit.build_prismatic_rail_kinematic_model` 或等效合同，并锁定自有 `models/model.yaml` digest。
 
 静态 Provider 必须：
 

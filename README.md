@@ -9,6 +9,7 @@
 
 ```text
 unilab-robot-contracts     L0：指令、后端、观测、硬件配置和点位解析合同
+unilab-robot-model-kit     L1：六轴 MoveIt / 棱柱导轨 URDF·SRDF·mock 组装（catalog 与领域共用）
 unilab-arm-cr7             L1：CR7 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
 unilab-arm-cr5             L1：CR5 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
 unilab-end-effector-sim    L1：夹爪与快换工具的可替换仿真 Adapter
@@ -17,6 +18,25 @@ unilab-rail-mounted-arm    L2：厂商无关 rail-then-arm 协调、互锁和端
 unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模块
 领域部署包                 L3：exact manifest、SiteAccessDeclaration、点位、标定和资格资产
 ```
+
+## 型号引用：Catalog 与领域自有
+
+领域 `@device` 不应让用户手动找 URDF；用 `provider + source_digest` 声明型号来源。
+
+| 路径 | 机械臂 provider | 导轨 joint_state_provider | 适用 |
+|------|-----------------|---------------------------|------|
+| **Catalog（推荐）** | `unilab_arm_<slug>:build_moveit_model` | `unilab_rail_linear:build_kinematic_model` | 跨实验室复用同一厂商型号 |
+| **领域自有** | `<domain.module>:build_moveit_model` | `<domain.module>:build_kinematic_model` | 实验室私有 URDF，仍走 Module API v1 |
+
+### Catalog 索引
+
+| slug | distribution | `@device` provider | `source_digest` 入口 |
+|------|--------------|-------------------|----------------------|
+| cr7 | `unilab-arm-cr7` | `unilab_arm_cr7:build_moveit_model` | `packages/unilab-arm-cr7/src/unilab_arm_cr7/models/model.yaml` → `source.sha256` |
+| cr5 | `unilab-arm-cr5` | `unilab_arm_cr5:build_moveit_model` | `packages/unilab-arm-cr5/src/unilab_arm_cr5/models/model.yaml` → `source.sha256` |
+| linear-rail | `unilab-rail-linear` | （外壳在 L3 `static_layout`） | `joint_state_provider` digest 见 `packages/unilab-rail-linear/src/unilab_rail_linear/models/model.yaml` |
+
+领域自有型号：依赖 `unilab-robot-model-kit` 薄封装 URDF，manifest 指向领域 Python 包。步骤见 `.cursor/skills/domain-owned-arm-rail/`。
 
 领域仓库不应复制通用 Adapter、运行时路由或 WorkCell 状态机。机械臂型号包不保存现场点位、Warehouse 传感器地址或 Site 绑定。
 

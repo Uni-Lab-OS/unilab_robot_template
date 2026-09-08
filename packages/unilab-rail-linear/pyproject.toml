@@ -7,7 +7,10 @@ name = "unilab-rail-linear"
 version = "0.1.0"
 description = "Uni-Lab 可替换单轴直线导轨模块"
 requires-python = ">=3.11"
-dependencies = ["unilab-robot-contracts>=0.1,<0.2"]
+dependencies = [
+  "unilab-robot-contracts>=0.1,<0.2",
+  "unilab-robot-model-kit>=0.1,<0.2",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
