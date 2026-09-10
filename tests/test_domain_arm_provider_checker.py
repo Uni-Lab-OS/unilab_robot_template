@@ -8,7 +8,7 @@ from pathlib import Path
 def _load_checker():
     path = (
         Path(__file__).resolve().parents[1]
-        / ".cursor/skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py"
+        / "skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py"
     )
     module_name = "check_domain_arm_assembly_test"
     spec = importlib.util.spec_from_file_location(module_name, path)

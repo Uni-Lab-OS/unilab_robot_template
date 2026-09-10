@@ -36,16 +36,16 @@ unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模�
 | cr5 | `unilab-arm-cr5` | `unilab_arm_cr5:build_moveit_model` | `packages/unilab-arm-cr5/src/unilab_arm_cr5/models/model.yaml` → `source.sha256` |
 | linear-rail | `unilab-rail-linear` | （外壳在 L3 `static_layout`） | `joint_state_provider` digest 见 `packages/unilab-rail-linear/src/unilab_rail_linear/models/model.yaml` |
 
-领域自有型号：依赖 `unilab-robot-model-kit` 薄封装 URDF，manifest 指向领域 Python 包。步骤见 `.cursor/skills/domain-owned-arm-rail/`。
+领域自有型号：依赖 `unilab-robot-model-kit` 薄封装 URDF，manifest 指向领域 Python 包。步骤见 `skills/domain-owned-arm-rail/`。
 
 领域仓库不应复制通用 Adapter、运行时路由或 WorkCell 状态机。机械臂型号包不保存现场点位、Warehouse 传感器地址或 Site 绑定。
 
 领域仓如何引用本仓（两个 `@device`、导轨父级、禁止合一体 MoveIt）见
-`.cursor/skills/use-unilab-arm-package/`。权威样本是 `Uni-Lab-pTLC`，不要按现场即兴拼 URDF。
+`skills/use-unilab-arm-package/`。权威样本是 `Uni-Lab-pTLC`，不要按现场即兴拼 URDF。
 检查器：
 
 ```bash
-python .cursor/skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py --domain ../Uni-Lab-pTLC
+python skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py --domain ../Uni-Lab-pTLC
 ```
 
 ## 公共边界

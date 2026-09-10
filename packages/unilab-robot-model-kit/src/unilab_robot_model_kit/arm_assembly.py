@@ -34,7 +34,6 @@ from .urdf_arm import (
 class SixAxisArmModelSpec:
     """Catalog or domain-owned six-axis arm model facts."""
 
-    model_slug: str
     source_urdf: Path
     expected_source_digest: str
     mesh_paths: tuple[Path, ...]
@@ -65,17 +64,21 @@ def assemble_six_axis_moveit_model(
     source_bytes = spec.source_urdf.read_bytes()
     source_digest = sha256_bytes(source_bytes)
     if source_digest != spec.expected_source_digest:
-        raise ValueError(f"{spec.model_slug.upper()} 固有 URDF 摘要漂移")
+        raise ValueError(f"{normalized_device_id} 固有 URDF 摘要漂移")
     missing_meshes = tuple(
         path.name for path in spec.mesh_paths if not path.is_file()
     )
     if missing_meshes:
-        raise ValueError(f"{spec.model_slug.upper()} mesh 资产缺失: " + ", ".join(missing_meshes))
+        raise ValueError(
+            f"{normalized_device_id} mesh 资产缺失: " + ", ".join(missing_meshes)
+        )
     normalized_yaw_deg = normalize_mount_yaw_deg(mount_yaw_deg)
 
     prefix = f"{normalized_device_id}_"
+    planning_group = f"{prefix}arm"
+    controller_name = f"{prefix}controller"
     render_root = ET.fromstring(source_bytes)
-    render_root.set("name", f"{normalized_device_id}_{spec.model_slug}")
+    render_root.set("name", normalized_device_id)
     qualify_robot_tree(
         render_root,
         prefix=prefix,
@@ -83,7 +86,7 @@ def assemble_six_axis_moveit_model(
         joint_names=spec.joint_names,
         mesh_paths=spec.mesh_paths,
         joint_effort=spec.joint_effort,
-        model_label=spec.model_slug.upper(),
+        model_label=normalized_device_id.upper(),
     )
     append_flange_frame(
         render_root,
@@ -121,19 +124,16 @@ def assemble_six_axis_moveit_model(
     topology_digest = compute_topology_digest(
         payload={
             "device_id": normalized_device_id,
-            "model": spec.model_slug,
             "source_digest": source_digest,
             "joint_names": qualified_joints,
             "flange_frame": spec.flange_frame,
         }
     )
-    planning_group = f"{prefix}{spec.model_slug}_arm"
-    controller_name = f"{prefix}{spec.model_slug}_controller"
     return MoveItModelBundle(
         execution_urdf=ET.tostring(execution_root, encoding="unicode"),
         render_urdf=ET.tostring(render_root, encoding="unicode"),
         srdf=build_srdf_arm_chain(
-            robot_name=f"{prefix}{spec.model_slug}",
+            robot_name=normalized_device_id,
             prefix=prefix,
             planning_group=planning_group,
             base_link=spec.srdf_base_link,
@@ -148,19 +148,11 @@ def assemble_six_axis_moveit_model(
             controller_name=controller_name,
             joint_names=qualified_joints,
         ),
-        kinematics=default_kinematics(planning_group=planning_group),
-        joint_limits=default_joint_limits(joint_names=qualified_joints),
-        source_digest=source_digest,
-        mesh_paths=spec.mesh_paths,
-        qualified_joint_names=qualified_joints,
+        kinematics=default_kinematics(),
+        joint_limits=default_joint_limits(qualified_joints),
         topology_digest=topology_digest,
+        joint_state_name_map=name_map,
+        planning_group=planning_group,
+        controller_name=controller_name,
+        source_digest=source_digest,
     )
-
-
-def verify_locked_source_digest(path: Path, expected_digest: str) -> str:
-    """Verify URDF or descriptor digest and return actual digest."""
-
-    actual = sha256_file(path)
-    if actual != expected_digest:
-        raise ValueError(f"锁定摘要漂移: {path.name}")
-    return actual
