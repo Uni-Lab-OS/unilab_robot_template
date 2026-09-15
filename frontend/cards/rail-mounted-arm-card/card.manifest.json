@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "community.unilab_robot_template.rail_mounted_arm.card",
+  "version": "0.1.0",
+  "title": "导轨 + 机械臂调试卡片",
+  "deviceTypes": [],
+  "sdkVersion": "^0.1.0",
+  "hostProtocolVersion": 1,
+  "authoringProfile": "web-component-lite-v1",
+  "entry": "src/index.ts",
+  "uiFeatures": ["core", "manual-exclusive"],
+  "permissions": {
+    "state": ["actionBusy", "jointState", "moveit_online", "online"],
+    "actions": [
+      "calibrate_camera_extrinsic",
+      "calibrate_tcp",
+      "home",
+      "jog_joint_once",
+      "jog_tcp_once",
+      "move_rail_to_position",
+      "move_to_anchor",
+      "query",
+      "record_current_point",
+      "record_marker",
+      "read_debug_snapshot",
+      "teach_point_from_current"
+    ],
+    "media": []
+  },
+  "config": {
+    "version": 1,
+    "defaults": {
+      "branding": {
+        "eyebrow": "UNILAB ROBOT · DEVICE COMMISSIONING",
+        "title": "导轨 + 机械臂调试卡片",
+        "subtitle": "MoveIt 轨迹规划 · 可选导轨 · 本地 Edge Runtime"
+      }
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "branding": {
+          "type": "object",
+          "properties": {
+            "eyebrow": {"type": "string"},
+            "title": {"type": "string"},
+            "subtitle": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

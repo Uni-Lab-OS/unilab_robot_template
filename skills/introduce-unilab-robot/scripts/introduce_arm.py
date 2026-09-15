@@ -20,6 +20,7 @@ from _catalog import (  # noqa: E402
     read_source_digest,
     template_root,
 )
+from _card_scaffold import scaffold_domain_card  # noqa: E402
 from _domain_layout import detect_domain_package, locate_device  # noqa: E402
 from _patch import (  # noqa: E402
     ensure_pyproject_dependencies,
@@ -137,6 +138,12 @@ def main(argv: list[str] | None = None) -> int:
         help="domain-owned 模式下继续跑 migrate_domain_arm.py --apply",
     )
     parser.add_argument("--skip-check", action="store_true", help="跳过装配检查器")
+    parser.add_argument(
+        "--with-card",
+        action="store_true",
+        help="生成 frontend/cards/<device>-card manifest（引用 template 卡片）",
+    )
+    parser.add_argument("--card-title", help="设备卡片标题")
     args = parser.parse_args(argv)
 
     domain = args.domain.resolve()
@@ -227,6 +234,19 @@ def main(argv: list[str] | None = None) -> int:
         report["migrate"] = {"exit_code": code, "payload": payload}
         if code != 0:
             report["ok"] = False
+
+    if args.with_card:
+        card_title = args.card_title or f"{args.device} 机械臂调试卡片"
+        card_report = scaffold_domain_card(
+            domain,
+            domain_pkg=domain_pkg,
+            device_id=args.device,
+            title=card_title,
+            apply=args.apply,
+        )
+        report["card"] = card_report
+        if args.apply and card_report.get("created_files"):
+            report["card_scaffolded"] = True
 
     if args.apply and not args.skip_check:
         code, payload = _run_checker(domain)

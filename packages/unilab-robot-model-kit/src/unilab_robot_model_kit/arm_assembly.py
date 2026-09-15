@@ -49,6 +49,16 @@ class SixAxisArmModelSpec:
     srdf_base_link: str = "device_link"
 
 
+def verify_locked_source_digest(source_urdf: Path, expected_source_digest: str) -> None:
+    """Reject vendor URDF when its digest drifts from the locked expectation."""
+
+    source_digest = sha256_bytes(source_urdf.read_bytes())
+    if source_digest != expected_source_digest:
+        raise ValueError(
+            f"固有 URDF 摘要漂移: expected {expected_source_digest}, got {source_digest}"
+        )
+
+
 def assemble_six_axis_moveit_model(
     spec: SixAxisArmModelSpec,
     *,
@@ -148,11 +158,10 @@ def assemble_six_axis_moveit_model(
             controller_name=controller_name,
             joint_names=qualified_joints,
         ),
-        kinematics=default_kinematics(),
-        joint_limits=default_joint_limits(qualified_joints),
-        topology_digest=topology_digest,
-        joint_state_name_map=name_map,
-        planning_group=planning_group,
-        controller_name=controller_name,
+        kinematics=default_kinematics(planning_group=planning_group),
+        joint_limits=default_joint_limits(joint_names=qualified_joints),
         source_digest=source_digest,
+        mesh_paths=spec.mesh_paths,
+        qualified_joint_names=qualified_joints,
+        topology_digest=topology_digest,
     )

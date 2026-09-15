@@ -34,6 +34,7 @@ from .point_maintenance import (
     PublishedPointSet,
     ValidatedPointSet,
 )
+from .vision_calibration import VisionCalibrationPaths
 
 __version__ = "0.1.0"
 
@@ -49,6 +50,7 @@ __all__ = [
     "ManipulationSequenceRunner",
     "MoveItPlanningBudget",
     "PointMaintenanceService",
+    "VisionCalibrationPaths",
     "PointSetQualification",
     "PointTestEvidence",
     "PublishedPointSet",

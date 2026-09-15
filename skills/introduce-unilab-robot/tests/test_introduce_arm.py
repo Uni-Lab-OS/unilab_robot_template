@@ -103,3 +103,97 @@ include = ["demo_lab*"]
     text = device_py.read_text(encoding="utf-8")
     assert "unilab_arm_cr7:build_moveit_model" in text
     assert "unilab-arm-cr7" in (domain / "pyproject.toml").read_text(encoding="utf-8")
+
+
+def test_with_card_dry_run_plans_manifest(tmp_path: Path) -> None:
+    domain = tmp_path / "demo-lab"
+    pkg = domain / "demo_lab" / "devices" / "my_robot"
+    pkg.mkdir(parents=True)
+    (domain / "pyproject.toml").write_text(
+        """
+[project]
+dependencies = []
+[tool.setuptools.packages.find]
+include = ["demo_lab*"]
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    (pkg / "device.py").write_text(
+        '''
+from unilabos.registry.decorators import device
+
+@device(
+    id="my_robot",
+    model={"type": "package_moveit", "provider": "unilab_arm_cr5:build_moveit_model", "source_digest": "0"*64},
+)
+class MyRobotDevice:
+    pass
+'''.strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    report = _run(
+        [
+            "--domain",
+            str(domain),
+            "--device",
+            "my_robot",
+            "--catalog",
+            "cr5",
+            "--with-card",
+            "--card-title",
+            "Demo Robot Card",
+        ]
+    )
+    assert report["_exit"] == 0
+    card = report["card"]
+    assert card["changed"] is True
+    assert "frontend/cards/my-robot-card/card.manifest.json" in card["planned_files"]
+    assert card["created_files"] == []
+
+
+def test_with_card_apply_writes_manifest(tmp_path: Path) -> None:
+    domain = tmp_path / "demo-lab"
+    pkg = domain / "demo_lab" / "devices" / "my_robot"
+    pkg.mkdir(parents=True)
+    (domain / "pyproject.toml").write_text(
+        """
+[project]
+dependencies = []
+[tool.setuptools.packages.find]
+include = ["demo_lab*"]
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    (pkg / "device.py").write_text(
+        '''
+from unilabos.registry.decorators import device
+
+@device(id="my_robot", model={"type": "package_moveit", "provider": "unilab_arm_cr5:build_moveit_model", "source_digest": "0"*64})
+class MyRobotDevice:
+    pass
+'''.strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    report = _run(
+        [
+            "--domain",
+            str(domain),
+            "--device",
+            "my_robot",
+            "--catalog",
+            "cr5",
+            "--with-card",
+            "--apply",
+            "--skip-check",
+        ]
+    )
+    assert report["_exit"] == 0
+    manifest = domain / "frontend" / "cards" / "my-robot-card" / "card.manifest.json"
+    assert manifest.is_file()
+    payload = json.loads(manifest.read_text(encoding="utf-8"))
+    assert payload["deviceTypes"] == ["community.demo_lab.my_robot"]
+    assert payload["templateCard"] == "unilab_robot_template/frontend/cards/rail-mounted-arm-card"

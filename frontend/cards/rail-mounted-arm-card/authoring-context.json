@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "device-card-authoring-context/v1",
+  "deviceTypeId": "community.szlab_poly_studio.szlab_mixer_robot",
+  "deviceId": "szlab_mixer_robot",
+  "title": "SZLab Mixer CR7",
+  "actions": [
+    {
+      "action": "read_debug_snapshot",
+      "label": "读取机械臂调试卡片快照",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "normal"
+    },
+    {
+      "action": "home",
+      "label": "回原点",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "move_to_anchor",
+      "label": "移动到目标点",
+      "inputSchema": {
+        "type": "object",
+        "required": ["point_id"],
+        "properties": {"point_id": {"type": "string"}}
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "jog_joint_once",
+      "label": "离散关节点动",
+      "inputSchema": {
+        "type": "object",
+        "required": ["joint_ref", "direction", "step_deg"],
+        "properties": {
+          "joint_ref": {"type": "string"},
+          "direction": {"type": "string", "enum": ["negative", "positive"]},
+          "step_deg": {"type": "number", "minimum": 0.1}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "jog_tcp_once",
+      "label": "离散工具中心点点动",
+      "inputSchema": {
+        "type": "object",
+        "required": ["axis", "direction", "step", "frame_ref"],
+        "properties": {
+          "axis": {"type": "string", "enum": ["x", "y", "z", "rx", "ry", "rz"]},
+          "direction": {"type": "string", "enum": ["negative", "positive"]},
+          "step": {"type": "number", "minimum": 0.1},
+          "frame_ref": {"type": "string", "enum": ["arm_base", "tool"]}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "move_rail_to_position",
+      "label": "移动导轨到绝对位置",
+      "inputSchema": {
+        "type": "object",
+        "required": ["position_mm"],
+        "properties": {"position_mm": {"type": "number", "minimum": 0}}
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "record_current_point",
+      "label": "记录当前机械臂与可选导轨位置",
+      "inputSchema": {
+        "type": "object",
+        "required": ["target_ref", "expected_revision", "confirm"],
+        "properties": {
+          "target_ref": {"type": "string"},
+          "expected_revision": {"type": "string"},
+          "confirm": {"type": "boolean", "const": true},
+          "include_vision": {"type": "boolean"},
+          "marker_ref": {"type": "string"}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "calibrate_camera_extrinsic",
+      "label": "摄像头外参标定",
+      "inputSchema": {
+        "type": "object",
+        "required": ["confirm"],
+        "properties": {"confirm": {"type": "boolean", "const": true}}
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "calibrate_tcp",
+      "label": "TCP 校准",
+      "inputSchema": {
+        "type": "object",
+        "required": ["confirm"],
+        "properties": {"confirm": {"type": "boolean", "const": true}}
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "record_marker",
+      "label": "marker 记录",
+      "inputSchema": {
+        "type": "object",
+        "required": ["warehouse_ref", "confirm"],
+        "properties": {
+          "warehouse_ref": {"type": "string"},
+          "confirm": {"type": "boolean", "const": true}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    }
+  ],
+  "stateSchema": {
+    "actionBusy": {"type": "object", "source": "host", "status": "resolved"},
+    "jointState": {"type": "object", "source": "host", "status": "resolved"},
+    "moveit_online": {"type": "boolean", "source": "host", "status": "resolved"},
+    "online": {"type": "boolean", "source": "host", "status": "resolved"}
+  },
+  "sampleState": {
+    "actionBusy": {},
+    "jointState": null,
+    "moveit_online": true,
+    "online": true
+  },
+  "media": []
+}

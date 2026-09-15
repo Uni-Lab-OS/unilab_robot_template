@@ -7,6 +7,7 @@
 | 文档 | 适用场景 |
 |------|----------|
 | **[INTRODUCE_UNILAB_ROBOT.md](./INTRODUCE_UNILAB_ROBOT.md)** | **一键**把 template 机械臂引用进领域仓（最小成本入口，推荐先看） |
+| [ARM_DEVICE_CARD.md](./ARM_DEVICE_CARD.md) | 机械臂调试卡片（Python mixin + 前端）从 template 统一引用 |
 | [USE_UNILAB_ARM_PACKAGE.md](./USE_UNILAB_ARM_PACKAGE.md) | catalog 型号包（`unilab_arm_*`）pTLC 式导轨 + 机械臂整机装配 |
 | [DOMAIN_OWNED_ARM_RAIL.md](./DOMAIN_OWNED_ARM_RAIL.md) | 领域自有机械臂 / 导轨（`model_ownership: domain`）MoveIt 完整移植、RViz / attach 验收 |
 
