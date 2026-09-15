@@ -13,6 +13,7 @@ class BackendKind(str, Enum):
     PLC = "plc"
     TCP_SDK = "tcp_sdk"
     MOVEIT = "moveit"
+    PREVIEW = "preview"
 
 
 class DeploymentMode(str, Enum):
@@ -65,6 +66,11 @@ class HardwareProfile:
             and self.interlock_mode is not InterlockMode.VALIDATED_HARDWARE_INTERLOCK
         ):
             raise ValueError("production profile 必须使用 validated_hardware_interlock")
+        if self.backend is BackendKind.PREVIEW:
+            if self.mode is not DeploymentMode.SIMULATION:
+                raise ValueError("preview backend 只允许 simulation profile")
+            if self.interlock_mode is not InterlockMode.SIMULATION:
+                raise ValueError("preview backend 必须使用 simulation interlock")
         for name, value in (
             ("commissioning_velocity_limit", self.commissioning_velocity_limit),
             ("commissioning_acceleration_limit", self.commissioning_acceleration_limit),

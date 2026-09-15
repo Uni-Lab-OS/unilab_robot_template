@@ -10,6 +10,7 @@
 | [ARM_DEVICE_CARD.md](./ARM_DEVICE_CARD.md) | 机械臂调试卡片（Python mixin + 前端）从 template 统一引用 |
 | [USE_UNILAB_ARM_PACKAGE.md](./USE_UNILAB_ARM_PACKAGE.md) | catalog 型号包（`unilab_arm_*`）pTLC 式导轨 + 机械臂整机装配 |
 | [DOMAIN_OWNED_ARM_RAIL.md](./DOMAIN_OWNED_ARM_RAIL.md) | 领域自有机械臂 / 导轨（`model_ownership: domain`）MoveIt 完整移植、RViz / attach 验收 |
+| [PREVIEW_ARM.md](./PREVIEW_ARM.md) | 无 MoveIt 本地 preview 机械臂（L0/L1/L3、`BackendKind.PREVIEW` 切换） |
 
 ## 最快路径（一条命令）
 

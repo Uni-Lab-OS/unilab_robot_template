@@ -67,6 +67,7 @@ class RuntimeRequirements:
     tool_changer_port: bool = False
     payload_planning_scene_port: bool = False
     rail_axis_port: bool = False
+    preview_kinematics: bool = False
 
 
 @dataclass(frozen=True)
@@ -88,6 +89,8 @@ class RuntimeDependencies:
     robot_symbol: str = ""
     tool_definition: ToolDefinition | None = None
     simulation_holding_payload: bool = False
+    preview_kinematics_impl: Any = None
+    preview_arm_mount: Any = None
 
 
 def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
@@ -122,6 +125,10 @@ def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
             end_effector_port=manifest.profile.mode is not DeploymentMode.SIMULATION,
             tool_changer_port=manifest.profile.mode is not DeploymentMode.SIMULATION,
         )
+    if backend is BackendKind.PREVIEW:
+        if manifest.rail is not None:
+            raise ValueError("Preview runtime 暂不支持 RailMountedArm WorkCell")
+        return RuntimeRequirements(preview_kinematics=True)
     raise ValueError(f"不支持的 RobotExecutionBackend: {backend}")
 
 
@@ -141,6 +148,8 @@ def create_runtime(
         if dependencies.variable_port is None:
             raise ValueError("PLC runtime 必须注入变量端口")
         return _create_plc_runtime(manifest, dependencies.variable_port, runtime_root)
+    if requirements.preview_kinematics:
+        return _create_preview_runtime(manifest, dependencies, runtime_root)
     if requirements.end_effector_port and dependencies.end_effector_port is None:
         raise ValueError("非仿真 PointSet runtime 必须注入独立 EndEffectorPort")
     if requirements.tool_changer_port and dependencies.tool_changer_port is None:
@@ -165,6 +174,72 @@ def arm_model_descriptor(manifest: RuntimeManifest) -> Any:
     """返回 exact Arm distribution 拥有的型号描述，供 OS 创建 MoveIt client。"""
 
     return _module_impl(manifest.arm, kind="arm").MODEL_DESCRIPTOR
+
+
+def _create_preview_runtime(
+    manifest: RuntimeManifest,
+    dependencies: RuntimeDependencies,
+    runtime_root: Path,
+) -> RuntimeBinding:
+    """装配 L0 PreviewArmDevice + L1 PreviewKinematics。"""
+
+    del runtime_root
+    if manifest.profile.mode is not DeploymentMode.SIMULATION:
+        raise ValueError("Preview runtime 只允许 simulation profile")
+    if dependencies.preview_kinematics_impl is None:
+        raise ValueError("Preview runtime 必须注入 PreviewKinematics")
+    mount = dependencies.preview_arm_mount
+    if mount is None:
+        mount = _load_preview_arm_mount(manifest)
+    device_id = str(getattr(mount, "arm_id", "") or "").strip()
+    if not device_id:
+        device_id = next(iter(manifest.profile.endpoint_ids))
+    from .preview.preview_arm_device import PreviewArmDevice
+    from .preview.runtime_binding import PreviewRuntime, PreviewRuntimeBinding
+
+    device = PreviewArmDevice(
+        device_id,
+        dependencies.preview_kinematics_impl,
+        mount,
+        register=False,
+    )
+    preview_binding = PreviewRuntimeBinding(
+        runtime=PreviewRuntime(device=device),
+        preview_device=device,
+    )
+    return bind_runtime(
+        preview_binding.runtime,
+        manifest.profile.endpoint_ids,
+        owner_id=manifest.deployment_id,
+        rail_mounted=False,
+        deployment_mode=manifest.profile.mode,
+    )
+
+
+def _load_preview_arm_mount(manifest: RuntimeManifest) -> Any:
+    """从 arm_mounts 资产读取唯一 ArmMount。"""
+
+    from .preview.types import ArmMount
+
+    asset_names = getattr(manifest, "assets", {})
+    if not isinstance(asset_names, Mapping) or "arm_mounts" not in asset_names:
+        raise ValueError("Preview runtime 必须注入 preview_arm_mount 或提供 arm_mounts 资产")
+    data = _load_yaml(manifest.asset_path("arm_mounts"), "unilab.arm-mounts/v1")
+    mounts = data.get("mounts")
+    if not isinstance(mounts, Mapping) or not mounts:
+        raise TypeError("arm_mounts.mounts 必须是非空对象")
+    endpoint = next(iter(manifest.profile.endpoint_ids))
+    entry = mounts.get(endpoint)
+    if not isinstance(entry, Mapping):
+        raise ValueError(f"arm_mounts 缺少端点 {endpoint}")
+    base = tuple(float(v) for v in entry.get("base_xyz", ()))
+    if len(base) != 3:
+        raise ValueError(f"arm_mounts.{endpoint}.base_xyz 必须是长度 3")
+    limits = entry.get("rail_limits")
+    rail_limits = None
+    if limits is not None:
+        rail_limits = (float(limits[0]), float(limits[1]))
+    return ArmMount(arm_id=endpoint, base_xyz=base, rail_limits=rail_limits)
 
 
 def _create_plc_runtime(
