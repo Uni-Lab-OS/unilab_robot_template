@@ -5,7 +5,8 @@
 | 读者 | 入口 |
 |------|------|
 | 人类操作 | 本文 |
-| Agent 细则 | `skills/introduce-unilab-robot/SKILL.md` |
+| Agent 细则（**必须先读**） | `skills/introduce-unilab-robot/SKILL.md` |
+| 领域需改 demo | `skills/introduce-unilab-robot/docs/demo/` |
 | 脚本 | `skills/introduce-unilab-robot/scripts/introduce_arm.py` |
 
 ---
@@ -22,7 +23,14 @@ e:/miniforge3/envs/unilab/python unilab_robot_template/skills/introduce-unilab-r
   --catalog cr5 \
   --apply --install
 
-# 情况 B：引用领域仓自有 URDF（须已有 models/ + moveit_model.py）
+# 情况 B：Preview catalog（Elite CS66）—— Hydration 类 Preview 臂
+e:/miniforge3/envs/unilab/python unilab_robot_template/skills/introduce-unilab-robot/scripts/introduce_arm.py \
+  --domain F:/GitHub/new/Uni-Lab-Core/hydration-cad-workspace \
+  --device elite_preview \
+  --preview-catalog elite-cs66 \
+  --with-preview-scaffold --with-card --apply --install
+
+# 情况 C：引用领域仓自有 URDF（须已有 models/ + moveit_model.py）
 e:/miniforge3/envs/unilab/python unilab_robot_template/skills/introduce-unilab-robot/scripts/introduce_arm.py \
   --domain F:/GitHub/new/Uni-Lab-Core/Uni-Lab-SZLab \
   --device szlab_mixer_robot \
@@ -38,7 +46,8 @@ e:/miniforge3/envs/unilab/python unilab_robot_template/skills/introduce-unilab-r
 
 | 你的 URDF 在哪 | 模式 | 一句话 provider |
 |----------------|------|-----------------|
-| template `packages/unilab-arm-*`（L1 catalog） | `--catalog cr5` / `cr7` | `unilab_arm_<slug>:build_moveit_model` |
+| template `packages/unilab-arm-*`（L1 MoveIt catalog） | `--catalog cr5` / `cr7` | `unilab_arm_<slug>:build_moveit_model` |
+| template `unilab-arm-elite-cs66`（L1 Preview） | `--preview-catalog elite-cs66` | `<domain_pkg>.devices.<id>.model:build_base` |
 | 领域仓 `devices/<robot_device>/models/`（L3 自有） | `--domain-owned` | `<domain_pkg>.devices.<robot_device>.moveit_model:build_moveit_model` |
 
 同一领域仓可以 **catalog 臂 + domain 臂并存**（不同 `@device` 各跑各的命令）。
@@ -76,6 +85,9 @@ e:/miniforge3/envs/unilab/python unilab_robot_template/skills/introduce-unilab-r
 |------|-----------|-----------------|
 | cr5 | `unilab-arm-cr5` | `unilab_arm_cr5:build_moveit_model` |
 | cr7 | `unilab-arm-cr7` | `unilab_arm_cr7:build_moveit_model` |
+| elite-cs66（Preview） | `unilab-arm-elite-cs66` | 领域 `model:build_base` + `build_kinematics` |
+
+Preview 引入后对照 `skills/introduce-unilab-robot/docs/demo/catalog-preview-elite-cs66/` 与 Hydration 参照实现补全 mounts / PointSet / 卡片 context。
 
 ### 之后还要做什么
 
@@ -119,8 +131,10 @@ devices/<robot_device>/
 |------|------|------|
 | `--domain` | 是 | 领域仓根目录 |
 | `--device` | 是 | 图（Graph）里机械臂 `@device` 的 `"id"` |
-| `--catalog SLUG` | 二选一 | catalog 模式：`cr5` / `cr7` |
-| `--domain-owned` | 二选一 | 领域 L3 自有 URDF |
+| `--catalog SLUG` | 三选一 | MoveIt catalog：`cr5` / `cr7` |
+| `--preview-catalog SLUG` | 三选一 | Preview catalog：`elite-cs66` |
+| `--domain-owned` | 三选一 | 领域 L3 自有 URDF |
+| `--with-preview-scaffold` | 否 | preview-catalog：生成 demo 模板骨架 |
 | `--apply` | 否 | 真正写入；默认 dry-run |
 | `--install` | 否 | catalog：`pip install -e` template L1 包 |
 | `--migrate` | 否 | domain-owned：链式 migrate |

@@ -1,0 +1,46 @@
+"""Preview 机械臂卡片薄包装：OS AST 扫描 @action；逻辑在 template mixin。"""
+from __future__ import annotations
+
+from unilabos.registry.annotations import JSONValue
+from unilabos.registry.decorators import action
+from unilab_robot_runtime.device_card import ArmCardContext, PreviewArmCardMixin
+
+
+class {class_prefix}ArmCardMixin(PreviewArmCardMixin):
+    @action(description="读取 PointSet 目录与执行器观测", always_free=True)
+    def read_point_catalog(self) -> dict[str, JSONValue]:
+        return super().read_point_catalog()
+
+    @action(description="Preview 离散 TCP 点动")
+    def jog_tcp_once(
+        self,
+        axis: str,
+        direction: str,
+        step: float = 1.0,
+        frame_ref: str = "arm_base",
+    ) -> dict[str, JSONValue]:
+        return super().jog_tcp_once(axis=axis, direction=direction, step=step, frame_ref=frame_ref)
+
+    @action(description="记录当前机械臂位置到 PointSet v3")
+    def record_current_point(
+        self,
+        target_ref: str,
+        expected_revision: str | None = None,
+        confirm: bool = False,
+        include_vision: bool = False,
+        marker_ref: str | None = None,
+    ) -> dict[str, JSONValue]:
+        return super().record_current_point(
+            target_ref,
+            expected_revision=expected_revision,
+            confirm=confirm,
+            include_vision=include_vision,
+            marker_ref=marker_ref,
+        )
+
+    def _arm_card_context(self) -> ArmCardContext:
+        # TODO: 注入 point_set_path、vision 路径、catalog_entries — 见 domain-card-preview-hydration
+        raise NotImplementedError("请实现 _arm_card_context()")
+
+    def _executor_observation(self):
+        raise NotImplementedError("设备类实现 _executor_observation()")

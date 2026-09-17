@@ -31,6 +31,15 @@ _CATALOG: dict[str, dict[str, str]] = {
     },
 }
 
+_PREVIEW_CATALOG: dict[str, dict[str, str]] = {
+    "elite-cs66": {
+        "distribution": "unilab-arm-elite-cs66",
+        "import_root": "unilab_arm_elite_cs66",
+        "digest_module": "packages/unilab-arm-elite-cs66/src/unilab_arm_elite_cs66/urdf_providers.py",
+        "demo_dir": "docs/demo/catalog-preview-elite-cs66",
+    },
+}
+
 
 def template_root(start: Path) -> Path | None:
     """向上查找 unilab_robot_template 根目录。"""
@@ -47,6 +56,67 @@ def template_root(start: Path) -> Path | None:
 
 def list_catalog_slugs() -> list[str]:
     return sorted(_CATALOG)
+
+
+def list_preview_catalog_slugs() -> list[str]:
+    return sorted(_PREVIEW_CATALOG)
+
+
+@dataclass(frozen=True)
+class PreviewCatalogEntry:
+    slug: str
+    distribution: str
+    import_root: str
+    package_dir: Path
+    demo_dir: Path
+
+
+def load_preview_catalog_entry(template: Path, slug: str) -> PreviewCatalogEntry:
+    spec = _PREVIEW_CATALOG.get(slug)
+    if spec is None:
+        raise ValueError(
+            f"未知 preview catalog slug: {slug}；可选: {', '.join(list_preview_catalog_slugs())}"
+        )
+    digest_module = template / spec["digest_module"]
+    if not digest_module.is_file():
+        raise FileNotFoundError(f"找不到 Preview digest 模块: {digest_module}")
+    package_dir = digest_module.parents[2]
+    demo_dir = template / "skills" / "introduce-unilab-robot" / spec["demo_dir"]
+    if not demo_dir.is_dir():
+        raise FileNotFoundError(f"找不到 Preview demo 目录: {demo_dir}")
+    return PreviewCatalogEntry(
+        slug=slug,
+        distribution=spec["distribution"],
+        import_root=spec["import_root"],
+        package_dir=package_dir,
+        demo_dir=demo_dir,
+    )
+
+
+def read_preview_source_digest(template: Path, slug: str) -> str:
+    import importlib.util
+
+    load_preview_catalog_entry(template, slug)
+    digest_module = template / _PREVIEW_CATALOG[slug]["digest_module"]
+    spec = importlib.util.spec_from_file_location(
+        f"unilab_introduce_{slug.replace('-', '_')}_digest",
+        digest_module,
+    )
+    if spec is None or spec.loader is None:
+        raise ImportError(f"无法加载 Preview digest 模块: {digest_module}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    digest = str(getattr(module, "SOURCE_DIGEST", "") or "").strip()
+    if len(digest) != 64:
+        raise ValueError(f"Preview L1 缺少 SOURCE_DIGEST: {digest_module}")
+    return digest
+
+
+def preview_catalog_dependencies(entry: PreviewCatalogEntry) -> list[str]:
+    return [
+        f"{entry.distribution}>=0.1,<0.2",
+        "unilab-robot-runtime>=0.1,<0.2",
+    ]
 
 
 def load_catalog_entry(template: Path, slug: str) -> ArmCatalogEntry:

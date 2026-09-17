@@ -1,0 +1,17 @@
+"""TODO: 按领域 CAD / 物理图填写 mount 与导轨限位。"""
+from __future__ import annotations
+
+from unilab_robot_runtime.preview.types import ArmMount
+
+# 示例：单臂左 mount；多臂请仿 Hydration HYDRATION_ARM_MOUNTS
+_DEFAULT_BASE = (0.0, 0.0, 0.0)
+ARM_MOUNTS: dict[str, ArmMount] = {
+    "{device_id}": ArmMount("{device_id}", _DEFAULT_BASE, rail_limits=None),
+}
+
+
+def get_mount(arm_id: str) -> ArmMount:
+    mount = ARM_MOUNTS.get(arm_id)
+    if mount is None:
+        raise KeyError(f"unknown arm mount: {arm_id}")
+    return mount

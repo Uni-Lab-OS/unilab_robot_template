@@ -1,0 +1,62 @@
+"""Preview 机械臂设备：L1 运动学 + template PreviewArmCardMixin。"""
+from __future__ import annotations
+
+from unilab_arm_elite_cs66 import EliteCs66PreviewKinematics
+from unilab_robot_runtime.preview import PreviewArmDevice
+from unilabos.registry.decorators import action, device
+
+from {domain_pkg}.devices.{device_id}.{device_id}_arm_card import {class_prefix}ArmCardMixin
+from {domain_pkg}.devices.{device_id}.model import HOME_DEG, SOURCE_DIGEST
+from {domain_pkg}.devices.{device_id}.mounts import get_mount
+from {domain_pkg}.devices.{device_id}.preview_kinematics import {class_prefix}PreviewKinematics
+
+
+@device(
+    id="{device_id}",
+    displayname="{device_title}",
+    category=["robot_arm"],
+    description="Preview 机械臂；关节状态本地仿真，卡片示教走 PointSet v3。",
+    model={
+        "type": "package_static",
+        "provider": "{domain_pkg}.devices.{device_id}.model:build_base",
+        "source_digest": SOURCE_DIGEST,
+        "joint_state_provider": "{domain_pkg}.devices.{device_id}.model:build_kinematics",
+        "joint_state_source_digest": SOURCE_DIGEST,
+    },
+)
+class {class_prefix}ArmDevice({class_prefix}ArmCardMixin, PreviewArmDevice):
+    def __init__(self, device_id: str = "", **kwargs):
+        del kwargs
+        kinematics = EliteCs66PreviewKinematics()
+        mount = get_mount(device_id or "{device_id}")
+        super().__init__(device_id or "{device_id}", kinematics, mount, register=bool(device_id))
+        self._preview_kin = {class_prefix}PreviewKinematics()
+
+    @action(displayname="set_joint", estimate_duration_fixed=2.0)
+    def set_joint(self, joint: int = 1, angle: float = 90.0, duration: float = 1.0):
+        return super().set_joint(joint, angle, duration=duration)
+
+    @action(displayname="home", estimate_duration_fixed=3.0)
+    def home(self, duration: float = 2.0):
+        return super().home(duration=duration)
+
+    def _executor_observation(self):
+        from unilab_robot_runtime.device_card.observation_adapters import observation_from_preview_arm
+        from unilab_robot_runtime.device_card.manual_motion import _quaternion_to_euler_xyz_degrees
+        from scipy.spatial.transform import Rotation
+
+        device_id = self.device_id or "{device_id}"
+
+        def tcp_pose_builder(_device, joints_deg, rail_si):
+            mount = get_mount(device_id)
+            transform = self._preview_kin.fk_tcp(mount, joints_deg, rail_y=float(rail_si or 0.0))
+            orientation = Rotation.from_matrix(transform[:3, :3]).as_quat()
+            return {
+                "frame_ref": "arm_base",
+                "xyz_mm": [float(v) * 1000.0 for v in transform[:3, 3]],
+                "rotation_xyz_deg": list(_quaternion_to_euler_xyz_degrees(orientation.tolist())),
+                "xyz_m": [float(v) for v in transform[:3, 3]],
+                "orientation_xyzw": [float(v) for v in orientation.tolist()],
+            }
+
+        return observation_from_preview_arm(self, device_id=device_id, tcp_pose_builder=tcp_pose_builder)

@@ -197,3 +197,68 @@ class MyRobotDevice:
     payload = json.loads(manifest.read_text(encoding="utf-8"))
     assert payload["deviceTypes"] == ["community.demo_lab.my_robot"]
     assert payload["templateCard"] == "unilab_robot_template/frontend/cards/rail-mounted-arm-card"
+
+
+def test_preview_catalog_dry_run_scaffold_plan(tmp_path: Path) -> None:
+    domain = tmp_path / "demo-lab"
+    (domain / "demo_lab" / "devices").mkdir(parents=True)
+    (domain / "pyproject.toml").write_text(
+        """
+[project]
+dependencies = []
+[tool.setuptools.packages.find]
+include = ["demo_lab*"]
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    report = _run(
+        [
+            "--domain",
+            str(domain),
+            "--device",
+            "elite_preview",
+            "--preview-catalog",
+            "elite-cs66",
+            "--with-preview-scaffold",
+        ]
+    )
+    assert report["_exit"] == 0
+    assert report["mode"] == "catalog-preview"
+    assert report["model"]["type"] == "package_static"
+    assert report["demo_index"] == "docs/demo/README.md"
+    scaffold = report["preview_scaffold"]
+    assert "demo_lab/devices/elite_preview/device.py" in scaffold["planned_files"]
+
+
+def test_preview_catalog_apply_writes_scaffold(tmp_path: Path) -> None:
+    domain = tmp_path / "demo-lab"
+    (domain / "demo_lab" / "devices").mkdir(parents=True)
+    (domain / "pyproject.toml").write_text(
+        """
+[project]
+dependencies = []
+[tool.setuptools.packages.find]
+include = ["demo_lab*"]
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    report = _run(
+        [
+            "--domain",
+            str(domain),
+            "--device",
+            "elite_preview",
+            "--preview-catalog",
+            "elite-cs66",
+            "--with-preview-scaffold",
+            "--apply",
+            "--skip-check",
+        ]
+    )
+    assert report["_exit"] == 0
+    device_py = domain / "demo_lab" / "devices" / "elite_preview" / "device.py"
+    assert device_py.is_file()
+    assert "package_static" in device_py.read_text(encoding="utf-8")
+    assert "unilab-arm-elite-cs66" in (domain / "pyproject.toml").read_text(encoding="utf-8")

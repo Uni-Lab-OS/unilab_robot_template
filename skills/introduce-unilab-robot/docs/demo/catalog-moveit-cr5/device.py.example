@@ -1,0 +1,22 @@
+"""MoveIt catalog 引入示例（cr5）— 由 introduce-unilab-robot 写入 model 块。"""
+from __future__ import annotations
+
+from unilabos.registry.decorators import device
+
+
+@device(
+    id="my_robot",
+    category=["robot_arm"],
+    description="TODO: 领域说明",
+    model={
+        "type": "package_moveit",
+        "provider": "unilab_arm_cr5:build_moveit_model",
+        "source_digest": "<来自 L1 model.yaml source.sha256>",
+    },
+)
+class MyRobotDevice:
+    """TODO: 接 MoveIt commissioning 端口与领域 workflow。"""
+
+    def __init__(self, device_id: str | None = None, config: dict | None = None, **kwargs: object) -> None:
+        self.device_id = device_id or "my_robot"
+        self.config = dict(config or {})

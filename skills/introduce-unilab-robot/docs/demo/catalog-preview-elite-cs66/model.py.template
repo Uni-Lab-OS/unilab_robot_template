@@ -1,0 +1,34 @@
+"""领域 Preview model 薄包装：CS66 URDF 来自 L1 unilab-arm-elite-cs66。"""
+from __future__ import annotations
+
+from unilab_arm_elite_cs66.urdf_providers import (
+    HOME_DEG,
+    ORIGINS,
+    build_base as _build_base,
+    build_kinematics as _build_kinematics,
+    source_digest as _l1_source_digest,
+)
+
+from {domain_pkg}.devices.{device_id}.mounts import get_mount
+
+SOURCE_DIGEST = _l1_source_digest()
+
+
+def build_kinematics(*, device_id, position=None, rotation=None):
+    mount = get_mount(device_id)
+    result = _build_kinematics(
+        device_id=device_id,
+        position=position,
+        rotation=rotation,
+        base_xyz=mount.base_xyz,
+        rail_limits=mount.rail_limits,
+    )
+    return result.__class__(**{**result.__dict__, "source_digest": SOURCE_DIGEST})
+
+
+def build_base(*, member_id):
+    result = _build_base(member_id=member_id)
+    return result.__class__(**{**result.__dict__, "source_digest": SOURCE_DIGEST})
+
+
+__all__ = ["HOME_DEG", "ORIGINS", "SOURCE_DIGEST", "build_base", "build_kinematics"]

@@ -17,10 +17,14 @@ if str(SCRIPT_DIR) not in sys.path:
 from _catalog import (  # noqa: E402
     catalog_dependencies,
     load_catalog_entry,
+    load_preview_catalog_entry,
+    preview_catalog_dependencies,
+    read_preview_source_digest,
     read_source_digest,
     template_root,
 )
 from _card_scaffold import scaffold_domain_card  # noqa: E402
+from _preview_scaffold import scaffold_preview_device  # noqa: E402
 from _domain_layout import detect_domain_package, locate_device  # noqa: E402
 from _patch import (  # noqa: E402
     ensure_pyproject_dependencies,
@@ -36,6 +40,18 @@ def _build_catalog_model(entry_slug: str, template: Path) -> dict[str, Any]:
         "type": "package_moveit",
         "provider": entry.provider,
         "source_digest": read_source_digest(entry.model_yaml),
+    }
+
+
+def _build_preview_model(domain_pkg: str, device_id: str, digest: str) -> dict[str, Any]:
+    provider_base = f"{domain_pkg}.devices.{device_id}.model:build_base"
+    provider_kin = f"{domain_pkg}.devices.{device_id}.model:build_kinematics"
+    return {
+        "type": "package_static",
+        "provider": provider_base,
+        "source_digest": digest,
+        "joint_state_provider": provider_kin,
+        "joint_state_source_digest": digest,
     }
 
 
@@ -118,7 +134,12 @@ def main(argv: list[str] | None = None) -> int:
     mode.add_argument(
         "--catalog",
         metavar="SLUG",
-        help="引用 template catalog 型号（cr5 / cr7）",
+        help="引用 template MoveIt catalog 型号（cr5 / cr7）",
+    )
+    mode.add_argument(
+        "--preview-catalog",
+        metavar="SLUG",
+        help="引用 template Preview catalog 型号（elite-cs66）",
     )
     mode.add_argument(
         "--domain-owned",
@@ -143,7 +164,13 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="生成 frontend/cards/<device>-card manifest（引用 template 卡片）",
     )
+    parser.add_argument(
+        "--with-preview-scaffold",
+        action="store_true",
+        help="preview-catalog：从 docs/demo 模板生成 model/mounts/device/card 骨架",
+    )
     parser.add_argument("--card-title", help="设备卡片标题")
+    parser.add_argument("--device-title", help="Preview @device displayname / 卡片标题默认")
     args = parser.parse_args(argv)
 
     domain = args.domain.resolve()
@@ -152,7 +179,7 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     template = template_root(SCRIPT_DIR)
-    if template is None and args.catalog:
+    if template is None and (args.catalog or args.preview_catalog):
         print(
             json.dumps(
                 {"ok": False, "error": "找不到 unilab_robot_template 根目录"},
@@ -161,24 +188,40 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 2
 
+    demo_index = "docs/demo/README.md"
+
     try:
         domain_pkg = args.domain_pkg or detect_domain_package(domain)
         target = locate_device(domain, args.device, domain_pkg)
+        preview_entry = None
+        entry = None
         if args.catalog:
             assert template is not None
             entry = load_catalog_entry(template, args.catalog)
             model = _build_catalog_model(args.catalog, template)
+        elif args.preview_catalog:
+            assert template is not None
+            preview_entry = load_preview_catalog_entry(template, args.preview_catalog)
+            entry = None
+            digest = read_preview_source_digest(template, args.preview_catalog)
+            model = _build_preview_model(domain_pkg, args.device, digest)
         else:
             model = _build_domain_model(domain, domain_pkg, args.device)
-            entry = None
     except (ValueError, FileNotFoundError) as exc:
         print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False))
         return 2
 
+    mode = "domain-owned"
+    if args.catalog:
+        mode = "catalog-moveit"
+    elif args.preview_catalog:
+        mode = "catalog-preview"
+
     report: dict[str, Any] = {
         "ok": True,
         "dry_run": not args.apply,
-        "mode": "catalog" if args.catalog else "domain-owned",
+        "mode": mode,
+        "demo_index": demo_index,
         "domain": str(domain),
         "domain_pkg": domain_pkg,
         "device_id": args.device,
@@ -192,20 +235,55 @@ def main(argv: list[str] | None = None) -> int:
     if args.catalog and entry is not None:
         report["template_root"] = str(template)
         report["catalog_distribution"] = entry.distribution
+        deps = catalog_dependencies(entry)
+        report["demo_reference"] = "docs/demo/catalog-moveit-cr5"
         if pyproject.is_file():
-            updated, deps_added = ensure_pyproject_dependencies(
-                pyproject, catalog_dependencies(entry)
-            )
+            updated, deps_added = ensure_pyproject_dependencies(pyproject, deps)
             report["dependencies_added"] = deps_added
             if args.apply and deps_added:
                 pyproject.write_text(updated, encoding="utf-8", newline="\n")
         else:
             report["dependencies_added"] = []
             report["warning"] = "未找到 pyproject.toml，请手动添加 catalog 依赖"
+    elif args.preview_catalog and preview_entry is not None:
+        assert template is not None
+        report["template_root"] = str(template)
+        report["catalog_distribution"] = preview_entry.distribution
+        report["demo_reference"] = f"docs/demo/{preview_entry.demo_dir.name}"
+        deps = preview_catalog_dependencies(preview_entry)
+        if pyproject.is_file():
+            updated, deps_added = ensure_pyproject_dependencies(pyproject, deps)
+            report["dependencies_added"] = deps_added
+            if args.apply and deps_added:
+                pyproject.write_text(updated, encoding="utf-8", newline="\n")
+        else:
+            report["dependencies_added"] = []
+            report["warning"] = "未找到 pyproject.toml，请手动添加 preview catalog 依赖"
+    elif args.domain_owned:
+        report["demo_reference"] = "docs/demo/domain-owned-moveit"
 
     device_exists = target.device_py.is_file()
     report["device_exists"] = device_exists
-    if device_exists:
+    use_preview_scaffold = bool(args.preview_catalog and args.with_preview_scaffold and preview_entry)
+    if use_preview_scaffold:
+        device_title = args.device_title or args.card_title or args.device.replace("_", " ").title()
+        preview_report = scaffold_preview_device(
+            domain,
+            domain_pkg=domain_pkg,
+            device_id=args.device,
+            device_title=device_title,
+            demo_dir=preview_entry.demo_dir,
+            apply=args.apply,
+        )
+        report["preview_scaffold"] = preview_report
+        report["device_changed"] = bool(preview_report.get("changed"))
+        if device_exists and args.apply:
+            original = target.device_py.read_text(encoding="utf-8")
+            updated, changed = patch_model_block(original, model)
+            if changed:
+                target.device_py.write_text(updated, encoding="utf-8", newline="\n")
+                report["device_model_patched"] = True
+    elif device_exists:
         original = target.device_py.read_text(encoding="utf-8")
         updated, changed = patch_model_block(original, model)
         report["device_changed"] = changed
@@ -223,8 +301,13 @@ def main(argv: list[str] | None = None) -> int:
             target.device_py.parent.mkdir(parents=True, exist_ok=True)
             target.device_py.write_text(scaffold, encoding="utf-8", newline="\n")
 
-    if args.apply and args.install and args.catalog and entry is not None:
-        code, output = pip_install_editable(entry.package_dir)
+    install_dir = None
+    if args.catalog and entry is not None:
+        install_dir = entry.package_dir
+    elif args.preview_catalog and preview_entry is not None:
+        install_dir = preview_entry.package_dir
+    if args.apply and args.install and install_dir is not None:
+        code, output = pip_install_editable(install_dir)
         report["pip_install"] = {"exit_code": code, "output": output[-2000:]}
         if code != 0:
             report["ok"] = False
@@ -248,7 +331,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.apply and card_report.get("created_files"):
             report["card_scaffolded"] = True
 
-    if args.apply and not args.skip_check:
+    if args.apply and not args.skip_check and not args.preview_catalog:
         code, payload = _run_checker(domain)
         report["checker"] = {"exit_code": code, "payload": payload}
         if code != 0:
