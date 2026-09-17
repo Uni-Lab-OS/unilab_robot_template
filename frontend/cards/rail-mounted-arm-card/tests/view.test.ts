@@ -65,6 +65,15 @@ function snapshotWithRail(): RobotDebugSnapshot {
   }
 }
 
+test('commissioning 无 vision action 时隐藏视觉页签', () => {
+  const html = renderRobotCard({
+    ...baseState(mockRobotDebugSnapshot()),
+    allowedActions: ['read_debug_snapshot', 'home', 'move_to_anchor', 'jog_joint_once']
+  })
+  assert.doesNotMatch(html, /data-tab="vision"/u)
+  assert.match(html, /data-refresh/u)
+})
+
 test('点位页展示选中目标的 TCP、六轴和导轨位置', () => {
   const snapshot = snapshotWithRail()
   const html = renderRobotCard({
@@ -126,4 +135,34 @@ test('未勾选视觉参数时不显示 marker 下拉框', () => {
   })
 
   assert.doesNotMatch(html, /data-marker-ref/u)
+})
+
+test('Preview 模式不展示 MoveIt 手动独占按钮', () => {
+  const html = renderRobotCard({
+    ...baseState(mockRobotDebugSnapshot()),
+    allowedActions: [
+      'read_point_catalog',
+      'set_joint',
+      'record_current_point',
+      'calibrate_camera_extrinsic'
+    ],
+    exclusiveState: 'idle'
+  })
+
+  assert.doesNotMatch(html, /data-exclusive="acquire"/u)
+  assert.doesNotMatch(html, /data-exclusive="release"/u)
+  assert.match(html, /Preview 执行器已就绪/u)
+})
+
+test('Preview 模式未取得独占时仍可记录点位', () => {
+  const snapshot = snapshotWithRail()
+  snapshot.capabilities.pointRecord = true
+  const html = renderRobotCard({
+    ...baseState(snapshot),
+    allowedActions: ['read_point_catalog', 'record_current_point'],
+    exclusiveState: 'idle',
+    tab: 'jog'
+  })
+
+  assert.match(html, /<button class="button teach" data-record-point type="button"\s*>/u)
 })

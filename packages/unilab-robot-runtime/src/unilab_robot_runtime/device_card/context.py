@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 from collections.abc import Callable, Iterable
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 from .types import RobotDebugPointTarget, RobotDebugRail, RobotRailMotionResult
@@ -32,6 +33,8 @@ class ArmCardContext:
     on_record_with_vision: RecordVisionHook | None = None
     max_joint_jog_deg: float | None = None
     include_vision_in_snapshot: bool = False
+    point_set_path: Path | None = None
+    joint_count: int = 6
 
     def resolve_catalog(self, port: object) -> list[Any]:
         if self.catalog_entries is not None:

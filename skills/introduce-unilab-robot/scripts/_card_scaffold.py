@@ -27,41 +27,21 @@ def scaffold_domain_card(
         "version": "0.1.0",
         "title": title,
         "deviceTypes": [device_type],
-        "sdkVersion": "^0.1.0",
         "hostProtocolVersion": 1,
-        "authoringProfile": "web-component-lite-v1",
-        "entry": "src/index.ts",
-        "uiFeatures": ["core", "manual-exclusive"],
-        "permissions": {
-            "state": ["actionBusy", "jointState", "moveit_online", "online"],
-            "actions": [
-                "home",
-                "jog_joint_once",
-                "jog_tcp_once",
-                "move_rail_to_position",
-                "move_to_anchor",
-                "query",
-                "read_debug_snapshot",
-                "record_current_point",
-                "teach_point_from_current",
-            ],
-            "media": [],
-        },
-        "config": {"version": 1, "defaults": {}, "schema": {}},
         "templateCard": "unilab_robot_template/frontend/cards/rail-mounted-arm-card",
     }
     branding = f"""/** {title} branding */
 export const cardBranding = {{
   eyebrow: '{domain_pkg.upper()} · DEVICE COMMISSIONING',
   title: '{title}',
-  subtitle: 'MoveIt · 可选导轨 · 本地 Edge Runtime'
+  subtitle: 'Preview / MoveIt 自适应 · 本地 Edge Runtime'
 }}
 """
     readme = f"""# {title}
 
 Canonical 实现：[`unilab_robot_template/frontend/cards/rail-mounted-arm-card`](../../../../unilab_robot_template/frontend/cards/rail-mounted-arm-card)
 
-后端 mixin：`unilab_robot_runtime.device_card.RailMountedArmCardMixin`
+一张 template 卡按 Graph 设备自动切换 Preview 或 MoveIt UI；MoveIt 设备后端 mixin：`unilab_robot_runtime.device_card.RailMountedArmCardMixin`
 """
 
     planned: list[str] = []

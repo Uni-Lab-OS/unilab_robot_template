@@ -1,7 +1,7 @@
 /** SZLab Mixer 机械臂设备卡片（Device Card）的运行时值模型。 */
 
 export type ExclusiveState = 'idle' | 'busy' | 'exclusive'
-export type CardTab = 'points' | 'jog' | 'vision'
+export type CardTab = 'points' | 'jog' | 'vision' | 'calibration'
 
 export interface VisionMarker {
   warehouseRef: string
@@ -47,6 +47,20 @@ export interface TcpPose {
   rotationXyzDeg: number[]
 }
 
+export interface PreviewCalibrationReviewAssets {
+  slotReviewSvg: string
+  wellReviewSvg: string
+}
+
+export interface PreviewCalibrationInfo {
+  version: string
+  digest: string
+  status: string
+  humanConfirmed: boolean
+  qualification: string
+  reviewAssets: PreviewCalibrationReviewAssets | null
+}
+
 export interface RobotDebugSnapshot {
   pointSetRevision: string
   source: string
@@ -66,8 +80,10 @@ export interface RobotDebugSnapshot {
     tcpJog: boolean
     railMove: boolean
     compositePointRecord: boolean
+    pointRecord?: boolean
   }
   vision: VisionSnapshot
+  calibration?: PreviewCalibrationInfo | null
 }
 
 /** 把动作（Action）结果中的未知 JSON 值收窄为卡片快照。 */
@@ -90,6 +106,25 @@ export function parseRobotDebugSnapshot(value: unknown): RobotDebugSnapshot | nu
     .filter((item): item is JointPosition => item !== null)
   if (!stringValue(source.point_set_revision) || pointTargets.length === 0) {
     return null
+  }
+  const calibrationRaw = source.calibration
+  let calibration: RobotDebugSnapshot['calibration'] = null
+  if (calibrationRaw && typeof calibrationRaw === 'object') {
+    const item = asRecord(calibrationRaw)
+    const reviewAssets = asRecord(item.review_assets)
+    calibration = {
+      version: stringValue(item.version),
+      digest: stringValue(item.digest),
+      status: stringValue(item.status) || 'unknown',
+      humanConfirmed: item.human_confirmed === true,
+      qualification: stringValue(item.qualification),
+      reviewAssets: stringValue(reviewAssets.slot_review_svg) || stringValue(reviewAssets.well_review_svg)
+        ? {
+            slotReviewSvg: stringValue(reviewAssets.slot_review_svg),
+            wellReviewSvg: stringValue(reviewAssets.well_review_svg)
+          }
+        : null
+    }
   }
   return {
     pointSetRevision: stringValue(source.point_set_revision),
@@ -119,10 +154,30 @@ export function parseRobotDebugSnapshot(value: unknown): RobotDebugSnapshot | nu
       jointJog: capabilities.joint_jog === true,
       tcpJog: capabilities.tcp_jog === true,
       railMove: capabilities.rail_move === true,
-      compositePointRecord: capabilities.composite_point_record === true
+      compositePointRecord: capabilities.composite_point_record === true,
+      pointRecord: capabilities.point_record === true || capabilities.composite_point_record === true
     },
-    vision: parseVisionSnapshot(source.vision)
+    vision: parseVisionSnapshot(source.vision),
+    calibration
   }
+}
+
+const PREVIEW_JOINT_COUNT = 6
+
+/** 从 jointState SSE 解析 Preview 模式下的六轴读数（弧度转角度）。 */
+export function parsePreviewJointPositions(
+  runtimeState: Record<string, unknown>,
+  jointCount = PREVIEW_JOINT_COUNT
+): number[] {
+  const jointState = asRecord(runtimeState.jointState)
+  if (jointState.stale === true) return []
+  const values = asRecord(jointState.jointStates)
+  const entries = Object.entries(values)
+    .map(([ref, value]) => ({ ref, radians: finiteNumber(value) }))
+    .filter((item): item is { ref: string; radians: number } => item.radians !== null)
+    .sort((left, right) => left.ref.localeCompare(right.ref))
+  if (entries.length === 0) return []
+  return entries.slice(0, jointCount).map((item) => item.radians * 180 / Math.PI)
 }
 
 /** 用通用设备遥测（DeviceTelemetry）SSE 的最新帧覆盖关节读数。 */

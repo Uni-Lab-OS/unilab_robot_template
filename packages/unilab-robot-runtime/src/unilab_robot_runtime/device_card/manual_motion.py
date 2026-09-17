@@ -76,7 +76,10 @@ def read_debug_snapshot(binding: object, context: ArmCardContext) -> RobotDebugS
             "rail_move": _rail_move_capable(port, rail, rail_axis, context),
             "composite_point_record": callable(
                 getattr(port, "revise_authored_point_target", None)
-            ),
+            )
+            or context.point_set_path is not None,
+            "point_record": context.point_set_path is not None
+            or callable(getattr(port, "revise_authored_joint_target", None)),
         },
         "rail": rail,
         "velocity_limit": float(port.commissioning_velocity_limit),
@@ -167,11 +170,34 @@ def jog_tcp_once(
 
 
 def teach_point_from_current(
-    binding: object,
+    binding: object | None,
+    context: ArmCardContext | None = None,
     *,
     target_ref: str,
     confirm: bool,
+    observation: object | None = None,
 ) -> RobotTeachPointResult:
+    if context is not None and context.point_set_path is not None:
+        from .observation_adapters import observation_from_commissioning_port
+        from .observation_types import ExecutorObservation
+        from .point_record_service import teach_joint_target_from_observation
+
+        obs: ExecutorObservation
+        if observation is not None:
+            obs = observation  # type: ignore[assignment]
+        elif binding is not None:
+            obs = observation_from_commissioning_port(_port(binding))
+        else:
+            raise RuntimeError("示教落盘缺少执行器观测")
+        return teach_joint_target_from_observation(
+            obs,
+            point_set_path=context.point_set_path,
+            target_ref=target_ref,
+            joint_count=context.joint_count,
+            confirm=confirm,
+        )
+    if binding is None:
+        raise RuntimeError("MoveIt 调试绑定未就绪")
     if confirm is not True:
         raise ValueError("点位设置必须显式确认")
     normalized = str(target_ref).strip()
@@ -217,7 +243,7 @@ def move_rail_to_position(
 
 
 def record_current_point(
-    binding: object,
+    binding: object | None,
     context: ArmCardContext,
     *,
     target_ref: str,
@@ -225,37 +251,63 @@ def record_current_point(
     confirm: bool,
     include_vision: bool = False,
     marker_ref: str | None = None,
+    observation: object | None = None,
 ) -> RobotTeachPointResult:
     if confirm is not True:
         raise ValueError("记录当前位置必须显式确认")
     normalized = str(target_ref).strip()
     if not normalized:
         raise ValueError("记录当前位置必须包含稳定 target_ref")
-    port = _port(binding)
-    snapshot = port.commissioning_snapshot()
-    if (
-        not snapshot.is_fresh()
-        or not snapshot.online
-        or not snapshot.idle
-        or snapshot.execution_fenced
-        or not snapshot.joint_positions
-    ):
-        raise RuntimeError("机械臂快照离线、忙碌、过期、不完整或存在 Fence")
-    reviser = getattr(port, "revise_authored_point_target", None)
-    if not callable(reviser):
-        raise RuntimeError("当前调试端口不支持 PointSet v3 复合点位写回")
-    result = reviser(
-        normalized,
-        tuple(item.position_si for item in snapshot.joint_positions),
-        getattr(port, "rail_position_si", None),
-        expected_revision=expected_revision,
-    )
+    if context.point_set_path is not None:
+        from .observation_adapters import observation_from_commissioning_port
+        from .observation_types import ExecutorObservation
+        from .point_record_service import teach_joint_target_from_observation
+
+        obs: ExecutorObservation
+        if observation is not None:
+            obs = observation  # type: ignore[assignment]
+        elif binding is not None:
+            obs = observation_from_commissioning_port(_port(binding))
+        else:
+            raise RuntimeError("记录落盘缺少执行器观测")
+        result = teach_joint_target_from_observation(
+            obs,
+            point_set_path=context.point_set_path,
+            target_ref=normalized,
+            joint_count=context.joint_count,
+            confirm=confirm,
+            expected_revision=expected_revision,
+            rail_position_si=obs.get("rail_position_si"),
+        )
+    else:
+        if binding is None:
+            raise RuntimeError("MoveIt 调试绑定未就绪")
+        port = _port(binding)
+        snapshot = port.commissioning_snapshot()
+        if (
+            not snapshot.is_fresh()
+            or not snapshot.online
+            or not snapshot.idle
+            or snapshot.execution_fenced
+            or not snapshot.joint_positions
+        ):
+            raise RuntimeError("机械臂快照离线、忙碌、过期、不完整或存在 Fence")
+        reviser = getattr(port, "revise_authored_point_target", None)
+        if not callable(reviser):
+            raise RuntimeError("当前调试端口不支持 PointSet v3 复合点位写回")
+        legacy = reviser(
+            normalized,
+            tuple(item.position_si for item in snapshot.joint_positions),
+            getattr(port, "rail_position_si", None),
+            expected_revision=expected_revision,
+        )
+        result = {
+            "target_ref": str(legacy["target_ref"]),
+            "target_revision": str(legacy["target_revision"]),
+        }
     if include_vision and context.on_record_with_vision is not None:
         context.on_record_with_vision(normalized, marker_ref)
-    return {
-        "target_ref": str(result["target_ref"]),
-        "target_revision": str(result["target_revision"]),
-    }
+    return result
 
 
 def _project_target(entry: Any, context: ArmCardContext) -> RobotDebugPointTarget:

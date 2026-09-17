@@ -155,6 +155,25 @@ class PreviewArmDevice:
         q[joint - 1] = angle
         return self.moveJ(*q, duration=duration)
 
+    def jog_tcp_once(
+        self,
+        axis: str,
+        direction: str,
+        step: float = 1.0,
+        frame_ref: str = "arm_base",
+        duration: float = 1.0,
+    ) -> dict[str, object]:
+        from .tcp_jog import jog_tcp_once_preview
+
+        return jog_tcp_once_preview(
+            self,
+            axis=axis,
+            direction=direction,
+            step=step,
+            frame_ref=frame_ref,
+            duration=duration,
+        )
+
     def home(self, duration: float = 2.0) -> MotionResult:
         return self.moveJ(*self._kinematics.home_deg, duration=duration)
 

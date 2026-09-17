@@ -1,5 +1,20 @@
 # 卡片规格
 
+## 双模式（Preview / commissioning）
+
+同一张 template 卡服务 Preview 臂、MoveIt 臂与 pTLC 式调试：
+
+| 模式 | 判定 | UI |
+|---|---|---|
+| `preview` | Host 注入的 `allowedActions` **不含** `read_debug_snapshot` | `read_preview_snapshot` 加载库位目录；Jog（`set_joint`）/ MoveJ / home / stop / pick / place |
+| `commissioning` | **含** `read_debug_snapshot` | MoveIt/pTLC 调试台；Jog / 视觉等按 `allowedActions` 再隐藏 |
+
+- template `card.manifest.json` 的 `permissions.actions` 为 MoveIt + Preview **并集**；Host 按 Graph 设备 `@action` 收窄后写入 `getContext().config.allowedActions`。
+- 领域仓只需 `templateCard` 引用 + 可选 `branding.ts` overlay；**不写**模式字段。
+- Preview 设备**不需要** `RailMountedArmCardMixin`；MoveIt 设备仍需要。
+
+## SZLab MoveIt 实例
+
 - 设备类型：`community.szlab_poly_studio.szlab_mixer_robot`
 - 调试实例：`szlab_mixer_robot`
 - Host Protocol：`1`

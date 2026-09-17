@@ -17,13 +17,21 @@
       "home",
       "jog_joint_once",
       "jog_tcp_once",
+      "moveJ",
       "move_rail_to_position",
       "move_to_anchor",
+      "pick",
+      "place",
       "query",
       "record_current_point",
       "record_marker",
+      "read_point_catalog",
       "read_debug_snapshot",
-      "teach_point_from_current"
+      "read_preview_snapshot",
+      "set_joint",
+      "stop",
+      "teach_point_from_current",
+      "transfer"
     ],
     "media": []
   },
@@ -46,6 +54,11 @@
             "title": {"type": "string"},
             "subtitle": {"type": "string"}
           }
+        },
+        "runtimeMode": {
+          "type": "string",
+          "enum": ["preview", "commissioning"],
+          "description": "仅 mock/测试；live 模式由 Host allowedActions 推断。"
         }
       }
     }

@@ -14,9 +14,11 @@ from .types import (
 
 if TYPE_CHECKING:
     from .actions_mixin import RailMountedArmCardMixin, RobotQueryResult
+    from .preview_card_mixin import PreviewArmCardMixin
 
 __all__ = [
     "ArmCardContext",
+    "PreviewArmCardMixin",
     "RailMountedArmCardMixin",
     "RobotDebugSnapshot",
     "RobotManualMotionResult",
@@ -31,4 +33,8 @@ def __getattr__(name: str) -> object:
         from .actions_mixin import RailMountedArmCardMixin, RobotQueryResult
 
         return {"RailMountedArmCardMixin": RailMountedArmCardMixin, "RobotQueryResult": RobotQueryResult}[name]
+    if name == "PreviewArmCardMixin":
+        from .preview_card_mixin import PreviewArmCardMixin
+
+        return PreviewArmCardMixin
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

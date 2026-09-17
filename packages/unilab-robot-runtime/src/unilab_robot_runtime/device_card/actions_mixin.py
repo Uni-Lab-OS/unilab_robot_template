@@ -72,6 +72,10 @@ class RailMountedArmCardMixin:
     def move_to_anchor(self, point_id: str) -> None:
         self._execute_point_set_target(point_id, command_kind="anchor")
 
+    @action(description="读取 PointSet 目录与执行器观测", always_free=True)
+    def read_point_catalog(self) -> RobotDebugSnapshot:
+        return self.read_debug_snapshot()
+
     @action(description="读取机械臂调试卡片快照", always_free=True)
     def read_debug_snapshot(self) -> RobotDebugSnapshot:
         return manual_motion.read_debug_snapshot(
@@ -123,6 +127,7 @@ class RailMountedArmCardMixin:
     ) -> RobotTeachPointResult:
         return manual_motion.teach_point_from_current(
             self._card_binding(),
+            self._arm_card_context(),
             target_ref=target_ref,
             confirm=confirm,
         )

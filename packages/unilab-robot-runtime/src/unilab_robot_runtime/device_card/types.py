@@ -35,6 +35,7 @@ class RobotDebugCapabilities(TypedDict):
     controlled_stop: bool
     rail_move: bool
     composite_point_record: bool
+    point_record: bool
 
 
 class RobotDebugRail(TypedDict):

@@ -1,6 +1,8 @@
-# SZLab Mixer CR7 调试卡片
+# 导轨 + 机械臂 template 卡片
 
-该设备卡片只属于 SZLab Mixer，用于本地后端（Local Backend）机械臂与独立导轨调试。
+一张 Web Component 同时服务 **Preview** 机械臂与 **MoveIt/pTLC commissioning** 调试：Host 把收窄后的 `allowedActions` 注入 `getContext().config`，卡片自动切换 UI。领域仓通过 `templateCard: unilab_robot_template/frontend/cards/rail-mounted-arm-card` 引用，只需 manifest + 可选 branding overlay。
+
+SZLab Mixer CR7 是 commissioning 模式的参考实例，用于本地后端（Local Backend）机械臂与独立导轨调试。
 
 - 设备属性与关节状态（JointState）通过通用设备遥测（DeviceTelemetry）SSE
   进入 Host Bridge；卡片不自行联网。

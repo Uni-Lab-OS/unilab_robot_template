@@ -68,6 +68,7 @@ class RuntimeRequirements:
     payload_planning_scene_port: bool = False
     rail_axis_port: bool = False
     preview_kinematics: bool = False
+    preview_rail_axis_port: bool = False
 
 
 @dataclass(frozen=True)
@@ -91,6 +92,8 @@ class RuntimeDependencies:
     simulation_holding_payload: bool = False
     preview_kinematics_impl: Any = None
     preview_arm_mount: Any = None
+    preview_arm_device: Any = None
+    preview_segment_executor: Any = None
 
 
 def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
@@ -126,9 +129,10 @@ def runtime_requirements(manifest: RuntimeManifest) -> RuntimeRequirements:
             tool_changer_port=manifest.profile.mode is not DeploymentMode.SIMULATION,
         )
     if backend is BackendKind.PREVIEW:
-        if manifest.rail is not None:
-            raise ValueError("Preview runtime 暂不支持 RailMountedArm WorkCell")
-        return RuntimeRequirements(preview_kinematics=True)
+        return RuntimeRequirements(
+            preview_kinematics=True,
+            preview_rail_axis_port=manifest.rail is not None,
+        )
     raise ValueError(f"不支持的 RobotExecutionBackend: {backend}")
 
 
@@ -149,6 +153,11 @@ def create_runtime(
             raise ValueError("PLC runtime 必须注入变量端口")
         return _create_plc_runtime(manifest, dependencies.variable_port, runtime_root)
     if requirements.preview_kinematics:
+        if (
+            requirements.preview_rail_axis_port
+            and dependencies.rail_axis_port is None
+        ):
+            raise ValueError("Preview RailMountedArm 必须注入 RailAxisPort")
         return _create_preview_runtime(manifest, dependencies, runtime_root)
     if requirements.end_effector_port and dependencies.end_effector_port is None:
         raise ValueError("非仿真 PointSet runtime 必须注入独立 EndEffectorPort")
@@ -181,7 +190,7 @@ def _create_preview_runtime(
     dependencies: RuntimeDependencies,
     runtime_root: Path,
 ) -> RuntimeBinding:
-    """装配 L0 PreviewArmDevice + L1 PreviewKinematics。"""
+    """装配 L0 PreviewArmDevice + 可选 AccessMotion / Rail WorkCell。"""
 
     del runtime_root
     if manifest.profile.mode is not DeploymentMode.SIMULATION:
@@ -195,14 +204,23 @@ def _create_preview_runtime(
     if not device_id:
         device_id = next(iter(manifest.profile.endpoint_ids))
     from .preview.preview_arm_device import PreviewArmDevice
+
+    device = dependencies.preview_arm_device
+    if device is None:
+        device = PreviewArmDevice(
+            device_id,
+            dependencies.preview_kinematics_impl,
+            mount,
+            register=False,
+        )
+    if dependencies.preview_segment_executor is not None:
+        return _create_preview_command_runtime(
+            manifest,
+            dependencies,
+            device,
+        )
     from .preview.runtime_binding import PreviewRuntime, PreviewRuntimeBinding
 
-    device = PreviewArmDevice(
-        device_id,
-        dependencies.preview_kinematics_impl,
-        mount,
-        register=False,
-    )
     preview_binding = PreviewRuntimeBinding(
         runtime=PreviewRuntime(device=device),
         preview_device=device,
@@ -210,6 +228,59 @@ def _create_preview_runtime(
     return bind_runtime(
         preview_binding.runtime,
         manifest.profile.endpoint_ids,
+        owner_id=manifest.deployment_id,
+        rail_mounted=False,
+        deployment_mode=manifest.profile.mode,
+    )
+
+
+def _create_preview_command_runtime(
+    manifest: RuntimeManifest,
+    dependencies: RuntimeDependencies,
+    device: Any,
+) -> RuntimeBinding:
+    """装配可执行 RobotCommand 的 Preview AccessMotion / WorkCell。"""
+
+    from .preview.arm_execution_backend import PreviewArmExecutionBackend
+    from .preview.rail_workcell_runtime import PreviewRailWorkCellRuntime
+
+    tool_context = _load_tool_context(manifest)
+    end_effector, tool_changer = _manipulation_ports(
+        manifest,
+        dependencies,
+        tool_context,
+    )
+    arm_backend = PreviewArmExecutionBackend(
+        device=device,
+        segment_executor=dependencies.preview_segment_executor,
+        endpoint_ids=manifest.arm.endpoint_ids,
+    )
+    access_motion = AccessMotionBackend(
+        arm_backend=arm_backend,
+        end_effector=end_effector,
+        tool_changer=tool_changer,
+        expected_tool_context=tool_context,
+        payload_planning_scene=dependencies.payload_planning_scene_port,
+        require_payload_collision=False,
+    )
+    if manifest.rail is not None:
+        runtime = PreviewRailWorkCellRuntime(
+            arm_runtime=access_motion,
+            rail_port=dependencies.rail_axis_port,
+        )
+        endpoint_ids = arm_backend.endpoint_ids.union(
+            dependencies.rail_axis_port.endpoint_ids
+        )
+        return bind_runtime(
+            runtime,
+            endpoint_ids,
+            owner_id=manifest.deployment_id,
+            rail_mounted=True,
+            deployment_mode=manifest.profile.mode,
+        )
+    return bind_runtime(
+        access_motion,
+        arm_backend.endpoint_ids,
         owner_id=manifest.deployment_id,
         rail_mounted=False,
         deployment_mode=manifest.profile.mode,

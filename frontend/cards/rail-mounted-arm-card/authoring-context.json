@@ -5,8 +5,29 @@
   "title": "SZLab Mixer CR7",
   "actions": [
     {
+      "action": "read_point_catalog",
+      "label": "读取 PointSet 目录与执行器观测",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "normal"
+    },
+    {
       "action": "read_debug_snapshot",
       "label": "读取机械臂调试卡片快照",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "normal"
+    },
+    {
+      "action": "read_preview_snapshot",
+      "label": "读取 Preview 点位包与关节状态",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "normal"
+    },
+    {
+      "action": "query",
+      "label": "读取机器人状态",
       "inputSchema": {},
       "outputSchema": {},
       "riskLevel": "normal"
@@ -72,6 +93,20 @@
       "riskLevel": "dangerous"
     },
     {
+      "action": "teach_point_from_current",
+      "label": "从当前姿态示教点位",
+      "inputSchema": {
+        "type": "object",
+        "required": ["target_ref", "confirm"],
+        "properties": {
+          "target_ref": {"type": "string"},
+          "confirm": {"type": "boolean", "const": true}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
       "action": "record_current_point",
       "label": "记录当前机械臂与可选导轨位置",
       "inputSchema": {
@@ -121,6 +156,67 @@
           "confirm": {"type": "boolean", "const": true}
         }
       },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "moveJ",
+      "label": "六轴关节 MoveJ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "j1": {"type": "number"},
+          "j2": {"type": "number"},
+          "j3": {"type": "number"},
+          "j4": {"type": "number"},
+          "j5": {"type": "number"},
+          "j6": {"type": "number"},
+          "duration": {"type": "number", "minimum": 0.1}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "set_joint",
+      "label": "单轴关节移动",
+      "inputSchema": {
+        "type": "object",
+        "required": ["joint", "angle"],
+        "properties": {
+          "joint": {"type": "integer", "minimum": 1, "maximum": 6},
+          "angle": {"type": "number"},
+          "duration": {"type": "number", "minimum": 0.1}
+        }
+      },
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "stop",
+      "label": "停止",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "emergency"
+    },
+    {
+      "action": "pick",
+      "label": "抓取",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "place",
+      "label": "放置",
+      "inputSchema": {},
+      "outputSchema": {},
+      "riskLevel": "dangerous"
+    },
+    {
+      "action": "transfer",
+      "label": "转移",
+      "inputSchema": {},
       "outputSchema": {},
       "riskLevel": "dangerous"
     }

@@ -5,12 +5,21 @@ import {
   defaultMarkerRefForWarehouse,
   mergeJointState,
   mockRobotDebugSnapshot,
-  parseRobotDebugSnapshot,
   type CardTab,
   type ExclusiveState,
   type RobotDebugSnapshot
 } from './model'
+import { parsePointCatalogSnapshot } from './cardView'
+import {
+  canCallAction,
+  readAllowedActions,
+  readAllowedState,
+  resolveCatalogReadAction,
+  usesMoveItExclusiveJog
+} from './runtimeMode'
 import { renderRobotCard } from './view'
+
+const PREVIEW_HOME_JOINTS = [90, -65, -70, -135, 90, 0]
 
 /** 导轨 + 机械臂调试设备卡片（Device Card）Web Component。 */
 export default class RailMountedArmCardElement extends HTMLElement {
@@ -29,6 +38,9 @@ export default class RailMountedArmCardElement extends HTMLElement {
   private jointStep = 1
   private tcpStep = 2
   private tcpFrame: 'arm_base' | 'tool' = 'arm_base'
+  private allowedActions: string[] | undefined
+  private allowedState: string[] = []
+  private previewJointTargets = [...PREVIEW_HOME_JOINTS]
 
   /** 连接 Host Bridge；live 模式只订阅状态，不隐式派发设备动作。 */
   async connectedCallback(): Promise<void> {
@@ -37,22 +49,29 @@ export default class RailMountedArmCardElement extends HTMLElement {
     try {
       const context = await bridge.getContext()
       this.state = context.state
-      if (context.mode === 'mock') this.acceptSnapshot(mockRobotDebugSnapshot())
-      else this.message = '调试快照尚未读取；请点击“刷新”显式读取。'
-      this.render()
-      try {
-        this.exclusiveState = (await bridge.readManualExclusive()).state
-      } catch (error) {
-        this.message = errorMessage(error, '手动独占状态不可用。')
+      this.allowedActions = readAllowedActions(context.config)
+      this.allowedState = readAllowedState(context.config)
+      if (context.mode === 'mock') {
+        this.acceptSnapshot(mockRobotDebugSnapshot())
+      } else if (resolveCatalogReadAction(this.allowedActions)) {
+        this.message = '点击「刷新」加载 PointSet 目录与关节状态。'
+      } else {
+        this.message = '机械臂卡片已就绪；当前未授权目录读取动作。'
       }
-      this.unsubscribe = bridge.subscribeState(
-        ['actionBusy', 'jointState', 'moveit_online', 'online'],
-        (state) => {
-          this.state = state
-          this.snapshot = mergeJointState(this.snapshot, state)
-          this.render()
+      this.render()
+      if (usesMoveItExclusiveJog(this.allowedActions)) {
+        try {
+          this.exclusiveState = (await bridge.readManualExclusive()).state
+        } catch (error) {
+          this.message = errorMessage(error, '手动独占状态不可用。')
         }
-      )
+      }
+      const stateKeys = this.subscriptionKeys()
+      this.unsubscribe = bridge.subscribeState(stateKeys, (state) => {
+        this.state = state
+        this.snapshot = mergeJointState(this.snapshot, state)
+        this.render()
+      })
       this.render()
     } catch (error) {
       this.message = `卡片宿主连接失败：${errorMessage(error, '未知错误')}`
@@ -66,6 +85,11 @@ export default class RailMountedArmCardElement extends HTMLElement {
     this.unsubscribe = null
   }
 
+  private subscriptionKeys(): string[] {
+    if (this.allowedState.length > 0) return [...this.allowedState]
+    return ['actionBusy', 'jointState', 'moveit_online', 'online']
+  }
+
   /** 渲染当前完整状态并绑定只通过 Host Bridge 的交互。 */
   private render(): void {
     this.captureJogSettings()
@@ -73,6 +97,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
     const pointScrollTop = this.root.querySelector<HTMLElement>('.point-list')?.scrollTop ?? 0
     this.root.innerHTML = renderRobotCard({
       actionBusy: Object.values(asRecord(this.state.actionBusy)).some(Boolean),
+      allowedActions: this.allowedActions,
       exclusiveState: this.exclusiveState,
       hostOnline: this.state.online === true,
       includeVisionOnRecord: this.includeVisionOnRecord,
@@ -88,7 +113,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
     })
     const content = this.root.querySelector<HTMLElement>('.content')
     if (content) content.scrollTop = scrollTop
-    this.bindInteractions()
+    this.bindCardInteractions()
     const pointList = this.root.querySelector<HTMLElement>('.point-list')
     if (pointList) {
       if (this.alignSelectedPoint) {
@@ -108,8 +133,8 @@ export default class RailMountedArmCardElement extends HTMLElement {
     }
   }
 
-  /** 绑定当前渲染树的点位、Jog、示教和手动独占操作。 */
-  private bindInteractions(): void {
+  /** 绑定能力驱动单壳交互。 */
+  private bindCardInteractions(): void {
     this.root.querySelector('[data-refresh]')
       ?.addEventListener('click', () => void this.refreshSnapshot())
     this.root.querySelector('[data-exclusive="acquire"]')
@@ -119,9 +144,14 @@ export default class RailMountedArmCardElement extends HTMLElement {
     this.root.querySelectorAll<HTMLElement>('[data-tab]').forEach((element) => {
       element.addEventListener('click', () => {
         const value = element.dataset.tab
-        this.tab = value === 'jog' || value === 'vision' ? value : 'points'
+        this.tab = value === 'jog' || value === 'vision' || value === 'calibration'
+          ? value
+          : 'points'
         this.render()
       })
+    })
+    this.root.querySelectorAll<HTMLElement>('[data-preview-jog-joint]').forEach((element) => {
+      element.addEventListener('click', () => void this.previewJogJoint(element))
     })
     this.root.querySelectorAll<HTMLElement>('[data-point-target]').forEach((element) => {
       element.addEventListener('click', () => {
@@ -134,9 +164,15 @@ export default class RailMountedArmCardElement extends HTMLElement {
     this.root.querySelector('[data-move-to-point]')
       ?.addEventListener('click', () => void this.moveToSelectedPoint())
     this.root.querySelector('[data-home]')
-      ?.addEventListener('click', () => void this.performMotion(
-        'home', {}, '已回到 PointSet 原点。'
-      ))
+      ?.addEventListener('click', () => {
+        if (usesMoveItExclusiveJog(this.allowedActions)) {
+          void this.performMotion('home', {}, '已回到 PointSet 原点。')
+        } else {
+          void this.performDirectAction('home', {}, '已回原点。')
+        }
+      })
+    this.root.querySelector('[data-stop]')
+      ?.addEventListener('click', () => void this.performDirectAction('stop', {}, '已发送停止。'))
     this.root.querySelectorAll<HTMLElement>('[data-jog-joint]').forEach((element) => {
       element.addEventListener('click', () => void this.jogJoint(element))
     })
@@ -165,6 +201,56 @@ export default class RailMountedArmCardElement extends HTMLElement {
       ?.addEventListener('change', () => this.captureJogSettings())
   }
 
+  private async previewJogJoint(element: HTMLElement): Promise<void> {
+    this.captureJogSettings()
+    const joint = Number(element.dataset.previewJogJoint)
+    const direction = element.dataset.direction === 'negative' ? -1 : 1
+    if (!Number.isFinite(joint) || joint < 1 || joint > 6) return
+    const current = this.snapshot?.jointPositions[joint - 1]?.positionDeg ?? 0
+    const angle = current + direction * this.jointStep
+    await this.performDirectAction(
+      'set_joint',
+      { joint, angle, duration: 1.0 },
+      `J${joint} Jog 已完成。`
+    )
+  }
+
+  private async performDirectAction(
+    action: string,
+    params: Record<string, unknown>,
+    successMessage: string
+  ): Promise<void> {
+    if (!canCallAction(this.allowedActions, action)) {
+      this.message = '动作未在卡片 manifest 中授权。'
+      this.render()
+      return
+    }
+    const bridge = getDeviceCardBridge()
+    const restoreExclusive = this.exclusiveState === 'exclusive'
+    try {
+      this.actionPending = true
+      this.message = '正在执行…'
+      this.render()
+      const released = await bridge.releaseManualExclusive()
+      this.exclusiveState = released.state
+      const run = await bridge.callAction(action, params)
+      if (run.status !== 'DONE') throw new Error(run.error ?? `动作状态：${run.status}`)
+      if (resolveCatalogReadAction(this.allowedActions)) {
+        await this.refreshSnapshot(successMessage)
+        return
+      }
+      this.message = successMessage
+    } catch (error) {
+      this.message = errorMessage(error, '机械臂动作失败。')
+    } finally {
+      if (restoreExclusive) {
+        await this.restoreManualExclusiveAfterAction()
+      }
+      this.actionPending = false
+      this.render()
+    }
+  }
+
   /** 把 Jog 步长和坐标系收进卡片状态，避免 innerHTML 重绘写回默认值。 */
   private captureJogSettings(): void {
     const joint = Number(this.root.querySelector<HTMLInputElement>('[data-joint-step]')?.value)
@@ -177,19 +263,27 @@ export default class RailMountedArmCardElement extends HTMLElement {
 
   /** 读取领域设备公开的只读调试快照。 */
   private async refreshSnapshot(finalMessage?: string): Promise<void> {
+    const action = resolveCatalogReadAction(this.allowedActions)
+    if (!action) {
+      this.message = '点位目录读取未授权。'
+      this.render()
+      return
+    }
     const bridge = getDeviceCardBridge()
     try {
-      this.message = '正在同步 PointSet 与 MoveIt 状态…'
+      this.message = '正在读取 PointSet 目录与执行器状态…'
       this.render()
-      const run = await bridge.callAction('read_debug_snapshot', {})
+      const released = await bridge.releaseManualExclusive()
+      this.exclusiveState = released.state
+      const run = await bridge.callAction(action, {})
       if (run.status !== 'DONE') throw new Error(run.error ?? `动作状态：${run.status}`)
-      const snapshot = parseRobotDebugSnapshot(run.result)
-      if (!snapshot) throw new Error('调试快照合同无效')
+      const snapshot = parsePointCatalogSnapshot(run.result)
+      if (!snapshot) throw new Error('点位目录合同无效')
       this.acceptSnapshot(snapshot)
       this.message = finalMessage
         ?? `已读取 ${snapshot.pointTargets.length} 个 PointSet 目标。`
     } catch (error) {
-      this.message = errorMessage(error, '调试快照读取失败。')
+      this.message = errorMessage(error, '点位目录读取失败。')
     }
     this.render()
   }
@@ -259,12 +353,18 @@ export default class RailMountedArmCardElement extends HTMLElement {
   private async jogTcp(element: HTMLElement): Promise<void> {
     this.captureJogSettings()
     const axis = element.dataset.jogTcp ?? ''
-    await this.performMotion('jog_tcp_once', {
+    const params = {
       axis,
       direction: element.dataset.direction ?? 'positive',
       frame_ref: this.tcpFrame,
       step: this.tcpStep
-    }, 'TCP Jog 已完成。')
+    }
+    const success = 'TCP Jog 已完成。'
+    if (usesMoveItExclusiveJog(this.allowedActions)) {
+      await this.performMotion('jog_tcp_once', params, success)
+    } else {
+      await this.performDirectAction('jog_tcp_once', params, success)
+    }
   }
 
   /** 执行一次绝对导轨位置移动。 */
@@ -300,8 +400,8 @@ export default class RailMountedArmCardElement extends HTMLElement {
   private async recordCurrentPoint(): Promise<void> {
     const selected = this.selectedPoint()
     if (!selected?.editable) return
-    if (this.snapshot?.capabilities.compositePointRecord !== true) {
-      this.message = '当前调试端口不支持 PointSet v3 点位记录。'
+    if (this.snapshot?.capabilities.pointRecord !== true) {
+      this.message = '当前执行器不支持 PointSet v3 点位记录。'
       this.render()
       return
     }
@@ -320,36 +420,47 @@ export default class RailMountedArmCardElement extends HTMLElement {
       params.include_vision = true
       if (this.selectedMarkerRef) params.marker_ref = this.selectedMarkerRef
     }
-    await this.performMotion('record_current_point', params, `${selected.sourcePoint} 已记录并生成新的 PointSet 修订。`)
+    const success = `${selected.sourcePoint} 已记录并生成新的 PointSet 修订。`
+    if (usesMoveItExclusiveJog(this.allowedActions)) {
+      await this.performMotion('record_current_point', params, success)
+    } else {
+      await this.performDirectAction('record_current_point', params, success)
+    }
   }
 
   private async calibrateCameraExtrinsic(): Promise<void> {
     if (!globalThis.confirm('确认执行摄像头外参标定占位登记？')) return
-    await this.performMotion(
-      'calibrate_camera_extrinsic',
-      { confirm: true },
-      '摄像头外参标定已登记。'
-    )
+    const params = { confirm: true }
+    const success = '摄像头外参标定已登记。'
+    if (usesMoveItExclusiveJog(this.allowedActions)) {
+      await this.performMotion('calibrate_camera_extrinsic', params, success)
+    } else {
+      await this.performDirectAction('calibrate_camera_extrinsic', params, success)
+    }
   }
 
   private async calibrateTcp(): Promise<void> {
     if (!globalThis.confirm('确认执行 TCP 校准占位登记？')) return
-    await this.performMotion(
-      'calibrate_tcp',
-      { confirm: true },
-      'TCP 校准已登记。'
-    )
+    const params = { confirm: true }
+    const success = 'TCP 校准已登记。'
+    if (usesMoveItExclusiveJog(this.allowedActions)) {
+      await this.performMotion('calibrate_tcp', params, success)
+    } else {
+      await this.performDirectAction('calibrate_tcp', params, success)
+    }
   }
 
   private async recordMarker(): Promise<void> {
     const selected = this.selectedPoint()
     if (!selected?.groupRef) return
     if (!globalThis.confirm(`确认为仓 ${selected.groupRef} 记录 marker？`)) return
-    await this.performMotion(
-      'record_marker',
-      { warehouse_ref: selected.groupRef, confirm: true },
-      `${selected.groupRef} 的 marker 已登记。`
-    )
+    const params = { warehouse_ref: selected.groupRef, confirm: true }
+    const success = `${selected.groupRef} 的 marker 已登记。`
+    if (usesMoveItExclusiveJog(this.allowedActions)) {
+      await this.performMotion('record_marker', params, success)
+    } else {
+      await this.performDirectAction('record_marker', params, success)
+    }
   }
 
   /** 在显式手动独占（Exclusive）下执行一个设备动作（Action）。 */
@@ -358,24 +469,34 @@ export default class RailMountedArmCardElement extends HTMLElement {
     params: Record<string, unknown>,
     successMessage: string
   ): Promise<void> {
-    if (this.exclusiveState !== 'exclusive') {
+    if (!canCallAction(this.allowedActions, action)) {
+      this.message = '动作未在卡片 manifest 中授权。'
+      this.render()
+      return
+    }
+    if (usesMoveItExclusiveJog(this.allowedActions) && this.exclusiveState !== 'exclusive') {
       this.message = '请先取得调试控制。'
       this.render()
       return
     }
     const bridge = getDeviceCardBridge()
+    const moveItExclusive = usesMoveItExclusiveJog(this.allowedActions)
     let restoreExclusive = false
     try {
       this.actionPending = true
-      this.message = '正在把调试控制转交 MoveIt 动作任务…'
-      this.render()
-      const released = await bridge.releaseManualExclusive()
-      this.exclusiveState = released.state
-      if (released.state !== 'idle') {
-        throw new Error(`调试控制释放后设备状态为 ${released.state}`)
+      if (moveItExclusive) {
+        this.message = '正在把调试控制转交 MoveIt 动作任务…'
+        this.render()
+        const released = await bridge.releaseManualExclusive()
+        this.exclusiveState = released.state
+        if (released.state !== 'idle') {
+          throw new Error(`调试控制释放后设备状态为 ${released.state}`)
+        }
+        restoreExclusive = true
+        this.message = 'MoveIt 正在规划并执行…'
+      } else {
+        this.message = '正在执行…'
       }
-      restoreExclusive = true
-      this.message = 'MoveIt 正在规划并执行…'
       this.render()
       const run = await bridge.callAction(action, params)
       if (run.status !== 'DONE') throw new Error(run.error ?? `动作状态：${run.status}`)
@@ -384,27 +505,33 @@ export default class RailMountedArmCardElement extends HTMLElement {
       this.message = errorMessage(error, '机械臂动作失败。')
     } finally {
       if (restoreExclusive) {
-        try {
-          const restored = await withTimeout(
-            bridge.acquireManualExclusive(),
-            5_000,
-            '恢复调试控制等待超时'
-          ).catch(async () => withTimeout(
-            bridge.readManualExclusive(),
-            5_000,
-            '调试控制状态对账超时'
-          ))
-          this.exclusiveState = restored.state
-          if (restored.state !== 'exclusive') {
-            this.message = `${this.message}；设备已被其他任务占用，未恢复调试控制。`
-          }
-        } catch (error) {
-          this.exclusiveState = 'busy'
-          this.message = `${this.message}；${errorMessage(error, '未恢复调试控制。')}`
-        }
+        await this.restoreManualExclusiveAfterAction()
       }
       this.actionPending = false
       this.render()
+    }
+  }
+
+  /** MoveIt 动作结束后尝试恢复手动独占；失败时保留 busy 并追加提示。 */
+  private async restoreManualExclusiveAfterAction(): Promise<void> {
+    const bridge = getDeviceCardBridge()
+    try {
+      const restored = await withTimeout(
+        bridge.acquireManualExclusive(),
+        5_000,
+        '恢复调试控制等待超时'
+      ).catch(async () => withTimeout(
+        bridge.readManualExclusive(),
+        5_000,
+        '调试控制状态对账超时'
+      ))
+      this.exclusiveState = restored.state
+      if (restored.state !== 'exclusive') {
+        this.message = `${this.message}；设备已被其他任务占用，未恢复调试控制。`
+      }
+    } catch (error) {
+      this.exclusiveState = 'busy'
+      this.message = `${this.message}；${errorMessage(error, '未恢复调试控制。')}`
     }
   }
 
@@ -436,7 +563,6 @@ function inputNumber(root: ShadowRoot, selector: string, fallback: number, allow
 }
 
 /** 把可空导轨限位格式化为用户可识别的边界。 */
-
 function formatLimit(value: number | null): string {
   return value === null ? '未知' : value.toFixed(1)
 }

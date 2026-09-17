@@ -11,20 +11,20 @@ from .preview_arm_device import PreviewArmDevice
 
 @dataclass
 class PreviewRuntime:
-    """最小 preview 运行时；不支持 PointSet RobotCommand 执行。"""
+    """最小 preview 运行时；仅支持 moveJ/home，不支持 RobotCommand。"""
 
     device: PreviewArmDevice
     has_unsettled_fence: bool = False
 
     def execute(self, command) -> CommandResult:
-        """Preview 模式不接受生产 RobotCommand。"""
+        """Preview 模式未注入 PreviewSegmentExecutor 时不接受 RobotCommand。"""
 
         del command
         return CommandResult(
             command_id="preview-unsupported",
             state=CommandState.FAILED,
             success=False,
-            message="Preview runtime 不支持 RobotCommand 执行",
+            message="Preview runtime 未注入 PreviewSegmentExecutor，不支持 RobotCommand 执行",
             output={},
         )
 

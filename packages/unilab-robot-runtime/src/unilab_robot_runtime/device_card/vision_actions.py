@@ -15,10 +15,25 @@ from unilab_robot_runtime.vision_calibration.store import (
 )
 
 from .manual_motion import _port, _quaternion_to_euler_xyz_degrees
+from .observation_adapters import (
+    arm_snapshot_from_observation,
+    require_observation_ready,
+)
+from .observation_types import ExecutorObservation
 
 
 def card_vision_snapshot(paths: VisionCalibrationPaths) -> dict[str, object]:
     return build_card_vision_snapshot(paths)
+
+
+def calibrate_camera_extrinsic_from_observation(
+    observation: ExecutorObservation,
+    paths: VisionCalibrationPaths,
+    *,
+    confirm: bool,
+) -> dict[str, object]:
+    require_observation_ready(observation, confirm=confirm)
+    return record_camera_extrinsic_stub(paths)
 
 
 def calibrate_camera_extrinsic(
@@ -27,8 +42,29 @@ def calibrate_camera_extrinsic(
     *,
     confirm: bool,
 ) -> dict[str, object]:
-    _require_commissioning_ready(binding, confirm=confirm)
-    return record_camera_extrinsic_stub(paths)
+    return calibrate_camera_extrinsic_from_observation(
+        _observation_from_binding(binding, confirm=confirm),
+        paths,
+        confirm=confirm,
+    )
+
+
+def calibrate_tcp_from_observation(
+    observation: ExecutorObservation,
+    paths: VisionCalibrationPaths,
+    *,
+    confirm: bool,
+) -> dict[str, object]:
+    require_observation_ready(observation, confirm=confirm)
+    pose = observation.get("tcp_pose")
+    tcp_pose = None
+    if pose is not None:
+        tcp_pose = {
+            "frame_ref": str(pose.get("frame_ref", "")),
+            "xyz_mm": list(pose.get("xyz_mm", [])),
+            "rotation_xyz_deg": list(pose.get("rotation_xyz_deg", [])),
+        }
+    return record_tcp_calibration_stub(paths, tcp_pose=tcp_pose)
 
 
 def calibrate_tcp(
@@ -37,19 +73,27 @@ def calibrate_tcp(
     *,
     confirm: bool,
 ) -> dict[str, object]:
-    port = _require_commissioning_ready(binding, confirm=confirm)
-    snapshot = port.commissioning_snapshot()
-    pose = snapshot.tcp_pose
-    tcp_pose = None
-    if pose is not None:
-        tcp_pose = {
-            "frame_ref": str(pose.frame_ref),
-            "xyz_mm": [float(value) * 1000.0 for value in pose.xyz_m],
-            "rotation_xyz_deg": list(
-                _quaternion_to_euler_xyz_degrees(pose.orientation_xyzw)
-            ),
-        }
-    return record_tcp_calibration_stub(paths, tcp_pose=tcp_pose)
+    return calibrate_tcp_from_observation(
+        _observation_from_binding(binding, confirm=confirm),
+        paths,
+        confirm=confirm,
+    )
+
+
+def record_marker_from_observation(
+    observation: ExecutorObservation,
+    paths: VisionCalibrationPaths,
+    *,
+    warehouse_ref: str,
+    confirm: bool,
+) -> dict[str, object]:
+    require_observation_ready(observation, confirm=confirm)
+    normalized = warehouse_from_group_ref(warehouse_ref)
+    return record_marker_for_warehouse(
+        normalized,
+        paths,
+        arm_snapshot=arm_snapshot_from_observation(observation),
+    )
 
 
 def record_marker(
@@ -59,14 +103,11 @@ def record_marker(
     warehouse_ref: str,
     confirm: bool,
 ) -> dict[str, object]:
-    port = _require_commissioning_ready(binding, confirm=confirm)
-    normalized = warehouse_from_group_ref(warehouse_ref)
-    snapshot = port.commissioning_snapshot()
-    arm_snapshot = _arm_snapshot(snapshot)
-    return record_marker_for_warehouse(
-        normalized,
+    return record_marker_from_observation(
+        _observation_from_binding(binding, confirm=confirm),
         paths,
-        arm_snapshot=arm_snapshot,
+        warehouse_ref=warehouse_ref,
+        confirm=confirm,
     )
 
 
@@ -112,16 +153,9 @@ def _arm_snapshot(snapshot: object) -> dict[str, Any] | None:
     return payload
 
 
-def _require_commissioning_ready(binding: object, *, confirm: bool) -> object:
+def _observation_from_binding(binding: object, *, confirm: bool) -> ExecutorObservation:
     if confirm is not True:
         raise ValueError("视觉校准动作必须显式确认")
-    port = _port(binding)
-    snapshot = port.commissioning_snapshot()
-    if (
-        not snapshot.is_fresh()
-        or not snapshot.online
-        or not snapshot.idle
-        or snapshot.execution_fenced
-    ):
-        raise RuntimeError("机械臂快照离线、忙碌、过期、不完整或存在 Fence")
-    return port
+    from .observation_adapters import observation_from_commissioning_port
+
+    return observation_from_commissioning_port(_port(binding))
