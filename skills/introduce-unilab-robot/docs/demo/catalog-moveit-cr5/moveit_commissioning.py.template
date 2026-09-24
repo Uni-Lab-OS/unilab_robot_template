@@ -1,0 +1,97 @@
+"""{domain_pkg} 在已有 move_group 上绑定 CR5 调试客户端。"""
+
+from __future__ import annotations
+
+import hashlib
+from typing import Any
+
+COMMISSIONING_MOTION_PROFILE_REF = "{boot_id_prefix}-manual-step@1.0.0"
+HARDWARE_PROFILE_DIGEST = hashlib.sha256(
+    b"{boot_id_prefix}-moveit-sim-profile"
+).hexdigest()
+TOOL_CONTEXT_DIGEST = "{tool_context_digest}"
+
+
+def robot_point_set_resolver() -> Any:
+    from {domain_pkg}.robot_cell.point_set_v3 import robot_point_set_resolver as _resolver
+
+    return _resolver()
+
+
+def build_robot_moveit_binding(
+    *,
+    device_id: str,
+    ros_node: Any,
+    model_config: Any,
+    node_config: Any = None,
+) -> tuple[Any, Any]:
+    """用 OS 已启动的规划器创建维护专用绑定。"""
+
+    from unilab_arm_cr5 import create_moveit_commissioning_adapter
+    from unilab_robot_contracts import DeploymentMode
+    from unilab_robot_runtime import bind_commissioning_runtime
+
+    normalized = str(device_id).strip()
+    client, qualified = create_robot_moveit_client(
+        device_id=normalized,
+        ros_node=ros_node,
+        model_config=model_config,
+        node_config=node_config,
+    )
+    resolver = robot_point_set_resolver()
+    adapter = create_moveit_commissioning_adapter(
+        moveit_client=client,
+        targets=resolver.arm_targets,
+        qualified_joint_names=qualified,
+        point_set_revision=resolver.revision,
+        hardware_profile_digest=HARDWARE_PROFILE_DIGEST,
+        tool_context_digest=TOOL_CONTEXT_DIGEST,
+        commissioning_velocity_limit=0.20,
+        commissioning_acceleration_limit=0.20,
+    )
+    binding = bind_commissioning_runtime(
+        adapter,
+        frozenset({f"moveit:{normalized}:arm"}),
+        owner_id=f"{boot_id_prefix}:{normalized}:commissioning",
+        deployment_mode=DeploymentMode.SIMULATION,
+    )
+    return binding, client
+
+
+def create_robot_moveit_client(
+    *,
+    device_id: str,
+    ros_node: Any,
+    model_config: Any,
+    node_config: Any = None,
+) -> tuple[Any, tuple[str, ...]]:
+    from unilab_arm_cr5 import build_joint_state_name_map
+    from unilabos.device_mesh.package_moveit_model import (
+        create_package_moveit_client,
+        load_package_moveit_model,
+    )
+
+    normalized = str(device_id).strip()
+    if not normalized:
+        raise ValueError("MoveIt 客户端缺少 device_id")
+    bundle = load_package_moveit_model(
+        model_config,
+        {
+            "id": normalized,
+            "position": {},
+            "config": dict(node_config or {}),
+        },
+    )
+    client = create_package_moveit_client(ros_node, bundle)
+    qualified = build_joint_state_name_map(device_id=normalized).qualified_joint_names
+    return client, qualified
+
+
+__all__ = [
+    "COMMISSIONING_MOTION_PROFILE_REF",
+    "HARDWARE_PROFILE_DIGEST",
+    "TOOL_CONTEXT_DIGEST",
+    "build_robot_moveit_binding",
+    "create_robot_moveit_client",
+    "robot_point_set_resolver",
+]

@@ -79,7 +79,7 @@ export function renderRobotCard(state: RobotCardViewState): string {
 
       <main class="content">
         ${activeTab === 'points'
-          ? renderPointPanel(snapshot, selected)
+          ? renderPointPanel(snapshot, selected, state.message, state.hostOnline)
           : activeTab === 'calibration'
             ? renderCalibrationPanel(snapshot, selected)
             : activeTab === 'jog'
@@ -113,8 +113,15 @@ export function renderRobotCard(state: RobotCardViewState): string {
 
 function renderPointPanel(
   snapshot: RobotDebugSnapshot | null,
-  selected: PointTarget | null
+  selected: PointTarget | null,
+  message = '',
+  hostOnline = true
 ): string {
+  const emptyLabel = snapshot
+    ? ''
+    : (!hostOnline
+      ? '设备离线，请启动 OS/Edge 后点击「刷新」。'
+      : (message.trim() || '正在读取活动 PointSet…'))
   return `
     <section class="point-panel">
       <div class="section-heading">
@@ -133,7 +140,7 @@ function renderPointPanel(
               <small>${escapeHtml(point.groupRef)} · ${escapeHtml(point.targetRef)}</small>
             </span>
             <span class="point-meta">${point.editable ? '可写回' : '只读'}</span>
-          </button>`).join('') || '<div class="empty">正在读取活动 PointSet…</div>'}
+          </button>`).join('') || `<div class="empty">${escapeHtml(emptyLabel)}</div>`}
       </div>
     </section>
     ${renderPoseMonitor(snapshot, selected, 'target')}
@@ -431,7 +438,11 @@ function readyMessage(state: RobotCardViewState): string {
       ? '正在读取 MoveIt 调试快照…'
       : '正在读取 PointSet 目录与关节状态…'
   }
-  if (state.snapshot.stale) return 'MoveIt 快照已过期，请刷新后再操作。'
+  if (state.snapshot.stale) {
+    return state.snapshot.source === 'point_set'
+      ? 'PointSet 目录已就绪；MoveIt 调试通道暂不可用，仍可执行锚点移动。'
+      : 'MoveIt 快照已过期，请刷新后再操作。'
+  }
   if (requiresExclusiveJog(state) && state.exclusiveState !== 'exclusive') {
     return '取得调试控制后可以执行 Jog、点位设置和目标移动。'
   }

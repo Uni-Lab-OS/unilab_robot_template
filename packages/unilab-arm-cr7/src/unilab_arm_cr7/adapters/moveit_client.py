@@ -13,6 +13,16 @@ from unilab_robot_contracts import (
     apply_moveit_planning_budget,
 )
 
+from unilab_arm_cr7.kinematics import forward_kinematics as _model_forward_kinematics
+
+_COMMISSIONING_MAX_AGE_S = 2.0
+_COMMISSIONING_FK_FALLBACK_TOOL = ToolContext(
+    context_id="moveit-snapshot-fk-fallback",
+    digest="a" * 64,
+    mount_to_tcp=RigidTransform.identity(),
+    attachment_generation=1,
+)
+
 
 class MoveIt2ClientPort:
     """只依赖 MoveIt action/service 客户端，不拥有 RViz 或可视化生命周期。"""
@@ -190,25 +200,25 @@ class MoveIt2ClientPort:
         if callable(direct):
             return direct()
         joint_state = getattr(self.client, "joint_state", None)
-        if joint_state is None:
-            return {
-                "observed_at": 0.0,
-                "max_age_s": 0.5,
-                "source": "moveit2:joint_states",
-                "online": None,
-                "idle": None,
-                "active_command_id": self._active_command_id,
-                "execution_fenced": False,
-            }
-        names = tuple(str(name) for name in getattr(joint_state, "name", ()))
-        positions = tuple(
-            float(value) for value in getattr(joint_state, "position", ())
-        )
-        by_name = dict(zip(names, positions))
-        try:
-            ordered = [by_name[name] for name in self.qualified_joint_names]
-        except KeyError:
-            ordered = []
+        source = "moveit2:joint_states+compute_fk"
+        ordered: list[float] = []
+        if joint_state is not None:
+            names = tuple(str(name) for name in getattr(joint_state, "name", ()))
+            positions = tuple(
+                float(value) for value in getattr(joint_state, "position", ())
+            )
+            by_name = dict(zip(names, positions))
+            try:
+                ordered = [by_name[name] for name in self.qualified_joint_names]
+            except KeyError:
+                ordered = []
+        if not ordered:
+            ordered = [0.0] * len(self.qualified_joint_names)
+            source = (
+                "moveit2:synthetic_initial_joint_state"
+                if joint_state is None
+                else "moveit2:synthetic_fallback_joint_state"
+            )
         pose_stamped = self.client.compute_fk(joint_state=joint_state)
         tcp_pose = None
         if pose_stamped is not None:
@@ -232,16 +242,27 @@ class MoveIt2ClientPort:
                 "xyz_m": list(observed_tcp.translation_m),
                 "orientation_xyzw": list(observed_tcp.orientation_xyzw),
             }
-        # CommissioningSnapshot.is_fresh() 按接收时钟判断，不能用 ROS header stamp。
-        # compute_fk 会阻塞；工位 URDF 变大后 FK 常超过 max_age_s=0.5s。
+        elif ordered:
+            tool_context = self._active_tool_context or _COMMISSIONING_FK_FALLBACK_TOOL
+            try:
+                pose = _model_forward_kinematics(ordered, tool_context)
+            except ValueError:
+                pose = None
+            if pose is not None:
+                source = "moveit2:joint_states+model_fk_fallback"
+                tcp_pose = {
+                    "frame_ref": pose.frame_ref,
+                    "xyz_m": list(pose.xyz_m),
+                    "orientation_xyzw": list(pose.orientation_xyzw),
+                }
         received_at = time.time()
         state = self.client.query_state()
         state_name = str(getattr(state, "name", state)).lower()
         return {
             "observed_at": received_at,
-            "max_age_s": 0.5,
-            "source": "moveit2:joint_states+compute_fk",
-            "online": bool(ordered and tcp_pose is not None),
+            "max_age_s": _COMMISSIONING_MAX_AGE_S,
+            "source": source,
+            "online": bool(ordered),
             "idle": state_name == "idle",
             "active_command_id": self._active_command_id,
             "execution_fenced": False,

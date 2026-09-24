@@ -17,7 +17,7 @@ from unilab_robot_contracts import (
 )
 
 _SOURCE_URDF = Path(__file__).resolve().parent / "models" / "cr5_robot.urdf"
-_CANONICAL_JOINT_NAMES = tuple(f"cr5_joint_{index}" for index in range(1, 7))
+_CANONICAL_JOINT_NAMES = tuple(f"joint_{index}" for index in range(1, 7))
 
 
 @dataclass(frozen=True, slots=True)

@@ -34,6 +34,7 @@ from .preview import (
 )
 from .preview.preview_registry import LOCAL_ARMS as PREVIEW_LOCAL_ARMS
 from .manipulation import ManipulationSequence, ManipulationSequenceRunner
+from .package_moveit_client import package_moveit_client_factory
 from .point_maintenance import (
     PointMaintenanceService,
     PointSetQualification,
@@ -77,6 +78,7 @@ __all__ = [
     "build_test_runtime",
     "create_runtime",
     "load_point_set",
+    "package_moveit_client_factory",
     "resolve_moveit_planning_budget",
     "runtime_requirements",
 ]

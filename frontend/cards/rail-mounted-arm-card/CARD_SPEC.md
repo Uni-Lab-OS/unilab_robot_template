@@ -21,7 +21,7 @@
 - Host 能力：`core`、`manual-exclusive`
 - 实时状态：`online`、`actionBusy`、`moveit_online`、`jointState`
 - 只读动作（Action）：`read_debug_snapshot`
-- 启动约束：live 模式挂载不得自动调用任何 Action；快照只能由用户点击“刷新”显式读取。
+- 启动约束：授权 `read_debug_snapshot` / `read_point_catalog` 时，挂载即读取领域 PointSet；用户仍可通过“刷新”重新拉取。
 - 维护动作（Action）：`home`、`move_to_anchor`、`jog_joint_once`、
   `jog_tcp_once`、`move_rail_to_position`、`record_current_point`、
   `calibrate_camera_extrinsic`、`calibrate_tcp`、`record_marker`

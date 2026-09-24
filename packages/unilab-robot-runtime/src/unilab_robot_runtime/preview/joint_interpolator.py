@@ -41,8 +41,13 @@ def interpolate_joint_path(
     if path.ndim != 2 or path.shape[1] == 0:
         raise ValueError("path 必须是二维关节数组")
     steps = max(1, math.ceil(duration / step_s))
+    step_wait_s = duration / steps
     for i in range(1, steps + 1):
         if stop_event.is_set() or (external_stop is not None and external_stop.is_set()):
+            raise RuntimeError("motion interrupted; keep current attachment")
+        if stop_event.wait(step_wait_s):
+            raise RuntimeError("motion interrupted; keep current attachment")
+        if external_stop is not None and external_stop.is_set():
             raise RuntimeError("motion interrupted; keep current attachment")
         t = i / steps
         u = t * t * (3.0 - 2.0 * t) * (len(path) - 1)

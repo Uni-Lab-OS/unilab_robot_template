@@ -61,6 +61,19 @@ export interface PreviewCalibrationInfo {
   reviewAssets: PreviewCalibrationReviewAssets | null
 }
 
+/** Host 注入的 online 可能滞后；目录/Joint SSE 成功即视为 OS 可达。 */
+export function resolveHostOnline(
+  state: Record<string, unknown>,
+  snapshot: RobotDebugSnapshot | null
+): boolean {
+  if (state.online === true || state.moveit_online === true) return true
+  if (snapshot?.online === true) return true
+  if ((snapshot?.pointTargets.length ?? 0) > 0) return true
+  const jointState = asRecord(state.jointState)
+  if (jointState.stale !== true && asArray(jointState.positions).length > 0) return true
+  return false
+}
+
 export interface RobotDebugSnapshot {
   pointSetRevision: string
   source: string
@@ -180,6 +193,28 @@ export function parsePreviewJointPositions(
   return entries.slice(0, jointCount).map((item) => item.radians * 180 / Math.PI)
 }
 
+/** 把 SSE 里的 qualified 名（如 robot_joint_1）规范成维护命令用的 canonical 名（joint_1）。 */
+export function canonicalArmJointRef(jointRef: string): string {
+  const match = jointRef.match(/_(joint_\d+)$/)
+  return match ? match[1] : jointRef
+}
+
+function jointCatalogFromTelemetry(
+  values: Readonly<Record<string, unknown>>
+): JointPosition[] {
+  return Object.entries(values)
+    .map(([jointRef, value]) => ({
+      jointRef: canonicalArmJointRef(jointRef),
+      radians: finiteNumber(value)
+    }))
+    .filter((item): item is { jointRef: string; radians: number } => item.radians !== null)
+    .sort((left, right) => left.jointRef.localeCompare(right.jointRef))
+    .map(({ jointRef, radians }) => ({
+      jointRef,
+      positionDeg: radians * 180 / Math.PI
+    }))
+}
+
 /** 用通用设备遥测（DeviceTelemetry）SSE 的最新帧覆盖关节读数。 */
 export function mergeJointState(
   snapshot: RobotDebugSnapshot | null,
@@ -190,88 +225,26 @@ export function mergeJointState(
   if (jointState.stale === true) return snapshot
   const values = asRecord(jointState.jointStates)
   if (Object.keys(values).length === 0) return snapshot
+  const catalog = (snapshot.jointPositions.length > 0
+    ? snapshot.jointPositions
+    : jointCatalogFromTelemetry(values)
+  ).map((joint) => ({
+    ...joint,
+    jointRef: canonicalArmJointRef(joint.jointRef)
+  }))
+  if (catalog.length === 0) return snapshot
   return {
     ...snapshot,
-    jointPositions: snapshot.jointPositions.map((joint) => {
+    jointPositions: catalog.map((joint) => {
       const match = Object.entries(values).find(([qualifiedRef, value]) => (
-        qualifiedRef.endsWith(joint.jointRef) && finiteNumber(value) !== null
+        (qualifiedRef === joint.jointRef ||
+          qualifiedRef.endsWith(`_${joint.jointRef}`)) &&
+        finiteNumber(value) !== null
       ))
       return match
         ? { ...joint, positionDeg: (finiteNumber(match[1]) ?? 0) * 180 / Math.PI }
         : joint
     })
-  }
-}
-
-/** 提供卡片开发检查使用的非实时视觉样本；实时模式绝不使用。 */
-export function mockRobotDebugSnapshot(): RobotDebugSnapshot {
-  const points = ['home', 'S0722', 'P01', 'S061', 'S04', 'S05', 'S081', 'L1B1']
-  return {
-    pointSetRevision: 'szlab-mixer-cr7-rail@3.0.0',
-    source: 'mock:moveit',
-    online: true,
-    idle: true,
-    stale: false,
-    tcpPose: {
-      frameRef: 'arm_base',
-      xyzMm: [-137.0, 226.0, 549.0],
-      rotationXyzDeg: [-90.0, 0.0, 0.0]
-    },
-    jointPositions: Array.from({ length: 6 }, (_, index) => ({
-      jointRef: `cr7_joint_${index + 1}`,
-      positionDeg: [-93.0, -30.0, 128.0, -99.0, -86.0, 0.0][index] ?? 0
-    })),
-    rail: { positionMm: 586.1, travelMinMm: 0, travelMaxMm: 2250 },
-    pointTargets: points.map((point, index) => ({
-      targetRef: point === 'home'
-        ? 'szlab.arm.home'
-        : `mock.targets.${point}.interaction_seed`,
-      sourcePoint: point,
-      kind: 'joint_positions',
-      editable: point !== 'home',
-      jointPositionsDeg: [],
-      railPositionMm: index * 100,
-      groupRef: point === 'home' ? 'szlab.arm' : 's07_process_warehouse',
-      tcpPose: {
-        frameRef: 'arm_base',
-        xyzMm: [index * 10, 226.0, 549.0],
-        rotationXyzDeg: [-90.0, 0.0, 0.0]
-      }
-    })),
-    capabilities: {
-      jointJog: true,
-      tcpJog: true,
-      railMove: false,
-      compositePointRecord: true
-    },
-    vision: {
-      revision: 'szlab-mixer-vision-registry@1.0.0',
-      calibrationRevision: 'szlab-mixer-cr7-rail@1.0.0',
-      markers: [
-        {
-          warehouseRef: 's07_process_warehouse',
-          markerRef: 's07_process_warehouse/default',
-          label: 'S07 默认 marker',
-          deviceFrameRef: 'device:s07_process_warehouse',
-          recordedAt: null
-        },
-        {
-          warehouseRef: 's3_unused_beaker',
-          markerRef: 's3_unused_beaker/default',
-          label: 'S3 默认 marker',
-          deviceFrameRef: 'device:s3_unused_beaker',
-          recordedAt: null
-        }
-      ],
-      pointBindings: {},
-      cameraExtrinsicState: 'pending',
-      tcpCalibrationState: 'pending',
-      capabilities: {
-        cameraExtrinsic: true,
-        tcpCalibration: true,
-        markerRecord: true
-      }
-    }
   }
 }
 
@@ -287,7 +260,7 @@ function parseVisionSnapshot(value: unknown): VisionSnapshot {
     if (typeof binding === 'string' && binding) pointBindings[key] = binding
   }
   return {
-    revision: stringValue(raw.revision) || 'szlab-mixer-vision-registry@1.0.0',
+    revision: stringValue(raw.revision) || 'preview@unknown',
     calibrationRevision: stringValue(raw.calibration_revision),
     markers,
     pointBindings,

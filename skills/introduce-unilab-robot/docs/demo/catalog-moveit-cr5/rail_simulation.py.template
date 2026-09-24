@@ -1,0 +1,139 @@
+"""{domain_pkg} 导轨仿真驱动：发布完全限定关节名。"""
+
+from __future__ import annotations
+
+import math
+import threading
+import time
+from collections.abc import Callable
+from typing import Any
+
+_PUBLISH_PERIOD_S = 0.02
+_DEFAULT_VELOCITY_M_S = 0.2
+_SIMULATION_BACKENDS = frozenset({"simulation", "mock"})
+_AXIS_LOCK = threading.RLock()
+_AXES: dict[str, "RailSimulationDriver"] = {}
+
+
+def simulation_backends() -> frozenset[str]:
+    return _SIMULATION_BACKENDS
+
+
+def register_rail_simulation_axis(device_id: str, driver: "RailSimulationDriver") -> None:
+    key = str(device_id).strip()
+    if not key:
+        raise ValueError("导轨仿真轴必须包含 Graph device_id")
+    with _AXIS_LOCK:
+        _AXES[key] = driver
+
+
+def require_rail_simulation_axis(device_id: str) -> "RailSimulationDriver":
+    key = str(device_id).strip()
+    if not key:
+        raise RuntimeError("导轨仿真轴查找缺少 Graph device_id")
+    with _AXIS_LOCK:
+        driver = _AXES.get(key)
+    if driver is None:
+        raise RuntimeError(f"物理图父设备未登记导轨仿真轴: {key}")
+    return driver
+
+
+class RailSimulationDriver:
+    """把导轨插值到型号行程内的连续 SI，并向 /joint_states 发布。"""
+
+    def __init__(
+        self,
+        *,
+        device_id: str,
+        sleep: Callable[[float], None] = time.sleep,
+        velocity_m_s: float = _DEFAULT_VELOCITY_M_S,
+    ) -> None:
+        from unilab_rail_linear import build_joint_state_name_map
+
+        self._device_id = str(device_id).strip()
+        self._sleep = sleep
+        self._lock = threading.RLock()
+        self._velocity_m_s = float(velocity_m_s)
+        self._name_map = build_joint_state_name_map(device_id=self._device_id)
+        self._position_si = 0.0
+        self._publisher: Any = None
+        self._joint_state_type: Any = None
+        self._ros_node: Any = None
+
+    @property
+    def qualified_joint_names(self) -> tuple[str, ...]:
+        return self._name_map.qualified_joint_names
+
+    def joint_state_frame(self) -> tuple[tuple[str, ...], tuple[float, ...]]:
+        with self._lock:
+            return self.qualified_joint_names, (self._position_si,)
+
+    def attach_ros(self, ros_node: object) -> None:
+        from sensor_msgs.msg import JointState
+
+        self._ros_node = ros_node
+        self._joint_state_type = JointState
+        self._publisher = ros_node.create_publisher(JointState, "/joint_states", 10)
+        callback_group = getattr(ros_node, "callback_group", None)
+        create_timer = ros_node.create_timer
+        if callback_group is None:
+            create_timer(_PUBLISH_PERIOD_S, self.publish_joint_state)
+        else:
+            create_timer(
+                _PUBLISH_PERIOD_S,
+                self.publish_joint_state,
+                callback_group=callback_group,
+            )
+        self.publish_joint_state()
+
+    def publish_joint_state(self) -> None:
+        if self._publisher is None or self._joint_state_type is None:
+            return
+        names, positions = self.joint_state_frame()
+        message = self._joint_state_type()
+        clock = getattr(self._ros_node, "get_clock", None)
+        if clock is not None:
+            message.header.stamp = clock().now().to_msg()
+        message.name = list(names)
+        message.position = list(positions)
+        message.velocity = [0.0] * len(names)
+        self._publisher.publish(message)
+
+    def move_to_si(self, position_si: float) -> None:
+        from unilab_rail_linear import MODEL_DESCRIPTOR
+
+        target = float(position_si)
+        if not math.isfinite(target):
+            raise ValueError("导轨 SI 目标必须是有限数值")
+        lower, upper = MODEL_DESCRIPTOR.travel_m
+        if not lower <= target <= upper:
+            raise ValueError(
+                f"导轨目标超出型号行程 {MODEL_DESCRIPTOR.travel_m}: {target}"
+            )
+        with self._lock:
+            start = self._position_si
+        self._interpolate(start, target)
+
+    def _interpolate(self, start: float, end: float) -> None:
+        distance = abs(end - start)
+        duration = distance / self._velocity_m_s if self._velocity_m_s > 0 else 0.0
+        if duration <= 0:
+            with self._lock:
+                self._position_si = end
+            self.publish_joint_state()
+            return
+        steps = max(1, int(duration / _PUBLISH_PERIOD_S))
+        for index in range(1, steps + 1):
+            self._sleep(duration / steps)
+            ratio = index / steps
+            with self._lock:
+                self._position_si = start + (end - start) * ratio
+            self.publish_joint_state()
+
+
+__all__ = [
+    "RailSimulationDriver",
+    "register_rail_simulation_axis",
+    "require_rail_simulation_axis",
+    "simulation_backends",
+]

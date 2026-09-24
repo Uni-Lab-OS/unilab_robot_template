@@ -2,9 +2,10 @@ import { getDeviceCardBridge } from '@unilab/device-card-sdk'
 
 import {
   asRecord,
+  canonicalArmJointRef,
   defaultMarkerRefForWarehouse,
   mergeJointState,
-  mockRobotDebugSnapshot,
+  resolveHostOnline,
   type CardTab,
   type ExclusiveState,
   type RobotDebugSnapshot
@@ -42,7 +43,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
   private allowedState: string[] = []
   private previewJointTargets = [...PREVIEW_HOME_JOINTS]
 
-  /** 连接 Host Bridge；live 模式只订阅状态，不隐式派发设备动作。 */
+  /** 连接 Host Bridge；授权目录读取时挂载即拉取领域 PointSet。 */
   async connectedCallback(): Promise<void> {
     const bridge = getDeviceCardBridge()
     this.render()
@@ -51,17 +52,13 @@ export default class RailMountedArmCardElement extends HTMLElement {
       this.state = context.state
       this.allowedActions = readAllowedActions(context.config)
       this.allowedState = readAllowedState(context.config)
-      if (context.mode === 'mock') {
-        this.acceptSnapshot(mockRobotDebugSnapshot())
-      } else if (resolveCatalogReadAction(this.allowedActions)) {
-        this.message = '点击「刷新」加载 PointSet 目录与关节状态。'
-      } else {
-        this.message = '机械臂卡片已就绪；当前未授权目录读取动作。'
-      }
-      this.render()
       if (usesMoveItExclusiveJog(this.allowedActions)) {
         try {
-          this.exclusiveState = (await bridge.readManualExclusive()).state
+          this.exclusiveState = (await withTimeout(
+            bridge.readManualExclusive(),
+            5_000,
+            '手动独占状态读取超时'
+          )).state
         } catch (error) {
           this.message = errorMessage(error, '手动独占状态不可用。')
         }
@@ -72,6 +69,14 @@ export default class RailMountedArmCardElement extends HTMLElement {
         this.snapshot = mergeJointState(this.snapshot, state)
         this.render()
       })
+      if (resolveCatalogReadAction(this.allowedActions)) {
+        if (this.state.online !== true) {
+          this.message = '正在连接 OS，读取 PointSet…'
+        }
+        await this.refreshSnapshot()
+      } else {
+        this.message = '机械臂卡片已就绪；当前未授权目录读取动作。'
+      }
       this.render()
     } catch (error) {
       this.message = `卡片宿主连接失败：${errorMessage(error, '未知错误')}`
@@ -99,7 +104,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
       actionBusy: Object.values(asRecord(this.state.actionBusy)).some(Boolean),
       allowedActions: this.allowedActions,
       exclusiveState: this.exclusiveState,
-      hostOnline: this.state.online === true,
+      hostOnline: resolveHostOnline(this.state, this.snapshot),
       includeVisionOnRecord: this.includeVisionOnRecord,
       message: this.message,
       moving: this.actionPending,
@@ -273,9 +278,21 @@ export default class RailMountedArmCardElement extends HTMLElement {
     try {
       this.message = '正在读取 PointSet 目录与执行器状态…'
       this.render()
-      const released = await bridge.releaseManualExclusive()
-      this.exclusiveState = released.state
-      const run = await bridge.callAction(action, {})
+      const catalogOnly = action === 'read_debug_snapshot'
+        || action === 'read_point_catalog'
+      if (!catalogOnly && usesMoveItExclusiveJog(this.allowedActions)) {
+        const released = await withTimeout(
+          bridge.releaseManualExclusive(),
+          5_000,
+          '释放调试控制超时'
+        )
+        this.exclusiveState = released.state
+      }
+      const run = await withTimeout(
+        bridge.callAction(action, {}),
+        30_000,
+        '读取 PointSet 超时'
+      )
       if (run.status !== 'DONE') throw new Error(run.error ?? `动作状态：${run.status}`)
       const snapshot = parsePointCatalogSnapshot(run.result)
       if (!snapshot) throw new Error('点位目录合同无效')
@@ -293,7 +310,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
     this.snapshot = mergeJointState(snapshot, this.state)
     if (!snapshot.pointTargets.some((point) => point.targetRef === this.selectedTargetRef)) {
       this.selectedTargetRef = snapshot.pointTargets.find(
-        (point) => point.sourcePoint === 'S0722'
+        (point) => point.sourcePoint === 'home' || point.targetRef.endsWith('.home')
       )?.targetRef ?? snapshot.pointTargets[0]?.targetRef ?? ''
       this.alignSelectedPoint = true
     }
@@ -343,7 +360,7 @@ export default class RailMountedArmCardElement extends HTMLElement {
   private async jogJoint(element: HTMLElement): Promise<void> {
     this.captureJogSettings()
     await this.performMotion('jog_joint_once', {
-      joint_ref: element.dataset.jogJoint ?? '',
+      joint_ref: canonicalArmJointRef(element.dataset.jogJoint ?? ''),
       direction: element.dataset.direction ?? 'positive',
       step_deg: this.jointStep
     }, '关节 Jog 已完成。')
@@ -389,11 +406,46 @@ export default class RailMountedArmCardElement extends HTMLElement {
       return
     }
     if (!globalThis.confirm(`确认把导轨移动到 ${positionMm.toFixed(1)} mm？`)) return
-    await this.performMotion(
-      'move_rail_to_position',
-      { position_mm: positionMm },
-      `导轨已移动到 ${positionMm.toFixed(1)} mm。`
-    )
+    await this.performRailMove(positionMm, `导轨已移动到 ${positionMm.toFixed(1)} mm。`)
+  }
+
+  /** 导轨移动先释放手动独占，派发 always_free 动作后再恢复调试控制。 */
+  private async performRailMove(
+    positionMm: number,
+    successMessage: string
+  ): Promise<void> {
+    if (!canCallAction(this.allowedActions, 'move_rail_to_position')) {
+      this.message = '动作未在卡片 manifest 中授权。'
+      this.render()
+      return
+    }
+    if (usesMoveItExclusiveJog(this.allowedActions) && this.exclusiveState !== 'exclusive') {
+      this.message = '请先取得调试控制。'
+      this.render()
+      return
+    }
+    const bridge = getDeviceCardBridge()
+    const restoreExclusive = this.exclusiveState === 'exclusive'
+    try {
+      this.actionPending = true
+      this.message = '导轨正在移动…'
+      this.render()
+      if (restoreExclusive) {
+        const released = await bridge.releaseManualExclusive()
+        this.exclusiveState = released.state
+      }
+      const run = await bridge.callAction('move_rail_to_position', { position_mm: positionMm })
+      if (run.status !== 'DONE') throw new Error(run.error ?? `动作状态：${run.status}`)
+      await this.refreshSnapshot(successMessage)
+    } catch (error) {
+      this.message = errorMessage(error, '导轨移动失败。')
+    } finally {
+      if (restoreExclusive) {
+        await this.restoreManualExclusiveAfterAction()
+      }
+      this.actionPending = false
+      this.render()
+    }
   }
 
   /** 显式确认后把当前机械臂与可选导轨位置记录到作者目录目标。 */
@@ -512,23 +564,34 @@ export default class RailMountedArmCardElement extends HTMLElement {
     }
   }
 
-  /** MoveIt 动作结束后尝试恢复手动独占；失败时保留 busy 并追加提示。 */
+  /** MoveIt 动作结束后尝试恢复手动独占；等待设备 idle 后再 acquire。 */
   private async restoreManualExclusiveAfterAction(): Promise<void> {
     const bridge = getDeviceCardBridge()
+    const deadline = Date.now() + 30_000
     try {
-      const restored = await withTimeout(
-        bridge.acquireManualExclusive(),
-        5_000,
-        '恢复调试控制等待超时'
-      ).catch(async () => withTimeout(
-        bridge.readManualExclusive(),
-        5_000,
-        '调试控制状态对账超时'
-      ))
-      this.exclusiveState = restored.state
-      if (restored.state !== 'exclusive') {
-        this.message = `${this.message}；设备已被其他任务占用，未恢复调试控制。`
+      while (Date.now() < deadline) {
+        const snapshot = await withTimeout(
+          bridge.readManualExclusive(),
+          5_000,
+          '调试控制状态对账超时'
+        )
+        if (snapshot.state === 'exclusive') {
+          this.exclusiveState = 'exclusive'
+          return
+        }
+        if (snapshot.state === 'idle') {
+          const restored = await withTimeout(
+            bridge.acquireManualExclusive(),
+            5_000,
+            '恢复调试控制等待超时'
+          )
+          this.exclusiveState = restored.state
+          if (restored.state === 'exclusive') return
+        }
+        await delay(250)
       }
+      this.exclusiveState = 'busy'
+      this.message = `${this.message}；设备已被其他任务占用，未恢复调试控制。`
     } catch (error) {
       this.exclusiveState = 'busy'
       this.message = `${this.message}；${errorMessage(error, '未恢复调试控制。')}`
@@ -569,6 +632,10 @@ function formatLimit(value: number | null): string {
 
 function errorMessage(error: unknown, fallback: string): string {
   return error instanceof Error ? error.message : fallback
+}
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => globalThis.setTimeout(resolve, ms))
 }
 
 function withTimeout<T>(

@@ -142,6 +142,34 @@ class MoveItCommissioningAdapter:
 
         return self.point_set_revision
 
+    def prepare_commissioning(self) -> None:
+        """在维护会话打开前等待调试快照进入 known+fresh 状态。"""
+
+        deadline = time.monotonic() + 5.0
+        last: CommissioningSnapshot | None = None
+        while time.monotonic() < deadline:
+            last = self.commissioning_snapshot()
+            if (
+                last.is_fresh()
+                and last.online is True
+                and last.idle is True
+                and last.joint_positions is not None
+                and last.tcp_pose is not None
+                and not last.execution_fenced
+            ):
+                return
+            time.sleep(0.05)
+        if (
+            last is not None
+            and last.joint_positions is not None
+            and last.tcp_pose is not None
+            and last.online is True
+            and last.idle is True
+            and not last.execution_fenced
+        ):
+            return
+        raise RuntimeError("MoveIt 调试快照未能在启动窗口内就绪")
+
     def replace_point_set(
         self,
         targets: Mapping[str, ResolvedMotionTarget],
@@ -294,7 +322,8 @@ class MoveItCommissioningAdapter:
                 specification.name: specification
                 for specification in self.model.joint_specs
             }
-            specification = joint_specs.get(command.joint_ref)
+            resolved_joint_ref = self._resolve_canonical_joint_ref(command.joint_ref)
+            specification = joint_specs.get(resolved_joint_ref)
             if specification is None:
                 message = "joint_jog joint_ref 不属于 exact Arm 型号"
             else:
@@ -305,7 +334,7 @@ class MoveItCommissioningAdapter:
                     current = {
                         item.joint_ref: item.position_si
                         for item in snapshot.joint_positions
-                    }[command.joint_ref]
+                    }[resolved_joint_ref]
                     target = current + command.direction.sign * command.step_si
                     if specification.lower is not None and target < specification.lower:
                         message = "joint_jog 目标低于型号关节限位"
@@ -339,9 +368,10 @@ class MoveItCommissioningAdapter:
             specification.name: index
             for index, specification in enumerate(self.model.joint_specs)
         }
-        if command.joint_ref not in indices:
+        resolved_joint_ref = self._resolve_canonical_joint_ref(command.joint_ref)
+        if resolved_joint_ref not in indices:
             raise ValueError("joint_jog joint_ref 不属于 exact Arm 型号")
-        index = indices[command.joint_ref]
+        index = indices[resolved_joint_ref]
         target = list(current)
         target[index] += command.direction.sign * command.step_si
         specification = self.model.joint_specs[index]
@@ -505,6 +535,26 @@ class MoveItCommissioningAdapter:
             command_id=command.command_id,
             parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
+
+    def _resolve_canonical_joint_ref(self, joint_ref: str) -> str:
+        """把 device 限定的 qualified 关节名映射回型号 canonical 名。"""
+
+        normalized = str(joint_ref).strip()
+        canonical_names = {specification.name for specification in self.model.joint_specs}
+        if normalized in canonical_names:
+            return normalized
+        qualified = tuple(
+            str(name)
+            for name in getattr(self.port, "qualified_joint_names", ()) or ()
+        )
+        if len(qualified) == len(self.model.joint_specs):
+            for index, qualified_name in enumerate(qualified):
+                if normalized == qualified_name:
+                    return self.model.joint_specs[index].name
+        suffix_match = normalized.rsplit("_", 1)
+        if len(suffix_match) == 2 and suffix_match[1] in canonical_names:
+            return suffix_match[1]
+        return normalized
 
     def _remember(self, command: CommissioningCommand, result: CommandResult) -> None:
         """保存进程内幂等身份和结果；UNKNOWN 也不得重新派发。"""

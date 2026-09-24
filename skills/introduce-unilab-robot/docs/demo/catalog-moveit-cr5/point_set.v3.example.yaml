@@ -1,0 +1,38 @@
+# 示例：greenfield scaffold 写入
+# deployment/robot_cell/assets/point_sets/{domain_pkg}-rail-arm.v3.yaml
+schema: unilab.robot-point-set/v3
+revision: {domain_pkg}-rail-arm@3.0.0
+description: Greenfield 最小导轨+机械臂作者层点位（global home + demo 工位）
+components:
+  arm:
+    model_ref: package://unilab_arm_cr5/models/model.yaml
+    tool_context_ref: {domain_pkg}-rail-arm-placeholder@1.0.0
+  rail:
+    model_ref: package://unilab_rail_linear/models/model.yaml
+installation_calibration:
+  revision: {domain_pkg}-rail-arm-installation@1.0.0
+  digest: "<sha256(installation_revision)>"
+global:
+  arm:
+    home:
+      type: joint_positions
+      value: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    standby:
+      type: joint_positions
+      value: [0.0, -0.7, 1.2, 0.0, 0.9, 0.0]
+    rail_transfer_safe:
+      type: joint_positions
+      value: [0.0, -0.7, 1.2, 0.0, 0.9, 0.0]
+  rail:
+    home:
+      position_si: 0.0
+demo-station:
+  device_ref: deck.demo-station
+  display_name: Demo 工位
+  targets:
+    ready:
+      arm:
+        type: joint_positions
+        value: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      rail:
+        position_si: 0.0

@@ -2,7 +2,6 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 
 import type { RobotDebugSnapshot } from '../src/model.ts'
-import { mockRobotDebugSnapshot } from '../src/model.ts'
 import { renderRobotCard } from '../src/view.ts'
 
 function baseState(snapshot: RobotDebugSnapshot) {
@@ -20,6 +19,65 @@ function baseState(snapshot: RobotDebugSnapshot) {
     tab: 'points' as const,
     tcpFrame: 'arm_base' as const,
     tcpStep: 2
+  }
+}
+
+function emptyVisionSnapshot(): RobotDebugSnapshot['vision'] {
+  return {
+    revision: 'preview@unknown',
+    calibrationRevision: '',
+    markers: [],
+    pointBindings: {},
+    cameraExtrinsicState: 'pending',
+    tcpCalibrationState: 'pending',
+    capabilities: {
+      cameraExtrinsic: false,
+      tcpCalibration: false,
+      markerRecord: false
+    }
+  }
+}
+
+/** 构造 commissioning 模式最小快照，供视图单测使用。 */
+function commissioningSnapshot(): RobotDebugSnapshot {
+  return {
+    pointSetRevision: 'demo-rail-cr5@3.0.0',
+    source: 'test:moveit',
+    online: true,
+    idle: true,
+    stale: false,
+    tcpPose: {
+      frameRef: 'arm_base',
+      xyzMm: [320, 0, 420],
+      rotationXyzDeg: [180, 0, 0]
+    },
+    jointPositions: Array.from({ length: 6 }, (_, index) => ({
+      jointRef: `joint_${index + 1}`,
+      positionDeg: 0
+    })),
+    rail: { positionMm: 0, travelMinMm: 0, travelMaxMm: 1200 },
+    pointTargets: [{
+      targetRef: 'domain.arm.home',
+      sourcePoint: 'home',
+      kind: 'joint_positions',
+      editable: false,
+      jointPositionsDeg: [0, 0, 0, 0, 0, 0],
+      railPositionMm: 0,
+      groupRef: 'domain.arm',
+      tcpPose: {
+        frameRef: 'arm_base',
+        xyzMm: [320, 0, 420],
+        rotationXyzDeg: [180, 0, 0]
+      }
+    }],
+    capabilities: {
+      jointJog: true,
+      tcpJog: true,
+      railMove: true,
+      compositePointRecord: true,
+      pointRecord: true
+    },
+    vision: emptyVisionSnapshot()
   }
 }
 
@@ -61,13 +119,13 @@ function snapshotWithRail(): RobotDebugSnapshot {
       railMove: false,
       compositePointRecord: true
     },
-    vision: mockRobotDebugSnapshot().vision
+    vision: emptyVisionSnapshot()
   }
 }
 
 test('commissioning 无 vision action 时隐藏视觉页签', () => {
   const html = renderRobotCard({
-    ...baseState(mockRobotDebugSnapshot()),
+    ...baseState(commissioningSnapshot()),
     allowedActions: ['read_debug_snapshot', 'home', 'move_to_anchor', 'jog_joint_once']
   })
   assert.doesNotMatch(html, /data-tab="vision"/u)
@@ -139,7 +197,7 @@ test('未勾选视觉参数时不显示 marker 下拉框', () => {
 
 test('Preview 模式不展示 MoveIt 手动独占按钮', () => {
   const html = renderRobotCard({
-    ...baseState(mockRobotDebugSnapshot()),
+    ...baseState(commissioningSnapshot()),
     allowedActions: [
       'read_point_catalog',
       'set_joint',

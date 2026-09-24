@@ -72,7 +72,6 @@ export function usesMoveItExclusiveJog(
   if (allowedActions === undefined) return true
   return allowedActions.includes('jog_joint_once')
     || allowedActions.includes('move_to_anchor')
-    || allowedActions.includes('move_rail_to_position')
 }
 
 /** callAction 与按钮渲染前的统一授权校验；undefined 表示 mock 未注入列表。 */

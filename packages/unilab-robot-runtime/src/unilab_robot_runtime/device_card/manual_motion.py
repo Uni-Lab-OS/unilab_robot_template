@@ -90,6 +90,17 @@ def read_debug_snapshot(binding: object, context: ArmCardContext) -> RobotDebugS
     return result
 
 
+def _canonical_arm_joint_ref(joint_ref: str) -> str:
+    """把 qualified 名（robot_joint_1）规范成 MoveIt 维护命令用的 canonical 名（joint_1）。"""
+
+    normalized = str(joint_ref).strip()
+    if normalized.startswith("robot_joint_"):
+        suffix = normalized.removeprefix("robot_joint_")
+        if suffix.isdigit():
+            return f"joint_{suffix}"
+    return normalized
+
+
 def jog_joint_once(
     binding: object,
     context: ArmCardContext,
@@ -102,7 +113,7 @@ def jog_joint_once(
 ) -> RobotManualMotionResult:
     from unilab_robot_contracts import JointJogCommand, MotionDirection
 
-    normalized_ref = str(joint_ref).strip()
+    normalized_ref = _canonical_arm_joint_ref(str(joint_ref).strip())
     if not normalized_ref:
         raise ValueError("关节 Jog 必须包含稳定 joint_ref")
     step = float(step_deg)

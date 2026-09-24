@@ -15,7 +15,7 @@ from unilab_robot_model_kit import (
     build_joint_state_name_map as kit_build_joint_state_name_map,
 )
 
-from .adapters.moveit import CR5_JOINT_NAMES
+from .adapters.moveit import CANONICAL_JOINT_NAMES
 
 _SOURCE_DIGEST = "8c8b9ea935fd83122b19b572c84d107e81b4864d4310c94d0906cc361e7631c2"
 _MODEL_ROOT = Path(__file__).resolve().parent / "models"
@@ -24,25 +24,25 @@ _SOURCE_URDF = _MODEL_ROOT / "cr5_robot.urdf"
 _MESH_ROOT = _MODEL_ROOT / "meshes" / "cr5"
 _LINK_NAMES = {
     "dummy_link": "device_link",
-    "base_link": "cr5_base",
-    **{f"Link{index}": f"cr5_link_{index}" for index in range(1, 7)},
+    "base_link": "arm_base",
+    **{f"Link{index}": f"arm_link_{index}" for index in range(1, 7)},
 }
 _JOINT_NAMES = {
-    "dummy_joint": "cr5_base_mount_joint",
-    **{f"joint{index}": f"cr5_joint_{index}" for index in range(1, 7)},
+    "dummy_joint": "base_mount_joint",
+    **{f"joint{index}": f"joint_{index}" for index in range(1, 7)},
 }
 _JOINT_EFFORT = (150.0, 150.0, 150.0, 30.0, 30.0, 30.0)
 _DISABLED_COLLISIONS = (
-    ("cr5_base", "cr5_link_1", "Adjacent"),
-    ("cr5_base", "cr5_link_2", "Never"),
-    ("cr5_base", "cr5_link_4", "Never"),
-    ("cr5_link_1", "cr5_link_2", "Adjacent"),
-    ("cr5_link_1", "cr5_link_4", "Never"),
-    ("cr5_link_2", "cr5_link_3", "Adjacent"),
-    ("cr5_link_3", "cr5_link_4", "Adjacent"),
-    ("cr5_link_4", "cr5_link_5", "Adjacent"),
-    ("cr5_link_4", "cr5_link_6", "Never"),
-    ("cr5_link_5", "cr5_link_6", "Adjacent"),
+    ("arm_base", "arm_link_1", "Adjacent"),
+    ("arm_base", "arm_link_2", "Never"),
+    ("arm_base", "arm_link_4", "Never"),
+    ("arm_link_1", "arm_link_2", "Adjacent"),
+    ("arm_link_1", "arm_link_4", "Never"),
+    ("arm_link_2", "arm_link_3", "Adjacent"),
+    ("arm_link_3", "arm_link_4", "Adjacent"),
+    ("arm_link_4", "arm_link_5", "Adjacent"),
+    ("arm_link_4", "arm_link_6", "Never"),
+    ("arm_link_5", "arm_link_6", "Adjacent"),
 )
 _ARM_SPEC = SixAxisArmModelSpec(
     source_urdf=_SOURCE_URDF,
@@ -54,11 +54,11 @@ _ARM_SPEC = SixAxisArmModelSpec(
     link_names=_LINK_NAMES,
     joint_names=_JOINT_NAMES,
     joint_effort=_JOINT_EFFORT,
-    canonical_joint_names=CR5_JOINT_NAMES,
-    flange_frame="cr5_tool0",
-    last_link="cr5_link_6",
+    canonical_joint_names=CANONICAL_JOINT_NAMES,
+    flange_frame="arm_tool0",
+    last_link="arm_link_6",
     disabled_collisions=_DISABLED_COLLISIONS,
-    mock_system_suffix="cr5",
+    mock_system_suffix="",
     model_descriptor_path=_MODEL_DESCRIPTOR,
 )
 
@@ -68,11 +68,11 @@ def build_joint_state_name_map(
     device_id: str,
     source: str = "canonical",
 ) -> JointStateNameMap:
-    """按型号包已验证 source 构造 CR5 exact 反馈映射。"""
+    """按型号包已验证 source 构造 exact 反馈映射；qualified 名只绑 device_id。"""
 
     return kit_build_joint_state_name_map(
         device_id=device_id,
-        canonical_joint_names=CR5_JOINT_NAMES,
+        canonical_joint_names=CANONICAL_JOINT_NAMES,
         model_descriptor_path=_MODEL_DESCRIPTOR,
         source=source,
     )
@@ -86,7 +86,7 @@ def _load_joint_state_source_mappings() -> dict[str, dict[str, str]]:
 
     return load_joint_state_source_mappings(
         str(_MODEL_DESCRIPTOR.resolve()),
-        CR5_JOINT_NAMES,
+        CANONICAL_JOINT_NAMES,
     )
 
 
@@ -113,4 +113,3 @@ __all__ = [
     "build_joint_state_name_map",
     "build_moveit_model",
 ]
-

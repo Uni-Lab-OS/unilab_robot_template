@@ -58,7 +58,7 @@ _ARM_SPEC = SixAxisArmModelSpec(
     flange_frame="cr7_tool0",
     last_link="cr7_link_6",
     disabled_collisions=_DISABLED_COLLISIONS,
-    mock_system_suffix="cr7",
+    mock_system_suffix="",
     model_descriptor_path=_MODEL_DESCRIPTOR,
 )
 
@@ -113,4 +113,4 @@ __all__ = [
     "build_joint_state_name_map",
     "build_moveit_model",
 ]
-
+

@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "rail",
+      "name": "rail rail",
+      "children": ["robot"],
+      "parent": null,
+      "type": "device",
+      "class": "community.<domain_pkg>.rail",
+      "position": {"x": 0, "y": 0, "z": 0},
+      "config": {
+        "standard_execution_backend": "mock",
+        "rendering": {"kind": "rail", "dimensionsMm": [2300, 180, 150]}
+      },
+      "data": {}
+    },
+    {
+      "id": "robot",
+      "name": "robot arm",
+      "children": [],
+      "parent": "rail",
+      "type": "device",
+      "class": "community.<domain_pkg>.robot",
+      "position": {
+        "position": {"x": 0, "y": 0, "z": 200},
+        "rotation": {"unit": "deg", "x": 0, "y": 0, "z": 180}
+      },
+      "config": {
+        "standard_execution_backend": "moveit_sim",
+        "rendering": {"kind": "robot", "dimensionsMm": [900, 900, 1200]}
+      },
+      "data": {}
+    }
+  ],
+  "links": []
+}

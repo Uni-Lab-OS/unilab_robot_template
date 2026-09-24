@@ -17,6 +17,7 @@ VisionProvider = Callable[[], dict[str, object]]
 MotionProfileProvider = Callable[[object], str]
 RailMover = Callable[[object, float], RobotRailMotionResult]
 RecordVisionHook = Callable[[str, str | None], None]
+JointCatalogProvider = Callable[[], Iterable[str]]
 
 
 @dataclass(slots=True)
@@ -35,6 +36,15 @@ class ArmCardContext:
     include_vision_in_snapshot: bool = False
     point_set_path: Path | None = None
     joint_count: int = 6
+    joint_catalog_refs: JointCatalogProvider | None = None
+
+    def resolve_joint_catalog_refs(self) -> list[str]:
+        if self.joint_catalog_refs is not None:
+            refs = [str(ref).strip() for ref in self.joint_catalog_refs()]
+            refs = [ref for ref in refs if ref]
+            if refs:
+                return refs
+        return [f"joint_{index + 1}" for index in range(max(self.joint_count, 0))]
 
     def resolve_catalog(self, port: object) -> list[Any]:
         if self.catalog_entries is not None:

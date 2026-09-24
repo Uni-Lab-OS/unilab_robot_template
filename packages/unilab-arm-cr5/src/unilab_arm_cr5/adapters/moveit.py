@@ -18,14 +18,17 @@ from unilab_robot_contracts import (
 
 from ._support import BackendObservationMixin, validate_completion_receipt
 
-CR5_JOINT_NAMES = (
-    "cr5_joint_1",
-    "cr5_joint_2",
-    "cr5_joint_3",
-    "cr5_joint_4",
-    "cr5_joint_5",
-    "cr5_joint_6",
+CANONICAL_JOINT_NAMES = (
+    "joint_1",
+    "joint_2",
+    "joint_3",
+    "joint_4",
+    "joint_5",
+    "joint_6",
 )
+
+# 兼容旧引用；canonical 关节名不含型号，qualified 由 device_id 前缀生成。
+CR5_JOINT_NAMES = CANONICAL_JOINT_NAMES
 
 
 class MoveGroupPort(Protocol):
@@ -60,6 +63,7 @@ class MoveGroupPort(Protocol):
     def cancel(self, command_id: str) -> bool:
         """请求取消并返回是否已确认停止。"""
 
+
 class MoveItBackend(BackendObservationMixin):
     """headless MoveIt 后端；构造和执行均不 import、启动或探测 RViz。"""
 
@@ -69,7 +73,7 @@ class MoveItBackend(BackendObservationMixin):
         port: MoveGroupPort,
         endpoint_ids: frozenset[str],
         targets: Mapping[str, ResolvedMotionTarget],
-        group_name: str = "cr5_arm",
+        group_name: str = "arm",
     ) -> None:
         """注入 move_group port 与派发前已解析的运动目标。
 
@@ -82,7 +86,7 @@ class MoveItBackend(BackendObservationMixin):
             if name != target.target_ref:
                 raise ValueError(f"MoveIt target_ref 索引漂移: {name}")
             if isinstance(target, ResolvedJointTarget):
-                if len(target.joint_positions) != len(CR5_JOINT_NAMES):
+                if len(target.joint_positions) != len(CANONICAL_JOINT_NAMES):
                     raise ValueError(f"MoveIt CR5 target 必须为六轴: {name}")
             elif not isinstance(target, ResolvedCartesianTarget):
                 raise TypeError(f"MoveIt target 必须由 ArmTargetResolver 解析: {name}")
@@ -160,7 +164,7 @@ class MoveItBackend(BackendObservationMixin):
         if isinstance(target, ResolvedJointTarget):
             return self.port.execute_joint_target(
                 group_name=self.group_name,
-                joint_names=CR5_JOINT_NAMES,
+                joint_names=CANONICAL_JOINT_NAMES,
                 target=target.joint_positions,
                 command_id=command_id,
                 parameters=parameters,

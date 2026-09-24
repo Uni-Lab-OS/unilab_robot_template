@@ -1,0 +1,60 @@
+"""{domain_pkg} 最小 PointSet v3 解析。"""
+
+from __future__ import annotations
+
+import hashlib
+from collections.abc import Mapping
+from functools import lru_cache
+from pathlib import Path
+from typing import Any
+
+import yaml
+from unilab_arm_cr5 import MODEL_DESCRIPTOR as ARM_MODEL
+from unilab_rail_linear import MODEL_DESCRIPTOR as RAIL_MODEL
+from unilab_robot_contracts import (
+    InstallationCalibration,
+    RigidTransform,
+    RobotPointSetResolver,
+    ToolContext,
+)
+
+PACKAGE_ROOT = Path(__file__).resolve().parents[1]
+ASSET_ROOT = PACKAGE_ROOT.parent / "deployment" / "robot_cell" / "assets"
+POINT_SET_PATH = ASSET_ROOT / "point_sets" / "{point_set_basename}.v3.yaml"
+TOOL_CONTEXT_ID = "{tool_context_id}"
+CALIBRATION_REVISION = "{calibration_revision}"
+CALIBRATION_DIGEST = "{calibration_digest}"
+
+
+def placeholder_tool() -> ToolContext:
+    digest = hashlib.sha256(TOOL_CONTEXT_ID.encode("utf-8")).hexdigest()
+    return ToolContext(TOOL_CONTEXT_ID, digest, RigidTransform.identity(), 1)
+
+
+@lru_cache(maxsize=1)
+def load_point_set_document() -> dict[str, Any]:
+    document = yaml.safe_load(POINT_SET_PATH.read_text(encoding="utf-8"))
+    if not isinstance(document, dict):
+        raise ValueError(f"PointSet 不是对象: {POINT_SET_PATH}")
+    return document
+
+
+def make_resolver(point_set: Mapping[str, Any]) -> RobotPointSetResolver:
+    calibration_ref = point_set["installation_calibration"]
+    calibration = InstallationCalibration(
+        str(calibration_ref["revision"]),
+        str(calibration_ref["digest"]),
+        {},
+    )
+    return RobotPointSetResolver(
+        point_set,
+        arm_model=ARM_MODEL,
+        tool_context=placeholder_tool(),
+        calibration=calibration,
+        rail_model=RAIL_MODEL,
+    )
+
+
+@lru_cache(maxsize=1)
+def robot_point_set_resolver() -> RobotPointSetResolver:
+    return make_resolver(load_point_set_document())

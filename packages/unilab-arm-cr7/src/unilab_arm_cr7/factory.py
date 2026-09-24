@@ -160,6 +160,7 @@ def create_moveit_commissioning_adapter(
     commissioning_acceleration_limit: float,
     joint_completion_tolerance_si: float = 0.002,
     collision_asset_resolver: Any = None,
+    group_name: str | None = None,
 ) -> MoveItCommissioningAdapter:
     """创建与生产后端共享 MoveIt2 客户端的统一维护调试 Adapter。"""
 
@@ -177,6 +178,7 @@ def create_moveit_commissioning_adapter(
         commissioning_velocity_limit=commissioning_velocity_limit,
         commissioning_acceleration_limit=commissioning_acceleration_limit,
         joint_completion_tolerance_si=joint_completion_tolerance_si,
+        group_name=group_name,
     )
 
 

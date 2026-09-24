@@ -14,6 +14,8 @@ from unilab_robot_runtime.vision_calibration.paths import VisionCalibrationPaths
 from .context import ArmCardContext
 from . import manual_motion
 from . import vision_actions
+from .observation_types import ExecutorObservation
+from .point_catalog import point_set_revision_from_path, read_point_catalog_from_observation
 from .types import RobotDebugSnapshot, RobotManualMotionResult, RobotTeachPointResult
 
 _POINTSET_HOME_REF = "global.arm.home"
@@ -74,7 +76,20 @@ class RailMountedArmCardMixin:
 
     @action(description="读取 PointSet 目录与执行器观测", always_free=True)
     def read_point_catalog(self) -> RobotDebugSnapshot:
-        return self.read_debug_snapshot()
+        context = self._arm_card_context()
+        binding = self._card_binding_optional()
+        if binding is not None:
+            try:
+                snapshot = manual_motion.read_debug_snapshot(binding, context)
+                if not snapshot.get("joint_positions"):
+                    fallback = self._read_point_catalog_without_moveit(context, binding)
+                    merged = dict(snapshot)
+                    merged["joint_positions"] = fallback.get("joint_positions", [])
+                    return merged  # type: ignore[return-value]
+                return snapshot
+            except Exception:
+                pass
+        return self._read_point_catalog_without_moveit(context, binding)
 
     @action(description="读取机械臂调试卡片快照", always_free=True)
     def read_debug_snapshot(self) -> RobotDebugSnapshot:
@@ -132,7 +147,7 @@ class RailMountedArmCardMixin:
             confirm=confirm,
         )
 
-    @action(description="移动导轨到绝对位置")
+    @action(description="移动导轨到绝对位置", always_free=True)
     def move_rail_to_position(self, position_mm: float) -> None:
         manual_motion.move_rail_to_position(
             self._card_binding(),
@@ -276,3 +291,77 @@ class RailMountedArmCardMixin:
 
     def _point_set_resolver(self) -> object | None:
         return None
+
+    def _read_point_catalog_without_moveit(
+        self,
+        context: ArmCardContext,
+        binding: object | None = None,
+    ) -> RobotDebugSnapshot:
+        return read_point_catalog_from_observation(  # type: ignore[return-value]
+            context,
+            self._offline_catalog_observation(context, binding),
+            point_set_revision=self._resolve_point_set_revision(context),
+            catalog_port=self,
+            moveit_port=self._moveit_catalog_port_optional(),
+        )
+
+    def _observation_joint_positions_si(
+        self,
+        binding: object | None,
+    ) -> tuple[list[str], list[float]]:
+        if binding is None:
+            return [], []
+        port = getattr(binding, "commissioning_port", None)
+        if port is None:
+            return [], []
+        try:
+            snapshot = port.commissioning_snapshot()
+        except Exception:
+            return [], []
+        joints = getattr(snapshot, "joint_positions", None) or ()
+        refs: list[str] = []
+        positions: list[float] = []
+        for item in joints:
+            joint_ref = str(getattr(item, "joint_ref", "")).strip()
+            position_si = getattr(item, "position_si", None)
+            if not joint_ref or position_si is None:
+                continue
+            refs.append(joint_ref)
+            positions.append(float(position_si))
+        return refs, positions
+
+    def _resolve_point_set_revision(self, context: ArmCardContext) -> str:
+        resolver = self._point_set_resolver()
+        if resolver is not None:
+            revision = str(getattr(resolver, "revision", "")).strip()
+            if revision:
+                return revision
+        if context.point_set_path is not None:
+            return point_set_revision_from_path(context.point_set_path)
+        return ""
+
+    def _offline_catalog_observation(
+        self,
+        context: ArmCardContext,
+        binding: object | None = None,
+    ) -> ExecutorObservation:
+        joint_refs, joint_positions_si = self._observation_joint_positions_si(binding)
+        if not joint_refs:
+            joint_refs = context.resolve_joint_catalog_refs()
+            joint_positions_si = [0.0] * len(joint_refs)
+        return {
+            "source": "point_set",
+            "online": binding is not None,
+            "idle": True,
+            "stale": True,
+            "observed_at": 0.0,
+            "execution_fenced": True,
+            "joint_refs": joint_refs,
+            "joint_positions_si": joint_positions_si,
+        }
+
+    def _moveit_catalog_port_optional(self) -> object | None:
+        binding = self._card_binding_optional()
+        if binding is None:
+            return None
+        return getattr(binding, "commissioning_port", None)

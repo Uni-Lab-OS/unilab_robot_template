@@ -80,7 +80,7 @@ def load_preview_catalog_entry(template: Path, slug: str) -> PreviewCatalogEntry
     digest_module = template / spec["digest_module"]
     if not digest_module.is_file():
         raise FileNotFoundError(f"找不到 Preview digest 模块: {digest_module}")
-    package_dir = digest_module.parents[2]
+    package_dir = package_dir_from_path(digest_module)
     demo_dir = template / "skills" / "introduce-unilab-robot" / spec["demo_dir"]
     if not demo_dir.is_dir():
         raise FileNotFoundError(f"找不到 Preview demo 目录: {demo_dir}")
@@ -119,6 +119,15 @@ def preview_catalog_dependencies(entry: PreviewCatalogEntry) -> list[str]:
     ]
 
 
+def package_dir_from_path(anchor: Path) -> Path:
+    """从包内文件向上定位含 pyproject.toml 的 L1 包根。"""
+
+    for parent in [anchor.parent, *anchor.parents]:
+        if (parent / "pyproject.toml").is_file():
+            return parent
+    raise FileNotFoundError(f"找不到 L1 包根（自 {anchor} 向上无 pyproject.toml）")
+
+
 def load_catalog_entry(template: Path, slug: str) -> ArmCatalogEntry:
     spec = _CATALOG.get(slug)
     if spec is None:
@@ -133,7 +142,7 @@ def load_catalog_entry(template: Path, slug: str) -> ArmCatalogEntry:
         import_root=import_root,
         provider=f"{import_root}:build_moveit_model",
         model_yaml=model_yaml,
-        package_dir=model_yaml.parents[2],
+        package_dir=package_dir_from_path(model_yaml),
     )
 
 

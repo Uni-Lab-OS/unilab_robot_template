@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""一键把 unilab_robot_template 机械臂型号引用进领域仓。"""
+"""一键把 unilab_robot_template 机械臂引用进领域仓。"""
 
 from __future__ import annotations
 
@@ -23,15 +23,32 @@ from _catalog import (  # noqa: E402
     read_source_digest,
     template_root,
 )
-from _card_scaffold import scaffold_domain_card  # noqa: E402
-from _preview_scaffold import scaffold_preview_device  # noqa: E402
+from _card_scaffold import (  # noqa: E402
+    _class_prefix,
+    assess_arm_card,
+    moveit_arm_card_path,
+    scaffold_domain_card,
+    scaffold_moveit_arm_card,
+)
+from _commissioning_scaffold import (  # noqa: E402
+    assess_moveit_commissioning,
+    patch_device_moveit_post_init,
+    patch_rail_post_init,
+    scaffold_moveit_commissioning,
+)
 from _domain_layout import detect_domain_package, locate_device  # noqa: E402
+from _domain_owned_assets import scaffold_domain_owned_assets  # noqa: E402
+from _domain_scaffold import infer_domain_pkg, scaffold_domain_package  # noqa: E402
+from _graph_scaffold import scaffold_graph as write_graph_scaffold  # noqa: E402
 from _patch import (  # noqa: E402
     ensure_pyproject_dependencies,
+    patch_device_card_inheritance,
     patch_model_block,
     pip_install_editable,
     scaffold_device_py,
 )
+from _preview_scaffold import scaffold_preview_device  # noqa: E402
+from _rail_scaffold import default_rail_stl_path, scaffold_rail  # noqa: E402
 
 
 def _build_catalog_model(entry_slug: str, template: Path) -> dict[str, Any]:
@@ -59,7 +76,8 @@ def _build_domain_model(domain: Path, domain_pkg: str, device_id: str) -> dict[s
     model_yaml = domain / domain_pkg / "devices" / device_id / "models" / "model.yaml"
     if not model_yaml.is_file():
         raise FileNotFoundError(
-            f"领域自有模式需要 {model_yaml}；请先把 vendor URDF/mesh 放到 devices/{device_id}/models/"
+            f"领域自有模式需要 {model_yaml}；请先用 --vendor-urdf 拷贝 vendor 资产，"
+            f"或手动放到 devices/{device_id}/models/"
         )
     digest = read_source_digest(model_yaml)
     provider = f"{domain_pkg}.devices.{device_id}.moveit_model:build_moveit_model"
@@ -124,17 +142,51 @@ def _run_migrate(domain: Path, device_id: str) -> tuple[int, dict[str, Any] | st
     return proc.returncode, payload
 
 
+def _resolve_domain(args: argparse.Namespace) -> tuple[Path, bool]:
+    if args.new_domain is not None:
+        return args.new_domain.resolve(), True
+    if args.domain is not None:
+        domain = args.domain.resolve()
+        if not domain.is_dir():
+            raise FileNotFoundError(f"领域仓不存在: {domain}（新建请用 --new-domain）")
+        return domain, False
+    raise ValueError("必须指定 --domain 或 --new-domain")
+
+
+def _resolve_domain_pkg(domain: Path, *, greenfield: bool, override: str | None) -> str:
+    if override:
+        return override
+    if greenfield:
+        return infer_domain_pkg(domain)
+    return detect_domain_package(domain)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="一键引用 unilab_robot_template 机械臂到领域仓（写 provider + digest + 依赖）"
     )
-    parser.add_argument("--domain", required=True, type=Path, help="领域仓根目录")
-    parser.add_argument("--device", required=True, help="图里 @device id")
-    mode = parser.add_mutually_exclusive_group(required=True)
+    domain_group = parser.add_mutually_exclusive_group(required=True)
+    domain_group.add_argument("--domain", type=Path, help="已存在的领域仓根目录")
+    domain_group.add_argument(
+        "--new-domain",
+        type=Path,
+        help="在空目录 scaffold 最小导轨+机械臂领域包",
+    )
+    parser.add_argument(
+        "--device",
+        "--arm-device",
+        dest="device",
+        required=True,
+        help="graph 里机械臂 @device id",
+    )
+    mode = parser.add_mutually_exclusive_group(required=False)
     mode.add_argument(
         "--catalog",
         metavar="SLUG",
-        help="引用 template MoveIt catalog 型号（cr5 / cr7）",
+        nargs="?",
+        const="cr5",
+        default=None,
+        help="引用 template MoveIt catalog 型号（默认 cr5；greenfield 可省略）",
     )
     mode.add_argument(
         "--preview-catalog",
@@ -147,6 +199,16 @@ def main(argv: list[str] | None = None) -> int:
         help="引用领域仓 devices/<device>/moveit_model.py",
     )
     parser.add_argument("--domain-pkg", help="覆盖自动探测的 Python 包名")
+    parser.add_argument(
+        "--rail-device",
+        default="rail",
+        help="graph / @device 导轨 id（默认 rail）",
+    )
+    parser.add_argument(
+        "--rail-stl",
+        type=Path,
+        help="覆盖默认导轨视觉 mesh（默认 SZLab arm_slideway.stl）",
+    )
     parser.add_argument("--apply", action="store_true", help="写入 pyproject 与 device.py")
     parser.add_argument(
         "--install",
@@ -160,9 +222,39 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--skip-check", action="store_true", help="跳过装配检查器")
     parser.add_argument(
+        "--scaffold-graph",
+        action="store_true",
+        help="写/合并 graph（新建领域包时默认开启）",
+    )
+    parser.add_argument(
+        "--skip-graph",
+        action="store_true",
+        help="不修改 graph（已有领域包只导入机械臂）",
+    )
+    parser.add_argument(
+        "--graph-file",
+        default="deployment/graphs/local-debug.json",
+        help="相对领域仓根的 graph JSON 路径",
+    )
+    parser.add_argument(
+        "--vendor-urdf",
+        type=Path,
+        help="domain-owned greenfield：只读拷贝 vendor URDF",
+    )
+    parser.add_argument(
+        "--vendor-mesh-dir",
+        type=Path,
+        help="domain-owned greenfield：vendor mesh 目录",
+    )
+    parser.add_argument(
         "--with-card",
         action="store_true",
-        help="生成 frontend/cards/<device>-card manifest（引用 template 卡片）",
+        help="（兼容旧参数）机械臂卡片现已默认自动检测并补齐",
+    )
+    parser.add_argument(
+        "--skip-card",
+        action="store_true",
+        help="跳过机械臂卡片检测与补齐",
     )
     parser.add_argument(
         "--with-preview-scaffold",
@@ -173,10 +265,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--device-title", help="Preview @device displayname / 卡片标题默认")
     args = parser.parse_args(argv)
 
-    domain = args.domain.resolve()
-    if not domain.is_dir():
-        print(json.dumps({"ok": False, "error": f"领域仓不存在: {domain}"}, ensure_ascii=False))
+    demo_index = "docs/demo/README.md"
+
+    try:
+        domain, greenfield = _resolve_domain(args)
+    except (ValueError, FileNotFoundError) as exc:
+        print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False))
         return 2
+
+    if not args.catalog and not args.preview_catalog and not args.domain_owned:
+        if greenfield:
+            args.catalog = "cr5"
+        else:
+            print(
+                json.dumps(
+                    {
+                        "ok": False,
+                        "error": "已有领域仓须显式指定 --catalog、--preview-catalog 或 --domain-owned",
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 2
+
+    rail_stl = (args.rail_stl or default_rail_stl_path(SCRIPT_DIR)).resolve()
 
     template = template_root(SCRIPT_DIR)
     if template is None and (args.catalog or args.preview_catalog):
@@ -188,10 +300,86 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 2
 
-    demo_index = "docs/demo/README.md"
+    should_scaffold_graph = not args.skip_graph and (args.scaffold_graph or greenfield)
+    should_ensure_card = not args.skip_card
+    should_scaffold_moveit_arm_card = should_ensure_card and not args.preview_catalog
+    report: dict[str, Any] = {
+        "ok": True,
+        "dry_run": not args.apply,
+        "greenfield": greenfield,
+        "demo_index": demo_index,
+        "domain": str(domain),
+        "device_id": args.device,
+        "rail_device_id": args.rail_device,
+        "default_models": {
+            "arm_catalog": args.catalog or None,
+            "rail_mesh": str(rail_stl),
+        },
+    }
 
     try:
-        domain_pkg = args.domain_pkg or detect_domain_package(domain)
+        domain_pkg = _resolve_domain_pkg(
+            domain,
+            greenfield=greenfield,
+            override=args.domain_pkg,
+        )
+        report["domain_pkg"] = domain_pkg
+
+        if greenfield:
+            if args.apply:
+                domain.mkdir(parents=True, exist_ok=True)
+            report["domain_scaffold"] = scaffold_domain_package(
+                domain,
+                domain_pkg=domain_pkg,
+                domain_owned=bool(args.domain_owned),
+                graph_rel=args.graph_file,
+                apply=args.apply,
+            )
+            report["rail_scaffold"] = scaffold_rail(
+                domain,
+                domain_pkg=domain_pkg,
+                rail_id=args.rail_device,
+                rail_stl=rail_stl,
+                apply=args.apply,
+                with_rail_simulation=should_scaffold_moveit_arm_card,
+            )
+            if should_scaffold_graph:
+                report["graph_scaffold"] = write_graph_scaffold(
+                    domain,
+                    domain_pkg=domain_pkg,
+                    rail_id=args.rail_device,
+                    arm_id=args.device,
+                    graph_rel=args.graph_file,
+                    apply=args.apply,
+                )
+        elif should_scaffold_graph:
+            report["rail_scaffold"] = scaffold_rail(
+                domain,
+                domain_pkg=domain_pkg,
+                rail_id=args.rail_device,
+                rail_stl=rail_stl,
+                apply=args.apply,
+                with_rail_simulation=should_scaffold_moveit_arm_card,
+            )
+            report["graph_scaffold"] = write_graph_scaffold(
+                domain,
+                domain_pkg=domain_pkg,
+                rail_id=args.rail_device,
+                arm_id=args.device,
+                graph_rel=args.graph_file,
+                apply=args.apply,
+            )
+
+        if args.domain_owned and args.vendor_urdf is not None:
+            report["vendor_assets"] = scaffold_domain_owned_assets(
+                domain,
+                domain_pkg=domain_pkg,
+                device_id=args.device,
+                vendor_urdf=args.vendor_urdf,
+                vendor_mesh_dir=args.vendor_mesh_dir,
+                apply=args.apply,
+            )
+
         target = locate_device(domain, args.device, domain_pkg)
         preview_entry = None
         entry = None
@@ -211,32 +399,31 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False))
         return 2
 
-    mode = "domain-owned"
+    mode_name = "domain-owned"
     if args.catalog:
-        mode = "catalog-moveit"
+        mode_name = "catalog-moveit"
     elif args.preview_catalog:
-        mode = "catalog-preview"
+        mode_name = "catalog-preview"
 
-    report: dict[str, Any] = {
-        "ok": True,
-        "dry_run": not args.apply,
-        "mode": mode,
-        "demo_index": demo_index,
-        "domain": str(domain),
-        "domain_pkg": domain_pkg,
-        "device_id": args.device,
-        "device_py": str(target.device_py.relative_to(domain)).replace("\\", "/"),
-        "model": model,
-        "provider_one_liner": model["provider"],
-    }
+    report.update(
+        {
+            "mode": mode_name,
+            "device_py": str(target.device_py.relative_to(domain)).replace("\\", "/"),
+            "model": model,
+            "provider_one_liner": model["provider"],
+        }
+    )
 
     pyproject = domain / "pyproject.toml"
     deps_added: list[str] = []
     if args.catalog and entry is not None:
         report["template_root"] = str(template)
         report["catalog_distribution"] = entry.distribution
+        if greenfield:
+            report["demo_reference"] = "docs/demo/minimal-rail-arm-catalog"
+        else:
+            report["demo_reference"] = "docs/demo/catalog-moveit-cr5"
         deps = catalog_dependencies(entry)
-        report["demo_reference"] = "docs/demo/catalog-moveit-cr5"
         if pyproject.is_file():
             updated, deps_added = ensure_pyproject_dependencies(pyproject, deps)
             report["dependencies_added"] = deps_added
@@ -260,7 +447,77 @@ def main(argv: list[str] | None = None) -> int:
             report["dependencies_added"] = []
             report["warning"] = "未找到 pyproject.toml，请手动添加 preview catalog 依赖"
     elif args.domain_owned:
-        report["demo_reference"] = "docs/demo/domain-owned-moveit"
+        if greenfield and args.vendor_urdf is not None:
+            report["demo_reference"] = "docs/demo/minimal-rail-arm-domain-owned"
+        else:
+            report["demo_reference"] = "docs/demo/domain-owned-moveit"
+
+    card_assessment = assess_arm_card(
+        domain,
+        domain_pkg=domain_pkg,
+        device_id=args.device,
+        device_py=target.device_py,
+        preview_mode=bool(args.preview_catalog),
+    )
+
+    if should_scaffold_moveit_arm_card:
+        moveit_demo_dir = (
+            template / "skills" / "introduce-unilab-robot" / "docs" / "demo" / "catalog-moveit-cr5"
+            if template is not None
+            else SCRIPT_DIR.parent / "docs" / "demo" / "catalog-moveit-cr5"
+        )
+        report["moveit_arm_card"] = scaffold_moveit_arm_card(
+            domain,
+            domain_pkg=domain_pkg,
+            device_id=args.device,
+            demo_dir=moveit_demo_dir,
+            apply=args.apply,
+        )
+        if not args.skip_card:
+            report["moveit_commissioning"] = scaffold_moveit_commissioning(
+                domain,
+                domain_pkg=domain_pkg,
+                device_id=args.device,
+                rail_id=args.rail_device,
+                class_prefix=_class_prefix(args.device),
+                demo_dir=moveit_demo_dir,
+                apply=args.apply,
+            )
+            rail_py = domain / domain_pkg / "devices" / f"{args.rail_device}.py"
+            if rail_py.is_file() and args.apply:
+                rail_source = rail_py.read_text(encoding="utf-8")
+                rail_updated, rail_changed = patch_rail_post_init(
+                    rail_source,
+                    domain_pkg=domain_pkg,
+                )
+                if rail_changed:
+                    rail_py.write_text(rail_updated, encoding="utf-8", newline="\n")
+                    report["rail_post_init_patched"] = True
+
+        commissioning_assessment = assess_moveit_commissioning(
+            domain,
+            domain_pkg=domain_pkg,
+            device_id=args.device,
+            rail_id=args.rail_device,
+            arm_card_path=moveit_arm_card_path(domain, domain_pkg, args.device),
+        )
+        report["commissioning_assessment"] = commissioning_assessment
+        if not commissioning_assessment["complete"]:
+            merged_missing = list(card_assessment.get("missing", []))
+            merged_missing.extend(commissioning_assessment["missing"])
+            card_assessment = {
+                **card_assessment,
+                "complete": False,
+                "missing": merged_missing,
+                "commissioning_complete": False,
+            }
+        else:
+            card_assessment = {
+                **card_assessment,
+                "commissioning_complete": True,
+            }
+
+    report["card_assessment"] = card_assessment
 
     device_exists = target.device_py.is_file()
     report["device_exists"] = device_exists
@@ -286,15 +543,41 @@ def main(argv: list[str] | None = None) -> int:
     elif device_exists:
         original = target.device_py.read_text(encoding="utf-8")
         updated, changed = patch_model_block(original, model)
+        if should_scaffold_moveit_arm_card:
+            card_prefix = _class_prefix(args.device)
+            inherited, card_changed = patch_device_card_inheritance(
+                updated,
+                domain_pkg=domain_pkg,
+                device_id=args.device,
+                card_class_prefix=card_prefix,
+            )
+            updated = inherited
+            changed = changed or card_changed
+            if card_changed:
+                report["device_card_inheritance_patched"] = True
+        if should_scaffold_moveit_arm_card and not args.skip_card:
+            moveit_updated, moveit_changed = patch_device_moveit_post_init(
+                updated,
+                domain_pkg=domain_pkg,
+                device_id=args.device,
+            )
+            updated = moveit_updated
+            changed = changed or moveit_changed
+            if moveit_changed:
+                report["device_post_init_patched"] = True
         report["device_changed"] = changed
         if args.apply and changed:
             target.device_py.write_text(updated, encoding="utf-8", newline="\n")
     else:
         assert target.class_name is not None
+        card_prefix = _class_prefix(args.device) if should_scaffold_moveit_arm_card else None
         scaffold = scaffold_device_py(
             device_id=args.device,
             class_name=target.class_name,
             model=model,
+            with_card=should_scaffold_moveit_arm_card,
+            domain_pkg=domain_pkg,
+            card_class_prefix=card_prefix,
         )
         report["device_changed"] = True
         if args.apply:
@@ -318,7 +601,7 @@ def main(argv: list[str] | None = None) -> int:
         if code != 0:
             report["ok"] = False
 
-    if args.with_card:
+    if should_ensure_card:
         card_title = args.card_title or f"{args.device} 机械臂调试卡片"
         card_report = scaffold_domain_card(
             domain,
@@ -328,7 +611,19 @@ def main(argv: list[str] | None = None) -> int:
             apply=args.apply,
         )
         report["card"] = card_report
-        if args.apply and card_report.get("created_files"):
+        card_created = bool(card_report.get("created_files")) or bool(
+            (report.get("moveit_arm_card") or {}).get("created_files")
+        )
+        card_patched = bool(report.get("device_card_inheritance_patched"))
+        report["card_ensure"] = {
+            "required": True,
+            "was_complete": card_assessment["complete"],
+            "missing_before": card_assessment["missing"],
+            "created_or_patched": card_created or card_patched,
+        }
+        if args.apply and (card_created or card_patched):
+            report["card_scaffolded"] = True
+        elif not args.apply and not card_assessment["complete"]:
             report["card_scaffolded"] = True
 
     if args.apply and not args.skip_check and not args.preview_catalog:

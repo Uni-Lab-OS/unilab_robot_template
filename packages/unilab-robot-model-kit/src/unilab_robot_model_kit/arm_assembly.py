@@ -47,6 +47,8 @@ class SixAxisArmModelSpec:
     mock_system_suffix: str
     model_descriptor_path: Path
     srdf_base_link: str = "device_link"
+    planning_group_suffix: str = "arm"
+    controller_suffix: str = "controller"
 
 
 def verify_locked_source_digest(source_urdf: Path, expected_source_digest: str) -> None:
@@ -85,8 +87,8 @@ def assemble_six_axis_moveit_model(
     normalized_yaw_deg = normalize_mount_yaw_deg(mount_yaw_deg)
 
     prefix = f"{normalized_device_id}_"
-    planning_group = f"{prefix}arm"
-    controller_name = f"{prefix}controller"
+    planning_group = f"{prefix}{spec.planning_group_suffix}"
+    controller_name = f"{prefix}{spec.controller_suffix}"
     render_root = ET.fromstring(source_bytes)
     render_root.set("name", normalized_device_id)
     qualify_robot_tree(

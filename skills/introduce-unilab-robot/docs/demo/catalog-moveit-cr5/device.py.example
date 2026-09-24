@@ -1,12 +1,16 @@
-"""MoveIt catalog 引入示例（cr5）— 由 introduce-unilab-robot 写入 model 块。"""
+"""MoveIt catalog 引入示例（cr5）— greenfield 由 introduce-unilab-robot 写入。"""
 from __future__ import annotations
 
-from unilabos.registry.decorators import device
+from typing import Any
+
+from unilabos.registry.decorators import device, not_action
+
+from my_lab.devices.robot.robot_arm_card import RobotArmCardMixin
 
 
 @device(
-    id="my_robot",
-    category=["robot_arm"],
+    id="robot",
+    category=["robot"],
     description="TODO: 领域说明",
     model={
         "type": "package_moveit",
@@ -14,9 +18,31 @@ from unilabos.registry.decorators import device
         "source_digest": "<来自 L1 model.yaml source.sha256>",
     },
 )
-class MyRobotDevice:
-    """TODO: 接 MoveIt commissioning 端口与领域 workflow。"""
-
-    def __init__(self, device_id: str | None = None, config: dict | None = None, **kwargs: object) -> None:
-        self.device_id = device_id or "my_robot"
+class RobotDevice(RobotArmCardMixin):
+    def __init__(
+        self,
+        device_id: str | None = None,
+        config: dict | None = None,
+        **kwargs: object,
+    ) -> None:
+        self.device_id = device_id or "robot"
         self.config = dict(config or {})
+        self._moveit_split_binding: Any = None
+        self._moveit_client: Any = None
+
+    @not_action
+    def post_init(self, ros_node: Any) -> None:
+        backend = str(self.config.get("standard_execution_backend", "")).strip()
+        if backend not in {"moveit", "moveit_sim"}:
+            return
+        from my_lab.devices.robot.moveit_commissioning import build_robot_moveit_binding
+
+        model = type(self)._device_registry_meta["model"]
+        binding, client = build_robot_moveit_binding(
+            device_id=self.device_id,
+            ros_node=ros_node,
+            model_config=model,
+            node_config=self.config,
+        )
+        self._moveit_split_binding = binding
+        self._moveit_client = client

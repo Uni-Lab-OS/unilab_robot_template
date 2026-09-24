@@ -1,0 +1,57 @@
+"""Greenfield 导轨设备示例 — mock 后端下登记仿真轴。"""
+from __future__ import annotations
+
+from typing import Any
+
+from unilabos.registry.decorators import device, not_action
+
+
+@device(
+    id="rail",
+    category=["rail"],
+    description="Default SZLab slideway rail (package_static + unilab_rail_linear kinematics)",
+    displayname="Rail",
+    model={
+        "type": "package_static",
+        "provider": "unilab_rail_linear.static_layout:build_default_rail",
+        "source_digest": "<来自 L1 static_layout source.sha256>",
+        "joint_state_provider": "unilab_rail_linear:build_kinematic_model",
+        "joint_state_source_digest": "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d",
+    },
+)
+class RailDevice:
+    def __init__(
+        self,
+        device_id: str | None = None,
+        config: dict | None = None,
+        **kwargs: object,
+    ) -> None:
+        self.device_id = device_id or "rail"
+        self.config = dict(config or {})
+        self.config.update(kwargs)
+        self._simulation_driver = None
+
+    @not_action
+    def post_init(self, ros_node: object | None = None) -> None:
+        from my_lab.devices.rail_simulation import simulation_backends
+
+        backend = str(self.config.get("standard_execution_backend", "")).strip()
+        if backend not in simulation_backends():
+            return
+        self._ensure_simulation_driver()
+        if ros_node is not None:
+            self._simulation_driver.attach_ros(ros_node)
+
+    def _ensure_simulation_driver(self) -> None:
+        from my_lab.devices.rail_simulation import (
+            RailSimulationDriver,
+            register_rail_simulation_axis,
+            simulation_backends,
+        )
+
+        backend = str(self.config.get("standard_execution_backend", "")).strip()
+        if backend not in simulation_backends():
+            raise NotImplementedError
+        if self._simulation_driver is None:
+            self._simulation_driver = RailSimulationDriver(device_id=self.device_id)
+        register_rail_simulation_axis(self.device_id, self._simulation_driver)

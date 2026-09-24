@@ -145,10 +145,16 @@ def append_mock_ros2_control(
         initial_joint_values = (0.0,) * len(canonical_joint_names)
     if len(initial_joint_values) != len(canonical_joint_names):
         raise ValueError("initial_joint_values 必须与 canonical_joint_names 等长")
+    mock_label = str(mock_system_suffix).strip()
+    system_name = (
+        f"{prefix}mock_system"
+        if not mock_label
+        else f"{prefix}{mock_label}_mock_system"
+    )
     control = ET.SubElement(
         root,
         "ros2_control",
-        {"name": f"{prefix}{mock_system_suffix}_mock_system", "type": "system"},
+        {"name": system_name, "type": "system"},
     )
     hardware = ET.SubElement(control, "hardware")
     ET.SubElement(hardware, "plugin").text = "mock_components/GenericSystem"
