@@ -1,0 +1,79 @@
+{
+  "schema": "unilab.robot-urdf-reference-migration/v1",
+  "source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+  "files": [
+    {
+      "source": "work/ctag-dev-20260913/packages/labos_p4r/model.py",
+      "source_sha256": "f18ac4380e77dcdf1418a6f0098a6c81bb23e860c0b91524ebec713d35b76230",
+      "destination": "packages/unilab-robot-contracts/src/unilab_robot_contracts/urdf_reference.py",
+      "destination_sha256": "c21bfb79cdc19692990fd28d8f61f1c8031316a159ddb42aa1c6caeb08af697f"
+    },
+    {
+      "source": "work/ctag-dev-20260913/packages/labos_p4r/gripper.py",
+      "source_sha256": "9045c7021b9ddb631797bb99815b3bbb914bfa9f10f33787bf139e747c9dbe97",
+      "destination": "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/urdf_reference.py",
+      "destination_sha256": "41877c37f7b728714f7905ad7fee25bf408cecb744e32a936d821f01cb4f0bb4"
+    }
+  ],
+  "preserved": [
+    "Model and MimicModel class AST",
+    "numbers/origin/axis_rotation/inertia_record function AST",
+    "three selected original test method ASTs"
+  ],
+  "changed": [
+    "replace dependency on old labos_sim.se3 with existing robot-contracts RigidTransform",
+    "matrix conversion/multiplication remain bounded compatibility helpers; no duplicate full SE3 package",
+    "MimicModel consumes the shared affine map and generic URDF reference model"
+  ],
+  "validation": {
+    "package_checks": 18,
+    "old_consumer_checks": 11,
+    "old_consumer_class_identity_verified": true,
+    "comparison": {
+      "passed": true,
+      "tolerance": 1e-12,
+      "total_configurations": 192,
+      "models": [
+        {
+          "path": "reviews/CR12-CTAG-pre-20260912/run/assets/rokae_xmate_cr12/model.urdf",
+          "sha256": "091fbc1fa23963e01c5a68f5aba7b6b1bf63b493530403371d771407d104b7ea",
+          "measured_joints": 6,
+          "configurations": 64,
+          "max_matrix_element_error": 6.661338147750939e-16,
+          "inertia_records_equal": true,
+          "mimic": false
+        },
+        {
+          "path": "reviews/CR12-CTAG-pre-20260912/run/assets/cr12_ctag2f90/model.urdf",
+          "sha256": "6c67c8b44f6aa7541a0c06fdab63f93633ca786d9093a6d7d8452bccebd9e133",
+          "measured_joints": 14,
+          "configurations": 64,
+          "max_matrix_element_error": 8.881784197001252e-16,
+          "inertia_records_equal": true,
+          "mimic": true
+        },
+        {
+          "path": "work/p4r-dev-20260913/assets/p4r/rokae-cr12-synthetic-gripper-v1/cr12-physx-candidate.urdf",
+          "sha256": "0fa0f83bafef137dd0fef80d460803e18f0e0a5481161f9d7b46c0fef62abc8a",
+          "measured_joints": 8,
+          "configurations": 64,
+          "max_matrix_element_error": 5.551115123125783e-16,
+          "inertia_records_equal": true,
+          "mimic": false
+        }
+      ],
+      "physics_qualified": false
+    },
+    "ros_isaac_moveit_or_build": false,
+    "existing_graph_or_execution_route_changed": false
+  },
+  "limitations": [
+    "bounded fixed/revolute/prismatic URDF reference tree, not universal URDF loader",
+    "path and asset provenance supplied by caller; this is not a signed model provider or new CR12 distribution",
+    "does not read meshes, create physics constraints, simulate contact or infer actual state",
+    "nominal_fk expands commanded independent positions; fk reads every supplied joint and does not replace measured followers",
+    "inertia checks are necessary algebraic conditions only, not measurements or manufacturer qualification",
+    "malformed XML/limits may raise original parser exceptions; validation boundaries otherwise retained"
+  ],
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-urdf-reference-0zkjc_qs"
+}

@@ -73,3 +73,5 @@ pytest
 ## 仿射mimic参考计算
 
 末端执行器仿真包提供[URDF仿射关系展开](docs/affine-mimic-reference.md)，用于名义关系检查；实测关节、闭环机构与接触资格保持独立。C30b保留旧算法及消费者行为，不更改现有夹持/部署语义。
+
+[有限URDF参考正解](docs/urdf-reference.md)复用共享RigidTransform，区分完整关节观测与名义mimic展开，仅作CPU几何和惯量检查；不替代型号Provider或物理反馈。
