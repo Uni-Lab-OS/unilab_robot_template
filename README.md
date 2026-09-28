@@ -77,3 +77,7 @@ pytest
 [有限URDF参考正解](docs/urdf-reference.md)复用共享RigidTransform，区分完整关节观测与名义mimic展开，仅作CPU几何和惯量检查；不替代型号Provider或物理反馈。
 
 CTAG2F90冻结型号的[指垫参考几何](docs/ctag-pad-reference.md)提供显式模型/位姿下的包围盒与有符号间隙；无默认资产或执行接线，不授予接触或装配资格。
+
+## CTAG2F90
+
+[CTAG2F90型号资产与离线派生](docs/ctag-model-assets.md)：13份冻结来源，仅型号参考，未授予装配或运行资格。

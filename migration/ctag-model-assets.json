@@ -1,0 +1,175 @@
+{
+  "schema": "unilab.ctag-model-asset-migration/v1",
+  "stage": "C30j",
+  "source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+  "source_file": "work/ctag-dev-20260913/packages/labos_p4r/gripper.py",
+  "source_sha256": "9045c7021b9ddb631797bb99815b3bbb914bfa9f10f33787bf139e747c9dbe97",
+  "source_intake": [
+    {
+      "id": "ctag_portable",
+      "root": "robot_package",
+      "path": "derived/local-portable/ctag2f90_isaac_derivation.geometry.urdf",
+      "sha256": "3fd8a3099d539f6e980e0e53d8adc5d20f50b2953c44b41f4acd179e17e412f4",
+      "bytes": 15152,
+      "package_path": "source/portable.urdf"
+    },
+    {
+      "id": "ctag_mesh_base_link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/base_link.STL",
+      "sha256": "b8afdb9f8c3bfa0e9d59a623013151c819f0a6f05c70934df18b91c0a3fb92bc",
+      "bytes": 130184,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/base_link.STL",
+      "package_path": "meshes/base_link.STL"
+    },
+    {
+      "id": "ctag_mesh_Left_1_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_1_Link.STL",
+      "sha256": "85993ed4352fbf0099f4defdc6b28249adeb305949ae3d9e4be4a4594fb859e1",
+      "bytes": 166584,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_1_Link.STL",
+      "package_path": "meshes/Left_1_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Left_in_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_in_Link.STL",
+      "sha256": "f2bec7f6265a715a63994819be9e16a90c32814e44e38a5ba9283313aea40e74",
+      "bytes": 130084,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_in_Link.STL",
+      "package_path": "meshes/Left_in_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Left_up_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_up_Link.STL",
+      "sha256": "1e73d4d70e9da00730d30334ab9513ad8b0a1689bf14df8ea9789240cb675fd2",
+      "bytes": 121084,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_up_Link.STL",
+      "package_path": "meshes/Left_up_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Left_Pad_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_Pad_Link.STL",
+      "sha256": "58ab2e410a622f1d79fcdbbb742ca7891448dc4cd5ab631db912f5e88d7f8dbe",
+      "bytes": 31484,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_Pad_Link.STL",
+      "package_path": "meshes/Left_Pad_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Left_2_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_2_Link.STL",
+      "sha256": "45bbdb0fc62d7954c4a00702d6dc0530d2a5944a2f743095d8816bfe86716df8",
+      "bytes": 195784,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Left_2_Link.STL",
+      "package_path": "meshes/Left_2_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Right_2_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_2_Link.STL",
+      "sha256": "524a4e5deb8596e19c9fcb9d3f1c77a1164adcaa7f728842a5f8acbf1bd30994",
+      "bytes": 195784,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_2_Link.STL",
+      "package_path": "meshes/Right_2_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Right_1_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_1_Link.STL",
+      "sha256": "cbd5b48246d8f9549944d772e138bd33a76f7b2320209b5a03edf028cb216922",
+      "bytes": 166584,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_1_Link.STL",
+      "package_path": "meshes/Right_1_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Right_in_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_in_Link.STL",
+      "sha256": "6efb7cc6d06367d95636977f38e0204c4b8d0cc4908e8c87cf2bd918610c1694",
+      "bytes": 130084,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_in_Link.STL",
+      "package_path": "meshes/Right_in_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Right_up_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_up_Link.STL",
+      "sha256": "61b689508756e91e3d575fa0f086017dd7c4b6801dac6a78fd36ae926d86ee9c",
+      "bytes": 121084,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_up_Link.STL",
+      "package_path": "meshes/Right_up_Link.STL"
+    },
+    {
+      "id": "ctag_mesh_Right_Pad_Link",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_Pad_Link.STL",
+      "sha256": "5ddf2c80180fcc3272c505f483adb9e5a7dd0e8fdf7a1b26773caaf9e28b0fdd",
+      "bytes": 31484,
+      "source_uri": "../../sources/local-research-arms/active-perception/sim/isaac/assets/robot_tooling/vendor_prepared_v1/assets/crt_ctag2f90_gripper_visualization/meshes/Right_Pad_Link.STL",
+      "package_path": "meshes/Right_Pad_Link.STL"
+    },
+    {
+      "id": "ctag_vendor_original",
+      "root": "robot_package",
+      "path": "sources/local-research-arms/active-perception/technical_project_design/知行夹爪CTAG2F90/changingtek/crt_ctag2f90_gripper_visualization/urdf/crt_ctag2f90.urdf",
+      "sha256": "561ee57c3a5ab84f88b221f4f0383076d028af1ff427b08f4936a7ecb7a68055",
+      "bytes": 15561,
+      "package_path": "source/vendor.urdf"
+    }
+  ],
+  "validation": {
+    "source_function_sha256": "9045c7021b9ddb631797bb99815b3bbb914bfa9f10f33787bf139e747c9dbe97",
+    "normalization_statement_ast_equal_except_explicit_velocity_input": true,
+    "normalization_statements": 6,
+    "ctag_children_equal": 21,
+    "inertias_equal": 11,
+    "joint_limit_derivations_equal": 8,
+    "mesh_corners_equal": true,
+    "joint_configurations": 64,
+    "max_relative_fk_error": 6.661338147750939e-16,
+    "source_files_unchanged": 13,
+    "network_and_process_spawn_forbidden": true,
+    "isaac_runtime_qualification": false
+  },
+  "package_tests": {
+    "tests": 30,
+    "failures": 0,
+    "skipped": 0,
+    "junit_sha256": "e63ce3e4f3f03f65ad13967e039f2203413c8fc928815bb5d61c5b9978faefe0"
+  },
+  "files": {
+    ".gitattributes": "28dbb438f7fab08a2a2385570dd634a6ac9214a721e6ca155b2a44b1e5436f09",
+    "README.md": "1c6fa39aaa55a72389de508f32dce6ad3c3066673c67b6b2750aa2dc188f2c95",
+    "packages/unilab-end-effector-sim/pyproject.toml": "2cec015dca3168f00a742bcc7254a12dea470b1ffe8d5995363009055d04fbae",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/ctag_assets.py": "8b2db823a0105c56361befbd323f21f01fea47697d73f5c90c39779ecd8e3e0e",
+    "tests/test_ctag_assets.py": "5e5f3568dbd4557aacc27bacac92537afe2a78f14904db5db89417ad27f47a1b",
+    "docs/ctag-model-assets.md": "8a48fe998be6aa15e4d10d47022ad6a3f0129c0a8895520b7ff858f7cdd2c62d",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Left_1_Link.STL": "85993ed4352fbf0099f4defdc6b28249adeb305949ae3d9e4be4a4594fb859e1",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Left_2_Link.STL": "45bbdb0fc62d7954c4a00702d6dc0530d2a5944a2f743095d8816bfe86716df8",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Left_Pad_Link.STL": "58ab2e410a622f1d79fcdbbb742ca7891448dc4cd5ab631db912f5e88d7f8dbe",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Left_in_Link.STL": "f2bec7f6265a715a63994819be9e16a90c32814e44e38a5ba9283313aea40e74",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Left_up_Link.STL": "1e73d4d70e9da00730d30334ab9513ad8b0a1689bf14df8ea9789240cb675fd2",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Right_1_Link.STL": "cbd5b48246d8f9549944d772e138bd33a76f7b2320209b5a03edf028cb216922",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Right_2_Link.STL": "524a4e5deb8596e19c9fcb9d3f1c77a1164adcaa7f728842a5f8acbf1bd30994",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Right_Pad_Link.STL": "5ddf2c80180fcc3272c505f483adb9e5a7dd0e8fdf7a1b26773caaf9e28b0fdd",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Right_in_Link.STL": "6efb7cc6d06367d95636977f38e0204c4b8d0cc4908e8c87cf2bd918610c1694",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/Right_up_Link.STL": "61b689508756e91e3d575fa0f086017dd7c4b6801dac6a78fd36ae926d86ee9c",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/meshes/base_link.STL": "b8afdb9f8c3bfa0e9d59a623013151c819f0a6f05c70934df18b91c0a3fb92bc",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/source/portable.urdf": "3fd8a3099d539f6e980e0e53d8adc5d20f50b2953c44b41f4acd179e17e412f4",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/source/vendor.urdf": "561ee57c3a5ab84f88b221f4f0383076d028af1ff427b08f4936a7ecb7a68055",
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/models/ctag2f90/source-lock.json": "6cd70099d16cfacf47f5270fedd1d63622d130efd4c2cc3a85af1ac22bf32c0f"
+  },
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-ctag-model-assets-4mc7m8sf",
+  "limits": [
+    "No OS Provider or domain assembly",
+    "No graph or simulation root field changes",
+    "No new CR12 arm distribution or MoveIt package",
+    "No Isaac/ROS/hardware or installation build",
+    "Source naming ctag_ retained; not a multi-instance binding"
+  ],
+  "runtime_qualified": false
+}
