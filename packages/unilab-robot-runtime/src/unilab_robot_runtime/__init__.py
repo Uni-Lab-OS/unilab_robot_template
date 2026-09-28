@@ -9,6 +9,7 @@ from unilab_robot_contracts import (
     resolve_moveit_planning_budget,
 )
 
+from .joint_segment import JointSegmentExecutor
 from .access_motion_backend import AccessMotionBackend
 from .activation_store import FrozenRobotActivation, RobotActivationStore
 from .attachment_projector import AttachmentProjector
@@ -42,6 +43,7 @@ __all__ = [
     "DEFAULT_NUM_PLANNING_ATTEMPTS",
     "DEFAULT_PLAN_RETRY_ATTEMPTS",
     "AccessMotionBackend",
+    "JointSegmentExecutor",
     "AttachmentProjector",
     "FrozenRobotActivation",
     "MaintenanceSession",

@@ -84,3 +84,5 @@ CTAG2F90冻结型号的[指垫参考几何](docs/ctag-pad-reference.md)提供显
 [CTAG2F90型号资产与离线派生](docs/ctag-model-assets.md)：13份冻结来源，仅型号参考，未授予装配或运行资格。
 
 [珞石xMateCR12型号包](docs/rokae-cr12-model.md)保存冻结来源与独立Provider，不代表领域装配或运行资格。
+
+C30l：关节段参考执行器与Isaac桥接已分归机器人包和OS；详见[说明](docs/joint-segment-reference.md)。完整装配及物理运行仍待验收。
