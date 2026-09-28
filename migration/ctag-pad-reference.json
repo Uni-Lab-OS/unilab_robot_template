@@ -1,0 +1,48 @@
+{
+  "schema": "unilab.ctag-pad-reference-migration/v1",
+  "source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+  "source_file": "work/ctag-dev-20260913/packages/labos_p4r/gripper.py",
+  "source_sha256": "9045c7021b9ddb631797bb99815b3bbb914bfa9f10f33787bf139e747c9dbe97",
+  "destination": "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/ctag_reference.py",
+  "functions_ast_equal": [
+    "pad_bounds",
+    "projected_pad_gap"
+  ],
+  "original_test_ast_equal": "test_pad_crossing_rejected_by_signed_gap",
+  "files": {
+    "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/ctag_reference.py": "4da177ee1d6b3e630c1fd03213be23b270d737ba523c494682c4ba9c0c44e7ec",
+    "tests/test_ctag_pad_reference.py": "9ca6c56ee2863487137a34c498dd9f1e48a28770c6d12d0ff135cd0531f808b9",
+    "docs/ctag-pad-reference.md": "3069a7c500d65f83b6193434f66094ce5c129a0d68d2c8f7b12eda3db6deb05e"
+  },
+  "validation": {
+    "original_consumer_tests": 7,
+    "migrated_consumer_tests": 7,
+    "package_tests": 17,
+    "model_configurations": 64,
+    "pad_corners_equal": true,
+    "gap_values_equal": true,
+    "full_model_runtime": false
+  },
+  "model_comparison": {
+    "input_sha256": {
+      "/home/tyzuo/Lab-OS-Testbed/reviews/CR12-CTAG-pre-20260912/run/assets/cr12_ctag2f90/model.urdf": "6c67c8b44f6aa7541a0c06fdab63f93633ca786d9093a6d7d8452bccebd9e133",
+      "/home/tyzuo/Lab-OS-Testbed/reviews/CR12-CTAG-pre-20260912/run/assets/cr12_ctag2f90/meshes/mesh_58ab2e410a622f1d.stl": "58ab2e410a622f1d79fcdbbb742ca7891448dc4cd5ab631db912f5e88d7f8dbe",
+      "/home/tyzuo/Lab-OS-Testbed/reviews/CR12-CTAG-pre-20260912/run/assets/cr12_ctag2f90/meshes/mesh_5ddf2c80180fcc32.stl": "5ddf2c80180fcc3272c505f483adb9e5a7dd0e8fdf7a1b26773caaf9e28b0fdd"
+    },
+    "pad_corners_equal": true,
+    "configurations": 64,
+    "outputs_equal": true,
+    "gap_min_m": 0.0055813615868799535,
+    "gap_max_m": 0.06592023513288456,
+    "qualified": false
+  },
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-ctag-pad-geometry-len1osqz",
+  "initial_failure": "所选CPU环境缺PyYAML，三组入口导入及pytest收集失败；现有PLC环境重跑通过，没有安装/升级",
+  "limits": [
+    "仅CTAG型号几何，不迁入场景/控制器或资产发行",
+    "原读取器不合成visual origin/scale，非通用STL/URDF校验器",
+    "命令开度限制由设备执行合同维护，本模块不自动限制或派发",
+    "名义投影不是实测开度、完整碰撞、接触或抓力资格",
+    "未创建领域装配，未运行ROS/Isaac/MoveIt或构建"
+  ]
+}
