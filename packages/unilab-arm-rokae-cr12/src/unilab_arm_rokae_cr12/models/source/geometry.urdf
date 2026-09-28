@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="xMate_robot">
+  <!--GEOMETRY ONLY: no dynamics, ros2_control, hardware, TCP or contact qualification. Source inertias retained only in fake-expanded.urdf for audit.-->
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0" />
+  </material>
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0" />
+  </material>
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0" />
+  </material>
+  <material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0" />
+  </material>
+  <material name="orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0" />
+  </material>
+  <material name="brown">
+    <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0" />
+  </material>
+  <material name="red">
+    <color rgba="0.8 0.0 0.0 1.0" />
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0" />
+  </material>
+  <material name="Beige">
+    <color rgba="1.0 0.784 0.5765 1.0" />
+  </material>
+  <link name="world" />
+  <joint name="fixed" type="fixed">
+    <parent link="world" />
+    <child link="xMateCR12_base" />
+  </joint>
+  <link name="xMateCR12_base">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_base.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_base.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+    </collision>
+  </link>
+  <joint name="joint1" type="revolute">
+    <parent link="xMateCR12_base" />
+    <child link="xMateCR12_link1" />
+    <limit effort="436" lower="-6.2832" upper="6.2832" velocity="2.0943951023931953" />
+    <axis xyz="0 0 1" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="xMateCR12_link1">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="joint2" type="revolute">
+    <parent link="xMateCR12_link1" />
+    <child link="xMateCR12_link2" />
+    <limit effort="436" lower="-2.9671" upper="2.9671" velocity="2.0943951023931953" />
+    <axis xyz="0 1 0" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.35" />
+  </joint>
+  <link name="xMateCR12_link2">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.0" />
+    </collision>
+  </link>
+  <joint name="joint3" type="revolute">
+    <parent link="xMateCR12_link2" />
+    <child link="xMateCR12_link3" />
+    <limit effort="194" lower="-6.2832" upper="6.2832" velocity="3.141592653589793" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.76" />
+  </joint>
+  <link name="xMateCR12_link3">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="joint4" type="revolute">
+    <parent link="xMateCR12_link3" />
+    <child link="xMateCR12_link4" />
+    <limit effort="102" lower="-6.2832" upper="6.2832" velocity="4.084070449666731" />
+    <axis xyz="0 0 1" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.54" />
+  </joint>
+  <link name="xMateCR12_link4">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link4.stl" scale=".001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+    </collision>
+  </link>
+  <joint name="joint5" type="revolute">
+    <parent link="xMateCR12_link4" />
+    <child link="xMateCR12_link5" />
+    <limit effort="66" lower="-6.2832" upper="6.2832" velocity="4.1887902047863905" />
+    <axis xyz="0 -1 0" />
+    <origin rpy="0 0 0" xyz="0.0 -0.15 0.0" />
+  </joint>
+  <link name="xMateCR12_link5">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+    </collision>
+  </link>
+  <joint name="joint6" type="revolute">
+    <parent link="xMateCR12_link5" />
+    <child link="xMateCR12_link6" />
+    <limit effort="66" lower="-6.2832" upper="6.2832" velocity="4.1887902047863905" />
+    <axis xyz="0 0 1" />
+    <origin rpy="0.0 0.0 0" xyz="0.0 0.0 0.127" />
+  </joint>
+  <link name="xMateCR12_link6">
+    <visual>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link6.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+      <material name="white" />
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link6.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+    </collision>
+  </link>
+</robot>

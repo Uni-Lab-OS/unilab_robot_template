@@ -10,6 +10,7 @@
 ```text
 unilab-robot-contracts     L0：指令、后端、观测、硬件配置和点位解析合同
 unilab-arm-cr7             L1：CR7 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
+unilab-arm-rokae-cr12      L1：珞石CR12型号、限位、正解与静态MoveIt模型（无执行后端）
 unilab-arm-cr5             L1：CR5 型号、限位、运动学及 PLC/TCP-SDK/MoveIt Adapter
 unilab-end-effector-sim    L1：夹爪与快换工具的可替换仿真 Adapter
 unilab-rail-linear         L1：单轴导轨型号、行程及 PLC/仿真 Adapter
@@ -81,3 +82,5 @@ CTAG2F90冻结型号的[指垫参考几何](docs/ctag-pad-reference.md)提供显
 ## CTAG2F90
 
 [CTAG2F90型号资产与离线派生](docs/ctag-model-assets.md)：13份冻结来源，仅型号参考，未授予装配或运行资格。
+
+[珞石xMateCR12型号包](docs/rokae-cr12-model.md)保存冻结来源与独立Provider，不代表领域装配或运行资格。
