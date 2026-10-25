@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from dataclasses import replace
 from threading import RLock
 
@@ -33,10 +33,13 @@ class RailMountedArmCoordinator:
         profile: HardwareProfile,
         journal: CommandJournal,
         safety_observation: Callable[[], SafetyInterlockObservation],
+        external_fence: Callable[[], Iterable[str]] | None = None,
     ) -> None:
         """注入可替换 Arm/Rail 模块和部署级权威依赖。
 
-        参数：模块端点必须互不重叠且全部被 profile 锁定。返回：无。异常：装配错误时拒绝启动。
+        参数：模块端点必须互不重叠且全部被 profile 锁定；``external_fence``
+        是可选的 OS 权威 Fence 只读来源，省略时协调器行为不变。返回：无。
+        异常：装配错误时拒绝启动。
         """
 
         if arm.endpoint_ids.intersection(rail.endpoint_ids):
@@ -49,6 +52,7 @@ class RailMountedArmCoordinator:
         self.profile = profile
         self.journal = journal
         self._safety_observation = safety_observation
+        self._external_fence = external_fence
         self._execution_lock = RLock()
         self._phase_lock = RLock()
         self._active_phases: dict[str, str] = {}
@@ -61,14 +65,22 @@ class RailMountedArmCoordinator:
 
     @property
     def has_unsettled_fence(self) -> bool:
-        """公共复合命令或私有机械臂任一未结算时返回 True。"""
+        """公共复合命令、私有机械臂或 OS 权威 Fence 任一未结算时返回 True。
 
-        return bool(self.journal.fenced_command_ids()) or self.arm.has_unsettled_fence
+        ``external_fence`` 读取异常按"存在未结算 Fence"处理，保持故障关闭；
+        该属性只报告相位，不写入也不结算外部账本。
+        """
+
+        if self.journal.fenced_command_ids() or self.arm.has_unsettled_fence:
+            return True
+        return self._external_fence_rejection() is not None
 
     def execute(self, command: RobotCommand, *, rail_target_ref: str) -> CommandResult:
         """执行 rail-then-arm，并在任何派发后歧义上保留 Claim/Fence 语义。
 
-        参数：公共 RobotCommand 与独立导轨目标。返回：同一公共 command_id 的结果。异常：无；错误收敛为 rejected 或 execution_unknown。
+        参数：公共 RobotCommand 与独立导轨目标。返回：同一公共 command_id 的结果。
+        异常：无；错误收敛为 rejected 或 execution_unknown。OS 权威 Fence 非空或
+        读取失败时，在 accept 与任何模块派发之前返回 rejected。
         """
 
         if command.hardware_profile_digest != self.profile.digest:
@@ -76,6 +88,11 @@ class RailMountedArmCoordinator:
                 command.command_id,
                 CommandState.REJECTED,
                 "WorkCell profile digest 不匹配",
+            )
+        external_fence = self._external_fence_rejection()
+        if external_fence:
+            return CommandResult(
+                command.command_id, CommandState.REJECTED, external_fence
             )
         if self.journal.get(command.command_id) is None:
             fenced = self.journal.fenced_command_ids()
@@ -418,6 +435,26 @@ class RailMountedArmCoordinator:
 
         with self._phase_lock:
             return self._active_phases.get(command_id)
+
+    def _external_fence_rejection(self) -> str | None:
+        """读取 OS 权威 Fence，返回禁止派发的理由。
+
+        未注入外部来源或外部 Fence 为空时返回 ``None``。读取失败不吞掉后
+        继续执行，而是转成拒绝理由，由调用方保持故障关闭。
+        """
+
+        if self._external_fence is None:
+            return None
+        try:
+            fences = tuple(str(fence_id) for fence_id in self._external_fence())
+        except Exception as exc:  # noqa: BLE001
+            return (
+                "OS 权威 Fence 读取失败，按存在未结算 Fence 禁止派发: "
+                f"{type(exc).__name__}: {exc}"
+            )
+        if fences:
+            return f"OS 权威 Fence 存在未结算命令，禁止新派发: {fences}"
+        return None
 
     def _rail_phase_rejection(self) -> str | None:
         """验证开始移动导轨前硬件必须禁止机械臂运动。"""

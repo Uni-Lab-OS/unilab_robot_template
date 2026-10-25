@@ -19,6 +19,12 @@ from .binding import (
     bind_commissioning_runtime,
     build_test_runtime,
 )
+from .engines import (
+    ArmEngineBase,
+    ArmEnginePort,
+    BlenderArmEngine,
+    KinematicArmEngine,
+)
 from .factory import (
     RuntimeDependencies,
     RuntimeRequirements,
@@ -28,6 +34,13 @@ from .factory import (
     runtime_requirements,
 )
 from .manipulation import ManipulationSequence, ManipulationSequenceRunner
+from .os_world import (
+    CommandSpec,
+    RobotWorld,
+    RobotWorldModel,
+    WorldIdentity,
+    build_device_runtime,
+)
 from .point_maintenance import (
     PointMaintenanceService,
     PointSetQualification,
@@ -43,9 +56,14 @@ __all__ = [
     "DEFAULT_NUM_PLANNING_ATTEMPTS",
     "DEFAULT_PLAN_RETRY_ATTEMPTS",
     "AccessMotionBackend",
+    "ArmEngineBase",
+    "ArmEnginePort",
+    "BlenderArmEngine",
+    "CommandSpec",
     "JointSegmentExecutor",
     "AttachmentProjector",
     "FrozenRobotActivation",
+    "KinematicArmEngine",
     "MaintenanceSession",
     "ManipulationSequence",
     "ManipulationSequenceRunner",
@@ -55,13 +73,17 @@ __all__ = [
     "PointTestEvidence",
     "PublishedPointSet",
     "RobotActivationStore",
+    "RobotWorld",
+    "RobotWorldModel",
     "RuntimeBinding",
     "RuntimeDependencies",
     "RuntimeRequirements",
     "ValidatedPointSet",
+    "WorldIdentity",
     "apply_moveit_planning_budget",
     "arm_model_descriptor",
     "bind_commissioning_runtime",
+    "build_device_runtime",
     "build_test_runtime",
     "create_runtime",
     "load_point_set",

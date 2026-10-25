@@ -60,6 +60,8 @@ from .hardware_profile import (
 )
 from .joint_state import JointStateNameMap
 from .journal import CommandJournal, InMemoryCommandJournal, SQLiteCommandJournal
+from .linear_axis import LinearAxis, LinearAxisChain, linear_axis_chain_digest
+from .model_provider import ModelProviderDescriptor, model_provider_digest
 from .modules import ArmModulePort, RailModulePort
 from .motion_profiles import (
     AccessMotionPolicy,
@@ -196,7 +198,10 @@ __all__ = [
     "JointType",
     "KinematicAnchor",
     "KinematicAttachmentProjection",
+    "LinearAxis",
+    "LinearAxisChain",
     "MotionDirection",
+    "ModelProviderDescriptor",
     "MotionPrimitive",
     "MotionProfile",
     "MotionProfileCatalog",
@@ -260,6 +265,8 @@ __all__ = [
     "WorkCellPlanPhase",
     "apply_moveit_planning_budget",
     "bump_point_set_revision",
+    "linear_axis_chain_digest",
+    "model_provider_digest",
     "parse_site_access_declarations",
     "patch_authored_composite_target_yaml",
     "patch_authored_joint_target_yaml",

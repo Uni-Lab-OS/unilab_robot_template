@@ -15,9 +15,15 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from unilab_robot_contracts import JointStateNameMap
+from unilab_robot_contracts import (
+    JointStateNameMap,
+    ModelProviderDescriptor,
+    RigidTransform,
+    model_provider_digest,
+)
 
 from .adapters.moveit import CR7_JOINT_NAMES
+from .factory import MODEL_DESCRIPTOR, MODULE_VERSION
 
 _DEVICE_ID = re.compile(r"^[A-Za-z0-9_]+$")
 _SOURCE_DIGEST = "c64ced0cdcb2654dc07190dc0b9c4d3db813a9515507a69c5c027d82547c14c7"
@@ -25,6 +31,8 @@ _MODEL_ROOT = Path(__file__).resolve().parent / "models"
 _MODEL_DESCRIPTOR = _MODEL_ROOT / "model.yaml"
 _SOURCE_URDF = _MODEL_ROOT / "cr7_robot.urdf"
 _MESH_ROOT = _MODEL_ROOT / "meshes" / "cr7"
+MODEL_SOURCE_PATH = _SOURCE_URDF
+MODEL_DESCRIPTOR_PATH = _MODEL_DESCRIPTOR
 _LINK_NAMES = {
     "dummy_link": "device_link",
     "base_link": "cr7_base",
@@ -210,6 +218,92 @@ def build_moveit_model(
         qualified_joint_names=qualified_joints,
         topology_digest=topology_digest,
     )
+
+
+def describe_model_provider(
+    *,
+    source_path: str | Path | None = None,
+    descriptor_path: str | Path | None = None,
+) -> ModelProviderDescriptor:
+    """返回 CR7 型号 provider 的版本、摘要、轴序、限位和 TCP。
+
+    参数：``source_path``/``descriptor_path`` 是可选显式输入，默认使用
+    distribution 内锁定的 URDF 与 ``model.yaml``；测试或派生型号可传入
+    临时文件。返回：不含时间、随机数或本机路径影响的冻结 descriptor。
+    异常：型号描述符缺失、轴序漂移或 URDF 缺少限位时拒绝。
+    安全：摘要只覆盖显式内容，不替代 ``build_moveit_model`` 的锁定来源
+    摘要校验；TCP 与末端安装面重合，实际工具 TCP 由 ToolContext 叠加。
+    """
+
+    urdf_path = _SOURCE_URDF if source_path is None else Path(source_path)
+    yaml_path = _MODEL_DESCRIPTOR if descriptor_path is None else Path(descriptor_path)
+    urdf_bytes = urdf_path.read_bytes()
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+    model_id = str(data.get("model_id", "")).strip()
+    if not model_id:
+        raise ValueError("CR7 model.yaml 缺少 model_id")
+    joint_names = tuple(
+        str(value) for value in data.get("kinematic_joints", ())
+    )
+    if joint_names != CR7_JOINT_NAMES:
+        raise ValueError("CR7 model.yaml 的 kinematic_joints 与型号实现漂移")
+    joint_limits = _joint_limits_from_urdf(urdf_bytes, joint_names)
+    tcp = RigidTransform.identity()
+    digest = model_provider_digest(
+        name=model_id,
+        version=MODULE_VERSION,
+        joint_names=joint_names,
+        joint_limits=joint_limits,
+        tcp=tcp,
+        sources={
+            "urdf": hashlib.sha256(urdf_bytes).hexdigest(),
+            "model": hashlib.sha256(yaml_path.read_bytes()).hexdigest(),
+        },
+    )
+    return ModelProviderDescriptor(
+        name=model_id,
+        version=MODULE_VERSION,
+        digest=digest,
+        joint_names=joint_names,
+        joint_limits=joint_limits,
+        tcp=tcp,
+        model_path=str(urdf_path),
+        joint_units=("rad",) * len(joint_names),
+        base_frame=MODEL_DESCRIPTOR.base_frame,
+        tip_frame=MODEL_DESCRIPTOR.tip_link,
+    )
+
+
+def _joint_limits_from_urdf(
+    source_bytes: bytes,
+    joint_names: tuple[str, ...],
+) -> tuple[tuple[float, float], ...]:
+    """按规范轴序从厂家 URDF 提取逐轴 SI 限位。"""
+
+    root = ET.fromstring(source_bytes)
+    source_by_canonical = {
+        canonical: original
+        for original, canonical in _JOINT_NAMES.items()
+        if original.startswith("joint")
+    }
+    limits: list[tuple[float, float]] = []
+    for name in joint_names:
+        original = source_by_canonical.get(name)
+        if original is None:
+            raise ValueError(f"CR7 URDF 未声明型号关节 {name}")
+        joint = root.find(f"joint[@name='{original}']")
+        if joint is None:
+            raise ValueError(f"CR7 URDF 缺少 {original}")
+        limit = joint.find("limit")
+        if limit is None:
+            raise ValueError(f"CR7 URDF {original} 缺少 limit")
+        try:
+            lower = float(limit.attrib["lower"])
+            upper = float(limit.attrib["upper"])
+        except (KeyError, ValueError) as exc:
+            raise ValueError(f"CR7 URDF {original} 缺少有效上下限") from exc
+        limits.append((lower, upper))
+    return tuple(limits)
 
 
 def _topology_digest(
@@ -436,7 +530,10 @@ def _moveit_controllers(
 
 
 __all__ = [
+    "MODEL_DESCRIPTOR_PATH",
+    "MODEL_SOURCE_PATH",
     "MoveItModelBundle",
     "build_joint_state_name_map",
     "build_moveit_model",
+    "describe_model_provider",
 ]

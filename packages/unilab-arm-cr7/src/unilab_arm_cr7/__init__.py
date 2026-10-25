@@ -16,6 +16,7 @@ from .moveit_model import (
     MoveItModelBundle,
     build_joint_state_name_map,
     build_moveit_model,
+    describe_model_provider,
 )
 from .standalone_device import StandaloneArmDevice
 
@@ -36,4 +37,5 @@ __all__ = [
     "create_moveit_commissioning_adapter",
     "create_plc_backend",
     "create_tcp_sdk_backend",
+    "describe_model_provider",
 ]

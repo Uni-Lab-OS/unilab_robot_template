@@ -11,10 +11,18 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .factory import MODEL_DESCRIPTOR, build_joint_state_name_map
+import yaml
+from unilab_robot_contracts import (
+    ModelProviderDescriptor,
+    RigidTransform,
+    model_provider_digest,
+)
+
+from .factory import MODEL_DESCRIPTOR, MODULE_VERSION, build_joint_state_name_map
 
 _DEVICE_ID = re.compile(r"^[A-Za-z0-9_]+$")
 _MODEL_YAML = Path(__file__).resolve().parent / "models" / "model.yaml"
+MODEL_YAML_PATH = _MODEL_YAML
 _SOURCE_DIGEST = "9ec7d9833f46c26e02e08f06aecd12495e4ab6753ebd1e47a967f7bf885bf83d"
 _MODEL_ID = "szlab-linear-rail-a"
 
@@ -94,6 +102,59 @@ def build_kinematic_model(
     )
 
 
+def describe_model_provider(
+    *,
+    descriptor_path: str | Path | None = None,
+) -> ModelProviderDescriptor:
+    """返回导轨型号 provider 的版本、摘要、单轴顺序、行程和 frame。
+
+    参数：``descriptor_path`` 是可选显式输入，默认使用 distribution 内
+    锁定的 ``model.yaml``；测试或派生型号可传入临时文件。返回：不含时间、
+    随机数或本机路径影响的冻结 descriptor。异常：型号标识、轴名、行程或
+    速度与型号实现漂移时拒绝。
+    安全：摘要只覆盖 ``model.yaml`` 内容；TCP 取滑座挂载面上的 identity，
+    导轨没有工具 TCP。
+    """
+
+    yaml_path = _MODEL_YAML if descriptor_path is None else Path(descriptor_path)
+    data = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+    model_id = str(data.get("model_id", "")).strip()
+    axis = data.get("axis") or {}
+    axis_name = str(axis.get("name", "")).strip()
+    travel = tuple(float(value) for value in axis.get("travel_m", ()))
+    velocity = float(axis.get("velocity_limit_m_s", float("nan")))
+    if not model_id:
+        raise ValueError("导轨 model.yaml 缺少 model_id")
+    if (
+        model_id != _MODEL_ID
+        or axis_name != MODEL_DESCRIPTOR.axis_joint
+        or travel != MODEL_DESCRIPTOR.travel_m
+        or velocity != MODEL_DESCRIPTOR.velocity_limit_m_s
+    ):
+        raise ValueError("导轨 model.yaml 与型号实现漂移")
+    tcp = RigidTransform.identity()
+    digest = model_provider_digest(
+        name=model_id,
+        version=MODULE_VERSION,
+        joint_names=(axis_name,),
+        joint_limits=(travel,),
+        tcp=tcp,
+        sources={"model": _source_file_digest(yaml_path)},
+    )
+    return ModelProviderDescriptor(
+        name=model_id,
+        version=MODULE_VERSION,
+        digest=digest,
+        joint_names=(axis_name,),
+        joint_limits=(travel,),
+        tcp=tcp,
+        model_path=str(yaml_path),
+        joint_units=("m",),
+        base_frame=MODEL_DESCRIPTOR.base_link,
+        tip_frame=MODEL_DESCRIPTOR.carriage_link,
+    )
+
+
 def _source_file_digest(path: Path) -> str:
     """对型号描述符做换行无关摘要。
 
@@ -128,4 +189,9 @@ def _topology_digest(
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
-__all__ = ["RailKinematicModelBundle", "build_kinematic_model"]
+__all__ = [
+    "MODEL_YAML_PATH",
+    "RailKinematicModelBundle",
+    "build_kinematic_model",
+    "describe_model_provider",
+]
