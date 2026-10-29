@@ -1,0 +1,41 @@
+{
+  "schema": "unilab.robot-model/v1",
+  "model_id": "rokae-xmate-cr12",
+  "source": {
+    "repository": "Lab-OS-Testbed frozen artifact",
+    "path": "reviews/CR12-CTAG-pre-20260912/run/assets/rokae_xmate_cr12/model.urdf",
+    "exact_ref": "sha256:091fbc1fa23963e01c5a68f5aba7b6b1bf63b493530403371d771407d104b7ea",
+    "sha256": "091fbc1fa23963e01c5a68f5aba7b6b1bf63b493530403371d771407d104b7ea"
+  },
+  "upstream": {
+    "repository": "https://github.com/RokaeRobot/rokae_ros2.git",
+    "exact_ref": "d6a508c38513d4c39b2f10f14275d0e26df7fb43",
+    "path": "rokae_description/urdf/xMateCR12.urdf.xacro"
+  },
+  "kinematic_joints": [
+    "rokae_cr12_joint_1",
+    "rokae_cr12_joint_2",
+    "rokae_cr12_joint_3",
+    "rokae_cr12_joint_4",
+    "rokae_cr12_joint_5",
+    "rokae_cr12_joint_6"
+  ],
+  "joint_state_sources": {
+    "canonical": [
+      "rokae_cr12_joint_1",
+      "rokae_cr12_joint_2",
+      "rokae_cr12_joint_3",
+      "rokae_cr12_joint_4",
+      "rokae_cr12_joint_5",
+      "rokae_cr12_joint_6"
+    ]
+  },
+  "forbidden_joints": [
+    "arm_base_joint"
+  ],
+  "moveit_group": "rokae_cr12_arm",
+  "rviz_required": false,
+  "hardware_qualified": false,
+  "isaac_qualified": false,
+  "scope": "型号与静态模型；不提供执行后端或现场装配"
+}

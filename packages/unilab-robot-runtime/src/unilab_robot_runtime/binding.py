@@ -136,6 +136,9 @@ class RuntimeBinding:
                 raise RuntimeError("维护会话已被占用")
             if bool(getattr(self.runtime, "has_unsettled_fence", False)):
                 raise RuntimeError("存在未物理结算 Fence，禁止打开维护会话")
+            prepare = getattr(self.commissioning_port, "prepare_commissioning", None)
+            if callable(prepare):
+                prepare()
             snapshot = self.commissioning_port.commissioning_snapshot()
             if (
                 not snapshot.is_fresh()
@@ -271,6 +274,57 @@ def build_test_runtime(
         endpoint_ids,
         owner_id=owner_id,
         rail_mounted=hasattr(runtime, "rail"),
+        commissioning_port=commissioning_port,
+        deployment_mode=deployment_mode,
+    )
+
+
+@dataclass(frozen=True)
+class _CommissioningOnlyRuntime:
+    """只承载维护端口的运行时占位，不伪装成生产执行后端。"""
+
+    commissioning_port: RobotCommissioningPort
+
+    @property
+    def has_unsettled_fence(self) -> bool:
+        """把 Adapter 的未知执行状态投影给端点租约关闭门禁。"""
+
+        return self.commissioning_port.commissioning_snapshot().execution_fenced
+
+    def execute(self, *_args: Any, **_kwargs: Any) -> CommandResult:
+        """拒绝从维护专用绑定派发生产机器人指令。"""
+
+        raise RuntimeError("维护专用 Robot runtime 不提供生产动作入口")
+
+
+def bind_commissioning_runtime(
+    commissioning_port: RobotCommissioningPort,
+    endpoint_ids: frozenset[str],
+    *,
+    owner_id: str,
+    deployment_mode: DeploymentMode,
+) -> RuntimeBinding:
+    """为领域设备包已有的调试 Adapter 建立正式独占维护绑定。
+
+    参数：统一调试端口、物理端点集合、部署所有者和维护/仿真模式。
+    返回：只能打开维护会话的 ``RuntimeBinding``。异常：生产模式、空端点或
+    端点重复时关闭失败。安全：该绑定没有生产 ``execute`` 能力，避免把为了
+    调试而创建的 MoveIt 客户端变成第二个生产执行入口。
+    """
+
+    if deployment_mode not in {
+        DeploymentMode.MAINTENANCE,
+        DeploymentMode.SIMULATION,
+    }:
+        raise ValueError("维护专用 Robot runtime 禁止使用 production 模式")
+    if not endpoint_ids:
+        raise ValueError("维护专用 Robot runtime 必须声明物理端点")
+    runtime = _CommissioningOnlyRuntime(commissioning_port)
+    return bind_runtime(
+        runtime,
+        endpoint_ids,
+        owner_id=owner_id,
+        rail_mounted=False,
         commissioning_port=commissioning_port,
         deployment_mode=deployment_mode,
     )

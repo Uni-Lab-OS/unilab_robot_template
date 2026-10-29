@@ -1,0 +1,32 @@
+{
+  "source": "work/ctag-dev-20260913/packages/labos_p4r/gripper.py",
+  "source_sha256": "9045c7021b9ddb631797bb99815b3bbb914bfa9f10f33787bf139e747c9dbe97",
+  "source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+  "destination": "packages/unilab-end-effector-sim/src/unilab_end_effector_sim/mimic.py",
+  "destination_sha256": "29f6af3edbf1c72d0fd508539b08092f3874b500412afe7f845e1f992f624434",
+  "test_source": "work/ctag-dev-20260913/tests/ctag/test_mimic.py",
+  "test_source_sha256": "e2cc8f8bbd138c7b9c8011e0104fdd89eb7eae259b9b7598eda5a82b25cb909d",
+  "retained_tests": [
+    "test_bad_dependency_rejected",
+    "test_nested_offsets_and_negative_scale"
+  ],
+  "schema": "unilab.robot-affine-mimic-migration/v1",
+  "preserved": "mimic_map function AST, including nested traversal; two original test method ASTs",
+  "validation": {
+    "package_checks": 5,
+    "old_consumer_checks": 7,
+    "old_consumer_imports_new_function": true,
+    "pinned_ctag_joint_relations": 8,
+    "ctag_map_same_as_original": true,
+    "hardware_or_isaac_ros_build": false,
+    "existing_driver_or_graph_changed": false
+  },
+  "limitations": [
+    "affine reference map only; not physics constraint or measured feedback",
+    "input structure/duplicate joint names/units/derived position limits are caller responsibilities",
+    "old nonzero finite individual coefficient requirement retained; deep-composition overflow not separately guarded",
+    "specific CTAG pad names/mount/command interval remain domain data",
+    "existing SimulatedGripper still models immediate logical holding; no new contact qualification"
+  ],
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-affine-mimic-iixjeq4d"
+}

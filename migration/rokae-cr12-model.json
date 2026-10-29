@@ -1,0 +1,188 @@
+{
+  "schema": "unilab.rokae-cr12-model-migration/v1",
+  "stage": "C30k",
+  "scaffold_commit": "f94b86171b1b5234475a80c902e46f0e0c6150ab",
+  "scaffold_package": "packages/unilab-arm-cr7",
+  "source_assets": {
+    "schema": "unilab.rokae-cr12-assets/v1",
+    "vendor_repository": "https://github.com/RokaeRobot/rokae_ros2.git",
+    "vendor_commit": "d6a508c38513d4c39b2f10f14275d0e26df7fb43",
+    "vendor_files_checked_against_restored_git": 10,
+    "derivation_source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+    "derivation_function": "work/ctag-dev-20260913/packages/labos_p4r/assets.py::prepare",
+    "files": [
+      {
+        "source_path": "reviews/CR12-CTAG-pre-20260912/run/assets/rokae_xmate_cr12/model.urdf",
+        "package_path": "rokae_cr12_robot.urdf",
+        "kind": "frozen-derived-model",
+        "sha256": "091fbc1fa23963e01c5a68f5aba7b6b1bf63b493530403371d771407d104b7ea",
+        "bytes": 7333,
+        "mtime_ns": 1789200080000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/derived/rokae/xMateCR12.geometry.urdf",
+        "package_path": "source/geometry.urdf",
+        "kind": "historical-source-lock",
+        "sha256": "0f11917bdd7ea327e3645abc0cbc69790e0a06a56c2d6132764167ae783fac74",
+        "bytes": 6740,
+        "mtime_ns": 1789188145000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_base.stl",
+        "package_path": "meshes/mesh_4320e53a37ee9be6.stl",
+        "kind": "historical-source-lock",
+        "sha256": "4320e53a37ee9be6fb00d0f7f3d5fd5059b94f740dd43d11990385638f2d7872",
+        "bytes": 4148284,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link1.stl",
+        "package_path": "meshes/mesh_7689d7229491b15c.stl",
+        "kind": "historical-source-lock",
+        "sha256": "7689d7229491b15c3949c7c11eb5fd0d4d060e0ee658a04a026845f05f781391",
+        "bytes": 766984,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link2.stl",
+        "package_path": "meshes/mesh_e8fbd769d653fad1.stl",
+        "kind": "historical-source-lock",
+        "sha256": "e8fbd769d653fad162ceff6c3a4b276ca2110f519be4961e08178c5b01058e29",
+        "bytes": 1619884,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link3.stl",
+        "package_path": "meshes/mesh_81c6c720c4ecc5a9.stl",
+        "kind": "historical-source-lock",
+        "sha256": "81c6c720c4ecc5a96a80bf2c278c70869a0a5df442ea7b77a41ba41197af00d3",
+        "bytes": 645084,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link4.stl",
+        "package_path": "meshes/mesh_e0249c5667c4c429.stl",
+        "kind": "historical-source-lock",
+        "sha256": "e0249c5667c4c4299554fa7413fb29930b38feadc6454d5e8c26ec3fc5950ec6",
+        "bytes": 772084,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link5.stl",
+        "package_path": "meshes/mesh_36b37d6c8a51aa9c.stl",
+        "kind": "historical-source-lock",
+        "sha256": "36b37d6c8a51aa9c4b148b65124810a455ebc2021ca42973cfa7bdac5754cf54",
+        "bytes": 1090184,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/meshes/xMateCR12/xMateCR12_link6.stl",
+        "package_path": "meshes/mesh_498b45c51581e6fb.stl",
+        "kind": "historical-source-lock",
+        "sha256": "498b45c51581e6fb6f8fdeb9cd3d72d36f82711252717725231faa33577f85f1",
+        "bytes": 119784,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/derived/rokae/xMateCR12.fake-expanded.urdf",
+        "package_path": "source/inertial-source.urdf",
+        "kind": "historical-source-lock",
+        "sha256": "55d770b1cebc1fd361dd5c0cdb9df2cf46777b47f2bb933466a7a27e4563b980",
+        "bytes": 11524,
+        "mtime_ns": 1789188145000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/LICENSE",
+        "package_path": "source/ROKAE-LICENSE",
+        "kind": "vendor-license",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357,
+        "mtime_ns": 1789187670000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_xMateCR12_moveit_config/config/xMateCR12.srdf",
+        "package_path": "source/xMateCR12.srdf",
+        "kind": "vendor-srdf",
+        "sha256": "59146659293d16051dedaa19754003af86bafe06dc1e2dd514208d3036d6d5bf",
+        "bytes": 2751,
+        "mtime_ns": 1789187671000000000
+      },
+      {
+        "source_path": "robot-integration-prep-20260912/sources/rokae_ros2/rokae_description/urdf/xMateCR12.urdf.xacro",
+        "package_path": "source/xMateCR12.urdf.xacro",
+        "kind": "vendor-urdf-source",
+        "sha256": "b7147ecde3951763521064dfe5d7f5a48520a0c9ffb82679a9bcb83a9357548a",
+        "bytes": 10423,
+        "mtime_ns": 1789187671000000000
+      }
+    ],
+    "qualification": false
+  },
+  "comparison": {
+    "legacy_prepare_source_sha256": "5bf1bcada830d068d3e7e7aeddc71965c180a12936d4730bd36769a6c95c6b60",
+    "replay_scope": "original prepare CR12 loop body only; CR7 and scene excluded",
+    "model_bytes_equal": true,
+    "mesh_bytes_equal": 7,
+    "source_inertias": 6,
+    "template_definitions_equal_after_model_rename": [
+      "MoveItModelBundle",
+      "_append_mock_ros2_control",
+      "_build_srdf",
+      "_insert_fixed_mount_yaw",
+      "_load_joint_state_source_mappings",
+      "_moveit_controllers",
+      "_normalize_mount_yaw_deg",
+      "_rewrite_render_mesh_uris",
+      "_ros2_controllers",
+      "_topology_digest",
+      "_vector",
+      "_world_mount_joint",
+      "build_joint_state_name_map"
+    ],
+    "model_specific_changed_definitions": [
+      "_qualify_robot_tree",
+      "build_moveit_model"
+    ],
+    "input_files_unchanged": 13,
+    "no_network_or_process_spawn": true,
+    "moveit_or_isaac_runtime_executed": false
+  },
+  "package_tests": {
+    "tests": 27,
+    "failures": 0,
+    "skipped": 0,
+    "junit_sha256": "f533336f3b69e24a38b4ce5091cee387fb7eae5f50d6c25964d1fd8bf1046443"
+  },
+  "files": {
+    ".gitattributes": "fb4c72235ada70b950b7baf6ebe66d2e04d90d82673698abe86517a341cf1e1a",
+    ".github/workflows/quality.yml": "23e2e49057452085ab08b4b7ace0155a56d80674f2f74f452ede34a06c53d65b",
+    "pyproject.toml": "8b87abb13f693646733711158391a1190feff5016a5ac38517601825682761b2",
+    "README.md": "ad124e3c4879b2c9ea9ba0b1955318c49ef6687090d8ad6e7d0c169b797637bd",
+    "docs/rokae-cr12-model.md": "f123bc22fe24fb9a947951bf396b9da6c2503b5ef81c4b721f98548f683db34c",
+    "tests/test_rokae_cr12_moveit_model.py": "e4d2930c6821ef575005edefb0b05fe7f026360b78cd9123450fb12bb32995dd",
+    "packages/unilab-arm-rokae-cr12/pyproject.toml": "b0b9162112f95d34b86540fb3a6ca9ef24da5e54c149ddee13efcf3c7726accb",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/__init__.py": "8b767ae4554977fd9ff3293a2f8e502c2c1c7d4cc717711a8533f7fb17ae0135",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/factory.py": "e3d76dbf6d7dca60728173a956e40706922acf7c81f0ff7d793c83de00061677",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/kinematics.py": "c562b22beb0c699b397a6b1434b7325cf8482be8c3a82bcff085e076aac5ff75",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_36b37d6c8a51aa9c.stl": "36b37d6c8a51aa9c4b148b65124810a455ebc2021ca42973cfa7bdac5754cf54",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_4320e53a37ee9be6.stl": "4320e53a37ee9be6fb00d0f7f3d5fd5059b94f740dd43d11990385638f2d7872",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_498b45c51581e6fb.stl": "498b45c51581e6fb6f8fdeb9cd3d72d36f82711252717725231faa33577f85f1",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_7689d7229491b15c.stl": "7689d7229491b15c3949c7c11eb5fd0d4d060e0ee658a04a026845f05f781391",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_81c6c720c4ecc5a9.stl": "81c6c720c4ecc5a96a80bf2c278c70869a0a5df442ea7b77a41ba41197af00d3",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_e0249c5667c4c429.stl": "e0249c5667c4c4299554fa7413fb29930b38feadc6454d5e8c26ec3fc5950ec6",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/meshes/mesh_e8fbd769d653fad1.stl": "e8fbd769d653fad162ceff6c3a4b276ca2110f519be4961e08178c5b01058e29",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/model.yaml": "b3524499c00c86bb7659c0945e625b97f25777b02a392574e2ef77639088ea74",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/rokae_cr12_robot.urdf": "091fbc1fa23963e01c5a68f5aba7b6b1bf63b493530403371d771407d104b7ea",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source/ROKAE-LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source/geometry.urdf": "0f11917bdd7ea327e3645abc0cbc69790e0a06a56c2d6132764167ae783fac74",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source/inertial-source.urdf": "55d770b1cebc1fd361dd5c0cdb9df2cf46777b47f2bb933466a7a27e4563b980",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source/xMateCR12.srdf": "59146659293d16051dedaa19754003af86bafe06dc1e2dd514208d3036d6d5bf",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source/xMateCR12.urdf.xacro": "b7147ecde3951763521064dfe5d7f5a48520a0c9ffb82679a9bcb83a9357548a",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/models/source-lock.json": "f7b33e346bd43e0b79d730580e8f9ab25cfe198bd20dfc708e41e938ca2d510a",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/moveit_model.py": "d7b8cc6bb561d521b2ee87aec7eed9e3b03e8b9e5db36cd600e514a433924828",
+    "packages/unilab-arm-rokae-cr12/src/unilab_arm_rokae_cr12/source_assets.py": "48cef03983549a50ba1211c135abdf5256efbbb845c20f8e9c1cbc8fe874b62a"
+  },
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-rokae-cr12-gufn9itm",
+  "scope": "model facts and static provider only; no vendor execution backend, scene or runtime qualification",
+  "runtime_qualified": false
+}

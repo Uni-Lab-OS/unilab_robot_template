@@ -146,7 +146,7 @@ def _finite_tuple(
     """
 
     if isinstance(value, (str, bytes)):
-        raise ValueError(f"{field_name} 必须包含三个有限数")
+        raise TypeError(f"{field_name} 必须包含三个有限数")
     try:
         normalized = tuple(float(item) for item in value)  # type: ignore[union-attr]
     except (TypeError, ValueError) as exc:
@@ -157,8 +157,8 @@ def _finite_tuple(
 
 
 __all__ = [
+    "EULER_ROTATION_CONVENTION",
     "AngleUnit",
     "CommissioningPoseInput",
-    "EULER_ROTATION_CONVENTION",
     "EulerRotationOrder",
 ]

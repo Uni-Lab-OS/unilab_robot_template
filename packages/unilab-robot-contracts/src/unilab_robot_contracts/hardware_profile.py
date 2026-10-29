@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 from enum import Enum
 
@@ -40,6 +41,10 @@ class HardwareProfile:
     backend: BackendKind
     endpoint_ids: frozenset[str]
     interlock_mode: InterlockMode
+    commissioning_velocity_limit: float
+    commissioning_acceleration_limit: float
+    joint_state_stale_after_s: float = 1.0
+    commissioning_joint_completion_tolerance_si: float = 0.002
 
     def __post_init__(self) -> None:
         """校验生产配置不能使用普通遥测或仿真许可。
@@ -60,3 +65,24 @@ class HardwareProfile:
             and self.interlock_mode is not InterlockMode.VALIDATED_HARDWARE_INTERLOCK
         ):
             raise ValueError("production profile 必须使用 validated_hardware_interlock")
+        for name, value in (
+            ("commissioning_velocity_limit", self.commissioning_velocity_limit),
+            ("commissioning_acceleration_limit", self.commissioning_acceleration_limit),
+        ):
+            if not math.isfinite(value) or not 0.0 < value <= 0.30:
+                raise ValueError(f"HardwareProfile.{name} 必须位于 (0, 0.30]")
+        if (
+            not math.isfinite(self.joint_state_stale_after_s)
+            or not 0.5 <= self.joint_state_stale_after_s <= 5.0
+        ):
+            raise ValueError(
+                "HardwareProfile.joint_state_stale_after_s 必须位于 [0.5, 5.0]"
+            )
+        if (
+            not math.isfinite(self.commissioning_joint_completion_tolerance_si)
+            or not 0.0 < self.commissioning_joint_completion_tolerance_si <= 0.01
+        ):
+            raise ValueError(
+                "HardwareProfile.commissioning_joint_completion_tolerance_si "
+                "必须位于 (0, 0.01]"
+            )

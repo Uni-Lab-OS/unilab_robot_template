@@ -1,0 +1,39 @@
+{
+  "schema": "unilab.joint-segment-source/v1",
+  "stage": "C30l",
+  "source_checkout": "/home/tyzuo/Lab-OS-Testbed/work/ctag-dev-20260913",
+  "source_commit": "7b7d0aada7ab84752988572cb18d81878dece5f7",
+  "runtime_qualified": false,
+  "scope": "source migration and CPU interface/replay only; no graph/parser/PLC registration or services",
+  "evidence_directory": "/home/tyzuo/labos-reorg-20260927/c30-joint-runtime-1ncd8wv3",
+  "ast": {
+    "executor_definitions_equal_except_public_class_name": true,
+    "isaac_backend_class_equal": true,
+    "old_executor_test_class_equal": true,
+    "old_joint_group_test_classes_equal": true
+  },
+  "source": {
+    "path": "packages/labos_p4r/executor.py",
+    "sha256": "efa73808e25567eba0de8babac70e728fa4a06e6b6d7a4e7dfc46607bebdc0d7"
+  },
+  "test_source": {
+    "path": "tests/p4r/test_executor.py",
+    "sha256": "ab1d073712654cd86358a5736cb6f6124169a34dc82037d196ff7fdb65efd14f"
+  },
+  "replay": {
+    "trace_rows": 2690,
+    "command_count": 7,
+    "cancel_count": 1,
+    "groups": [
+      "arm",
+      "gripper"
+    ],
+    "all_state_transitions_equal": true,
+    "old_and_new_setpoints_equal": 5378,
+    "historical_events_exactly_equal": true,
+    "historical_setpoint_max_abs_difference": 0.0,
+    "actual_isaac_or_os_execution": false,
+    "network_or_process_spawn": false
+  },
+  "testbed_record": "manifests/joint-runtime-source.json"
+}

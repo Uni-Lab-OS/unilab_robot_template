@@ -17,7 +17,7 @@ from unilab_robot_contracts import (
     ObservationState,
     RobotCommand,
 )
-from unilab_robot_runtime import build_test_runtime
+from unilab_robot_runtime import bind_commissioning_runtime, build_test_runtime
 
 
 class FakeRuntime:
@@ -113,5 +113,31 @@ def test_maintenance_session_excludes_production_until_closed() -> None:
 
     try:
         assert binding.execute(_production_command("production-after")).success
+    finally:
+        binding.close()
+
+
+def test_commissioning_only_binding_exposes_maintenance_without_production() -> None:
+    """领域包可暴露既有 Adapter，但不能因此创建第二个生产执行入口。"""
+
+    commissioning = FakeCommissioningPort()
+    binding = bind_commissioning_runtime(
+        commissioning,
+        frozenset({"moveit:robot:cr5"}),
+        owner_id="robot-commissioning",
+        deployment_mode=DeploymentMode.SIMULATION,
+    )
+
+    session = binding.open_maintenance_session("workbench:operator-a")
+    try:
+        assert session.execute(_maintenance_command()).success
+        with pytest.raises(RuntimeError, match="维护会话"):
+            binding.execute(_production_command("must-not-dispatch"))
+    finally:
+        session.close()
+
+    try:
+        with pytest.raises(RuntimeError, match="不提供生产动作入口"):
+            binding.execute(_production_command("must-not-dispatch-after-close"))
     finally:
         binding.close()

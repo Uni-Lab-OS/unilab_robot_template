@@ -6,7 +6,12 @@ import time
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-from unilab_robot_contracts import CommandState, ToolContext
+from unilab_robot_contracts import (
+    CommandState,
+    RigidTransform,
+    ToolContext,
+    apply_moveit_planning_budget,
+)
 
 
 class MoveIt2ClientPort:
@@ -18,10 +23,11 @@ class MoveIt2ClientPort:
         names = tuple(str(name) for name in qualified_joint_names)
         if len(names) != 6:
             raise ValueError("MoveIt2ClientPort 只接受六轴机械臂")
-        self.client = client
+        self.client = apply_moveit_planning_budget(client)
         self.qualified_joint_names = names
         self._results: dict[str, Mapping[str, Any]] = {}
         self._active_command_id: str | None = None
+        self._active_tool_context: ToolContext | None = None
 
     def execute_joint_target(
         self,
@@ -36,7 +42,7 @@ class MoveIt2ClientPort:
 
         if len(tuple(joint_names)) != 6 or len(tuple(target)) != 6:
             raise ValueError("MoveIt 目标与关节名必须均为六轴")
-        self._apply_speed(parameters)
+        self._apply_motion_profile(parameters)
         self._active_command_id = command_id
         try:
             self.client.move_to_configuration(
@@ -55,8 +61,6 @@ class MoveIt2ClientPort:
             "group_name": group_name,
         }
         self._results[command_id] = result
-        if not completed:
-            raise RuntimeError(result["message"])
         return result
 
     def execute_cartesian_target(
@@ -83,14 +87,21 @@ class MoveIt2ClientPort:
             raise ValueError("MoveIt2ClientPort 只接受已归一化到 arm_base 的绝对目标")
         if len(position) != 3 or len(orientation) != 4:
             raise ValueError("MoveIt 笛卡尔目标必须是 xyz[3] 与 quaternion[4]")
-        self._apply_speed(parameters)
+        mount_target = RigidTransform(position, orientation)
+        if self._active_tool_context is not None:
+            mount_target = mount_target.compose(
+                self._active_tool_context.mount_to_tcp.inverse()
+            )
+        self._apply_motion_profile(parameters)
         self._active_command_id = command_id
         try:
+            cartesian = bool(parameters.get("cartesian_path", False))
             self.client.move_to_pose(
-                position=position,
-                quat_xyzw=orientation,
+                position=mount_target.translation_m,
+                quat_xyzw=mount_target.orientation_xyzw,
                 frame_id=None,
-                cartesian=bool(parameters.get("cartesian_path", False)),
+                cartesian=cartesian,
+                cartesian_fraction_threshold=0.99 if cartesian else 0.0,
                 tolerance_position=float(parameters.get("position_tolerance_m", 0.001)),
                 tolerance_orientation=float(
                     parameters.get("orientation_tolerance_rad", 0.001)
@@ -109,18 +120,49 @@ class MoveIt2ClientPort:
             "target_type": "cartesian_pose",
         }
         self._results[command_id] = result
-        if not completed:
-            raise RuntimeError(result["message"])
         return result
 
-    def _apply_speed(self, parameters: Mapping[str, Any]) -> None:
-        """校验并设置当前段的速度缩放。"""
+    def _apply_motion_profile(self, parameters: Mapping[str, Any]) -> None:
+        """校验并应用 D10 冻结的速度、加速度和规划原语。"""
 
-        speed = float(parameters.get("speed", 1.0))
-        if not 0.0 < speed <= 1.0:
-            raise ValueError("MoveIt speed 必须位于 (0, 1]")
-        self.client.max_velocity = speed
-        self.client.max_acceleration = speed
+        profile_ref = parameters.get("motion_profile_ref")
+        if profile_ref is None:
+            velocity = acceleration = 1.0
+        else:
+            required = {
+                "primitive",
+                "velocity_scale",
+                "acceleration_scale",
+                "position_tolerance_m",
+                "orientation_tolerance_rad",
+                "collision_check",
+                "cartesian_path",
+            }
+            missing = required.difference(parameters)
+            if missing:
+                raise ValueError(
+                    f"MotionProfile {profile_ref} 缺少冻结字段: {sorted(missing)}"
+                )
+            primitive = str(parameters["primitive"])
+            if primitive not in {"joint_ptp", "cartesian_linear"}:
+                raise ValueError(f"MoveIt 不支持 MotionPrimitive: {primitive}")
+            if not isinstance(parameters["cartesian_path"], bool):
+                raise TypeError("MotionProfile.cartesian_path 必须是布尔值")
+            if parameters["cartesian_path"] != (primitive == "cartesian_linear"):
+                raise ValueError("cartesian_path 与 MotionPrimitive 不一致")
+            if not isinstance(parameters["collision_check"], bool):
+                raise TypeError("MotionProfile.collision_check 必须是布尔值")
+            velocity = float(parameters["velocity_scale"])
+            acceleration = float(parameters["acceleration_scale"])
+            if any(
+                float(parameters[name]) <= 0.0
+                for name in ("position_tolerance_m", "orientation_tolerance_rad")
+            ):
+                raise ValueError("MotionProfile 到位容差必须是正数")
+        if not 0.0 < velocity <= 1.0 or not 0.0 < acceleration <= 1.0:
+            raise ValueError("MoveIt 速度和加速度缩放必须位于 (0, 1]")
+        self.client.max_velocity = velocity
+        self.client.max_acceleration = acceleration
 
     def query_command(self, command_id: str) -> Mapping[str, Any] | None:
         """返回当前进程已取得的 MoveIt 完成见证，不猜测丢失结果。"""
@@ -152,7 +194,9 @@ class MoveIt2ClientPort:
                 "execution_fenced": False,
             }
         names = tuple(str(name) for name in getattr(joint_state, "name", ()))
-        positions = tuple(float(value) for value in getattr(joint_state, "position", ()))
+        positions = tuple(
+            float(value) for value in getattr(joint_state, "position", ())
+        )
         by_name = dict(zip(names, positions))
         try:
             ordered = [by_name[name] for name in self.qualified_joint_names]
@@ -162,26 +206,32 @@ class MoveIt2ClientPort:
         tcp_pose = None
         if pose_stamped is not None:
             pose = pose_stamped.pose
-            tcp_pose = {
-                "frame_ref": "arm_base",
-                "xyz_m": [pose.position.x, pose.position.y, pose.position.z],
-                "orientation_xyzw": [
+            observed_mount = RigidTransform(
+                (pose.position.x, pose.position.y, pose.position.z),
+                (
                     pose.orientation.x,
                     pose.orientation.y,
                     pose.orientation.z,
                     pose.orientation.w,
-                ],
+                ),
+            )
+            observed_tcp = (
+                observed_mount
+                if self._active_tool_context is None
+                else observed_mount.compose(self._active_tool_context.mount_to_tcp)
+            )
+            tcp_pose = {
+                "frame_ref": "arm_base",
+                "xyz_m": list(observed_tcp.translation_m),
+                "orientation_xyzw": list(observed_tcp.orientation_xyzw),
             }
-        stamp = getattr(getattr(joint_state, "header", None), "stamp", None)
-        seconds = float(getattr(stamp, "sec", 0.0)) + float(
-            getattr(stamp, "nanosec", 0.0)
-        ) / 1_000_000_000.0
-        if seconds <= 0.0:
-            seconds = time.time()
+        # CommissioningSnapshot.is_fresh() 按接收时钟判断，不能用 ROS header stamp。
+        # compute_fk 会阻塞；工位 URDF 变大后 FK 常超过 max_age_s=0.5s。
+        received_at = time.time()
         state = self.client.query_state()
         state_name = str(getattr(state, "name", state)).lower()
         return {
-            "observed_at": seconds,
+            "observed_at": received_at,
             "max_age_s": 0.5,
             "source": "moveit2:joint_states+compute_fk",
             "online": bool(ordered and tcp_pose is not None),
@@ -195,10 +245,19 @@ class MoveIt2ClientPort:
     def apply_tool_context(self, tool_context: ToolContext) -> Mapping[str, Any]:
         """委托 OS MoveIt 客户端更新 TCP/碰撞模型；不支持时关闭失败。"""
 
+        if not tool_context.planning_scene:
+            raise ValueError("MoveIt ToolContext 缺少 PlanningScene 碰撞模型")
         apply = getattr(self.client, "apply_tool_context", None)
         if not callable(apply):
             raise TypeError("当前 MoveIt2 客户端未实现 ToolContext PlanningScene 更新")
         receipt = apply(tool_context)
         if not isinstance(receipt, Mapping):
             raise TypeError("MoveIt2 ToolContext 更新缺少结构化确认")
+        if (
+            receipt.get("applied") is True
+            and str(receipt.get("tool_context_digest", "")) == tool_context.digest
+            and int(receipt.get("attachment_generation", 0))
+            == tool_context.attachment_generation
+        ):
+            self._active_tool_context = tool_context
         return receipt

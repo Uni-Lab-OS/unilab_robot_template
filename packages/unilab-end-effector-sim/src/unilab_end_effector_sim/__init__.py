@@ -19,12 +19,21 @@ from unilab_robot_contracts import (
 class SimulatedToolChanger:
     """工具型号可替换、附着代次单调递增的仿真快换。"""
 
-    def __init__(self, *, tools: Mapping[str, ToolDefinition]) -> None:
-        """冻结可用工具目录并从未附着状态启动。"""
+    def __init__(
+        self,
+        *,
+        tools: Mapping[str, ToolDefinition],
+        qualified_contexts: Mapping[str, ToolContext] | None = None,
+    ) -> None:
+        """冻结工具目录与可选已批准 ToolContext，并从未附着状态启动。"""
 
         self.tools = dict(tools)
         if not self.tools:
             raise ValueError("仿真快换至少需要一个工具")
+        self.qualified_contexts = dict(qualified_contexts or {})
+        unknown = set(self.qualified_contexts).difference(self.tools)
+        if unknown:
+            raise ValueError(f"仿真 ToolContext 引用了未知工具: {sorted(unknown)}")
         self._tool_ref: str | None = None
         self._generation = 0
         self._results: dict[str, CommandResult] = {}
@@ -75,6 +84,11 @@ class SimulatedToolChanger:
 
         if self._tool_ref is None:
             raise RuntimeError("快换尚未附着工具")
+        qualified = self.qualified_contexts.get(self._tool_ref)
+        if qualified is not None:
+            if qualified.attachment_generation != self._generation:
+                raise RuntimeError("已批准 ToolContext 与当前附着代次不一致")
+            return qualified
         return self.tools[self._tool_ref].context(self._generation)
 
 

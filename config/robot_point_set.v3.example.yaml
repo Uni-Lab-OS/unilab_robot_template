@@ -1,0 +1,61 @@
+schema: unilab.robot-point-set/v3
+revision: arm-rail-example@3.0.0
+description: 可替换机械臂与单轴导轨共用的设备分组、阵列和 D9-1S 示例
+components:
+  arm:
+    model_ref: package://unilab_arm_cr7/models/model.yaml
+    tool_context_ref: parallel-gripper@1.0.0
+  rail:
+    model_ref: package://unilab_rail_linear/models/model.yaml
+installation_calibration:
+  revision: example-installation@1.0.0
+  digest: 2222222222222222222222222222222222222222222222222222222222222222
+global:
+  arm:
+    home: {type: joint_positions, value: [0, 0, 0, 0, 0, 0]}
+    standby: {type: joint_positions, value: [0, -0.7, 1.2, 0, 0.9, 0]}
+    rail_transfer_safe: {type: joint_positions, value: [0, -0.7, 1.2, 0, 0.9, 0]}
+  rail:
+    home: {position_si: 0.0}
+tool-change:
+  device_ref: deck.tool-change
+  targets:
+    ready:
+      arm:
+        type: cartesian_pose
+        frame_ref: device:deck.tool-change
+        value:
+          xyz_m: [0.40, 0.10, 0.25]
+          orientation_xyzw: [0, 0, 0, 1]
+group-rack:
+  device_ref: deck.group-rack
+  display_name: 组合货架
+  access:
+    type: access_motion_block/v1
+    frame_ref: device:deck.group-rack
+    entry_offset_xyz_m: [0.15, 0.0, 0.10]
+    approach_offset_xyz_m: [0.0, 0.0, 0.10]
+    orientation_policy: inherit_interaction
+    transit_in: [global.arm.standby]
+    transit_out: {mode: reverse_transit_in}
+  grid:
+    type: affine_grid/v1
+    rows: 4
+    cols: 3
+    frame_ref: device:deck.group-rack
+    anchors:
+      r1c1: {xyz_m: [0.0, 0.0, 0.0]}
+      r4c1: {xyz_m: [0.3, 0.0, 0.0]}
+      r4c3: {xyz_m: [0.3, 0.2, 0.0]}
+    orientation_xyzw: [0, 0, 0, 1]
+    corrections:
+      r2c2: {xyz_m: [0.01, -0.01, 0.02]}
+    rail:
+      default: 0.45
+      groups:
+        - position: 0.30
+          cells: [r1c1, r2c1, r3c1, r4c1]
+        - position: 0.60
+          cells: [r1c3, r2c3, r3c3, r4c3]
+      overrides:
+        r4c3: 0.52

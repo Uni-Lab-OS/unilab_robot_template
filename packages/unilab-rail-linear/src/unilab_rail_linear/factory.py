@@ -6,6 +6,8 @@ from collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from typing import Any
 
+from unilab_robot_contracts import JointStateNameMap
+
 from .adapters import PLCRailAxisPort, PLCRailBinding, SimulationRailAxisPort
 from .rail_module import RailModule
 
@@ -18,18 +20,33 @@ MODULE_VERSION = "0.1.0"
 class RailModelDescriptor:
     """组合模型所需的型号固有轴和挂载点名称。"""
 
+    model_ref: str
     axis_joint: str
     base_link: str
     carriage_link: str
     travel_m: tuple[float, float]
+    velocity_limit_m_s: float
 
 
 MODEL_DESCRIPTOR = RailModelDescriptor(
+    model_ref="package://unilab_rail_linear/models/model.yaml",
     axis_joint="rail_joint",
     base_link="rail_base",
     carriage_link="rail_carriage",
     travel_m=(0.0, 2.25),
+    velocity_limit_m_s=0.25,
 )
+
+
+def build_joint_state_name_map(*, device_id: str) -> JointStateNameMap:
+    """按 Graph Device id 构造与机械臂相同规则的完全限定关节名。"""
+
+    axis = MODEL_DESCRIPTOR.axis_joint
+    return JointStateNameMap(
+        device_id=str(device_id).strip(),
+        canonical_joint_names=(axis,),
+        raw_to_canonical={axis: axis},
+    )
 
 
 def create_plc_module(
@@ -87,6 +104,7 @@ def create_simulation_module(
         port=SimulationRailAxisPort(
             endpoint_id=next(iter(endpoint_ids)),
             on_settled=on_settled,
+            target_values=target_values,
         ),
         allowed_targets=frozenset(target_values),
     )

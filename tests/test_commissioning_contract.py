@@ -172,8 +172,8 @@ class CommissioningContractTests(unittest.TestCase):
         self.assertNotIn("unit", payload)
         self.assertNotIn("locked_joint_tolerance_si", payload)
 
-    def test_tcp_jog_axis_determines_si_dimension_and_hard_cap(self) -> None:
-        """TCP 平移和旋转共享 step_si，但由轴类型决定 m 或 rad 语义。"""
+    def test_tcp_jog_axis_determines_si_dimension_without_step_maximum(self) -> None:
+        """TCP 平移和旋转共享 step_si，允许任意正的有限单步。"""
 
         translation = _tcp_jog()
         rotation = replace(
@@ -185,10 +185,15 @@ class CommissioningContractTests(unittest.TestCase):
 
         self.assertFalse(translation.axis.rotational)
         self.assertTrue(rotation.axis.rotational)
-        with self.assertRaisesRegex(ValueError, "硬上限"):
-            replace(translation, step_si=0.02)
-        with self.assertRaisesRegex(ValueError, "硬上限"):
-            replace(rotation, step_si=math.radians(6.0))
+        self.assertEqual(replace(translation, step_si=20.0).step_si, 20.0)
+        self.assertEqual(
+            replace(rotation, step_si=math.radians(720.0)).step_si,
+            math.radians(720.0),
+        )
+        with self.assertRaisesRegex(ValueError, "正的有限数"):
+            replace(translation, step_si=0.0)
+        with self.assertRaisesRegex(ValueError, "正的有限数"):
+            replace(rotation, step_si=math.inf)
 
     def test_all_tcp_jog_buttons_map_to_axis_and_direction_parameters(self) -> None:
         """十二个 TCP 点动按钮必须只是六个轴和两个方向的参数组合。"""

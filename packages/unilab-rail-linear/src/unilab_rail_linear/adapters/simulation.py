@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import time
-from collections.abc import Callable, MutableSequence
+from collections.abc import Callable, Mapping, MutableSequence
 
 from unilab_robot_contracts import ObservationState, RailStateObservation
 
@@ -17,16 +17,18 @@ class SimulationRailAxisPort:
         endpoint_id: str = "sim:rail",
         events: MutableSequence[str] | None = None,
         on_settled: Callable[[str], None] | None = None,
+        target_values: Mapping[str, float] | None = None,
     ) -> None:
         """创建初始未定位的仿真轴。
 
-        参数：物理端点身份、可选事件记录和到位通知。返回：无。
+        参数：物理端点身份、可选事件记录、到位通知和部署目标 SI。返回：无。
         到位通知仅连接包内仿真互锁，不构成真实硬件安全证据。
         """
 
         self.endpoint_ids = frozenset({endpoint_id})
         self.events = events if events is not None else []
         self._on_settled = on_settled
+        self._target_values = dict(target_values or {})
         self._target_ref: str | None = None
         self._completed_command_id: str | None = None
         self._position = 0.0
@@ -37,7 +39,12 @@ class SimulationRailAxisPort:
         self.events.append(f"rail:start:{command_id}:{target_ref}")
         self._target_ref = target_ref
         self._completed_command_id = command_id
-        self._position += 1.0
+        if self._target_values:
+            if target_ref not in self._target_values:
+                raise ValueError(f"仿真导轨没有目标: {target_ref}")
+            self._position = float(self._target_values[target_ref])
+        else:
+            self._position += 1.0
         if self._on_settled is not None:
             self._on_settled(command_id)
         self.events.append(f"rail:settled:{command_id}:{target_ref}")

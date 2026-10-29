@@ -13,9 +13,11 @@ from typing import Any
 import yaml
 from unilab_robot_contracts import (
     CommandState,
-    MotionTargetResolver,
+    InstallationCalibration,
     MoveTargetCommand,
+    RailTargetModel,
     ResolvedMotionTarget,
+    RobotPointSetResolver,
     ToolContext,
 )
 
@@ -42,7 +44,7 @@ class PointTestEvidence:
 
 
 @dataclass(frozen=True, slots=True)
-class PointQualification:
+class PointSetQualification:
     """对一个不可变草稿摘要的人工资格确认。"""
 
     point_set_digest: str
@@ -72,6 +74,8 @@ class PointMaintenanceService:
         *,
         model: Any,
         tool_context: ToolContext,
+        installation_calibration: InstallationCalibration,
+        rail_model: RailTargetModel | None = None,
         qualification_root: str | Path,
         publication_root: str | Path,
     ) -> None:
@@ -79,6 +83,8 @@ class PointMaintenanceService:
 
         self.model = model
         self.tool_context = tool_context
+        self.installation_calibration = installation_calibration
+        self.rail_model = rail_model
         self.qualification_root = Path(qualification_root)
         self.publication_root = Path(publication_root)
         self._test_evidence: dict[str, dict[str, PointTestEvidence]] = {}
@@ -91,12 +97,15 @@ class PointMaintenanceService:
         data = yaml.safe_load(source) or {}
         if not isinstance(data, dict):
             raise TypeError("PointSet 草稿必须是 YAML 对象")
-        resolver = MotionTargetResolver(
+        resolver = RobotPointSetResolver(
             data,
-            model=self.model,
+            arm_model=self.model,
             tool_context=self.tool_context,
+            calibration=self.installation_calibration,
+            rail_model=self.rail_model,
+            source_digest=hashlib.sha256(source).hexdigest(),
         )
-        targets = dict(resolver.resolve_all())
+        targets = dict(resolver.arm_targets)
         return ValidatedPointSet(
             source_path=path,
             digest=hashlib.sha256(source).hexdigest(),
@@ -168,7 +177,7 @@ class PointMaintenanceService:
         validated: ValidatedPointSet,
         *,
         approved_by: str,
-    ) -> PointQualification:
+    ) -> PointSetQualification:
         """要求全部目标具有成功试运行见证后生成资格确认记录。"""
 
         self._require_unchanged(validated)
@@ -187,7 +196,7 @@ class PointMaintenanceService:
         qualification_id = hashlib.sha256(
             f"{validated.digest}:{approver}:{approved_at:.9f}".encode()
         ).hexdigest()
-        qualification = PointQualification(
+        qualification = PointSetQualification(
             validated.digest,
             validated.revision,
             validated.target_refs,
@@ -207,7 +216,7 @@ class PointMaintenanceService:
     def publish(
         self,
         validated: ValidatedPointSet,
-        qualification: PointQualification,
+        qualification: PointSetQualification,
     ) -> PublishedPointSet:
         """把与资格记录相同摘要的草稿发布为不可变文件。"""
 
@@ -217,7 +226,7 @@ class PointMaintenanceService:
             or qualification.revision != validated.revision
             or qualification.target_refs != validated.target_refs
         ):
-            raise ValueError("PointQualification 与验证草稿不一致")
+            raise ValueError("PointSetQualification 与验证草稿不一致")
         qualification_path = self.qualification_root / f"{validated.digest}.json"
         if not qualification_path.is_file():
             raise ValueError("资格确认记录尚未持久化")
@@ -276,7 +285,7 @@ def _slug(value: str) -> str:
 
 __all__ = [
     "PointMaintenanceService",
-    "PointQualification",
+    "PointSetQualification",
     "PointTestEvidence",
     "PublishedPointSet",
     "ValidatedPointSet",

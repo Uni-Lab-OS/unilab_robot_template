@@ -117,6 +117,16 @@ class RigidTransform:
             ),
         )
 
+    def inverse(self) -> RigidTransform:
+        """返回子坐标系到父坐标系的逆刚体变换。"""
+
+        inverse_orientation = _quaternion_conjugate(self.orientation_xyzw)
+        inverse_rotation = RigidTransform((0.0, 0.0, 0.0), inverse_orientation)
+        inverse_translation = inverse_rotation.rotate_vector(
+            tuple(-value for value in self.translation_m)
+        )
+        return RigidTransform(inverse_translation, inverse_orientation)
+
     def rotate_vector(self, vector: Vector3) -> Vector3:
         """使用当前四元数旋转一个三维向量。
 
@@ -180,7 +190,7 @@ def _float_tuple(value: object, length: int, field: str) -> tuple[float, ...]:
     """把序列验证并转换为固定长度有限浮点元组。"""
 
     if isinstance(value, (str, bytes)):
-        raise ValueError(f"{field} 必须是长度 {length} 的数值序列")
+        raise TypeError(f"{field} 必须是长度 {length} 的数值序列")
     try:
         normalized = tuple(float(item) for item in value)  # type: ignore[union-attr]
     except (TypeError, ValueError) as exc:

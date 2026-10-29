@@ -32,25 +32,24 @@ class ResourceSlotRef:
 
 @dataclass(frozen=True)
 class SiteRef:
-    """稳定引用一个 Warehouse 下的库位（Site），不携带坐标或地址。"""
+    """引用一次 OS 激活快照中的规范库位（Site）UUID。"""
 
-    warehouse_id: str
-    site_id: str
+    site_uuid: str
 
     def __post_init__(self) -> None:
-        """校验 Warehouse 与 Site 身份。
+        """校验运行期 Site UUID 非空。
 
-        参数：无；校验当前实例。返回：无。异常：任一身份为空时抛出 ``ValueError``。
+        参数：无；校验当前实例。返回：无。异常：身份为空时抛出 ``ValueError``。
         """
 
-        if not self.warehouse_id.strip() or not self.site_id.strip():
-            raise ValueError("SiteRef 必须同时包含 warehouse_id 与 site_id")
+        if not self.site_uuid.strip():
+            raise ValueError("SiteRef.site_uuid 不能为空")
 
     @property
     def canonical(self) -> str:
-        """返回可用于部署解析的稳定引用，不包含物理控制细节。"""
+        """返回冻结任务可持有的运行期规范引用。"""
 
-        return f"{self.warehouse_id}:{self.site_id}"
+        return self.site_uuid
 
 
 @dataclass(frozen=True)

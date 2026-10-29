@@ -1,0 +1,6 @@
+interface:
+  display_name: "消费机械臂/导轨型号包"
+  short_description: "按 pTLC 方式把臂和导轨接入领域仓"
+  default_prompt: "Use $use-unilab-arm-package to wire this domain package's arm and rail like Uni-Lab-pTLC, then run the assembly checker."
+policy:
+  allow_implicit_invocation: true

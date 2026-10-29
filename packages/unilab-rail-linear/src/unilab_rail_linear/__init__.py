@@ -5,8 +5,14 @@ from .factory import (
     MODULE_API_VERSION,
     MODULE_KIND,
     MODULE_VERSION,
+    build_joint_state_name_map,
     create_plc_module,
     create_simulation_module,
+)
+from .kinematic_model import (
+    RailKinematicModelBundle,
+    build_kinematic_model,
+    describe_model_provider,
 )
 from .rail_module import RailAxisPort, RailModule
 from .standalone_device import StandaloneRailDevice
@@ -19,8 +25,12 @@ __all__ = [
     "MODULE_KIND",
     "MODULE_VERSION",
     "RailAxisPort",
+    "RailKinematicModelBundle",
     "RailModule",
     "StandaloneRailDevice",
+    "build_joint_state_name_map",
+    "build_kinematic_model",
     "create_plc_module",
     "create_simulation_module",
+    "describe_model_provider",
 ]

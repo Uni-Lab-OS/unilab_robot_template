@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import time
 from collections.abc import Mapping, Sequence
 from typing import Any, Protocol
@@ -25,6 +26,7 @@ from unilab_robot_contracts import (
     RigidTransform,
     TcpJogCommand,
     ToolContext,
+    ToolContextActivationReceipt,
 )
 from unilab_robot_contracts.geometry import quaternion_multiply
 
@@ -54,6 +56,10 @@ class MoveItCommissioningAdapter:
         point_set_revision: str,
         hardware_profile_digest: str,
         tool_context_digest: str,
+        commissioning_velocity_limit: float = 0.25,
+        commissioning_acceleration_limit: float = 0.25,
+        joint_completion_tolerance_si: float = 0.002,
+        joint_readback_timeout_s: float = 0.5,
         group_name: str | None = None,
     ) -> None:
         """冻结 exact 型号、点位版本、硬件配置和工具上下文。"""
@@ -73,12 +79,27 @@ class MoveItCommissioningAdapter:
         self.point_set_revision = point_set_revision
         self.hardware_profile_digest = hardware_profile_digest
         self.tool_context_digest = tool_context_digest
+        self.commissioning_velocity_limit = float(commissioning_velocity_limit)
+        self.commissioning_acceleration_limit = float(commissioning_acceleration_limit)
+        self.joint_completion_tolerance_si = float(joint_completion_tolerance_si)
+        if not 0.0 < self.commissioning_velocity_limit <= 0.30:
+            raise ValueError("HardwareProfile 调试速度上限必须位于 (0, 0.30]")
+        if not 0.0 < self.commissioning_acceleration_limit <= 0.30:
+            raise ValueError("HardwareProfile 调试加速度上限必须位于 (0, 0.30]")
+        if not 0.0 < self.joint_completion_tolerance_si <= 0.01:
+            raise ValueError("HardwareProfile 调试关节完成容差必须位于 (0, 0.01]")
+        self.joint_readback_timeout_s = float(joint_readback_timeout_s)
+        if not 0.0 <= self.joint_readback_timeout_s <= 2.0:
+            raise ValueError("joint_jog 读回等待必须位于 [0, 2] 秒")
         self.group_name = group_name or str(model.planning_group)
         self._fingerprints: dict[str, str] = {}
         self._results: dict[str, CommandResult] = {}
         self._fenced_command_ids: set[str] = set()
 
-    def activate_tool_context(self, tool_context: ToolContext) -> None:
+    def activate_tool_context(
+        self,
+        tool_context: ToolContext,
+    ) -> ToolContextActivationReceipt:
         """仅在空闲时更新 TCP/碰撞模型，并验证 PlanningScene 回读。"""
 
         snapshot = self.commissioning_snapshot()
@@ -98,6 +119,10 @@ class MoveItCommissioningAdapter:
         ):
             raise RuntimeError("PlanningScene 未确认同一 ToolContext 摘要与附着代次")
         self.tool_context_digest = tool_context.digest
+        return ToolContextActivationReceipt.from_mapping(
+            receipt,
+            source="moveit:planning-scene-readback",
+        )
 
     @property
     def commissioning_capabilities(self) -> CommissioningCapabilities:
@@ -116,6 +141,24 @@ class MoveItCommissioningAdapter:
         """返回当前活动 PointSet 的不可变版本。"""
 
         return self.point_set_revision
+
+    def replace_point_set(
+        self,
+        targets: Mapping[str, ResolvedMotionTarget],
+        point_set_revision: str,
+    ) -> None:
+        """热替换活动 PointSet，不重建 MoveIt 客户端。"""
+
+        revision = str(point_set_revision).strip()
+        if not revision:
+            raise ValueError("MoveIt 调试必须绑定点位版本")
+        normalized: dict[str, ResolvedMotionTarget] = {}
+        for target_ref, target in targets.items():
+            if target_ref != target.target_ref:
+                raise ValueError(f"MoveIt 调试 target_ref 索引漂移: {target_ref}")
+            normalized[target_ref] = target
+        self.targets = normalized
+        self.point_set_revision = revision
 
     def commissioning_snapshot(self) -> CommissioningSnapshot:
         """把 MoveGroup 控制器状态规范化为统一调试快照。"""
@@ -182,11 +225,7 @@ class MoveItCommissioningAdapter:
             result = CommandResult(
                 command.command_id,
                 CommandState.CANCELED if confirmed else CommandState.EXECUTION_UNKNOWN,
-                (
-                    "MoveIt 已确认维护运动停止"
-                    if confirmed
-                    else "MoveIt 停止确认不明"
-                ),
+                ("MoveIt 已确认维护运动停止" if confirmed else "MoveIt 停止确认不明"),
                 {"target_command_id": command.target_command_id},
             )
             self._remember(command, result)
@@ -212,11 +251,7 @@ class MoveItCommissioningAdapter:
                 )
                 self._remember(command, result)
                 return result
-            validate_completion_receipt(
-                receipt,
-                command_id=command.command_id,
-                source="MoveIt commissioning",
-            )
+            result = _command_result_from_receipt(command, receipt)
         # 传输、规划或回执验证的任意异常都可能发生在物理派发之后，必须保守 UNKNOWN。
         except Exception as exc:  # noqa: BLE001
             result = CommandResult(
@@ -224,22 +259,23 @@ class MoveItCommissioningAdapter:
                 CommandState.EXECUTION_UNKNOWN,
                 f"MoveIt 调试派发结果不明: {exc}",
             )
-        else:
-            result = CommandResult(
-                command.command_id,
-                CommandState.SUCCEEDED,
-                "MoveIt 调试运动完成",
-                receipt,
-            )
         self._remember(command, result)
         return result
 
-    def _command_rejection(
-        self, command: CommissioningCommand
-    ) -> CommandResult | None:
+    def _command_rejection(self, command: CommissioningCommand) -> CommandResult | None:
         """校验所有无需物理派发即可确定的命令约束。"""
 
         message: str | None = None
+        if isinstance(
+            command,
+            (MoveTargetCommand, MovePoseCommand, JointJogCommand, TcpJogCommand),
+        ):
+            if command.velocity_scale > self.commissioning_velocity_limit:
+                message = "维护速度超过活动 HardwareProfile 上限"
+            elif command.acceleration_scale > self.commissioning_acceleration_limit:
+                message = "维护加速度超过活动 HardwareProfile 上限"
+        if message is not None:
+            return CommandResult(command.command_id, CommandState.REJECTED, message)
         if isinstance(command, MoveTargetCommand):
             if command.target_revision != self.point_set_revision:
                 message = "move_target 点位版本与活动 PointSet 不一致"
@@ -248,7 +284,10 @@ class MoveItCommissioningAdapter:
         elif isinstance(command, MovePoseCommand):
             if command.tool_context_digest != self.tool_context_digest:
                 message = "move_pose ToolContext digest 与活动工具不一致"
-            elif command.pose_input.frame_ref not in {"arm_base", self.model.base_frame}:
+            elif command.pose_input.frame_ref not in {
+                "arm_base",
+                self.model.base_frame,
+            }:
                 message = "move_pose 尚未配置到 arm_base 的静态变换"
         elif isinstance(command, JointJogCommand):
             joint_specs = {
@@ -270,7 +309,9 @@ class MoveItCommissioningAdapter:
                     target = current + command.direction.sign * command.step_si
                     if specification.lower is not None and target < specification.lower:
                         message = "joint_jog 目标低于型号关节限位"
-                    elif specification.upper is not None and target > specification.upper:
+                    elif (
+                        specification.upper is not None and target > specification.upper
+                    ):
                         message = "joint_jog 目标高于型号关节限位"
         elif isinstance(command, TcpJogCommand):
             if self.commissioning_snapshot().tcp_pose is None:
@@ -281,17 +322,13 @@ class MoveItCommissioningAdapter:
             return None
         return CommandResult(command.command_id, CommandState.REJECTED, message)
 
-    def _execute_move_target(
-        self, command: MoveTargetCommand
-    ) -> Mapping[str, Any]:
+    def _execute_move_target(self, command: MoveTargetCommand) -> Mapping[str, Any]:
         """校验活动点位版本并派发一个已解析目标。"""
 
         target = self.targets[command.target_ref]
         return self._execute_target(command, target)
 
-    def _execute_joint_jog(
-        self, command: JointJogCommand
-    ) -> Mapping[str, Any]:
+    def _execute_joint_jog(self, command: JointJogCommand) -> Mapping[str, Any]:
         """从完整当前状态生成只改变一个关节的有限低速目标。"""
 
         snapshot = self.commissioning_snapshot()
@@ -317,25 +354,42 @@ class MoveItCommissioningAdapter:
             joint_names=self.model.joint_names,
             target=target,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="joint_ptp"),
         )
-        observed = self.commissioning_snapshot().joint_positions
-        if observed is None:
-            raise RuntimeError("joint_jog 完成后无法读取完整关节状态")
-        actual = tuple(item.position_si for item in observed)
-        tolerance = 1e-6
-        for candidate_index, (before, after) in enumerate(
-            zip(current, actual, strict=True)
-        ):
-            expected = target[candidate_index] if candidate_index == index else before
-            if abs(after - expected) > tolerance:
-                raise RuntimeError("joint_jog 完成见证与关节读回不一致")
-        return receipt
+        if str(receipt.get("state", "")) != CommandState.SUCCEEDED.value:
+            return receipt
+        if self._joint_jog_reached(current, index, target):
+            return receipt
+        return {
+            **dict(receipt),
+            "state": CommandState.FAILED.value,
+            "completed": False,
+            "message": "joint_jog 完成见证与关节读回不一致",
+        }
+
+    def _joint_jog_reached(
+        self,
+        current: Sequence[float],
+        moved_index: int,
+        target: Sequence[float],
+    ) -> bool:
+        """MoveIt 成功后等到 /joint_states 跟上目标；仿真发布周期是 20ms。"""
+
+        deadline = time.monotonic() + self.joint_readback_timeout_s
+        while True:
+            observed = self.commissioning_snapshot().joint_positions
+            if observed is not None and _joint_jog_matches(
+                self.model.joint_specs,
+                current,
+                tuple(item.position_si for item in observed),
+                moved_index,
+                target,
+                self.joint_completion_tolerance_si,
+            ):
+                return True
+            if time.monotonic() >= deadline:
+                return False
+            time.sleep(0.02)
 
     def _execute_move_pose(self, command: MovePoseCommand) -> Mapping[str, Any]:
         """执行一次不写入 PointSet 的规范绝对 TCP 位姿。"""
@@ -347,12 +401,7 @@ class MoveItCommissioningAdapter:
             xyz_m=pose.xyz_m,
             orientation_xyzw=pose.orientation_xyzw,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _execute_tcp_jog(self, command: TcpJogCommand) -> Mapping[str, Any]:
@@ -369,8 +418,7 @@ class MoveItCommissioningAdapter:
         else:
             axis_index = {"x": 0, "y": 1, "z": 2}[command.axis.value]
             translation = tuple(
-                signed_step if index == axis_index else 0.0
-                for index in range(3)
+                signed_step if index == axis_index else 0.0 for index in range(3)
             )
             delta = RigidTransform(translation, (0.0, 0.0, 0.0, 1.0))
         if command.frame_ref == "tool":
@@ -392,12 +440,7 @@ class MoveItCommissioningAdapter:
             xyz_m=target.translation_m,
             orientation_xyzw=target.orientation_xyzw,
             command_id=command.command_id,
-            parameters={
-                "speed": command.velocity_scale,
-                "acceleration": command.acceleration_scale,
-                "motion_profile_ref": command.motion_profile_ref,
-                "commissioning_kind": command.kind.value,
-            },
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _pre_dispatch_rejection(
@@ -444,18 +487,13 @@ class MoveItCommissioningAdapter:
     ) -> Mapping[str, Any]:
         """把已解析目标派发到唯一 MoveGroup 端口。"""
 
-        parameters = {
-            "speed": command.velocity_scale,
-            "acceleration": command.acceleration_scale,
-            "motion_profile_ref": command.motion_profile_ref,
-        }
         if isinstance(target, ResolvedJointTarget):
             return self.port.execute_joint_target(
                 group_name=self.group_name,
                 joint_names=self.model.joint_names,
                 target=target.joint_positions,
                 command_id=command.command_id,
-                parameters=parameters,
+                parameters=_commissioning_parameters(command, primitive="joint_ptp"),
             )
         if not isinstance(target, ResolvedCartesianTarget):
             raise TypeError("MoveIt 调试只接受已解析运动目标")
@@ -465,7 +503,7 @@ class MoveItCommissioningAdapter:
             xyz_m=target.pose.xyz_m,
             orientation_xyzw=target.pose.orientation_xyzw,
             command_id=command.command_id,
-            parameters=parameters,
+            parameters=_commissioning_parameters(command, primitive="cartesian_linear"),
         )
 
     def _remember(self, command: CommissioningCommand, result: CommandResult) -> None:
@@ -475,6 +513,70 @@ class MoveItCommissioningAdapter:
         self._results[command.command_id] = result
         if result.state is CommandState.EXECUTION_UNKNOWN:
             self._fenced_command_ids.add(command.command_id)
+
+
+def _revolute_joint_error(actual: float, expected: float, specification: Any) -> float:
+    """最短角误差：±2π 行程或 continuous 关节的读回可能折到对侧。"""
+
+    linear = abs(actual - expected)
+    joint_type = getattr(specification, "joint_type", None)
+    lower = getattr(specification, "lower", None)
+    upper = getattr(specification, "upper", None)
+    wraps = getattr(joint_type, "value", joint_type) == "continuous" or (
+        lower is not None
+        and upper is not None
+        and (upper - lower) >= 2.0 * math.pi - 1e-3
+    )
+    if not wraps:
+        return linear
+    wrapped = abs((actual - expected + math.pi) % (2.0 * math.pi) - math.pi)
+    return min(linear, wrapped)
+
+
+def _joint_jog_matches(
+    specifications: Sequence[Any],
+    before: Sequence[float],
+    after: Sequence[float],
+    moved_index: int,
+    target: Sequence[float],
+    tolerance: float,
+) -> bool:
+    """验证只有被点动关节到达目标，其余关节仍在容差内。"""
+
+    for index, (previous, actual) in enumerate(zip(before, after, strict=True)):
+        expected = target[index] if index == moved_index else previous
+        if _revolute_joint_error(actual, expected, specifications[index]) > tolerance:
+            return False
+    return True
+
+
+def _command_result_from_receipt(
+    command: CommissioningCommand, receipt: Mapping[str, Any]
+) -> CommandResult:
+    """把 MoveIt 已知终态回执投影为命令结果；歧义回执仍抛给 UNKNOWN 路径。"""
+
+    if str(receipt.get("command_id", "")) != command.command_id:
+        raise ValueError("MoveIt commissioning 回执 command_id 不匹配")
+    state = str(receipt.get("state", ""))
+    if state == CommandState.FAILED.value:
+        message = str(receipt.get("message") or "").strip() or "MoveIt 返回失败终态"
+        return CommandResult(
+            command.command_id,
+            CommandState.FAILED,
+            message,
+            dict(receipt),
+        )
+    validate_completion_receipt(
+        receipt,
+        command_id=command.command_id,
+        source="MoveIt commissioning",
+    )
+    return CommandResult(
+        command.command_id,
+        CommandState.SUCCEEDED,
+        "MoveIt 调试运动完成",
+        receipt,
+    )
 
 
 def _cartesian_pose(value: object) -> CartesianPose | None:
@@ -491,6 +593,26 @@ def _cartesian_pose(value: object) -> CartesianPose | None:
         xyz,
         orientation,
     )
+
+
+def _commissioning_parameters(
+    command: MoveTargetCommand | MovePoseCommand | JointJogCommand | TcpJogCommand,
+    *,
+    primitive: str,
+) -> Mapping[str, Any]:
+    """把维护命令展开为 MoveIt 唯一接受的冻结运动参数。"""
+
+    return {
+        "motion_profile_ref": command.motion_profile_ref,
+        "primitive": primitive,
+        "velocity_scale": command.velocity_scale,
+        "acceleration_scale": command.acceleration_scale,
+        "position_tolerance_m": 0.001,
+        "orientation_tolerance_rad": 0.01,
+        "collision_check": True,
+        "cartesian_path": primitive == "cartesian_linear",
+        "commissioning_kind": command.kind.value,
+    }
 
 
 __all__ = ["MoveItCommissioningAdapter", "MoveItCommissioningClientPort"]

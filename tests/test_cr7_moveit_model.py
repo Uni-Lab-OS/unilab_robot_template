@@ -6,7 +6,10 @@ import xml.etree.ElementTree as ET
 
 import pytest
 from unilab_arm_cr7 import MODEL_DESCRIPTOR
-from unilab_arm_cr7.moveit_model import build_moveit_model
+from unilab_arm_cr7.moveit_model import (
+    build_joint_state_name_map,
+    build_moveit_model,
+)
 from unilab_robot_contracts import RigidTransform, ToolContext
 
 
@@ -35,6 +38,13 @@ def test_cr7_moveit_model_is_six_axis_and_headless() -> None:
     assert srdf.find("group").attrib["name"] == "robot_a_cr7_arm"
     assert tuple(bundle.kinematics) == ("robot_a_cr7_arm",)
     assert bundle.rviz_required is False
+    assert "world_mount_joint" in bundle.execution_urdf
+    assert "world_mount_joint" not in bundle.render_urdf
+    assert "ros2_control" not in bundle.render_urdf
+    assert "robot_a/meshes/base_link0.STL" in bundle.render_urdf
+    assert "file://" not in bundle.render_urdf
+    assert "file://" in bundle.execution_urdf
+    assert len(bundle.topology_digest) == 64
 
 
 def test_cr7_moveit_model_qualifies_controller_and_joint_names() -> None:
@@ -55,6 +65,30 @@ def test_cr7_moveit_model_qualifies_controller_and_joint_names() -> None:
     assert set(first.joint_limits["joint_limits"]) == {
         f"robot_a_cr7_joint_{index}" for index in range(1, 7)
     }
+    assert first.qualified_joint_names == tuple(
+        f"robot_a_cr7_joint_{index}" for index in range(1, 7)
+    )
+    assert first.topology_digest != second.topology_digest
+
+
+def test_cr7_joint_feedback_requires_exact_complete_mapping() -> None:
+    """SDK/PLC 只有在型号包声明 exact 映射后才能成为观测。"""
+
+    mapping = build_joint_state_name_map(device_id="robot_b")
+
+    assert tuple(mapping.qualify(mapping.canonical_joint_names, (0.0,) * 6)) == (
+        "robot_b_cr7_joint_1",
+        "robot_b_cr7_joint_2",
+        "robot_b_cr7_joint_3",
+        "robot_b_cr7_joint_4",
+        "robot_b_cr7_joint_5",
+        "robot_b_cr7_joint_6",
+    )
+    with pytest.raises(ValueError, match="未验证 joint-state source"):
+        build_joint_state_name_map(
+            device_id="robot_b",
+            source="unverified_plc_register_order",
+        )
 
 
 def test_cr7_moveit_model_owns_exact_source_and_mesh_assets() -> None:

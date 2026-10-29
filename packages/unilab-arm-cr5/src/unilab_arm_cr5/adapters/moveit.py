@@ -85,7 +85,7 @@ class MoveItBackend(BackendObservationMixin):
                 if len(target.joint_positions) != len(CR5_JOINT_NAMES):
                     raise ValueError(f"MoveIt CR5 target 必须为六轴: {name}")
             elif not isinstance(target, ResolvedCartesianTarget):
-                raise ValueError(f"MoveIt target 必须由 MotionTargetResolver 解析: {name}")
+                raise TypeError(f"MoveIt target 必须由 ArmTargetResolver 解析: {name}")
             normalized[name] = target
         self.port = port
         self.endpoint_ids = endpoint_ids

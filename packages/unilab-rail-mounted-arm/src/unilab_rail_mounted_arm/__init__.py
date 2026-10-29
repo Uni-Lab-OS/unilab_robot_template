@@ -6,8 +6,16 @@ from .interlock_adapter import (
     ConfiguredInterlockProvider,
     InterlockBinding,
     InterlockVariablePort,
+    SpatialInterlockBinding,
+    SpatiallyGuardedInterlockProvider,
 )
 from .model_compiler import CompositeModelInput, compile_xacro_snapshot
+from .planning_coordinator import (
+    PlannedPhase,
+    PlanningCoordinator,
+    WaypointValidator,
+    WorkCellPlanResult,
+)
 from .simulation import SimulationInterlockProvider, SimulationRailMountedArmRuntime
 from .workcell_device import RailMountedArmWorkCellDevice
 
@@ -18,9 +26,15 @@ __all__ = [
     "EndpointLeaseRegistry",
     "InterlockBinding",
     "InterlockVariablePort",
+    "PlannedPhase",
+    "PlanningCoordinator",
+    "SpatialInterlockBinding",
+    "SpatiallyGuardedInterlockProvider",
     "RailMountedArmCoordinator",
     "RailMountedArmWorkCellDevice",
     "SimulationInterlockProvider",
     "SimulationRailMountedArmRuntime",
+    "WaypointValidator",
+    "WorkCellPlanResult",
     "compile_xacro_snapshot",
 ]
