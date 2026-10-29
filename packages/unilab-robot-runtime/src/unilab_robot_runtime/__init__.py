@@ -41,6 +41,19 @@ from .os_world import (
     WorldIdentity,
     build_device_runtime,
 )
+from .moveit_move_group import (
+    MoveGroupPlanner,
+    MoveGroupPlannerConfig,
+    MoveGroupUnavailableError,
+    build_move_group_parameters,
+)
+from .moveit_planner import (
+    MoveItPlanner,
+    MoveItPlannerConfig,
+    MoveItPlanningError,
+    PlannerUnavailableError,
+    detect_planner_identity,
+)
 from .point_maintenance import (
     PointMaintenanceService,
     PointSetQualification,
@@ -48,6 +61,8 @@ from .point_maintenance import (
     PublishedPointSet,
     ValidatedPointSet,
 )
+from .trajectory_shortcut import shortcut
+from .trajectory_time import parameterize
 
 __version__ = "0.1.0"
 
@@ -67,7 +82,14 @@ __all__ = [
     "MaintenanceSession",
     "ManipulationSequence",
     "ManipulationSequenceRunner",
+    "MoveGroupPlanner",
+    "MoveGroupPlannerConfig",
+    "MoveGroupUnavailableError",
+    "MoveItPlanner",
+    "MoveItPlannerConfig",
     "MoveItPlanningBudget",
+    "MoveItPlanningError",
+    "PlannerUnavailableError",
     "PointMaintenanceService",
     "PointSetQualification",
     "PointTestEvidence",
@@ -84,9 +106,13 @@ __all__ = [
     "arm_model_descriptor",
     "bind_commissioning_runtime",
     "build_device_runtime",
+    "build_move_group_parameters",
     "build_test_runtime",
     "create_runtime",
+    "detect_planner_identity",
     "load_point_set",
+    "parameterize",
     "resolve_moveit_planning_budget",
     "runtime_requirements",
+    "shortcut",
 ]
