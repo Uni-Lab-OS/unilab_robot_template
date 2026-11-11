@@ -1,0 +1,97 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "qjar",
+  "models": {
+    "qjr20:1600": {
+      "title": "QJAR QJR20-1600",
+      "asset": {
+        "asset_id": "8e48401e-8d01-592d-9a05-73817a9bee6b",
+        "package_digest": "2c014250cf6537dc8ca6294387b1ea5a8747caeca99eac34efc4ef2e3d5765b6",
+        "package_path": "04_设备/qjar/qjr20-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjr20_1600_3775929f/module.json",
+      "module_sha256": "b75059668f9c517b1914d476a9f0062234de0ddcad8d68796816af2e0f2d83b7"
+    },
+    "qjr6:1400h": {
+      "title": "QJAR QJR6-1400H",
+      "asset": {
+        "asset_id": "7544624c-0b22-5268-8ee1-c867445d9448",
+        "package_digest": "2e1b505b2fe2243d9b1f2129d97ef39f7626c6101ee226fa749cf94126ecc69a",
+        "package_path": "04_设备/qjar/qjr6-1400h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjr6_1400h_a8e8da15/module.json",
+      "module_sha256": "6e9ae0e3ca20bba893d48f48da178755ead66c918609bad4d2a59359a8a22749"
+    },
+    "qjr6:2000h": {
+      "title": "QJAR QJR6-2000H",
+      "asset": {
+        "asset_id": "8630052f-1c1c-5d0c-ac06-ea2c48f2850e",
+        "package_digest": "4b682ae66aa28730e8e005cec007389ed2287e8b46a062ee99d3ea03a6942757",
+        "package_path": "04_设备/qjar/qjr6-2000h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjr6_2000h_8c5ce195/module.json",
+      "module_sha256": "5de62305934e40aa7c3306a6d6584a86d6b21b09d60e8b0ab962ddbb9e91afe1"
+    },
+    "qjr6:3": {
+      "title": "QJAR QJR6-3",
+      "asset": {
+        "asset_id": "d5ff2ad0-9171-5849-9e74-1def1817c380",
+        "package_digest": "e0155493a19cb8c6062e133594a128aaccef2ad9ee6326962553387aeb0628ee",
+        "package_path": "04_设备/qjar/qjr6-3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjr6_3_dc843416/module.json",
+      "module_sha256": "c5e64e8b992e6bd6f83266069456f6f505adf75e3e8ca667bed1a83dc1595d06"
+    },
+    "qjr70:2000": {
+      "title": "QJAR QJR70-2000",
+      "asset": {
+        "asset_id": "19adb7d9-4c00-5224-ac36-2efb80f58b83",
+        "package_digest": "ccdbb87a528e4c402eddd3271a5a680a9c3db8ae5c4dadaa9a26ccca0b02bfc0",
+        "package_path": "04_设备/qjar/qjr70-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjr70_2000_f68a541b/module.json",
+      "module_sha256": "7de448ad0978246415aa5e575f88459433b9efbfe5cc8d1abd0e8ee50db7a88b"
+    },
+    "qjrh4:1a": {
+      "title": "QJAR QJRH4-1A",
+      "asset": {
+        "asset_id": "af0b1407-a4c1-5d74-b0a5-50c2c2de76ad",
+        "package_digest": "13002d0b30efe4330d003a20a4a8af15ebcf5959e31a0c06e789e96d4e4e9810",
+        "package_path": "04_设备/qjar/qjrh4-1a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qjrh4_1a_522e9a84/module.json",
+      "module_sha256": "4115f2ae470ea5f2a9b8544178e2b2d8685aaa346277a1a594315ac870befb9a"
+    }
+  },
+  "source_profiles": []
+}

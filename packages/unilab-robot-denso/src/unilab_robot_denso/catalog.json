@@ -1,0 +1,1074 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "denso",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "cobotta": {
+      "title": "Denso Cobotta｜多源合并",
+      "asset": {
+        "asset_id": "3addab59-0c0d-5c56-9a73-4d74ca9dcb40",
+        "package_digest": "b0788774a398cd93800db9da29086ed639506a52a0e560a318270334f29e5b7b",
+        "package_path": "04_设备/denso/cobotta__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cobotta/module.json",
+      "module_sha256": "59ce73f5f763a71653e8108e414d469d05de8d50e313cc457c368a4af6efdf5a"
+    },
+    "cobottapro1300": {
+      "title": "Denso Cobotta PRO 1300｜多源合并",
+      "asset": {
+        "asset_id": "b9b792b9-a059-5b8e-8cf1-2f08ad97fb0d",
+        "package_digest": "cb21fd64fa73f62f7c4dfde8c4a8818226562b0b7451c44bddc31705e7d94600",
+        "package_path": "04_设备/denso/cobottapro1300__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cobottapro1300/module.json",
+      "module_sha256": "590f34df9705dab3d68a4dcd98254785d628b2e4d0a6aca0d2266a195af3887a"
+    },
+    "cobottapro900": {
+      "title": "Denso Cobotta PRO 900｜多源合并",
+      "asset": {
+        "asset_id": "5a02315f-e4b5-5f60-9b9d-745e771516c8",
+        "package_digest": "ec6ea7af0249d865f7a783432ca2c860b4f7ee18c882c1773c485247d16ce667",
+        "package_path": "04_设备/denso/cobottapro900__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cobottapro900/module.json",
+      "module_sha256": "ca589a836676462bcf233dd08135e225abb332d40af8327c2c75ce440ea36ef6"
+    },
+    "cobottapro1300touchsensingsoftcover": {
+      "title": "Denso Cobotta PRO 1300 Touch sensing soft cover",
+      "asset": {
+        "asset_id": "6f0eeb41-d85d-5a37-8b7f-be90b83ea755",
+        "package_digest": "81106f24a3663dd695eb8b889d69c1de2302186a6a87068593617b490b3415bd",
+        "package_path": "04_设备/denso/cobotta_pro_1300_touch_sensing_soft_cover__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cobottapro1300touchsensingsoftcover/module.json",
+      "module_sha256": "3f8d1ad571a482b10aa51ece0a07a0a874c7899ddc44182058b45b20408f5cf8"
+    },
+    "hm40602g": {
+      "title": "HM-40602G",
+      "asset": {
+        "asset_id": "34d0897d-f487-577f-a176-519890457a41",
+        "package_digest": "51dfe8c4978560be42a32fcd643b12b76fc994af8a23ae57598084a0370338aa",
+        "package_path": "04_设备/denso/hm-40602g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40602g/module.json",
+      "module_sha256": "ced8859cc57e9febf96b9e64909f2df830ca6064d45b17c5fb08afda4df88dda"
+    },
+    "hm40602gw": {
+      "title": "HM-40602G-W",
+      "asset": {
+        "asset_id": "ac7a05c4-28ee-5ed6-8eca-2b3113b28c67",
+        "package_digest": "05dc5a3d48cb69eb4852371e17b81dee790f87d7acabce9cfda6904cce48cc79",
+        "package_path": "04_设备/denso/hm-40602g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40602gw/module.json",
+      "module_sha256": "3c2259464cc08747b6b102275180df146860369e5ae739831bfcbf7dade5f6bf"
+    },
+    "hm40603g": {
+      "title": "HM-40603G",
+      "asset": {
+        "asset_id": "01ac8aba-5ff6-5eb7-9cbd-677b9d55bce5",
+        "package_digest": "eb8e92d32b37da24e4dc4e7020625b295c929d4c4d475c3925bedbf6bf016f43",
+        "package_path": "04_设备/denso/hm-40603g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40603g/module.json",
+      "module_sha256": "1b3ae3d7bc11e78e6a6ae7fac4f6370476728983a2cd4067b01ada8aa423271b"
+    },
+    "hm40603gw": {
+      "title": "HM-40603G-W",
+      "asset": {
+        "asset_id": "14693f67-45f7-5290-a5f8-187bfdbde2cf",
+        "package_digest": "eaa3a5d2ffbf2ea9ee93378993df316a3bf2acd477c16008916bd2639fa14781",
+        "package_path": "04_设备/denso/hm-40603g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40603gw/module.json",
+      "module_sha256": "a97a982a8cf8dfc6ed4164e2708240a8588ec5184616634db6ca824206af9013"
+    },
+    "hm40604g": {
+      "title": "HM-40604G",
+      "asset": {
+        "asset_id": "37c19e4c-170b-533d-9bcd-2757cee00522",
+        "package_digest": "f3bda69ceda64ff546339ccd0065e3d61adcbf1b75c57c48b236053f7705ee62",
+        "package_path": "04_设备/denso/hm-40604g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40604g/module.json",
+      "module_sha256": "86abfc8e348b9d2dbe89cb8ec747f7d058dd304dd7726b296ed8ab93a1509bc2"
+    },
+    "hm40604gw": {
+      "title": "HM-40604G-W",
+      "asset": {
+        "asset_id": "4eae8749-0a1f-5bd7-a3fb-3c62b6bf05d7",
+        "package_digest": "219038250c1c09c9503b15fb47b70baab14ca4acdff330138dcb03ede57ce68d",
+        "package_path": "04_设备/denso/hm-40604g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40604gw/module.json",
+      "module_sha256": "f2cc9c051ee7b01f819fe761ae656e101317b7a7d0576456141e238c1d6b1632"
+    },
+    "hm40702g": {
+      "title": "HM-40702G",
+      "asset": {
+        "asset_id": "fd8f4cac-87cf-55f1-8102-b795e1026430",
+        "package_digest": "636d0ae1c910b9ce7fe66790084fbbfaa4d289a731fd01675159b743fceaf6c9",
+        "package_path": "04_设备/denso/hm-40702g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40702g/module.json",
+      "module_sha256": "23f685f5204bffe11f6b8bf1be7e1fceba18ee611397ba8f8b8451579a6b8bf8"
+    },
+    "hm40702gw": {
+      "title": "HM-40702G-W",
+      "asset": {
+        "asset_id": "bf5d12f3-eec3-57c9-b817-14446556cc1e",
+        "package_digest": "bb2d3245d82b86d1dfb080149f44a483071cb8f89d6daada0e23aeb40c2f6f18",
+        "package_path": "04_设备/denso/hm-40702g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40702gw/module.json",
+      "module_sha256": "1b83b63f28502815a22023d23d91b609d41d1a7e62c2830ba23e758e8b1fcc90"
+    },
+    "hm40703g": {
+      "title": "HM-40703G",
+      "asset": {
+        "asset_id": "6c1a47db-ac5a-5a02-b976-3809c209cf15",
+        "package_digest": "e5a2fe684f48fe92cf7b47786e82676bcfa3632799663904161e3852ecd08f5d",
+        "package_path": "04_设备/denso/hm-40703g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40703g/module.json",
+      "module_sha256": "33ac8f0279332f009147e068bd0a6a30cb77c8dc352a00471a22727fb9a967a3"
+    },
+    "hm40703gw": {
+      "title": "HM-40703G-W",
+      "asset": {
+        "asset_id": "d878b61f-c312-5fd9-a6d3-d71d367d36b1",
+        "package_digest": "ef45aa737ad43047c11fbf7a8c890e3fb4d2473f65a622a4c645407c08b02c68",
+        "package_path": "04_设备/denso/hm-40703g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40703gw/module.json",
+      "module_sha256": "08bd701703ea33d0da0130e469952140c6f5075e3c7edda4f404f0e4fda6e309"
+    },
+    "hm40704g": {
+      "title": "HM-40704G",
+      "asset": {
+        "asset_id": "9dee513a-714c-568f-8388-8d421b975c8c",
+        "package_digest": "ca136d3e7a6a074141c868ede12dea52f6685d912a822c0465af7f74ab5bb027",
+        "package_path": "04_设备/denso/hm-40704g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40704g/module.json",
+      "module_sha256": "b0b617d81dc5f2497247ee8969f6d6fe87b73aa703ada3e14cafcfb41de43a2e"
+    },
+    "hm40704gw": {
+      "title": "HM-40704G-W",
+      "asset": {
+        "asset_id": "987b5f82-9ad6-5b47-ad85-3efa5b130535",
+        "package_digest": "89cef46d1293fc583862efc0c3bd9c01943bdfeaf1b6bcbabcce6cecfea8e695",
+        "package_path": "04_设备/denso/hm-40704g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40704gw/module.json",
+      "module_sha256": "fac50216162ef0131a40b4aad117be2717cb6133d4bc7b3a55daee461d6f92ff"
+    },
+    "hm40852g": {
+      "title": "HM-40852G",
+      "asset": {
+        "asset_id": "bdf26c33-481d-56f4-a8db-60d97f86bcb6",
+        "package_digest": "d2e4a95e55e26af7465f6f53ac55ba682fd86adea8ccb9de202a547d525ffb85",
+        "package_path": "04_设备/denso/hm-40852g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40852g/module.json",
+      "module_sha256": "4fdb38141f509a76534286c0c6be0dee02652a028e09d87f59d191e30d9fac1a"
+    },
+    "hm40852gw": {
+      "title": "HM-40852G-W",
+      "asset": {
+        "asset_id": "89811bd6-fca0-5e82-a3f6-9e5809bd049f",
+        "package_digest": "dc3b4b143bbd5c81f0a755f5a9fd1497f2fddced60cb0cb83d5692c332506416",
+        "package_path": "04_设备/denso/hm-40852g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40852gw/module.json",
+      "module_sha256": "9c6b301ab51fe9de24c8041c024fd15948c591a5b4680c9378c7ff1c611d9301"
+    },
+    "hm40853g": {
+      "title": "HM-40853G",
+      "asset": {
+        "asset_id": "607a2859-d1a6-5836-bf8b-a1ef9914063e",
+        "package_digest": "b8481ef00edf729ff41ed8ebd571262b307519c6c48ab4b41de0d4e41fc02e45",
+        "package_path": "04_设备/denso/hm-40853g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40853g/module.json",
+      "module_sha256": "da4988683cc694a2a7d467122fd3c1fe85ebd80182c5cc0e240475ac91ab19b4"
+    },
+    "hm40853gw": {
+      "title": "HM-40853G-W",
+      "asset": {
+        "asset_id": "f43ec6e7-cafd-54d7-ba63-26d6a497aed1",
+        "package_digest": "830daa97f014d75633919128ee6a082039dceb1477f8a911dd5bf4f4226ef7a7",
+        "package_path": "04_设备/denso/hm-40853g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40853gw/module.json",
+      "module_sha256": "ed4e6ec78553b2a32907ff592cba1ef23306eb422cb518ee4b1112f1d7dc6b98"
+    },
+    "hm40854g": {
+      "title": "HM-40854G",
+      "asset": {
+        "asset_id": "c325a2cf-4d78-5370-bc6a-b6bc5f422273",
+        "package_digest": "61da39981a81363a9c16e7a3282c05a902bb1465638a3e686acbc0e79871d782",
+        "package_path": "04_设备/denso/hm-40854g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40854g/module.json",
+      "module_sha256": "c3275a6839251b1cb0c940d9ebe612da7bc2c8c773ef261de6727ab51ca39d6e"
+    },
+    "hm40854gw": {
+      "title": "HM-40854G-W",
+      "asset": {
+        "asset_id": "09e5cb61-9403-54cd-9112-633503213eda",
+        "package_digest": "8c99f1d1099646e8b48a8ef0aa8bccdbd612fb94a34ece2fc6f8c30486667204",
+        "package_path": "04_设备/denso/hm-40854g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40854gw/module.json",
+      "module_sha256": "c0805ec3da0f21798147a60b98497650de6f6f9b09c71343f2c0f6f161d5508b"
+    },
+    "hm40a02g": {
+      "title": "HM-40A02G",
+      "asset": {
+        "asset_id": "d1b54022-382d-547e-b48d-8fd61ac17c9f",
+        "package_digest": "eaf64c412ce3ce84cbca6dabfa0d35a93cc73ffd7235d4d8748e459353128a8b",
+        "package_path": "04_设备/denso/hm-40a02g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a02g/module.json",
+      "module_sha256": "6bbe28fe6e14972d1b5634b85d84cb042a8f0f5d02bdf81474bbb8717986fe60"
+    },
+    "hm40a02gw": {
+      "title": "HM-40A02G-W",
+      "asset": {
+        "asset_id": "5bc6fb1f-8f0a-54c4-bc30-e86bca3cbda7",
+        "package_digest": "6ea9a959bd855f464f674a9cb5859edf96f7eff94733ec275a999679cfbfc11b",
+        "package_path": "04_设备/denso/hm-40a02g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a02gw/module.json",
+      "module_sha256": "ab0da8f1757874fb70c0470122b6861d82e8fc668451056868f84b90d79d8d69"
+    },
+    "hm40a03g": {
+      "title": "HM-40A03G",
+      "asset": {
+        "asset_id": "92bfe8e2-5109-5c64-a636-b15e72806596",
+        "package_digest": "89ecb11495bdfac6e0522ef1070839650b900fdfdeb574542b378445a5a21468",
+        "package_path": "04_设备/denso/hm-40a03g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a03g/module.json",
+      "module_sha256": "1a18020706e213a9153c8d75865f1beb72f4f763606f9d7110a789895ae8577c"
+    },
+    "hm40a03gw": {
+      "title": "HM-40A03G-W",
+      "asset": {
+        "asset_id": "a0721562-cd8a-592c-aff6-9b7f0edb2182",
+        "package_digest": "b2cc708b0f59f9dacb41d0cacd26c06a08c28b518587220e923de0920ab4b060",
+        "package_path": "04_设备/denso/hm-40a03g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a03gw/module.json",
+      "module_sha256": "a13bb9d10742cc52fadd195c369a25fef1fa019e3f4f8847bd7fcfd71e575355"
+    },
+    "hm40a04g": {
+      "title": "HM-40A04G",
+      "asset": {
+        "asset_id": "313b0342-09c2-527b-b2b7-ca8916ecbba7",
+        "package_digest": "8eab692c4076482ce3ca83200e6ef89790f63a2bdde5c4d8b3cdab9507d30230",
+        "package_path": "04_设备/denso/hm-40a04g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a04g/module.json",
+      "module_sha256": "220e2f2d8d454bcedef5dc6f43ddb5e09745a7e26ad9dc8373032103dff1183c"
+    },
+    "hm40a04gw": {
+      "title": "HM-40A04G-W",
+      "asset": {
+        "asset_id": "57bd38c3-f318-53bd-91f1-922cb93579c9",
+        "package_digest": "71d832c81bbdd3be041f1ef4c10c93c457c8a1b709a8d4eade93791e518fab2f",
+        "package_path": "04_设备/denso/hm-40a04g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm40a04gw/module.json",
+      "module_sha256": "efa1bba6fb2f3f0ca25f8981c078d28aa270fb42ac32283a8e6f5c7b55f681f6"
+    },
+    "hm4a73": {
+      "title": "Denso HM-4A73",
+      "asset": {
+        "asset_id": "13ff4a0f-402d-5aca-a1a8-6ec6fc5d9ac1",
+        "package_digest": "a45be4389061082d1eff0c5f75954ef094f4beb5c5c1eb2f04e2ee35af367df0",
+        "package_path": "04_设备/denso/hm-4a73__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm4a73/module.json",
+      "module_sha256": "abfc6cdf095da86024e7974e20be6f9ba742a0e3d2c776d1624e8e4c620a1cf6"
+    },
+    "hm4aa0g": {
+      "title": "HM-4AA0G",
+      "asset": {
+        "asset_id": "84b8c281-9fb8-5cde-938b-96dd62f29159",
+        "package_digest": "1f303cb5810b8471cbbc0a9825bd536d4387e880e6aebdfb382656a3dcaf1015",
+        "package_path": "04_设备/denso/hm-4aa0g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hm4aa0g/module.json",
+      "module_sha256": "761f16247145bcc1b301f4e89b6d86e5a731e63f8a8b67ce897b58c01effc8c4"
+    },
+    "hms40702g": {
+      "title": "HMS-40702G",
+      "asset": {
+        "asset_id": "07eb8dea-28d0-5534-9642-37e9f9781591",
+        "package_digest": "48bf6319cf2151a5f93f50ec8d506d92672855490235bbe5fa4c6d02b5e70fe8",
+        "package_path": "04_设备/denso/hms-40702g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40702g/module.json",
+      "module_sha256": "1d00ca77cb19211c85b470535b98e3210bca5b81c898d7b595dda175f6b2f891"
+    },
+    "hms40702gw": {
+      "title": "HMS-40702G-W",
+      "asset": {
+        "asset_id": "4d07685f-3729-57ca-9b3b-9a5b2c5a3374",
+        "package_digest": "2cbda4f8e30b8ee5d2e7cd3520ff70f050265d9920f2b3d67d65344572e2a9db",
+        "package_path": "04_设备/denso/hms-40702g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40702gw/module.json",
+      "module_sha256": "698705948d8ca312fbc4111f359ef35b5a4e564462d38900526acfd13b74f008"
+    },
+    "hms40703g": {
+      "title": "HMS-40703G",
+      "asset": {
+        "asset_id": "73a614f3-94d8-5296-b628-f9b5e624fe56",
+        "package_digest": "2c716362c422d2d4aa14b019416eb987157b4b4078db401f05952f4f11d740ac",
+        "package_path": "04_设备/denso/hms-40703g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40703g/module.json",
+      "module_sha256": "50ae25d97b8f76ad9699cb26481963a5035f5889046fde2a41dcb3165b91197d"
+    },
+    "hms40703gw": {
+      "title": "HMS-40703G-W",
+      "asset": {
+        "asset_id": "b1697973-f5e3-5787-bb99-22cd57400ebd",
+        "package_digest": "6f60c540e07781a5b67f82b82f2a62b794c39de030db06770159984b41135519",
+        "package_path": "04_设备/denso/hms-40703g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40703gw/module.json",
+      "module_sha256": "ad8593352ffa3f96ce7df41587acb44e99a0791b9cfdc393df74517694d8e7c9"
+    },
+    "hms40704g": {
+      "title": "HMS-40704G",
+      "asset": {
+        "asset_id": "5d3611d8-20d9-5c2d-b186-73ff657c77cf",
+        "package_digest": "6b6f2270185083e007d588f6f869840aadddf9a321299da7e09badfbc082eb69",
+        "package_path": "04_设备/denso/hms-40704g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40704g/module.json",
+      "module_sha256": "7474a1f7211a541cb75ef2daf766223206a123131cc4f8eb90f002cbb349dbaa"
+    },
+    "hms40704gw": {
+      "title": "HMS-40704G-W",
+      "asset": {
+        "asset_id": "8e4583e0-d665-544e-b637-8447df6d7787",
+        "package_digest": "9bf21f8e05bf871b542b7a32fdb66f5f627e19ba24d23ab1965e8f19c37517d6",
+        "package_path": "04_设备/denso/hms-40704g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40704gw/module.json",
+      "module_sha256": "4fa0a27cc1eb560b1df3340e56d8c65065077aee992a3f0a6e3e021b2670cfd6"
+    },
+    "hms40852g": {
+      "title": "HMS-40852G",
+      "asset": {
+        "asset_id": "79aa55be-3899-5918-b880-ea77f03fff28",
+        "package_digest": "d9af24c52fa20cbce62a879aa290d0aee72e0b2019342ec7bcf50c257410751e",
+        "package_path": "04_设备/denso/hms-40852g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40852g/module.json",
+      "module_sha256": "6f69eff6bd8471cad8241d24fa487728ce34ac415906f36fcbb11ad57b172d1a"
+    },
+    "hms40852gw": {
+      "title": "HMS-40852G-W",
+      "asset": {
+        "asset_id": "7848849b-b231-58db-9dcc-c5a9a715b786",
+        "package_digest": "534db16662271a176ccd13e5ee6af855d74fdc6e843f4959df2b83677dd8c307",
+        "package_path": "04_设备/denso/hms-40852g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40852gw/module.json",
+      "module_sha256": "385a8dc1812675beb4f1df91973e4c4a5b2aeab3fcb53f52667a8bf60d72adce"
+    },
+    "hms40853g": {
+      "title": "HMS-40853G",
+      "asset": {
+        "asset_id": "b11fe503-2f53-594d-b4fc-55892e0ac9cd",
+        "package_digest": "76b991530403db600da0c7c212c68d5a62bf2c571d5d907aaa974bc714e3c75b",
+        "package_path": "04_设备/denso/hms-40853g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40853g/module.json",
+      "module_sha256": "4af3b73dbecc9244cccb9d6542ea50cc8c8192ab8ba5a3d622845562b20e445d"
+    },
+    "hms40853gw": {
+      "title": "HMS-40853G-W",
+      "asset": {
+        "asset_id": "dbf607ee-011e-58c1-98d2-50eff97107a9",
+        "package_digest": "d2672917c16a332738994b87a3d67e93b385a5939b50864827db3acb653cd758",
+        "package_path": "04_设备/denso/hms-40853g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40853gw/module.json",
+      "module_sha256": "226e8c3cfa2fb692bfc79209a2b387c573ccc9b0f75f53ed17cc574aa7165659"
+    },
+    "hms40854g": {
+      "title": "HMS-40854G",
+      "asset": {
+        "asset_id": "8d3858a8-1512-5d4f-b16b-f7e2362f3312",
+        "package_digest": "73eb5bee3e0f44ceead55634a41dd541da94df5cb8cffb54011f13ab62d6b31a",
+        "package_path": "04_设备/denso/hms-40854g__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40854g/module.json",
+      "module_sha256": "535f6f7ad6af2ea293dc90cd3581df1c6bd0fbf235a3c74dad1b1d58c267d3b8"
+    },
+    "hms40854gw": {
+      "title": "HMS-40854G-W",
+      "asset": {
+        "asset_id": "ac940cc6-1c19-5f2a-8b13-7d81839869cb",
+        "package_digest": "e775539bfbe30ca61bac766213cb8ee320ac0f211b1b3695a88b2f783ac27f33",
+        "package_path": "04_设备/denso/hms-40854g-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hms40854gw/module.json",
+      "module_sha256": "f718948d31e623d25daeddd92673316816e1ad50bc0f1d6d70721c77aef7fbb3"
+    },
+    "hs045a1": {
+      "title": "Denso HS045A1",
+      "asset": {
+        "asset_id": "c11dc7f3-2f76-5857-880f-17dafd5c7583",
+        "package_digest": "93ce049c7bffcbf93df96ed08688c268e18828387050ff4fa5b424410d010290",
+        "package_path": "04_设备/denso/hs045a1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hs045a1/module.json",
+      "module_sha256": "084e22b4f56eefdb0842069c9814efb2364fcbe0e9e09622d7577edfcb5dab37"
+    },
+    "hs055a1": {
+      "title": "Denso HS055A1",
+      "asset": {
+        "asset_id": "0ecafe69-7688-55ac-940f-7ab81ca6f9b0",
+        "package_digest": "d7df1b141459c1faf6311a6b2495a96ca6ea502e14042c5c83920e23ad390b02",
+        "package_path": "04_设备/denso/hs055a1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hs055a1/module.json",
+      "module_sha256": "a1e754b7a84fc8ec9806d28e770d4f55f4a1dce0a2e737458f1193e1872aa354"
+    },
+    "hsr048n32": {
+      "title": "HSR-048-N32",
+      "asset": {
+        "asset_id": "53c9e020-0cf7-522b-8946-825b7421c9c5",
+        "package_digest": "1cd78f80a0962b3b83db812d70a78f99bdcbe7a22a7e3527c14cf61383892bd9",
+        "package_path": "04_设备/denso/hsr-048-n32__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hsr048n32/module.json",
+      "module_sha256": "a94bff6019e5dc19b1408a03ed2a0e2b5eb88a839a6674aeabf7379183593b80"
+    },
+    "hsr055n32": {
+      "title": "HSR-055-N32",
+      "asset": {
+        "asset_id": "9197b8dc-42be-55eb-a6db-24a366ba2ebc",
+        "package_digest": "2fdc5524ce18b2a39506c64815a539e4d11c6b879ae763521c36ffbd360a06f5",
+        "package_path": "04_设备/denso/hsr-055-n32__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hsr055n32/module.json",
+      "module_sha256": "d311243bda3db83289bf44a62c047eac9975321bf22600c48c8109fa5e635748"
+    },
+    "hsr065a1n17w5n": {
+      "title": "Denso HSR065A1-N17-W5N",
+      "asset": {
+        "asset_id": "5e6861b8-1843-5f9e-90e5-a0d8b532c335",
+        "package_digest": "1619e831048be5dd420445ecedc911f6542bbe69d87145b09eed98c22f3cf042",
+        "package_path": "04_设备/denso/hsr065a1-n17-w5n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hsr065a1n17w5n/module.json",
+      "module_sha256": "e19253ba36b0727b99d2686ff2a93d2abea9c77e36a75a10f9199e3fa7cefd43"
+    },
+    "hsr065n32": {
+      "title": "HSR-065-N32",
+      "asset": {
+        "asset_id": "146becc5-528b-528b-819f-eb76f703d16d",
+        "package_digest": "277a333a9c55eead29728d3fcae8299735d9ff02e79831de3adafb2fbb97a715",
+        "package_path": "04_设备/denso/hsr-065-n32__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hsr065n32/module.json",
+      "module_sha256": "95a3f4e5eaa086f7f1ad6e7272a69c7b8729bb1d4badd0232e176d6d423ffc6b"
+    },
+    "lph040": {
+      "title": "LPH040",
+      "asset": {
+        "asset_id": "31819747-0ebe-5ed4-bbeb-e2d7fe6124d7",
+        "package_digest": "c5a3a0e41fbd1589f2e8196fec8c9ca6ebadcea37972c30a5c2c9242f933aea2",
+        "package_path": "04_设备/denso/lph040__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lph040/module.json",
+      "module_sha256": "7a1e1dc2ffa52dbf284322421092fe8019c1aa69b841b6a53e0ab590a9cbdec6"
+    },
+    "lph060": {
+      "title": "LPH060",
+      "asset": {
+        "asset_id": "6688cf0c-68bf-5628-babc-5db27539d3cb",
+        "package_digest": "1b124d172bae0869a1a29067560607b242fadadcf10a753b9b84d8518ce5ce0c",
+        "package_path": "04_设备/denso/lph060__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lph060/module.json",
+      "module_sha256": "65d15f2ca4685862533efdbb4f5c28d473290da87fb0afe8fee765e3161ce2c3"
+    },
+    "lph070": {
+      "title": "LPH070",
+      "asset": {
+        "asset_id": "11476283-11c4-5307-89fb-eaa38f407110",
+        "package_digest": "bfe37c22d415fbc29e2fb770af3e738196eb826be83d4168ba4c7f7821021056",
+        "package_path": "04_设备/denso/lph070__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lph070/module.json",
+      "module_sha256": "f71c2ec5f262a0f5cdc3008e2d10f86dcd57bef9ea18bf683b52ecd6c64e23ae"
+    },
+    "vla4025": {
+      "title": "VLA-4025",
+      "asset": {
+        "asset_id": "72508da8-e779-54d9-b01d-0b6ae7c54ca7",
+        "package_digest": "4644e48dbe6fdf401476c35c28af97d17d0d69757eb717bcb659a86213774e36",
+        "package_path": "04_设备/denso/vla-4025__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vla4025/module.json",
+      "module_sha256": "1e27d0c87278370692c42f11aa17a49db6b11c4a7730dd8cb9636635c1096368"
+    },
+    "vla6022": {
+      "title": "VLA-6022",
+      "asset": {
+        "asset_id": "7a52568a-07bf-56b9-8ac3-8f3ebbf6c090",
+        "package_digest": "26a8d2ff1327ef3df70d487542db5283c99ff7c95be3de6f3f7cb2df5ac6229e",
+        "package_path": "04_设备/denso/vla-6022__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vla6022/module.json",
+      "module_sha256": "ed8b0b58bb229c5e215c1fd9257c6463f30882bcf4e00eb6a9a049ea13221cb3"
+    },
+    "vm1500": {
+      "title": "VM-1500",
+      "asset": {
+        "asset_id": "2ea8f40e-5c5e-5257-bc56-77ef5a970cdb",
+        "package_digest": "e1bc471a068a18d881c4d3df4a56babf8c03abf203c5a84f9cf19fc5d31bf628",
+        "package_path": "04_设备/denso/vm-1500__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vm1500/module.json",
+      "module_sha256": "e5be22bd3f072116e59b6b11d10d4cad97690845487afd7dbc1f22cd3f0039de"
+    },
+    "vm6083g": {
+      "title": "VM-6083G",
+      "asset": {
+        "asset_id": "e525bcd4-9f39-5270-8b14-0f0c829fcec5",
+        "package_digest": "84b7535da87c1f68870c7a939c3e8cfa9c4a76008706f184d90a2f49bcf6efcd",
+        "package_path": "04_设备/denso/vm-6083g__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vm6083g/module.json",
+      "module_sha256": "a8b45b060803a3d2cb9bb6690b5713f76ce5bb927d06d65a76f13a89fe72b653"
+    },
+    "vm60b1": {
+      "title": "Denso VM-60B1",
+      "asset": {
+        "asset_id": "761791a8-18b9-5e90-866d-be0759016f2e",
+        "package_digest": "14a9498397db9cf0119c5890acbbb9aa6d6391ab56979a1a1e4d0c70a524b45a",
+        "package_path": "04_设备/denso/vm-60b1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vm60b1/module.json",
+      "module_sha256": "772e10ad0a82944a47e43e6698e68777131d80f3f6872b2b7ce359829c219cec"
+    },
+    "vm60b1g": {
+      "title": "VM-60B1G",
+      "asset": {
+        "asset_id": "979fa0ce-2edc-58f2-ae06-77b8bcc90c62",
+        "package_digest": "25cf6f379645672a097dfb36f9f11e21c23a6f8ffa309b480d7fe58db7026954",
+        "package_path": "04_设备/denso/vm-60b1g__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vm60b1g/module.json",
+      "module_sha256": "9e58e1384fbde365eb770984f34207aa1c906eba7d259f82272ed3ef2e8aa481"
+    },
+    "vmb2515": {
+      "title": "VMB-2515",
+      "asset": {
+        "asset_id": "7b3a7bc5-1287-574d-a892-0e0046b52f93",
+        "package_digest": "623dfe5c800fae62e10ef7d77e5fe061ce9039370d0c34fb0db3f2beab277c7d",
+        "package_path": "04_设备/denso/vmb-2515__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vmb2515/module.json",
+      "module_sha256": "689a9b906123b881e5847aa5bc7220f25b9a674e1ed7c6afd43919b937c7338e"
+    },
+    "vmb2518": {
+      "title": "VMB-2518",
+      "asset": {
+        "asset_id": "96fa9edb-251c-5e90-bfe4-e937f65f52b9",
+        "package_digest": "f320a59cb4d9a32b477db6889db52609320607e3bee5feef00c992dd6929f99b",
+        "package_path": "04_设备/denso/vmb-2518__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vmb2518/module.json",
+      "module_sha256": "44a47fc7353175304bbc34440f9e219191f693b1b84efa4baba5291298f3e250"
+    },
+    "vp6242": {
+      "title": "Denso VP-6242",
+      "asset": {
+        "asset_id": "ad83d710-3b7a-5257-874e-8d429e0d6f9b",
+        "package_digest": "caab376adefa8da4a724ffd8714cc8ece4aea8ca57d3bb73c16522e1bb836ada",
+        "package_path": "04_设备/denso/vp-6242__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vp6242/module.json",
+      "module_sha256": "418722bb82bd893163ea215f8472c058abd65f6236fa2f6f49d51bbceefb618d"
+    },
+    "vs050": {
+      "title": "Denso VS-050",
+      "asset": {
+        "asset_id": "4d357d5d-ffeb-591e-81ad-1dc82cf2ecd4",
+        "package_digest": "468ac9b1c8a6d79418ca3aef1e7b88a35cf4b3bb960be21e9a2b26fa229bafd2",
+        "package_path": "04_设备/denso/vs-050__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs050/module.json",
+      "module_sha256": "31dde3d3c5085235bf506592c6620949788752250e5fe1c3ae67b120ecf2fea0"
+    },
+    "vs060": {
+      "title": "Denso VS-060",
+      "asset": {
+        "asset_id": "3101aebd-92a7-5cc5-b5b6-e429d4613999",
+        "package_digest": "b6d518523f00d310570752731c227c6c90fba2d2be335a775f59797bc34e1612",
+        "package_path": "04_设备/denso/vs-060__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs060/module.json",
+      "module_sha256": "4dc2875e73a7489d7ab1004091428dbd476dd58e0a595a2622226d414aae632e"
+    },
+    "vs060a3": {
+      "title": "VS-060A3",
+      "asset": {
+        "asset_id": "c9629780-8a51-5318-abea-2e07ddbe7d60",
+        "package_digest": "24c897f431919dd7baab6f10cf6e69d5b230e863e9f4a2943f0d42cd785c6727",
+        "package_path": "04_设备/denso/vs-060a3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs060a3/module.json",
+      "module_sha256": "00181df8475488258f2400ef07282011c222d1dfefb43331692e3092f26e70ad"
+    },
+    "vs068": {
+      "title": "Denso VS-068",
+      "asset": {
+        "asset_id": "e9c61dc4-ceaf-51d6-8b47-035de14ebdae",
+        "package_digest": "217a7b7cbeb2c1bfa296bf67fb52eed0199d7ec6fca843693787fbbff30a3061",
+        "package_path": "04_设备/denso/vs-068__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs068/module.json",
+      "module_sha256": "e8f08021cc6dd980361b00299790276c4897b35252c0cbb5d1c60676480281e8"
+    },
+    "vs087": {
+      "title": "Denso VS-087",
+      "asset": {
+        "asset_id": "b7bf1597-8339-558c-8072-2c4b18d166fb",
+        "package_digest": "665bbdf4bcc26e8783aa703a343b2bb9836c175ad7ac07ffb90b19b4f042cf67",
+        "package_path": "04_设备/denso/vs-087__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs087/module.json",
+      "module_sha256": "2c78e51c3d7e2afe605d0440090942a041f59b253ff8c6f1dca24e5d8bd3d1f0"
+    },
+    "vs087a4": {
+      "title": "VS-087A4",
+      "asset": {
+        "asset_id": "85591987-0453-56e9-a80e-698e19381ba8",
+        "package_digest": "c7e2a2b4177c3b1f6b93773d8c2b42172f28f6e1c4b969b8a82623ac51f9c7d5",
+        "package_path": "04_设备/denso/vs-087a4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs087a4/module.json",
+      "module_sha256": "d5cad4b34b4a5bcccda1c6827d1a7c9dc3afd11bed124d50defc966b27b59c9c"
+    },
+    "vs6556": {
+      "title": "Denso VS-6556",
+      "asset": {
+        "asset_id": "39d85cd9-5c0e-5da5-a1ad-09a63b169f7f",
+        "package_digest": "5e3aa01187b02b19d96894114ed6289b0741e811e0b1b49dc2eeca78b9b490cf",
+        "package_path": "04_设备/denso/vs-6556__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs6556/module.json",
+      "module_sha256": "ed2b4bd1ab385f76a571ea8ac2c3591adc0f92f754db2dae72deb7ade73a0802"
+    },
+    "vs6556g": {
+      "title": "VS-6556G",
+      "asset": {
+        "asset_id": "6c3d4fa6-160b-50f1-98e0-23f564c4233c",
+        "package_digest": "10563ccb4b1675998d94ec0a440e28970c26068f5e2d1fdcad6346ce8e9110a7",
+        "package_path": "04_设备/denso/vs-6556g__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs6556g/module.json",
+      "module_sha256": "5e9ae5e67f33f3cff1ea7ec920e8e0580450eea4431abb2af47f97adcfc3fb14"
+    },
+    "vs6577g": {
+      "title": "VS-6577G",
+      "asset": {
+        "asset_id": "c119b609-0106-5cc1-aaed-7d3295727aa8",
+        "package_digest": "ddc755c12714e300975346f65dfe687b2ac39d87fad76d5cd64d1c84bcfcbd66",
+        "package_path": "04_设备/denso/vs-6577g__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs6577g/module.json",
+      "module_sha256": "357ea5bf70c0ad0acb4b7d9013a1b9ab1dd506d8f4db680522b5e86b4765d7d4"
+    },
+    "vs6577gb": {
+      "title": "Denso VS-6577G-B",
+      "asset": {
+        "asset_id": "ec732667-6c71-50b9-b8a0-f7f3f91a0c0d",
+        "package_digest": "de40b694b6b2d1521ba5f07942738ef9484c2567546c5d0c07215d17a2ecd9d7",
+        "package_path": "04_设备/denso/vs-6577g-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vs6577gb/module.json",
+      "module_sha256": "8aae3af74b41a621a748b6a2660cc76232ef7e36f056826311d56e8552f6cd1e"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "denso_robot_moveit_config_7398f34c7d",
+      "manifest": "source_profiles/denso_robot_moveit_config_7398f34c7d/source.lock.json",
+      "sha256": "1eb4bba78241e2a0461c975b2352b178c1481f6f9da27ae2dbae877958f6b3b6",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "denso_robot_moveit_demo_8be33a60c6",
+      "manifest": "source_profiles/denso_robot_moveit_demo_8be33a60c6/source.lock.json",
+      "sha256": "9d83272645c96f5ac8cc4d9d54a487db351ab66d5ec58dd64c87fe18a954c037",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "efort",
+  "model": "gr6100st",
+  "title": "GR6100ST",
+  "asset": {
+    "asset_id": "ceed3d18-e98a-5ace-9606-e570010075d3",
+    "package_digest": "161111988e58007882aa73b4518c1dafd029f1ea4a5340a5e42f0db32c2a3daa",
+    "package_path": "04_设备/efort/gr6100st__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ceed3d18-e98a-5ace-9606-e570010075d3",
+      "package_digest": "161111988e58007882aa73b4518c1dafd029f1ea4a5340a5e42f0db32c2a3daa",
+      "package_path": "04_设备/efort/gr6100st__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "13a4aa6c30456c43147b1287a78932cda221e276e88d56da1a000b85cdd6d515",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "feb2653152594e0273943d1c085953dbdd5a3e7ff95807b17e66b2dfb139b3b2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gr6100st__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "GR6100ST",
+          "manufacturer": "EFORT",
+          "variant": "",
+          "path": "Components/EFORT/Robots/GR6100ST.vcmx",
+          "type": "Robots",
+          "payload": "10",
+          "reach": "1674.0",
+          "vcid": "ed37e58e-0ab7-4c6b-aebc-26f6cc05454b",
+          "library_assets": [
+            "ceed3d18-e98a-5ace-9606-e570010075d3"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/GR6100ST.vcmx",
+        "path": "simready_usd/GR6100ST.vcmx",
+        "sha256": "13a4aa6c30456c43147b1287a78932cda221e276e88d56da1a000b85cdd6d515"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

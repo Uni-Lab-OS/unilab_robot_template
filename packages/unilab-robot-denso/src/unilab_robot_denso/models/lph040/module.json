@@ -1,0 +1,327 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "denso",
+  "model": "lph040",
+  "title": "LPH040",
+  "asset": {
+    "asset_id": "31819747-0ebe-5ed4-bbeb-e2d7fe6124d7",
+    "package_digest": "c5a3a0e41fbd1589f2e8196fec8c9ca6ebadcea37972c30a5c2c9242f933aea2",
+    "package_path": "04_设备/denso/lph040__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "31819747-0ebe-5ed4-bbeb-e2d7fe6124d7",
+      "package_digest": "c5a3a0e41fbd1589f2e8196fec8c9ca6ebadcea37972c30a5c2c9242f933aea2",
+      "package_path": "04_设备/denso/lph040__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:9544",
+            "id": "dof:9791",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -130.0,
+              130.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -130.0,
+                130.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -130.0,
+                130.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:10075",
+            "id": "dof:10989",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -146.6,
+              146.6
+            ],
+            "parent_node_id": "node:9544",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -146.6,
+                146.6
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -146.6,
+                146.6
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:11273",
+            "id": "dof:11522",
+            "independent": true,
+            "initial_source": 124.5,
+            "input_limits_at_initial_configuration": [
+              -25.5,
+              124.5
+            ],
+            "parent_node_id": "node:10075",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -0.025500000000000002,
+                0.1245
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -25.5,
+                124.5
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:11833",
+            "id": "dof:11859",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:11273",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "1c6cd53239fc8062b6a087125f7104f4de8846e95a184233c0ab9467e8dfd6d3",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "1c6cd53239fc8062b6a087125f7104f4de8846e95a184233c0ab9467e8dfd6d3",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "b286dcfb4d04a5b2a05d4e9eeed0e77955f3bc2ec90a5be462738af79e843678",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/lph040__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apidenso",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apidenso.exe",
+        "sha256": "da6ba4fad2aa125465505530f229adafb4b753664d36be72b943eccdd9f5a601",
+        "bytes": 75264,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "denso controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:denso:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/denso/ros2",
+        "repository_url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+        "code_tree_sha256": "fcf506a6ff09f4d4c797de17a19962e77aa91d73ac7959bd2b39a676190b1acb",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "04688c5564e029aafccd85afb490594ca069c64e2e72501e1e5fd75b514a7d7a"
+          },
+          {
+            "path": "bcap_service/README.md",
+            "sha256": "43fd9233384085d99bbde0797ef017e287270fd7afd7c0992e945cba9d5b5b31"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Denso_RC7.py",
+      "Denso_RC8.py",
+      "Denso_RC9.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "LPH040",
+          "manufacturer": "Denso",
+          "variant": "",
+          "path": "Components/Denso/Robots/LPH040.vcmx",
+          "type": "Robots",
+          "payload": "3",
+          "reach": "400",
+          "vcid": "53e998fd-c973-4b7f-a54d-ee852c677e30",
+          "library_assets": [
+            "31819747-0ebe-5ed4-bbeb-e2d7fe6124d7"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/LPH040.vcmx",
+        "path": "simready_usd/LPH040.vcmx",
+        "sha256": "1c6cd53239fc8062b6a087125f7104f4de8846e95a184233c0ab9467e8dfd6d3"
+      }
+    ],
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

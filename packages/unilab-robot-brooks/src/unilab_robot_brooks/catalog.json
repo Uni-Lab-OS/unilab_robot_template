@@ -1,0 +1,401 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "brooks",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "preciseflexc10:1000": {
+      "title": "Brooks PreciseFlex c10-1000｜多源合并",
+      "asset": {
+        "asset_id": "b989b4c3-6598-5f7a-9379-4fed02b08923",
+        "package_digest": "22e7380b131aa305ecbf6a430e9096c442d5efad113912c230d2c7de34332843",
+        "package_path": "04_设备/brooks/preciseflexc10_1000__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/preciseflexc10_1000_39d6ec38/module.json",
+      "module_sha256": "73d664f6cf620dbbf68d8b9fc2498371a37aa84ffbce6854658d03b64594cad6"
+    },
+    "preciseflexc10:1420": {
+      "title": "Brooks PreciseFlex c10-1420｜多源合并",
+      "asset": {
+        "asset_id": "0125372b-3411-5f1c-b3ae-384c97dd419f",
+        "package_digest": "99fc02df3263cf07285f77842df8f2629b7577b31d8ec1e0837ed9913b825ce5",
+        "package_path": "04_设备/brooks/preciseflexc10_1420__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/preciseflexc10_1420_66ba365a/module.json",
+      "module_sha256": "8e655d68a68efaebeb118a11b56e0dca8ecc1efe4c0248e9bd582d4d5d7722d8"
+    },
+    "preciseflexc10:500": {
+      "title": "Brooks PreciseFlex c10-500｜多源合并",
+      "asset": {
+        "asset_id": "bf20eb7e-03f5-5966-af83-b0fa24205991",
+        "package_digest": "b9534efcc2ba3ca68f7f850e09a9b322aa9bc39a47aa3e73c7b8958a843798a5",
+        "package_path": "04_设备/brooks/preciseflexc10_500__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/preciseflexc10_500_a8a61b9a/module.json",
+      "module_sha256": "613d41d9027e6fb6243dd585a131efb1f99c6e17e581b2e2ce632373be66431e"
+    },
+    "pavp6": {
+      "title": "Brooks PAVP6",
+      "asset": {
+        "asset_id": "a4f22cdb-6f63-5fb5-a05a-3d5a914c0bd1",
+        "package_digest": "c24aacd4e1238ddbecd193c532b1117cdb0d0ef066178b07ad3270b3a2224e44",
+        "package_path": "04_设备/brooks/pavp6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pavp6/module.json",
+      "module_sha256": "721d0a66e5d04de4434394a760f8980d721d1a25b198c7179d17899ca69bd7ea"
+    },
+    "preciseflex3400:1160": {
+      "title": "Brooks PreciseFlex 3400-1160",
+      "asset": {
+        "asset_id": "cb435979-fc79-5fe9-8c82-d1ff76e0e480",
+        "package_digest": "4d7490c3583f6b8937684e9a07636de14c3c17bc26eb943bac244cd88d01884a",
+        "package_path": "04_设备/brooks/preciseflex_3400-1160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex3400_1160_46b5ea5a/module.json",
+      "module_sha256": "85f2b10b642d0f7eddd255a047ea56c06b485c9ec7091f5cd7b84767449def89"
+    },
+    "preciseflex3400:400": {
+      "title": "Brooks PreciseFlex 3400-400",
+      "asset": {
+        "asset_id": "80b417e2-c07a-5108-991c-d3deb936642f",
+        "package_digest": "cb4e7143fe1f07edd79cab3ea497f0f7f3191d5a100e4b80ab198292246390b7",
+        "package_path": "04_设备/brooks/preciseflex_3400-400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex3400_400_ae0ef679/module.json",
+      "module_sha256": "3ff87c6a40ce18e07f5d0dba551ef88b9d60653d264170cea4bd4740b0bae10c"
+    },
+    "preciseflex3400:750": {
+      "title": "Brooks PreciseFlex 3400-750",
+      "asset": {
+        "asset_id": "f243c954-504e-557a-a9c6-f200b8a6fa66",
+        "package_digest": "ff30530ae7fd3de8d44cf64550a4a8790871890e4cc302cb97f70f4c43e5933c",
+        "package_path": "04_设备/brooks/preciseflex_3400-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex3400_750_f780be86/module.json",
+      "module_sha256": "75300a05f128ff45d9c3d102462a7592171aa032951915016ffe850c6b9b46c8"
+    },
+    "preciseflex400:1160": {
+      "title": "Brooks PreciseFlex 400-1160",
+      "asset": {
+        "asset_id": "634dd6fe-f0e0-5ccf-b2a8-b45a8d7aa9e3",
+        "package_digest": "afc99cb7da1c4ee2e9f175fee92f24e9a502611ff9b6b898487bb001a2c3e567",
+        "package_path": "04_设备/brooks/preciseflex_400-1160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex400_1160_5cd6a661/module.json",
+      "module_sha256": "e78804d69578a8c6a9e51d865ce045cbc44153b72b498e4163e30ee05c23be2d"
+    },
+    "preciseflex400:400": {
+      "title": "Brooks PreciseFlex 400-400",
+      "asset": {
+        "asset_id": "03285b22-7b85-5bd7-81ca-378a6d3110eb",
+        "package_digest": "9eb34e3f93a39c482ddf509f02244e4bfac3d9660a21f529189ba8e1a7cbb16f",
+        "package_path": "04_设备/brooks/preciseflex_400-400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex400_400_8b998d08/module.json",
+      "module_sha256": "7e736eb25a43ad8b2b7771874091a8a4dcb43b571487c4e5567ce34f2baf74da"
+    },
+    "preciseflex400:750": {
+      "title": "Brooks PreciseFlex 400-750",
+      "asset": {
+        "asset_id": "94d7d3bc-549e-5c4f-8a7a-b37eddb06732",
+        "package_digest": "f33ec36178c5e13a585b8eb0a6d9256fc9c623e0eba07d7da3f8d0d282bfff67",
+        "package_path": "04_设备/brooks/preciseflex_400-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex400_750_f447cb05/module.json",
+      "module_sha256": "94a41afa654b1228f79d6eb860185c2a053d20daf5d2ffef774228ab334ed541"
+    },
+    "preciseflexc3:1160": {
+      "title": "Brooks PreciseFlex c3-1160",
+      "asset": {
+        "asset_id": "21f342b4-f8bb-509a-b7aa-17b762c5c7be",
+        "package_digest": "8a49f046895aa47b01d8ab3623006a69fe69988e874d602e5ad0287bc84a740d",
+        "package_path": "04_设备/brooks/preciseflex_c3-1160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3_1160_6ed04ec1/module.json",
+      "module_sha256": "018e5a505bcc3df8b6b2d28c1f25bc0661bea3cdef45110dbc3627c1e1a238e1"
+    },
+    "preciseflexc3:400": {
+      "title": "Brooks PreciseFlex c3-400",
+      "asset": {
+        "asset_id": "3bf6f15f-85d6-56ba-b4dd-46c0a6d943c5",
+        "package_digest": "80c5609c6c657b4d4981aac76140b94640512cb04342becec1ada50a727651ab",
+        "package_path": "04_设备/brooks/preciseflex_c3-400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3_400_a31439a6/module.json",
+      "module_sha256": "c0d0a9a95ff4c550c74eacaba52c232c8a511291ffe4bc98bf9a1d6227cbe7b4"
+    },
+    "preciseflexc3:750": {
+      "title": "Brooks PreciseFlex c3-750",
+      "asset": {
+        "asset_id": "6bae762b-6cb2-59fc-b7ad-8fe2a53713c5",
+        "package_digest": "ceb41f58c6dde72b2edc2abea01046aa0e1c62e978615ea40cbfd2a395a03447",
+        "package_path": "04_设备/brooks/preciseflex_c3-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3_750_e7d2db63/module.json",
+      "module_sha256": "5c81d38435020113bfb6cd5ae8f3387fd6b0f7e20a6ed57efc413b6ed674bed4"
+    },
+    "preciseflexc3x1160": {
+      "title": "Brooks PreciseFlex c3x-1160",
+      "asset": {
+        "asset_id": "84cfe7ce-1c4f-58d4-ac29-bc573b0fae8e",
+        "package_digest": "65823e08e464305409b5b64d1eff2bae19a44185371612a56a1d7828263a464c",
+        "package_path": "04_设备/brooks/preciseflex_c3x-1160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3x1160/module.json",
+      "module_sha256": "19bcb3700484ead1647b0f752ced5f0f90b7a8d58a2d85f750cc0a69084a2d3f"
+    },
+    "preciseflexc3x400": {
+      "title": "Brooks PreciseFlex c3x-400",
+      "asset": {
+        "asset_id": "0546b670-c5e9-5c27-86ec-c1494e89934f",
+        "package_digest": "578fca3aacc7e43b200d99b1c346c0b1da42a0b1887b67242e90598e8daf753d",
+        "package_path": "04_设备/brooks/preciseflex_c3x-400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3x400/module.json",
+      "module_sha256": "55712da553aeda750f1564f55ae427c3049db89fc9ed902e4d22e0cff7e65beb"
+    },
+    "preciseflexc3x750": {
+      "title": "Brooks PreciseFlex c3x-750",
+      "asset": {
+        "asset_id": "235664c1-521f-53b7-ba18-4217887178e0",
+        "package_digest": "313eb496efc04fe51c3a624bcead7600ce18e9c9f9261f6548c00cdb040aa12a",
+        "package_path": "04_设备/brooks/preciseflex_c3x-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc3x750/module.json",
+      "module_sha256": "59f1590a2179efaf69eccdf98e6c7850276512c86bd756fadc1eabb7e9c1abf6"
+    },
+    "preciseflexc5:1160": {
+      "title": "Brooks PreciseFlex c5-1160",
+      "asset": {
+        "asset_id": "70c0b618-1973-5f22-aa7e-32fbb2760a79",
+        "package_digest": "09a62a8c38a0d89d1cd9e09ef634cfb1c1182e69deb723a62d560720f12dbe95",
+        "package_path": "04_设备/brooks/preciseflex_c5-1160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc5_1160_0a70d45d/module.json",
+      "module_sha256": "262a12c5490b15d53ae5a1411d66b4dddcdded0be65aa0c0aabc618cc2b7607e"
+    },
+    "preciseflexc5:400": {
+      "title": "Brooks PreciseFlex c5-400",
+      "asset": {
+        "asset_id": "b89319e1-f8d2-5d6d-bddd-8a6c6cce697c",
+        "package_digest": "836d785c1e07dc48149ebf600c47bac0fa72c57870c779a175226e4fb68b1099",
+        "package_path": "04_设备/brooks/preciseflex_c5-400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc5_400_0c7fcbc8/module.json",
+      "module_sha256": "7bff2d7b2b67b031a08ffa33ee43a0875e6ac203323659e231549608147fc244"
+    },
+    "preciseflexc5:750": {
+      "title": "Brooks PreciseFlex c5-750",
+      "asset": {
+        "asset_id": "02f6c1f3-2a03-58f0-b4c2-d915bfd468e0",
+        "package_digest": "9d78ce6d30d4b84d7bfa7a7670848a00684e5b66e6709143b46891f8fd6f1f28",
+        "package_path": "04_设备/brooks/preciseflex_c5-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexc5_750_22c06f28/module.json",
+      "module_sha256": "85bc4b4a5b25109ddd9f45f2550cba0d44279a76a736413a58afff20350d89c2"
+    },
+    "preciseflexdd4axis1000": {
+      "title": "Brooks PreciseFlex DD 4-axis 1000",
+      "asset": {
+        "asset_id": "701ec2ae-3787-5c02-bcda-b86171d29973",
+        "package_digest": "9b1879de38edb4c70c4eacd66cfc1f29e4f5c882ef8ff124a6386aa7ffaaa457",
+        "package_path": "04_设备/brooks/preciseflex_dd_4-axis_1000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexdd4axis1000/module.json",
+      "module_sha256": "29154e9dbbe0754c49598bb263f115a2ad70e9c9708ddc1036d459224a5f03ae"
+    },
+    "preciseflexdd4axis1420": {
+      "title": "Brooks PreciseFlex DD 4-axis 1420",
+      "asset": {
+        "asset_id": "f66fa3a0-644d-574b-bb91-d7256aedf5cf",
+        "package_digest": "e4b423ca052046ff2b9bc8e577fdb9cc16e16f58d1ad5670c228c089df347168",
+        "package_path": "04_设备/brooks/preciseflex_dd_4-axis_1420__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexdd4axis1420/module.json",
+      "module_sha256": "1c73e199f3eff1d653b06079728a6e2ca6fca7ee5b9164453fd97e6c27d69f54"
+    },
+    "preciseflexdd4axis500": {
+      "title": "Brooks PreciseFlex DD 4-axis 500",
+      "asset": {
+        "asset_id": "ae98e41a-2376-5f75-b422-6a732b6ca2bd",
+        "package_digest": "9d2b514bc10279aec5a04bf6283cb5e7fa9331510507a6423519607944596d7f",
+        "package_path": "04_设备/brooks/preciseflex_dd_4-axis_500__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexdd4axis500/module.json",
+      "module_sha256": "0ff967cdbe328679f8e41b7766c16968370748f597864ab62ef4401d67639c19"
+    },
+    "preciseflex3400isoflange": {
+      "title": "Brooks PreciseFlex 3400 ISO Flange",
+      "asset": {
+        "asset_id": "ce788ada-fc1b-5268-b6bb-0465377fa4ca",
+        "package_digest": "70b775f0a078ddbfe682e0ab409f5536f2d695f4dbc1478e83fa5ab0a0273dda",
+        "package_path": "01_零部件/brooks/preciseflex_3400_iso_flange__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex3400isoflange/module.json",
+      "module_sha256": "247051c8753c4158c3f6551c9c21898af54fd545c7ec2314348bed3989b9332c"
+    },
+    "preciseflex400isoflange": {
+      "title": "Brooks PreciseFlex 400 ISO Flange",
+      "asset": {
+        "asset_id": "a8c6a43f-bba3-56ee-bded-48414b43b9f9",
+        "package_digest": "6fde3c8d0602bb8d82f1dab19e928692ce7e1668f37ca59111fb3ceecc332ffc",
+        "package_path": "01_零部件/brooks/preciseflex_400_iso_flange__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflex400isoflange/module.json",
+      "module_sha256": "1aeedef5e039854afbd26ad32d62db9922fba0788bfdb4d53e0f2a5b8dbd9395"
+    },
+    "preciseflexdd4axisisoflange": {
+      "title": "Brooks PreciseFlex DD 4-axis ISO Flange",
+      "asset": {
+        "asset_id": "4f800dde-a50d-561b-b530-ace0d6558244",
+        "package_digest": "8fc8547330fbf04bc93a36aec7b3cdffdde0dad786102c27cb7b5b1293bc130f",
+        "package_path": "01_零部件/brooks/preciseflex_dd_4-axis_iso_flange__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexdd4axisisoflange/module.json",
+      "module_sha256": "33d40cbc23f44203aa294d2ab9ccba6a893809985b5d1ec7d519d1100fc99c47"
+    },
+    "preciseflexintelliguideisoflange": {
+      "title": "Brooks PreciseFlex IntelliGuide ISO Flange",
+      "asset": {
+        "asset_id": "040efbdf-8a12-50af-a48a-848b1ded5e77",
+        "package_digest": "0a00845119801f3fa7dc01449857cc309d424052b1c94664ffdeef2ec2d22257",
+        "package_path": "01_零部件/brooks/preciseflex_intelliguide_iso_flange__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/preciseflexintelliguideisoflange/module.json",
+      "module_sha256": "6130fd9709a98475b126331af09f3f0dfde93b56a4c59d588c237e3aa25cb473"
+    }
+  },
+  "source_profiles": []
+}

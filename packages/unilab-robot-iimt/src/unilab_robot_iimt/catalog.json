@@ -1,0 +1,142 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "iimt",
+  "models": {
+    "ca05": {
+      "title": "IIMT-CA-05",
+      "asset": {
+        "asset_id": "49b86a29-e6e3-5867-9818-62242ecaf556",
+        "package_digest": "c5a8f95ecd8e093c2a74b02c8dedca2e26f3feb4152ae8c18e29da1737c1588f",
+        "package_path": "04_设备/iimt/iimt-ca-05__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ca05/module.json",
+      "module_sha256": "cdf9babf008afc144b13adddceec6f403354ce800f177b975ffad0f74f846b46"
+    },
+    "ci03": {
+      "title": "IIMT CI-03",
+      "asset": {
+        "asset_id": "6cf1c3b4-9be9-5287-ad59-8dd25a5bfddd",
+        "package_digest": "9209709c5a11093cf6026926b5772622a38bf9fb2d9398d1bb5f112999415df3",
+        "package_path": "04_设备/iimt/iimt_ci-03__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ci03/module.json",
+      "module_sha256": "a67aaeab5cafdebd9bee1f522e8356457ddc5c82aa77f14a4788add928593090"
+    },
+    "ci05": {
+      "title": "IIMT-CI-05",
+      "asset": {
+        "asset_id": "443b62b3-4cb1-50da-a769-e6dda45e3711",
+        "package_digest": "a4c87a2876973eaf9c8edec2bc099a10663649f4e38ad168cf8110f8ed02496b",
+        "package_path": "04_设备/iimt/iimt-ci-05__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ci05/module.json",
+      "module_sha256": "4d3e5c31f0837a07d47d45eaa1137eb4fc5f0930a350a96df59c5d49e7f7de41"
+    },
+    "ci10": {
+      "title": "IIMT-CI-10",
+      "asset": {
+        "asset_id": "685c5fae-5bf5-5114-ba69-d0d9fcdbfb7e",
+        "package_digest": "1fe25a8cef3b0d913f913ae2d0a3fd16a746363a962584fed550fe1737742295",
+        "package_path": "04_设备/iimt/iimt-ci-10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ci10/module.json",
+      "module_sha256": "993c7799170dd6508885f976069e9e9998b378c0310bc7c445fb9c1a88f4f485"
+    },
+    "ci16": {
+      "title": "IIMT CI-16",
+      "asset": {
+        "asset_id": "0a00c24a-f65b-5cba-a81a-e388db6d6c5d",
+        "package_digest": "befb8ef7ca7a2f00223734d14970c4543445e0b4af4f85c05ed02a2d2e7d2df7",
+        "package_path": "04_设备/iimt/iimt_ci-16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ci16/module.json",
+      "module_sha256": "f7e09dc0ab8e8653f5c311000cbc6767c32fbf8a8f81484a743e2f42ea170e40"
+    },
+    "ci20": {
+      "title": "IIMT CI-20",
+      "asset": {
+        "asset_id": "8909a073-b6fc-5ff1-8b12-bb70df7552e0",
+        "package_digest": "c04c6b4d8b69f7938ba35dd4041ae7011be17b30cb1a02d9ce0fe064c93e4ff4",
+        "package_path": "04_设备/iimt/iimt_ci-20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ci20/module.json",
+      "module_sha256": "356b1d1f6e6f1cfaaf615844891099362b1e91695559fb97a13669279c675bff"
+    },
+    "cr03": {
+      "title": "IIMT-CR-03",
+      "asset": {
+        "asset_id": "62817b57-d195-5b5c-a731-55662a555675",
+        "package_digest": "d7b926fa3ba103ba24dc2fe413f25d5161ae47b3c9b2378c201e26765a60b80d",
+        "package_path": "04_设备/iimt/iimt-cr-03__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr03/module.json",
+      "module_sha256": "9060538933ad2dc592fd8839b1d4e29ecaebb415b2ca81d7dcfa623f748ff551"
+    },
+    "cr10": {
+      "title": "IIMT-CR-10",
+      "asset": {
+        "asset_id": "f9e04dd1-720b-584d-8d78-86592935e1ee",
+        "package_digest": "940db41bf9ef90c21b911bacc9f553452e63e6bcbe591d4aa40f74b4c2ac2735",
+        "package_path": "04_设备/iimt/iimt-cr-10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr10/module.json",
+      "module_sha256": "e881cc9f3af86db6763971a197a1e0526ff660339b954788396c6df210dd863a"
+    },
+    "cr16": {
+      "title": "IIMT-CR-16",
+      "asset": {
+        "asset_id": "c121ffb2-dd1c-5815-a8e3-c9cd1f8504c9",
+        "package_digest": "723c42b930415208d024ea609092e1d82b7c2adfca593541e04076bc8525b2a8",
+        "package_path": "04_设备/iimt/iimt-cr-16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr16/module.json",
+      "module_sha256": "76ca99c02419e6198217a74a7d07a65d0b70419ee7f6316e98280633bee7ec0a"
+    }
+  },
+  "source_profiles": []
+}

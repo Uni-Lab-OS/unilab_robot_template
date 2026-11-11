@@ -1,0 +1,493 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "robotiq",
+  "model": "2f140",
+  "title": "RobotiQ 2F-140 Gripper (Closed)｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "328d2f1d-514f-53ba-90a1-fa182319f2aa",
+    "package_digest": "4631b47b706d134b6e5c86f735ac9b56f98c2684da1d70a44cfb6dc8c80809e5",
+    "package_path": "01_零部件/robotiq/2f140__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "328d2f1d-514f-53ba-90a1-fa182319f2aa",
+      "package_digest": "4631b47b706d134b6e5c86f735ac9b56f98c2684da1d70a44cfb6dc8c80809e5",
+      "package_path": "01_零部件/robotiq/2f140__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robot Tools",
+      "tools"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:1944",
+            "id": "dof:2192",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              0.0,
+              45.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                0.0,
+                45.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                0.0,
+                45.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:2476",
+            "id": "dof:2724",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:1944",
+            "source_axis_label": "+Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:2844",
+            "id": "dof:3314",
+            "independent": false,
+            "initial_source": -0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "-Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:3432",
+            "id": "dof:3680",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2844",
+            "source_axis_label": "-Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:3800",
+            "id": "dof:4048",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:4166",
+            "id": "dof:4414",
+            "independent": false,
+            "initial_source": -0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:3800",
+            "source_axis_label": "+Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          },
+          {
+            "child_node_id": "node:4534",
+            "id": "dof:4782",
+            "independent": false,
+            "initial_source": -0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "-Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_6"
+          },
+          {
+            "child_node_id": "node:4900",
+            "id": "dof:5148",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:4534",
+            "source_axis_label": "-Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_7"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "fab8693f477488e5d247efa8e6fcc85ff7a05ed851f48ec3d03c076022105b3a",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "11c810d0252e953739b7bb477b75b714542cb42ac207cd85b823688745966642",
+        "physics_contract_sha256": "23e7e227b54d55b6b52a6ffe161d587942c8b92179c00059d5a8cf013c64e541",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "fab8693f477488e5d247efa8e6fcc85ff7a05ed851f48ec3d03c076022105b3a",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "2F-140 Gripper (Mechanism)",
+              "source": "tools/models/RobotiQ-2F-140-Gripper-Mechanism.robot",
+              "source_family": "RoboDK",
+              "value": 1.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 1.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "2F-140",
+              "source": "Components/Robotiq/Robot Tools/2F-140.vcmx",
+              "source_family": "VC",
+              "value": 2.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "kg",
+          "value": 2.0
+        },
+        "reach": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "mm"
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Robotiq",
+          "name": "2F-140",
+          "original": {
+            "family": "VC",
+            "original_name": "2F-140.vcmx",
+            "path": "simready_usd/source_assets/VC/0_2f-140/2F-140.vcmx",
+            "sha256": "fab8693f477488e5d247efa8e6fcc85ff7a05ed851f48ec3d03c076022105b3a"
+          },
+          "path": "Components/Robotiq/Robot Tools/2F-140.vcmx",
+          "payload": "2",
+          "reach": "0",
+          "type": "Robot Tools",
+          "variant": "",
+          "vcid": "24935197-390c-4f6d-8eb3-5019844e8a85"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "cd57fbfd-f0a2-5ae4-978f-637517daf2e5",
+              "entrypoints": {
+                "usd": "simready_usd/2f-140_gripper_closed___r001.usdc"
+              },
+              "package_digest": "a8ab8c4f146bd912a9a42cef99053e830d2347eb6359ac25dcb334fb3ba8dbe6",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "d0c92dcb2a23d395c8e602c1470394827c1f62cc6f3f5c6ad45e7cc0d74dfff4",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RobotiQ 2F-140 Gripper (Closed)",
+          "family": "RoboDK",
+          "library_assets": [
+            "cd57fbfd-f0a2-5ae4-978f-637517daf2e5"
+          ],
+          "manufacturer": "RobotiQ",
+          "name": "2F-140 Gripper (Closed)",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-2F-140-Gripper-Closed.tool",
+            "path": "simready_usd/RobotiQ-2F-140-Gripper-Closed.tool",
+            "sha256": "bcc8adc21538d0ce68063daa0bd61afe5fcfccab728e71cf312c75c7a7321a5b"
+          },
+          "path": "tools/models/RobotiQ-2F-140-Gripper-Closed.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "Closed"
+        },
+        {
+          "axes": 1,
+          "converted_parameters": [],
+          "display": "RobotiQ 2F-140 Gripper (Mechanism)",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "RobotiQ",
+          "name": "2F-140 Gripper (Mechanism)",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-2F-140-Gripper-Mechanism.robot",
+            "path": "simready_usd/source_assets/RoboDK/1_robotiq-2f-140-gripper-mechanism/RobotiQ-2F-140-Gripper-Mechanism.robot",
+            "sha256": "cbdbcb57d5af9fbffd0db678c2b22c67a1cc130f405cc2431b6f3c1040099e1e"
+          },
+          "path": "tools/models/RobotiQ-2F-140-Gripper-Mechanism.robot",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "Mechanism"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "c9b3fa46-cc98-5868-83af-29324e80b49e",
+              "entrypoints": {
+                "usd": "simready_usd/2f-140_gripper_open___r001.usdc"
+              },
+              "package_digest": "f7317cad598275293a7c6a73c5d4effe8c95d1da1eaade726bbbbb3410dee0ff",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "40b14e2d6456098dc90f517f40454d283fd9ef941e3bcf401e2cc7030bf27eee",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RobotiQ 2F-140 Gripper (Open)",
+          "family": "RoboDK",
+          "library_assets": [
+            "c9b3fa46-cc98-5868-83af-29324e80b49e"
+          ],
+          "manufacturer": "RobotiQ",
+          "name": "2F-140 Gripper (Open)",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-2F-140-Gripper-Open.tool",
+            "path": "simready_usd/source_assets/RoboDK/2_robotiq-2f-140-gripper-open/RobotiQ-2F-140-Gripper-Open.tool",
+            "sha256": "72ca76211cb54887f16b27776d17376711b567724f73bcd7fa1167277ee0065f"
+          },
+          "path": "tools/models/RobotiQ-2F-140-Gripper-Open.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "Open"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/2f140__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot_tool": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot_tool"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "RobotiQ 2F-140 Gripper (Closed)｜多源合并",
+          "id": "merged_robot_tool_328d2f1d_514f_53ba_90a1_fa182319f2aa",
+          "metadata": {
+            "asset_id": "328d2f1d-514f-53ba-90a1-fa182319f2aa",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/robotiq/ros2_gripper",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-2F-140-Gripper-Closed.tool",
+        "path": "simready_usd/RobotiQ-2F-140-Gripper-Closed.tool",
+        "sha256": "bcc8adc21538d0ce68063daa0bd61afe5fcfccab728e71cf312c75c7a7321a5b"
+      },
+      {
+        "family": "VC",
+        "original_name": "2F-140.vcmx",
+        "path": "simready_usd/source_assets/VC/0_2f-140/2F-140.vcmx",
+        "sha256": "fab8693f477488e5d247efa8e6fcc85ff7a05ed851f48ec3d03c076022105b3a"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-2F-140-Gripper-Mechanism.robot",
+        "path": "simready_usd/source_assets/RoboDK/1_robotiq-2f-140-gripper-mechanism/RobotiQ-2F-140-Gripper-Mechanism.robot",
+        "sha256": "cbdbcb57d5af9fbffd0db678c2b22c67a1cc130f405cc2431b6f3c1040099e1e"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-2F-140-Gripper-Open.tool",
+        "path": "simready_usd/source_assets/RoboDK/2_robotiq-2f-140-gripper-open/RobotiQ-2F-140-Gripper-Open.tool",
+        "sha256": "72ca76211cb54887f16b27776d17376711b567724f73bcd7fa1167277ee0065f"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "robotiq",
+        "2f140"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "cd57fbfd-f0a2-5ae4-978f-637517daf2e5",
+        "original_package_digest": "a8ab8c4f146bd912a9a42cef99053e830d2347eb6359ac25dcb334fb3ba8dbe6",
+        "source": "tools/models/RobotiQ-2F-140-Gripper-Closed.tool"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "reach_zero_unverified",
+        "configuration_or_pose",
+        "multiple_RoboDK"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "tool"
+  ]
+}

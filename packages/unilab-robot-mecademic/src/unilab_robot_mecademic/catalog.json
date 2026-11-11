@@ -1,0 +1,67 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "mecademic",
+  "models": {
+    "mcs500": {
+      "title": "Mecademic MCS500",
+      "asset": {
+        "asset_id": "38dfaf80-8f1b-5844-b726-93940550a6aa",
+        "package_digest": "4028df58e351d097185f6765ebd018900952b0396205dcf7f30ef0ece7913891",
+        "package_path": "04_设备/mecademic/mcs500__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mcs500/module.json",
+      "module_sha256": "73b5497c95028a9e7c85961ab7e6340b8c090ba4061304d8b6e0040ebea32026"
+    },
+    "meca500r3": {
+      "title": "Mecademic Meca500 R3",
+      "asset": {
+        "asset_id": "40c2bd0f-0a5b-58a2-b17a-270c9dfab6c1",
+        "package_digest": "7b364a206707c9f37fc520ea4f25ab779012d87a4da1abd1fadcb0ab1969391e",
+        "package_path": "04_设备/mecademic/meca500_r3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/meca500r3/module.json",
+      "module_sha256": "dbcd68d5e008fd6795a65a40c4b6e8fdd82e2d4688d61015e83cb2ff72ae7836"
+    },
+    "meca500r4": {
+      "title": "Mecademic Meca500 R4",
+      "asset": {
+        "asset_id": "2bc1a5ba-75fc-568c-b1fd-4b85a550eb9b",
+        "package_digest": "2c77ec9a711f4d5f345c10cdce457389015c4d670218f094bc559a12cf49cfa7",
+        "package_path": "04_设备/mecademic/meca500_r4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/meca500r4/module.json",
+      "module_sha256": "3eeb5fdea91f8dbf48711ca77e68b74e13e6220f33bb5d42a0d28e557582fd75"
+    },
+    "schunkmpgplus25gripperclosed": {
+      "title": "Mecademic SCHUNK MPG-plus 25 Gripper (Closed)",
+      "asset": {
+        "asset_id": "65ef2f48-970b-52ff-8670-34c16b818101",
+        "package_digest": "2fad65901ebfacb62e366e847c11792cff4b73eea89f23fc76e684ef7435c0d1",
+        "package_path": "01_零部件/mecademic/schunk_mpg-plus_25_gripper_closed___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/schunkmpgplus25gripperclosed/module.json",
+      "module_sha256": "79e68e3ba0e660b69a1a73420a46feafd94cda54eb6786ae2ad5ad0733d2bfee"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,847 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "staubli",
+  "model": "tx2:60",
+  "title": "Staubli TX2-60｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "1a8b3a19-a912-5ce1-9d78-29532a100428",
+    "package_digest": "90340787c619cd123ef4ee61b40230e4c4ccfa9ed7f09bf1f0950bf6dc377427",
+    "package_path": "04_设备/staubli/tx2_60__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "1a8b3a19-a912-5ce1-9d78-29532a100428",
+      "package_digest": "90340787c619cd123ef4ee61b40230e4c4ccfa9ed7f09bf1f0950bf6dc377427",
+      "package_path": "04_设备/staubli/tx2_60__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "TX2-60",
+              "source": "robots/models/Staubli-TX2-60.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "TX2-60",
+              "source": "robots/models/Staubli-TX2-60.robot",
+              "source_family": "RoboDK",
+              "value": 3.5
+            },
+            {
+              "model": "TX2-60",
+              "source": "Components/Staubli/Robots/TX2-60.vcmx",
+              "source_family": "VC",
+              "value": 4.0
+            }
+          ],
+          "conditional_maximum_payload_kg": 9,
+          "maximum_payload_kg": 4.5,
+          "note": "Nominal versus maximum separated; no extrapolation to TX60. TX2 range brochure printed page11.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 3.5,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed catalog fields only; not serial-specific geometry/physics",
+              "title": "Staubli current model specification table",
+              "url": "https://www.staubli.com/global/en/robotics/products/industrial-robots/6-axis/tx2-60.html"
+            },
+            {
+              "authority": "OEM-authored original brochure mirrored by distributor",
+              "page": 11,
+              "pdf_page": 6,
+              "reviewed_at": "2026-11-08",
+              "scope": "nominal payload 3.5; max4.5, conditional9",
+              "sha256": "337484b95b33febc8b11397bc1de5695980a3abb6574d968825b0d0c4cabe317",
+              "title": "Stäubli TX2 robot range CS9, main characteristics",
+              "url": "https://prokcssmedia.blob.core.windows.net/sys-master-images/h09/h84/9479965048862/TX2%20range%20robot.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "TX2-60",
+              "source": "robots/models/Staubli-TX2-60.robot",
+              "source_family": "RoboDK",
+              "value": 670.0
+            },
+            {
+              "model": "TX2-60",
+              "source": "Components/Staubli/Robots/TX2-60.vcmx",
+              "source_family": "VC",
+              "value": 670.0
+            }
+          ],
+          "datum": "wrist",
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 670,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed catalog fields only; not serial-specific geometry/physics",
+              "title": "Staubli current model specification table",
+              "url": "https://www.staubli.com/global/en/robotics/products/industrial-robots/6-axis/tx2-60.html"
+            },
+            {
+              "authority": "OEM-authored original brochure mirrored by distributor",
+              "page": 11,
+              "pdf_page": 6,
+              "reviewed_at": "2026-11-08",
+              "scope": "nominal payload 3.5; max4.5, conditional9",
+              "sha256": "337484b95b33febc8b11397bc1de5695980a3abb6574d968825b0d0c4cabe317",
+              "title": "Stäubli TX2 robot range CS9, main characteristics",
+              "url": "https://prokcssmedia.blob.core.windows.net/sys-master-images/h09/h84/9479965048862/TX2%20range%20robot.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -375.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 0,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -127.5,
+          -142.5,
+          -270.0,
+          -121.0,
+          -270.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            375.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            20.0
+          ],
+          [
+            0.0,
+            290.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            310.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            70.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          0.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          127.5,
+          142.5,
+          270.0,
+          132.5,
+          270.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "3941d72a-16a6-5551-85f5-0521bd609f6e",
+              "entrypoints": {
+                "usd": "simready_usd/tx2-60__r001.usdc"
+              },
+              "package_digest": "11152e1a02870c1b633404975c458a7ca820827a587bc0316d12d3ed6c7875dd",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -375.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 0,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -180.0,
+                    -127.5,
+                    -142.5,
+                    -270.0,
+                    -121.0,
+                    -270.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      375.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      20.0
+                    ],
+                    [
+                      0.0,
+                      290.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      310.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      70.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    0.0,
+                    0.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    180.0,
+                    127.5,
+                    142.5,
+                    270.0,
+                    132.5,
+                    270.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "7c1da1b69ab86d178349b8b2d1ba8602a98607c6e7979c2a4832a2956f307d45",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Staubli TX2-60",
+          "family": "RoboDK",
+          "library_assets": [
+            "3941d72a-16a6-5551-85f5-0521bd609f6e"
+          ],
+          "manufacturer": "Staubli",
+          "name": "TX2-60",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Staubli-TX2-60.robot",
+            "path": "simready_usd/Staubli-TX2-60.robot",
+            "sha256": "5edcd2f3cd5ed7265165b0c511556edd6b5bed18d22903891ea13ea0eb2f285f"
+          },
+          "path": "robots/models/Staubli-TX2-60.robot",
+          "payload": 3.5,
+          "reach": 670,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "daf295c1-5b70-57b9-af88-77a38a8eab74",
+              "entrypoints": {
+                "usd": "simready_usd/tx2-60__款2__r001.usdc"
+              },
+              "package_digest": "cb5630ea2d299f73bb7f69000e207c911bc347af21a36ad682e0c52ed82a6acd",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "b4e1b24484b90c8dd0a98a582d28fb9c03167210e089728b7148c18c5d615519",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "c03ba5cf21417c8c8347281e5f348f3034aa4907add66f84e1adfa6d6d540360",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "daf295c1-5b70-57b9-af88-77a38a8eab74"
+          ],
+          "manufacturer": "Staubli",
+          "name": "TX2-60",
+          "original": {
+            "family": "VC",
+            "original_name": "TX2-60.vcmx",
+            "path": "simready_usd/source_assets/VC/0_tx2-60/TX2-60.vcmx",
+            "sha256": "b4e1b24484b90c8dd0a98a582d28fb9c03167210e089728b7148c18c5d615519"
+          },
+          "path": "Components/Staubli/Robots/TX2-60.vcmx",
+          "payload": "4",
+          "reach": "670",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "8e7024b1-b693-4bdf-b1d8-f664e0bb37b1"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "7c1da1b69ab86d178349b8b2d1ba8602a98607c6e7979c2a4832a2956f307d45",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/tx2_60__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Staubli TX2-60｜多源合并",
+          "id": "merged_robot_1a8b3a19_a912_5ce1_9d78_29532a100428",
+          "metadata": {
+            "asset_id": "1a8b3a19-a912-5ce1-9d78-29532a100428",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apistaubli",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apistaubli.exe",
+        "sha256": "a875103302d07802b297357519782c73691d2a16af26d36a80ee04e63aa4b2d0",
+        "bytes": 451584,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "staubli controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Staubli_Adept_Vplus.py",
+      "Staubli_S6.py",
+      "Staubli_VAL3.py",
+      "Staubli_VAL3_Machining.py",
+      "Staubli_VAL3_simplified.py",
+      "Staubli_VAL3_XMOVE.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/staubli/val3_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/staubli/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Staubli-TX2-60.robot",
+        "path": "simready_usd/Staubli-TX2-60.robot",
+        "sha256": "5edcd2f3cd5ed7265165b0c511556edd6b5bed18d22903891ea13ea0eb2f285f"
+      },
+      {
+        "family": "VC",
+        "original_name": "TX2-60.vcmx",
+        "path": "simready_usd/source_assets/VC/0_tx2-60/TX2-60.vcmx",
+        "sha256": "b4e1b24484b90c8dd0a98a582d28fb9c03167210e089728b7148c18c5d615519"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "TX2-60",
+                "source": "robots/models/Staubli-TX2-60.robot",
+                "source_family": "RoboDK",
+                "value": 3.5
+              },
+              {
+                "model": "TX2-60",
+                "source": "Components/Staubli/Robots/TX2-60.vcmx",
+                "source_family": "VC",
+                "value": 4.0
+              }
+            ],
+            "conditional_maximum_payload_kg": 9,
+            "maximum_payload_kg": 4.5,
+            "note": "Nominal versus maximum separated; no extrapolation to TX60. TX2 range brochure printed page11.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 3.5,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Listed catalog fields only; not serial-specific geometry/physics",
+                "title": "Staubli current model specification table",
+                "url": "https://www.staubli.com/global/en/robotics/products/industrial-robots/6-axis/tx2-60.html"
+              },
+              {
+                "authority": "OEM-authored original brochure mirrored by distributor",
+                "page": 11,
+                "pdf_page": 6,
+                "reviewed_at": "2026-11-08",
+                "scope": "nominal payload 3.5; max4.5, conditional9",
+                "sha256": "337484b95b33febc8b11397bc1de5695980a3abb6574d968825b0d0c4cabe317",
+                "title": "Stäubli TX2 robot range CS9, main characteristics",
+                "url": "https://prokcssmedia.blob.core.windows.net/sys-master-images/h09/h84/9479965048862/TX2%20range%20robot.pdf"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            3.5,
+            4.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "staubli",
+        "tx2:60"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Listed catalog fields only; not serial-specific geometry/physics",
+            "title": "Staubli current model specification table",
+            "url": "https://www.staubli.com/global/en/robotics/products/industrial-robots/6-axis/tx2-60.html"
+          },
+          {
+            "authority": "OEM-authored original brochure mirrored by distributor",
+            "page": 11,
+            "pdf_page": 6,
+            "reviewed_at": "2026-11-08",
+            "scope": "nominal payload 3.5; max4.5, conditional9",
+            "sha256": "337484b95b33febc8b11397bc1de5695980a3abb6574d968825b0d0c4cabe317",
+            "title": "Stäubli TX2 robot range CS9, main characteristics",
+            "url": "https://prokcssmedia.blob.core.windows.net/sys-master-images/h09/h84/9479965048862/TX2%20range%20robot.pdf"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "conditional_maximum_payload_kg": 9,
+            "maximum_payload_kg": 4.5,
+            "note": "Nominal versus maximum separated; no extrapolation to TX60. TX2 range brochure printed page11.",
+            "status": "manufacturer_verified",
+            "value": 3.5
+          },
+          "reach": {
+            "datum": "wrist",
+            "status": "manufacturer_verified",
+            "value": 670
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "3941d72a-16a6-5551-85f5-0521bd609f6e",
+        "original_package_digest": "11152e1a02870c1b633404975c458a7ca820827a587bc0316d12d3ed6c7875dd",
+        "source": "robots/models/Staubli-TX2-60.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

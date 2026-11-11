@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "auctech",
+  "model": "ax7l",
+  "title": "AUCTECH AX-7L",
+  "asset": {
+    "asset_id": "8a490aeb-3e2c-5f9a-994e-5e4299cd1a58",
+    "package_digest": "a5f7833025851120725ae9ffcdcd062069ccef3bb3521e29e7adefa6b8e41716",
+    "package_path": "04_设备/auctech/ax-7l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8a490aeb-3e2c-5f9a-994e-5e4299cd1a58",
+      "package_digest": "a5f7833025851120725ae9ffcdcd062069ccef3bb3521e29e7adefa6b8e41716",
+      "package_path": "04_设备/auctech/ax-7l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -175.0,
+          -96.0,
+          -195.0,
+          -170.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            380.0
+          ],
+          [
+            -1.5707963267948966,
+            30.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            440.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            35.0,
+            0.0,
+            435.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            83.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          175.0,
+          130.0,
+          65.0,
+          170.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "639277a57c9a257cb0be25dc3a815a40aa6a8b17664f4873870dd221dc97832e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ax-7l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AX-7L",
+          "manufacturer": "AUCTECH",
+          "variant": "",
+          "display": "AUCTECH AX-7L",
+          "path": "robots/models/AUCTECH-AX-7L.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 906,
+          "axes": 6,
+          "library_assets": [
+            "8a490aeb-3e2c-5f9a-994e-5e4299cd1a58"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/AUCTECH-AX-7L.robot",
+        "path": "simready_usd/AUCTECH-AX-7L.robot",
+        "sha256": "02cce43fc6060b7362141d1f6c8cc4f6e515666050e070f8a5e9a5de707f1161"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

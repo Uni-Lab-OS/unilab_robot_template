@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "obara",
+  "models": {
+    "spotweldinggun": {
+      "title": "OBARA Spot Welding Gun",
+      "asset": {
+        "asset_id": "e08af2da-fb31-5193-b4a1-a7c4cd67d8df",
+        "package_digest": "5bbddf4202574fa57f1e7bee4187ee22567d50e311bb90ad94db4cbe644bb4eb",
+        "package_path": "04_设备/obara/spot_welding_gun__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/spotweldinggun/module.json",
+      "module_sha256": "18eeb7b18221b92ad3af614139ac2479304613d71d9270e37ea2e7d7be200b57"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "crobotp",
+  "models": {
+    "rh21:06w": {
+      "title": "CRP-RH21-06-W",
+      "asset": {
+        "asset_id": "7f133ae1-d3f8-5019-9ddc-eea8efb48b7c",
+        "package_digest": "b0068b69330eaefcae57880a6f8ad5c1ff41a79baf59964353a4df27f4c62777",
+        "package_path": "04_设备/crobotp/-rh21-06-w__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh21_06w_137bb014/module.json",
+      "module_sha256": "a914d1ff224cbb4dc50edf78179f2ea65d904fa0cf972eccaf954f697aca08c7"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "autonoxrobotics",
+  "model": "articc5:1918:45kgat10010",
+  "title": "articc5-1918-45kg (AT_10010)",
+  "asset": {
+    "asset_id": "ae43be07-c3f3-5961-b604-c829dd96a6f9",
+    "package_digest": "cba6b4efab5f13fc9ed7936055a91b813eddba135e7ce198a22564ab81a101c9",
+    "package_path": "04_设备/autonox_robotics/articc5-1918-45kg_at_10010___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ae43be07-c3f3-5961-b604-c829dd96a6f9",
+      "package_digest": "cba6b4efab5f13fc9ed7936055a91b813eddba135e7ce198a22564ab81a101c9",
+      "package_path": "04_设备/autonox_robotics/articc5-1918-45kg_at_10010___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "67ea072dacb400953bba384c107944f373b6695f9b5308cc750467dbd82fbf5f",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "59bdcdf05ad6242000593735ca2c0c99f68ab881e7560f230532627af1e978d7",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 5,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/articc5-1918-45kg_at_10010___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 5,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "articc5-1918-45kg (AT_10010)",
+          "manufacturer": "Autonox Robotics",
+          "variant": "",
+          "path": "Components/Autonox Robotics/Robots/articc5-1918-45kg (AT_10010).vcmx",
+          "type": "Robots",
+          "payload": "45",
+          "reach": "1918",
+          "vcid": "ef5ae268-a688-42b2-a1d2-0221d8b4f9af",
+          "library_assets": [
+            "ae43be07-c3f3-5961-b604-c829dd96a6f9"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/articc5-1918-45kg (AT_10010).vcmx",
+        "path": "simready_usd/articc5-1918-45kg (AT_10010).vcmx",
+        "sha256": "67ea072dacb400953bba384c107944f373b6695f9b5308cc750467dbd82fbf5f"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

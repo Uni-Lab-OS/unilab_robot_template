@@ -1,0 +1,157 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "zivid",
+  "models": {
+    "onarmextenderoa01e": {
+      "title": "Zivid On-Arm Extender OA01E",
+      "asset": {
+        "asset_id": "3b6592b3-ed14-5626-9531-beaab034af1a",
+        "package_digest": "691e1395f3be16f204fa45e9ff9fe16cb4acc07016272254630f7ec0e75b75aa",
+        "package_path": "01_零部件/zivid/on-arm_extender_oa01e__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmextenderoa01e/module.json",
+      "module_sha256": "a25fb81ec7f9ec1b337489b283de0d5500c8bb3e3b7e9ce94bbb54070629e906"
+    },
+    "onarmextenderoa02e": {
+      "title": "Zivid On-Arm Extender OA02E",
+      "asset": {
+        "asset_id": "4259b1ef-dd68-55b7-bae0-852ee6438b68",
+        "package_digest": "c6dcfa69b733c811c485bda423a941aca3caaa415f37d26a8bda8013959efddd",
+        "package_path": "01_零部件/zivid/on-arm_extender_oa02e__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmextenderoa02e/module.json",
+      "module_sha256": "6c6a0ecf008edde74042b0144f7c0f1fb391abc19492f80289babc022ddcd28d"
+    },
+    "onarmmountoa10": {
+      "title": "Zivid On-Arm Mount OA10",
+      "asset": {
+        "asset_id": "329edf8f-212a-5ea8-b202-0d15df04e427",
+        "package_digest": "abedcacdd19b8901650da2633fc830ec90f112feb1e0c0b3f1380803624cc906",
+        "package_path": "01_零部件/zivid/on-arm_mount_oa10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmmountoa10/module.json",
+      "module_sha256": "2e77147ea06329c6e6528442fc4f53afb73be1711e0ec5934a54aabc9dcfdd08"
+    },
+    "onarmmountoa111": {
+      "title": "Zivid On-Arm Mount OA111",
+      "asset": {
+        "asset_id": "947c14de-e851-5935-afd4-4f3d868b8b97",
+        "package_digest": "98548fd01045361ee2d78a9b8602bb89740a520f4a26b49fb7839c41e3aa795b",
+        "package_path": "01_零部件/zivid/on-arm_mount_oa111__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmmountoa111/module.json",
+      "module_sha256": "8d26891921cf95c3d34e3185601d690f4fa5072eb7b2b4781fd1e0ecf795e7b9"
+    },
+    "onarmmountoa121": {
+      "title": "Zivid On-Arm Mount OA121",
+      "asset": {
+        "asset_id": "11526aea-a4ca-58f0-888c-da524a9a9751",
+        "package_digest": "730a5b6a12b69c5448f05bb689c720a3b8ec68bdaf1995a9007c79118ddb5a73",
+        "package_path": "01_零部件/zivid/on-arm_mount_oa121__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmmountoa121/module.json",
+      "module_sha256": "5f5ca40803f6aa4f1b719be1077f97e8629294cbcc8e821d8d9ecf84d569a7dd"
+    },
+    "onarmmountoa211": {
+      "title": "Zivid On-Arm Mount OA211",
+      "asset": {
+        "asset_id": "475410a4-e878-5cb1-b6cc-9b17549107a0",
+        "package_digest": "8e76781bff2e269cf762585b7037c95721c6fc56252ef98a78af565411f3af3a",
+        "package_path": "01_零部件/zivid/on-arm_mount_oa211__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmmountoa211/module.json",
+      "module_sha256": "e026b3698e4ac722f36035d002eb14b3eeabfa0cacf3b49243cce6a81152dbaf"
+    },
+    "onarmmountoa221": {
+      "title": "Zivid On-Arm Mount OA221",
+      "asset": {
+        "asset_id": "2beb427a-2639-5721-bd1e-caa8131f1dda",
+        "package_digest": "17953d8e4ad0fab55997d92882c0a5ca9c396b3976dca750da5edc82df709f8c",
+        "package_path": "01_零部件/zivid/on-arm_mount_oa221__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/onarmmountoa221/module.json",
+      "module_sha256": "111cbae603a4a68d974d8c7043d74e021c568ba4fc4262b2876bb2c34efc8ca2"
+    },
+    "pointedhandeyeverificationtool": {
+      "title": "Zivid Pointed Hand-Eye Verification Tool",
+      "asset": {
+        "asset_id": "a14cae78-d3fb-560f-967a-b63200ca9656",
+        "package_digest": "cd9083f49f789961ceadab497bc5f8743d0993a42bef23f951ad69841e8a2076",
+        "package_path": "01_零部件/zivid/pointed_hand-eye_verification_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pointedhandeyeverificationtool/module.json",
+      "module_sha256": "50454dc33aa13a21c1d438bafa9bf23669ffe4d495074dacd141cc965a0dcb83"
+    },
+    "twocamera": {
+      "title": "Zivid Two Camera",
+      "asset": {
+        "asset_id": "38de80f3-0328-5495-8d43-c45d18347213",
+        "package_digest": "43ba0a5bd0891d0d02ce270fc8782b8f3031f218c495b6dd6eac544e27ba3799",
+        "package_path": "01_零部件/zivid/two_camera__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/twocamera/module.json",
+      "module_sha256": "c1e09d186b678500f4c62fb8ff8c469a87c4953e3ada719859d1a33151b9d465"
+    },
+    "twofieldofview": {
+      "title": "Zivid Two Field-of-view",
+      "asset": {
+        "asset_id": "a119c227-d2f0-594c-ac20-8a98cf7fa976",
+        "package_digest": "8cca01f1a6d125fd03a073558e46396080dc37a9c2ddb5a8deb50ccd6d3ae8f6",
+        "package_path": "01_零部件/zivid/two_field-of-view__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/twofieldofview/module.json",
+      "module_sha256": "a3b73de72935b139bfe039f12491fad632d50a34c9d0e5b8ae0da678acfbaa20"
+    }
+  },
+  "source_profiles": []
+}

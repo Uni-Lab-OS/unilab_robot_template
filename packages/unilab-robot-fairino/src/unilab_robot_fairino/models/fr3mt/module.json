@@ -1,0 +1,364 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fairino",
+  "model": "fr3mt",
+  "title": "FAIRINO FR3MT",
+  "asset": {
+    "asset_id": "d562ceba-a312-587b-be6b-026ee6fef20f",
+    "package_digest": "e4e6a2202950b14b4f4a21c13212ed1d06f97054b1c6a98714a73d5b02ed0c8f",
+    "package_path": "04_设备/fairino/fr3mt__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d562ceba-a312-587b-be6b-026ee6fef20f",
+      "package_digest": "e4e6a2202950b14b4f4a21c13212ed1d06f97054b1c6a98714a73d5b02ed0c8f",
+      "package_path": "04_设备/fairino/fr3mt__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          -90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -175.0,
+          -265.0,
+          -150.0,
+          -265.0,
+          -175.0,
+          -175.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            140.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            280.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            240.0,
+            0.0,
+            -102.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            102.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            100.0
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          175.0,
+          85.0,
+          150.0,
+          85.0,
+          175.0,
+          175.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8dfccd30df08521d57538fc0a69b62f03debed8beae772ddf41172d4fc175f83",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fr3mt__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FairinoDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FairinoDriver.py",
+        "sha256": "467235f8f98f9d0d50ac070733d3bb5fb42d90988b97d06057fb611ecedbe038",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/FairinoDriver.pyc",
+            "sha256": "309ea8394a7de3e3cce87d9e77c002b0446657c3e8628a86d77487a9d9436231"
+          },
+          {
+            "relative_path": "api/Robot/v311/FairinoDriver.pyc",
+            "sha256": "7af98983be6a431009a43b0cafbff5e5dbb0603fc0b925df0f50bb0116499c96"
+          },
+          {
+            "relative_path": "api/Robot/v312/FairinoDriver.pyc",
+            "sha256": "a5a4cf5846acd19b02c1b222b98ae4dc5c65f55b54485fedbb1a8cf214d10808"
+          },
+          {
+            "relative_path": "api/Robot/v38/FairinoDriver.pyc",
+            "sha256": "4eaccc8f7a0a33a763376a71e7dedd8306ef004f0589b22ae31b88d1fd91fbbc"
+          },
+          {
+            "relative_path": "api/Robot/v39/FairinoDriver.pyc",
+            "sha256": "088fe704f356e9eae1647f551a7e82616f02d93bb93a052634981b2aab81f25f"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "fairino controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fairino:python_sdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fairino/python_sdk",
+        "repository_url": "https://github.com/FAIR-INNOVATION/fairino-python-sdk.git",
+        "code_tree_sha256": "8147dc091001b4866a6fcee3da430aaffcef50b233bd68752c2daac3b6aa7089",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "38fa612d8424f78db22c918f2696b733ff25f42edd6657ce9d910c7ec7df7714"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fairino:cpp_sdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fairino/cpp_sdk",
+        "repository_url": "https://github.com/FAIR-INNOVATION/fairino-cpp-sdk.git",
+        "code_tree_sha256": "b6dcc961d3bac44638078ae0e2e053c7ce6b677256f029bb15915e7dbcf03d19",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "8b01374891aad21430e4540e9ba5ebf8533fe8d0d581c02ebe62c113dd7cb091"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fairino:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fairino/ros2",
+        "repository_url": "https://github.com/FAIR-INNOVATION/frcobot_ros2.git",
+        "code_tree_sha256": "fd78f114b9a7b9d8d36ba54f7b9c51ef0dd8ae3df33adfc91cbb814a78ffd9b7",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "be7c82bddc2fa705082bc08363375c89b0af53d56d7d064f7d3ed9c5aa95b7ae"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fairino.py",
+      "Fairino_db.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FR3MT",
+          "manufacturer": "FAIRINO",
+          "variant": "",
+          "display": "FAIRINO FR3MT",
+          "path": "robots/models/FAIRINO-FR3MT.robot",
+          "type": "robots",
+          "payload": 3,
+          "reach": 622,
+          "axes": 6,
+          "library_assets": [
+            "d562ceba-a312-587b-be6b-026ee6fef20f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/FAIRINO-FR3MT.robot",
+        "path": "simready_usd/FAIRINO-FR3MT.robot",
+        "sha256": "f5e5721f527deca1f9508465e6dfd676bf8219d28fa3211572bf859985e0c1b2"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hiwin",
+  "model": "ra610:1672ga",
+  "title": "HIWIN RA610-1672-GA",
+  "asset": {
+    "asset_id": "f701a96b-979e-5d27-b956-b0a9a81c8e43",
+    "package_digest": "51cdabb7113397d0ad29ffedc480bd709f9e9b42181595c6e927c65c2892c278",
+    "package_path": "04_设备/hiwin/ra610-1672-ga__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f701a96b-979e-5d27-b956-b0a9a81c8e43",
+      "package_digest": "51cdabb7113397d0ad29ffedc480bd709f9e9b42181595c6e927c65c2892c278",
+      "package_path": "04_设备/hiwin/ra610-1672-ga__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -448.5,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -150.0,
+          -85.0,
+          -190.0,
+          -135.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            448.5
+          ],
+          [
+            -1.5707963267948966,
+            140.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            640.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            0.0,
+            878.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            101.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          95.0,
+          185.0,
+          190.0,
+          135.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ace920fcb2d8dccd059fbf8b9644f1dcac375c4ec0a7729d859fec2ae86fa315",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ra610-1672-ga__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:hiwin:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/hiwin/ros2",
+        "repository_url": "https://github.com/HIWINCorporation/hiwin_ros2.git",
+        "code_tree_sha256": "2096ba2069701740b2746b83cc90ba3f1b17d97a4bb026e82e6fc6b92cc5fa40",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "1967694818e9feefb73c5bdd3844f8a546ce63a1c4d19b3d6c3a688ec5a13d49"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "hiwin_controllers/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "hiwin_description/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "hiwin_driver/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "hiwin_msgs/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:hiwin_commander",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "hiwin_commander",
+        "controller_choices": [
+          "HIWIN HRSDK command socket"
+        ],
+        "sdk_version_requirement": "hiwin_robot_client_library pinned source + explicit transport correction",
+        "source_candidates": [
+          "sdk:hiwin:ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_joint_request"
+        ],
+        "constraints": [
+          "Official RA6/RS4 scope; RT605 compatibility not established; native SDK transport bug corrected transparently",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "hiwin-native/factory-receipt.json",
+          "receipt_sha256": "b7028857bf38f1a132111ffca310ed649ab324155ab28cf17d20a7a2e7852714",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "HIWIN_HRSS.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RA610-1672-GA",
+          "manufacturer": "HIWIN",
+          "variant": "",
+          "display": "HIWIN RA610-1672-GA",
+          "path": "robots/models/HIWIN-RA610-1672-GA.robot",
+          "type": "robots",
+          "payload": 10,
+          "reach": 1672,
+          "axes": 6,
+          "library_assets": [
+            "f701a96b-979e-5d27-b956-b0a9a81c8e43"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/HIWIN-RA610-1672-GA.robot",
+        "path": "simready_usd/HIWIN-RA610-1672-GA.robot",
+        "sha256": "8a87fd51d0976d2ca9be2c338a7db36cc06aeea836ba39337c4381c0c23ff3b5"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "cloos",
+  "model": "qrc290",
+  "title": "QRC-290",
+  "asset": {
+    "asset_id": "57625be8-5274-5d4f-a8b7-7ef84362fcfc",
+    "package_digest": "259960bc2304554ffe3e9cf90eb0cc16168f2421a77b9d32412c51a91669c80a",
+    "package_path": "04_设备/cloos/qrc-290__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "57625be8-5274-5d4f-a8b7-7ef84362fcfc",
+      "package_digest": "259960bc2304554ffe3e9cf90eb0cc16168f2421a77b9d32412c51a91669c80a",
+      "package_path": "04_设备/cloos/qrc-290__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "b71e3e90b09d8ca8b0492a00223430e2a62fc4172f7b761b71f790bb44bdc118",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "732da65e6a6743e43012aab564913fd4469b61493572524b8057afe1d2767986",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qrc-290__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "CLOOS.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "QRC-290",
+          "manufacturer": "CLOOS",
+          "variant": "",
+          "path": "Components/CLOOS/Robots/QRC-290.vcmx",
+          "type": "Robots",
+          "payload": "4",
+          "reach": "3740",
+          "vcid": "6d7b7e97-e291-4bbc-8bc7-8c3da41c8796",
+          "library_assets": [
+            "57625be8-5274-5d4f-a8b7-7ef84362fcfc"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/QRC-290.vcmx",
+        "path": "simready_usd/QRC-290.vcmx",
+        "sha256": "b71e3e90b09d8ca8b0492a00223430e2a62fc4172f7b761b71f790bb44bdc118"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

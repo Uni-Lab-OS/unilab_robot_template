@@ -1,0 +1,24 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "cpcrobot",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "s0": {
+      "title": "cpcRobot S0｜多源合并",
+      "asset": {
+        "asset_id": "a00b83aa-7329-5330-b005-6ea324b1fce5",
+        "package_digest": "0b2aff90b5686978e7693767269b0a7e277c14d848097ec7aa4d7906ba2560c8",
+        "package_path": "04_设备/cpcrobot/s0__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/s0/module.json",
+      "module_sha256": "208ed58a142302738f4e389b722b0709672ee556d316716f75319f73b49f12df"
+    }
+  },
+  "source_profiles": []
+}

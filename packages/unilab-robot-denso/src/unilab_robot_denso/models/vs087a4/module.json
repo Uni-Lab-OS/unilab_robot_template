@@ -1,0 +1,186 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "denso",
+  "model": "vs087a4",
+  "title": "VS-087A4",
+  "asset": {
+    "asset_id": "85591987-0453-56e9-a80e-698e19381ba8",
+    "package_digest": "c7e2a2b4177c3b1f6b93773d8c2b42172f28f6e1c4b969b8a82623ac51f9c7d5",
+    "package_path": "04_设备/denso/vs-087a4__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "85591987-0453-56e9-a80e-698e19381ba8",
+      "package_digest": "c7e2a2b4177c3b1f6b93773d8c2b42172f28f6e1c4b969b8a82623ac51f9c7d5",
+      "package_path": "04_设备/denso/vs-087a4__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "b0170135f35699f739f0a28ae27719171f8f99d92e465b8efb23b4f13dcdbdb4",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "cb64196c5a050a03ba1c52011b500efef59cb2b8360c5fcd2e07cd2627280eb8",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/vs-087a4__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apidenso",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apidenso.exe",
+        "sha256": "da6ba4fad2aa125465505530f229adafb4b753664d36be72b943eccdd9f5a601",
+        "bytes": 75264,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "denso controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:denso:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/denso/ros2",
+        "repository_url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+        "code_tree_sha256": "fcf506a6ff09f4d4c797de17a19962e77aa91d73ac7959bd2b39a676190b1acb",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "04688c5564e029aafccd85afb490594ca069c64e2e72501e1e5fd75b514a7d7a"
+          },
+          {
+            "path": "bcap_service/README.md",
+            "sha256": "43fd9233384085d99bbde0797ef017e287270fd7afd7c0992e945cba9d5b5b31"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Denso_RC7.py",
+      "Denso_RC8.py",
+      "Denso_RC9.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "VS-087A4",
+          "manufacturer": "Denso",
+          "variant": "",
+          "path": "Components/Denso/Robots/VS-087A4.vcmx",
+          "type": "Robots",
+          "payload": "7",
+          "reach": "905",
+          "vcid": "9defdb22-f2eb-42da-b78a-e4a37bb36ccc",
+          "library_assets": [
+            "85591987-0453-56e9-a80e-698e19381ba8"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/VS-087A4.vcmx",
+        "path": "simready_usd/VS-087A4.vcmx",
+        "sha256": "b0170135f35699f739f0a28ae27719171f8f99d92e465b8efb23b4f13dcdbdb4"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

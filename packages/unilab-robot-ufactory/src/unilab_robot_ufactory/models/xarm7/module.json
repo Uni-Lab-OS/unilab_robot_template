@@ -1,0 +1,857 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ufactory",
+  "model": "xarm7",
+  "title": "uFactory xArm7｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "a04a8fa6-c2d4-58fd-bd28-a737d8447149",
+    "package_digest": "fd09f733bbb74201f25fe034cbb99a26221d1c3a0c99914c94b84660f6aec0c3",
+    "package_path": "04_设备/ufactory/xarm7__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a04a8fa6-c2d4-58fd-bd28-a737d8447149",
+      "package_digest": "fd09f733bbb74201f25fe034cbb99a26221d1c3a0c99914c94b84660f6aec0c3",
+      "package_path": "04_设备/ufactory/xarm7__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "xArm7",
+              "source": "robots/models/uFactory-xArm7.robot",
+              "source_family": "RoboDK",
+              "value": 7.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "count",
+          "value": 7,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed product catalog fields only",
+              "title": "UFACTORY xArm hardware specifications 8.4",
+              "url": "https://docs.xarm.ufactory.cc/8.technical_specifications.html"
+            }
+          ]
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "xArm7",
+              "source": "Components/uFactory/Robots/xArm7.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "xArm7",
+              "source": "robots/models/uFactory-xArm7.robot",
+              "source_family": "RoboDK",
+              "value": 3.5
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 3.5,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed product catalog fields only",
+              "title": "UFACTORY xArm hardware specifications 8.4",
+              "url": "https://docs.xarm.ufactory.cc/8.technical_specifications.html"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "xArm7",
+              "source": "Components/uFactory/Robots/xArm7.vcmx",
+              "source_family": "VC",
+              "value": 700.0
+            },
+            {
+              "model": "xArm7",
+              "source": "robots/models/uFactory-xArm7.robot",
+              "source_family": "RoboDK",
+              "value": 700.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 700.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          3.141592653589793
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -360.0,
+          -118.0,
+          -360.0,
+          -225.0,
+          -360.0,
+          -97.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            267.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            293.0
+          ],
+          [
+            -1.5707963267948966,
+            52.2,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -77.5,
+            0.0,
+            342.5
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -76.0,
+            0.0,
+            97.0
+          ]
+        ],
+        "mechanism_type": -23,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          8.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          360.0,
+          120.0,
+          360.0,
+          11.0,
+          360.0,
+          180.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "uFactory",
+          "name": "xArm7",
+          "original": {
+            "family": "VC",
+            "original_name": "xArm7.vcmx",
+            "path": "simready_usd/source_assets/VC/0_xarm7/xArm7.vcmx",
+            "sha256": "c8f45c188cbbda5633b129698cd00cadc29badb53a668d5f138ff354907af287"
+          },
+          "path": "Components/uFactory/Robots/xArm7.vcmx",
+          "payload": "3",
+          "reach": "700",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "bb83e176-aa4a-4104-b63e-8f147bbc181c"
+        },
+        {
+          "axes": 7,
+          "converted_parameters": [
+            {
+              "asset_id": "466872c7-43f9-5b4d-90c6-58a0509c1cc2",
+              "entrypoints": {
+                "usd": "simready_usd/xarm7__r001.usdc"
+              },
+              "package_digest": "c3f558c0e0fbfddb22e403316a4d424cb5f3e74f1e67b4217ddfcf8a6d14ef1b",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300,
+                      320
+                    ],
+                    "seven_axis_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    3.141592653589793
+                  ],
+                  "flange_z_radians": 3.141592653589793,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree"
+                  ],
+                  "joint_source_indices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -360.0,
+                    -118.0,
+                    -360.0,
+                    -225.0,
+                    -360.0,
+                    -97.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      267.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      293.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      52.2,
+                      3.141592653589793,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      -77.5,
+                      0.0,
+                      342.5
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      -76.0,
+                      0.0,
+                      97.0
+                    ]
+                  ],
+                  "mechanism_type": -23,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+                    "joint_input_mapping": "0x14055c4d0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+                    "seven_axis_core": "0x1405b7280",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+                  "raw_controller_mapping_fields": [
+                    8.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+                  "upper": [
+                    360.0,
+                    120.0,
+                    360.0,
+                    11.0,
+                    360.0,
+                    180.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "3e69c89846e6a577969989194d019927aa7343ef99d2b2b4819583f1823cb0e2",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 7,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 8
+                  }
+                }
+              }
+            }
+          ],
+          "display": "uFactory xArm7",
+          "family": "RoboDK",
+          "library_assets": [
+            "466872c7-43f9-5b4d-90c6-58a0509c1cc2"
+          ],
+          "manufacturer": "uFactory",
+          "name": "xArm7",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "uFactory-xArm7.robot",
+            "path": "simready_usd/uFactory-xArm7.robot",
+            "sha256": "09166b644e0d1a1e7d850c686a46af798db1cb1f287f7e9f5a2138d56c75513a"
+          },
+          "path": "robots/models/uFactory-xArm7.robot",
+          "payload": 3.5,
+          "reach": 700,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3e69c89846e6a577969989194d019927aa7343ef99d2b2b4819583f1823cb0e2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/xarm7__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "uFactory xArm7｜多源合并",
+          "id": "merged_robot_a04a8fa6_c2d4_58fd_bd28_a737d8447149",
+          "metadata": {
+            "asset_id": "a04a8fa6-c2d4-58fd-bd28-a737d8447149",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:xArmDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/xArmDriver.py",
+        "sha256": "de2c8f15ed74931d92172b9338f3afbbfc40baea8cd9264da8b0c18b0f58e36c",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/xArmDriver.pyc",
+            "sha256": "58083ac8432f7a2e78cf8a0bc1903d630662240547b47928b8675cf2361e43ec"
+          },
+          {
+            "relative_path": "api/Robot/v311/xArmDriver.pyc",
+            "sha256": "930484123a886cd48f46a95a387706d8aceac965025338fbc6effd679d098743"
+          },
+          {
+            "relative_path": "api/Robot/v312/xArmDriver.pyc",
+            "sha256": "917b49d1284134485084552d7f10d91535dd7235255cec5daed9ef1feb4120c0"
+          },
+          {
+            "relative_path": "api/Robot/v38/xArmDriver.pyc",
+            "sha256": "e097909f71faf719e47a91576370eaf1d7cb09545f94578f6ae2e66a8bdf60dc"
+          },
+          {
+            "relative_path": "api/Robot/v39/xArmDriver.pyc",
+            "sha256": "0527d4a4af6bdd7594919917d89a47d75349a1fbf92645e8343cfd6c2bab97ce"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ufactory controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/ufactory/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/xarm_ros2_master_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "uFactory-xArm7.robot",
+        "path": "simready_usd/uFactory-xArm7.robot",
+        "sha256": "09166b644e0d1a1e7d850c686a46af798db1cb1f287f7e9f5a2138d56c75513a"
+      },
+      {
+        "family": "VC",
+        "original_name": "xArm7.vcmx",
+        "path": "simready_usd/source_assets/VC/0_xarm7/xArm7.vcmx",
+        "sha256": "c8f45c188cbbda5633b129698cd00cadc29badb53a668d5f138ff354907af287"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "xArm7",
+                "source": "Components/uFactory/Robots/xArm7.vcmx",
+                "source_family": "VC",
+                "value": 3.0
+              },
+              {
+                "model": "xArm7",
+                "source": "robots/models/uFactory-xArm7.robot",
+                "source_family": "RoboDK",
+                "value": 3.5
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 3.5,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Listed product catalog fields only",
+                "title": "UFACTORY xArm hardware specifications 8.4",
+                "url": "https://docs.xarm.ufactory.cc/8.technical_specifications.html"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            3.0,
+            3.5
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "ufactory",
+        "xarm7"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Listed product catalog fields only",
+            "title": "UFACTORY xArm hardware specifications 8.4",
+            "url": "https://docs.xarm.ufactory.cc/8.technical_specifications.html"
+          }
+        ],
+        "fields": {
+          "axes": {
+            "status": "manufacturer_verified",
+            "value": 7
+          },
+          "payload": {
+            "status": "manufacturer_verified",
+            "value": 3.5
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "466872c7-43f9-5b4d-90c6-58a0509c1cc2",
+        "original_package_digest": "c3f558c0e0fbfddb22e403316a4d424cb5f3e74f1e67b4217ddfcf8a6d14ef1b",
+        "source": "robots/models/uFactory-xArm7.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "payload_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

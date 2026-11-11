@@ -1,0 +1,70 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_dual_arm_example_58c3d7d05b",
+  "source": {
+    "url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+    "commit": "5898135bb9eeae8fedbb2e923dbb707c949411f6",
+    "path": "robots/fanuc/ros2_driver/fanuc_examples/fanuc_dual_arm_example",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "53c8b83b9ef8894aaa911b77f74a4390eaed1dec510ce56a476c274a3923d71a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "07814e6d5dd503666f00684bae1a3215eccfcdd6584dcd6257e138fbb00d1259",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "77142c73c98e41340f7c812ed6be900911c83d21edbc23311301c86facf3b6d9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "c39a159c63264b8aa7d863398bf56ead3cd93913213bd4a7317806528262ed0b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "fanuc_dual_arm_example/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/fanuc_moveit.launch.py",
+      "sha256": "a3360fd0f2015343cf999e11dc7fb59dd5ddd8506d32bd6f9a9e359b2a1ee6ce",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "475905dce3fd2ad262ed7266010383e924f4380066faf6b9befbb2598728bc9a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "b65e7e4d30c43c28d8ec8a72acaa6a0d97833504925423ef0b529383f4745b80",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/joint_state_merger.py",
+      "sha256": "280144891011366995afd89e2ed96a33620452abf538c8187696caffd7c84b90",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/dual_arm.srdf",
+      "sha256": "a8aeaf2224e239970f06503c20ec6d07377dd353f53ba0d96af9e03bf6150120",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "urdf/dual_arm.urdf.xacro",
+      "sha256": "95d5c9b703fd856b0aff03ddadf54f7bf8f48b805b2cfc04d2cba2f041c2c747",
+      "git_lfs_pointer": false
+    }
+  ]
+}

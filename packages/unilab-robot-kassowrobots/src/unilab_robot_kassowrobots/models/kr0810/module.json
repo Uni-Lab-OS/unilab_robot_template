@@ -1,0 +1,305 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kassowrobots",
+  "model": "kr0810",
+  "title": "Kassow Robots KR0810",
+  "asset": {
+    "asset_id": "588ccd32-6df0-5880-a4a5-70fce6e90483",
+    "package_digest": "91f99dd441b389d1cf631778a28d4881e5cd3c117696771d19050e7fab64aa6b",
+    "package_path": "04_设备/kassow_robots/kr0810__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "588ccd32-6df0-5880-a4a5-70fce6e90483",
+      "package_digest": "91f99dd441b389d1cf631778a28d4881e5cd3c117696771d19050e7fab64aa6b",
+      "package_path": "04_设备/kassow_robots/kr0810__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -360.0,
+          -70.0,
+          -360.0,
+          -70.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            308.7
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            0.0,
+            -85.7
+          ],
+          [
+            1.5707963267948966,
+            -50.0,
+            0.0,
+            416.9
+          ],
+          [
+            -1.5707963267948966,
+            40.0,
+            0.0,
+            84.05
+          ],
+          [
+            1.5707963267948966,
+            -40.0,
+            0.0,
+            374.5
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            111.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            108.0
+          ]
+        ],
+        "mechanism_type": -3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          360.0,
+          180.0,
+          360.0,
+          180.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8423e9e8e92f93185101f9fa39659b509f312fc3260b6ba3c2b276683eca18df",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/kr0810__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kassow/kord_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kassow/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "KR0810",
+          "manufacturer": "Kassow Robots",
+          "variant": "",
+          "display": "Kassow Robots KR0810",
+          "path": "robots/models/Kassow-Robots-KR0810.robot",
+          "type": "robots",
+          "payload": 10,
+          "reach": 850,
+          "axes": 7,
+          "library_assets": [
+            "588ccd32-6df0-5880-a4a5-70fce6e90483"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Kassow-Robots-KR0810.robot",
+        "path": "simready_usd/Kassow-Robots-KR0810.robot",
+        "sha256": "33e3cb60438fc81933739c203b29db10ada2b94614b47ae2f8c4c120f42bca60"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

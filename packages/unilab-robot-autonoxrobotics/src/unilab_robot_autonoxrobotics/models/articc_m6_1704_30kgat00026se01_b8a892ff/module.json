@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "autonoxrobotics",
+  "model": "articc.m6:1704:30kgat00026se01",
+  "title": "autonox Robotics articc.m6-1704-30kg (AT_00026-SE01)",
+  "asset": {
+    "asset_id": "f520ee97-d436-5c93-aa8a-a4cbdb168872",
+    "package_digest": "587182cc3dcc76836a4ecbb1359beefa88d179f4625a2ceb270afe255158a220",
+    "package_path": "04_设备/autonox_robotics/articc.m6-1704-30kg_at_00026-se01___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f520ee97-d436-5c93-aa8a-a4cbdb168872",
+      "package_digest": "587182cc3dcc76836a4ecbb1359beefa88d179f4625a2ceb270afe255158a220",
+      "package_path": "04_设备/autonox_robotics/articc.m6-1704-30kg_at_00026-se01___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -185.0,
+          -69.0,
+          -160.0,
+          -185.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            618.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            680.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            90.0,
+            0.0,
+            685.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            184.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          185.0,
+          148.0,
+          67.0,
+          185.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4ef70b3eac9bfe3530dba98a63ad05f4acc9dedd3c274563b1914ebac29053e6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/articc.m6-1704-30kg_at_00026-se01___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "articc.m6-1704-30kg (AT_00026-SE01)",
+          "manufacturer": "autonox Robotics",
+          "variant": "",
+          "display": "autonox Robotics articc.m6-1704-30kg (AT_00026-SE01)",
+          "path": "robots/models/autonox-Robotics-articc-m6-1704-30kg-AT-00026-SE01.robot",
+          "type": "robots",
+          "payload": 30,
+          "reach": 1704,
+          "axes": 6,
+          "library_assets": [
+            "f520ee97-d436-5c93-aa8a-a4cbdb168872"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/autonox-Robotics-articc-m6-1704-30kg-AT-00026-SE01.robot",
+        "path": "simready_usd/autonox-Robotics-articc-m6-1704-30kg-AT-00026-SE01.robot",
+        "sha256": "c6e6646ebbed1162531a923f2b0a085ab3f193dd38fc86a02be57572b9df6bb0"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

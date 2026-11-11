@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "neuromeka",
+  "models": {
+    "indy7": {
+      "title": "Neuromeka INDY7",
+      "asset": {
+        "asset_id": "b4ba470a-f550-54de-99c8-7b5e833cc541",
+        "package_digest": "a2c0f85b2a2cd6e1451005e8ba3143710de760d67d15d6edd09b06f6d8f9eea8",
+        "package_path": "04_设备/neuromeka/indy7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/indy7/module.json",
+      "module_sha256": "ac25d349baab33b9a0b2db374e3f07bce9b804288ed801e0c6b6266c8b24f7a7"
+    },
+    "indy7rp2": {
+      "title": "Neuromeka INDY7-RP2",
+      "asset": {
+        "asset_id": "e83eb4e9-19a6-537b-bcb9-b53499ab7180",
+        "package_digest": "7485b4ff26fcb5637dda23d9c7ddd3dd2d8a1200d21e69880da33e6440520385",
+        "package_path": "04_设备/neuromeka/indy7-rp2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/indy7rp2/module.json",
+      "module_sha256": "30c2b777b85b1fdfba21358303450f4ae3ac194412047a805f1000aa1c12ed9b"
+    },
+    "indy7v2": {
+      "title": "Neuromeka INDY7 V2",
+      "asset": {
+        "asset_id": "ebdf9dd4-dba8-58d9-9de9-4356b060d63f",
+        "package_digest": "10e6c6ea251001318169bfaeede889c3f335c04f9af73f81caaadaadac84cb75",
+        "package_path": "04_设备/neuromeka/indy7_v2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/indy7v2/module.json",
+      "module_sha256": "1cbe77ec8c12dc0a55eea9cac0f044a67d3d1b79e98ae62b4ad0149b81ad9d6b"
+    },
+    "opti3": {
+      "title": "Neuromeka OPTi3",
+      "asset": {
+        "asset_id": "b00cb663-3d76-52a2-b868-47b3155097b2",
+        "package_digest": "707ff7cf934322130fa96e0be717af550b9b21101fbd299458ebba9ba07fe405",
+        "package_path": "04_设备/neuromeka/opti3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/opti3/module.json",
+      "module_sha256": "98a2a2fff76d7f9f733b7986087d031641b143bf08aab1fa38db567b3ff22820"
+    },
+    "opti5": {
+      "title": "Neuromeka OPTi5",
+      "asset": {
+        "asset_id": "bf9d3e92-81da-5766-b226-48a574f44c21",
+        "package_digest": "ec9ecef097504fa02ad77e327fe8f990cfc6299e7a462200d342c3af03163aa2",
+        "package_path": "04_设备/neuromeka/opti5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/opti5/module.json",
+      "module_sha256": "91c65b097c63a2a275b85698e1723bcbf364b4e8d6a34276f90259a8afe02910"
+    }
+  },
+  "source_profiles": []
+}

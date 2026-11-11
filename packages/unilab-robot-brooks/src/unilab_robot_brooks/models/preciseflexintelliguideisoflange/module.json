@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "brooks",
+  "model": "preciseflexintelliguideisoflange",
+  "title": "Brooks PreciseFlex IntelliGuide ISO Flange",
+  "asset": {
+    "asset_id": "040efbdf-8a12-50af-a48a-848b1ded5e77",
+    "package_digest": "0a00845119801f3fa7dc01449857cc309d424052b1c94664ffdeef2ec2d22257",
+    "package_path": "01_零部件/brooks/preciseflex_intelliguide_iso_flange__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "040efbdf-8a12-50af-a48a-848b1ded5e77",
+      "package_digest": "0a00845119801f3fa7dc01449857cc309d424052b1c94664ffdeef2ec2d22257",
+      "package_path": "01_零部件/brooks/preciseflex_intelliguide_iso_flange__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "b84014127b39862c44d2c3e63c2fe3775db5002cb7fac17d8d8839410878c508",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/preciseflex_intelliguide_iso_flange__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "PreciseFlex IntelliGuide ISO Flange",
+          "manufacturer": "Brooks",
+          "variant": "",
+          "display": "Brooks PreciseFlex IntelliGuide ISO Flange",
+          "path": "tools/models/Brooks-PreciseFlex-IntelliGuide-ISO-Flange.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "040efbdf-8a12-50af-a48a-848b1ded5e77"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Brooks-PreciseFlex-IntelliGuide-ISO-Flange.tool",
+        "path": "simready_usd/Brooks-PreciseFlex-IntelliGuide-ISO-Flange.tool",
+        "sha256": "8f4808573b5e8ee2c509a0e40b57429d568acaee57438f636b5813db5134f078"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2020 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "fanuc",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "arcmate100id": {
+      "title": "Fanuc ARC Mate 100iD｜多源合并",
+      "asset": {
+        "asset_id": "17521983-c598-5338-af8c-817221655bb7",
+        "package_digest": "ce8363d47ac683b66e8aaa7aceff4a5436e347e26e7c8435f4fce9d894322feb",
+        "package_path": "04_设备/fanuc/arcmate100id__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/arcmate100id/module.json",
+      "module_sha256": "107133c59787963a5eaec8489ddfbf77e037d39db2272b95c1fd533ae774adfc"
+    },
+    "cr7ia": {
+      "title": "Fanuc CR-7iA｜多源合并",
+      "asset": {
+        "asset_id": "ab7e1a13-5a41-57dc-a240-a8a995ddc0ff",
+        "package_digest": "49ac795b41e224b81021fa79015c883c0194ce0ffea6a5e87950d86fbff0f228",
+        "package_path": "04_设备/fanuc/cr7ia__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr7ia/module.json",
+      "module_sha256": "68cde0eb1b2f97753fbfa127f27c934a0f4da844f94ac4673429bbe0ade6326c"
+    },
+    "crx10ia": {
+      "title": "Fanuc CRX-10iA｜多源合并",
+      "asset": {
+        "asset_id": "8734e76e-ed4d-545a-988d-59a9892d64f6",
+        "package_digest": "1ebabf0de5ea7b5005df499dab73b30913b7c91a32915985dde38cc6569c36f7",
+        "package_path": "04_设备/fanuc/crx10ia__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crx10ia/module.json",
+      "module_sha256": "ef37916a8db1c94039b178bb2410c58008486b088939a40bd998fc860f94c226"
+    },
+    "crx30ia": {
+      "title": "Fanuc CRX-30iA｜多源合并",
+      "asset": {
+        "asset_id": "f145598f-340f-5ac3-91f1-42b4d6c400b1",
+        "package_digest": "0d7fe4679814833462ad8f872032fa87121017eb66bd7862bcf5f4ff604080eb",
+        "package_path": "04_设备/fanuc/crx30ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crx30ia/module.json",
+      "module_sha256": "c8c1d3fbe5c064387e91daff009ab7b34ae5c2aea72e24c988acf56ec67becdc"
+    },
+    "m710id50m": {
+      "title": "Fanuc M-710iD/50M｜多源合并",
+      "asset": {
+        "asset_id": "ac2d2e19-b3b3-54d5-9acd-4992dd9efdd3",
+        "package_digest": "a48a1b3b6c2e18c68997454ef2a15207bbc71bd94e9ad7a6b95af9e279fa0d1f",
+        "package_path": "04_设备/fanuc/m710id50m__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710id50m/module.json",
+      "module_sha256": "99227633d01c75b3f1bafa61bebe0191986cbe2621a49b357227c5c8fb936461"
+    },
+    "sr12ia": {
+      "title": "Fanuc SR-12iA｜多源合并",
+      "asset": {
+        "asset_id": "e43b024b-be5f-526f-8af4-0051d30faf64",
+        "package_digest": "168f9e8d5e5980c0f510f8e3feb4a2d570fc20de2ffc1c3d3b5dee76c8db9cec",
+        "package_path": "04_设备/fanuc/sr12ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sr12ia/module.json",
+      "module_sha256": "eebce55fb62544f371431f8de9195e34b838020c93edc4490033aa2ddf10a3c0"
+    },
+    "sr20ia": {
+      "title": "Fanuc SR-20iA｜多源合并",
+      "asset": {
+        "asset_id": "677528aa-3bcd-5002-920c-f62fc6d5833b",
+        "package_digest": "c99c4e15e96932a3079f00f0d304c00bc415d157717c1262f87dd9506e4664c7",
+        "package_path": "04_设备/fanuc/sr20ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sr20ia/module.json",
+      "module_sha256": "f0d28cc6ea213ee6a0be22f0ed48301ccad909ae51ac1b7e5820975a18fd476a"
+    },
+    "sr3ia": {
+      "title": "Fanuc SR-3iA｜多源合并",
+      "asset": {
+        "asset_id": "d7be54ad-1405-57ec-8427-859bb0b9e0e8",
+        "package_digest": "c87ad54a7ea37d3764052123bde5386ec5cfb0fa1b36d506e6e6855ce5415c37",
+        "package_path": "04_设备/fanuc/sr3ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sr3ia/module.json",
+      "module_sha256": "5608ed04964b761c1bd5f1780919f251c5356db9c28d44e12933bb8045db8725"
+    },
+    "sr6ia": {
+      "title": "Fanuc SR-6iA｜多源合并",
+      "asset": {
+        "asset_id": "d5204e39-eea1-5c00-8ea1-5f4095b6f3cf",
+        "package_digest": "5e2cd15f7f3bba55cb40de8c3493b0b22ed2086196837e4a02a6acd11e7582e2",
+        "package_path": "04_设备/fanuc/sr6ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sr6ia/module.json",
+      "module_sha256": "b4967efd908580b9a24937a53c5d6da966934d5b1d7742162ca048d609173dc2"
+    },
+    "arcmate100id8l": {
+      "title": "Fanuc ARC Mate 100iD/8L｜多源合并",
+      "asset": {
+        "asset_id": "85a7aaf7-678e-5349-9f0a-ae37268721f2",
+        "package_digest": "d130cfd186256d104e4ec3d30b2d1020ca82624abe20ee0a1eb6bb6b0ee99add",
+        "package_path": "04_设备/fanuc/arcmate100id8l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/arcmate100id8l/module.json",
+      "module_sha256": "9a4043063c1d3a6ae3c9bd035ba186fe9e8b66375755c977ae832b1044abd87b"
+    },
+    "arcmate120ic": {
+      "title": "Fanuc ARC Mate 120iC｜多源合并",
+      "asset": {
+        "asset_id": "52af1f3e-014e-552d-a08f-1f09d7d19c1b",
+        "package_digest": "e98b1abe606b91b29cc05b4c98b337c31731e87267fd9c94184cbbd170e81cc2",
+        "package_path": "04_设备/fanuc/arcmate120ic__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/arcmate120ic/module.json",
+      "module_sha256": "e6a90e16a79f1fa106f19940fc6916847a925f227ebb46d8aac77346ef75f82f"
+    },
+    "arcmate120id12l": {
+      "title": "Fanuc ARC Mate 120iD/12L｜多源合并",
+      "asset": {
+        "asset_id": "be342207-0161-5de7-93fa-eab19954b46d",
+        "package_digest": "0826de7e117ec9fc2572d6cea9d83eb5d9bf128c81da789d165f8ec5af789f94",
+        "package_path": "04_设备/fanuc/arcmate120id12l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/arcmate120id12l/module.json",
+      "module_sha256": "34edc315183003f3434f6aae4b7ef04b57a76702956a91d5c9180aa909871a22"
+    },
+    "cr15ia": {
+      "title": "Fanuc CR-15iA｜多源合并",
+      "asset": {
+        "asset_id": "fe373a3e-e5a3-5f48-ae4f-d5dcbdaef6b9",
+        "package_digest": "1ffa450a457c2c5884457cd7341891566be329a1e53043faa5041777b49ddece",
+        "package_path": "04_设备/fanuc/cr15ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr15ia/module.json",
+      "module_sha256": "9221413039d1a16eac801a894f5af9b8cdc44d622be96926e3a8bc8fff136184"
+    },
+    "cr35ia": {
+      "title": "Fanuc CR-35iA｜多源合并",
+      "asset": {
+        "asset_id": "8cd0f760-f75d-5058-a619-6b32ed40eada",
+        "package_digest": "3fc88c29302820aa803b5cf26e3a63ee74c948442dc4fbacbc3db363dba557d5",
+        "package_path": "04_设备/fanuc/cr35ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr35ia/module.json",
+      "module_sha256": "be3a4d0d7429eba5e02f2935118528a777c0f72d7384c51c228cfb773463e61a"
+    },
+    "cr35ib": {
+      "title": "Fanuc CR-35iB｜多源合并",
+      "asset": {
+        "asset_id": "45fb889e-f186-5393-ab61-255f3d0ce44c",
+        "package_digest": "d06de4bd624609d9cb4ed7d56af4c3d4192f86c1d94febc5658c46bb05b69183",
+        "package_path": "04_设备/fanuc/cr35ib__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr35ib/module.json",
+      "module_sha256": "ac7d038d99f3e726467a7f93195593023078301472acad2d36c67ade6420856f"
+    },
+    "cr7ial": {
+      "title": "Fanuc CR-7iA/L｜多源合并",
+      "asset": {
+        "asset_id": "c6c97c6a-adfc-5aea-be67-fbbf49e861cd",
+        "package_digest": "5b9fba765f78372f2c703d059b3878817d58d52bac8767617bdc15d0ac93d7f0",
+        "package_path": "04_设备/fanuc/cr7ial__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr7ial/module.json",
+      "module_sha256": "e289719c4cbf6b32d6610e9229d1e03eee890e5fcc6ae21b01d6629a5f42795a"
+    },
+    "crx10ial": {
+      "title": "Fanuc CRX-10iA/L｜多源合并",
+      "asset": {
+        "asset_id": "6d9a804d-9862-5480-b428-3c6b122c82b3",
+        "package_digest": "459ff6acc8c0291a35addfe5117e3f1c87c526611b7c3bbac6c60fc0a6880116",
+        "package_path": "04_设备/fanuc/crx10ial__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crx10ial/module.json",
+      "module_sha256": "7f72d391c854a6d5e80dc258467ded5635e16a7b7a0dbb7d0537f174f5470a52"
+    },
+    "crx20ial": {
+      "title": "Fanuc CRX-20iA/L｜多源合并",
+      "asset": {
+        "asset_id": "f2364854-c9de-547b-9503-79e546e1f04e",
+        "package_digest": "71c2dcea98ec857a1ed0c7ba3617fb8d97ebf11f50baf7a314e340857c2cc33f",
+        "package_path": "04_设备/fanuc/crx20ial__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crx20ial/module.json",
+      "module_sha256": "5b0970efa5915073ab042c0d00c3340acc41adbe2ab7fac37b46a4de822aacf1"
+    },
+    "crx5ia": {
+      "title": "Fanuc CRX-5iA｜多源合并",
+      "asset": {
+        "asset_id": "c8788480-085d-5a24-a1ed-c0890cf4b0bc",
+        "package_digest": "1bb9b9378a2ceb0cd167b6c13fd95d43ef5f9b38b3d74f169a16c3593feccad2",
+        "package_path": "04_设备/fanuc/crx5ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crx5ia/module.json",
+      "module_sha256": "b4aba5f29acdde3d5299bf1e82476127d66e351796953be9bc35c2988c2036ea"
+    },
+    "lr10ia10": {
+      "title": "Fanuc LR-10iA/10｜多源合并",
+      "asset": {
+        "asset_id": "8c706d68-4307-555e-ba4a-1449a4756afc",
+        "package_digest": "66bb33e066e34731e641c50d1b4daa89f21eb4d1c2a61aec2560196acec7f25e",
+        "package_path": "04_设备/fanuc/lr10ia10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lr10ia10/module.json",
+      "module_sha256": "7712ac53d327b4f8331095cf156900a67136c4a2156bfd52390c064ad92df7b0"
+    },
+    "lrmate200ic": {
+      "title": "Fanuc LR Mate 200iC｜多源合并",
+      "asset": {
+        "asset_id": "7905fc12-afe8-52c0-931c-6d00a91c3d1e",
+        "package_digest": "47e5c3a47d86a8aee0772a55adf45a26fc587ff14c3dc81995ad20435f06e530",
+        "package_path": "04_设备/fanuc/lrmate200ic__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "revalidation_required_after_asset_revision"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200ic/module.json",
+      "module_sha256": "c4dcad2c2e0d2a7352f335fd7e7636dc19939eb3e122f172d65b683343546264"
+    },
+    "lrmate200id": {
+      "title": "Fanuc LR Mate 200iD｜多源合并",
+      "asset": {
+        "asset_id": "df0ecf00-6fbd-559a-9642-c84c1f4708d4",
+        "package_digest": "789be7d4b7bb14a4106c9708d3a2a744cbfc33ef14a0e38f2e4af5dd23531385",
+        "package_path": "04_设备/fanuc/lrmate200id__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200id/module.json",
+      "module_sha256": "4655eb499fe37a66f6b0b1eaf5bdd020515fda0d75f1096f931295c55fa69397"
+    },
+    "lrmate200id14l": {
+      "title": "Fanuc LR Mate 200iD/14L｜多源合并",
+      "asset": {
+        "asset_id": "45dd3dee-2327-5e98-b968-db73873eaad4",
+        "package_digest": "3f89cf0efad9c6555670c81b07541b13ab4fdb9c7ecd70a87621bc61f91214c1",
+        "package_path": "04_设备/fanuc/lrmate200id14l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200id14l/module.json",
+      "module_sha256": "84ddda9c768f01b14053845c98337cda690d533aef6d8e12c207389e740dc02e"
+    },
+    "lrmate200id4s": {
+      "title": "Fanuc LR Mate 200iD/4S｜多源合并",
+      "asset": {
+        "asset_id": "fc4568a1-ab67-5f44-96b5-b485f07fc197",
+        "package_digest": "8efd3e547e99ff40202b47a49c9fbb64fa01a55e71f35d018ee3a0a2393c4346",
+        "package_path": "04_设备/fanuc/lrmate200id4s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200id4s/module.json",
+      "module_sha256": "72528c9d16e540a192684c7db22d1530cd0847ba8ca13e1c9273d2042c04fca6"
+    },
+    "lrmate200id4sh": {
+      "title": "Fanuc LR Mate 200iD/4SH｜多源合并",
+      "asset": {
+        "asset_id": "eb08cf18-44ea-5153-8820-5449fc82b5fc",
+        "package_digest": "41e461edaa7916eacb48b3c5f132342bba5534d54df6f2dc5faa5c4bca95259c",
+        "package_path": "04_设备/fanuc/lrmate200id4sh__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200id4sh/module.json",
+      "module_sha256": "c0acb828410110b791ec1169e950bed6e1bdfb8e8bae06969873a96f313f56ee"
+    },
+    "lrmate200id7l": {
+      "title": "Fanuc LR Mate 200iD/7L｜多源合并",
+      "asset": {
+        "asset_id": "c55bbcff-624d-5b79-a933-3805bf1849eb",
+        "package_digest": "918218136de24967ec8fb7bbddbbb6cf32c1d6ccbeed0f66d050583ce0890b3d",
+        "package_path": "04_设备/fanuc/lrmate200id7l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200id7l/module.json",
+      "module_sha256": "6620018a1947025026de9423096517b8b840f986ff7212919febba0ba9ac673c"
+    },
+    "m10ia10s": {
+      "title": "Fanuc M-10iA/10S｜多源合并",
+      "asset": {
+        "asset_id": "a5b96b83-e8cf-52d1-95f9-230ca4fc19f9",
+        "package_digest": "ee901fc95063d8b1a84a09ca9707e171fc8da22cc80878a38b1fa8eda9e9a09b",
+        "package_path": "04_设备/fanuc/m10ia10s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia10s/module.json",
+      "module_sha256": "21027cd3557d42257e98c221665ce9183b5bb1cb2a128e5288836bbc00d0b44b"
+    },
+    "m10ia12": {
+      "title": "Fanuc M-10iA/12｜多源合并",
+      "asset": {
+        "asset_id": "085266fc-5687-5bf0-bcd0-c05bd768be5d",
+        "package_digest": "6b922540782d266b033320f068f9ec7f98caada3c0ac0fc5d3f18e418cf7ffec",
+        "package_path": "04_设备/fanuc/m10ia12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia12/module.json",
+      "module_sha256": "ec195c3b00d36aac198e3d2dedc014b7acf564ac492b3ecdcd90e30dd429bc02"
+    },
+    "m10ia7l": {
+      "title": "Fanuc M-10iA/7L｜多源合并",
+      "asset": {
+        "asset_id": "95acb267-4e2c-55a5-8713-4802293e79bb",
+        "package_digest": "73b24f1c974a3e1bbfc54f6356177b6f29d8bb279bea76d89c3a446cc2dae0cc",
+        "package_path": "04_设备/fanuc/m10ia7l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia7l/module.json",
+      "module_sha256": "3dc09f68d39b39079168f7b5829775c3b3b1569e8556bad9431d4d52904969e0"
+    },
+    "m10ia8l": {
+      "title": "Fanuc M-10iA/8L｜多源合并",
+      "asset": {
+        "asset_id": "7a07e08b-d3cd-5fee-bee6-3e351adad87d",
+        "package_digest": "41ae6e8ea131494a5272cfca9bb368fdd0d15a175c56be69f67d71f6b6cea16e",
+        "package_path": "04_设备/fanuc/m10ia8l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia8l/module.json",
+      "module_sha256": "1e7a1b5ab621e8ea034ba7f2b9b8071ece0dfb153a844de9d86a18140451c3c8"
+    },
+    "m10id10l": {
+      "title": "Fanuc M-10iD/10L｜多源合并",
+      "asset": {
+        "asset_id": "2d7128fd-1242-598b-b309-6bd4682300a4",
+        "package_digest": "38de811e5cd8eeaf3a3b1d5149525be2704a8ec6e9943d80f69acb0087a82173",
+        "package_path": "04_设备/fanuc/m10id10l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10id10l/module.json",
+      "module_sha256": "0998dc946c6332b8ae61d5b37748efe513e4494249af04cefb2f31e32135f24e"
+    },
+    "m10id12": {
+      "title": "Fanuc M-10iD/12｜多源合并",
+      "asset": {
+        "asset_id": "fd5d4c1a-6b5a-5348-acff-d86bfe44bd6b",
+        "package_digest": "b2bd0a755a65c57dbd663162c376a4a12ddeb717c3c2411f5f0c0456dc7160df",
+        "package_path": "04_设备/fanuc/m10id12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10id12/module.json",
+      "module_sha256": "243b3eee47c8ed581deacb0310d9679ebe4c04d4395cf4a60a4b69903dcf6a86"
+    },
+    "m10id16s": {
+      "title": "Fanuc M-10iD/16S｜多源合并",
+      "asset": {
+        "asset_id": "04bfd56e-e24e-5f5c-bad8-838389fa7d2e",
+        "package_digest": "4c195f665f25c8e9db5203a986d57987bcbb23f4ce867e1dd0e7c24ef5d248c9",
+        "package_path": "04_设备/fanuc/m10id16s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10id16s/module.json",
+      "module_sha256": "4935d2f07935a7f6b3fe09b8cd152b749b175462921d9b62f27e6a5c9a9122c2"
+    },
+    "m16ib20": {
+      "title": "Fanuc M-16iB/20｜多源合并",
+      "asset": {
+        "asset_id": "6ce98528-e048-5d3e-878f-3a39c7c69188",
+        "package_digest": "8ab6f2a99eeedda73d40a40606bf842f6722e2b9f1f395745b8709656d687e6f",
+        "package_path": "04_设备/fanuc/m16ib20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m16ib20/module.json",
+      "module_sha256": "06b091bd5805021a77bbc14a1f6be7c12c62787c5391146b9702226c29fc1bca"
+    },
+    "m20ia": {
+      "title": "Fanuc M-20iA｜多源合并",
+      "asset": {
+        "asset_id": "910b9ba6-dfdf-5499-93ba-e8f3e12bdb66",
+        "package_digest": "7a5a38e4ae79db90813d98617783e48fd2441dde71d5a9bf24c77f5fb1d4b7eb",
+        "package_path": "04_设备/fanuc/m20ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ia/module.json",
+      "module_sha256": "50434a2ee5284e6c352408c3baa7be3294cef0b29897074d08f7db45336e0ffd"
+    },
+    "m20ia10l": {
+      "title": "Fanuc M-20iA/10L｜多源合并",
+      "asset": {
+        "asset_id": "afd4c143-c68c-5deb-8cc0-78173de57f6f",
+        "package_digest": "f829a919c170b2ea4be4b7988ef5e5e695890b0c1a94fdad2517e2c3823f4bb7",
+        "package_path": "04_设备/fanuc/m20ia10l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ia10l/module.json",
+      "module_sha256": "1325130ff767f2b0f6f975ff11db0a772ccb842500990b1937f8a6e7fb6ac753"
+    },
+    "m20ia12l": {
+      "title": "Fanuc M-20iA/12L｜多源合并",
+      "asset": {
+        "asset_id": "d795494d-88c1-54e0-b1dc-4b24ad722145",
+        "package_digest": "f3c0846aaf2bd8ef5e3f4fd9f296045c488bf5e2d922efea9c7acba96538c6c4",
+        "package_path": "04_设备/fanuc/m20ia12l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ia12l/module.json",
+      "module_sha256": "46411ab98c97b2998e8faa30a00e13f6a10a9b88833969b94db875a9bdba9a23"
+    },
+    "m20ia35m": {
+      "title": "Fanuc M-20iA/35M｜多源合并",
+      "asset": {
+        "asset_id": "c161570b-4c47-5a9a-b8a7-d061773d5e0e",
+        "package_digest": "275b55b3b0728a1c027907d1887a0acb44323ed49b6aa606d0db0a46042a8519",
+        "package_path": "04_设备/fanuc/m20ia35m__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ia35m/module.json",
+      "module_sha256": "602abadc94d9cf9959072d3036584d0b04309447b73713f975b36a9a1c47f712"
+    },
+    "m20ib25": {
+      "title": "Fanuc M-20iB/25｜多源合并",
+      "asset": {
+        "asset_id": "d880328e-487c-500c-9c07-fc5327b973e8",
+        "package_digest": "6dadd60e0f632713b63f8101393f69b2fb9d25403ad6df254ab5e81d44c8ef34",
+        "package_path": "04_设备/fanuc/m20ib25__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ib25/module.json",
+      "module_sha256": "a57672af74248aa0d0f01f5b76dc519c271adb29893d803262502d4ff59e5465"
+    },
+    "m20ib35s": {
+      "title": "Fanuc M-20iB/35S｜多源合并",
+      "asset": {
+        "asset_id": "da36286f-7ec2-54bb-b188-edabc9dfb8ae",
+        "package_digest": "d5e8d405560f3ed8c3b02d7d52fedbd9d0c8e438a2f4e7cfe72327b268a8b9cb",
+        "package_path": "04_设备/fanuc/m20ib35s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ib35s/module.json",
+      "module_sha256": "cbec45cfa7594281dc85653f25cf108d133e267f4aead4ca107376f6b5593cb5"
+    },
+    "m20id12l": {
+      "title": "Fanuc M-20iD/12L｜多源合并",
+      "asset": {
+        "asset_id": "81328e43-6a54-5a8c-8f28-a318303dde62",
+        "package_digest": "b83dea41df9100b70707b913019573846597c2e1f2040263524410a96354210c",
+        "package_path": "04_设备/fanuc/m20id12l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20id12l/module.json",
+      "module_sha256": "49ce3c2602b4bf0c24644896e5a55d73b025fa5d5ac10dcfe6ac11a3914d5269"
+    },
+    "m20id25": {
+      "title": "Fanuc M-20iD/25｜多源合并",
+      "asset": {
+        "asset_id": "29db8826-b60b-5278-8af6-2b069828263c",
+        "package_digest": "50e0a46fb5ebae23bf2af8f401947d8e69d85e95832032de52e729c49b943f4a",
+        "package_path": "04_设备/fanuc/m20id25__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20id25/module.json",
+      "module_sha256": "ec20f552f7112de1c56d40617f1e1ad83a180e5dac2d49410fb9e66d0382f053"
+    },
+    "m20id35": {
+      "title": "Fanuc M-20iD/35｜多源合并",
+      "asset": {
+        "asset_id": "947a39f0-d50f-597b-95a3-29158dca8937",
+        "package_digest": "f5bc5eeacbd7c275d32eafc55315546784037dc41e44e763d497fdbeb1bf706d",
+        "package_path": "04_设备/fanuc/m20id35__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20id35/module.json",
+      "module_sha256": "8643d2c0573e9b20c728a804652e0e254f130e1422b76335404ad0d29096b803"
+    },
+    "m6ib": {
+      "title": "Fanuc M-6iB｜多源合并",
+      "asset": {
+        "asset_id": "712c1308-3a21-5932-b990-420f4b03ed9c",
+        "package_digest": "8be918f5b24a92d8d5ac4c9fe87a35aaa95e782071a144a63fc0881ccb4bd92f",
+        "package_path": "04_设备/fanuc/m6ib__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m6ib/module.json",
+      "module_sha256": "81efc45f02d7f5cf0eb1b83b9c7185deb5e50efc1790dd555055649f57567004"
+    },
+    "m710ib45": {
+      "title": "Fanuc M-710iB/45｜多源合并",
+      "asset": {
+        "asset_id": "1cb1537d-8a71-5178-88b7-d234d604e64e",
+        "package_digest": "a12f3c074dcd2e53b4bcb87a9a6d91f6d2e636df11ec43c104902f6ce784e58d",
+        "package_path": "04_设备/fanuc/m710ib45__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ib45/module.json",
+      "module_sha256": "07f3bf017dcd7898d7cc8e6253d766e330942bb133937ee8e80192a5e289d339"
+    },
+    "m710ic12l": {
+      "title": "Fanuc M-710iC/12L｜多源合并",
+      "asset": {
+        "asset_id": "ecffe869-e132-5593-a068-eaf1b7c64650",
+        "package_digest": "9a7d0894b69b18723eb386c88e763425137b77956284cd9747721b45fa6abcb0",
+        "package_path": "04_设备/fanuc/m710ic12l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic12l/module.json",
+      "module_sha256": "1fd65cc746bb589bb7b135e4773c60048d3f72737562cf3010fa614cc58917b0"
+    },
+    "m710ic20l": {
+      "title": "Fanuc M-710iC/20L｜多源合并",
+      "asset": {
+        "asset_id": "f21fdfd0-763d-58f9-b1f7-fdf73dae9afb",
+        "package_digest": "87eccbf361f2b77bbc23f393ebd96d4c424769375c666037fd2dbe1b1675bfb0",
+        "package_path": "04_设备/fanuc/m710ic20l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic20l/module.json",
+      "module_sha256": "dd7b6535b4521d5fb7c5b8a1b0436d95c1632e67eb4c0fce5d678380c8101b90"
+    },
+    "m710ic20m": {
+      "title": "Fanuc M-710iC/20M｜多源合并",
+      "asset": {
+        "asset_id": "f7305fee-2b39-5fb0-9780-63fa503bd052",
+        "package_digest": "960105d905033f731c428c923d74fe97868de042f58b0136310f2c0dd827ff5f",
+        "package_path": "04_设备/fanuc/m710ic20m__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic20m/module.json",
+      "module_sha256": "56bc17abaad0702c4b0dede054e6e58928006ac68d9b04722fd6133439812668"
+    },
+    "m710ic45m": {
+      "title": "Fanuc M-710iC/45M｜多源合并",
+      "asset": {
+        "asset_id": "2dd94f1f-8c17-5b35-9c3d-6877de9c2b9b",
+        "package_digest": "483f09dde8a5cc27de36118df675d1169563f8dc3a373c511d87f7fd0b0601e7",
+        "package_path": "04_设备/fanuc/m710ic45m__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic45m/module.json",
+      "module_sha256": "2e44d970c3c4d27c83131d4a9f17164bc6449f4e8bc95a56fbb68a70bbdda278"
+    },
+    "m710ic50": {
+      "title": "Fanuc M-710iC/50｜多源合并",
+      "asset": {
+        "asset_id": "238e7467-1f04-5ab8-87a7-f1104f6b25ef",
+        "package_digest": "9738210faa45997cafd805f3cff375b3f82642c88dcf63181338dd7fe17b1264",
+        "package_path": "04_设备/fanuc/m710ic50__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic50/module.json",
+      "module_sha256": "2aba20158b0a8f93851c22cf39973c0d7f0b66798eda4877f6298eecfc9a27cb"
+    },
+    "m710ic50e": {
+      "title": "Fanuc M-710iC/50E｜多源合并",
+      "asset": {
+        "asset_id": "5b7965dc-3118-5143-b9bc-09987639c4d6",
+        "package_digest": "48ffb0c39e9073f1decc76aa6f8c9985473da376b8065a306c5541b452e60af8",
+        "package_path": "04_设备/fanuc/m710ic50e__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic50e/module.json",
+      "module_sha256": "222bc0c9d2255deb51fae6991969def9f63b0ebc215c6e4322bcc41d6d8de4df"
+    },
+    "m710ic50h": {
+      "title": "Fanuc M-710iC/50H｜多源合并",
+      "asset": {
+        "asset_id": "fa89501c-6ba9-5816-bb8d-b3ee31b72a10",
+        "package_digest": "b252cde20645ae40ea2823aab4d37dee6c7210e591677c2e156921645964f939",
+        "package_path": "04_设备/fanuc/m710ic50h__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic50h/module.json",
+      "module_sha256": "e4ba492c83aeb01bfa3308a9f09400b0ac19ac108d3cb64e5f11d7c5bb488117"
+    },
+    "m710ic50s": {
+      "title": "Fanuc M-710iC/50S｜多源合并",
+      "asset": {
+        "asset_id": "5efa3542-1094-5017-84f9-23e6422098b1",
+        "package_digest": "f1043e3282602e7c78ee83f336fa0dbc88821f26e93a7d66b7c1ff560ba07322",
+        "package_path": "04_设备/fanuc/m710ic50s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic50s/module.json",
+      "module_sha256": "65cb0310e22e783d4fb59fd0e13ebacba0da55de4b7c88954c70a9562c3318aa"
+    },
+    "m710ic70": {
+      "title": "Fanuc M-710iC/70｜多源合并",
+      "asset": {
+        "asset_id": "23d09851-e65d-5294-b021-01ee30c3a7b2",
+        "package_digest": "ceeae2a869d258398373ad2ad680cdc33fd2d1807739ccd336b4f50890244947",
+        "package_path": "04_设备/fanuc/m710ic70__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710ic70/module.json",
+      "module_sha256": "8a55f3de3de88306a6d40b6d3c9400bac79e645d07f2d98013b1b0a663abe650"
+    },
+    "m710id70": {
+      "title": "Fanuc M-710iD/70｜多源合并",
+      "asset": {
+        "asset_id": "ed4b2fa8-26c2-5b06-87da-6a37bed57b55",
+        "package_digest": "9d013b06f54da09f564e2946bc6336e4d26cb8f366b8b8131727cee28d572f3f",
+        "package_path": "04_设备/fanuc/m710id70__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m710id70/module.json",
+      "module_sha256": "1891b0aa42104e6a95cf5d31c84f1f3fd82d8bbd92d8814b2e6f1c869a36c731"
+    },
+    "m800ia60": {
+      "title": "Fanuc M-800iA/60｜多源合并",
+      "asset": {
+        "asset_id": "decb4609-9fe2-5330-92c1-73b6753b0f5c",
+        "package_digest": "ae3e558708434bdc6ebe4312e31438adf9c9d5f724a06f1be70bf55c5902b54f",
+        "package_path": "04_设备/fanuc/m800ia60__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m800ia60/module.json",
+      "module_sha256": "64c2f01495021d1e93167015553a94f96791ed02cf486a7cdfc89695db143bf8"
+    },
+    "p250iblh": {
+      "title": "Fanuc P-250iB LH｜多源合并",
+      "asset": {
+        "asset_id": "f9d274b3-945d-5acc-8f39-b6443b99a6c7",
+        "package_digest": "ae8b394ba1e83285849c3a0ae3feab8065a9c7fc3087892b7e7ae7abb1326fa4",
+        "package_path": "04_设备/fanuc/p250iblh__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/p250iblh/module.json",
+      "module_sha256": "fcd25aef6094fd9eb763829f8d760699fcfc9cc1ffa08e09c526b0e0a82c7fb4"
+    },
+    "p250ibrh": {
+      "title": "Fanuc P-250iB RH｜多源合并",
+      "asset": {
+        "asset_id": "e4f02073-2049-59b0-bebf-e2691a725c88",
+        "package_digest": "7ad405119ee5dbc67f3ac5044a6d45c571b2dfaae3b3d4f7001cba1882e3e600",
+        "package_path": "04_设备/fanuc/p250ibrh__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/p250ibrh/module.json",
+      "module_sha256": "dbadbe09fe9b499acabf6c2898e769260737de44a82c38b2e8b0a23563d4b4fb"
+    },
+    "p50ib10l": {
+      "title": "Fanuc P-50iB/10L｜多源合并",
+      "asset": {
+        "asset_id": "38e23b4f-88f1-516b-8bc3-65578ad30d4b",
+        "package_digest": "679e982876b3462e0c962e3e6b4f4f8235a173e0be7d418cb87d6b44c7205d02",
+        "package_path": "04_设备/fanuc/p50ib10l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/p50ib10l/module.json",
+      "module_sha256": "7d4ba3f9d18c385615a74c959fa2cd1c71d54e04ded4139ba82a371a2d8064e1"
+    },
+    "paintmate200ia5l": {
+      "title": "Fanuc Paint Mate 200iA/5L｜多源合并",
+      "asset": {
+        "asset_id": "2515863e-2412-5edf-b02a-ba3a6cbfa161",
+        "package_digest": "9ca254ca11a6ca7740d736a3e6799f332d822bb7696637ffcba68e11c8cfbd2b",
+        "package_path": "04_设备/fanuc/paintmate200ia5l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/paintmate200ia5l/module.json",
+      "module_sha256": "2f27c4099758645f68f5ea5285a3cca2db10b768a35e79ee9da02066bcbe6158"
+    },
+    "r1000ia100f": {
+      "title": "Fanuc R-1000iA/100F｜多源合并",
+      "asset": {
+        "asset_id": "6f0a3458-4a50-552c-a929-58c5ad01d5e1",
+        "package_digest": "1d39a30bd80ec01f06a141e768be1aa065d47fc0f85a4316647dd12c4fd35146",
+        "package_path": "04_设备/fanuc/r1000ia100f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r1000ia100f/module.json",
+      "module_sha256": "38e8e3ccd83e7f09cb0720e5315c28ed10b4a9d05cafa9a9cc619ddb65cc6e91"
+    },
+    "r1000ia130f": {
+      "title": "Fanuc R-1000iA/130F｜多源合并",
+      "asset": {
+        "asset_id": "04e1c59a-e052-5049-be2f-7fc188d40940",
+        "package_digest": "36bc48fb42a5adfc7e1c11bc591446d217229c63a2595c47e9a8797e1f5c5da3",
+        "package_path": "04_设备/fanuc/r1000ia130f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r1000ia130f/module.json",
+      "module_sha256": "cee7c5f5034da21d5e322cd2f1b281b170e75008f150d2fbb4f56166e391349a"
+    },
+    "r1000ia80f": {
+      "title": "Fanuc R-1000iA/80F｜多源合并",
+      "asset": {
+        "asset_id": "0bc3d1d8-c96f-5746-b22a-17d515e939f6",
+        "package_digest": "946942b027763005124150a6221b4dc147d49ecd06e62c30532f789092dfc7a2",
+        "package_path": "04_设备/fanuc/r1000ia80f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r1000ia80f/module.json",
+      "module_sha256": "8817db9423cf4e9bb4b3e5826847df81f2b9c3c3aefe03ae48d9e888627516f6"
+    },
+    "r2000ic190s": {
+      "title": "Fanuc R-2000iC/190S｜多源合并",
+      "asset": {
+        "asset_id": "2d9d21f6-e6be-57f8-90e3-49bb29d8223d",
+        "package_digest": "dfa6a3f5fbdff20c4c08a709219a1a7d667f8a155a1a500c1adc30210369a390",
+        "package_path": "04_设备/fanuc/r2000ic190s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic190s/module.json",
+      "module_sha256": "a380cf803c2957a32ae7f1175691113a1292a26955cdf91b4fe0f369f106a5ac"
+    },
+    "m1000ia": {
+      "title": "Fanuc M-1000iA｜多源合并",
+      "asset": {
+        "asset_id": "3342e8e5-1770-5421-8565-b415730f86c7",
+        "package_digest": "7f20b6dfeefee0871bb473134af2e886e2eb5a7ccd446484e13deb65b631a546",
+        "package_path": "04_设备/fanuc/m1000ia__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m1000ia/module.json",
+      "module_sha256": "713653d4747f8346cd76907ce0ca1b04f9cc997553642343b50a46aada30cfa4"
+    },
+    "r2000ib100p": {
+      "title": "Fanuc R-2000iB/100P｜多源合并",
+      "asset": {
+        "asset_id": "338172e5-c475-5050-b4d0-f2e114968a9f",
+        "package_digest": "1145e6dedf78ff9b2bfd128c5927ed2882de11bcc1c566472e1bdca10f1974b5",
+        "package_path": "04_设备/fanuc/r2000ib100p__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib100p/module.json",
+      "module_sha256": "e071ccc06c248354f6fb12e668b0a6b2eefc87301271e44eab6240f7c73c02c3"
+    },
+    "r2000ib125l": {
+      "title": "Fanuc R-2000iB/125L｜多源合并",
+      "asset": {
+        "asset_id": "91b78310-5625-5db2-98cf-4819e8e79d20",
+        "package_digest": "e387ad14cb59569f4a561d8056af4991ef40e73caf9add78e85cdd55ca8d86ed",
+        "package_path": "04_设备/fanuc/r2000ib125l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib125l/module.json",
+      "module_sha256": "115b681f4180e26e5b1e03abbdd214e00f30ddd45a2272509023fea367528fdd"
+    },
+    "r2000ib165f": {
+      "title": "Fanuc R-2000iB/165F｜多源合并",
+      "asset": {
+        "asset_id": "70868b31-14ee-5f48-9819-d1a82f797000",
+        "package_digest": "be675854c1a03f8fb568e237860d996ce05407d9af2ca84f438280cc54f1dbbe",
+        "package_path": "04_设备/fanuc/r2000ib165f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib165f/module.json",
+      "module_sha256": "1f1f0ef40c061647df039a9047316de361ddde9fa0ab6324bb54767bac2429fe"
+    },
+    "r2000ib175l": {
+      "title": "Fanuc R-2000iB/175L｜多源合并",
+      "asset": {
+        "asset_id": "7aed9621-6190-5099-af94-202ef4d11d0d",
+        "package_digest": "e061d0436df5254aca45c37300c587055c456d32be177cedc5900e98f7518c97",
+        "package_path": "04_设备/fanuc/r2000ib175l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib175l/module.json",
+      "module_sha256": "2f930588665ae5f4143f87aae0ac319ac8576f0b66539bdfa62412d5281bcf09"
+    },
+    "r2000ib210f": {
+      "title": "Fanuc R-2000iB/210F｜多源合并",
+      "asset": {
+        "asset_id": "0b3ee27b-65c8-5bde-8e3d-ca5caa3b9adf",
+        "package_digest": "7436256d041abfc1504ef24ca1c5bfd7ae807025ea6d12af2f9789cd6b933f6f",
+        "package_path": "04_设备/fanuc/r2000ib210f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib210f/module.json",
+      "module_sha256": "cc39ca3bcb691248686c444dc2f78c45079ab8fc36f9d5be2ad63f19f7ee2816"
+    },
+    "r2000ib250f": {
+      "title": "Fanuc R-2000iB/250F｜多源合并",
+      "asset": {
+        "asset_id": "c3e163d9-af5b-514d-bf2b-76d2463ce2e9",
+        "package_digest": "052d7ec2cc4752cf7f1634eae369d925d9b5707382b0bde5ccc641c1f1ba72d6",
+        "package_path": "04_设备/fanuc/r2000ib250f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ib250f/module.json",
+      "module_sha256": "47db043d97db3d908e04fed2757fde5868a744910f3dce797b84bfcc4f887702"
+    },
+    "r2000ic100p": {
+      "title": "Fanuc R-2000iC/100P｜多源合并",
+      "asset": {
+        "asset_id": "b3f2b214-8b94-5d62-94ad-b7a4e46a120a",
+        "package_digest": "e1ace5a10d62ca963c4cb4ab79776ea7737f55bf1772d62e505f9fce1d635c96",
+        "package_path": "04_设备/fanuc/r2000ic100p__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic100p/module.json",
+      "module_sha256": "1cc0037d2543d1fa64d0f22f0143b36d0c0dab096de8563da9a139a764e3c647"
+    },
+    "r2000ic125l": {
+      "title": "Fanuc R-2000iC/125L｜多源合并",
+      "asset": {
+        "asset_id": "78f480bf-3099-5d33-a2a2-d1d9610d3a28",
+        "package_digest": "78bb944cfff21758e250a1b59398a0291decddc6ac056def49eea9d79f7082ff",
+        "package_path": "04_设备/fanuc/r2000ic125l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic125l/module.json",
+      "module_sha256": "40e59b5903c3cd61e097ac6e992c6dde1520c007f1b84a3a0829c8d3da47c32c"
+    },
+    "r2000ic165f": {
+      "title": "Fanuc R-2000iC/165F｜多源合并",
+      "asset": {
+        "asset_id": "38adc4cb-c461-5dfd-bef4-2ae066d7e1b8",
+        "package_digest": "d4de8cbae7bf453fe39d0e84bb48cb2e699ded1f1b5b0112a1e2924446dca6f9",
+        "package_path": "04_设备/fanuc/r2000ic165f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic165f/module.json",
+      "module_sha256": "2b0bd891d9c13077262c62ca1f8d404910b0c2f9ef351326dd391a53b1d78a17"
+    },
+    "r2000ic210f": {
+      "title": "Fanuc R-2000iC/210F｜多源合并",
+      "asset": {
+        "asset_id": "8108b3b1-e4a7-5ecb-8ee4-8623bfa68c19",
+        "package_digest": "74d473ca1662570c3616088d9292aa1440e3aee1aae3806810eb4bc9b15a5033",
+        "package_path": "04_设备/fanuc/r2000ic210f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic210f/module.json",
+      "module_sha256": "7f8c4caabd33765e595703c420177c3d24932cb2bb331a8f34a1eb107b2858a3"
+    },
+    "r2000ic210l": {
+      "title": "Fanuc R-2000iC/210L｜多源合并",
+      "asset": {
+        "asset_id": "2c494506-3e5f-513b-b063-e50ce0d076bd",
+        "package_digest": "69e79f8a1c15b175a8ccc2caaac5fb2185d45eec18bec07a5106655f4ecc1998",
+        "package_path": "04_设备/fanuc/r2000ic210l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic210l/module.json",
+      "module_sha256": "429080544da381139c0db50e0d0cf8a52f84a99677885b492ee30f88fcb9a930"
+    },
+    "r2000ic270f": {
+      "title": "Fanuc R-2000iC/270F｜多源合并",
+      "asset": {
+        "asset_id": "21060bd7-6dfb-5a76-b091-b4cb9789fbf5",
+        "package_digest": "4e5a123425d78e0f08f8ae722105725594bca5d753dbb54f8525e0571a43c3ae",
+        "package_path": "04_设备/fanuc/r2000ic270f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ic270f/module.json",
+      "module_sha256": "8a4fc6d46bbf1bcb85b06a677159e00a03e46ca812c56678330d0bc36a2c9a12"
+    },
+    "r2000id210fh": {
+      "title": "Fanuc R-2000iD/210FH｜多源合并",
+      "asset": {
+        "asset_id": "0e6de3dc-6eac-58e7-b114-c7f3baa63fda",
+        "package_digest": "3fd878f730a5718b6883313d6d7c5f4069fcb81a3cd28e3346967d64b24fac4e",
+        "package_path": "04_设备/fanuc/r2000id210fh__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000id210fh/module.json",
+      "module_sha256": "4303548ff4bdc96a28d63a7bc23c6da3e1229806dba4481cb70a4d69fac5a3dd"
+    },
+    "m410ib140h": {
+      "title": "Fanuc M-410iB/140H｜多源合并",
+      "asset": {
+        "asset_id": "28d968a4-56b4-5f8a-a146-4bcaa27b9f37",
+        "package_digest": "2b4ead560f43f965f4ee00442fc7808119426a119b3b10544af922d4aba62578",
+        "package_path": "04_设备/fanuc/m410ib140h__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m410ib140h/module.json",
+      "module_sha256": "5edad928ee25d9cd2ceeb556727ee027bc6a1c651ca937c767fb565cb431c412"
+    },
+    "m900ia600": {
+      "title": "Fanuc M-900iA/600｜多源合并",
+      "asset": {
+        "asset_id": "a0cf7dd2-b153-5721-819f-804e84c3e714",
+        "package_digest": "88e0a1c7ddef2e9d64178e7f0291a120907d3a2f4ac77deec08c3c97533f7d49",
+        "package_path": "04_设备/fanuc/m900ia600__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ia600/module.json",
+      "module_sha256": "59c884c9e90812fc6d868e5f38cb3fc00d35f7a47a668c4d2c102b1d5d63b31e"
+    },
+    "m900ib280l": {
+      "title": "Fanuc M-900iB/280L｜多源合并",
+      "asset": {
+        "asset_id": "35580497-8784-5fa3-83d2-506a0e840fca",
+        "package_digest": "74b136e37a3f274e96d790eedbfa47c50213e7832c0ea625499ff561ac9c1c0f",
+        "package_path": "04_设备/fanuc/m900ib280l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ib280l/module.json",
+      "module_sha256": "963ba31a2bb4b34f95c0c66642360bde86ef31d14fd154f16c92876694e9c735"
+    },
+    "m900ib360": {
+      "title": "Fanuc M-900iB/360｜多源合并",
+      "asset": {
+        "asset_id": "c728e632-bd37-5a0e-afd8-6d46c87dd416",
+        "package_digest": "2925ef46ee7e29b2d09e7d5a5591f46d24fce8f4a5dac6c2acf0c447c5889712",
+        "package_path": "04_设备/fanuc/m900ib360__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ib360/module.json",
+      "module_sha256": "5b79c1cf1cdef050ffe843fc5f1f0775104cb48079ce6aeedc279b0de6e54fd3"
+    },
+    "m900ib400l": {
+      "title": "Fanuc M-900iB/400L｜多源合并",
+      "asset": {
+        "asset_id": "9d3c767b-9c0c-513c-a7b9-de09c3363ee6",
+        "package_digest": "4196f541e5151df42966d8e172024d1fcad886d304df723851376cf68ad0b6c1",
+        "package_path": "04_设备/fanuc/m900ib400l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ib400l/module.json",
+      "module_sha256": "c9ed94b712e783a6ea3b98ca8af8f14850ca2d9bf2ab8fd03b74e27e4f672ee4"
+    },
+    "m900ib700": {
+      "title": "Fanuc M-900iB/700｜多源合并",
+      "asset": {
+        "asset_id": "0f7844a1-7402-508b-ac4b-d612b8f1b2cb",
+        "package_digest": "3941cbb4ea1d3548412040e7c23d23f001264f539f0fb7cdb8155338f2ebcfeb",
+        "package_path": "04_设备/fanuc/m900ib700__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ib700/module.json",
+      "module_sha256": "e6db2eb1ba6d2a20f0b2fe1a17748f7af7edd1e8375c36465db442c2bbfd7930"
+    },
+    "m2000ia1700l": {
+      "title": "Fanuc M-2000iA/1700L｜多源合并",
+      "asset": {
+        "asset_id": "1289d076-3585-5cfa-8d8a-85cf6fc2f5fb",
+        "package_digest": "da72b941a2b79d1567e94b52f12ef0bcb12efa9031585740d9ab57b30f750f53",
+        "package_path": "04_设备/fanuc/m2000ia1700l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m2000ia1700l/module.json",
+      "module_sha256": "151dc0f6557ba29433c840f96440c2b8744f51d5a8e527539fe5b6c45683e7b9"
+    },
+    "m2000ia2300": {
+      "title": "Fanuc M-2000iA/2300｜多源合并",
+      "asset": {
+        "asset_id": "b768dfd6-2dc0-5bd9-999d-ada9eb64e387",
+        "package_digest": "d848acfdadbf901032f749dd839be404960c40a88162a28102407b101507298d",
+        "package_path": "04_设备/fanuc/m2000ia2300__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m2000ia2300/module.json",
+      "module_sha256": "b7643ffee5331bfd28487fd1fce1b8b200cc73f984ba2a67882af50025b5e322"
+    },
+    "m2000ia900l": {
+      "title": "Fanuc M-2000iA/900L｜多源合并",
+      "asset": {
+        "asset_id": "7148ecb1-822b-508d-990d-6536cf97b1d7",
+        "package_digest": "e2a87c60d45d1f17a18a18aca4300be9c5a4a850c8e7dab029d2d8c73772c61c",
+        "package_path": "04_设备/fanuc/m2000ia900l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m2000ia900l/module.json",
+      "module_sha256": "78c76815eed66887bb5bd51a560e4986368622b1392c52a99e4392534046bfb7"
+    },
+    "m900ia260l": {
+      "title": "Fanuc M-900iA/260L｜多源合并",
+      "asset": {
+        "asset_id": "9b844ec2-6f22-5e7e-b4f4-779415c271fc",
+        "package_digest": "2a53ea53b4e801ef2db4a0ac0f4c3cadb087623d426cd56341284f7473c13d26",
+        "package_path": "04_设备/fanuc/m900ia260l__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ia260l/module.json",
+      "module_sha256": "2e8936281f63451a8a3de9d273c54a013fe3b4733666101ce8f5909a3e0b4018"
+    },
+    "m900ia350": {
+      "title": "Fanuc M-900iA/350｜多源合并",
+      "asset": {
+        "asset_id": "be197087-bbd5-5c08-9199-17e99027d37b",
+        "package_digest": "26025b3bdbe706e47763bdfc061325a650e2cee03fcc9a1d540d9555bd76c3a1",
+        "package_path": "04_设备/fanuc/m900ia350__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ia350/module.json",
+      "module_sha256": "7af51a08276f1db5a01fc230b8de4017e2fc470792fb81fa912353a1e5da6bef"
+    },
+    "m900ib280": {
+      "title": "Fanuc M-900iB/280｜多源合并",
+      "asset": {
+        "asset_id": "7389b96f-25dd-5f7a-8441-ab10ebb813ea",
+        "package_digest": "72ab5a6cdc626c504d8e11f7cf94eee76b99e8c1fe7d40918354aa17fe7a6d6d",
+        "package_path": "04_设备/fanuc/m900ib280__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m900ib280/module.json",
+      "module_sha256": "7c39b6914ae9e31c390d0f57f8076009c99b003bf6f99dc39788676e81ec8b1e"
+    },
+    "m10ia": {
+      "title": "Fanuc M-10iA｜多源合并",
+      "asset": {
+        "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+        "package_digest": "45ad16edfd548e9857d74176b74fc793ac5d10172b3e58204f7b9b67a0269df9",
+        "package_path": "04_设备/fanuc/m10ia__多源合并_r004"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia/module.json",
+      "module_sha256": "620843e0e60799381fe92517fef16ea7ffd1145ac1efba24f58defa2ee45a200"
+    },
+    "m10ia6l": {
+      "title": "Fanuc M-10iA/6L｜多源合并",
+      "asset": {
+        "asset_id": "05d8a28e-93ec-569f-93bf-035305d44684",
+        "package_digest": "f006f8ba790bf3c57ab7dd8359a89e86c3994781162ed7b4e2a5c75f0c7b6432",
+        "package_path": "04_设备/fanuc/m10ia6l__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m10ia6l/module.json",
+      "module_sha256": "cd0a907025aaddcb570337b2201cf712ca430321247d16178220d270006ff4c4"
+    },
+    "r2000ia165f": {
+      "title": "Fanuc R-2000iA/165F｜多源合并",
+      "asset": {
+        "asset_id": "0b54cdbc-3a2e-572c-a275-d1b3f2f7504b",
+        "package_digest": "07623f5d4b78febfdc125991c494f88c05de3005752aec316c7baa7164a065cc",
+        "package_path": "04_设备/fanuc/r2000ia165f__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/r2000ia165f/module.json",
+      "module_sha256": "6711efe4d7e857ffed5366a5af627a9829189def662ea174c8e6383f2ed2a25d"
+    },
+    "s430iw": {
+      "title": "Fanuc S-430iW｜多源合并",
+      "asset": {
+        "asset_id": "5e8fcd52-58bb-52d3-b849-71acabbe896d",
+        "package_digest": "d81d376356a470a7cb7d125ae6bf4208d4504721e60f26bf458143f72df3b48b",
+        "package_path": "04_设备/fanuc/s430iw__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/s430iw/module.json",
+      "module_sha256": "2cdc12767ec1553bfff3e500ea41241246ac7f3268be62c8ab918e7d62c55a26"
+    },
+    "lrmate200ic5h": {
+      "title": "Fanuc LR Mate 200iC/5H｜多源合并",
+      "asset": {
+        "asset_id": "34dad825-845d-5c89-af8d-1e6496cef791",
+        "package_digest": "f8011dc1c1304216c0a2e7df75e2626a9013606181104550cea9c9897081bb23",
+        "package_path": "04_设备/fanuc/lrmate200ic5h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lrmate200ic5h/module.json",
+      "module_sha256": "dbe441400c082c7f9810da70ecd7ac526a32696d14afd2da2211d2d2c8270dc6"
+    },
+    "m20ia20m": {
+      "title": "Fanuc M-20iA/20M｜多源合并",
+      "asset": {
+        "asset_id": "9b062a20-3329-5c26-9edc-0e188a7e6085",
+        "package_digest": "719820c8cac9da8b12d99179cbae7b8f980033e7332e790e76daf67d135fb369",
+        "package_path": "04_设备/fanuc/m20ia20m__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m20ia20m/module.json",
+      "module_sha256": "d4494b53241c0b857f9955596c33f55a92518ecabe4c638bbc81f45698051d07"
+    },
+    "sr3iau": {
+      "title": "SR-3iA/U",
+      "asset": {
+        "asset_id": "73dfe336-313f-5263-8a96-f7a5347d52b7",
+        "package_digest": "2e418905a94add5a0c71425607f5043e50d7f0a260a24c5e711ee2aeb955108e",
+        "package_path": "04_设备/fanuc/sr-3ia_u__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr3iau/module.json",
+      "module_sha256": "4a30796e101c9c6e71f83b624449732817afc8c7832ecd00ccc84d564cdad8be"
+    },
+    "m410ib700": {
+      "title": "Fanuc M-410iB/700｜多源合并",
+      "asset": {
+        "asset_id": "ab3fa0ed-5aa0-55c1-b72a-c664f60f9171",
+        "package_digest": "8b9f81bd3add94f48dfd895745d5fee323acbcef6a6053b69f179a8254ea2bd2",
+        "package_path": "04_设备/fanuc/m410ib700__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m410ib700/module.json",
+      "module_sha256": "bb286f1eb45a15db1040070c433bda8d775b9c5ac0c9dc2ac24565690a18d8a5"
+    },
+    "m410ic110": {
+      "title": "Fanuc M-410iC/110｜多源合并",
+      "asset": {
+        "asset_id": "57b2839e-9bda-535c-acf9-ab16634eef72",
+        "package_digest": "9818129c22cafeb421202e4445f76aa9b33cd662d33386116d6a82bddd856245",
+        "package_path": "04_设备/fanuc/m410ic110__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m410ic110/module.json",
+      "module_sha256": "aa39844a14d13e7e3eb1ee3a66ee6151e141a09cba18a32802a078f652cc27a9"
+    },
+    "m410ic185": {
+      "title": "Fanuc M-410iC/185｜多源合并",
+      "asset": {
+        "asset_id": "cd8739d4-22ec-5217-91f2-f5493c3281a3",
+        "package_digest": "9cdfee149b5ef979763e3940a30a6e79534af92e65f2121af4fbfcd24cbe0d11",
+        "package_path": "04_设备/fanuc/m410ic185__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m410ic185/module.json",
+      "module_sha256": "d400cfed8224cb5164c623820f7c710aabd49a11a1136dba8621dcc730ff5a57"
+    },
+    "m1ia0.5s": {
+      "title": "Fanuc M-1iA/0.5S｜多源合并",
+      "asset": {
+        "asset_id": "b8a41e8d-6559-5c32-b10e-fdce78180f05",
+        "package_digest": "c799ddbbe941e1ff42937a4c51c2419cd379e802b845694548b8a931a173dddb",
+        "package_path": "04_设备/fanuc/m1ia0.5s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m1ia0_5s_38ced947/module.json",
+      "module_sha256": "9537012c2fb90fdd36b39c64d1c16260f2001f49c597c0d0297a47067ebe0dea"
+    },
+    "m1ia0.5sl": {
+      "title": "Fanuc M-1iA/0.5SL｜多源合并",
+      "asset": {
+        "asset_id": "910ee6e1-2592-53a8-99b5-d896db789c50",
+        "package_digest": "9ae7a9d76e27736717f46e33abbbd2a1cc1cdca88cf69d061eec893bf4cd97e7",
+        "package_path": "04_设备/fanuc/m1ia0.5sl__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m1ia0_5sl_2bd63bf3/module.json",
+      "module_sha256": "01fb5531dd669ff7bceb6679e358511101f6f2ff85d11dd9a188caf6d8f614d8"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "fanuc_dual_arm_example_58c3d7d05b",
+      "manifest": "source_profiles/fanuc_dual_arm_example_58c3d7d05b/source.lock.json",
+      "sha256": "1b977e298df2011203de09c021235eb1acaffedf6374674163d4f6b358df90ae",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_moveit_config_c7ea091117",
+      "manifest": "source_profiles/fanuc_moveit_config_c7ea091117/source.lock.json",
+      "sha256": "3db4582c6cd8a28559b582918261495ab4ab1a5b21a61abbfc7edb802944aedb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_cr7ia_moveit_config_face486944",
+      "manifest": "source_profiles/fanuc_cr7ia_moveit_config_face486944/source.lock.json",
+      "sha256": "e8a1a26e18f14699f7d5013c9805a23625885003b4eb0487344e11f774433e86",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_cr7ial_moveit_config_fd15d47c1a",
+      "manifest": "source_profiles/fanuc_cr7ial_moveit_config_fd15d47c1a/source.lock.json",
+      "sha256": "7cef128eb3acbae2cc7180bb07b4e6a623c17d139a75f1f082b1a2ff1541d84e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200i_moveit_config_44f08042db",
+      "manifest": "source_profiles/fanuc_lrmate200i_moveit_config_44f08042db/source.lock.json",
+      "sha256": "78e4d1f3b09f4c97a5a034453082c6942820fdfb9b402d965b233b884a9691a8",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200i_moveit_plugins_fbb4ca8918",
+      "manifest": "source_profiles/fanuc_lrmate200i_moveit_plugins_fbb4ca8918/source.lock.json",
+      "sha256": "51d6805e6da76d78ae3d3fc032219437011cc1e8ed27aadbc225f1d834007103",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib3l_moveit_config_b6ffc91e84",
+      "manifest": "source_profiles/fanuc_lrmate200ib3l_moveit_config_b6ffc91e84/source.lock.json",
+      "sha256": "1d366adc2336b318f1675fac38ac6d8be173219ab2a6b44f86b75d5045d0983a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib_moveit_config_f5f5a7a84a",
+      "manifest": "source_profiles/fanuc_lrmate200ib_moveit_config_f5f5a7a84a/source.lock.json",
+      "sha256": "6265d03a5c89b68c21ebc10fae2f897ae6bfa3a15c0e3e9dd343873bbeeb2a30",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib_moveit_plugins_1b0f5c8b90",
+      "manifest": "source_profiles/fanuc_lrmate200ib_moveit_plugins_1b0f5c8b90/source.lock.json",
+      "sha256": "bc3d048c2bfe44708386f24eae82c1bd275405f9dfa11009c80d81e8b874ea48",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic5h_moveit_config_14b59b2b1f",
+      "manifest": "source_profiles/fanuc_lrmate200ic5h_moveit_config_14b59b2b1f/source.lock.json",
+      "sha256": "0113ab8b326744e2065e4d755a29f24459af6efbd3e3be0043488caecdc98d2b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic5l_moveit_config_fa2f04d41b",
+      "manifest": "source_profiles/fanuc_lrmate200ic5l_moveit_config_fa2f04d41b/source.lock.json",
+      "sha256": "86c431802e67efe0f5cd21da33fcc3175448fa3343d8dae4c81e4878aed93f8d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic_moveit_config_3d798c07a7",
+      "manifest": "source_profiles/fanuc_lrmate200ic_moveit_config_3d798c07a7/source.lock.json",
+      "sha256": "83e77d1bef9ea28a61b05f426265814cecb8370a4d59633a1e2802799cb13496",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic_moveit_plugins_041f5ecbdd",
+      "manifest": "source_profiles/fanuc_lrmate200ic_moveit_plugins_041f5ecbdd/source.lock.json",
+      "sha256": "df971bdb5b90281172c31622a30cdf21af6b9ac9061621dcf81c5a5e4e861c0a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id7l_moveit_config_7f3a0beb92",
+      "manifest": "source_profiles/fanuc_lrmate200id7l_moveit_config_7f3a0beb92/source.lock.json",
+      "sha256": "604eaef93fc5e25fef4eed816cbd55ac16cd3a1ba4b1477dc5b8c98c882c61b6",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id_moveit_config_87f6706472",
+      "manifest": "source_profiles/fanuc_lrmate200id_moveit_config_87f6706472/source.lock.json",
+      "sha256": "77290ffe8c9e62943e8f23fa92823901207ffdf4bf8b1beae7e27579505569f4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id_moveit_plugins_431b2d97f8",
+      "manifest": "source_profiles/fanuc_lrmate200id_moveit_plugins_431b2d97f8/source.lock.json",
+      "sha256": "750ab19f57cbcc8f0868d91ef764a4be5893d23d2c653a3761d886ac145e725a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m10ia_moveit_config_0e76c19940",
+      "manifest": "source_profiles/fanuc_m10ia_moveit_config_0e76c19940/source.lock.json",
+      "sha256": "5e302aceecbd39acc19c5d06b67255a8696f595f5781bbcb29ced82d060234a1",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m10ia_moveit_plugins_15d6110eea",
+      "manifest": "source_profiles/fanuc_m10ia_moveit_plugins_15d6110eea/source.lock.json",
+      "sha256": "325980f272b38d15d7290bd81a35b08d18ba177a56195f06aef5f181e579a9cf",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m16ib20_moveit_config_b8578aa173",
+      "manifest": "source_profiles/fanuc_m16ib20_moveit_config_b8578aa173/source.lock.json",
+      "sha256": "74e1778c23d17b41ed836b35d5b248d7f9b43f5a5e2a3dcac08037a86a35c15b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m16ib_moveit_plugins_1f3f3b60c2",
+      "manifest": "source_profiles/fanuc_m16ib_moveit_plugins_1f3f3b60c2/source.lock.json",
+      "sha256": "58d88d52075ab1286bb14dd5004ce0db45e264d191f9f9ba5876927761ec6887",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia10l_moveit_config_9979da6306",
+      "manifest": "source_profiles/fanuc_m20ia10l_moveit_config_9979da6306/source.lock.json",
+      "sha256": "fc33455ba7789f9917dd3d1249f80ee7889241604e5331d7c2f2bf856b3f34e0",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia_moveit_config_89759f2dd8",
+      "manifest": "source_profiles/fanuc_m20ia_moveit_config_89759f2dd8/source.lock.json",
+      "sha256": "1f35c0e555091cfacccd6039b148a080e0cc1eceb0afcb748f56ecc70f9be1ff",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia_moveit_plugins_77fb7536e1",
+      "manifest": "source_profiles/fanuc_m20ia_moveit_plugins_77fb7536e1/source.lock.json",
+      "sha256": "c11556222b9d09f863d91baa51f2ebe519f2b73acfa5ccc57b88602207764b56",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ib25_moveit_config_32106f3afe",
+      "manifest": "source_profiles/fanuc_m20ib25_moveit_config_32106f3afe/source.lock.json",
+      "sha256": "300a0b94c180b6bf25b15669517b2ee17495a9f65375e15dba466b30c654c952",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ib_moveit_plugins_b8d071604f",
+      "manifest": "source_profiles/fanuc_m20ib_moveit_plugins_b8d071604f/source.lock.json",
+      "sha256": "bcfe0e7287553bd53c73cfbecb1710d99f094efe17dc0d292bd611a1d6fee474",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia2f_moveit_config_d76c08c721",
+      "manifest": "source_profiles/fanuc_m430ia2f_moveit_config_d76c08c721/source.lock.json",
+      "sha256": "caabfe0f35cb10c096d1650be367a5969ba6c552d2bb59960d574c06c55cda9d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia2p_moveit_config_eb640b97aa",
+      "manifest": "source_profiles/fanuc_m430ia2p_moveit_config_eb640b97aa/source.lock.json",
+      "sha256": "d3f71b4eb68834ee2ff3e85eedf9cd4fcbdac8a925374c9b6257900558b730fa",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia_moveit_plugins_280018d620",
+      "manifest": "source_profiles/fanuc_m430ia_moveit_plugins_280018d620/source.lock.json",
+      "sha256": "13543a28d8ec5348854e766a6f493989717c95d2bad98c579032817930c69c8c",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib6s_moveit_config_76624e606a",
+      "manifest": "source_profiles/fanuc_m6ib6s_moveit_config_76624e606a/source.lock.json",
+      "sha256": "df318c9ed7c8897366fc3d16827c924dd9937a48289bb4a8842b7c4d1335347c",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib_moveit_config_28554d1d3a",
+      "manifest": "source_profiles/fanuc_m6ib_moveit_config_28554d1d3a/source.lock.json",
+      "sha256": "529e5dad840ee218005beb854dbe10c5e9a3aba07b73eb2172fb9782fa8506c2",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib_moveit_plugins_58ff01842a",
+      "manifest": "source_profiles/fanuc_m6ib_moveit_plugins_58ff01842a/source.lock.json",
+      "sha256": "1135133be0e47452d3c97fed15da3cd5445b17d5ef4531a0fe9bd63944adebf7",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_r1000ia80f_moveit_config_7db68f21a4",
+      "manifest": "source_profiles/fanuc_r1000ia80f_moveit_config_7db68f21a4/source.lock.json",
+      "sha256": "c5539016e63d353091e20ba5f4935427b4552bb05fabf215b4acebf6596ccc38",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_r1000ia_moveit_plugins_b94c141f4d",
+      "manifest": "source_profiles/fanuc_r1000ia_moveit_plugins_b94c141f4d/source.lock.json",
+      "sha256": "08a63759262b1a67c1a76b6d2d7ca62b66df330caa528999faf90872a324a83a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_cr7ia_moveit_config_71e6a4790b",
+      "manifest": "source_profiles/fanuc_cr7ia_moveit_config_71e6a4790b/source.lock.json",
+      "sha256": "2cc7b3bb311805a1b7b2e483e2b068ac70682d06b16e30c9b29e86553f801995",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_cr7ial_moveit_config_d9991c2bb6",
+      "manifest": "source_profiles/fanuc_cr7ial_moveit_config_d9991c2bb6/source.lock.json",
+      "sha256": "9c7c162700396c73c07fa860fb5294bea240a925a540638007e79d693cba596b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200i_moveit_config_5f7c3eec70",
+      "manifest": "source_profiles/fanuc_lrmate200i_moveit_config_5f7c3eec70/source.lock.json",
+      "sha256": "21231d897070ea13638e8e928aa485138184670ed270eeb461489f21dcc692cb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200i_moveit_plugins_58a7a8c0cb",
+      "manifest": "source_profiles/fanuc_lrmate200i_moveit_plugins_58a7a8c0cb/source.lock.json",
+      "sha256": "281aff96bbd5be299407f28306424ab079f585886d4c1244b32d38a277c4c365",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib3l_moveit_config_4069fb1f13",
+      "manifest": "source_profiles/fanuc_lrmate200ib3l_moveit_config_4069fb1f13/source.lock.json",
+      "sha256": "0de66c80161e05922ac55ef05df43e270acdd7c37ccf8bfee8b58a11a9cbb363",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib_moveit_config_bf8bd93da9",
+      "manifest": "source_profiles/fanuc_lrmate200ib_moveit_config_bf8bd93da9/source.lock.json",
+      "sha256": "b30ab18af983b89da519d8bffaf3d9ddb742b7d6dde9545dc5b5aad463d1fc2b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ib_moveit_plugins_87d4a9d83a",
+      "manifest": "source_profiles/fanuc_lrmate200ib_moveit_plugins_87d4a9d83a/source.lock.json",
+      "sha256": "a67a7b7da32b0a6c8719577884b1447aef9dd9f26c77e7cead8bbaa224d04dd1",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic5h_moveit_config_d3bc31cac5",
+      "manifest": "source_profiles/fanuc_lrmate200ic5h_moveit_config_d3bc31cac5/source.lock.json",
+      "sha256": "2ec5e5086537abd593a044efc9cde44ea648e6cce58cc6e3d0a9f6cdfd5b1e29",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic5l_moveit_config_0e696b8c95",
+      "manifest": "source_profiles/fanuc_lrmate200ic5l_moveit_config_0e696b8c95/source.lock.json",
+      "sha256": "2cc8234ae259585740b32b38561ea3fa26c6f235f699d358e47c71f70a9cb0e8",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic_moveit_config_baf4ef0569",
+      "manifest": "source_profiles/fanuc_lrmate200ic_moveit_config_baf4ef0569/source.lock.json",
+      "sha256": "ad016ca315b5ec745f73c0e6a4888448c1f35346fe7384874071136b0bdc5bf6",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200ic_moveit_plugins_d841bfee5d",
+      "manifest": "source_profiles/fanuc_lrmate200ic_moveit_plugins_d841bfee5d/source.lock.json",
+      "sha256": "2d1687b1df3dfa2001470d7d20b0e0f9fe9f6691ed9d32fda6ca2802e396e178",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id7l_moveit_config_dfb496c127",
+      "manifest": "source_profiles/fanuc_lrmate200id7l_moveit_config_dfb496c127/source.lock.json",
+      "sha256": "8f17cc8c29518fcb074fba85c8f18dbd76ac3fda654e2c33c120522d5f180d92",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id_moveit_config_90d3956ea0",
+      "manifest": "source_profiles/fanuc_lrmate200id_moveit_config_90d3956ea0/source.lock.json",
+      "sha256": "eee4e99540bfd93b2bb58fdfe14d5701d162c26664dad3ac9e6f36a52fd1702d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_lrmate200id_moveit_plugins_69ef92e0be",
+      "manifest": "source_profiles/fanuc_lrmate200id_moveit_plugins_69ef92e0be/source.lock.json",
+      "sha256": "5552510a2b616d8a2bec73d9c12b23b57e0eaf3fb0c8ab0839576d090ff030d4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m10ia_moveit_config_ed95188478",
+      "manifest": "source_profiles/fanuc_m10ia_moveit_config_ed95188478/source.lock.json",
+      "sha256": "25ada56f034ba73f20c9f3d2023af2df28f409a3c5f82672b8398bb9a3ceb150",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m10ia_moveit_plugins_bbf4e71067",
+      "manifest": "source_profiles/fanuc_m10ia_moveit_plugins_bbf4e71067/source.lock.json",
+      "sha256": "5c7b4fbb0376ed37e9374194f3093516cab1ec9a6a9e31a63e293c4d26accce1",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m16ib20_moveit_config_d7c53d95ac",
+      "manifest": "source_profiles/fanuc_m16ib20_moveit_config_d7c53d95ac/source.lock.json",
+      "sha256": "7470b4ba973b2a87eb71dd487267e5b90b0f82150d094b2e3111608a3089a4a1",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m16ib_moveit_plugins_fd480464c6",
+      "manifest": "source_profiles/fanuc_m16ib_moveit_plugins_fd480464c6/source.lock.json",
+      "sha256": "261e34c5a27622a68dceb97084014c891f65eaaa531775f96c98e0ec04ab0da4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia10l_moveit_config_511e6d3a16",
+      "manifest": "source_profiles/fanuc_m20ia10l_moveit_config_511e6d3a16/source.lock.json",
+      "sha256": "d94ad7d951b4d343e261f09a78b1b0978cce242a36d6a0d44607b46d27747416",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia_moveit_config_0b590b92d7",
+      "manifest": "source_profiles/fanuc_m20ia_moveit_config_0b590b92d7/source.lock.json",
+      "sha256": "8c886115646b5dae3a1a50edbf69663ca8d095d1d55c00149293154e2dcf5c07",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ia_moveit_plugins_5989e95893",
+      "manifest": "source_profiles/fanuc_m20ia_moveit_plugins_5989e95893/source.lock.json",
+      "sha256": "1e385689b27ac64b2b2013f1b8a60fdf651f8068916d794de7f20498a944d32e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ib25_moveit_config_b656d093f1",
+      "manifest": "source_profiles/fanuc_m20ib25_moveit_config_b656d093f1/source.lock.json",
+      "sha256": "6fd167d8f8538e1286fce41f2d669c521eef09520a3e8a4668dc12829101887c",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m20ib_moveit_plugins_2073cd868a",
+      "manifest": "source_profiles/fanuc_m20ib_moveit_plugins_2073cd868a/source.lock.json",
+      "sha256": "3d2a8e7f7edb5ea33bbc4ca8a4b945c7cb647174181d5bf7f2a68f3ca4893b9f",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia2f_moveit_config_7865cf3b63",
+      "manifest": "source_profiles/fanuc_m430ia2f_moveit_config_7865cf3b63/source.lock.json",
+      "sha256": "3abe26c50d23adbacdb7cb1947b16bf1017643503440fe4e6bee9e6a88b0ca16",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia2p_moveit_config_ff6484c609",
+      "manifest": "source_profiles/fanuc_m430ia2p_moveit_config_ff6484c609/source.lock.json",
+      "sha256": "27028e0446943b2263ca933488398d8355c91e957ab37c13df6fac34722a7d60",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m430ia_moveit_plugins_d7f58e87ab",
+      "manifest": "source_profiles/fanuc_m430ia_moveit_plugins_d7f58e87ab/source.lock.json",
+      "sha256": "157b4fefd5f6acd70506f32cce608b29a371ce43bc55e337e735374903ce3a16",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib6s_moveit_config_67260b2c7f",
+      "manifest": "source_profiles/fanuc_m6ib6s_moveit_config_67260b2c7f/source.lock.json",
+      "sha256": "266d6f53b37c6445e8abbcda16d5321d7bacc3ce529b5b4de9b80ebfc41dc069",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib_moveit_config_959cf65086",
+      "manifest": "source_profiles/fanuc_m6ib_moveit_config_959cf65086/source.lock.json",
+      "sha256": "9e5b73a809da096a3701a7071cfe97a9cb7a7f6e39e6f9264f635879c2d456db",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_m6ib_moveit_plugins_80e8e68d50",
+      "manifest": "source_profiles/fanuc_m6ib_moveit_plugins_80e8e68d50/source.lock.json",
+      "sha256": "189ece602258ac5058c4c135ec75d95c822f6a59c24330fb9a63f2c0681ed446",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_r1000ia80f_moveit_config_6b436b4d8a",
+      "manifest": "source_profiles/fanuc_r1000ia80f_moveit_config_6b436b4d8a/source.lock.json",
+      "sha256": "b3f3fa2557a9ba02377fbe430cfdc5b3aaa7cd70cbeb82a75961472b63c59faa",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fanuc_r1000ia_moveit_plugins_d6da53000a",
+      "manifest": "source_profiles/fanuc_r1000ia_moveit_plugins_d6da53000a/source.lock.json",
+      "sha256": "d0cd05c536581ad56c057da83aff4ce4528d5bba784a9d50e189c7e02ce8b84f",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

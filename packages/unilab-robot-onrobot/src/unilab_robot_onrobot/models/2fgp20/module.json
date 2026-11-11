@@ -1,0 +1,307 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "2fgp20",
+  "title": "OnRobot 2FGP20 Palletizer Gripper｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "ca09f16e-e3df-5c4c-8bcf-d934045f2bb1",
+    "package_digest": "511b5a906d6fa859ce918a50153d5111e987f363b404773cf699f188cc738e12",
+    "package_path": "01_零部件/onrobot/2fgp20__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ca09f16e-e3df-5c4c-8bcf-d934045f2bb1",
+      "package_digest": "511b5a906d6fa859ce918a50153d5111e987f363b404773cf699f188cc738e12",
+      "package_path": "01_零部件/onrobot/2fgp20__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robot Tools",
+      "tools"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "count"
+        },
+        "payload": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "kg"
+        },
+        "reach": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "mm"
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "OnRobot",
+          "name": "2FGP20",
+          "original": {
+            "family": "VC",
+            "original_name": "2FGP20.vcmx",
+            "path": "simready_usd/source_assets/VC/0_2fgp20/2FGP20.vcmx",
+            "sha256": "17685b0a53c50c13c00f2d876a042c36fd6172ed342262a44316d226842b3102"
+          },
+          "path": "Components/OnRobot/Robot Tools/2FGP20.vcmx",
+          "payload": "0",
+          "reach": "0",
+          "type": "Robot Tools",
+          "variant": "",
+          "vcid": "46cecbb1-a2f0-4841-b1df-b8bdd8ebd975"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "79d15812-00ac-5cf5-8475-2e3bb36d9cfd",
+              "entrypoints": {
+                "usd": "simready_usd/2fgp20_palletizer_gripper__r001.usdc"
+              },
+              "package_digest": "9a6563d769957d0fa2bc138580a9243490005c0e2cd6bae720ddef04d69928d7",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "5b0aecb407aab44527fdccdc6b4c8dc9e25c08b0adfa1708ae2b1d1dca1c3868",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "OnRobot 2FGP20 Palletizer Gripper",
+          "family": "RoboDK",
+          "library_assets": [
+            "79d15812-00ac-5cf5-8475-2e3bb36d9cfd"
+          ],
+          "manufacturer": "OnRobot",
+          "name": "2FGP20 Palletizer Gripper",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "OnRobot-2FGP20-Palletizer-Gripper.tool",
+            "path": "simready_usd/OnRobot-2FGP20-Palletizer-Gripper.tool",
+            "sha256": "dab51ba5e0328c2cb373af4b0c760f55abe66d9c0da646b172c9594b967a42a4"
+          },
+          "path": "tools/models/OnRobot-2FGP20-Palletizer-Gripper.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "2FGP20 Palletizer Gripper"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "09879f48-c887-5aed-abf6-cdd3e596e305",
+              "entrypoints": {
+                "usd": "simready_usd/2fgp20_slip_sheet_gripper__r001.usdc"
+              },
+              "package_digest": "91b414a009a8d4b801f69a51e16dd4ee863df9b267cab78004a0c724a1abb485",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "eb72f05e181b3d06484bcef7f7f7b297ca41c1b9fe0a232832b71ed564258f5a",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "OnRobot 2FGP20 Slip Sheet Gripper",
+          "family": "RoboDK",
+          "library_assets": [
+            "09879f48-c887-5aed-abf6-cdd3e596e305"
+          ],
+          "manufacturer": "OnRobot",
+          "name": "2FGP20 Slip Sheet Gripper",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "OnRobot-2FGP20-Slip-Sheet-Gripper.tool",
+            "path": "simready_usd/source_assets/RoboDK/1_onrobot-2fgp20-slip-sheet-gripper/OnRobot-2FGP20-Slip-Sheet-Gripper.tool",
+            "sha256": "c1e4257f3cce7d15a7cbd07180590957186f726250c42baddfcde4d846e88af3"
+          },
+          "path": "tools/models/OnRobot-2FGP20-Slip-Sheet-Gripper.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "2FGP20 Slip Sheet Gripper"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5b0aecb407aab44527fdccdc6b4c8dc9e25c08b0adfa1708ae2b1d1dca1c3868",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/2fgp20__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot_tool": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot_tool"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "OnRobot 2FGP20 Palletizer Gripper｜多源合并",
+          "id": "merged_robot_tool_ca09f16e_e3df_5c4c_8bcf_d934045f2bb1",
+          "metadata": {
+            "asset_id": "ca09f16e-e3df-5c4c-8bcf-d934045f2bb1",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "OnRobot-2FGP20-Palletizer-Gripper.tool",
+        "path": "simready_usd/OnRobot-2FGP20-Palletizer-Gripper.tool",
+        "sha256": "dab51ba5e0328c2cb373af4b0c760f55abe66d9c0da646b172c9594b967a42a4"
+      },
+      {
+        "family": "VC",
+        "original_name": "2FGP20.vcmx",
+        "path": "simready_usd/source_assets/VC/0_2fgp20/2FGP20.vcmx",
+        "sha256": "17685b0a53c50c13c00f2d876a042c36fd6172ed342262a44316d226842b3102"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "OnRobot-2FGP20-Slip-Sheet-Gripper.tool",
+        "path": "simready_usd/source_assets/RoboDK/1_onrobot-2fgp20-slip-sheet-gripper/OnRobot-2FGP20-Slip-Sheet-Gripper.tool",
+        "sha256": "c1e4257f3cce7d15a7cbd07180590957186f726250c42baddfcde4d846e88af3"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "onrobot",
+        "2fgp20"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "79d15812-00ac-5cf5-8475-2e3bb36d9cfd",
+        "original_package_digest": "9a6563d769957d0fa2bc138580a9243490005c0e2cd6bae720ddef04d69928d7",
+        "source": "tools/models/OnRobot-2FGP20-Palletizer-Gripper.tool"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "payload_zero_unverified",
+        "reach_zero_unverified",
+        "configuration_or_pose",
+        "multiple_RoboDK"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "tool"
+  ]
+}

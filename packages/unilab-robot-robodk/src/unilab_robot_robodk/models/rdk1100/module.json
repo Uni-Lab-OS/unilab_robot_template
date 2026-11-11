@@ -1,0 +1,208 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "robodk",
+  "model": "rdk1100",
+  "title": "RoboDK RDK-1100",
+  "asset": {
+    "asset_id": "95842cd8-0685-5ab4-ad43-6e8f9d5d3175",
+    "package_digest": "4a029c404ce8bb10a22ba2d4cb0ed3fc87f392ba39cce66db34d8db03dff7837",
+    "package_path": "04_设备/robodk/rdk-1100__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "95842cd8-0685-5ab4-ad43-6e8f9d5d3175",
+      "package_digest": "4a029c404ce8bb10a22ba2d4cb0ed3fc87f392ba39cce66db34d8db03dff7837",
+      "package_path": "04_设备/robodk/rdk-1100__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -110.0,
+          -220.0,
+          -180.0,
+          -113.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            390.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            550.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            12.5,
+            0.0,
+            520.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          110.0,
+          60.0,
+          180.0,
+          113.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1f2b7dba778550aa394632b978af4d5d080da3df20207ca65580a5de20bb13f0",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rdk-1100__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "RoboDK_CNC.py",
+      "RoboDK_Python_API.py",
+      "RoboDK_Quine.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RDK-1100",
+          "manufacturer": "RoboDK",
+          "variant": "",
+          "display": "RoboDK RDK-1100",
+          "path": "robots/models/RoboDK-RDK-1100.robot",
+          "type": "robots",
+          "payload": 10,
+          "reach": 1100,
+          "axes": 6,
+          "library_assets": [
+            "95842cd8-0685-5ab4-ad43-6e8f9d5d3175"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RoboDK-RDK-1100.robot",
+        "path": "simready_usd/RoboDK-RDK-1100.robot",
+        "sha256": "bfcb68860fa807237820a879458f7c81e6fe2fc5a6c84516fcc9e8bc9ceff6f6"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

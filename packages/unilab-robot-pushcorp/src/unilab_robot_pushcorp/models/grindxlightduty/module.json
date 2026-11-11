@@ -1,0 +1,103 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "grindxlightduty",
+  "title": "PushCorp GrindX - Light Duty",
+  "asset": {
+    "asset_id": "79ff982f-3eca-5039-a93e-8d6a373c07dc",
+    "package_digest": "5f05bc533ce5d8ebc2a26b79bbf036b65e78ea1aa9c7c44cd86e71cdbf495117",
+    "package_path": "03_机构模块/pushcorp/pushcorp_grindx_-_light_duty__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "79ff982f-3eca-5039-a93e-8d6a373c07dc",
+      "package_digest": "5f05bc533ce5d8ebc2a26b79bbf036b65e78ea1aa9c7c44cd86e71cdbf495117",
+      "package_path": "03_机构模块/pushcorp/pushcorp_grindx_-_light_duty__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "b4600a63e7b88cc295db96e2905a63907464ee4e29a261cb2bfe1731f1fa0f27",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "b4600a63e7b88cc295db96e2905a63907464ee4e29a261cb2bfe1731f1fa0f27",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6eeb75791ba62802d5fd7ccce3aad01bf3df0454e18b1e6a2c67bc8165c16b4e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pushcorp_grindx_-_light_duty__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "PushCorp GrindX - Light Duty",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/PushCorp GrindX - Light Duty.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "ec06af90-90d2-41b4-b9b2-76e9ec83c04c",
+          "library_assets": [
+            "79ff982f-3eca-5039-a93e-8d6a373c07dc"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/PushCorp GrindX - Light Duty.vcmx",
+        "path": "simready_usd/PushCorp GrindX - Light Duty.vcmx",
+        "sha256": "b4600a63e7b88cc295db96e2905a63907464ee4e29a261cb2bfe1731f1fa0f27"
+      }
+    ]
+  }
+}

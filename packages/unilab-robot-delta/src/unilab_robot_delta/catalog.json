@@ -1,0 +1,97 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "delta",
+  "models": {
+    "dc06": {
+      "title": "Delta Electronics DC06",
+      "asset": {
+        "asset_id": "49337d86-c7f1-5738-8cc4-24b65a56e22c",
+        "package_digest": "8da29e6fdf97f385fd40274caed84f4d5083fc486305e26f59e3f7a4636b40ef",
+        "package_path": "04_设备/delta_electronics/dc06__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc06/module.json",
+      "module_sha256": "b052cbbcef870ee8f710f539452ac599fe1c7438a519d074ec1929cba075541d"
+    },
+    "dc08": {
+      "title": "Delta Electronics DC08",
+      "asset": {
+        "asset_id": "30e29cf4-2b6f-5e4e-b847-1ff022072fe1",
+        "package_digest": "0e487836c91406daf1e7c86641fb90dd973619bbfbb74f8b578f7531fb016411",
+        "package_path": "04_设备/delta_electronics/dc08__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc08/module.json",
+      "module_sha256": "6e49369d287e84d11f4729937136b21f5817bbcd119e48590f757e2149736d32"
+    },
+    "dc10": {
+      "title": "Delta Electronics DC10",
+      "asset": {
+        "asset_id": "2ab4e72c-c431-5a2f-849f-769c604cd980",
+        "package_digest": "7fc34e608ec51ea2e3194dc8136fa138e0f1a7ee8778aecc2c32f6d1bff999c2",
+        "package_path": "04_设备/delta_electronics/dc10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc10/module.json",
+      "module_sha256": "362695bc98c0d8d0b0c8ae1714087e3283eba5cd98da59d30f886dccb3198a07"
+    },
+    "dc16": {
+      "title": "Delta Electronics DC16",
+      "asset": {
+        "asset_id": "1f4b7548-f801-5d52-978f-7bd412791760",
+        "package_digest": "c6ac1f9f18b2e009629912876bd318a0f4f94594b29aa81070e03c657467f853",
+        "package_path": "04_设备/delta_electronics/dc16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc16/module.json",
+      "module_sha256": "a5d95640b8d9c7b68fb5795d6c34bc9db3482295b01421eb4b7ce36201788ab2"
+    },
+    "dc20": {
+      "title": "Delta Electronics DC20",
+      "asset": {
+        "asset_id": "237e36c8-5de9-59ab-817b-a885a23026c2",
+        "package_digest": "e017d9d4a59c5b3dd22cefcd66532418d1350aeff584bbcca9f991ab77a0602a",
+        "package_path": "04_设备/delta_electronics/dc20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc20/module.json",
+      "module_sha256": "065932a20c76748197c4b42698f17ce62390b34cbba0ed9bec94340d31af169e"
+    },
+    "dc30": {
+      "title": "Delta Electronics DC30",
+      "asset": {
+        "asset_id": "9a05784e-9663-5097-8973-bbf9d7dd0c14",
+        "package_digest": "08c77d1639cd8ee91b6a01c85cdb95e8f4e2f7375e797f8e060840c19f6e78f5",
+        "package_path": "04_设备/delta_electronics/dc30__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dc30/module.json",
+      "module_sha256": "60953a31d9d97b22ebfc1550a4c960b044cecc60d4b673caf46bfbf9967597cc"
+    }
+  },
+  "source_profiles": []
+}

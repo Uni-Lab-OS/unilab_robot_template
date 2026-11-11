@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "teknomotor",
+  "model": "atc710039spindle",
+  "title": "Teknomotor ATC710039 Spindle",
+  "asset": {
+    "asset_id": "6e934141-c672-5ac5-ae66-470fe6d68e12",
+    "package_digest": "86d3fab7b1f04bddfe64861a94c058b15951e9890a7939590ad7c75ca8ed7967",
+    "package_path": "01_零部件/teknomotor/atc710039_spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6e934141-c672-5ac5-ae66-470fe6d68e12",
+      "package_digest": "86d3fab7b1f04bddfe64861a94c058b15951e9890a7939590ad7c75ca8ed7967",
+      "package_path": "01_零部件/teknomotor/atc710039_spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c05bcc6dc3c9dfbe95f0556d1c4f7cde9934116e04cb91236f6e48db13bc1b84",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/atc710039_spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ATC710039 Spindle",
+          "manufacturer": "Teknomotor",
+          "variant": "",
+          "display": "Teknomotor ATC710039 Spindle",
+          "path": "tools/models/Teknomotor-ATC710039-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "6e934141-c672-5ac5-ae66-470fe6d68e12"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Teknomotor-ATC710039-Spindle.tool",
+        "path": "simready_usd/Teknomotor-ATC710039-Spindle.tool",
+        "sha256": "d1ec438b1a11e03211890adb4a425b8d41577afa7c62342d6bf8681a2dd19ed5"
+      }
+    ]
+  }
+}

@@ -5,12 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "unilab-arm-cr7"
 version = "0.1.0"
-description = "Dobot CR7 可替换机械臂模块及 PLC/TCP-SDK/MoveIt 后端"
+description = "Compatibility distribution; implementation owned by brand package"
 requires-python = ">=3.11"
-dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
+dependencies = ["unilab-robot-dobot==0.1.0"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-unilab_arm_cr7 = ["models/**/*"]
+[tool.setuptools]
+packages = []

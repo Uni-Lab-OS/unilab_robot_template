@@ -1,0 +1,336 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "omron",
+  "model": "tm25s",
+  "title": "Omron TM25S",
+  "asset": {
+    "asset_id": "c28b86e2-c816-5964-b300-5a3904ac977d",
+    "package_digest": "bc9b34e933b9e5718b037024b0653a7e5d4e73f09758a8f3ea6d5e95bfda4110",
+    "package_path": "04_设备/omron/tm25s__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c28b86e2-c816-5964-b300-5a3904ac977d",
+      "package_digest": "bc9b34e933b9e5718b037024b0653a7e5d4e73f09758a8f3ea6d5e95bfda4110",
+      "package_path": "04_设备/omron/tm25s__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          90.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -166.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            235.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            -70.0
+          ],
+          [
+            0.0,
+            950.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            800.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            170.2
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            152.95
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          166.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0213daf8ee39ef2d93366dd63741b0080168cb58df4871d0c8a2ac6c21892a81",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/tm25s__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:TMDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/TMDriver.py",
+        "sha256": "e1178b95602f2d4861a133dc2bc54f3094c0c0a461779be07995619206c5cdbf",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/TMDriver.pyc",
+            "sha256": "b8b0069f0d0dff6b9395583c376fafee45dba8ebe944f13d9699e9c93d859f99"
+          },
+          {
+            "relative_path": "api/Robot/v311/TMDriver.pyc",
+            "sha256": "286451cfb86d2bb9dc5f3184662b6d243a7016212ef0ac5bc4b66c742b79f360"
+          },
+          {
+            "relative_path": "api/Robot/v312/TMDriver.pyc",
+            "sha256": "15bc207ecc0b1a9860df661001733d2eb084ef38d8df66a35c2725a4f218dca5"
+          },
+          {
+            "relative_path": "api/Robot/v38/TMDriver.pyc",
+            "sha256": "4d78d4d9e8714e62fd8f225a20b0edc056f47ad2c7f2be3895f988ad5757305a"
+          },
+          {
+            "relative_path": "api/Robot/v39/TMDriver.pyc",
+            "sha256": "1081905541299c8ba61c8de9d74e9ca457e0213b818a056b5972b45a0eb68de5"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Techman TM"
+        ],
+        "constraints": [
+          "TM driver does not establish support for Omron Adept or LD mobile robots",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Omron.py",
+      "Omron_Adept_Vplus.py",
+      "Omron_FerRobotics.py",
+      "Omron_PathNode.py",
+      "Omron_Remote.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/omron/tm_ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "TM25S",
+          "manufacturer": "Omron",
+          "variant": "",
+          "display": "Omron TM25S",
+          "path": "robots/models/Omron-TM25S.robot",
+          "type": "robots",
+          "payload": 25,
+          "reach": 1902,
+          "axes": 6,
+          "library_assets": [
+            "c28b86e2-c816-5964-b300-5a3904ac977d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Omron-TM25S.robot",
+        "path": "simready_usd/Omron-TM25S.robot",
+        "sha256": "6cbb51735ff512be5cadb4f83398680233d85205f3c066f1965ff1943c07edbc"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

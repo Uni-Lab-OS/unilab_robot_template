@@ -1,0 +1,272 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rokae",
+  "model": "cr35:35:2.2c",
+  "title": "Rokae CR35-35/2.2C",
+  "asset": {
+    "asset_id": "c3889e5e-717b-51b6-bfba-f5c65f105959",
+    "package_digest": "fa17bb0a36aad2902bc0c5b9fe1fe6429d2a84ee18a2826c4100307f9454dd54",
+    "package_path": "04_设备/rokae/cr35-35-2.2c__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c3889e5e-717b-51b6-bfba-f5c65f105959",
+      "package_digest": "fa17bb0a36aad2902bc0c5b9fe1fe6429d2a84ee18a2826c4100307f9454dd54",
+      "package_path": "04_设备/rokae/cr35-35-2.2c__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -168.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            425.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1050.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            1050.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            180.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            140.0
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          168.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "08a686a8bd8f085579accfcbf085413f2e95d49a2fee1f49f3d59678342a896d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cr35-35-2.2c__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Rokae.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/rokae/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "CR35-35/2.2C",
+          "manufacturer": "Rokae",
+          "variant": "",
+          "display": "Rokae CR35-35/2.2C",
+          "path": "robots/models/Rokae-CR35-35-2-2C.robot",
+          "type": "robots",
+          "payload": 35,
+          "reach": 2246,
+          "axes": 6,
+          "library_assets": [
+            "c3889e5e-717b-51b6-bfba-f5c65f105959"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Rokae-CR35-35-2-2C.robot",
+        "path": "simready_usd/Rokae-CR35-35-2-2C.robot",
+        "sha256": "02a0dd228dda93d53df5b8c9d4c8a228e2bf9326efa590e8b9e8b84c0574f735"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

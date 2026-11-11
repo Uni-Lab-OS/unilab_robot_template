@@ -1,0 +1,29 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_planners_cbf57730dc",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_planners/moveit_planners",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "9405985d87ea67dc963f422a2d0c095e5a66da19852e67152857fefa4879889b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "106a47b265ea6707c3599924bb461cb5584146a81f28f3cf62ab5e621881eb40",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

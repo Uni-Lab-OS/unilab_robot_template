@@ -1,0 +1,274 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "huayanhans",
+  "model": "e10l",
+  "title": "Huayan E10-L",
+  "asset": {
+    "asset_id": "db8eef56-d9de-5f06-aa8a-ec9b0cf7b7ca",
+    "package_digest": "2ab223a386c816361a7f45dfe8b8d1f89d5f83cf4d55ded2bab9b3ce355c466f",
+    "package_path": "04_设备/huayan_han_s/e10-l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "db8eef56-d9de-5f06-aa8a-ec9b0cf7b7ca",
+      "package_digest": "2ab223a386c816361a7f45dfe8b8d1f89d5f83cf4d55ded2bab9b3ce355c466f",
+      "package_path": "04_设备/huayan_han_s/e10-l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -135.0,
+          -153.0,
+          -360.0,
+          -180.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            260.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            600.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            700.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            168.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          135.0,
+          153.0,
+          360.0,
+          180.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c658ac861f11278445bb9695376760d1770fb9e487f105da43f83d5d02791710",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/e10-l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:HansDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/HansDriver.py",
+        "sha256": "f9f319605eb3b648bd59c7f69efb1624dc4126a04a014e2f188615b13bb4ddf4",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/HansDriver.pyc",
+            "sha256": "ed0fed4f3186d1857cb29b05b7dafb84be0939db33f62fa6751eefc4f3d25eb2"
+          },
+          {
+            "relative_path": "api/Robot/v311/HansDriver.pyc",
+            "sha256": "7fb80fbe3d6ab166f55014917592aff483344e9fa36bced6c8849dcf23fe8be6"
+          },
+          {
+            "relative_path": "api/Robot/v312/HansDriver.pyc",
+            "sha256": "8c6410a5901671704e34057b976d6b9c31fc8cd06205a1239d742100c2db3e56"
+          },
+          {
+            "relative_path": "api/Robot/v38/HansDriver.pyc",
+            "sha256": "5e0b32813b0dc7c74f1db3ebaae5b52c9512eec5b31139857efe9f13637b57ee"
+          },
+          {
+            "relative_path": "api/Robot/v39/HansDriver.pyc",
+            "sha256": "86e267d7db343c8dd24cd1caa187a6d78c88ad37fc2d8a486d73c2cd5ec01682"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "huayanhans controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Hans.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "E10-L",
+          "manufacturer": "Huayan Han's",
+          "variant": "",
+          "display": "Huayan E10-L",
+          "path": "robots/models/Huayan-E10-L.robot",
+          "type": "robots",
+          "payload": 8,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "db8eef56-d9de-5f06-aa8a-ec9b0cf7b7ca"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Huayan-E10-L.robot",
+        "path": "simready_usd/Huayan-E10-L.robot",
+        "sha256": "ba997caf66517fa8dc28a90c09f0c7e6df8fd64c06fabbe4efa7fe78ebc19c37"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "efort",
+  "model": "gr680st",
+  "title": "GR680ST",
+  "asset": {
+    "asset_id": "cc39762a-3e94-571f-986c-9f556d2a0b3e",
+    "package_digest": "2f57372a486d3feee29b025da942f72101475ef51e4955bbd2d1ee46ac89b031",
+    "package_path": "04_设备/efort/gr680st__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "cc39762a-3e94-571f-986c-9f556d2a0b3e",
+      "package_digest": "2f57372a486d3feee29b025da942f72101475ef51e4955bbd2d1ee46ac89b031",
+      "package_path": "04_设备/efort/gr680st__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "bcdad12f2aa3a7f7be1780e2bce693d9eeafeb5d6601230457c3b417a8330b1e",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "fad9ddc25375341ca74a7aa8cbca1b54fcc19ef02ffa9d718d816dfd5c7981c8",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gr680st__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "GR680ST",
+          "manufacturer": "EFORT",
+          "variant": "",
+          "path": "Components/EFORT/Robots/GR680ST.vcmx",
+          "type": "Robots",
+          "payload": "8",
+          "reach": "2715",
+          "vcid": "8aa1d7ff-fa93-4cfd-8ca4-703c013f349f",
+          "library_assets": [
+            "cc39762a-3e94-571f-986c-9f556d2a0b3e"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/GR680ST.vcmx",
+        "path": "simready_usd/GR680ST.vcmx",
+        "sha256": "bcdad12f2aa3a7f7be1780e2bce693d9eeafeb5d6601230457c3b417a8330b1e"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

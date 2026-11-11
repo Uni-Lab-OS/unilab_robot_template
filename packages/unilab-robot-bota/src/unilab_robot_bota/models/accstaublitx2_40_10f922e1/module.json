@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "bota",
+  "model": "accstaublitx2:40",
+  "title": "Bota ACC-STAUBLI-TX2-40",
+  "asset": {
+    "asset_id": "89a9ec68-5c42-5657-af52-5d79d62ae273",
+    "package_digest": "d4f29c118259112724f5826ac483a4581ca82e92e32eb4542744c8fd01257164",
+    "package_path": "01_零部件/bota/acc-staubli-tx2-40__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "89a9ec68-5c42-5657-af52-5d79d62ae273",
+      "package_digest": "d4f29c118259112724f5826ac483a4581ca82e92e32eb4542744c8fd01257164",
+      "package_path": "01_零部件/bota/acc-staubli-tx2-40__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6b97a9463038a4041c7e0f086e27d49e0b2f0861497aca0ef8d13ba5b1cdee99",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/acc-staubli-tx2-40__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ACC-STAUBLI-TX2-40",
+          "manufacturer": "Bota",
+          "variant": "",
+          "display": "Bota ACC-STAUBLI-TX2-40",
+          "path": "tools/models/Bota-ACC-STAUBLI-TX2-40.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "89a9ec68-5c42-5657-af52-5d79d62ae273"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Bota-ACC-STAUBLI-TX2-40.tool",
+        "path": "simready_usd/Bota-ACC-STAUBLI-TX2-40.tool",
+        "sha256": "82b3273ed12241183a8a154243a2d4e08efab771440c3ef9481d0dc8e55861e3"
+      }
+    ]
+  }
+}

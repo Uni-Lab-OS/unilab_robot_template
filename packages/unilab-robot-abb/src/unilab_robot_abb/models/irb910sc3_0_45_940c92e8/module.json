@@ -1,0 +1,434 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "abb",
+  "model": "irb910sc3:0.45",
+  "title": "IRB 910SC-3/0.45",
+  "asset": {
+    "asset_id": "22af2ebc-75e0-58b8-bc5e-aed729495d6f",
+    "package_digest": "db59856d7c71a02caec74e1eea206f50c06b9f4fcf8a45d4e1dfb13a2043a9b5",
+    "package_path": "04_设备/abb/irb_910sc-3_0_45__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "22af2ebc-75e0-58b8-bc5e-aed729495d6f",
+      "package_digest": "db59856d7c71a02caec74e1eea206f50c06b9f4fcf8a45d4e1dfb13a2043a9b5",
+      "package_path": "04_设备/abb/irb_910sc-3_0_45__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:8588",
+            "id": "dof:8835",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -140.0,
+              140.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -140.0,
+                140.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -140.0,
+                140.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:9119",
+            "id": "dof:9811",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -150.0,
+              150.0
+            ],
+            "parent_node_id": "node:8588",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -150.0,
+                150.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -150.0,
+                150.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:10095",
+            "id": "dof:10529",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              0.0
+            ],
+            "parent_node_id": "node:9119",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -0.18,
+                0.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                0.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:10840",
+            "id": "dof:11088",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -400.0,
+              400.0
+            ],
+            "parent_node_id": "node:10095",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -400.0,
+                400.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -400.0,
+                400.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "9d93383617a1c2c12910f44fd7f86171e1c469c88bace5a88e2a35c817b8f213",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "9d93383617a1c2c12910f44fd7f86171e1c469c88bace5a88e2a35c817b8f213",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "37279483dcec005c4240169eb8579c32f83bdf87e065a8b80cbe249634f88245",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/irb_910sc-3_0_45__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ABBDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ABBDriver.exe",
+        "sha256": "2822b76d242d1a5fe6c84d05cfbb8902dbc8e22e9145356fd0685c9943ad9891",
+        "bytes": 59392,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiabb",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiabb.exe",
+        "sha256": "bf67f4b01a4012d2d80e96cceec1dc6790b8e9572fb5dcd3f9262b84376fe4aa",
+        "bytes": 40960,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:libegm",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/libegm",
+        "repository_url": "https://github.com/ros-industrial/abb_libegm.git",
+        "code_tree_sha256": "05ae772f6b060a4851e32c2808d09118917653ef6de48eb28b9958e4688383a3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "faf76f7dc89d5465fe3be9bc5bfd91aeef2ad885092c406c27cadf47dbd9ebe2"
+          },
+          {
+            "path": "proto/README.md",
+            "sha256": "62ba67ae9bc07e42cda6ba6b9daa6eb10e5700924acd80a07c36f6cab223d7a7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:librws",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/librws",
+        "repository_url": "https://github.com/ros-industrial/abb_librws.git",
+        "code_tree_sha256": "73bb9876797ddd09ca17ab1bcd4cda66e35a2e8f48767247005a608201fb94df",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d90025fae893d0591aa64e72fb3f381c5b2215431558116b701ca48d952a1d7b"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/ros2",
+        "repository_url": "https://github.com/PickNikRobotics/abb_ros2.git",
+        "code_tree_sha256": "615b7308b930f0e4a2134caef7ac704212b289bdebe3d0e69727f640aa109f63",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "5c7b360ab136ec66474ed2ac9ebd32717d4135047026f80c414482e43a306d16"
+          },
+          {
+            "path": "docs/README.md",
+            "sha256": "33bd595a1fbe5c3d7d3a3c1da3d3bae09f9db13bf1a450d04c6514096f46d713"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "ABB_RAPID_IRC5.py",
+      "ABB_RAPID_IRC5_Robtargets.py",
+      "ABB_RAPID_OmniCore.py",
+      "ABB_RAPID_S4C.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "IRB 910SC-3/0.45",
+          "manufacturer": "ABB",
+          "variant": "",
+          "path": "Components/ABB/Robots/IRB 910SC-3_0_45.vcmx",
+          "type": "Robots",
+          "payload": "6",
+          "reach": "450",
+          "vcid": "45bc655e-93c5-46c3-93d3-a30d8fe3aead",
+          "library_assets": [
+            "22af2ebc-75e0-58b8-bc5e-aed729495d6f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/IRB 910SC-3_0_45.vcmx",
+        "path": "simready_usd/IRB 910SC-3_0_45.vcmx",
+        "sha256": "9d93383617a1c2c12910f44fd7f86171e1c469c88bace5a88e2a35c817b8f213"
+      }
+    ],
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

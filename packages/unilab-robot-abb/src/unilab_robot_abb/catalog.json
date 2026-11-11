@@ -1,0 +1,1658 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "abb",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "crb15000gofa10": {
+      "title": "ABB CRB 15000 10｜多源合并",
+      "asset": {
+        "asset_id": "8372002a-1480-50c5-bf2a-ece99af71b96",
+        "package_digest": "268711b2a6996f98be3f40a0555361038278f4cfd7e09f7c3fa74303ed5f3ee2",
+        "package_path": "04_设备/abb/crb15000gofa10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crb15000gofa10/module.json",
+      "module_sha256": "c5812a9a06347ab8f02a3b4219ea39bf0db323d049c4fcfcc41c47c786cbe2a4"
+    },
+    "crb15000gofa12": {
+      "title": "ABB CRB 15000 GoFa 12｜多源合并",
+      "asset": {
+        "asset_id": "870f73c0-a67c-5515-a2f7-8e018ecd85a5",
+        "package_digest": "59ce9761ce3ff12b36a4d4ab4dbf98466a39cce74e5d190a2448ca8e7c5bbccd",
+        "package_path": "04_设备/abb/crb15000gofa12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crb15000gofa12/module.json",
+      "module_sha256": "3d57883b499bc0e5bad3548f24ae9c871e2c96a0a85d0398d36dd5ec60959f82"
+    },
+    "crb15000gofa5": {
+      "title": "ABB CRB 15000｜多源合并",
+      "asset": {
+        "asset_id": "e038d874-4392-5f74-bc9a-838323b1f5b8",
+        "package_digest": "044ccc05d6d89927dee0395c905202bef7fb0377b3e735cbc6eba217bc5c8792",
+        "package_path": "04_设备/abb/crb15000gofa5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/crb15000gofa5/module.json",
+      "module_sha256": "205e9000819ce4838eeca203ba2c31712755b93e6a68df47c241098f39b100fd"
+    },
+    "irb1010:1.5:0.37": {
+      "title": "ABB IRB 1010-1.5/0.37｜多源合并",
+      "asset": {
+        "asset_id": "78476190-a16f-5ce1-8e02-9955d3bff9ca",
+        "package_digest": "5d7e89c51da2112412966fa52f75b86ff5e53ee4ee3dea92711d8509fb8de45e",
+        "package_path": "04_设备/abb/irb1010_1.5_0.37__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1010_1_5_0_37_129f6a2e/module.json",
+      "module_sha256": "d761899a9dde4ae9ddb822824a0b8263b75362189a9f194d18de4b056db0d9db"
+    },
+    "irb1100:4:0.475": {
+      "title": "ABB IRB 1100-4/0.475｜多源合并",
+      "asset": {
+        "asset_id": "6ec8eadd-6e2f-5bef-a3b6-3371dfbcbc73",
+        "package_digest": "7103ab8083bcbba849ba673dbefb247f1993210cc64d1cb825206edda9743512",
+        "package_path": "04_设备/abb/irb1100_4_0.475__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1100_4_0_475_c44b9758/module.json",
+      "module_sha256": "01596adf08f62adb4998b26939b2edf99b0b112954a57b5fd2c6ccd5914c6e5d"
+    },
+    "irb1200:5:0.9": {
+      "title": "ABB IRB 1200-5/0.9｜多源合并",
+      "asset": {
+        "asset_id": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+        "package_digest": "37513471132676a1d43f8f7517e28873a95b4f1086d010772a52a6ea590bbf6c",
+        "package_path": "04_设备/abb/irb1200_5_0.9__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "revalidation_required_after_asset_revision"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1200_5_0_9_e7095482/module.json",
+      "module_sha256": "326d433fd4af03a857cda9f78030ff0151766a55593f71bef826a236d01289fd"
+    },
+    "irb1200:5:0.9gen2": {
+      "title": "ABB IRB 1200-5/0.9 Gen2｜多源合并",
+      "asset": {
+        "asset_id": "37793d7a-752a-5a9a-b4a1-c5488f80faa2",
+        "package_digest": "a1f6b66aac5ae899463c56594e85988552856113f67e8756326e8cf3c0441477",
+        "package_path": "04_设备/abb/irb1200_5_0.9gen2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1200_5_0_9gen2_73f3c503/module.json",
+      "module_sha256": "f6ad794d9500e0b18911bfe6479a663c4b9dcfc44ec816ff071faf1384ffd527"
+    },
+    "irb1200:7:0.7": {
+      "title": "ABB IRB 1200-7/0.7｜多源合并",
+      "asset": {
+        "asset_id": "6c79045d-f0be-5777-a45f-7bb199a47eec",
+        "package_digest": "695ab8f702a2ac816ce6e733708ce9f106b3e6b1864bf6f82b66174595fc0eec",
+        "package_path": "04_设备/abb/irb1200_7_0.7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1200_7_0_7_86960625/module.json",
+      "module_sha256": "1f4d8044d15c24fae4029da2d195ade08edd498ba433c7f9c2d97fca8a2b23eb"
+    },
+    "irb1300:10:1.15": {
+      "title": "ABB IRB 1300-10/1.15｜多源合并",
+      "asset": {
+        "asset_id": "b32a57a9-5b28-541d-adcb-75e4a8a00248",
+        "package_digest": "c5116c53c327a8d2029323b71d9b6628235a6e154d85a13577ae3ce9e220c865",
+        "package_path": "04_设备/abb/irb1300_10_1.15__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1300_10_1_15_c04f7d25/module.json",
+      "module_sha256": "a276b6dd6ba3ad95b61d7d41f85bcb4509d12d1216a4297bdfa2ec10febd9ed1"
+    },
+    "irb1300:11:0.9": {
+      "title": "ABB IRB 1300-11/0.9｜多源合并",
+      "asset": {
+        "asset_id": "e3257c94-e332-5d43-88f4-96745ef892f6",
+        "package_digest": "74c7ca0716ca3c28df46315b5abf877790910f5300e4c5866b149c3f642a558d",
+        "package_path": "04_设备/abb/irb1300_11_0.9__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1300_11_0_9_4c3b84ce/module.json",
+      "module_sha256": "9519fd5a1a107ae55a382301bb756b8cf882e5222fecd590e19a7eb03298ee82"
+    },
+    "irb1300:7:1.4": {
+      "title": "ABB IRB 1300-7/1.4｜多源合并",
+      "asset": {
+        "asset_id": "881924e2-f3d1-5bd4-913e-69fbabfdf081",
+        "package_digest": "1888004f8ba169ee36a37c44445536468e54c1b0b0f0910fba79d97ae6af5e24",
+        "package_path": "04_设备/abb/irb1300_7_1.4__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1300_7_1_4_dbc94403/module.json",
+      "module_sha256": "77d1e4aec50f8e19daae7cf7187da247a8af9f51769619dcbd1bb2965a9772de"
+    },
+    "irb14050": {
+      "title": "ABB YuMi IRB 14050｜多源合并",
+      "asset": {
+        "asset_id": "9f3a18ce-6da2-53a5-b07e-bdf0413e0bfc",
+        "package_digest": "ca60bacea6d9cbec67de6b0f26af171c8f0f9d3532cafec6f2b51e4340cd7fbd",
+        "package_path": "04_设备/abb/irb14050__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb14050/module.json",
+      "module_sha256": "f9acb72330a28d884a40b7c7a0525b3a45012f5b3942fd15093898ddc21da4f0"
+    },
+    "irb1520id": {
+      "title": "ABB IRB 1520ID｜多源合并",
+      "asset": {
+        "asset_id": "e862acfb-8c05-5956-b84b-4bbab3e4999b",
+        "package_digest": "6f66d2fff6a670b5da85b08b2d00c35ae870c45eb0aaa7f893081e52b86aff86",
+        "package_path": "04_设备/abb/irb1520id__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1520id/module.json",
+      "module_sha256": "7520c90f14a5643e55d8881e22dbfe5ad3ecedd531a7af798d4a109f767c3a22"
+    },
+    "irb1600:6:1.2": {
+      "title": "ABB IRB 1600-6/1.2｜多源合并",
+      "asset": {
+        "asset_id": "48c02a49-3613-5724-ad8b-6de6de068a3b",
+        "package_digest": "293d491cce10655b0a891014f49a7c0cb87fad194bda96ce5f3cf6c131b61c14",
+        "package_path": "04_设备/abb/irb1600_6_1.2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1600_6_1_2_39857e79/module.json",
+      "module_sha256": "f918ece340bd3d400a57c0224f7f308197c249222e4416fa2fd22f800bcc02ae"
+    },
+    "irb1600:6:1.45": {
+      "title": "ABB IRB 1600-6/1.45｜多源合并",
+      "asset": {
+        "asset_id": "32e3985b-2698-56d9-9b90-90163b6c6fbe",
+        "package_digest": "94f02d1d244f2125d5a47d814ce514e91a9771035f6b8f93dc9ab6f568a5593c",
+        "package_path": "04_设备/abb/irb1600_6_1.45__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1600_6_1_45_5469bc6b/module.json",
+      "module_sha256": "33e0dfef1da8bcd4303b1f841cee9638798c2c3b751f964244bb82f8778319be"
+    },
+    "irb1600:8:145": {
+      "title": "ABB IRB 1600-8/145｜多源合并",
+      "asset": {
+        "asset_id": "10393b32-e34d-5ecd-8775-457c5184621c",
+        "package_digest": "ae879a79c43ea38a0a432699afeae2b2f76b9ffce9c8038b51c62295814abf06",
+        "package_path": "04_设备/abb/irb1600_8_145__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb1600_8_145_2ff1a478/module.json",
+      "module_sha256": "c68c3fc0e36a5aa76cef5a97805d606ed157a1ff2525e6eccfcf0e4598de3091"
+    },
+    "irb2600:12:1.65": {
+      "title": "ABB IRB 2600-12/1.65｜多源合并",
+      "asset": {
+        "asset_id": "3d178c5a-5d6a-56e0-af51-bb7c57d2606d",
+        "package_digest": "c09cb26491a530c75f19498c692b365977513acbd70c75a4970a8d9e1b17a5d4",
+        "package_path": "04_设备/abb/irb2600_12_1.65__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb2600_12_1_65_49ffcd7c/module.json",
+      "module_sha256": "29c851f4edbad6646bc1f5a8e090c1e9cef1292fc6d7f49d356abdb177bd7765"
+    },
+    "irb2600:12:1.85": {
+      "title": "ABB IRB 2600-12/1.85｜多源合并",
+      "asset": {
+        "asset_id": "8a25563c-9b96-527e-bea6-b04618ac3b92",
+        "package_digest": "a84a979df458c4ddc99fef3cedf6d43a7dc107b4841624956fc234bbda1818a3",
+        "package_path": "04_设备/abb/irb2600_12_1.85__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb2600_12_1_85_3ce8cfaf/module.json",
+      "module_sha256": "e76f103463bfe66efc3e1118c90e0b41d05da32a2bd7422e3950aa44560966c2"
+    },
+    "irb2600:20:1.65": {
+      "title": "ABB IRB 2600-20/1.65｜多源合并",
+      "asset": {
+        "asset_id": "c5d7123d-9062-5791-a04c-7ef0b2575dcc",
+        "package_digest": "b92d792c059c00525160b4b2556d9592117657d81b41129d126633007d34bf69",
+        "package_path": "04_设备/abb/irb2600_20_1.65__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb2600_20_1_65_fa22f58e/module.json",
+      "module_sha256": "400b4ed1f49def7e659be355f887a8305bbc1f2b29b5285cb728b5f886a89095"
+    },
+    "irb2600id15:1.85": {
+      "title": "ABB IRB 2600ID-15/1.85｜多源合并",
+      "asset": {
+        "asset_id": "e4f46501-0c37-534b-9c75-b352ed81a563",
+        "package_digest": "8f582ebde45c4d059e9f1ddab6257364d49a40f0fac52518545301df0f64383b",
+        "package_path": "04_设备/abb/irb2600id15_1.85__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb2600id15_1_85_313d7011/module.json",
+      "module_sha256": "62fa41a3a5da5521d0d5403bad23d93980b0ee346653e02e4590c6a9701082fe"
+    },
+    "irb4600:20:2.50": {
+      "title": "ABB IRB 4600-20/2.50｜多源合并",
+      "asset": {
+        "asset_id": "3d940bf8-77f6-5dac-bf10-0256f7e32448",
+        "package_digest": "86c5f266c56edde9d7d90cd11ba52042809c6c2921c92314d5b002dad2d4e4de",
+        "package_path": "04_设备/abb/irb4600_20_2.50__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb4600_20_2_50_f192e064/module.json",
+      "module_sha256": "a1dc55140faf45968a8fa1f6b505bcbaba82ff1c0ef82c24d100accfd2e21c5c"
+    },
+    "irb4600:40:2.55": {
+      "title": "ABB IRB 4600-40/2.55｜多源合并",
+      "asset": {
+        "asset_id": "192785df-ff3c-5584-a695-23e06a116e15",
+        "package_digest": "5121b75a3f8481427a12fa2ab6934de843fe71b8944322e1896b8f92acc00706",
+        "package_path": "04_设备/abb/irb4600_40_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb4600_40_2_55_5d2bd667/module.json",
+      "module_sha256": "10935f595b8cd8fcfd9db788982776499032c291ec1e952de65648dd2391202d"
+    },
+    "irb4600:45:2.05": {
+      "title": "ABB IRB 4600-45/2.05｜多源合并",
+      "asset": {
+        "asset_id": "72fc4784-4df4-5bb6-829c-7a0b290b4bff",
+        "package_digest": "ba00e50c14c44be76ab2d3af21fefdd2ee6b4960b84d35730811da84be6f886e",
+        "package_path": "04_设备/abb/irb4600_45_2.05__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb4600_45_2_05_f58476a5/module.json",
+      "module_sha256": "938f7c2219807804bcf6702080501b62e2dfd93e9011341233c1201b3466dfe3"
+    },
+    "irb4600:60:2.05": {
+      "title": "ABB IRB 4600-60/2.05｜多源合并",
+      "asset": {
+        "asset_id": "285cfcf1-788b-5ea0-b21a-0c81e916d3a9",
+        "package_digest": "9004dd4e8eec801fc63de5eb07c29313c20dafc7bde8369e9946f7fe6e3e50e6",
+        "package_path": "04_设备/abb/irb4600_60_2.05__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb4600_60_2_05_d92e6fff/module.json",
+      "module_sha256": "1059798730bf3e67b541eff136ac224c39fe4f2d2411998a8b4fd9f25cedec5c"
+    },
+    "irb5400:22": {
+      "title": "ABB IRB 5400-22｜多源合并",
+      "asset": {
+        "asset_id": "d468cb54-5c64-5878-a31d-28a18d3ecc3e",
+        "package_digest": "7d5c6789be46475e772d798bb4aff3844bf3a59082c3c35a2958800c73613ca4",
+        "package_path": "04_设备/abb/irb5400_22__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb5400_22_5af5bef8/module.json",
+      "module_sha256": "1210879f63d119c01f9367e69ab1db5ba219371fb0bcb2dcaafebdabfdb48f7b"
+    },
+    "irb5710:110:2.3": {
+      "title": "ABB IRB 5710-110/2.3｜多源合并",
+      "asset": {
+        "asset_id": "10cd1cc1-7647-511b-83f5-266445d54602",
+        "package_digest": "9b3008302839babe820a256feb7e75601784fd29f547b588d8c8a10a4bb58c41",
+        "package_path": "04_设备/abb/irb5710_110_2.3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb5710_110_2_3_1bbc146c/module.json",
+      "module_sha256": "b4babfc548aed7f78f95545e4bd7e440fafca30207fbf7eb8cce24f34bce22b8"
+    },
+    "irb5710:90:2.7": {
+      "title": "ABB IRB 5710-90/2.7｜多源合并",
+      "asset": {
+        "asset_id": "016ea6f6-8879-5fe9-b53a-86506d73b5f3",
+        "package_digest": "5ca22ba43f8df26a57827a97a2b856875fd022554fd203b390dc46784012e0d2",
+        "package_path": "04_设备/abb/irb5710_90_2.7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb5710_90_2_7_1ed78ec2/module.json",
+      "module_sha256": "9463937b217efce9ce1121816caa3f62d09d3e4d1df18e8548d16daa8b98af56"
+    },
+    "irb5720:125:3.0": {
+      "title": "ABB IRB 5720-125/3.0｜多源合并",
+      "asset": {
+        "asset_id": "fe668966-9ec7-520b-a2bf-b799f9b8a3bd",
+        "package_digest": "00837bef1c1285f0608ce0a6b4073a381d39dbee240174c16a29be3ff65ca7da",
+        "package_path": "04_设备/abb/irb5720_125_3.0__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb5720_125_3_0_d444744c/module.json",
+      "module_sha256": "215913fc17163332e9b4ac52d414febf42a09e7b7bd7e5d0ce7c9560a864ea58"
+    },
+    "irb5720:180:2.6": {
+      "title": "ABB IRB 5720-180/2.6｜多源合并",
+      "asset": {
+        "asset_id": "449b774b-ebf8-5181-8040-1d0436845736",
+        "package_digest": "fd40868955796ae96cbc00ad37710833e9490f4143d8fcfa6c44d3f92bb89c21",
+        "package_path": "04_设备/abb/irb5720_180_2.6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb5720_180_2_6_539e488d/module.json",
+      "module_sha256": "589baa536e768868ed2f3f10094550720288b3133b4aba6540ea61c21bd6821f"
+    },
+    "irb910sc3:0.65": {
+      "title": "ABB IRB 910SC-3/0.65｜多源合并",
+      "asset": {
+        "asset_id": "7e85e778-c8ab-5a7a-9d9b-adc5436958e2",
+        "package_digest": "b0535dfb7617565420ff5eed213c360bc319612265031e299ca431e89316a4e8",
+        "package_path": "04_设备/abb/irb910sc3_0.65__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb910sc3_0_65_6d007c0e/module.json",
+      "module_sha256": "3d7156a69ac460db157ca03b21bcca68ee6f8ec097d0feff89a49b78ebdf9f2a"
+    },
+    "irb920t6:0.55": {
+      "title": "ABB IRB 920T-6/0.55｜多源合并",
+      "asset": {
+        "asset_id": "5f65de8c-a392-5b35-8055-799c6c5c3ded",
+        "package_digest": "4dfc206729e74577b77ca55314be8b8cab660b12c251116827078968739b2f23",
+        "package_path": "04_设备/abb/irb920t6_0.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb920t6_0_55_a80ffa0a/module.json",
+      "module_sha256": "2dbe272fdee65b2f721e0ef643a8e64cd2eb1611ab48d0523a78dd8bff2f9aad"
+    },
+    "irb920t6:0.65": {
+      "title": "ABB IRB 920T-6/0.65｜多源合并",
+      "asset": {
+        "asset_id": "f466c2af-c6f2-5bf0-a012-d11b1e74630a",
+        "package_digest": "63c1c7005fad0dc3da41afa484c9d0fc9f00f0b5fc70226b47b06b0a1167710e",
+        "package_path": "04_设备/abb/irb920t6_0.65__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb920t6_0_65_a0e0eda2/module.json",
+      "module_sha256": "98bff69681886db86ff5cbcca6d0a0d1e4014ac8736fb8a492b1401951fbe6b4"
+    },
+    "irb6600:225:2.55": {
+      "title": "ABB IRB 6600-225/2.55｜多源合并",
+      "asset": {
+        "asset_id": "637a7794-e3d5-501f-a4b8-554f7abebb9d",
+        "package_digest": "b01b13f002ec71605d471e28d883ce998e7e1aea7101b2d3787ef6c2d58b254a",
+        "package_path": "04_设备/abb/irb6600_225_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6600_225_2_55_9db0f1ef/module.json",
+      "module_sha256": "7ce01efddb71b86680e12b165698b8c86d8b562173d35fde836ad8d7852733c1"
+    },
+    "irb6640:180:2.55": {
+      "title": "ABB IRB 6640-180/2.55｜多源合并",
+      "asset": {
+        "asset_id": "45606416-793c-5143-99d7-bed0d13baeb1",
+        "package_digest": "ee70b10b7274adabad5d76f368f3ca835142288bcfb950a6607d99ffd1d8b1f2",
+        "package_path": "04_设备/abb/irb6640_180_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6640_180_2_55_86a412bd/module.json",
+      "module_sha256": "66947f8e4167d9d0799cc5b3038d831998bc34d04f0a88a85531d843002b45e1"
+    },
+    "irb6640:205:2.75": {
+      "title": "ABB IRB 6640-205/2.75｜多源合并",
+      "asset": {
+        "asset_id": "ca8e913c-d5f8-5475-bf49-e8e7af3ea5ff",
+        "package_digest": "01ab08258f5a92ec173a0f86f9b267f5a07026bcf101a6a9b11f92556f010038",
+        "package_path": "04_设备/abb/irb6640_205_2.75__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6640_205_2_75_4c8f7314/module.json",
+      "module_sha256": "e9f496df82f61498a506c9da471522c972276182ca4e1c8c6f3fde78674324d8"
+    },
+    "irb6640:235:2.55": {
+      "title": "ABB IRB 6640-235/2.55｜多源合并",
+      "asset": {
+        "asset_id": "3a3f5db1-ff3f-592d-b20c-ebff52c1aeab",
+        "package_digest": "fa85f96cf3c6355f34c1756e929836ed62cbbc893d6b8c6619082ad507358e27",
+        "package_path": "04_设备/abb/irb6640_235_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6640_235_2_55_1ed52879/module.json",
+      "module_sha256": "fd9924811b2f983d7e926657ef411e5a453a32a7f6871686d3a0457099b83d76"
+    },
+    "irb6640id200:2.55": {
+      "title": "ABB IRB 6640ID-200/2.55｜多源合并",
+      "asset": {
+        "asset_id": "1cb6a234-d247-57e2-be54-c7b3fd0361ff",
+        "package_digest": "fddbf391ef06bc8f1b99ac7f9552fe996a2530335aa1801496c7064415e3bc83",
+        "package_path": "04_设备/abb/irb6640id200_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6640id200_2_55_c587155d/module.json",
+      "module_sha256": "e967d67f0c805abff8d7bec05d971abdd6035f9de4209d02cb13fe5c3064558b"
+    },
+    "irb6700:150:3.20": {
+      "title": "ABB IRB 6700-150/3.20｜多源合并",
+      "asset": {
+        "asset_id": "9656e8af-06d9-5347-8ab0-94c3dc4aa395",
+        "package_digest": "2f64dfc4327d7af11a79f5d7277e67ffacfaeac16854aeaf1ba4433bc2e1e07e",
+        "package_path": "04_设备/abb/irb6700_150_3.20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_150_3_20_10b48011/module.json",
+      "module_sha256": "456d248efe7d7b0c9c03282e8de94d898390bc4bf8d98479c290b7c334ac9b1e"
+    },
+    "irb6700:155:2.85": {
+      "title": "ABB IRB 6700-155/2.85｜多源合并",
+      "asset": {
+        "asset_id": "5b687a7f-6f14-5e21-a458-ca16ce2c0748",
+        "package_digest": "4a10bab8c5207f448f407856cc303dbc823c0432c93cc5db7a6c360f76879c28",
+        "package_path": "04_设备/abb/irb6700_155_2.85__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_155_2_85_eb00df2d/module.json",
+      "module_sha256": "0c4a719b5642b7580483b9b5928ca5b3530c1bb74ccb9f7e31fbb78b611b40fd"
+    },
+    "irb6700:175:3.05": {
+      "title": "ABB IRB 6700-175/3.05｜多源合并",
+      "asset": {
+        "asset_id": "43e732c3-e8a8-52a4-b3ff-11d6eebf2bd4",
+        "package_digest": "21c2dbf4c9cd4c97d0a3cd02157923f2af68c0fc0bdef09427778d558800984b",
+        "package_path": "04_设备/abb/irb6700_175_3.05__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_175_3_05_616a9dfd/module.json",
+      "module_sha256": "e6e38f831d19a2522827d2d3b52ed60322e945224a1c1e3eca2d6ceb08e12b85"
+    },
+    "irb6700:200:2.60": {
+      "title": "ABB IRB 6700-200/2.60｜多源合并",
+      "asset": {
+        "asset_id": "78b165b0-31c3-5018-8171-8483883365e1",
+        "package_digest": "b58c5f680972b1cee8468724f4db1a7ac3282462214786b9fedb62c1b1a0e527",
+        "package_path": "04_设备/abb/irb6700_200_2.60__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_200_2_60_e06db97c/module.json",
+      "module_sha256": "8b4f9b5b0d365226979b0254ffa0c5f8c049ef18a4b7e1033e8302ec0c76389f"
+    },
+    "irb6700:205:2.80": {
+      "title": "ABB IRB 6700-205/2.80｜多源合并",
+      "asset": {
+        "asset_id": "c37ba5a4-1433-50b0-a933-adbd1d7095ea",
+        "package_digest": "56873d3d4e73446d029821afa272762ac044a8cd35c7fbe1ea7495207bc230aa",
+        "package_path": "04_设备/abb/irb6700_205_2.80__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_205_2_80_3e65d28b/module.json",
+      "module_sha256": "547fd1cbcea17a20ee35a77af9cebc99ec9f219b4494cc0d6eb41576b9d21c32"
+    },
+    "irb6700:235:2.65": {
+      "title": "ABB IRB 6700-235/2.65｜多源合并",
+      "asset": {
+        "asset_id": "fa7a708d-12d1-57fc-9880-aaa661827570",
+        "package_digest": "5ac69e929580b1e507347e96080821dae3e874ae97859cac91e784f40cf386a6",
+        "package_path": "04_设备/abb/irb6700_235_2.65__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_235_2_65_e6eea41f/module.json",
+      "module_sha256": "d5a98700b8b63701a0ea81bf5d698de2534c648af5ea98055e22e31e6be665d5"
+    },
+    "irb6700:245:3.00": {
+      "title": "ABB IRB 6700-245/3.00｜多源合并",
+      "asset": {
+        "asset_id": "cff51fcb-4764-5b42-9acc-99a68e5ad9af",
+        "package_digest": "5c99daadb134c6e59f53a040177b457d97f53c061afc5218ff3fb6b9d40210fb",
+        "package_path": "04_设备/abb/irb6700_245_3.00__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_245_3_00_e2c5048b/module.json",
+      "module_sha256": "005722da8c4d8373b5c31fb8af93424b1e0060b0f6839936b48944962f115643"
+    },
+    "irb6700:300:2.70": {
+      "title": "ABB IRB 6700-300/2.70｜多源合并",
+      "asset": {
+        "asset_id": "3ea23c75-05ec-5d2d-9574-996f0baf78bf",
+        "package_digest": "e81825565778995d42f319fed3c3a088ff0b70e2f20b330f16ca0a2289f7bf99",
+        "package_path": "04_设备/abb/irb6700_300_2.70__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb6700_300_2_70_917c4fad/module.json",
+      "module_sha256": "e966fac8ae7aa4ff3f056f0e08ec8b54b0c8068571954edd3b355e10af022de7"
+    },
+    "irb7600:150:3.5": {
+      "title": "ABB IRB 7600-150/3.5｜多源合并",
+      "asset": {
+        "asset_id": "daa25c6a-7a58-5485-9cad-a30574fc4fe6",
+        "package_digest": "76308b86bd9e0d0bde633898b25146a6490bd9987328aa43abe0250cc19139e1",
+        "package_path": "04_设备/abb/irb7600_150_3.5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb7600_150_3_5_5bb4489b/module.json",
+      "module_sha256": "fe8e4f810f757bd2220d458588c2ef83a7e0e58f3dd91e991394d524c287ce2e"
+    },
+    "irb7600:325:3.1": {
+      "title": "ABB IRB 7600-325/3.1｜多源合并",
+      "asset": {
+        "asset_id": "51c1c617-6a10-5324-ad49-b632c52dad0b",
+        "package_digest": "7bd198e019bf3a508b4868652d93a83c0d202fac19b8c370861c36c570338e52",
+        "package_path": "04_设备/abb/irb7600_325_3.1__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb7600_325_3_1_28dbfd3c/module.json",
+      "module_sha256": "8e2dc52c6d87f97c8eab958ffd11323d663401dae9b2d5ea8c20836a1223baa8"
+    },
+    "irb7600:340:2.8": {
+      "title": "ABB IRB 7600-340/2.8｜多源合并",
+      "asset": {
+        "asset_id": "7b4b7dc1-3af7-5962-8d3f-ce53bf1ff3b8",
+        "package_digest": "cd495b9088756060b4787d62b64a358774fd87caee326c878ed3029bdea186e7",
+        "package_path": "04_设备/abb/irb7600_340_2.8__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb7600_340_2_8_98e3758e/module.json",
+      "module_sha256": "ad9d1c3cb1dad15f6e5e9f23fd4b839a67434e14d1fcdd3d9bed790606add75b"
+    },
+    "irb7600:400:2.55": {
+      "title": "ABB IRB 7600-400/2.55｜多源合并",
+      "asset": {
+        "asset_id": "06fe1fe7-c51d-540a-9b57-5e97a7699a79",
+        "package_digest": "61ddd90a9fdc3f900a97631792647e5c869f271f1dbbac0e7ad3479a197cea5e",
+        "package_path": "04_设备/abb/irb7600_400_2.55__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb7600_400_2_55_72bff100/module.json",
+      "module_sha256": "4b5fb74ad62f27f64d3a9491599c71af6f67be5d71b046c9bf7d9bf5d26d77ab"
+    },
+    "irb2400l": {
+      "title": "ABB IRB 2400/L｜多源合并",
+      "asset": {
+        "asset_id": "7ce7a8d6-5ac5-595a-a2f6-140131b4dff7",
+        "package_digest": "5d3548b1cc2699dedd4bfa912f23484916d263c92ca5aeffe26e6dfbcd24ca53",
+        "package_path": "04_设备/abb/irb2400l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb2400l/module.json",
+      "module_sha256": "f30a04a881d2be417b297dd34b8aa74ff9ee523a9d96c20ca1fa55956c10892d"
+    },
+    "irb4400:60": {
+      "title": "ABB IRB 4400/60｜多源合并",
+      "asset": {
+        "asset_id": "80045e76-1178-596b-83e2-156e38bcc164",
+        "package_digest": "e8713b8442e653d1d282f2d2d5cf166db6cdda35ff8dfae4147e4b3b24d285fd",
+        "package_path": "04_设备/abb/irb4400_60__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb4400_60_d93060c8/module.json",
+      "module_sha256": "a6d3693926a0bb9297bc6686bc2e92ae2dcdb1a9c138903891ee8c89da821522"
+    },
+    "irb580:16": {
+      "title": "ABB IRB 580/16｜多源合并",
+      "asset": {
+        "asset_id": "6e9656a4-afe4-59cd-bc71-8fbe206da3b5",
+        "package_digest": "8cc5aea82ff2182bd0a48a9f89ae66c43c406714849ad39d36a403ee84c93091",
+        "package_path": "04_设备/abb/irb580_16__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb580_16_fdb50ecb/module.json",
+      "module_sha256": "b3a2f0649256881db0368b84723c6bb5a5ecad8a0e808136dc113b4476fdc60c"
+    },
+    "irb8700:550:4.20": {
+      "title": "ABB IRB 8700-550/4.20｜多源合并",
+      "asset": {
+        "asset_id": "eaa86232-5b3b-546e-a855-5aed917e2d29",
+        "package_digest": "a0f5e17fe12bfd8a572642feee83a47797352ab51185c2e3b28483a98a0e76ea",
+        "package_path": "04_设备/abb/irb8700_550_4.20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb8700_550_4_20_5b45b8a7/module.json",
+      "module_sha256": "63e9dd368d365f6cff8f023ea0ec6a8805eccdd33df84d037c42a96887044fd5"
+    },
+    "irb8700:800:3.50": {
+      "title": "ABB IRB 8700-800/3.50｜多源合并",
+      "asset": {
+        "asset_id": "5b7150e2-0af7-54f7-ae30-f21c24fae379",
+        "package_digest": "92aa42394de46d3187654c9102836425fea0e21412fee4b9d67458c98db15d0c",
+        "package_path": "04_设备/abb/irb8700_800_3.50__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb8700_800_3_50_3a37a22e/module.json",
+      "module_sha256": "174901ba4a89c9859aa045b4caa4df30fc0a7f4d3705afbd0ec354d7dbb1ae70"
+    },
+    "irb760": {
+      "title": "ABB IRB 760｜多源合并",
+      "asset": {
+        "asset_id": "61c81d31-04a7-5224-bbd6-a2391ae910e2",
+        "package_digest": "031b88c4008cbb2e1bd0c4bf7f4a7442bb9d2612d2703cb36b0aa8d5dcc4ba9e",
+        "package_path": "04_设备/abb/irb760__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irb760/module.json",
+      "module_sha256": "f34936eb5f5d61d09219abe2bc16dd18e30d505bafba26783c866bb9fe9b5dce"
+    },
+    "crb1100:4:0.475": {
+      "title": "ABB CRB 1100-4/0.475",
+      "asset": {
+        "asset_id": "46f3503d-2a65-59ef-932d-ac9dc02bcfa9",
+        "package_digest": "315c3c042c6362cbbf5ad199fdd9667d176e50d213d1c5bb5c855a109eed6210",
+        "package_path": "04_设备/abb/crb_1100-4-0.475__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1100_4_0_475_3a50412e/module.json",
+      "module_sha256": "f925854a6d23b915a70c3d5c9afe3125b336e45a9af95eed16a893941550ce63"
+    },
+    "crb1100:4:0.580": {
+      "title": "CRB 1100-4/0.580",
+      "asset": {
+        "asset_id": "5175ee73-7d12-564c-bf58-477b29487bae",
+        "package_digest": "fbdbc2b11e476118f56054d33a6dc2a957a2c1f652a6059b9525ea1cc23fe681",
+        "package_path": "04_设备/abb/crb_1100-4_0_580__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1100_4_0_580_401b971a/module.json",
+      "module_sha256": "9c17162b2c1fcedbded72f31a846a8408cf22c56868bfa95b6b69567633554c1"
+    },
+    "crb1300:10:1.15": {
+      "title": "ABB CRB 1300-10/1.15",
+      "asset": {
+        "asset_id": "a5aa81db-8b25-5e83-a767-7127fd3dce0c",
+        "package_digest": "ddffe06bd452d31fdf84731a281a04c7ff0ae7d67d787f3a6112f9d4ee36631f",
+        "package_path": "04_设备/abb/crb_1300-10-1.15__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1300_10_1_15_8a2bb6a8/module.json",
+      "module_sha256": "d0dcf878143e72090a4a4b0e9152f3f622019bf58a92615cd9e72cd3affb51a6"
+    },
+    "crb1300:11:0.9": {
+      "title": "ABB CRB 1300-11/0.9",
+      "asset": {
+        "asset_id": "b7b7a7cc-cc3d-5bef-82dd-bec759137dfe",
+        "package_digest": "8ea51fdf6894e1d4d9fc53c75c8cba5887f5da2d9da3278d622fc04d8b2e3bbb",
+        "package_path": "04_设备/abb/crb_1300-11-0.9__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1300_11_0_9_37b0866f/module.json",
+      "module_sha256": "d847cc3fec53701a5430d180ff75051ff5c9947387efbd2ef80a84c080137112"
+    },
+    "crb1300:7:1.4": {
+      "title": "ABB CRB 1300-7/1.4",
+      "asset": {
+        "asset_id": "2eebcb7d-7812-56a4-aed2-c1eb4f9c32a3",
+        "package_digest": "c6a7abb4f93c86ad8e89d6ec330fe75f162078e3ecc7cb298644df7bdab032ab",
+        "package_path": "04_设备/abb/crb_1300-7-1.4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1300_7_1_4_fe4f544e/module.json",
+      "module_sha256": "8732424e729f4039171e784d77ba998508736e2eaa99fbca47a981cc03b4c4d9"
+    },
+    "crb15000:10:152": {
+      "title": "ABB CRB 15000 10-152",
+      "asset": {
+        "asset_id": "998e1ef6-8d98-5295-9624-7565694ecc71",
+        "package_digest": "75289d7db67cd4acae70169d8069d1b61b9991c517440dcfd1bee0a83d62b0fc",
+        "package_path": "04_设备/abb/crb_15000_10-152__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb15000_10_152_36baa1e4/module.json",
+      "module_sha256": "c5afccc8621c9b9bd59be3cc63856fa66676abbb097844bc50e3e5e20ee9c6d1"
+    },
+    "crb1910:10:1.52": {
+      "title": "CRB 1910-10/1.52",
+      "asset": {
+        "asset_id": "4fb0d6ac-0ec5-53de-86bc-bbc5369123c0",
+        "package_digest": "8cc13c86514fe3c312df2ee00d296eb6ec9e135593e96fd376afbbe67cf586fd",
+        "package_path": "04_设备/abb/crb_1910-10_1_52__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1910_10_1_52_80feb461/module.json",
+      "module_sha256": "861ba82a5af76973edeffdb652632efe49141f8c026828e2d39232ea32c2d255"
+    },
+    "crb1910:13:1.34": {
+      "title": "CRB 1910-13/1.34",
+      "asset": {
+        "asset_id": "2d93d93b-6994-57f6-9c5d-57124eeca644",
+        "package_digest": "a375dc7f31cdff534fc7f4a2c6467a1f5051dad897ea62843100987f0dbf95dc",
+        "package_path": "04_设备/abb/crb_1910-13_1_34__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1910_13_1_34_d073e999/module.json",
+      "module_sha256": "c73052d686b1b4f3159054bac99ca4fcc80c2a2b84464811c654070ac16472e8"
+    },
+    "crb1920:16:1.96": {
+      "title": "CRB 1920-16/1.96",
+      "asset": {
+        "asset_id": "b0c7a7b9-04ba-57b8-8a40-eede81087eec",
+        "package_digest": "1f9e018de50b7c8a9eeedb73c69f9c8829c2c4b612ea7c4cbaf3d7c222449246",
+        "package_path": "04_设备/abb/crb_1920-16_1_96__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1920_16_1_96_c979ed6d/module.json",
+      "module_sha256": "513f2881471ada05457466c49454c5a08bd8a2b59572d70d0097209c72e24c49"
+    },
+    "crb1920:20:1.67": {
+      "title": "CRB 1920-20/1.67",
+      "asset": {
+        "asset_id": "f069f930-a0cb-54e5-b654-e87470c7525c",
+        "package_digest": "b7839f7eaf3bb6e13ee1e8f2a2f88b7d0e5fad96d24a5a5b2eb86e10c02f14d3",
+        "package_path": "04_设备/abb/crb_1920-20_1_67__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1920_20_1_67_58c9d1c0/module.json",
+      "module_sha256": "20eb259259899b30954142ff7ca0b0c882de88d9a67a4d9d5844b115d8cb522e"
+    },
+    "crb1920:30:1.35": {
+      "title": "CRB 1920-30/1.35",
+      "asset": {
+        "asset_id": "bc10637a-ba42-50e5-a058-897891619273",
+        "package_digest": "c446b38b49734ceab3a432f13c49fa63093c0c00ad1c3c17218dd89af27f76ed",
+        "package_path": "04_设备/abb/crb_1920-30_1_35__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/crb1920_30_1_35_74de27b7/module.json",
+      "module_sha256": "7c71664a3413e6630096699e6c5cd931e6f723f44cf756cc9a322e7ee05ac5ea"
+    },
+    "irb1090:3.5:0.580": {
+      "title": "IRB 1090-3.5/0.580",
+      "asset": {
+        "asset_id": "f530890e-f545-591c-883e-b248633d100f",
+        "package_digest": "86e7b784426f9d559915ddf2a8add23bbd57154baad96f3e6d2310fb8cf940db",
+        "package_path": "04_设备/abb/irb_1090-3_5_580__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1090_3_5_0_580_f44dda62/module.json",
+      "module_sha256": "8d1c8545570ed271a226bf7336a54576a03cf0446f0283768f1ea8b4fd70b53d"
+    },
+    "irb1100:4:0.58": {
+      "title": "ABB IRB 1100-4/0.58",
+      "asset": {
+        "asset_id": "44800a4f-41ed-587d-a7f2-6a9d0e56d341",
+        "package_digest": "1a56f4d1c970b9a2c369a6308e4a62fa0eac9718cf97b0827b2b6a7c06904aa7",
+        "package_path": "04_设备/abb/irb_1100-4-0.58__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1100_4_0_58_ca270f43/module.json",
+      "module_sha256": "246a416398ced0880904b9ab5f0c6bdf017c22b8e2783b1316f5fe66e91d8047"
+    },
+    "irb1100:4:0.580": {
+      "title": "IRB 1100-4/0.580",
+      "asset": {
+        "asset_id": "d9b94f38-70a4-589a-b0ae-fc4c6151198d",
+        "package_digest": "511631ba2d4415b799b80522540d2b0d8ab491c6a5aef2d760ec1a327ef5be45",
+        "package_path": "04_设备/abb/irb_1100-4_0_580__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1100_4_0_580_cff532ce/module.json",
+      "module_sha256": "605ba1af157cdaf903ec1511f4e55e0495ce5b6eacffc6290c15477359ac01c3"
+    },
+    "irb120": {
+      "title": "ABB IRB 120",
+      "asset": {
+        "asset_id": "6c725717-aae1-5228-aab5-2460fcfcb92c",
+        "package_digest": "d8d34036a516eb413a2984c30bba9030d1a38ac9f449f9db97053609514c0a10",
+        "package_path": "04_设备/abb/irb_120__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb120/module.json",
+      "module_sha256": "430fbb510b13b94c2ba384769f37e02e668aa3903fa1835b0de9b682bd9736bb"
+    },
+    "irb1200:7:0.7gen2": {
+      "title": "IRB 1200-7/0.7 Gen2",
+      "asset": {
+        "asset_id": "7227c861-00e0-5c4a-a2e5-d745a873a5da",
+        "package_digest": "08b3113c2bd86c1b098df90a3f03a076b17e64f9c71779b091483adb31702673",
+        "package_path": "04_设备/abb/irb_1200-7_0.7_gen2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1200_7_0_7gen2_4d03aec1/module.json",
+      "module_sha256": "9a33b5d86455c4344bcbd68610b4a31b76f42a4b243971e41c0b821276d07ab8"
+    },
+    "irb1200:8:0.9gen2": {
+      "title": "IRB 1200-8/0.9 Gen2",
+      "asset": {
+        "asset_id": "44f414a8-1ccf-5bfd-83ea-2833e82becff",
+        "package_digest": "b7343b9e3d3b9fce532ab43538f2601d3fe91bc4813da58f58f1121683806d49",
+        "package_path": "04_设备/abb/irb_1200-8_0.9_gen2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1200_8_0_9gen2_22102f5f/module.json",
+      "module_sha256": "80e0e0b17b63b5679d23b1dbb5b2469524d143decd6397d56eea904b7290b96c"
+    },
+    "irb1200:9:0.7gen2": {
+      "title": "IRB 1200-9/0.7 Gen2",
+      "asset": {
+        "asset_id": "0db4838f-d16a-54df-80bf-3445cdcb22e2",
+        "package_digest": "de72d2a88fa487e44c2cfd7692890b0bfeb2c64a1e466e135054680669567b53",
+        "package_path": "04_设备/abb/irb_1200-9_0.7_gen2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1200_9_0_7gen2_701541fe/module.json",
+      "module_sha256": "1e4b97b2d63b5b21cfe32253d03b6eb2a638d121c70b3eb8525c812c1aac813b"
+    },
+    "irb120:3:0.6": {
+      "title": "ABB IRB 120-3/0.6",
+      "asset": {
+        "asset_id": "f1c5fa99-9a21-595c-83d5-76a1efe583eb",
+        "package_digest": "f10c1521a1428f53995ee8d2444d33e2298d1467b1fe0e44ec96ea21cb03061b",
+        "package_path": "04_设备/abb/irb_120-3-0.6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb120_3_0_6_88750f94/module.json",
+      "module_sha256": "1e88757183e5e5fed88163e60278e715e60edbfbc4a1e79bfda2c29c5d284ec0"
+    },
+    "irb1300:12:1.4": {
+      "title": "IRB 1300-12/1.4",
+      "asset": {
+        "asset_id": "59c740c8-ddef-51f3-b080-187d28857885",
+        "package_digest": "982f34e65f0017df9f58a28303eaf0da3bda6abbeec6a2d148563ac17b1b4aa6",
+        "package_path": "04_设备/abb/irb_1300-12_1_4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1300_12_1_4_b2f8265c/module.json",
+      "module_sha256": "bd39b7affcf6d5a8b262e2a44c6b5c8ce589a7ec024c3d2352c6e2aacf41b6d7"
+    },
+    "irb140:6:0.8": {
+      "title": "ABB IRB 140-6/0.8",
+      "asset": {
+        "asset_id": "51ea8ac4-5700-5d7b-b540-2f4d0e56cde1",
+        "package_digest": "6e1dbf8ebeca620bb30b4120b2c8e690e0953e1798da1cf2c2ec906a78d79fbe",
+        "package_path": "04_设备/abb/irb_140-6-0.8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb140_6_0_8_956dde08/module.json",
+      "module_sha256": "763466dcb1ce20f3c4e0c954425f8bc5222ad4e88932f0a2f1d0338399f748bc"
+    },
+    "irb1600:10:1.45": {
+      "title": "ABB IRB 1600-10/1.45",
+      "asset": {
+        "asset_id": "87a8b91e-c797-5ecd-8913-20a7b4259ecb",
+        "package_digest": "75b2adaba2d2e6d918838ff3c83b8d9c267579473b1bce6747a37550af98f0f8",
+        "package_path": "04_设备/abb/irb_1600-10-1.45__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1600_10_1_45_bc4e5e19/module.json",
+      "module_sha256": "49268b1573021a047c884d7e8c7fb5642e7131a78b23d19efc6fa8fbb11031ad"
+    },
+    "irb1600:8:1.2": {
+      "title": "ABB IRB 1600-8/1.2",
+      "asset": {
+        "asset_id": "51906b9f-1121-5bc3-a2d6-0c6845f47cab",
+        "package_digest": "1fa57b3043070d85089772a2489a5966a3a41b871601383f6b676571d3b69d69",
+        "package_path": "04_设备/abb/irb_1600-8-1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1600_8_1_2_08d0345b/module.json",
+      "module_sha256": "09eeb372aa70f1e9695b57eb3e5ba0d67b9dc8f8952661c1d7701c7962565544"
+    },
+    "irb1600:8:1.45": {
+      "title": "ABB IRB 1600-8/1.45",
+      "asset": {
+        "asset_id": "c14aedfb-480a-5745-a411-ab1649c65b12",
+        "package_digest": "435fc06ec52781700d28c301c9eeefc11ff5920ec38566980b92337556b34eb8",
+        "package_path": "04_设备/abb/irb_1600-8-1.45__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1600_8_1_45_4bacffcf/module.json",
+      "module_sha256": "d3e3bcaf8e9ecf00a766f866d3babd7a7cbc474f438a8cd77b6fa7fd42fd84e0"
+    },
+    "irb1600id4:1.5": {
+      "title": "ABB IRB 1600ID-4/1.5",
+      "asset": {
+        "asset_id": "833df5a9-5e18-5e5f-90f7-fa7b0ecc2602",
+        "package_digest": "e77226305c767710a65ef6832e67bccf6e0d054377893c77ff25689acea4441f",
+        "package_path": "04_设备/abb/irb_1600id-4-1.5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1600id4_1_5_d9227e92/module.json",
+      "module_sha256": "58d64a99c360e8f86ff920144879f9b7f740b4b5057166e8bf3b4c910ab6a6a6"
+    },
+    "irb1660:4:1.55": {
+      "title": "ABB IRB 1660-4/1.55",
+      "asset": {
+        "asset_id": "48112c39-5f3c-511d-a537-917b5d71abf1",
+        "package_digest": "b7b333b0d7f6ef668cf7a90d74910209685e9c12295c9ecf4102d3b3f5d4964f",
+        "package_path": "04_设备/abb/irb_1660-4-1.55__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1660_4_1_55_8d47ab23/module.json",
+      "module_sha256": "0ce626db363f10b345c157f87bed5f889f6e259f8156b19c376fff1785be485d"
+    },
+    "irb1660id4:1.55": {
+      "title": "ABB IRB 1660ID-4/1.55",
+      "asset": {
+        "asset_id": "13706510-c290-5370-b1da-bcdd1791d6c5",
+        "package_digest": "bad995ff657146e328d5f92186ce02f37f3d589a6d10d3f9e30724ab91155664",
+        "package_path": "04_设备/abb/irb_1660id-4-1.55__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1660id4_1_55_16c4b9c0/module.json",
+      "module_sha256": "be9d3c2300f8ae4ea5a1ca15c7fec81d64e951e24870aa1bb4df8570bf1a0671"
+    },
+    "irb1660id6:1.55": {
+      "title": "IRB 1660ID-6/1.55",
+      "asset": {
+        "asset_id": "6da352dd-4b20-5201-b614-4465f287a7c7",
+        "package_digest": "9f2724f5cfd7cb9260e44d5bca1ba427b23a7839807b8e64938733684d78e38a",
+        "package_path": "04_设备/abb/irb_1660id-6_1_55__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb1660id6_1_55_753cd877/module.json",
+      "module_sha256": "2985a5bad59bf7547d47140bf0d9b83471b40809d03afee31fab9c742a2477e6"
+    },
+    "irb2600id8:2.00": {
+      "title": "ABB IRB 2600ID-8/2.00",
+      "asset": {
+        "asset_id": "0ede4e71-15df-5ac1-a177-148349735056",
+        "package_digest": "98efc84326a876c38a1e5b290f13e7c1c7b917cd058fbf233a7ff081a0deef93",
+        "package_path": "04_设备/abb/irb_2600id-8-2.00__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb2600id8_2_00_731d6a88/module.json",
+      "module_sha256": "9b53f11fdee35647749a69ce93bbbad9e7172fbdafadefe856f3c24f734dad0c"
+    },
+    "irb5500:23": {
+      "title": "ABB IRB 5500-23",
+      "asset": {
+        "asset_id": "d4e6a88c-dea5-5bf7-9c8a-06bc8b65a341",
+        "package_digest": "3b5786a28e8ce8d9c857b8ddcbded76c39887421f3bb14cae471e5d6fb1f70d6",
+        "package_path": "04_设备/abb/irb_5500-23__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5500_23_ca230e7f/module.json",
+      "module_sha256": "4f031dcc70fdb65b2379f024db0541d171d649f5327b00e49c64060fe7dde8d4"
+    },
+    "irb5500:27": {
+      "title": "ABB IRB 5500-27",
+      "asset": {
+        "asset_id": "5cd0d640-3693-56f3-88ab-899f7f65ef68",
+        "package_digest": "8068f666568564fc0bae2877bda3b27d1cabb36655a8b1c2d80fa04601b0446c",
+        "package_path": "04_设备/abb/irb_5500-27__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5500_27_450495bd/module.json",
+      "module_sha256": "e6412adb06f5d7fcb7f0a70dbc0c4bf279fa172ddbdde8e80b3f0f122d9192e9"
+    },
+    "irb5510": {
+      "title": "ABB IRB 5510",
+      "asset": {
+        "asset_id": "739ce522-3809-58a4-9b71-b0743de82759",
+        "package_digest": "d3b4d9da14d8e5ffefd5cc9557781f130e40f0782aed940550fa399b4ecaaed4",
+        "package_path": "04_设备/abb/irb_5510__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5510/module.json",
+      "module_sha256": "b8718fb5a6c9ea89e5dff39abac307244a91fa399801a4dcacdc51d20c6285cb"
+    },
+    "irb5710:70:2.7lid": {
+      "title": "IRB 5710-70/2.7 LID",
+      "asset": {
+        "asset_id": "8cbdf777-0923-52bc-be57-800330e70a5e",
+        "package_digest": "bd3e7d3c7f785701a568e6b2a878c9abe4ef93d6707796a1d5ca876b29dd70e7",
+        "package_path": "04_设备/abb/irb_5710-70_2_7_lid__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5710_70_2_7lid_5629a9e1/module.json",
+      "module_sha256": "c2e7ad0bdab998353cce1a167491ee4ce24fae58b0bd57539350e4a8eca790ae"
+    },
+    "irb5710:90:2.3lid": {
+      "title": "IRB 5710-90/2.3 LID",
+      "asset": {
+        "asset_id": "a16cd15b-e23b-5aae-a058-dfc1bc49c31f",
+        "package_digest": "c001c95e50eea08926067062ee4601a02fe5dead662458ddfc033b9f16cf4531",
+        "package_path": "04_设备/abb/irb_5710-90_2_3_lid__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5710_90_2_3lid_a2b422d9/module.json",
+      "module_sha256": "679082dca20703a425aecc03b65753993ac95a05790749e9a0ab254d3932cf52"
+    },
+    "irb5720:155:2.6lid": {
+      "title": "IRB 5720-155/2.6 LID",
+      "asset": {
+        "asset_id": "67bc8944-c117-5819-9ae3-772f0cab1274",
+        "package_digest": "aebf3f92ada94a87db8e075cc3764994ac60db417fa826ae300b267eb522d60a",
+        "package_path": "04_设备/abb/irb_5720-155_2_6_lid__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5720_155_2_6lid_d219c260/module.json",
+      "module_sha256": "b8ecb26d03438d26fdaf42ed387ce62d69e73b093b29e02996240bbbaae9a154"
+    },
+    "irb5720:90:3.0lid": {
+      "title": "IRB 5720-90/3.0 LID",
+      "asset": {
+        "asset_id": "6d4e130c-77b3-5cd8-80d2-f50bded39aef",
+        "package_digest": "d89bf2868f527b9d5824465c56c2fa8a4a788e076c5e43397176c4f21817810e",
+        "package_path": "04_设备/abb/irb_5720-90_3_0_lid__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb5720_90_3_0lid_51c8c30b/module.json",
+      "module_sha256": "57136a31522f5e0ae08d5ff91b3714cb04eae25fde3e6897295acf7d6c469812"
+    },
+    "irb6620:150:2.2": {
+      "title": "ABB IRB 6620-150/2.2",
+      "asset": {
+        "asset_id": "8468aa0d-4188-57eb-9d2e-776af7c098a9",
+        "package_digest": "169277a0de11ccb1b1803538caa674acdf05912700c1150c26368a502fe51aa0",
+        "package_path": "04_设备/abb/irb_6620-150-2.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb6620_150_2_2_a9bcd284/module.json",
+      "module_sha256": "c829513bf70fdcf7aaa215c442530941069f96860607c9f884c7cbfa21c76275"
+    },
+    "irb910inv3:0.35": {
+      "title": "IRB 910INV-3/0.35",
+      "asset": {
+        "asset_id": "35d9aa28-0307-5723-a87c-94bc35709670",
+        "package_digest": "9fed9986943434b523342b860b83fe279deeb717bcfca14ad1f889bc898639f7",
+        "package_path": "04_设备/abb/irb_910inv-3_0_35__r004"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb910inv3_0_35_95f182fa/module.json",
+      "module_sha256": "71f5d7f28eb0036382275a9ca8d188dedb662a4550409920d5d085c18a13c01b"
+    },
+    "irb910inv6:0.55": {
+      "title": "IRB 910INV-6/0.55",
+      "asset": {
+        "asset_id": "0e62e089-56bd-5ce3-9a7c-0560632e5f18",
+        "package_digest": "4df6980944d83d63e580c1b7c79d8d2efdf5ac53c5b2f613e0bdb2de7d8f7447",
+        "package_path": "04_设备/abb/irb_910inv-6_0_55__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb910inv6_0_55_b72e4fc8/module.json",
+      "module_sha256": "e24f5f0432d94ac08eef596f59a3ac7529576fcaf06eca6fb6d87586d8a73c9c"
+    },
+    "irb910sc3:0.45": {
+      "title": "IRB 910SC-3/0.45",
+      "asset": {
+        "asset_id": "22af2ebc-75e0-58b8-bc5e-aed729495d6f",
+        "package_digest": "db59856d7c71a02caec74e1eea206f50c06b9f4fcf8a45d4e1dfb13a2043a9b5",
+        "package_path": "04_设备/abb/irb_910sc-3_0_45__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb910sc3_0_45_940c92e8/module.json",
+      "module_sha256": "c21cbdd66203246d57fd7fd8240e068e7763b65c75ab3322a72302e36d8cb578"
+    },
+    "irb910sc3:0.55": {
+      "title": "IRB 910SC-3/0.55",
+      "asset": {
+        "asset_id": "11d2d079-52b7-5e0f-8763-48bdd9e83dbe",
+        "package_digest": "0c16fcf6116a1debe0b03cbd23b712ffbd843fa95f534f42f037482a05c2129a",
+        "package_path": "04_设备/abb/irb_910sc-3_0_55__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb910sc3_0_55_215b266c/module.json",
+      "module_sha256": "17296d72a3bc0d2c9b6b26217d5b47dd3375fa7ed883e21c41eafcbc2e4da9df"
+    },
+    "irb920t6:0.45": {
+      "title": "IRB 920T-6/0.45",
+      "asset": {
+        "asset_id": "80476ed0-a0b3-59f3-ad61-7f4836e811f8",
+        "package_digest": "d7507879f4e6792f666e0dcd5ea74eecdfc94ce9d7b8d2148d919ab9c9d54a87",
+        "package_path": "04_设备/abb/irb_920t-6_0_45__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb920t6_0_45_23608549/module.json",
+      "module_sha256": "31c41aa657ee1314983dd9b15a8772a8aeaa4feafd2aa90493f6b14344f86b45"
+    },
+    "irb930:12:0.85": {
+      "title": "IRB 930-12/0.85",
+      "asset": {
+        "asset_id": "b8933c12-1d16-5c25-99ad-d7c778385b1a",
+        "package_digest": "3e4bf58ba8afa31e7a413edab31414c4dc2931e42ce489befa168491f1fc2365",
+        "package_path": "04_设备/abb/irb_930-12_0_85__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb930_12_0_85_86639c2a/module.json",
+      "module_sha256": "565774813d317662c65a52daf1c27b7fe65b05cd7bae2aa663361e6a723c9536"
+    },
+    "irb930:12:1.05": {
+      "title": "IRB 930-12/1.05",
+      "asset": {
+        "asset_id": "6513eca8-2c76-5bd2-ba96-dc33a481cb6f",
+        "package_digest": "be6e6b8c8bf709a67d73f3f1ae6b67286374e6442426ccc20187e05f280496cc",
+        "package_path": "04_设备/abb/irb_930-12-1.05__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb930_12_1_05_29a43c3d/module.json",
+      "module_sha256": "96fa8c4f5acf9439cba03b32d05a072dc85c4d503e9e20e5034d6931e4c288f7"
+    },
+    "irb930:22:1.05": {
+      "title": "IRB 930-22/1.05",
+      "asset": {
+        "asset_id": "d8aa09c3-5cb1-5e8d-99fc-887d9c303645",
+        "package_digest": "6c6b3ba14400e740c086a426b4f7d208e7cccb97f62bd45f5314a80c3726502b",
+        "package_path": "04_设备/abb/irb_930-22-1.05__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb930_22_1_05_421be141/module.json",
+      "module_sha256": "1c98e0a4b3c7aa6d385f662d56e0ade0954f61eff8fce9e9cfe150508fd7d179"
+    },
+    "powacrb1910:10:1.52": {
+      "title": "ABB PoWa CRB 1910-10/1.52",
+      "asset": {
+        "asset_id": "ddf63c7d-a251-5fd4-b94b-0a5a377e14b8",
+        "package_digest": "027cf56239e8d9a10830871cbcbfcce468fd6f314c5f00b0bcc43f08a73c6e81",
+        "package_path": "04_设备/abb/powa_crb_1910-10-1.52__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/powacrb1910_10_1_52_6abcad79/module.json",
+      "module_sha256": "9651aa4b5fe1e3fd2331a17e5dc93ebc2f7c50cdbf5e7155a981850d87691f74"
+    },
+    "irb260": {
+      "title": "ABB IRB 260｜多源合并",
+      "asset": {
+        "asset_id": "9e55b076-3c54-5d7f-bd61-23434ada93f2",
+        "package_digest": "d163613b62891414de3bf536640530a843e9156d6162965b7ff21c2d26807548",
+        "package_path": "04_设备/abb/irb260__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb260/module.json",
+      "module_sha256": "4a0d3576c550ab8fed2081fcdf9ca2c15e9fc0afe6ba5741f332d23a5293d508"
+    },
+    "irb460": {
+      "title": "ABB IRB 460｜多源合并",
+      "asset": {
+        "asset_id": "b69266f1-1a3c-5d32-b4c5-dca027402cca",
+        "package_digest": "4e6eea3f4cbb49fff56c965a8a0ce5e5ddaecd858e0231bac2c002861692cc29",
+        "package_path": "04_设备/abb/irb460__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irb460/module.json",
+      "module_sha256": "bd78603b56854602952d819168623b684cbd2729f416971086627e3692aed77f"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "abb_irb1200_5_90_moveit_config_70239feb9a",
+      "manifest": "source_profiles/abb_irb1200_5_90_moveit_config_70239feb9a/source.lock.json",
+      "sha256": "edf9e31644e4d5e4e197235dafd59343a39b363fca6c99ad9cb5ae7dd3864f06",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb1200_5_90_moveit_config_fa64d84a6d",
+      "manifest": "source_profiles/abb_irb1200_5_90_moveit_config_fa64d84a6d/source.lock.json",
+      "sha256": "e9c6ff0c39c5c943194c4145814289701e5d51f88ff1a3340a7997862866259b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb1200_7_70_moveit_config_4f0d714620",
+      "manifest": "source_profiles/abb_irb1200_7_70_moveit_config_4f0d714620/source.lock.json",
+      "sha256": "4bad4afd46e06c16048c31cf8033d3f6a19a4f9bcc862d4a46f387faad422d85",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb120_moveit_config_b6dc13d6a9",
+      "manifest": "source_profiles/abb_irb120_moveit_config_b6dc13d6a9/source.lock.json",
+      "sha256": "77455c2f24103391880468c5ef063130c7244fbda03e0aa774f87254373ef5c4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb120t_moveit_config_8d0f1eda8f",
+      "manifest": "source_profiles/abb_irb120t_moveit_config_8d0f1eda8f/source.lock.json",
+      "sha256": "648fab95287e04d886a9e3c703db8e5bbdee1091b11c3f98929da6093c2823d6",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb1600_6_12_moveit_config_37fb4d02f2",
+      "manifest": "source_profiles/abb_irb1600_6_12_moveit_config_37fb4d02f2/source.lock.json",
+      "sha256": "d641bc900beba68ad624c631a21b6dee9cbc0f2640896b5970eff6fae41021f5",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb2400_moveit_config_c887037491",
+      "manifest": "source_profiles/abb_irb2400_moveit_config_c887037491/source.lock.json",
+      "sha256": "bdc1859b8f5e1947ba6c0645e6687d1fb8592da2d71f8cc3d5ce596865ad99e8",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "abb_irb6640_moveit_config_51ff19be95",
+      "manifest": "source_profiles/abb_irb6640_moveit_config_51ff19be95/source.lock.json",
+      "sha256": "288fabc47bf6b46be530cb431b9a544fd49c4bae435a0ba7d3baeef7fb889f1e",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

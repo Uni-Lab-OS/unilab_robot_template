@@ -1,0 +1,292 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "hyundai",
+  "models": {
+    "ha006b": {
+      "title": "Hyundai HA006B",
+      "asset": {
+        "asset_id": "729c24ec-ea78-51e0-8938-489fbd3d6a7a",
+        "package_digest": "952e3c665e6b2233094f6d58035ef335123726f070786ba237ade9a6cd2e498f",
+        "package_path": "04_设备/hyundai_robotics/ha006b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ha006b/module.json",
+      "module_sha256": "229857fc9980fd2d19cb3383a57558b5a25389a7527e4f9af097b35fd6439bd1"
+    },
+    "ha006l": {
+      "title": "Hyundai HA006L",
+      "asset": {
+        "asset_id": "ac1facae-33bb-5681-8498-fcee6bfa9b47",
+        "package_digest": "86775bc4de5f47fa0c24f5d8013eaa2144c3fa8bc18013582f36577900e39ba0",
+        "package_path": "04_设备/hyundai_robotics/ha006l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ha006l/module.json",
+      "module_sha256": "76ea7ca5d2f0fe2ae5ff024499f47fe96063bcb6a889b91df381ce4534244e7b"
+    },
+    "hdr35:20": {
+      "title": "Hyundai HDR35-20",
+      "asset": {
+        "asset_id": "6ef8df05-6ee4-5337-abaf-b692c770262f",
+        "package_digest": "27715094421114765c8276419c8c55637f468cdcdfd5c51ca17ecbc9b5ef1a48",
+        "package_path": "04_设备/hyundai_robotics/hdr35-20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hdr35_20_aa615a5c/module.json",
+      "module_sha256": "2ee3ed683ce016f5823db698f68c8a59fc3da87d3584324d278f4178b440b58f"
+    },
+    "hh010l": {
+      "title": "Hyundai HH010L",
+      "asset": {
+        "asset_id": "d160817f-44d1-5fab-9e36-ddc56ac24dc6",
+        "package_digest": "33b72d3c7d2ce43a99ded9deeb6c192035dfd893fa9432f41d21549db1f19528",
+        "package_path": "04_设备/hyundai_robotics/hh010l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh010l/module.json",
+      "module_sha256": "4fb6148cc8d63b91b3dab0bf8057de2738e96eb02344c9f3574c129e093ca7b4"
+    },
+    "hh012": {
+      "title": "Hyundai HH012",
+      "asset": {
+        "asset_id": "20d1fdec-18bd-503a-a014-3e8879877912",
+        "package_digest": "fa0ba7d483cdc88d2a20325ad5cb103d175e9edf0a47de7263891a9ac878c67c",
+        "package_path": "04_设备/hyundai_robotics/hh012__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh012/module.json",
+      "module_sha256": "3aba0290beb73a5703d640487a8faafad61e8681ea01310d546350e41398ee1b"
+    },
+    "hh012a": {
+      "title": "Hyundai HH012A",
+      "asset": {
+        "asset_id": "ed14dbeb-8bed-50de-99c4-4cc2187023f6",
+        "package_digest": "549817c972b0a3489c90775195f613581d73f2d62f9c89dd6135a6a3306f6478",
+        "package_path": "04_设备/hyundai_robotics/hh012a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh012a/module.json",
+      "module_sha256": "ecc13b86e5c1d9bfc43d884e6605b6f3f48a47ceed2c249dc94ffb5877b97aea"
+    },
+    "hh020": {
+      "title": "Hyundai HH020",
+      "asset": {
+        "asset_id": "deb2fc75-d6ef-5068-9136-a3ff6f8b1ec8",
+        "package_digest": "2390ed48f113d6ad2aec809a39bda95bb296ef7b2c07cabf76cb2d7aa53ec13b",
+        "package_path": "04_设备/hyundai_robotics/hh020__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh020/module.json",
+      "module_sha256": "770eaacf19520dbd4013c1f0eb420126e3ab15a221ec7412dfe8819c70b41ee1"
+    },
+    "hh020l": {
+      "title": "Hyundai HH020L",
+      "asset": {
+        "asset_id": "b06819ce-134e-5c24-8ce2-d41578fbd3a2",
+        "package_digest": "81cf8ae6a840a47264a28d93e24aff1eca2547e35bfa633ef1fd536405985635",
+        "package_path": "04_设备/hyundai_robotics/hh020l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh020l/module.json",
+      "module_sha256": "8e876130ac8b875b25cc2a6787b18eb1711782d2e7053bffa1f9eb4f89f8ab88"
+    },
+    "hh030l": {
+      "title": "Hyundai HH030L",
+      "asset": {
+        "asset_id": "6421a044-654b-5775-8622-de8a731ca950",
+        "package_digest": "1f9eec319de798b9c028411f660e337da9cf4b5504452612240a95623bb1df9e",
+        "package_path": "04_设备/hyundai_robotics/hh030l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh030l/module.json",
+      "module_sha256": "c32bbfc6b2ca1840052dfbd293020d3fff6e6ac18b8664dfc3d15461e5f23710"
+    },
+    "hh050": {
+      "title": "Hyundai HH050",
+      "asset": {
+        "asset_id": "c4843bd0-cbdc-5ba4-abd1-cc5b02d08613",
+        "package_digest": "51a66adc2fe5c527b04fa4d8361ce079b975202497c1c54263a8b555b6e396ce",
+        "package_path": "04_设备/hyundai_robotics/hh050__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh050/module.json",
+      "module_sha256": "6c240021c2d5ac21fda4bd065e509b46a2a0b8560b0e3f46e4a4317752a22453"
+    },
+    "hh4": {
+      "title": "Hyundai HH4",
+      "asset": {
+        "asset_id": "d6c7b924-b773-5dd1-965b-c4f8d17ba479",
+        "package_digest": "fe5e8d74b5a3196aa6bd26d2dc7647df88a13fca5d37855307bf13a47f0e162e",
+        "package_path": "04_设备/hyundai_robotics/hh4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh4/module.json",
+      "module_sha256": "74faa4c2453bbcb4297b7211b23df4285986c64c9a1d136aabfe44a540469483"
+    },
+    "hh4l": {
+      "title": "Hyundai HH4L",
+      "asset": {
+        "asset_id": "8ea953b2-9893-5cc5-8281-b28397a1fcd5",
+        "package_digest": "6b43709c1112bdb25341c70f0eaa36e51ef10654cd7a9a67e8b900df31b2c926",
+        "package_path": "04_设备/hyundai_robotics/hh4l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh4l/module.json",
+      "module_sha256": "27ddf0c6e51dee706dfcad1cfc2d6b47399baf9a7476fdaeee979cf42e21b1d0"
+    },
+    "hh7": {
+      "title": "Hyundai HH7",
+      "asset": {
+        "asset_id": "a2eac7e4-fb5d-5cbe-90bf-132e6b1ee766",
+        "package_digest": "a499ef52f583382f78e9febb90a081ba87565f49676799f3651961101a613a86",
+        "package_path": "04_设备/hyundai_robotics/hh7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh7/module.json",
+      "module_sha256": "f9f1ce20d319e9c67e45ce8624fa30e08ef9b86f5ae19cbe922bc73d1a0a0a20"
+    },
+    "hh8": {
+      "title": "Hyundai HH8",
+      "asset": {
+        "asset_id": "cf3715cc-ac4f-5c8d-98e3-078509805589",
+        "package_digest": "8d2a7212290c974c3f97cf52b711f0463ee4db57c8fc2218820869b392ec12e1",
+        "package_path": "04_设备/hyundai_robotics/hh8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hh8/module.json",
+      "module_sha256": "319efc2d0f3533547148f691687e0a284da642ac112d30ef757aaab88f27cbc2"
+    },
+    "hs220": {
+      "title": "Hyundai HS220",
+      "asset": {
+        "asset_id": "1b0d2940-b925-50c9-96d9-34a553abcfbc",
+        "package_digest": "677b6db3482bba303e57313a63db14a7ee49fb5709229a0c03831a00cc9da5d1",
+        "package_path": "04_设备/hyundai_robotics/hs220__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hs220/module.json",
+      "module_sha256": "d46f6124b1896e96671fa2e25a675307cd9a9824f88cf0c2d511bb3506a3dffb"
+    },
+    "yl012": {
+      "title": "Hyundai YL012",
+      "asset": {
+        "asset_id": "94b3466b-54b9-52e1-9ce3-0749f5701738",
+        "package_digest": "975fb1ec5f2047720363b7da74fc9dd4a691aae033b7ebad103746b202a1065e",
+        "package_path": "04_设备/hyundai_robotics/yl012__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yl012/module.json",
+      "module_sha256": "5766d0a372eb561b98a0903dd492dae615ee3f6d7b0a195a3a81ae4bc1f62cac"
+    },
+    "ys080": {
+      "title": "Hyundai YS080",
+      "asset": {
+        "asset_id": "9ee23022-de33-5969-b34a-121fc5053b7c",
+        "package_digest": "a7678ad14eaec18b93eb9400813396975604826aac31457d452c26a5a8af1c4e",
+        "package_path": "04_设备/hyundai_robotics/ys080__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ys080/module.json",
+      "module_sha256": "e6596d03c6ec2b427c44b2ccf44f26b63b6e4ebb4c95757854607abe6ffaf74b"
+    },
+    "ys080l": {
+      "title": "Hyundai YS080L",
+      "asset": {
+        "asset_id": "b733eee9-49c0-5f6b-abfc-b682e96c47f7",
+        "package_digest": "e186826100c97aa0aa2061d84fbcb2274e8af1bd9c1736d8e9cfa9d8a8ad01a7",
+        "package_path": "04_设备/hyundai_robotics/ys080l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ys080l/module.json",
+      "module_sha256": "68d22135df392b03b7cddd00b95a2e75f27914a6ecbd0d93fabee571f6de919b"
+    },
+    "ys140d": {
+      "title": "Hyundai YS140D",
+      "asset": {
+        "asset_id": "6e8c0c19-3ef0-5848-9053-47b13630443f",
+        "package_digest": "040d70b05bc129eca6097fe6c290206ecd955ae2f48b83165ba8835c9097c429",
+        "package_path": "04_设备/hyundai_robotics/ys140d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ys140d/module.json",
+      "module_sha256": "d33d186f09a4765988dc3dde8abaf501c63ee9394bdb3bb15a7101387a918455"
+    }
+  },
+  "source_profiles": []
+}

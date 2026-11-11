@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "smc",
+  "model": "2:9409:1:50:4m6dua00831bracket",
+  "title": "SMC 2-9409-1-50-4-M6-DUA00831 Bracket",
+  "asset": {
+    "asset_id": "576361c1-52eb-58a4-9ecb-d3ff726781d8",
+    "package_digest": "66f19b8bf8b0ea53c9c00db5ba10740fd10890adcf339fdeea354fd582363916",
+    "package_path": "01_零部件/smc/2-9409-1-50-4-m6-dua00831_bracket__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "576361c1-52eb-58a4-9ecb-d3ff726781d8",
+      "package_digest": "66f19b8bf8b0ea53c9c00db5ba10740fd10890adcf339fdeea354fd582363916",
+      "package_path": "01_零部件/smc/2-9409-1-50-4-m6-dua00831_bracket__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0b50051ec57616c6f05404968226d9bc1278e89d28eb3ac4f91e74f308d62576",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/2-9409-1-50-4-m6-dua00831_bracket__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "2-9409-1-50-4-M6-DUA00831 Bracket",
+          "manufacturer": "SMC",
+          "variant": "",
+          "display": "SMC 2-9409-1-50-4-M6-DUA00831 Bracket",
+          "path": "tools/models/SMC-2-9409-1-50-4-M6-DUA00831-Bracket.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "576361c1-52eb-58a4-9ecb-d3ff726781d8"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SMC-2-9409-1-50-4-M6-DUA00831-Bracket.tool",
+        "path": "simready_usd/SMC-2-9409-1-50-4-M6-DUA00831-Bracket.tool",
+        "sha256": "3ae1e7ad13f3afa1cbd057c4c677bc79eeda1478b76205e5e104ee3238b787b1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "danobat",
+  "model": "dmtr200:2900",
+  "title": "DMTR-200-2900",
+  "asset": {
+    "asset_id": "8c8900ec-e12f-5625-8eb5-a7e6e0363cd7",
+    "package_digest": "41d3a0b0afbb0e674a94e9d8eb397ae6d0e9082f0e63fe04f815a5b0555379b4",
+    "package_path": "04_设备/danobat/dmtr-200-2900__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8c8900ec-e12f-5625-8eb5-a7e6e0363cd7",
+      "package_digest": "41d3a0b0afbb0e674a94e9d8eb397ae6d0e9082f0e63fe04f815a5b0555379b4",
+      "package_path": "04_设备/danobat/dmtr-200-2900__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "f5ff2f6af9ada76af2451e08d1427c4c57f42d64f84d0dc8ae4d2bdefd3999fa",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f80039534ba1e3948eb76a52c39a9cb1b1227243aa0a9f4323cdc7c91b17eb88",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/dmtr-200-2900__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "DMTR-200-2900",
+          "manufacturer": "DANOBAT",
+          "variant": "",
+          "path": "Components/DANOBAT/Robots/DMTR-200-2900.vcmx",
+          "type": "Robots",
+          "payload": "200",
+          "reach": "2900",
+          "vcid": "4bc3433b-24dc-4d2a-bc64-5864ac2d53ee",
+          "library_assets": [
+            "8c8900ec-e12f-5625-8eb5-a7e6e0363cd7"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/DMTR-200-2900.vcmx",
+        "path": "simready_usd/DMTR-200-2900.vcmx",
+        "sha256": "f5ff2f6af9ada76af2451e08d1427c4c57f42d64f84d0dc8ae4d2bdefd3999fa"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

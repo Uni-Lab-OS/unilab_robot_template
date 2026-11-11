@@ -1,0 +1,131 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "rainbowrobotics",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "rb10:1300": {
+      "title": "RB10-1300｜多源合并",
+      "asset": {
+        "asset_id": "efd20476-30b0-57e0-b20f-e1fa62b4bec9",
+        "package_digest": "462cfefda37f35eaf484c0a41be95288f7a081b6886c682c385362d478e4d830",
+        "package_path": "04_设备/rainbow_robotics/rb10_1300__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rb10_1300_d4b2a3da/module.json",
+      "module_sha256": "00abee47bce7c3783775a22cd73a787cf8a910a985cbfa9991bd53fa33347f91"
+    },
+    "rb3:1200": {
+      "title": "RB3-1200｜多源合并",
+      "asset": {
+        "asset_id": "bbbb306a-7758-52e5-b9c3-3344f200341b",
+        "package_digest": "da6e02780131fdd0dd2f91acbba08ef45c7069c023949b1e58a175c07b4fe2b5",
+        "package_path": "04_设备/rainbow_robotics/rb3_1200__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rb3_1200_8ceeaffe/module.json",
+      "module_sha256": "1f0827bc5316059b30f27b197f486d99cad4ee969c9b36d11df215a93c4461da"
+    },
+    "rb5:850": {
+      "title": "RB5-850｜多源合并",
+      "asset": {
+        "asset_id": "7a325619-c60e-5966-b37a-46337e7a3e29",
+        "package_digest": "02fa0d705b96c772c4e1f37e2e986686cdbc5ca32d67a25044936a3ea943a38b",
+        "package_path": "04_设备/rainbow_robotics/rb5_850__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rb5_850_067bcc52/module.json",
+      "module_sha256": "df1bf458a02005e66c5d62f1dad560c00d70f3e1fd380ee06e59aa891235b59c"
+    },
+    "rb16:900e": {
+      "title": "RB16-900E",
+      "asset": {
+        "asset_id": "28583d12-4eb6-545d-9d32-395d9a90e27b",
+        "package_digest": "ea4f71efd9cbe982378732ca1be6869ce6a7a41fed5f727f91fa79c43271606c",
+        "package_path": "04_设备/rainbow_robotics/rb16-900e__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb16_900e_4198f70d/module.json",
+      "module_sha256": "4c1bf870a1c63244a185d2e42ae57ec6a1f54d2ed70ad2638d2b7198986906c1"
+    },
+    "rb20:1900es": {
+      "title": "RB20-1900ES",
+      "asset": {
+        "asset_id": "cfa6c8b6-b061-5639-a7f0-53146cd77807",
+        "package_digest": "4cf7c8b46073829acb03b7257071ac2b769daa7a93a381719fa2890234ca9cb9",
+        "package_path": "04_设备/rainbow_robotics/rb20-1900es__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb20_1900es_3c5f97b1/module.json",
+      "module_sha256": "81befdc27c92c313a62bfbbd229e2690d203ef53f9eaef2420344efc194f88d3"
+    },
+    "rb3:630es": {
+      "title": "RB3-630ES",
+      "asset": {
+        "asset_id": "41165572-94e5-597c-87ae-4db21d81b18a",
+        "package_digest": "8ba05556ac71f02a3d61c693ff8276b0e464f0a2862c381d8b085f9d660decb6",
+        "package_path": "04_设备/rainbow_robotics/rb3-630es__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb3_630es_bef00cbe/module.json",
+      "module_sha256": "e321fd9d0ae93dc29e84dd558c789188e786f0d8689121a526b95fe6b481ecda"
+    },
+    "rb5:850a": {
+      "title": "RB5-850A",
+      "asset": {
+        "asset_id": "0cc1625a-4b87-500b-8fc8-71ec69f7071f",
+        "package_digest": "8e5f1ed1f28a2b5f12b4352d3a1c618944f2640c1a6855c0ed8a19abc8e495cd",
+        "package_path": "04_设备/rainbow_robotics/rb5-850a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb5_850a_c9d72482/module.json",
+      "module_sha256": "4c9b455fca49c3b7cf968d72454420bf7735ecffcdf95362796e7549a3f6624b"
+    },
+    "rb6:920es": {
+      "title": "RB6-920ES",
+      "asset": {
+        "asset_id": "e95d56c8-54c0-5eca-b7e4-5c98afb45dd9",
+        "package_digest": "dc116a5e555ecaca9920fd114564cb060cb1d8ee281275cbab1bf840785bbfd0",
+        "package_path": "04_设备/rainbow_robotics/rb6-920es__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb6_920es_9ccbc600/module.json",
+      "module_sha256": "2528548b47ba79d8e480d0705de04fcbee39ce42bdafa330c8b3125fb0231b6f"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,708 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "hexehqc",
+  "title": "HEX-E/H-QC",
+  "asset": {
+    "asset_id": "710ba7a0-5858-5fcb-9346-f4e2b0f7339a",
+    "package_digest": "2cba16243788f6cc15f7e4e823f14f8bdae9cc18824c4a17e357ff46e6ea36ff",
+    "package_path": "03_机构模块/onrobot/hex-e_h-qc__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "710ba7a0-5858-5fcb-9346-f4e2b0f7339a",
+      "package_digest": "2cba16243788f6cc15f7e4e823f14f8bdae9cc18824c4a17e357ff46e6ea36ff",
+      "package_path": "03_机构模块/onrobot/hex-e_h-qc__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "152148443ddbc0ae8b8932b519b8e8c4b989f7e2c0465f136642e8e76b1ed428",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "152148443ddbc0ae8b8932b519b8e8c4b989f7e2c0465f136642e8e76b1ed428",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": [
+          {
+            "analysis": "conservative lexical source analysis; not complete Python control/data flow",
+            "decoded_script": "C:\\Users\\DP\\files\\asset-pipeline-runs\\vendor-full-library-20261105\\vc\\attempt-04\\jobs\\152148443ddbc0ae8b8932b519b8e8c4b989f7e2c0465f136642e8e76b1ed428\\attempt-01\\evidence\\physics\\scripts\\rsc-line-19501.py.txt",
+            "decoded_script_sha256": "c54d41cf5f960b3eb15d33bf6c3fde087edb9c8122c818da681aca7fefaef85e",
+            "effects": [
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 36,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:19425",
+                  "kind": "Functionality",
+                  "line": 19425,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 19501,
+                "text": "  adapter_frame.PositionMatrix = pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 37,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:19425",
+                  "kind": "Functionality",
+                  "line": 19425,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 19501,
+                "text": "  adapter_frame.rebuild()"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_creation_path",
+                "decoded_script_line": 40,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:19425",
+                  "kind": "Functionality",
+                  "line": 19425,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 19501,
+                "text": "  adapter_iface = flange_node.createBehavior(vc_beh.vcBehaviorType.ONE_TO_ONE_INTERFACE, ADAPTER_IFACE_NAME)"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 51,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:19425",
+                  "kind": "Functionality",
+                  "line": 19425,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 19501,
+                "text": "            adapter_prop.Value = adapter_frame"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 53,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:19425",
+                  "kind": "Functionality",
+                  "line": 19425,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 19501,
+                "text": "            adapter_prop.Value = prop.Value"
+              }
+            ],
+            "executed": false,
+            "owner": {
+              "id": "functionality:19425",
+              "kind": "Functionality",
+              "line": 19425,
+              "name": "PythonScript",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rPythonScript"
+            },
+            "source_member": "component.rsc",
+            "source_variable_line": 19501
+          }
+        ]
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:19764",
+              "kind": "Node",
+              "line": 19764,
+              "name": "TCP",
+              "node_id": "node:19764",
+              "node_path": [
+                {
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:19764"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "a42b4e06c7e87809c7ffd8c1378838a8c627b1337377b300b6212f11b645b930",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "AdapterHeight": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19745,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "1c79f359a32457fd6186b43e8739bb791dd4977a78cbe94d5a1531a78d796397",
+                "source_settings": [
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 50
+              },
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19654,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19682,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2fc07b15b452279f9380f9113f9f26d95e54c85e057a45c5ece1377ba958be5e",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "OnRobot HEX-E/H-QC"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19668,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "1c875cd6e5d5da3b3b6e027f1a810f1c01608f5d04c01e9e670aae65f2c3b068",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "HEX-E/H-QC"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19572,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19696,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19607,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19710,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19558,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "HEX-E/H-QC",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(AdapterHeight)",
+                "line": 19770,
+                "owner": {
+                  "id": "node:19764",
+                  "kind": "Node",
+                  "line": 19764,
+                  "name": "TCP",
+                  "node_id": "node:19764",
+                  "node_path": [
+                    {
+                      "name": "HEX-E/H-QC",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:19764"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "52990cf52b0487786b3d3317adebb2169cb8f80af8d539dd25bebfd271902e5f",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:19764",
+              "kind": "Node",
+              "line": 19764,
+              "name": "TCP",
+              "node_id": "node:19764",
+              "node_path": [
+                {
+                  "name": "HEX-E/H-QC",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:19764"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "152148443ddbc0ae8b8932b519b8e8c4b989f7e2c0465f136642e8e76b1ed428"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "20999e295cd6507b83790c650f317e46961f6f8da3c00ce906303a5d538b3369",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/hex-e_h-qc__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "HEX-E/H-QC",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "path": "Components/OnRobot/Robot Tools/HEX-E_H-QC.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "fce81ca4-9224-4fc7-a899-fc5738168a67",
+          "library_assets": [
+            "710ba7a0-5858-5fcb-9346-f4e2b0f7339a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/HEX-E_H-QC.vcmx",
+        "path": "simready_usd/HEX-E_H-QC.vcmx",
+        "sha256": "152148443ddbc0ae8b8932b519b8e8c4b989f7e2c0465f136642e8e76b1ed428"
+      }
+    ]
+  }
+}

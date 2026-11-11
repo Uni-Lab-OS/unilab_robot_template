@@ -1,0 +1,97 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "hanwha",
+  "models": {
+    "hcr10l": {
+      "title": "Hanwha HCR-10L",
+      "asset": {
+        "asset_id": "fb96f936-2c7a-5d47-9591-52c07b9502a1",
+        "package_digest": "c195b27da83a663707e7c0053035b2aeb65b1aaac8d8cbdb2f5d861bc211eccc",
+        "package_path": "04_设备/hanwha/hcr-10l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr10l/module.json",
+      "module_sha256": "bace5d5f9aa05404bb35a6f123e0026cb3a0f070221f9775aadbc881b33081ce"
+    },
+    "hcr12a": {
+      "title": "Hanwha HCR-12A",
+      "asset": {
+        "asset_id": "ee8d06ab-b0c5-5407-9a70-88da30738a6a",
+        "package_digest": "e350bd4cdc561abdbede1b6c9591359165a9ea3254253366879865a500a6bfcd",
+        "package_path": "04_设备/hanwha/hcr-12a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr12a/module.json",
+      "module_sha256": "6ab5a09122e996593c51d3770b3650b990f5073c12be0c459cddc897a5fd21be"
+    },
+    "hcr14": {
+      "title": "Hanwha HCR-14",
+      "asset": {
+        "asset_id": "16893fa1-a7d7-518f-abc9-4c3033e027ef",
+        "package_digest": "f0f6198be0bf7eb8d3221f6960b341147c1dbcd2464f80062a77eecd0dc94356",
+        "package_path": "04_设备/hanwha/hcr-14__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr14/module.json",
+      "module_sha256": "f5a7a4c191fa72fbb9f28ed5ec6b92c19aa2066f56e633bcf48c99575d871e26"
+    },
+    "hcr3a": {
+      "title": "Hanwha HCR-3A",
+      "asset": {
+        "asset_id": "ef9bda82-f0eb-5509-bc6e-1ba92a4394a4",
+        "package_digest": "9e9547581cd75b6295a04527266c72341bfc0a2482b44eac52b5ad8d8041fcbd",
+        "package_path": "04_设备/hanwha/hcr-3a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr3a/module.json",
+      "module_sha256": "a4a470221a7bd8eb9bc4dfe235d9e305a73ded6ed617b6f607763f916575c210"
+    },
+    "hcr5a": {
+      "title": "Hanwha HCR-5A",
+      "asset": {
+        "asset_id": "32bd2e37-d971-587f-954c-afdcc2ffb03c",
+        "package_digest": "6af7b0efcee506f8b97354768ced8ac322972fc78eaa8f1df3d8162d2b671136",
+        "package_path": "04_设备/hanwha/hcr-5a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr5a/module.json",
+      "module_sha256": "42f0b75edad3967f20cb3813d811d380c50c188c7351cf37d9655b907a979b37"
+    },
+    "hcr12": {
+      "title": "HCR-12",
+      "asset": {
+        "asset_id": "26ba9be1-502c-5068-b39f-95fed387e088",
+        "package_digest": "08a34fcfa6a4c1f5394628632130676b2b776c1854adfb1e8588f388c2d6f98c",
+        "package_path": "04_设备/hanwha_robotics/hcr-12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hcr12/module.json",
+      "module_sha256": "2b70c1605fe6555abe4d70617ed3d9bc8d8d42c5fc3c239623cc331e8c00816f"
+    }
+  },
+  "source_profiles": []
+}

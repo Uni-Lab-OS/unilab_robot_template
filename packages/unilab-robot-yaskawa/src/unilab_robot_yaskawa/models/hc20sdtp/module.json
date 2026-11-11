@@ -1,0 +1,827 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yaskawa",
+  "model": "hc20sdtp",
+  "title": "Yaskawa Motoman HC20SDTP｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "7e99debe-35ea-5793-b245-f0aa17418b1a",
+    "package_digest": "1b956829bfdaf1cfce3e30c0d4f721da0f85c60171e1e95ff59db426863f2e8a",
+    "package_path": "04_设备/yaskawa_motoman/hc20sdtp__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7e99debe-35ea-5793-b245-f0aa17418b1a",
+      "package_digest": "1b956829bfdaf1cfce3e30c0d4f721da0f85c60171e1e95ff59db426863f2e8a",
+      "package_path": "04_设备/yaskawa_motoman/hc20sdtp__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "HC20SDTP",
+              "source": "robots/models/Yaskawa-Motoman-HC20SDTP.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "HC20SDTP",
+              "source": "robots/models/Yaskawa-Motoman-HC20SDTP.robot",
+              "source_family": "RoboDK",
+              "value": 20.0
+            },
+            {
+              "model": "HC20SDTP",
+              "source": "Components/Yaskawa/Robots/HC20SDTP.vcmx",
+              "source_family": "VC",
+              "value": 20.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 20.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "HC20SDTP",
+              "source": "robots/models/Yaskawa-Motoman-HC20SDTP.robot",
+              "source_family": "RoboDK",
+              "value": 1400.0
+            },
+            {
+              "model": "HC20SDTP",
+              "source": "Components/Yaskawa/Robots/HC20SDTP.vcmx",
+              "source_family": "VC",
+              "value": 1200.0
+            }
+          ],
+          "note": "Do not collapse effective and absolute reach or side and plan projection to one unqualified scalar.",
+          "status": "resolved_distinct_datums",
+          "unit": "mm",
+          "variants": [
+            {
+              "datum": "effective reach S/L centre to Point P",
+              "value": 1200
+            },
+            {
+              "datum": "absolute reach side elevation Y/Z drawing",
+              "value": 1400
+            },
+            {
+              "datum": "absolute maximum reach plan view/table S axis",
+              "value": 1412
+            }
+          ],
+          "verification": [
+            {
+              "authority": "manufacturer original PDF",
+              "page": 2,
+              "reviewed_at": "2026-11-08",
+              "scope": "effective versus absolute reach, projected datum",
+              "sha256": "a9595beb736dc0b5f6abc3f586980ad229e8cf30f42f0ea159ece4a92b4404dc",
+              "title": "Yaskawa HC20SDTP YR-1-06VXSCP20-B00 B-09-2023 A-No231017",
+              "url": "https://www.yaskawa.si/Global%20Assets/Downloads/Brochures_Catalogues/Robotics/MOTOMAN_Robots/HC20SDTP/Yaskawa_HC20SDTP_web_E.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -210.0,
+          -180.0,
+          -290.0,
+          -210.0,
+          -180.0,
+          -210.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            360.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            725.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            475.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            185.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            200.0
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          210.0,
+          180.0,
+          290.0,
+          210.0,
+          180.0,
+          210.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "591fea53-7820-5d55-b199-4e07a7431b5c",
+              "entrypoints": {
+                "usd": "simready_usd/hc20sdtp__r001.usdc"
+              },
+              "package_digest": "865a10d6b361348fb20852cde1f0aeff810d3e3408b791169ecd6c86536f6ccc",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 12,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -210.0,
+                    -180.0,
+                    -290.0,
+                    -210.0,
+                    -180.0,
+                    -210.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      360.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      725.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      475.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      185.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      200.0
+                    ]
+                  ],
+                  "mechanism_type": 8,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    4.0,
+                    12.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    0.0,
+                    1.0,
+                    -1.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    210.0,
+                    180.0,
+                    290.0,
+                    210.0,
+                    180.0,
+                    210.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "abcdc4ae6654fe4b82f9d779b6245cb3dd3fceac760e44042b8518c0ae53bea1",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Yaskawa Motoman HC20SDTP",
+          "family": "RoboDK",
+          "library_assets": [
+            "591fea53-7820-5d55-b199-4e07a7431b5c"
+          ],
+          "manufacturer": "Yaskawa Motoman",
+          "name": "HC20SDTP",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Yaskawa-Motoman-HC20SDTP.robot",
+            "path": "simready_usd/Yaskawa-Motoman-HC20SDTP.robot",
+            "sha256": "9138099300cb2a5a638c55b14aa8be215adbff0963da51f787c581e0c1ab5981"
+          },
+          "path": "robots/models/Yaskawa-Motoman-HC20SDTP.robot",
+          "payload": 20,
+          "reach": 1400,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Yaskawa",
+          "name": "HC20SDTP",
+          "original": {
+            "family": "VC",
+            "original_name": "HC20SDTP.vcmx",
+            "path": "simready_usd/source_assets/VC/0_hc20sdtp/HC20SDTP.vcmx",
+            "sha256": "aa363f06b0615851b6417d8a39189421df16eb06415846bd9dc7a409994de9a3"
+          },
+          "path": "Components/Yaskawa/Robots/HC20SDTP.vcmx",
+          "payload": "20",
+          "reach": "1200",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "65d95044-cd1a-431e-8ea8-306a4de91bcd"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "abcdc4ae6654fe4b82f9d779b6245cb3dd3fceac760e44042b8518c0ae53bea1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/hc20sdtp__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Yaskawa Motoman HC20SDTP｜多源合并",
+          "id": "merged_robot_7e99debe_35ea_5793_b245_f0aa17418b1a",
+          "metadata": {
+            "asset_id": "7e99debe-35ea-5793-b245-f0aa17418b1a",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:MotomanHSE",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/MotomanHSE.exe",
+        "sha256": "bbf58c38493a5678525bfca47b450f9a1d38309f4948ac503aeaa309036cefe1",
+        "bytes": 87040,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimotoman",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimotoman.exe",
+        "sha256": "33a37818f812cb9321716fa31fe575bc05a55dc142cc7802c9ed68f716725ddf",
+        "bytes": 418816,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Motoman.py",
+      "Motoman_Cartesian.py",
+      "Motoman_CartesianOnly.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/yaskawa/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/yaskawa/ros_industrial",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Yaskawa-Motoman-HC20SDTP.robot",
+        "path": "simready_usd/Yaskawa-Motoman-HC20SDTP.robot",
+        "sha256": "9138099300cb2a5a638c55b14aa8be215adbff0963da51f787c581e0c1ab5981"
+      },
+      {
+        "family": "VC",
+        "original_name": "HC20SDTP.vcmx",
+        "path": "simready_usd/source_assets/VC/0_hc20sdtp/HC20SDTP.vcmx",
+        "sha256": "aa363f06b0615851b6417d8a39189421df16eb06415846bd9dc7a409994de9a3"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "HC20SDTP",
+                "source": "robots/models/Yaskawa-Motoman-HC20SDTP.robot",
+                "source_family": "RoboDK",
+                "value": 1400.0
+              },
+              {
+                "model": "HC20SDTP",
+                "source": "Components/Yaskawa/Robots/HC20SDTP.vcmx",
+                "source_family": "VC",
+                "value": 1200.0
+              }
+            ],
+            "note": "Do not collapse effective and absolute reach or side and plan projection to one unqualified scalar.",
+            "status": "resolved_distinct_datums",
+            "unit": "mm",
+            "variants": [
+              {
+                "datum": "effective reach S/L centre to Point P",
+                "value": 1200
+              },
+              {
+                "datum": "absolute reach side elevation Y/Z drawing",
+                "value": 1400
+              },
+              {
+                "datum": "absolute maximum reach plan view/table S axis",
+                "value": 1412
+              }
+            ],
+            "verification": [
+              {
+                "authority": "manufacturer original PDF",
+                "page": 2,
+                "reviewed_at": "2026-11-08",
+                "scope": "effective versus absolute reach, projected datum",
+                "sha256": "a9595beb736dc0b5f6abc3f586980ad229e8cf30f42f0ea159ece4a92b4404dc",
+                "title": "Yaskawa HC20SDTP YR-1-06VXSCP20-B00 B-09-2023 A-No231017",
+                "url": "https://www.yaskawa.si/Global%20Assets/Downloads/Brochures_Catalogues/Robotics/MOTOMAN_Robots/HC20SDTP/Yaskawa_HC20SDTP_web_E.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "resolved_distinct_datums",
+          "values": [
+            1200.0,
+            1400.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "yaskawa",
+        "hc20sdtp"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "manufacturer original PDF",
+            "page": 2,
+            "reviewed_at": "2026-11-08",
+            "scope": "effective versus absolute reach, projected datum",
+            "sha256": "a9595beb736dc0b5f6abc3f586980ad229e8cf30f42f0ea159ece4a92b4404dc",
+            "title": "Yaskawa HC20SDTP YR-1-06VXSCP20-B00 B-09-2023 A-No231017",
+            "url": "https://www.yaskawa.si/Global%20Assets/Downloads/Brochures_Catalogues/Robotics/MOTOMAN_Robots/HC20SDTP/Yaskawa_HC20SDTP_web_E.pdf"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "note": "Do not collapse effective and absolute reach or side and plan projection to one unqualified scalar.",
+            "status": "resolved_distinct_datums",
+            "variants": [
+              {
+                "datum": "effective reach S/L centre to Point P",
+                "value": 1200
+              },
+              {
+                "datum": "absolute reach side elevation Y/Z drawing",
+                "value": 1400
+              },
+              {
+                "datum": "absolute maximum reach plan view/table S axis",
+                "value": 1412
+              }
+            ]
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "591fea53-7820-5d55-b199-4e07a7431b5c",
+        "original_package_digest": "865a10d6b361348fb20852cde1f0aeff810d3e3408b791169ecd6c86536f6ccc",
+        "source": "robots/models/Yaskawa-Motoman-HC20SDTP.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

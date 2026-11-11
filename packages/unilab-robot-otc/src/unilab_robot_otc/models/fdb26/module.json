@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "otc",
+  "model": "fdb26",
+  "title": "Daihen OTC FD-B26",
+  "asset": {
+    "asset_id": "3b8e2a93-b757-558f-97ca-051752eed0ea",
+    "package_digest": "f5774d3f84963be98b0aa358be66345d93740e6ec565eb7c7cb1b73583eed372",
+    "package_path": "04_设备/otc_daihen/fd-b26__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3b8e2a93-b757-558f-97ca-051752eed0ea",
+      "package_digest": "f5774d3f84963be98b0aa358be66345d93740e6ec565eb7c7cb1b73583eed372",
+      "package_path": "04_设备/otc_daihen/fd-b26__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -170.0,
+          -155.0,
+          -170.0,
+          -170.0,
+          -45.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            525.0
+          ],
+          [
+            -1.5707963267948966,
+            185.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            760.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            220.0,
+            0.0,
+            860.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            115.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          155.0,
+          250.0,
+          170.0,
+          225.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0f84f3dfa10f1ca9be9fc1c6739a6ba278584c96569a812fad63047b07e0dcfb",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fd-b26__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "OTC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FD-B26",
+          "manufacturer": "OTC Daihen",
+          "variant": "",
+          "display": "Daihen OTC FD-B26",
+          "path": "robots/models/Daihen-OTC-FD-B26.robot",
+          "type": "robots",
+          "payload": 26,
+          "reach": 1833,
+          "axes": 6,
+          "library_assets": [
+            "3b8e2a93-b757-558f-97ca-051752eed0ea"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Daihen-OTC-FD-B26.robot",
+        "path": "simready_usd/Daihen-OTC-FD-B26.robot",
+        "sha256": "56e4b3e92c9d153cdcd6747d70a775a1cc8d82f8569415c4b814273d03066649"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

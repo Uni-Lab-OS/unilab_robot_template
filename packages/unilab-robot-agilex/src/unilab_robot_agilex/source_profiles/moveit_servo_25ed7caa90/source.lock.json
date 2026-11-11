@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_servo_25ed7caa90",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_ros/moveit_servo",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "031467546bd8cf4fefeaf47f65c2c886283b61a8cac9ab9a149fd70d9313e4b5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pose_tracking_settings.yaml",
+      "sha256": "c1ed8aa974523c6851c998667bb0bd5687ee91a94f6c041134a0d36837a53ba6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/spacenav_via_teleop_tools.yaml",
+      "sha256": "a6658e296c383b078ec95943bf158f5cd0984a30bcaa8d7474c2ab6ebcf47e73",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ur_simulated_config.yaml",
+      "sha256": "512ae998026f591db0656ef60892784bb85e3a6671c0a902145bd6eb8e400efe",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/cpp_interface_example.launch",
+      "sha256": "be7b2d710b7f41d8c9d9cc3fbd7ba8cb3e025d28b283dbabcded1908b379eec1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/pose_tracking_example.launch",
+      "sha256": "a422957a9713bd37ced7530b12776522d384e9c99cdf3af613a5e5b4b5e73583",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/spacenav_cpp.launch",
+      "sha256": "d5b4f09093b79ed0a24e6ed89274112fdc97be2bfd41d3de902e0b980d56c1c1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/spacenav_teleop_tools.launch",
+      "sha256": "e3af2f1f47ce8c73f89e61f38b8e600dab785b2bd437489e10e45dd699ceb62a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "MIGRATION.md",
+      "sha256": "c745c90e85bd0643fbec90859ac45154bba2e438c3564be25b95862db8aeedba",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "8b61894d547fd52a4d0599cd4943918e84238e0ad3f9f0b75be79feed8c1206d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "9658c4d40a4d21de72c745fd9288fc313b157ff885f8bc053d8c5e8422d124e4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/config/initial_position.yaml",
+      "sha256": "21aa3468c600bc16e7ae9cdc7945c4b809d1bb5179404d6be0ac06919f7dc3d2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/config/servo_settings.yaml",
+      "sha256": "f99620162052570cb4c4090118e6b5de4b9c728b4ebb6c79ae78eb64f012b561",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/config/servo_settings_low_latency.yaml",
+      "sha256": "8902b6aceb9279f86934e7389b1b6a12d41ab2f7cac4e62bcd12c400e9a1b669",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

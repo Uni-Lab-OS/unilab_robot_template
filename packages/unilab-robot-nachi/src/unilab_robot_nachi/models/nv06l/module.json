@@ -1,0 +1,113 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "nachi",
+  "model": "nv06l",
+  "title": "NV06L",
+  "asset": {
+    "asset_id": "452fc7ec-5cb5-5bce-8b97-bcb4615238fb",
+    "package_digest": "a11ab8bbfdb52bca29bb40cfccd7b521a3eb45a0a22a1b811ac8121075bf95d0",
+    "package_path": "04_设备/nachi/nv06l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "452fc7ec-5cb5-5bce-8b97-bcb4615238fb",
+      "package_digest": "a11ab8bbfdb52bca29bb40cfccd7b521a3eb45a0a22a1b811ac8121075bf95d0",
+      "package_path": "04_设备/nachi/nv06l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "7fdda524f99709c7738aa574e402908ea77bcedf354fa541f8b378f30d0e40c4",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "56a3bed3f88cbb330d329fdbbf73ce53befded43cd87c5cd31e7d9b52c59049f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/nv06l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Nachi_AX_FD.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/nachi/rosweld_drivers",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "NV06L",
+          "manufacturer": "Nachi",
+          "variant": "",
+          "path": "Components/Nachi/Robots/NV06L.vcmx",
+          "type": "Robots",
+          "payload": "6",
+          "reach": "1800.0",
+          "vcid": "463f4096-865b-4f7f-a65a-61b3e23f6f21",
+          "library_assets": [
+            "452fc7ec-5cb5-5bce-8b97-bcb4615238fb"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/NV06L.vcmx",
+        "path": "simready_usd/NV06L.vcmx",
+        "sha256": "7fdda524f99709c7738aa574e402908ea77bcedf354fa541f8b378f30d0e40c4"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

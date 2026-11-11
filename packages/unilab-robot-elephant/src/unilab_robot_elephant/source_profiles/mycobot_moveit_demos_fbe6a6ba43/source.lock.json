@@ -1,0 +1,34 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "mycobot_moveit_demos_fbe6a6ba43",
+  "source": {
+    "url": "https://github.com/automaticaddison/mycobot_ros2.git",
+    "commit": "a75c80dfbf60952b79093e026fa5a978fbe02e01",
+    "path": "robots/elephant/mycobot_ros2/mycobot_moveit_demos",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "d506a871fc00afc7d553ebf3aa3acc12fd943ec2f53c82a2206d7ada56f94eca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "dce7f6e1170d3773d430e4d1e5c2aea09c68d3c5f86363c4a669f7547dfb47f9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "c54744562feb96bca296dc46c8e27198b93a191212544433bbd75b0d360a844a"
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "techmanrobot",
+  "model": "tm25sx",
+  "title": "TM25S-X",
+  "asset": {
+    "asset_id": "073f5634-09d1-5133-b52f-e853c57e199d",
+    "package_digest": "0f5eebb70678d39c11ff339757fae01c813bb79ed63d7c35b2d24b6343f827f8",
+    "package_path": "04_设备/techman_robot/tm25s-x__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "073f5634-09d1-5133-b52f-e853c57e199d",
+      "package_digest": "0f5eebb70678d39c11ff339757fae01c813bb79ed63d7c35b2d24b6343f827f8",
+      "package_path": "04_设备/techman_robot/tm25s-x__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7896",
+            "id": "dof:8418",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8702",
+            "id": "dof:8951",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:7896",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9235",
+            "id": "dof:9484",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -166.0,
+              166.0
+            ],
+            "parent_node_id": "node:8702",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -166.0,
+                166.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -166.0,
+                166.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9768",
+            "id": "dof:10017",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9235",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:10301",
+            "id": "dof:10550",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9768",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:10834",
+            "id": "dof:11082",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:10301",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "01c20ba44e2c0e500b393070b0cc35a710b541c540fde8c2934e27414e9496a7",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "01c20ba44e2c0e500b393070b0cc35a710b541c540fde8c2934e27414e9496a7",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1db5a94e6bbef13aea17389af6693acb760dac41b8eb389602cdc59b04a10da2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/tm25s-x__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:TMDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/TMDriver.py",
+        "sha256": "e1178b95602f2d4861a133dc2bc54f3094c0c0a461779be07995619206c5cdbf",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/TMDriver.pyc",
+            "sha256": "b8b0069f0d0dff6b9395583c376fafee45dba8ebe944f13d9699e9c93d859f99"
+          },
+          {
+            "relative_path": "api/Robot/v311/TMDriver.pyc",
+            "sha256": "286451cfb86d2bb9dc5f3184662b6d243a7016212ef0ac5bc4b66c742b79f360"
+          },
+          {
+            "relative_path": "api/Robot/v312/TMDriver.pyc",
+            "sha256": "15bc207ecc0b1a9860df661001733d2eb084ef38d8df66a35c2725a4f218dca5"
+          },
+          {
+            "relative_path": "api/Robot/v38/TMDriver.pyc",
+            "sha256": "4d78d4d9e8714e62fd8f225a20b0edc056f47ad2c7f2be3895f988ad5757305a"
+          },
+          {
+            "relative_path": "api/Robot/v39/TMDriver.pyc",
+            "sha256": "1081905541299c8ba61c8de9d74e9ca457e0213b818a056b5972b45a0eb68de5"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Techman TM"
+        ],
+        "constraints": [
+          "TM driver does not establish support for Omron Adept or LD mobile robots",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Techman.py",
+      "Techman_FerRobotics.py",
+      "Techman_PathNode.py",
+      "Techman_Remote.py",
+      "Techman_TMscript.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/techman/ros2_legacy",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/techman/ros2_s_series",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "TM25S-X",
+          "manufacturer": "Techman Robot",
+          "variant": "",
+          "path": "Components/Techman Robot/Robots/TM25S-X.vcmx",
+          "type": "Robots",
+          "payload": "25",
+          "reach": "1902",
+          "vcid": "eb3435ac-e737-42b0-b455-f412647c73b8",
+          "library_assets": [
+            "073f5634-09d1-5133-b52f-e853c57e199d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/TM25S-X.vcmx",
+        "path": "simready_usd/TM25S-X.vcmx",
+        "sha256": "01c20ba44e2c0e500b393070b0cc35a710b541c540fde8c2934e27414e9496a7"
+      }
+    ],
+    "published_revision_mapping_sha256": "f64c7476d5990ce770ae3312ff8c413e1d01388eeaa871cb531d4fce346fb8ff"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

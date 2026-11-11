@@ -1,0 +1,180 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "igus",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "rebel6dof": {
+      "title": "igus ReBeL 6DOF",
+      "asset": {
+        "asset_id": "2cb5be18-bc82-57a1-8056-6b728c33cc64",
+        "package_digest": "5e001188bb72ea4d382c77672fdbcda0ecaf583120e0157f7ff400ad68511275",
+        "package_path": "04_设备/igus/rebel_6dof__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rebel6dof/module.json",
+      "module_sha256": "5404a3a8f27460be6420bed8862e67a20bd2051d86d06aae10a70d3811232421"
+    },
+    "rebelcobot4dof": {
+      "title": "ReBeL Cobot 4 DOF",
+      "asset": {
+        "asset_id": "95b9634d-7fa2-5509-aee7-e3a01079db47",
+        "package_digest": "ecd5e6dfef162623591d66d5f309fe4999e46137db5a2a31d4aee46a1db332b1",
+        "package_path": "04_设备/igus/rebel_cobot_4_dof__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rebelcobot4dof/module.json",
+      "module_sha256": "c8b5837f8145a141650cefed2ad70075823191c8c7cba415e823be67e4086654"
+    },
+    "rebelcobot6dof": {
+      "title": "ReBeL Cobot 6 DOF",
+      "asset": {
+        "asset_id": "6cd349cc-9519-5d1e-9312-a7342d5a8ecd",
+        "package_digest": "0bb30cd1a780215385053a622023d0bb106792d2a5358314a4bbecfb6edf1758",
+        "package_path": "04_设备/igus/rebel_cobot_6_dof__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rebelcobot6dof/module.json",
+      "module_sha256": "94667999111459f0c4f00b7a44d6376664d1095e2ff56730c152bdf9fe2c579e"
+    },
+    "rldci4sm": {
+      "title": "RL-DCi-4S-M",
+      "asset": {
+        "asset_id": "fb3df2e7-99a0-5b79-b560-2ce0436b62f4",
+        "package_digest": "8ec5afda681be9d06c73093f5216e4abb2320a05dfa3d727142061d538edfedd",
+        "package_path": "04_设备/igus/rl-dci-4s-m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldci4sm/module.json",
+      "module_sha256": "02c4b17da2c7724835bf612185a229bca58a6a6adc951801cb7cd16359956430"
+    },
+    "rldci5sm": {
+      "title": "RL-DCi-5S-M",
+      "asset": {
+        "asset_id": "7a575f0b-9a0a-59c6-8d8e-d3822fdfdf6e",
+        "package_digest": "541fb36950d3a054dac5021ddb65499fe9eea5b29a12a00f21a99cdb097d9988",
+        "package_path": "04_设备/igus/rl-dci-5s-m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldci5sm/module.json",
+      "module_sha256": "d79cff3b6c6e40cd9694a5c0c620651b12bddd3530888ff6acefed5ca0be0929"
+    },
+    "rldrbt3322": {
+      "title": "RL-D-RBT-3322",
+      "asset": {
+        "asset_id": "cfc80ee0-4773-56e2-a717-bc8c8678515a",
+        "package_digest": "ad5a3b949564da6e1366d169ec365b3b014c5ee4e15b13a965acd52306025177",
+        "package_path": "04_设备/igus/rl-d-rbt-3322__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldrbt3322/module.json",
+      "module_sha256": "09352ad593d6ab882dc65d4ba4c24533237cc794f438ed4c4cd728d4d7dddbce"
+    },
+    "rldrbt3322s": {
+      "title": "RL-D-RBT-3322S",
+      "asset": {
+        "asset_id": "e2607ddd-03c5-54fc-9a4a-de57d5ae2c53",
+        "package_digest": "c898b379d509cdf752eb29db26a3b3533fefc850b9b7304a545f4750eb508260",
+        "package_path": "04_设备/igus/rl-d-rbt-3322s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldrbt3322s/module.json",
+      "module_sha256": "620cd6c44a262527ba70d197b5840c60246e308b396ff0934014715fa2ed4369"
+    },
+    "rldrbt5532": {
+      "title": "RL-D-RBT-5532",
+      "asset": {
+        "asset_id": "d3332ae6-e509-5097-babd-08f00401b9d9",
+        "package_digest": "36026a2388c6a855edc86a1bb6e4d8f9f41a12c6c5671494fe4b6a7346edfef6",
+        "package_path": "04_设备/igus/rl-d-rbt-5532__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldrbt5532/module.json",
+      "module_sha256": "c508493de69c0d5b1e5f0262471cceba9dcdce1e2c7caea7c7263508b47814b2"
+    },
+    "rldrbt5532s": {
+      "title": "RL-D-RBT-5532S",
+      "asset": {
+        "asset_id": "3f3309d9-6284-5cb6-b6fd-49e84c167394",
+        "package_digest": "b169cf5b078c516d422e9d883c73b1389e5c6700b1d9c44ec424c48492049965",
+        "package_path": "04_设备/igus/rl-d-rbt-5532s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rldrbt5532s/module.json",
+      "module_sha256": "99265fd702ba1e56ee566cbab2e6f923a85be40e9e4e8668b9cdc82df50d0960"
+    },
+    "robolinkdp4": {
+      "title": "Robolink DP4",
+      "asset": {
+        "asset_id": "4eeab863-2fb3-5b27-b322-5f6656023ac6",
+        "package_digest": "656d7ee87f3cba32b85121e419c4d14e586c5fd052641c51a65ea22f811663d1",
+        "package_path": "04_设备/igus/robolink_dp4__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/robolinkdp4/module.json",
+      "module_sha256": "aed733024eed028f49f23cb4bad64969df02eaf6278e32162f97da3003b06ce6"
+    },
+    "robolinkdp5": {
+      "title": "Robolink DP5",
+      "asset": {
+        "asset_id": "a04455e8-0549-538a-8bb8-e13f77f32f95",
+        "package_digest": "44a6ef61603dd3653ac77f89323a217b2252718f118140206dcf6592c2ddd1c8",
+        "package_path": "04_设备/igus/robolink_dp5__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/robolinkdp5/module.json",
+      "module_sha256": "6f84b70a70a83984544c9305b7335e65389cd8f215e623b7373bb5d973cf9703"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "irc_ros_moveit_config_c7305cc3f9",
+      "manifest": "source_profiles/irc_ros_moveit_config_c7305cc3f9/source.lock.json",
+      "sha256": "367b75eefe058c60e1be9d97da4553e5401b909785ee1b6ce05ba2b757805d08",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

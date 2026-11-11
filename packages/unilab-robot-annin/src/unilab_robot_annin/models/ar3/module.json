@@ -1,0 +1,362 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "annin",
+  "model": "ar3",
+  "title": "Annin Robotics AR3",
+  "asset": {
+    "asset_id": "db128853-af26-5805-80c3-5aceda421d14",
+    "package_digest": "49d6ffa2e5a4186d5a11525310c913930c530839cf8c090883f567b3434b2ab0",
+    "package_path": "04_设备/annin_robotics/ar3__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "db128853-af26-5805-80c3-5aceda421d14",
+      "package_digest": "49d6ffa2e5a4186d5a11525310c913930c530839cf8c090883f567b3434b2ab0",
+      "package_path": "04_设备/annin_robotics/ar3__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -132.0,
+          1.0,
+          -165.0,
+          -105.0,
+          -155.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            169.78
+          ],
+          [
+            -1.5707963267948966,
+            64.15,
+            0.0,
+            -6.99
+          ],
+          [
+            0.0,
+            305.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            222.94
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            35.9
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          0.0,
+          141.0,
+          165.0,
+          105.0,
+          155.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "98f0fe72d3162f667a32dc6b74ca2aa1d5e3e0f2d09ccb7b82c0052f69a38295",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ar3__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:AnninDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/AnninDriver.py",
+        "sha256": "471b5d96eaed9b2f05bbb05abead8673a5df236e12c1fcd8109b19580bd412e2",
+        "bytes": 24566,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "annin controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:AR3Driver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/AR3Driver.py",
+        "sha256": "eb98870abd20a250eac9ddd02b9b74f2354e50d5913c6de85b5fdde94fee188d",
+        "bytes": 24566,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "annin controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:AR2Driver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/AR2Driver.py",
+        "sha256": "c6a79d666c42715e08e2e4c79cf2424ea24887ee406f2a4f1f56d47bc677c6db",
+        "bytes": 544,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "annin controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:annin:ar4_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/annin/ar4_ros2",
+        "repository_url": "https://github.com/Annin-Robotics/ar4_ros_driver.git",
+        "code_tree_sha256": "a412fad2a2caab96701908b4b19c3145d8a1445e486850a81a6fecdcb45d7e4e",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "0c0c7ecde49985452660e2475aa7ab7117dc5eb3271315e0216a23050c75553e"
+          },
+          {
+            "path": "annin_ar4_description/README.md",
+            "sha256": "772086edd81dcd105f42aa616674c1ad6a94e94e7b1ed6123f2ee65cc7bd452e"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "e11d0451c4143b00c96f4a3b477091dfad328209e8c717bad714d5b0b4536c73"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Annin_Robotics.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AR3",
+          "manufacturer": "Annin Robotics",
+          "variant": "",
+          "display": "Annin Robotics AR3",
+          "path": "robots/models/Annin-Robotics-AR3.robot",
+          "type": "robots",
+          "payload": 1,
+          "reach": 600,
+          "axes": 6,
+          "library_assets": [
+            "db128853-af26-5805-80c3-5aceda421d14"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Annin-Robotics-AR3.robot",
+        "path": "simready_usd/Annin-Robotics-AR3.robot",
+        "sha256": "f89155e27b901cf0a984df75e82775f72a54fa0f822f58aedaf6af31de5c2342"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

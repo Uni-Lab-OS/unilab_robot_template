@@ -1,0 +1,108 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "otc",
+  "model": "axmv4lap",
+  "title": "AX-MV4LAP",
+  "asset": {
+    "asset_id": "d2076978-8ead-532e-a0b6-a069a1524dae",
+    "package_digest": "1602a95a0a4afc135a7970fb40589282f12ba3cf26a93e0770b6cb6ec90bdce7",
+    "package_path": "04_设备/otc_daihen/ax-mv4lap__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d2076978-8ead-532e-a0b6-a069a1524dae",
+      "package_digest": "1602a95a0a4afc135a7970fb40589282f12ba3cf26a93e0770b6cb6ec90bdce7",
+      "package_path": "04_设备/otc_daihen/ax-mv4lap__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "eb9280855e5e5fc29595a5dc83ac2e9714830db5548270a044f19c0146cc4c94",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "910381837d05708ee89e49344b336e960d8330260c658a844af96d3c95874777",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ax-mv4lap__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "OTC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "AX-MV4LAP",
+          "manufacturer": "OTC Daihen",
+          "variant": "",
+          "path": "Components/OTC Daihen/Robots/AX-MV4LAP.vcmx",
+          "type": "Robots",
+          "payload": "4",
+          "reach": "1410.0",
+          "vcid": "828bbdd3-ee06-4bf1-82ae-bf99f358b0e5",
+          "library_assets": [
+            "d2076978-8ead-532e-a0b6-a069a1524dae"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/AX-MV4LAP.vcmx",
+        "path": "simready_usd/AX-MV4LAP.vcmx",
+        "sha256": "eb9280855e5e5fc29595a5dc83ac2e9714830db5548270a044f19c0146cc4c94"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

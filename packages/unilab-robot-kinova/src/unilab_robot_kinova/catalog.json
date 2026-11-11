@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "kinova",
+  "models": {
+    "gen3": {
+      "title": "Kinova Gen3",
+      "asset": {
+        "asset_id": "e36af767-ac6c-5956-80f6-662c08bd4693",
+        "package_digest": "6ba257ea656b50d78bdbcfa4052d4cf2eda407471d5b1be33f549bcde13b7e08",
+        "package_path": "04_设备/kinova/gen3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gen3/module.json",
+      "module_sha256": "48aff95a780282413ebd6bc0bc89d0d9af1b96462c8d8620afa5a9040f8b15fc"
+    },
+    "gen3:6dof": {
+      "title": "Kinova Gen3 6DOF",
+      "asset": {
+        "asset_id": "318d0dc9-2e4b-5445-9e57-b300fd6284c6",
+        "package_digest": "bb64989ba9d562883c32afb152d0557f9765570d53180ea68f309d28bca823fc",
+        "package_path": "04_设备/kinova/gen3_6dof__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gen3_6dof_67311cda/module.json",
+      "module_sha256": "6467ea52146ad3fe325c7be8546fc13bd7982ae6c01cf75cf07df18395118cda"
+    },
+    "gen3:6dofnov": {
+      "title": "Kinova Gen3 6DOF NoV",
+      "asset": {
+        "asset_id": "957b2a2f-24c4-5077-8461-078dc50d4282",
+        "package_digest": "453a694704f92b48d713c004d2e5f00549ed7bd1f9ce0fbf96a455bc9875e424",
+        "package_path": "04_设备/kinova/gen3_6dof_nov__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gen3_6dofnov_121de4c0/module.json",
+      "module_sha256": "072391c8350dddad020d993244362ea1132bab0b6a5087cb91fd5f9d50b27499"
+    },
+    "gen3lite": {
+      "title": "Kinova Gen3 lite",
+      "asset": {
+        "asset_id": "e6da98ea-91de-5f80-a7c7-7c3b602b1ee8",
+        "package_digest": "a0204b06bf57638f209313c3e3d74b7839e256d4d85ebde708ab9eb50877d921",
+        "package_path": "04_设备/kinova/gen3_lite__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gen3lite/module.json",
+      "module_sha256": "737d732796ac277b93a6a6c142c986d446fc1c45c47c7dc8c313bda03d171f19"
+    },
+    "link6": {
+      "title": "Kinova Link 6",
+      "asset": {
+        "asset_id": "7affa927-9ccd-587f-a483-1b572d284c78",
+        "package_digest": "b1ebab88327be0124cd3e5c624175dd2aa129679b9ec913b3a63294f9fef32c4",
+        "package_path": "04_设备/kinova/link_6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/link6/module.json",
+      "module_sha256": "894b6b263363ee29dc8a895bf40124100c1a6890750f3c70560b30756d7f5159"
+    }
+  },
+  "source_profiles": []
+}

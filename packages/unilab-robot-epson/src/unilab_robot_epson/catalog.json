@@ -1,0 +1,1630 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "epson",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "c8xl": {
+      "title": "Epson C8XL｜多源合并",
+      "asset": {
+        "asset_id": "1764defc-215a-5576-a5cf-7e600e91805c",
+        "package_digest": "42e1a96a2bbfe621da1c948ad61c5a1813629ec4b75ebcdcb522a44d3b14c16a",
+        "package_path": "04_设备/epson/c8xl__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/c8xl/module.json",
+      "module_sha256": "5df6715ed74c9f8c376cea3c06cba49420135e00d1f8701de5c7fea4c77c2ed2"
+    },
+    "g1:171s": {
+      "title": "Epson G1-171S｜多源合并",
+      "asset": {
+        "asset_id": "e7a71805-08ee-5151-9bc3-c3496021b029",
+        "package_digest": "a7f1fd00cf3efe56fda25b92833c8ace3023192912380411a063f58965a88cb2",
+        "package_path": "04_设备/epson/g1_171s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/g1_171s_5d12b374/module.json",
+      "module_sha256": "f1b4bb12bb5797eb59b5332b577fa02fa8db73de96cd1d85944aac812d2ec975"
+    },
+    "g1:221s": {
+      "title": "Epson G1-221S｜多源合并",
+      "asset": {
+        "asset_id": "b75df833-3631-5433-9cbd-bbafc5b3f2c9",
+        "package_digest": "fbdd139b80d2269fb28fe9f67c4579239a8302dc05eda55d5b008620a9738c22",
+        "package_path": "04_设备/epson/g1_221s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/g1_221s_b196766a/module.json",
+      "module_sha256": "56aab0da0dfea20bdc70136b1b05c5cd42af509a4bf5151b48d9b75adfe26c5e"
+    },
+    "g6:651s": {
+      "title": "Epson G6-651S｜多源合并",
+      "asset": {
+        "asset_id": "0fc4fd3b-e76d-5d8f-a24d-bdc81e4af6f1",
+        "package_digest": "8cdd6593ca6044d66aa09b325e2a9330b400a8513ec0fee3c551d92315ea0777",
+        "package_path": "04_设备/epson/g6_651s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/g6_651s_24f9be8c/module.json",
+      "module_sha256": "7740c5b9fa30dc1516125ac99523cde62cf44a234b95c7deca81675b9de20e4d"
+    },
+    "g6:653s": {
+      "title": "Epson G6-653S｜多源合并",
+      "asset": {
+        "asset_id": "a095d27e-872b-53d5-8096-2fa9dffbcaf5",
+        "package_digest": "5adfb8ca9ef4b5cee0b75b9ede8108961a6cc5ec7ed5b5539466924afa2d0e91",
+        "package_path": "04_设备/epson/g6_653s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/g6_653s_60eb3231/module.json",
+      "module_sha256": "38fd14843c3284fc5626a876d2679030b44c5c792a0bfb60b28ea7ecf0b68b98"
+    },
+    "gx8a552c": {
+      "title": "Epson GX8-A552C｜多源合并",
+      "asset": {
+        "asset_id": "6d8ba507-57e1-50ee-8bc5-d581a4ad94f2",
+        "package_digest": "ffa3b5fcd6809c2046ec6eb7c32bbe58106461dd27439188c0e304e748006104",
+        "package_path": "04_设备/epson/gx8a552c__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gx8a552c/module.json",
+      "module_sha256": "e13af2e284d565cd1194ea6d79281a450a2c508db16b3048d72425666aac3350"
+    },
+    "ls3:401s": {
+      "title": "Epson LS3-401S｜多源合并",
+      "asset": {
+        "asset_id": "6e45edce-ee53-5a22-9b8c-5b2fb91e344c",
+        "package_digest": "f4d5b3860df355da02489f30ed801d8b52c2bfd2022fca352ef75f092934ef2b",
+        "package_path": "04_设备/epson/ls3_401s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ls3_401s_f55a3d22/module.json",
+      "module_sha256": "a1e85a395b05ee7e1095538ceebf6fd9d7f22dd305ee88f95288045537fa896e"
+    },
+    "ls6:602s": {
+      "title": "Epson LS6-602S｜多源合并",
+      "asset": {
+        "asset_id": "9598ab8f-61e9-53c8-bdb7-bd36f7dd80c3",
+        "package_digest": "86e47ffd3e867c61e95c4705c498be4cc3cf3cbbe764fe22d52c539b4cdea2a9",
+        "package_path": "04_设备/epson/ls6_602s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ls6_602s_08a234b1/module.json",
+      "module_sha256": "bcf67e131ad389fb8168f5b191a3ac9b2794837bd4a4183afbd788f1bbdff495"
+    },
+    "t3:401s": {
+      "title": "Epson T3-401S｜多源合并",
+      "asset": {
+        "asset_id": "0f10d3f0-f516-55c5-b87a-79a7bef40deb",
+        "package_digest": "efefcdf3142a93a2bf1e73a7416477e537bcd564265479d04c8dda3211b669a9",
+        "package_path": "04_设备/epson/t3_401s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/t3_401s_d9544d43/module.json",
+      "module_sha256": "7ea9013cb627c8ec1a4a14ec0a52ef1e9c6b69ca81981ec3d47159a10a3a1ca0"
+    },
+    "t6:602s": {
+      "title": "Epson T6-602S｜多源合并",
+      "asset": {
+        "asset_id": "bf7974ec-6e5d-54a4-94a4-8b5416743212",
+        "package_digest": "f1c7bfc06d1d9f569140cbfb64ef050deea5c6b74ce375ad4bee5ec976a60c62",
+        "package_path": "04_设备/epson/t6_602s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/t6_602s_905030db/module.json",
+      "module_sha256": "a64a576364a1ed0e14994b12b0d90b89ac14ca3f6437990cf2fc78b89d51b6cd"
+    },
+    "c12xla1401": {
+      "title": "Epson C12XL-A1401",
+      "asset": {
+        "asset_id": "5056292a-6a72-5f1e-a1b2-c95d9cc8b36d",
+        "package_digest": "be2fa71fcc75d395fda21e93ce4c8c6af3f39f501bc1ea22ce42740507c4fd58",
+        "package_path": "04_设备/epson/c12xl-a1401__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c12xla1401/module.json",
+      "module_sha256": "3eb56aa1cbb42e798bf2d62863ae415e9de237c7eed259a7fe2fb171c698551b"
+    },
+    "c3": {
+      "title": "Epson C3",
+      "asset": {
+        "asset_id": "beab3dbf-fe38-5d61-a3c7-e990715ab27f",
+        "package_digest": "550701ecb2b860ef88a10103d0e0c00da8ce154331777b2ff153ff680eb22134",
+        "package_path": "04_设备/epson/c3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c3/module.json",
+      "module_sha256": "29984c3fd5ef13af7e77a0c16020403b3d45d23c949f898c4c0c8fa73224d5f3"
+    },
+    "c3a601ct": {
+      "title": "C3-A601 CT",
+      "asset": {
+        "asset_id": "dfcb8616-3b51-57c2-af45-20465b30ef88",
+        "package_digest": "670b43de2e0e839479eef5aa2341aa9f967f006bf75be0debd9864d4f35f46f8",
+        "package_path": "04_设备/epson/c3-a601_ct__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c3a601ct/module.json",
+      "module_sha256": "7b725f79748a5bfbb7c3fa22dc4c84c9dfc73b5d0cbdff1127f696c7681a73bf"
+    },
+    "c3a601sr": {
+      "title": "C3-A601 SR",
+      "asset": {
+        "asset_id": "1e899a3c-309b-5fe2-89ae-191998ac7061",
+        "package_digest": "892697e73abdc9341d9ab4dd5490f283b65a6d5859d2d4ca1cfbb02924199d47",
+        "package_path": "04_设备/epson/c3-a601_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c3a601sr/module.json",
+      "module_sha256": "1bac72d3aa05c2c02687a750210f3f0092aea0e958f8ffc3506988e285d5e975"
+    },
+    "c3a601st": {
+      "title": "C3-A601 ST",
+      "asset": {
+        "asset_id": "f6e42caf-1d7d-5b63-a78d-a48c651bfb37",
+        "package_digest": "e647840fa065a85435dee4820be08ec7feb5d3cda2777cf8fc85ba462d546c1c",
+        "package_path": "04_设备/epson/c3-a601_st__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c3a601st/module.json",
+      "module_sha256": "5212deb83b6514871d859aa4c108d6144b2b3c611b2eccd46fd9735187700641"
+    },
+    "c4a601s": {
+      "title": "Epson C4-A601S",
+      "asset": {
+        "asset_id": "82ebccbd-a785-575d-9d1e-aaedae1cb3eb",
+        "package_digest": "ec5720bbe53f909af4d150e3a3e02c091dce79be45d4ea0512e1dabd1f2f976b",
+        "package_path": "04_设备/epson/c4-a601s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c4a601s/module.json",
+      "module_sha256": "ae14e4a0aa545d1e779b1437f65e16c0abfa38fd2dbf7f8676359532c4fbfe18"
+    },
+    "c4a901": {
+      "title": "Epson C4-A901",
+      "asset": {
+        "asset_id": "a2593110-38a7-55e1-a70e-33d0cdc534fb",
+        "package_digest": "5c8fd7197dfd6e47e55377e80563946d41ab414f6405dc5ffa2a1c3e5c0ed5b5",
+        "package_path": "04_设备/epson/c4-a901__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c4a901/module.json",
+      "module_sha256": "176f991d13df0421faddf6295d0d57569b412ed4c2cff40632cb9ea89d31b495"
+    },
+    "c8": {
+      "title": "Epson C8",
+      "asset": {
+        "asset_id": "af45ff82-1982-5f02-ba04-61612e431b00",
+        "package_digest": "6850a18b6c0ee28344d06bbad1366c25f11310e5c226708a3b2539666f8d5042",
+        "package_path": "04_设备/epson/c8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c8/module.json",
+      "module_sha256": "34f14d4a6f314075b341fa0a32f65177315f8ef921c0c16ee1ac0382adc3dc21"
+    },
+    "c8l": {
+      "title": "Epson C8L",
+      "asset": {
+        "asset_id": "11fd8178-996f-5a49-a479-0322f47e158d",
+        "package_digest": "688e540a04d604fccc912b02af8c3ef6472e5b86578e530a3c9951548de2b6a2",
+        "package_path": "04_设备/epson/c8l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c8l/module.json",
+      "module_sha256": "808f13e23438a8408b26b27f63e955d576ee931caec62127501aaf46099eb877"
+    },
+    "g10:651s": {
+      "title": "G10-651 S",
+      "asset": {
+        "asset_id": "ee8bf67d-73ae-5b01-9d22-1f867c88a923",
+        "package_digest": "3583057cef7c929a51eabeb1bcb322cfd85a346a4f276bf6264d50fe9acb24f4",
+        "package_path": "04_设备/epson/g10-651_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_651s_a119e054/module.json",
+      "module_sha256": "83df4c24c077e8dba7603427fb63288e92e6121bd28eb2496ac91af3467f2829"
+    },
+    "g10:651sw": {
+      "title": "G10-651 SW",
+      "asset": {
+        "asset_id": "0d057703-516e-52bd-b17a-9a7fffd7e801",
+        "package_digest": "eae943c9fdd789bc623555cfedb6013b3ba9253f60a42ea106de7084035cb89e",
+        "package_path": "04_设备/epson/g10-651_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_651sw_5af3bb76/module.json",
+      "module_sha256": "821d2f9ecf484e7f98961b140f68cf2aecef8728d9ae9832ff28f92a67fb3083"
+    },
+    "g10:654s": {
+      "title": "G10-654 S",
+      "asset": {
+        "asset_id": "a9a2fb1e-d698-5749-8df2-d927f904f947",
+        "package_digest": "86f97463ef0dea45871adc527796bc55ec04a1328330382c9f85ba828eb9ea5b",
+        "package_path": "04_设备/epson/g10-654_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_654s_5e045932/module.json",
+      "module_sha256": "1bc090214d76692ad36f033a4c98c6c6ecb0742cd9a5412694c61173081b9585"
+    },
+    "g10:654sr": {
+      "title": "G10-654 SR",
+      "asset": {
+        "asset_id": "72ca7ad0-1ac7-5f09-aa49-dae3058ae0a3",
+        "package_digest": "4e696090b1fadc5af899f78ad3f9076283559799be8156a4e4376f201ee68d9c",
+        "package_path": "04_设备/epson/g10-654_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_654sr_0c7f7c39/module.json",
+      "module_sha256": "9f070f5972608020e838aef8b386a9c58961161cc21f2de623e2562c489774f2"
+    },
+    "g10:654sw": {
+      "title": "G10-654 SW",
+      "asset": {
+        "asset_id": "43e68526-b6e7-501f-a449-144970884c80",
+        "package_digest": "e7c894ea86edab342ea73fef9777e1fb67d0a10dc5673a2a841f4441547d376e",
+        "package_path": "04_设备/epson/g10-654_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_654sw_8c55a998/module.json",
+      "module_sha256": "8e1a8fad4f932571cd5412e552a1120b83e11786ff323a112289eabbe1e32561"
+    },
+    "g10:851s": {
+      "title": "G10-851 S",
+      "asset": {
+        "asset_id": "c8af4fba-c3e0-54b0-9471-ca2865bc7cb7",
+        "package_digest": "8e080971e71d88dea509842855fe567bbd17b0f1bcd21aa092eaefc5794c613e",
+        "package_path": "04_设备/epson/g10-851_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_851s_1367db9c/module.json",
+      "module_sha256": "712c1e58d4163d1a97b336526d7e3cf2168d95e5cdfcc323cd2356430528ab3f"
+    },
+    "g10:854s": {
+      "title": "G10-854 S",
+      "asset": {
+        "asset_id": "422a07c5-513b-5d3a-8da6-cf90e0936f40",
+        "package_digest": "e9f737bdc5923bc475002f807c2c210c824459786f7a632cc15ca251856e61fa",
+        "package_path": "04_设备/epson/g10-854_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_854s_723524fe/module.json",
+      "module_sha256": "00a9670c3ac045f611493525eadd4f7213a3f1549542af3c2caaa31c795ea5ca"
+    },
+    "g10:854sr": {
+      "title": "G10-854 SR",
+      "asset": {
+        "asset_id": "9b020012-01b3-5f92-a9ae-f8ff85b14b6e",
+        "package_digest": "baba1d9200a3af7f77e316c6c994d31fe26a7bb56646961c8531e1e2a6bc77dd",
+        "package_path": "04_设备/epson/g10-854_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_854sr_6057b359/module.json",
+      "module_sha256": "796a2f7c8069fb6857d7c0a0dc0c751d92a7fbb1fa34a6b5813a24b2bb3a0b54"
+    },
+    "g10:854sw": {
+      "title": "G10-854 SW",
+      "asset": {
+        "asset_id": "2227e25e-ee82-5dc0-8fab-7a0462a368ae",
+        "package_digest": "b166379a171eef588127744f6ec07b7e53fb84aed3d20d9a1401470aa1ec7507",
+        "package_path": "04_设备/epson/g10-854_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g10_854sw_71b060e4/module.json",
+      "module_sha256": "fc3a9574c0ec977959ac796c0431a165b4392d177907c785e446f474f97911fd"
+    },
+    "g20:851s": {
+      "title": "G20-851 S",
+      "asset": {
+        "asset_id": "7154decf-d7eb-5eec-8a01-9dc164de4b92",
+        "package_digest": "35801e4a217c17a3196682ab609813394f1873117ee4cb0ea6a98652cc3e49c5",
+        "package_path": "04_设备/epson/g20-851_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_851s_ca2c1d2a/module.json",
+      "module_sha256": "77b79d3ed5b31a0f17742f12af1d0df625ba02fe123e2bac7dd4b0844a7780c8"
+    },
+    "g20:851sr": {
+      "title": "G20-851 SR",
+      "asset": {
+        "asset_id": "93191d90-372b-5d91-a86d-ed04b2b9af4e",
+        "package_digest": "0cbf8b85554914af37b93b1d273770a59b69c4927488426f64f378d162fed885",
+        "package_path": "04_设备/epson/g20-851_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_851sr_97a096af/module.json",
+      "module_sha256": "44850cee35ddd6e78147cc32c2702bd11d2fa5b06716e69aea6922562dfe6ed0"
+    },
+    "g20:851sw": {
+      "title": "G20-851 SW",
+      "asset": {
+        "asset_id": "2479fdb0-62f9-5a50-8ac7-7ddc288aa584",
+        "package_digest": "3238d9fac6a1325c9da69d52bb8000edf723a0e19b76af7162df567f55492dbb",
+        "package_path": "04_设备/epson/g20-851_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_851sw_83757afb/module.json",
+      "module_sha256": "39ff5bf577a25b74bcded40d3113c55db073fb8cb93656aaa26a6eb4c46e848e"
+    },
+    "g20:854s": {
+      "title": "G20-854 S",
+      "asset": {
+        "asset_id": "5211d101-97bc-5830-9aae-3feab3112e1a",
+        "package_digest": "8c1a61286d5af0108a8bf0d3a3a06b2030590491e3fc88379597851f97b0c6f6",
+        "package_path": "04_设备/epson/g20-854_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_854s_c7851fef/module.json",
+      "module_sha256": "2134a04382ea0c5aaad1795b58c728372195a0aeab70947bd7c96d1ee6d431f3"
+    },
+    "g20:854sr": {
+      "title": "G20-854 SR",
+      "asset": {
+        "asset_id": "2e54c4b3-887c-5679-b674-acfb3bc6cf97",
+        "package_digest": "29577bfc54af3b5f80cbe83122626acdcfe1fde480ddaacbad311daff5599884",
+        "package_path": "04_设备/epson/g20-854_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_854sr_a470468a/module.json",
+      "module_sha256": "5ef807a9eaa2782da87ac609322d670d5618c0a9d2f2cb5f470a23aa15e838a0"
+    },
+    "g20:854sw": {
+      "title": "G20-854 SW",
+      "asset": {
+        "asset_id": "c5f4ebd6-0553-5bd4-9c46-6ff494b3c3bb",
+        "package_digest": "a9638a6a39735dbed84c8c30fe76cd7bfc931ca711e77ac8ea31229b6a5d7c73",
+        "package_path": "04_设备/epson/g20-854_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20_854sw_56a10d4a/module.json",
+      "module_sha256": "9498a7d402a602a274ede8dac464436277e5c1f56e0ccebe0753b32db3256be6"
+    },
+    "g20a01s": {
+      "title": "G20-A01 S",
+      "asset": {
+        "asset_id": "5b9b8d63-d43c-5b2e-be0b-f0a8257ded16",
+        "package_digest": "2aded5da62269ed511288f2d5ed649c971e1c0628df09043857794d5446fadcd",
+        "package_path": "04_设备/epson/g20-a01_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a01s/module.json",
+      "module_sha256": "4483842bd70e5c6055e289f9013eba393e6e25e422feadfcd3e052e5cbaf354e"
+    },
+    "g20a01sr": {
+      "title": "G20-A01 SR",
+      "asset": {
+        "asset_id": "efa2bdea-9681-574e-a346-81a59b69b3f9",
+        "package_digest": "e321c01f8f84717d729af1b6be1d73b76e0ce8ae7c64f4bf914d3ebfce0fbe25",
+        "package_path": "04_设备/epson/g20-a01_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a01sr/module.json",
+      "module_sha256": "1f8193fe870069c6154ea82afe85150ecd6a0986554ab8ef4965263c4f60bf66"
+    },
+    "g20a01sw": {
+      "title": "G20-A01 SW",
+      "asset": {
+        "asset_id": "05e62a12-26c0-5305-9d22-f6594d99a811",
+        "package_digest": "324a76b7b4d55455992dbc1b8682a15944297c778a6e1f1e668a950e9fc50bb9",
+        "package_path": "04_设备/epson/g20-a01_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a01sw/module.json",
+      "module_sha256": "fbfbea270ef4eceaa24bf0c8adb8e9a09fb1955711a15e7fc5d45ebff129362e"
+    },
+    "g20a04d": {
+      "title": "G20-A04 D",
+      "asset": {
+        "asset_id": "eeb2201d-b293-59ee-841a-4cb2369a118d",
+        "package_digest": "aa7f1cb51b86d9876689155fc9be9541d81b00352d9e56b78f2270b235acef8d",
+        "package_path": "04_设备/epson/g20-a04_d__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a04d/module.json",
+      "module_sha256": "58b96dfbc81932e5b8ad02dbbd394bc125fce79433fbf43114072526bc663d93"
+    },
+    "g20a04s": {
+      "title": "G20-A04 S",
+      "asset": {
+        "asset_id": "4e123973-e820-5110-b5ed-e09b43ea692c",
+        "package_digest": "f4438b095967a1a0809fc2076d53397dd9d56701e316af60e660d05157ede3cc",
+        "package_path": "04_设备/epson/g20-a04_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a04s/module.json",
+      "module_sha256": "084d5662f1d61c71959691876264f31b9d3482085008a83f2af5516f9b0392b6"
+    },
+    "g20a04sr": {
+      "title": "G20-A04 SR",
+      "asset": {
+        "asset_id": "8e11832e-aa01-5b59-b1c3-76baefc72c37",
+        "package_digest": "29794dac48588ff8ff1f4305dfa3a2fa86d8ec41447aaa16b2e1ac16227fddb6",
+        "package_path": "04_设备/epson/g20-a04_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a04sr/module.json",
+      "module_sha256": "f3908dbcbeaca0370c1d3558b1c6535e3e6f54af7da33404141f2615e075d29e"
+    },
+    "g20a04sw": {
+      "title": "G20-A04 SW",
+      "asset": {
+        "asset_id": "38400494-40bc-571e-a862-bd62cfde6859",
+        "package_digest": "91f861c902df224054a989faacf09a8fd09aa9ebbfb3bbf9cbfe14b4fae7db71",
+        "package_path": "04_设备/epson/g20-a04_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g20a04sw/module.json",
+      "module_sha256": "a10cfd69b18f60c012d0ec27d5d3079e5f32312749a5e223d00f85d21544ed5d"
+    },
+    "g6:451s": {
+      "title": "G6-451S",
+      "asset": {
+        "asset_id": "70550c64-ac57-53d4-9cea-8df095eae263",
+        "package_digest": "1d6ec57bcbab84459c77194c61ae8d7abde2412367f82e6a99d638fb8d6764bd",
+        "package_path": "04_设备/epson/g6-451s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_451s_b562febb/module.json",
+      "module_sha256": "a1295510933140d4955174c80a86779eea8a7df164ab27538b5b0ec5c815c848"
+    },
+    "g6:453cr": {
+      "title": "G6-453 CR",
+      "asset": {
+        "asset_id": "c181a6bc-8144-55a8-a073-a496100db932",
+        "package_digest": "7cca4bdc86b00a5b664f4e0f67f149b52835f63b3cfa682d8f6b6429f918f76c",
+        "package_path": "04_设备/epson/g6-453_cr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_453cr_fe6c14d5/module.json",
+      "module_sha256": "1c1c49ea032bf57c3549e8c2dff835338919f37bd14206150bdc59b9aca4c2d5"
+    },
+    "g6:453s": {
+      "title": "G6-453S",
+      "asset": {
+        "asset_id": "a89c3d3b-c8a0-5d57-9b49-194a5945671b",
+        "package_digest": "6124c24a252879168f0b9d05257720af42cdad8915c8afe2d471c94a68287594",
+        "package_path": "04_设备/epson/g6-453s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_453s_2aae0b5b/module.json",
+      "module_sha256": "087aa6a875a978dae0b66b7298f990d72ca1da661626cd20b2bb0c367dc87ef8"
+    },
+    "g6:551dw": {
+      "title": "G6-551 DW",
+      "asset": {
+        "asset_id": "7704d379-0cb3-5207-a73f-6094558a6370",
+        "package_digest": "4bece1bbe5e7bfe985c6cf4f40664758c5ce0c14444ccae148f1d856d30dd382",
+        "package_path": "04_设备/epson/g6-551_dw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_551dw_02f99d96/module.json",
+      "module_sha256": "bf5f97cc89e8dc95318335e5703c7fb1116028965d0917fa76c8f344a9a49a5c"
+    },
+    "g6:551s": {
+      "title": "G6-551 S",
+      "asset": {
+        "asset_id": "c13e673a-a892-5678-bbbb-f1713ec28f0d",
+        "package_digest": "ee178c284f15ea0a7c7914d5692d05b9cdd7556eacb8b0699cca5fc80d81aa11",
+        "package_path": "04_设备/epson/g6-551_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_551s_bbf3b862/module.json",
+      "module_sha256": "5cfd4cb0e315945971818311629f59495dbc8fb5aacd409902648d9d748eaf2d"
+    },
+    "g6:551sr": {
+      "title": "G6-551 SR",
+      "asset": {
+        "asset_id": "1d453728-ad93-50c8-b370-145484372862",
+        "package_digest": "8ba75543d1a1ca9a252d072a36116563ace1b313f1774068a1752376e3c67aa6",
+        "package_path": "04_设备/epson/g6-551_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_551sr_27d10ac5/module.json",
+      "module_sha256": "ecbbd637d125019eca272e205e10fcec2d0d1249e375a9a40574f7d04cebc3bf"
+    },
+    "g6:551sw": {
+      "title": "G6-551 SW",
+      "asset": {
+        "asset_id": "cd2acab4-d9ee-5a9c-8beb-e82d43187df5",
+        "package_digest": "f7273ac10b89d9b2daec8ecb8d067ce8652ea884ca1cce207e5d3a3c9a3377fd",
+        "package_path": "04_设备/epson/g6-551_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_551sw_937c6b7c/module.json",
+      "module_sha256": "d7a02a13947d33b11c973b15be7f8d94465ed89fb4ac7b2593f6034a40bc1de4"
+    },
+    "g6:553s": {
+      "title": "G6-553 S",
+      "asset": {
+        "asset_id": "aba97f10-9dca-5745-8c2f-fa9e22d163ec",
+        "package_digest": "a8ec42076e9198d180153ab1b881d05041d6046fe03d824ef3ae6372b61f5c2f",
+        "package_path": "04_设备/epson/g6-553_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_553s_67689bb2/module.json",
+      "module_sha256": "c54b3aedaf2467adf968e0a095fd48f5c5f22a19e9bd6bfe0bcf0144eba64697"
+    },
+    "g6:553sw": {
+      "title": "G6-553 SW",
+      "asset": {
+        "asset_id": "2df49f4f-89df-560f-8ca5-c2cf7aa3d761",
+        "package_digest": "f4155591e1aa0a02b83d95f8944503bb33b6842e987dced1570ca24d6a07ad6a",
+        "package_path": "04_设备/epson/g6-553_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_553sw_5d7c0476/module.json",
+      "module_sha256": "e1c7e471ef31ad80c0810540dfbeed35fb5b5ba0964a230055fe91285ba0ccb8"
+    },
+    "g6:651dw": {
+      "title": "G6-651 DW",
+      "asset": {
+        "asset_id": "a50ea41e-bf07-58c5-b2ad-ba5068fd96b7",
+        "package_digest": "749b2c5bc1361b67a0412494555b1df30fd3c16857df6e5663edcc5ca9ae903b",
+        "package_path": "04_设备/epson/g6-651_dw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_651dw_8b27c2e0/module.json",
+      "module_sha256": "d56fcc57821fb1ca9343e07f354db96d5ef68ff4d243cd3802e56d94c3def545"
+    },
+    "g6:651sr": {
+      "title": "G6-651 SR",
+      "asset": {
+        "asset_id": "6c83b936-454a-5294-97bd-3e9f88658d7d",
+        "package_digest": "3e99615e239ba75e2dddb374b2f8cc96c7b4ff1ced3e4383dd1a6b54a9072016",
+        "package_path": "04_设备/epson/g6-651_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_651sr_b6cd38b0/module.json",
+      "module_sha256": "b3887ac47d12c34ed3d366212499a195a14467726408558edbd372142ea90d1d"
+    },
+    "g6:651sw": {
+      "title": "G6-651 SW",
+      "asset": {
+        "asset_id": "25c038f8-7bb3-519c-b782-7f78847d86a9",
+        "package_digest": "e4978037975de588a3bf339dbff94e8d38a74da8a7b3264a982cad51aba23ab7",
+        "package_path": "04_设备/epson/g6-651_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_651sw_db9cd97b/module.json",
+      "module_sha256": "518f5c976c781bf5f5fbc2287a37662de46a6b255a31b2f7d2db6f3278e770c2"
+    },
+    "g6:653pw": {
+      "title": "G6-653 PW",
+      "asset": {
+        "asset_id": "0104137b-bf06-5fc2-adb0-3fe57e9db404",
+        "package_digest": "a37bf309d951c924ee9f5757d9ef4a5d9325a48782cb048a211427ce5c1c4435",
+        "package_path": "04_设备/epson/g6-653_pw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_653pw_63f0f0d1/module.json",
+      "module_sha256": "bfbf4b716686450ca4e6d2ed88630ef7bd612021be09b2a3b4c7abe5c40e8054"
+    },
+    "g6:653sr": {
+      "title": "G6-653 SR",
+      "asset": {
+        "asset_id": "67e32ebd-e459-5559-8db3-b84be277eebd",
+        "package_digest": "80ea3d5b33e2e5025476fac66c30d272b49302435ec8a6b03080603fa32d08a2",
+        "package_path": "04_设备/epson/g6-653_sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_653sr_df985c5e/module.json",
+      "module_sha256": "2370b52feb87bc4d727255c17c1d8460497deb990e5e795b2a2de10186cd1739"
+    },
+    "g6:653sw": {
+      "title": "G6-653 SW",
+      "asset": {
+        "asset_id": "4095f740-17e4-5103-accd-e735db6e733a",
+        "package_digest": "d8c924b3a8c37af080cf74d7fe94240c448a991f62fb68df3e46c09bc8109911",
+        "package_path": "04_设备/epson/g6-653_sw__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/g6_653sw_8ac811a8/module.json",
+      "module_sha256": "ddeceefdb9d41d13e321cb034c6baa5232a7dfa44a28156d88be843cb0b58aa1"
+    },
+    "gx4a251s": {
+      "title": "GX4-A251S",
+      "asset": {
+        "asset_id": "78602027-8247-5bc3-9eab-813721f46326",
+        "package_digest": "d09bd40cd0608a5df3b0ab5f48132dac76bb41903e26f4710aa0c3ddef4b6de2",
+        "package_path": "04_设备/epson/gx4-a251s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4a251s/module.json",
+      "module_sha256": "156f8b2f3bed239e5c8495c5e238dcc33a1f1f4e447554699b4bcab46ac0661d"
+    },
+    "gx4a301s": {
+      "title": "GX4-A301S",
+      "asset": {
+        "asset_id": "8164873c-52e2-5814-9173-dc7506c1df58",
+        "package_digest": "61d4dbdf6187d7e9a5ae54a2a9118b59f422f0e9b5f75200f31c2537673f2542",
+        "package_path": "04_设备/epson/gx4-a301s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4a301s/module.json",
+      "module_sha256": "8601ab381f6da777c5af0bd156368dfcb6dfb9f07049e601e511bb04832605b2"
+    },
+    "gx4a351s": {
+      "title": "GX4-A351S",
+      "asset": {
+        "asset_id": "aee16686-acec-55fc-bad5-78a829b04bfa",
+        "package_digest": "c640560b450b19da5fc5ebda19d637e4b86ba7ba506cf3ea90d5a6a93fd84c14",
+        "package_path": "04_设备/epson/gx4-a351s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4a351s/module.json",
+      "module_sha256": "b8bd33bb6c0bb9877f5863a7991ec625f91cda66c42655bca61f0cb923788ed9"
+    },
+    "gx4b251s": {
+      "title": "GX4-B251S",
+      "asset": {
+        "asset_id": "00631f5a-4f53-5ef7-ab0c-1d647bed3a58",
+        "package_digest": "b6f6624ad2a125a1cfdc5aff504c10886f60ee4befd9e74d470a5bcbd5b16fb9",
+        "package_path": "04_设备/epson/gx4-b251s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4b251s/module.json",
+      "module_sha256": "f232eb982be5d82f27048a49cb20753b47339cfeb52e008ac85dfdfdeec42bda"
+    },
+    "gx4b301s": {
+      "title": "GX4-B301S",
+      "asset": {
+        "asset_id": "a4a7f526-c0d0-5a1b-a069-b0ad60ec4689",
+        "package_digest": "d77d2a1fc1ceec2a79eff83387cef2a469f105a8ba0b1b9214f8f396ec5dbe8d",
+        "package_path": "04_设备/epson/gx4-b301s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4b301s/module.json",
+      "module_sha256": "51b1f1e68bb53c1202b4cc2882f195e742f7f1ef9062f944459ad95965c37869"
+    },
+    "gx4b351s": {
+      "title": "GX4-B351S",
+      "asset": {
+        "asset_id": "263068b6-55d7-5f7c-a1ce-804fde926d5b",
+        "package_digest": "8d203c07620092bfab55ddd2ec296435912b0e0c821a8ada8df4c392ce5c4c1c",
+        "package_path": "04_设备/epson/gx4-b351s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4b351s/module.json",
+      "module_sha256": "2ac01fa3723aa69dd6730202b2fbaf789a439e2090694e495b62f97de1462d7e"
+    },
+    "gx4c251s": {
+      "title": "GX4-C251S",
+      "asset": {
+        "asset_id": "ba3f2db8-5b04-53cb-a7ad-f0d090f72408",
+        "package_digest": "b94de12f9e5e49520de5ba35ffa8dfb69f326bde295887dee157b1e73a211343",
+        "package_path": "04_设备/epson/gx4-c251s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4c251s/module.json",
+      "module_sha256": "76dfcabcf3b4482d0d0d9becace1a84f79338558cb5f7f64693aea52b4ad2f10"
+    },
+    "gx4c301s": {
+      "title": "GX4-C301S",
+      "asset": {
+        "asset_id": "73a09407-fc9d-58d0-93ce-ecf9fa00a13f",
+        "package_digest": "2b9d43fc238a61839f9703c2ccb052d1f0a2ad3082558d53cf752d8a5b31ca2b",
+        "package_path": "04_设备/epson/gx4-c301s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4c301s/module.json",
+      "module_sha256": "e08531c950611d95f80bb0932b2fba37218a54f56a3d6a40c46b8ff069b3bc0b"
+    },
+    "gx4c351s": {
+      "title": "GX4-C351S",
+      "asset": {
+        "asset_id": "21469aef-e6a9-5e20-b17b-ca7135b629b4",
+        "package_digest": "e76b92e5a444ec97ed1b823641677bb075d298b46ec12052fb1ac82a4713916a",
+        "package_path": "04_设备/epson/gx4-c351s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx4c351s/module.json",
+      "module_sha256": "956803ed4d9c13aa1a9526640296cf4d15fca98d04990d6b46c7ffbe78a1b5d9"
+    },
+    "gx8a452s": {
+      "title": "GX8-A452S",
+      "asset": {
+        "asset_id": "c92a9889-af4f-5fa5-b718-8c3438c3c9cb",
+        "package_digest": "26ccc8eb2e9ab14d0207d6a817776d4f8d9d1c22f2b26acdb28534653b85c20a",
+        "package_path": "04_设备/epson/gx8-a452s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a452s/module.json",
+      "module_sha256": "8c8cd926629ef5b0881c964fce3d280f925e2380d03d1dae695774828154a8be"
+    },
+    "gx8a453s": {
+      "title": "GX8-A453S",
+      "asset": {
+        "asset_id": "1717ca03-b6ae-5244-9110-7471b343a7d7",
+        "package_digest": "b98797493cb5bd184c645f4053f6e08f67f0d767c420f55065fddc4e7da9850b",
+        "package_path": "04_设备/epson/gx8-a453s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a453s/module.json",
+      "module_sha256": "2a8bbb6b47d6050c900539d3cca91af4b965f0ced88be1fec9a2f65638a5ba3d"
+    },
+    "gx8a552s": {
+      "title": "GX8-A552S",
+      "asset": {
+        "asset_id": "62a97818-7740-51c9-9726-548a6dfd0ad6",
+        "package_digest": "650ac3b90a4d5d95113f7d61df571c79ac0ef386dbf7fd853260953b575ff957",
+        "package_path": "04_设备/epson/gx8-a552s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a552s/module.json",
+      "module_sha256": "0824f293d552e134c0528562b99d87b3881dda4ad178ec01c8f58288c6e783c3"
+    },
+    "gx8a553s": {
+      "title": "GX8-A553S",
+      "asset": {
+        "asset_id": "cf48264c-db28-5e98-917e-b60c93103ee3",
+        "package_digest": "2b12d2f74835e342e59e5964000c247366b046caa322aa1af4c6f4e674914629",
+        "package_path": "04_设备/epson/gx8-a553s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a553s/module.json",
+      "module_sha256": "25edaf7efa51ea0570551680b7e8d9017bc532cb7da3bb5b09516ff59d6555b5"
+    },
+    "gx8a652s": {
+      "title": "GX8-A652S",
+      "asset": {
+        "asset_id": "807ba2b3-9820-5965-a4e2-c92a49b6efd3",
+        "package_digest": "37060718f398b7bf6b6015460b1fe6d4272d2f3ba410af66b388be0c99cfc0ec",
+        "package_path": "04_设备/epson/gx8-a652s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a652s/module.json",
+      "module_sha256": "ff049947bfef857a8264627ea08c8f9d4015d95209c2521ec473446f3642d30c"
+    },
+    "gx8a653s": {
+      "title": "GX8-A653S",
+      "asset": {
+        "asset_id": "d01bbcb5-769c-5aba-a8cc-e8b1e6a6e00b",
+        "package_digest": "072749572c8b9e3bfb52092254b8f60c5d32133c39eeeaf56e21d457b53b45ee",
+        "package_path": "04_设备/epson/gx8-a653s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8a653s/module.json",
+      "module_sha256": "2f2fca640faba1b79a5699a6a6fb08c6650467feec1927602fe0716dd6bd0169"
+    },
+    "gx8b452s": {
+      "title": "GX8-B452S",
+      "asset": {
+        "asset_id": "838c93db-6836-5639-b42c-74a2eeb61126",
+        "package_digest": "d676f4bc92b661e96a105932cb5f6f8f172030328e02a374cc83c042c95b1d6e",
+        "package_path": "04_设备/epson/gx8-b452s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b452s/module.json",
+      "module_sha256": "435e1af2bae1dc22a0a12ac96bd7064af1342bb33dba5532b52461c9933de3c1"
+    },
+    "gx8b453s": {
+      "title": "GX8-B453S",
+      "asset": {
+        "asset_id": "6a4fc317-4732-5644-ab4f-c9a37d319df7",
+        "package_digest": "bd6757634af279706bcedad62416d714f0a3122f3d5752fd98355a22e7950e2b",
+        "package_path": "04_设备/epson/gx8-b453s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b453s/module.json",
+      "module_sha256": "98f8913c0a8a2c15506c504c428d8da881ae15875191288a8643ec78150e5ee0"
+    },
+    "gx8b552s": {
+      "title": "GX8-B552S",
+      "asset": {
+        "asset_id": "c6f7ae43-bd3e-5f5e-aa03-21a57498c026",
+        "package_digest": "94378e8be98559a3b15bbd542ac6e537f0fbf723cbde8c481762c0d14ffaea03",
+        "package_path": "04_设备/epson/gx8-b552s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b552s/module.json",
+      "module_sha256": "5f5ef36c3df9d18c4f1470d5d0604768ab3260557b09550a85dab6088faf2621"
+    },
+    "gx8b553s": {
+      "title": "GX8-B553S",
+      "asset": {
+        "asset_id": "29a4e54c-0192-58e2-b03f-a9aa36004930",
+        "package_digest": "94f0925dded4eaeee6175007a1f2074abff946008f77048aececb499e6d51aa6",
+        "package_path": "04_设备/epson/gx8-b553s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b553s/module.json",
+      "module_sha256": "86955ca027b21b324fc1b4eb0c22a53027555419f809725c4cd32ab04c81b3d2"
+    },
+    "gx8b652s": {
+      "title": "GX8-B652S",
+      "asset": {
+        "asset_id": "7bc3b318-41c5-5ecd-9312-3c856814ab63",
+        "package_digest": "da577b795074daabb7a25ca21c4eda9a94155cd4c37c61513efd6b43e3ee9175",
+        "package_path": "04_设备/epson/gx8-b652s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b652s/module.json",
+      "module_sha256": "50da3cf6eed31b30212f8f6fbf5dc184b66c3a0d07bd677e61cde48543d6bd9e"
+    },
+    "gx8b653s": {
+      "title": "GX8-B653S",
+      "asset": {
+        "asset_id": "d88a329b-c8c5-5663-9a19-451d1d8c0b19",
+        "package_digest": "88230fc9812c48082d79d2a8c91579f2cb972b6b65258eb5e95125ecddca6024",
+        "package_path": "04_设备/epson/gx8-b653s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8b653s/module.json",
+      "module_sha256": "111ea08b95d83be521e633d28055ababd1c594e4f718f0de62c2c286957670c7"
+    },
+    "gx8c452s": {
+      "title": "GX8-C452S",
+      "asset": {
+        "asset_id": "8982bb9a-ad7e-52fc-bc28-e860bc34d842",
+        "package_digest": "23f834e6a782a9722d2b7adc720716e0bd932cb75286627a2f2c6c86ee9710d8",
+        "package_path": "04_设备/epson/gx8-c452s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c452s/module.json",
+      "module_sha256": "ff88f28d674dd061a1e0951f5445f3be9225251f539e6e4e14d37d9e3e177350"
+    },
+    "gx8c453s": {
+      "title": "GX8-C453S",
+      "asset": {
+        "asset_id": "8ded7d84-50ca-582f-8833-069f321be996",
+        "package_digest": "271c00a0fd4a9c8051c3188c6223d01066c3d174019083841339d353c91a60f8",
+        "package_path": "04_设备/epson/gx8-c453s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c453s/module.json",
+      "module_sha256": "f7594c55780c7d870fe74e5754e494c6037e9417eae2179791df6822d3935956"
+    },
+    "gx8c552s": {
+      "title": "GX8-C552S",
+      "asset": {
+        "asset_id": "afae7be3-b93d-5a9d-9248-6a4f922cb9f7",
+        "package_digest": "ffad6da9eeeabca3e5d8152d8de9498f36e488021e774ea82ff3579a340ce5ea",
+        "package_path": "04_设备/epson/gx8-c552s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c552s/module.json",
+      "module_sha256": "058c73d34ea425b2ceb5e1bd8f2bd818a9614262e677cd3bdcee2c0530549def"
+    },
+    "gx8c553s": {
+      "title": "GX8-C553S",
+      "asset": {
+        "asset_id": "621e7b31-9810-5fac-850a-1fcb8142be39",
+        "package_digest": "13f3db37035e8c408d66a1b7d3c7329a1342dbafed450ea09e0592deb1ceb478",
+        "package_path": "04_设备/epson/gx8-c553s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c553s/module.json",
+      "module_sha256": "9d8ba9fa1961962cc08cd22d14be8ed40b61f024a9d3165162231b38c520372d"
+    },
+    "gx8c652s": {
+      "title": "GX8-C652S",
+      "asset": {
+        "asset_id": "e43d8960-fc47-5609-978a-7b48f247d3b3",
+        "package_digest": "6c7a66b20707d16136042aff57af1cf87c82416087a062f9e54933894b869f03",
+        "package_path": "04_设备/epson/gx8-c652s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c652s/module.json",
+      "module_sha256": "603197894874dfa1b5fe835f0cf62b53108b3c61a27257384bd79830e8a3830b"
+    },
+    "gx8c653s": {
+      "title": "GX8-C653S",
+      "asset": {
+        "asset_id": "52b2ccad-5b2b-590e-8953-7878eed2a227",
+        "package_digest": "4a2584d15b73cb94a492234d765fd8cc6b40ee062c157146fb5c3ad86ced9d34",
+        "package_path": "04_设备/epson/gx8-c653s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gx8c653s/module.json",
+      "module_sha256": "ce22b535c0c5d329c1f1c323c56a93da00a8866f72af14e5343eb859594d0905"
+    },
+    "ls20b804s": {
+      "title": "Epson LS20-B804S",
+      "asset": {
+        "asset_id": "2070f3e2-0a36-5687-9336-a70996ac8a5a",
+        "package_digest": "3238da1422b441263d5a471278a7ffc3602a0fa0a55dd0138ac26aa95f132aca",
+        "package_path": "04_设备/epson/ls20-b804s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls20b804s/module.json",
+      "module_sha256": "d6ff2e69604fcf9610d82a2e10f7332c63435c17a9553673415441dcc21e1762"
+    },
+    "ls20ba04s": {
+      "title": "Epson LS20-BA04S",
+      "asset": {
+        "asset_id": "750c7efd-0bcd-50c1-adf9-15a1184c4047",
+        "package_digest": "9346c9e94deaf38a6628d31ec9b49236e9be9f654815126c3d092d41673d5640",
+        "package_path": "04_设备/epson/ls20-ba04s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls20ba04s/module.json",
+      "module_sha256": "8660d02c2f618b4a571f735eb4eb552b32d30097ca775e40b457ea1cc338f1f0"
+    },
+    "ls6:502s": {
+      "title": "Epson LS6-502S",
+      "asset": {
+        "asset_id": "c854c695-4535-56c0-8158-acbad993cc4e",
+        "package_digest": "38f3c84aa07bf5104820bc91bc2969fc0f92d2342b0d4a9e0844e3de50f07b72",
+        "package_path": "04_设备/epson/ls6-502s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls6_502s_1de9d078/module.json",
+      "module_sha256": "3a9c8447087c64859bb7c0b3d9e5f48cb8f65279aeeb1ff69a6cbb1cef0030b1"
+    },
+    "n2a450": {
+      "title": "Epson N2-A450",
+      "asset": {
+        "asset_id": "5e965e1f-edd8-585d-aaac-f5a5d90391d0",
+        "package_digest": "a8f0f4e6f4fd08633e7fed93a0bc364c68937696ef4f861b7142820a30ba3188",
+        "package_path": "04_设备/epson/n2-a450__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n2a450/module.json",
+      "module_sha256": "5c2bff85c910c7cc6558cd7062527f1a37a87da04af654a50c3c72867042406a"
+    },
+    "n2a450sr": {
+      "title": "N2-A450SR",
+      "asset": {
+        "asset_id": "a858ad9f-bb04-5a9c-8b1e-8cf978b3d341",
+        "package_digest": "492a0b3042d380e31c63dbb29e9e255bc45aa09764156407785539d5720f7fef",
+        "package_path": "04_设备/epson/n2-a450sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n2a450sr/module.json",
+      "module_sha256": "492b593b1877233a87a7ed7c3b18bfe9f945aa11d33a2a1bdaf1ed8c5e2dd7c0"
+    },
+    "n6a1000": {
+      "title": "Epson N6-A1000",
+      "asset": {
+        "asset_id": "b48b45fa-2afa-5e54-8031-330205af8bb4",
+        "package_digest": "23609cdbe38cbe09fe07fff4ea68d6eddf68741f45a2582fbf7de77e2cd4446b",
+        "package_path": "04_设备/epson/n6-a1000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a1000/module.json",
+      "module_sha256": "f20f88181b687fb10d6ea882e182f636374f32f6a589b14797c7248150b051cb"
+    },
+    "n6a1000c": {
+      "title": "N6-A1000C",
+      "asset": {
+        "asset_id": "00c4628b-5994-5c5d-af66-d43c2c4b9d53",
+        "package_digest": "5da58853103458b1cefb95b9ea26b365193a4d0db70c35ba262af0dc250b8ac4",
+        "package_path": "04_设备/epson/n6-a1000c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a1000c/module.json",
+      "module_sha256": "d44674cff2e05e02459607865e8179f71af2191ac5c06c7291a54f24436e2666"
+    },
+    "n6a1000s": {
+      "title": "N6-A1000S",
+      "asset": {
+        "asset_id": "33f7887a-3330-5a87-b1d7-6ab91f98aac7",
+        "package_digest": "da02429d64bf2abf6c3da528fd90586310736e366ac10c661569d60b640cabd5",
+        "package_path": "04_设备/epson/n6-a1000s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a1000s/module.json",
+      "module_sha256": "cb4e70429b3f9fd0529827ad1cc052cd000baf138cdcbbc7237456f643ce3e2c"
+    },
+    "n6a1000sr": {
+      "title": "N6-A1000SR",
+      "asset": {
+        "asset_id": "da99f666-68ad-5ff6-8010-da77ca9b5b69",
+        "package_digest": "330cdfcc3cbd093e3f1fe08ed4f249c51d825028aa3801977dd647fd627cedeb",
+        "package_path": "04_设备/epson/n6-a1000sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a1000sr/module.json",
+      "module_sha256": "4d4e111fa3f0120caa6e5bd3646fadb9d0306e5359fc916549f29c02f22e78aa"
+    },
+    "n6a850": {
+      "title": "Epson N6-A850",
+      "asset": {
+        "asset_id": "06da17f9-e2f1-5833-a5ab-87734652cd77",
+        "package_digest": "f41e50f60960b7edd66c972c287ddc267feea22cca7d91d64668217eb62494ee",
+        "package_path": "04_设备/epson/n6-a850__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a850/module.json",
+      "module_sha256": "df62b761d6ffbb9ec256f34923083aee8b42ee9e051d836437a71cecf7721034"
+    },
+    "n6a850sr": {
+      "title": "N6-A850SR",
+      "asset": {
+        "asset_id": "1ada45de-8113-50cb-a0a2-c16b80d680c2",
+        "package_digest": "d7cc3c15a02ac0b579cf02162ead48a73d1239a039cda778b11003ad24cffada",
+        "package_path": "04_设备/epson/n6-a850sr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/n6a850sr/module.json",
+      "module_sha256": "65e6d174d898e3f53ca2cff95ede7669510a2ee2904763258321b45716acf776"
+    },
+    "prosixps3": {
+      "title": "Epson ProSix PS3",
+      "asset": {
+        "asset_id": "57b47493-f2e8-5ea7-9d04-db5f1249bebd",
+        "package_digest": "857699c347ab5cac8e403bb5ca3da901686016037155118c9d25d93f19faa71b",
+        "package_path": "04_设备/epson/prosix_ps3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/prosixps3/module.json",
+      "module_sha256": "25a2d6a764360fcbed36ab1fb1fc46e66b51d6ada12fd50ceb78169f86ef4e3a"
+    },
+    "ps3as00": {
+      "title": "PS3-AS00",
+      "asset": {
+        "asset_id": "3c46d7aa-5c39-586d-a949-8b3d067647e6",
+        "package_digest": "435486f417d5d7f0ee5703d45262aa275203397a5ce204cc09c23b04d73f0675",
+        "package_path": "04_设备/epson/ps3-as00__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ps3as00/module.json",
+      "module_sha256": "78f9fe9cfa17bec7dacac4b2a6b20d41ced1ae97966b4f7c4c785d88c5d43afe"
+    },
+    "ps3las10": {
+      "title": "PS3L-AS10",
+      "asset": {
+        "asset_id": "98aa20bd-769e-5371-9efc-39b7a3d39f10",
+        "package_digest": "3dcb9b98849711323ebc63f37a3ada8955a8f1be8bd49f163ea5fcc2dea76b20",
+        "package_path": "04_设备/epson/ps3l-as10__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ps3las10/module.json",
+      "module_sha256": "f30ea3a9c80267b737fb6556f5accabe56eee9ad6902c99650156aaa7a3fa985"
+    },
+    "ps5as00": {
+      "title": "PS5-AS00",
+      "asset": {
+        "asset_id": "33e7c5af-2446-58a5-9cfc-4a664ea109d7",
+        "package_digest": "36deba054812f724700009209d882a297b62060c63ab72ece165dcc559352982",
+        "package_path": "04_设备/epson/ps5-as00__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ps5as00/module.json",
+      "module_sha256": "f4b5eace701b6fc078ffbed3886990ab124b5d0fcffb193de67f236f2fdb9615"
+    },
+    "rs3": {
+      "title": "Epson RS3",
+      "asset": {
+        "asset_id": "b6a652b5-0490-56c1-89f6-dd3f30690ddc",
+        "package_digest": "8d6c5ae237a6bb736a7b894eaa2719a0f78f7a9fac05dd50e2b379b226acd198",
+        "package_path": "04_设备/epson/rs3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs3/module.json",
+      "module_sha256": "f37c559ad4ab4f39d0bc8ca6bcac0da3703924ddc82df25871e07c05b4b995dc"
+    },
+    "rs3:351s": {
+      "title": "RS3-351S",
+      "asset": {
+        "asset_id": "fb6842f5-abac-5e7f-abcb-48bf127aafbe",
+        "package_digest": "f7892481053709b69885c989ea3a29382d4a08bb942a845309893832ab195879",
+        "package_path": "04_设备/epson/rs3-351s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs3_351s_de0c5a96/module.json",
+      "module_sha256": "79f5555b8e0f35d3651ffe89298609e70616cb1da3e1c381b89f5ca4bb259f3c"
+    },
+    "rs4": {
+      "title": "Epson RS4",
+      "asset": {
+        "asset_id": "6c104c53-a829-5634-8fb8-e869daa87245",
+        "package_digest": "e9590c2fc48610307ec6ed057ec4db5122dd45a59c7d0fd605d5cdb3df4b5b72",
+        "package_path": "04_设备/epson/rs4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs4/module.json",
+      "module_sha256": "70d59d23a09e67ecaf4cfb7fcba3ec288f73b966f0b25349b0909fa2478deecd"
+    },
+    "rs4:551s": {
+      "title": "RS4-551S",
+      "asset": {
+        "asset_id": "4755787d-5d85-57da-b144-df919f932c93",
+        "package_digest": "33e13c564a76b6403dc80a6f5ffc656b214355fc7561075db036a7f486c54558",
+        "package_path": "04_设备/epson/rs4-551s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs4_551s_bd4caa25/module.json",
+      "module_sha256": "d2077cf1baf0af3311df68e40a957de162bdda6f6cb047ef95d0e5ab0fdf3cfc"
+    },
+    "s5": {
+      "title": "S5",
+      "asset": {
+        "asset_id": "258b39ce-22fc-5698-97dd-0772536eea0c",
+        "package_digest": "30719eab4d1e22692e2b392cad0b9bfbe4e6f457795da2da50f91d2eb63f06df",
+        "package_path": "04_设备/epson/s5__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s5/module.json",
+      "module_sha256": "5eaea9fabef3b4abac48d7ea350443741c5056bb81f7f3d4aca2ad9cae05e154"
+    },
+    "s5a701s": {
+      "title": "S5-A701 S",
+      "asset": {
+        "asset_id": "e1d6c124-6926-51fe-a5ee-a4ff0a98ff32",
+        "package_digest": "81678603f58c7d3487c0c4fe255c71b4c259f210dd25e0cbcadd5e40f7c487f9",
+        "package_path": "04_设备/epson/s5-a701_s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s5a701s/module.json",
+      "module_sha256": "02982d0e93aeb1df8f609f921a278707a9e2b1235173a337d0f6c328a427f5df"
+    },
+    "t3b401s": {
+      "title": "T3-B401S",
+      "asset": {
+        "asset_id": "ed60ac30-195a-58fc-9642-4174f1ff9255",
+        "package_digest": "d1b840c30ec498c0aa7d8058e73264db82d29ded176155a24e59231eb2bd0c76",
+        "package_path": "04_设备/epson/t3-b401s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/t3b401s/module.json",
+      "module_sha256": "d0434ca84aa94d8c1a7977de6714ed43f6464656014a1ec920087aeec1115fe0"
+    },
+    "t6b602s": {
+      "title": "T6-B602S",
+      "asset": {
+        "asset_id": "7ec9920a-37a3-5cbc-b454-ebdff0aa01bf",
+        "package_digest": "cc84819cc2880bf3c18ae467873d2e5ac17949c3d1c66b206989e045358d920b",
+        "package_path": "04_设备/epson/t6-b602s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/t6b602s/module.json",
+      "module_sha256": "ab92ffe0fc8183e7a1ebb708830ea1ed5a7c6a273f00ef1e778761e0a81c51ed"
+    },
+    "vt6": {
+      "title": "Epson VT6",
+      "asset": {
+        "asset_id": "96d1ac1e-8ba9-5863-b008-8dc18115047c",
+        "package_digest": "54c48fa5d314a77cbb8ab718a3f40054e86051ed3fd5dc1852c69e23440a5341",
+        "package_path": "04_设备/epson/vt6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vt6/module.json",
+      "module_sha256": "93eabfe4896abd06c5e86ac5a9c850fa528a68a6e09fc7c4e212bda2710c81ab"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "epson_robot_moveit_config_b47e24e0dc",
+      "manifest": "source_profiles/epson_robot_moveit_config_b47e24e0dc/source.lock.json",
+      "sha256": "61014d80848aaaa10e9a3bbc174711f69a7786ea9fc3bb7b2808e286df7c1577",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "unbranded_robodk",
+  "models": {
+    "calibrationplatetool": {
+      "title": "Calibration Plate Tool",
+      "asset": {
+        "asset_id": "4b88de93-32cf-5c9f-ae58-9408fadf4ff8",
+        "package_digest": "abbf9f5ffcb79e76d2f2c8fcd7b70af39b0605ac732db9a7d0b74dbc7906f1a8",
+        "package_path": "01_零部件/未知厂家/calibration_plate_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/calibrationplatetool/module.json",
+      "module_sha256": "1dd391907d6925c91fcb4a215e53e99d57eb405cfdddc23461bc915cc99e3ed9"
+    },
+    "genericlasercutter": {
+      "title": "Generic Laser Cutter",
+      "asset": {
+        "asset_id": "ffcd0d2e-106d-54c4-a510-4dd6b456f451",
+        "package_digest": "ad8b47bacb02ed61f6123f980e80f0d88450f6e161b8dbcfa1028e073dce35ee",
+        "package_path": "01_零部件/未知厂家/laser_cutter__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericlasercutter/module.json",
+      "module_sha256": "1e887efdf50d7b31df10562096011e9337c202592e38d4b1680d37afb40454cf"
+    },
+    "genericdispenser": {
+      "title": "Generic Dispenser",
+      "asset": {
+        "asset_id": "b2ff9282-a97d-5510-81d2-b1b483e923dd",
+        "package_digest": "3764416ae290c3eec432beaf2a73fec7be57d6a96ba25be0285fac96be1f429c",
+        "package_path": "01_零部件/未知厂家/dispenser__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericdispenser/module.json",
+      "module_sha256": "32aec160e9863f2d62a13dfa7023dc67bc9881b6dd00ae2792bc77d12a035116"
+    },
+    "generic2fingergripperpencil": {
+      "title": "Generic 2-Finger Gripper (Pencil)",
+      "asset": {
+        "asset_id": "f0d7aa73-b192-50a7-a69a-4f4c7d99f52a",
+        "package_digest": "89b3e5fd3264ba227835cb6877cb19f23694db21bcfb21daf57c16fed31d5d3f",
+        "package_path": "01_零部件/未知厂家/2-finger_gripper_pencil___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/generic2fingergripperpencil/module.json",
+      "module_sha256": "9d7b26fe97a8e5a46a82c1ca9583235a4793f3a75229b072850cac596aeacfc3"
+    },
+    "generic2fingergripper": {
+      "title": "Generic 2-Finger Gripper",
+      "asset": {
+        "asset_id": "78e412c0-41ec-51a5-bec5-819af9108986",
+        "package_digest": "f6d8a3f17e2399f32a00fd181dc85ce6ace5564602a4067cca6cae7740e655d6",
+        "package_path": "01_零部件/未知厂家/2-finger_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/generic2fingergripper/module.json",
+      "module_sha256": "16bb66bfe1f506d878bb560316f2848fbceca7a948d1fcb9cfd6936ab8d9f499"
+    },
+    "genericboxerectorgripper": {
+      "title": "Generic Box Erector Gripper",
+      "asset": {
+        "asset_id": "c6029f86-9980-5f7b-abac-5fa9d75d033c",
+        "package_digest": "9a2007cffd4faab86c453aa5b6933eada27e135041beefb9b5e20dfa13092fff",
+        "package_path": "04_设备/未知厂家/box_erector_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericboxerectorgripper/module.json",
+      "module_sha256": "2a8396c26b79775da57f4689eb790ff4cc833daf9104651d67b29d15c3375950"
+    },
+    "genericpaintsprayer": {
+      "title": "Generic Paint Sprayer",
+      "asset": {
+        "asset_id": "823ba7b1-6fae-5ad4-be17-e627bcbd0789",
+        "package_digest": "733e37d304d4e700b38d83544d357539db4d6852eb5c236038911d09d407b687",
+        "package_path": "01_零部件/未知厂家/paint_sprayer__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericpaintsprayer/module.json",
+      "module_sha256": "bb936b56cf4f4a27b1682e3184c61e915d33b4ec6bf30a626db53d3a79d9779d"
+    },
+    "3dprinterextrudertool": {
+      "title": "3D Printer Extruder Tool",
+      "asset": {
+        "asset_id": "2c0e872f-6c04-5c06-902b-e7701167f6ae",
+        "package_digest": "ee470a215b7031653db53e924434345eacbedb9b4b200d50a0cd597f91776165",
+        "package_path": "01_零部件/未知厂家/3d_printer_extruder_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/3dprinterextrudertool/module.json",
+      "module_sha256": "3d4a6e9b63389f01cba45e65371d169b10af34d293e5e94dcc6934724ccbc820"
+    },
+    "ceadextrudere25": {
+      "title": "CEAD Extruder E25",
+      "asset": {
+        "asset_id": "04edb10e-50f2-545e-b52f-7e3b937b373c",
+        "package_digest": "b95f31cc69c772658480c422eb57bba8a72191a3eb4708607612b896a3e563ab",
+        "package_path": "01_零部件/未知厂家/cead_extruder_e25__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ceadextrudere25/module.json",
+      "module_sha256": "f7e334bff9b93919499ca78596ebc8dd0dbc5da160d153a9b2b4e570ea63bbdf"
+    },
+    "ceadextrudere40": {
+      "title": "CEAD Extruder E40",
+      "asset": {
+        "asset_id": "da235dc8-a368-59b5-a4bb-97f6a3808455",
+        "package_digest": "7a92de60fd2b7affa2e9bc3a6588873f5264644128f4c531e885fd2292cf52fa",
+        "package_path": "01_零部件/未知厂家/cead_extruder_e40__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ceadextrudere40/module.json",
+      "module_sha256": "6317f3626fdde8a845bab6139a40df9bb810f4623c01799a46bf10b29f496f9c"
+    },
+    "ceadextrudere50": {
+      "title": "CEAD Extruder E50",
+      "asset": {
+        "asset_id": "f9286f0d-65ec-5b67-9ff9-47cde8653494",
+        "package_digest": "9d96fd51c6f8723b9e019334c648a1e1c6663068ba00d2824a568645acbece21",
+        "package_path": "01_零部件/未知厂家/cead_extruder_e50__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ceadextrudere50/module.json",
+      "module_sha256": "d7df8a77b860424d45ae4e2fad3bffca111337f8cf537309abd10a84d8617f04"
+    },
+    "ceadextruders25": {
+      "title": "CEAD Extruder S25",
+      "asset": {
+        "asset_id": "faa612b3-e195-5dcb-b3d1-adac93f7ca78",
+        "package_digest": "bc690529d455c9be51fc9ce265e8660c7eeece2b5ff422f1feb17169894d93a3",
+        "package_path": "01_零部件/未知厂家/cead_extruder_s25__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ceadextruders25/module.json",
+      "module_sha256": "7f3ac34baeddf7a71db3e976dc37d2ee3e8dfd64bebc6189533a1e6fa6fb62a8"
+    },
+    "genericweldinggunoverarm": {
+      "title": "Generic Welding Gun (Over-arm)",
+      "asset": {
+        "asset_id": "68add5ee-93dd-545a-8a06-9de69c1d25cd",
+        "package_digest": "474ffbf66dcc6132934787ab793fa26df9871fd9a4b04e8675dc5fa927f1120f",
+        "package_path": "01_零部件/未知厂家/welding_gun_over-arm___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericweldinggunoverarm/module.json",
+      "module_sha256": "e31a65b4276572b62cab85ab2f94f525b4ae44c1ca44d90fd37827902d71f948"
+    },
+    "genericweldinggunthrougharm": {
+      "title": "Generic Welding Gun (Through-arm)",
+      "asset": {
+        "asset_id": "8fd4f2d9-b4b7-52b2-ba89-05c4dd38232c",
+        "package_digest": "0eebd4e9e31afb064e414a91c4f18ec71fd865273c8827daff5ba1eb414107ec",
+        "package_path": "01_零部件/未知厂家/welding_gun_through-arm___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/genericweldinggunthrougharm/module.json",
+      "module_sha256": "b4b9275a1d585480efe2d32af39a7deb941c1a2cdd18dc96ce9ae56964c37b87"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "dyzedesign",
+  "model": "pulsaratomextruderliquid",
+  "title": "DYZE Pulsar Atom Extruder Liquid",
+  "asset": {
+    "asset_id": "0d292438-b064-55ea-872c-9fda5fefddd2",
+    "package_digest": "4d82fcf899a78da54e2cdbf7f89b80ae8f0e608a476c9eab21a0e614beee8a04",
+    "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_liquid__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "0d292438-b064-55ea-872c-9fda5fefddd2",
+      "package_digest": "4d82fcf899a78da54e2cdbf7f89b80ae8f0e608a476c9eab21a0e614beee8a04",
+      "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_liquid__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3182eb3506d9ff772ce6eff7a27e2e507e8dfc2ffe12bf0fd55cf584b84137b4",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pulsar_atom_extruder_liquid__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Pulsar Atom Extruder Liquid",
+          "manufacturer": "DYZE DESIGN",
+          "variant": "",
+          "display": "DYZE Pulsar Atom Extruder Liquid",
+          "path": "tools/models/DYZE-Pulsar-Atom-Extruder-Liquid.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "0d292438-b064-55ea-872c-9fda5fefddd2"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/DYZE-Pulsar-Atom-Extruder-Liquid.tool",
+        "path": "simready_usd/DYZE-Pulsar-Atom-Extruder-Liquid.tool",
+        "sha256": "e8af533259bf7ee83c4a5bb12d598121f04e0323fcf008d48378419758acdf35"
+      }
+    ]
+  }
+}

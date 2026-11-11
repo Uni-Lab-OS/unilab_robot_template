@@ -1,0 +1,249 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "elephant",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "mycobot280m5": {
+      "title": "Elephant Robotics myCobot-280-M5",
+      "asset": {
+        "asset_id": "54dfe6c5-476a-5c21-86bb-cd2523d2355d",
+        "package_digest": "0be99846ace5c264dd916ef046bd9858d0a30e7a7cae287d9230f82e7a47df9a",
+        "package_path": "04_设备/elephant_robotics/mycobot-280-m5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mycobot280m5/module.json",
+      "module_sha256": "f5e9a6e37113e520f137ba97ce0b0bc3eb6f7c94ff971483749597fea52986d9"
+    },
+    "mycobotpro600": {
+      "title": "Elephant Robotics myCobot Pro-600",
+      "asset": {
+        "asset_id": "fe1b4e12-0f17-5f3e-a3cb-e64fa0ba57ab",
+        "package_digest": "e747b5216644ccadf29f3403e721e8c3f2312ba5a3d1782e276c6afbce55a05e",
+        "package_path": "04_设备/elephant_robotics/mycobot_pro-600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mycobotpro600/module.json",
+      "module_sha256": "0e973ebfbffe1d9ff70c3ce4ae584eb21a5b2ebb4857372e4f9ba06e0ce711ba"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "mecharm_moveit_72f9b43965",
+      "manifest": "source_profiles/mecharm_moveit_72f9b43965/source.lock.json",
+      "sha256": "c2c5695a5943b290a27855e527955d80ba53a98d5b718bbe810cf1bb899d1ca3",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mecharm_pi_moveit_26a2626c1a",
+      "manifest": "source_profiles/mecharm_pi_moveit_26a2626c1a/source.lock.json",
+      "sha256": "77e2ac725be53c700a269e10af089ad053e8cec8db5c1eb0ce8f3bcd18893c37",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "myarm_moveit_9fcc5ae99c",
+      "manifest": "source_profiles/myarm_moveit_9fcc5ae99c/source.lock.json",
+      "sha256": "dd895a8613eaf11e3af7da5ce68a80b4d51a3f51ae4c0a86be15ab661e469a15",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mybuddy_moveit_da7b6312e6",
+      "manifest": "source_profiles/mybuddy_moveit_da7b6312e6/source.lock.json",
+      "sha256": "1c7cc29108a860d612a382e1c3405950af6e1495cf2015459e196634e4ac0b40",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mybuddy_socket_moveit_84f905d5b1",
+      "manifest": "source_profiles/mybuddy_socket_moveit_84f905d5b1/source.lock.json",
+      "sha256": "73c88a4765b9a7663c32ec7f85ecce9ebd0b44ea6242e6a5e39538a5eac5b51a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280_gripper_moveit_4d1f44edbf",
+      "manifest": "source_profiles/mycobot_280_gripper_moveit_4d1f44edbf/source.lock.json",
+      "sha256": "aebef6634a57e852b1599662efa1d2272c73bb0f9481a7897f9bfde4668fd31b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280_moveit_fe855750a9",
+      "manifest": "source_profiles/mycobot_280_moveit_fe855750a9/source.lock.json",
+      "sha256": "554ffac58892b150e6e0192bb99d22d9e94da0e8eff144fff213c3b9bc7beaf6",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280arduino_moveit_7acedb6b9a",
+      "manifest": "source_profiles/mycobot_280arduino_moveit_7acedb6b9a/source.lock.json",
+      "sha256": "c1e39c6468242a7352fdc7fd55491950464c0cc1bec8c0e3cf63509730bd75bf",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280jn_gripper_moveit_d63bbfc03b",
+      "manifest": "source_profiles/mycobot_280jn_gripper_moveit_d63bbfc03b/source.lock.json",
+      "sha256": "2774eebbca110a9a71a9199332eb9828f7adf75e18d9b8a80def1d5c1d3129bb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280jn_moveit_875c897e59",
+      "manifest": "source_profiles/mycobot_280jn_moveit_875c897e59/source.lock.json",
+      "sha256": "1ea449a456c71a1ad6036ba3463a842da55e875004461a1c654baf72ae6d917f",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280m5_gazebo_gripper_f6b4529ff1",
+      "manifest": "source_profiles/mycobot_280m5_gazebo_gripper_f6b4529ff1/source.lock.json",
+      "sha256": "c28033ff109823df7169455f630b80f3107fcdeb40ffc278735afcbe2ec8c689",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_280pi_moveit_2bfbda085f",
+      "manifest": "source_profiles/mycobot_280pi_moveit_2bfbda085f/source.lock.json",
+      "sha256": "04e4be32856ed462040b07ad134346d09ad04d035dc63442b5f0749d7ddf2b69",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_320_gripper_moveit_566b482b14",
+      "manifest": "source_profiles/mycobot_320_gripper_moveit_566b482b14/source.lock.json",
+      "sha256": "de048b288fe58e49a5e5bb6fa6d8c380549e5a6c0fa3ba4d0fb72426a9d222e3",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_320_moveit_172d03e509",
+      "manifest": "source_profiles/mycobot_320_moveit_172d03e509/source.lock.json",
+      "sha256": "64254123884cd116cd1c43ab29c88af6f32c6f66f1d2920651d3679c21b8cdf3",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_320m5_gripper_gazebo_84fe89eaa3",
+      "manifest": "source_profiles/mycobot_320m5_gripper_gazebo_84fe89eaa3/source.lock.json",
+      "sha256": "4aac615f5f274e1de2a72fbf20d7a4a6405a6f60a9c42b80e548db14729c5510",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_force_gripper_moveit_2e65e9ff77",
+      "manifest": "source_profiles/new_mycobot_320_force_gripper_moveit_2e65e9ff77/source.lock.json",
+      "sha256": "1c3c25696f8a058681ee3a2735dddfa834e38a8c6e1938c2c7bf4ca0ace3f802",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_gripper_moveit_6ecba6c583",
+      "manifest": "source_profiles/new_mycobot_320_gripper_moveit_6ecba6c583/source.lock.json",
+      "sha256": "482d5af6622f7115fcfe71dea056586a2f7dbd0d980b75fdf98105f9b2bbcf06",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_moveit_dae08ae61f",
+      "manifest": "source_profiles/new_mycobot_320_moveit_dae08ae61f/source.lock.json",
+      "sha256": "f0a55fee963dab405ddd73cd34a0e85cdc03d02fc7996368ea601e3cd534ae94",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_pi_force_gripper_moveit_045f6a30ca",
+      "manifest": "source_profiles/new_mycobot_320_pi_force_gripper_moveit_045f6a30ca/source.lock.json",
+      "sha256": "0065b9184f8005242f2781f1e560b2df3e58f7c6651277faf42f78ed473cabcc",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_pi_gripper_moveit_a8edb7a1f2",
+      "manifest": "source_profiles/new_mycobot_320_pi_gripper_moveit_a8edb7a1f2/source.lock.json",
+      "sha256": "64e555465aefa51a193fd6b60f2e62ae4c1b3108ab12aaaf08f9963ca90d835d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_pi_moveit_a1bffc5801",
+      "manifest": "source_profiles/new_mycobot_320_pi_moveit_a1bffc5801/source.lock.json",
+      "sha256": "560738c1d22dc0c2a603f139a10589d25073fbc6d686c806cfb47538122cfc15",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "new_mycobot_320_three_gripper_moveit_bbf0bd0504",
+      "manifest": "source_profiles/new_mycobot_320_three_gripper_moveit_bbf0bd0504/source.lock.json",
+      "sha256": "1e9ed3ff45699cec3c94eb620d63d1f3e5bb635e1f3bb5956dca53da1d53c192",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_600_gripper_moveit_748a4cc451",
+      "manifest": "source_profiles/mycobot_600_gripper_moveit_748a4cc451/source.lock.json",
+      "sha256": "96b16661d81c0f0552a4c1b65f9bb727db4c3c3f8a553299b2bf26acaf926a04",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_600_moveit_98dd3412a2",
+      "manifest": "source_profiles/mycobot_600_moveit_98dd3412a2/source.lock.json",
+      "sha256": "442dd8f82e5499c08e9f47b60ae6c720e43835158dbd96ce84a9e6b4cca53f9e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_630_moveit_fefe0d67d6",
+      "manifest": "source_profiles/mycobot_630_moveit_fefe0d67d6/source.lock.json",
+      "sha256": "f13ee80029f2188234bf35d41d2fee97c58c56be003971c365bc9977ccd80fbb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_630_moveit_three_grip_fec9a83b09",
+      "manifest": "source_profiles/mycobot_630_moveit_three_grip_fec9a83b09/source.lock.json",
+      "sha256": "fcc4bbf4be716d65e56f173322b5b3359bb48208f667d73b3366370781325c75",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_pro450_moveit_db1e7f1356",
+      "manifest": "source_profiles/mycobot_pro450_moveit_db1e7f1356/source.lock.json",
+      "sha256": "d2df6991f14b5f6bd3d9aafe029a5d0a50967327763d80bf8809d5444603e4a4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobotpro450_gazebo_a96c9b30c7",
+      "manifest": "source_profiles/mycobotpro450_gazebo_a96c9b30c7/source.lock.json",
+      "sha256": "474de8a6dd2cfd02cac6178358a311993e74c4f86c9a064564e77c827167a5ea",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "pro630_moveit_adaptive_gripper_badfeef1fc",
+      "manifest": "source_profiles/pro630_moveit_adaptive_gripper_badfeef1fc/source.lock.json",
+      "sha256": "bf3dc22d5b4921e6c19272ce1fe30e24a1108d50ed37a2af0eb6fedd7af2357d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "pro630_moveit_force_gripper_d19a930bbd",
+      "manifest": "source_profiles/pro630_moveit_force_gripper_d19a930bbd/source.lock.json",
+      "sha256": "d52355854ca0ea75dd2c372aa98dbf8f70fec61c8b35b6cc2e06942119595bad",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mypalletizer_260_moveit_d3ed273af6",
+      "manifest": "source_profiles/mypalletizer_260_moveit_d3ed273af6/source.lock.json",
+      "sha256": "e5067e4869bb0a411314af87932f09e19b621e739852a60e428bc9b40f3dd3e7",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mypalletizer_260_pi_moveit_9730539a80",
+      "manifest": "source_profiles/mypalletizer_260_pi_moveit_9730539a80/source.lock.json",
+      "sha256": "3d54d42ed1ca484d3f10d9d0ea7f10804168ae5df82500b6eecb011adaa9e5eb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "ultraarm_moveit_8d1c7e96ed",
+      "manifest": "source_profiles/ultraarm_moveit_8d1c7e96ed/source.lock.json",
+      "sha256": "c855f2af2e52a35756b588de5f0fb7e914d9cc2b96c6a8dd966e471b7e5f9567",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_moveit_config_74ab37a3b1",
+      "manifest": "source_profiles/mycobot_moveit_config_74ab37a3b1/source.lock.json",
+      "sha256": "8ebf57e2bcf5c32ce67b8e435b394a7370a7f01d9c5e7b3cc2cb387a56bd6ca7",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "mycobot_moveit_demos_fbe6a6ba43",
+      "manifest": "source_profiles/mycobot_moveit_demos_fbe6a6ba43/source.lock.json",
+      "sha256": "486d65037efc9e0c7f1e17feb050513a46ccd6b4e1da56bc6aefafadf4ea9c17",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

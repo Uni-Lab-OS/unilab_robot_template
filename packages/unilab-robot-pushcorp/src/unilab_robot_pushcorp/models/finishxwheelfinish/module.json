@@ -1,0 +1,103 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "finishxwheelfinish",
+  "title": "PushCorp FinishX - Wheel Finish",
+  "asset": {
+    "asset_id": "a9ca1d2f-4779-545f-b0f3-4a793ca2bc1e",
+    "package_digest": "7645eca5b98fa11546e7bca345f4e7bc2b527a812411a1ee0d4485c33f7bafea",
+    "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_wheel_finish__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a9ca1d2f-4779-545f-b0f3-4a793ca2bc1e",
+      "package_digest": "7645eca5b98fa11546e7bca345f4e7bc2b527a812411a1ee0d4485c33f7bafea",
+      "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_wheel_finish__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "37404322dd23433888cf0dfc379ab3afe2a23cc6a46e9de0248ea1fe696f7b64",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "37404322dd23433888cf0dfc379ab3afe2a23cc6a46e9de0248ea1fe696f7b64",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2eccc0113ae277a55a422b8435b180c9f1d89d7671c4e0787fe7f548c9dc2d9f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pushcorp_finishx_-_wheel_finish__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "PushCorp FinishX - Wheel Finish",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/PushCorp FinishX - Wheel Finish.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "8f67b733-83d5-478a-8a7e-a81c47769811",
+          "library_assets": [
+            "a9ca1d2f-4779-545f-b0f3-4a793ca2bc1e"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/PushCorp FinishX - Wheel Finish.vcmx",
+        "path": "simready_usd/PushCorp FinishX - Wheel Finish.vcmx",
+        "sha256": "37404322dd23433888cf0dfc379ab3afe2a23cc6a46e9de0248ea1fe696f7b64"
+      }
+    ]
+  }
+}

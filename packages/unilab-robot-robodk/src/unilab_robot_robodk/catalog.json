@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "robodk",
+  "models": {
+    "rdk1100": {
+      "title": "RoboDK RDK-1100",
+      "asset": {
+        "asset_id": "95842cd8-0685-5ab4-ad43-6e8f9d5d3175",
+        "package_digest": "4a029c404ce8bb10a22ba2d4cb0ed3fc87f392ba39cce66db34d8db03dff7837",
+        "package_path": "04_设备/robodk/rdk-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rdk1100/module.json",
+      "module_sha256": "6fdaca40c59affa2306e3c1ba0cff349649015ffb219a537de5b5bfcdd14b2e3"
+    },
+    "rdk1440": {
+      "title": "RoboDK RDK-1440",
+      "asset": {
+        "asset_id": "ceea3448-362a-59a8-835f-0ba7f56988e6",
+        "package_digest": "ff85aece61cb10a2a056c9623bc2de36a65e083fef7027a38200e796021b514c",
+        "package_path": "04_设备/robodk/rdk-1440__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rdk1440/module.json",
+      "module_sha256": "2e960b786820d8de0189bf8d8439a8c2194ceed630cc3569055f2effd750e25a"
+    },
+    "rdk2200": {
+      "title": "RoboDK RDK-2200",
+      "asset": {
+        "asset_id": "e0144f0e-9793-5ecf-afbd-04fd2d5d3531",
+        "package_digest": "dfcb0d7118be61cb10a9dc4a03620bdf82d4189bf0268332e667a74f13144d0b",
+        "package_path": "04_设备/robodk/rdk-2200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rdk2200/module.json",
+      "module_sha256": "9585b9efa4571571eda0c1f3c852ae2f8c103187a5b0486e8bbfc341919fdb83"
+    },
+    "rdkcobot1200": {
+      "title": "RoboDK RDK-COBOT-1200",
+      "asset": {
+        "asset_id": "cc30493f-4ab9-575d-9b06-2c977bd81377",
+        "package_digest": "82e279b6291a5013a7d15660a5b4d28654173f851e3fffa4b8d0dc6d43a95bef",
+        "package_path": "04_设备/robodk/rdk-cobot-1200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rdkcobot1200/module.json",
+      "module_sha256": "a20f1ce053010ae481710c43dc92d38ab3dadb8b87c04cf862d5469c26dd905c"
+    },
+    "rdkscara750": {
+      "title": "RoboDK RDK-SCARA-750",
+      "asset": {
+        "asset_id": "2a2f7ba9-bb30-5466-a34a-02d3ac88f6ff",
+        "package_digest": "4baaad64c8c8f339f04685f54c5e87c428728069a80d38bf2dedba13b0e4cc20",
+        "package_path": "04_设备/robodk/rdk-scara-750__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rdkscara750/module.json",
+      "module_sha256": "b9504f6a07d818f81487dd640a32e5d94f05d78c212c11097f5d9ca5552833ff"
+    }
+  },
+  "source_profiles": []
+}

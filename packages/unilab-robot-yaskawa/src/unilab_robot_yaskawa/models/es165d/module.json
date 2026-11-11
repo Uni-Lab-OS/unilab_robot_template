@@ -1,0 +1,536 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yaskawa",
+  "model": "es165d",
+  "title": "Yaskawa Motoman ES165D｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "f6a94a29-adae-5cbd-9598-69decbe080e5",
+    "package_digest": "ae57e817f34395097e5e6c74803780618ee012ace82fe2c2fbdef79f95bb229b",
+    "package_path": "04_设备/yaskawa_motoman/es165d__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f6a94a29-adae-5cbd-9598-69decbe080e5",
+      "package_digest": "ae57e817f34395097e5e6c74803780618ee012ace82fe2c2fbdef79f95bb229b",
+      "package_path": "04_设备/yaskawa_motoman/es165d__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "auxiliary_linkage": {
+          "contract_attribute": "unilab:auxiliaryLinkage",
+          "implementation": "behavior/linkage.py:apply_auxiliary_poses",
+          "required": true,
+          "scope": "offline kinematic replay; physical loop closure and dynamics not qualified",
+          "update_order": "Update six driven link world transforms, then evaluate all dependent auxiliary frames; inputs column-vector transforms in metres"
+        },
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "ES165D",
+              "source": "robots/models/Yaskawa-Motoman-ES165D.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "ES165D",
+              "source": "robots/models/Yaskawa-Motoman-ES165D.robot",
+              "source_family": "RoboDK",
+              "value": 165.0
+            },
+            {
+              "model": "ES165D",
+              "source": "Components/Yaskawa/Robots/ES165D.vcmx",
+              "source_family": "VC",
+              "value": 165.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 165.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "ES165D",
+              "source": "robots/models/Yaskawa-Motoman-ES165D.robot",
+              "source_family": "RoboDK",
+              "value": 2651.0
+            },
+            {
+              "model": "ES165D",
+              "source": "Components/Yaskawa/Robots/ES165D.vcmx",
+              "source_family": "VC",
+              "value": 2651.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2651.0
+        }
+      },
+      "robot_parameters": {
+        "auxiliary_linkage": {
+          "anchor_links": [
+            1,
+            2
+          ],
+          "anchors_m": [
+            [
+              -0.31489999999999996,
+              0,
+              -0.0105
+            ],
+            [
+              -0.0038400000000000318,
+              -0.21996648471983182,
+              0
+            ]
+          ],
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "kind": "robodk_two_anchor_slide",
+          "native_function": "0x1405b0c10:0x1405b12e0..0x1405b17f4",
+          "orientation_column": 1,
+          "orientation_link": 1,
+          "output_links": [
+            7,
+            8
+          ],
+          "scope": "source graphical closed linkage pose dependency; not physical constraint or actuator model"
+        },
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -650.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 3,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -60.0,
+          -142.5,
+          -360.0,
+          -130.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            650.0
+          ],
+          [
+            -1.5707963267948966,
+            285.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1150.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            250.0,
+            0.0,
+            1225.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            225.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          3.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          76.0,
+          230.0,
+          360.0,
+          130.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Yaskawa Motoman ES165D",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Yaskawa Motoman",
+          "name": "ES165D",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Yaskawa-Motoman-ES165D.robot",
+            "path": "simready_usd/source/Yaskawa-Motoman-ES165D.robot",
+            "sha256": "4688a20b67119ab2b93c65883380ee26ca59908902d5d1bf9084277e21386a02"
+          },
+          "path": "robots/models/Yaskawa-Motoman-ES165D.robot",
+          "payload": 165,
+          "reach": 2651,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Yaskawa",
+          "name": "ES165D",
+          "original": {
+            "family": "VC",
+            "original_name": "ES165D.vcmx",
+            "path": "simready_usd/source_assets/VC/0_es165d/ES165D.vcmx",
+            "sha256": "a09af20f53428da02cd18b41ecd7a140577048819b3d82c677a7eff33aa7685a"
+          },
+          "path": "Components/Yaskawa/Robots/ES165D.vcmx",
+          "payload": "165",
+          "reach": "2651.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "528d1449-4c84-4244-812f-9b6f9a633619"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/es165d__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Yaskawa Motoman ES165D｜多源合并",
+          "id": "merged_robot_f6a94a29_adae_5cbd_9598_69decbe080e5",
+          "metadata": {
+            "asset_id": "f6a94a29-adae-5cbd-9598-69decbe080e5",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:MotomanHSE",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/MotomanHSE.exe",
+        "sha256": "bbf58c38493a5678525bfca47b450f9a1d38309f4948ac503aeaa309036cefe1",
+        "bytes": 87040,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimotoman",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimotoman.exe",
+        "sha256": "33a37818f812cb9321716fa31fe575bc05a55dc142cc7802c9ed68f716725ddf",
+        "bytes": 418816,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Motoman.py",
+      "Motoman_Cartesian.py",
+      "Motoman_CartesianOnly.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/yaskawa/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/yaskawa/ros_industrial",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Yaskawa-Motoman-ES165D.robot",
+        "path": "simready_usd/source/Yaskawa-Motoman-ES165D.robot",
+        "sha256": "4688a20b67119ab2b93c65883380ee26ca59908902d5d1bf9084277e21386a02"
+      },
+      {
+        "family": "VC",
+        "original_name": "ES165D.vcmx",
+        "path": "simready_usd/source_assets/VC/0_es165d/ES165D.vcmx",
+        "sha256": "a09af20f53428da02cd18b41ecd7a140577048819b3d82c677a7eff33aa7685a"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "yaskawa",
+        "es165d"
+      ],
+      "label": "RoboDK+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "c5f14815-ce9a-57e5-a718-e6c477d811b5",
+        "original_package_digest": "45ae9d0c512f6bb368bc18ca3584b9f36fbe0d5461e8c54e2a46366a3c0512e9",
+        "source": "robots/models/Yaskawa-Motoman-ES165D.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

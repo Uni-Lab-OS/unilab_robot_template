@@ -1,0 +1,566 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fruitcore",
+  "model": "horst600",
+  "title": "Fruitcore HORST 600",
+  "asset": {
+    "asset_id": "ec809fb4-29e6-5cd3-9232-b3f0d8a9236b",
+    "package_digest": "772cabff0b23f7a38e3c15ba372af72fc185dc8e770bcc483953914c8b692d81",
+    "package_path": "04_设备/fruitcore/horst600__多源合并_r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ec809fb4-29e6-5cd3-9232-b3f0d8a9236b",
+      "package_digest": "772cabff0b23f7a38e3c15ba372af72fc185dc8e770bcc483953914c8b692d81",
+      "package_path": "04_设备/fruitcore/horst600__多源合并_r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "HORST 600",
+              "source": "robots/models/Fruitcore-HORST-600.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "HORST600",
+              "source": "Components/Fruitcore Robotics/Robots/HORST600.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "HORST 600",
+              "source": "robots/models/Fruitcore-HORST-600.robot",
+              "source_family": "RoboDK",
+              "value": 2.0
+            }
+          ],
+          "conditional_maximum": {
+            "condition": "Consult fruitcore robotics; permissible load depends on center-of-gravity position",
+            "unit": "kg",
+            "value": 3
+          },
+          "datum": "nominal payload VDI 2861-2",
+          "note": "Both source claims have different rating definitions. No automatic 3 kg runtime permission or link mass inferred.",
+          "status": "resolved_nominal_vs_conditional_maximum",
+          "unit": "kg",
+          "value": 2,
+          "verification": [
+            {
+              "retrieval": "Exact official PDF downloaded; text and rendered table reviewed",
+              "reviewed_at": "2026-11-08",
+              "scope": "Nominal and maximum catalog payload; not source link masses",
+              "sha256": "d9aa448cf054b15c453d760fba543a6da78d6a66cde51e038380e34f1d13b517",
+              "title": "HORST600 technical data V230413, page1",
+              "url": "https://www.fruitcore-robotics.com/hubfs/Flyer/Datenbl%C3%A4tter/HORST600/FINAL_HORST600_DataSheet_WEB_EN.pdf"
+            },
+            {
+              "retrieval": "Indexed official document text; no PDF digest claimed",
+              "reviewed_at": "2026-11-08",
+              "scope": "3 kg permissible load requires manufacturer consultation and depends on center of gravity",
+              "title": "HORST600 assembly instructions V4.0, Annex13.1",
+              "url": "https://www.fruitcore-robotics.com/hubfs/Knowledge%20Base/EN/Downloads/H600/01_MA_HORST600_EN_V4-0.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "HORST600",
+              "source": "Components/Fruitcore Robotics/Robots/HORST600.vcmx",
+              "source_family": "VC",
+              "value": 584.0
+            },
+            {
+              "model": "HORST 600",
+              "source": "robots/models/Fruitcore-HORST-600.robot",
+              "source_family": "RoboDK",
+              "value": 584.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 584.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -173.0,
+          -64.0,
+          -176.0,
+          -172.0,
+          -142.0,
+          -300.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            340.0
+          ],
+          [
+            -1.5707963267948966,
+            -33.5,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            300.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            260.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            62.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          173.0,
+          115.0,
+          41.0,
+          172.0,
+          142.0,
+          300.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "555afa83-c77f-57b6-856d-055a260f8010",
+              "entrypoints": {
+                "usd": "simready_usd/horst600__r001.usdc"
+              },
+              "package_digest": "929ef659a20a37a0c1c248bb6249a565e514ad14bec8468f25a99aa666e62c77",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "78bbf5f1c9fb9b2cc239f9604dfbd034a160a3d82d15ac99cb0496734341dea6",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "9c63cd7a2c72efb2fd013ac12a17f2df244382b8f1c369c8dbbd50737f30a917",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "555afa83-c77f-57b6-856d-055a260f8010"
+          ],
+          "manufacturer": "Fruitcore Robotics",
+          "name": "HORST600",
+          "original": {
+            "family": "VC",
+            "original_name": "HORST600.vcmx",
+            "path": "simready_usd/source_assets/VC/0_horst600/HORST600.vcmx",
+            "sha256": "78bbf5f1c9fb9b2cc239f9604dfbd034a160a3d82d15ac99cb0496734341dea6"
+          },
+          "path": "Components/Fruitcore Robotics/Robots/HORST600.vcmx",
+          "payload": "3",
+          "reach": "584.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "95dd63cc-292b-4fb0-a3cc-2f4ff962ba5b"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "8b43ae99-11dd-5cfb-b4e9-16a0465bde95",
+              "entrypoints": {
+                "usd": "simready_usd/horst_600__r001.usdc"
+              },
+              "package_digest": "e4cc9890d55d883b2d4e2431ab039958abfaa45a5b1bc6f9078f8a5fc50ff13d",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -173.0,
+                    -64.0,
+                    -176.0,
+                    -172.0,
+                    -142.0,
+                    -300.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      340.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      -33.5,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      300.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      260.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      62.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    173.0,
+                    115.0,
+                    41.0,
+                    172.0,
+                    142.0,
+                    300.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "7a69fa4fdf18c1c5cfb17190acf7e5f42d52252aba811afe78a2f7d0f86b40be",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Fruitcore HORST 600",
+          "family": "RoboDK",
+          "library_assets": [
+            "8b43ae99-11dd-5cfb-b4e9-16a0465bde95"
+          ],
+          "manufacturer": "Fruitcore",
+          "name": "HORST 600",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fruitcore-HORST-600.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_fruitcore-horst-600/Fruitcore-HORST-600.robot",
+            "sha256": "05f3c2ff15c5835dad2243a47361908741fdfc8c6b7a7bf69ba501d14db12fb9"
+          },
+          "path": "robots/models/Fruitcore-HORST-600.robot",
+          "payload": 2,
+          "reach": 584,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "7a69fa4fdf18c1c5cfb17190acf7e5f42d52252aba811afe78a2f7d0f86b40be",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/horst600__多源合并_r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fruitcore HORST 600｜多源合并",
+          "id": "merged_robot_ec809fb4_29e6_5cd3_9232_b3f0d8a9236b",
+          "metadata": {
+            "asset_id": "ec809fb4-29e6-5cd3-9232-b3f0d8a9236b",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "HORST 600",
+          "manufacturer": "Fruitcore",
+          "variant": "",
+          "display": "Fruitcore HORST 600",
+          "path": "robots/models/Fruitcore-HORST-600.robot",
+          "type": "robots",
+          "payload": 2,
+          "reach": 584,
+          "axes": 6,
+          "library_assets": [
+            "8b43ae99-11dd-5cfb-b4e9-16a0465bde95"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Fruitcore-HORST-600.robot",
+        "path": "simready_usd/Fruitcore-HORST-600.robot",
+        "sha256": "05f3c2ff15c5835dad2243a47361908741fdfc8c6b7a7bf69ba501d14db12fb9"
+      }
+    ],
+    "published_revision_mapping_sha256": "41eec60b19c44093da2017905fce14b12d5b202ac615c728da9ac1fdb133f4ea"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

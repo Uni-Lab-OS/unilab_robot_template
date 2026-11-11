@@ -1,0 +1,187 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "estun",
+  "model": "er6:1600",
+  "title": "ER6-1600",
+  "asset": {
+    "asset_id": "f16b3515-5bdb-5a5a-bbf6-c555d42ad403",
+    "package_digest": "a7497f348a5a95294f3ca071baaf43b00584bafb2ad595db52e56016e4ac6ef4",
+    "package_path": "04_设备/estun/er6-1600__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f16b3515-5bdb-5a5a-bbf6-c555d42ad403",
+      "package_digest": "a7497f348a5a95294f3ca071baaf43b00584bafb2ad595db52e56016e4ac6ef4",
+      "package_path": "04_设备/estun/er6-1600__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "9f4bfe22ea698388b6d2c27ee80117b7dbd1f56b96f8e71253878e0e91c54128",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ea448626cef4f1e9373c080ef9f96d8a6663de60781405cc90b32511288d1e6c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/er6-1600__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:estun:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/estun/ros2_driver",
+        "repository_url": "https://github.com/ESTUN-R-D/estun_ros2.git",
+        "code_tree_sha256": "88e640016a65f047d5555642b4c353d4e772b7688ffe59cee26620a6da678aff",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b93c5ef970d3944bc9d48a4eff68a54a5654a172a6e80b57ce328597f7650bcb"
+          },
+          {
+            "path": "README.zh-CN.md",
+            "sha256": "9e56ccd7b0574561b67b246c916b5d632b3c3119301b0686419c1330a98b1fda"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "b7d0373f53d8d213519f23184b1fe9d1dc7fb3fe250cc5d970f6b9d32b5a112e"
+          },
+          {
+            "path": "estun_libs/LICENSE",
+            "sha256": "78e10cdb9168541cf321a46d4cb1d5f76e7d81a14b08e82b4c3e20e022be2c79"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:estun_eri",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "estun_eri",
+        "controller_choices": [
+          "ESTUN ERI"
+        ],
+        "sdk_version_requirement": "ERI SDK 1.0.0.17",
+        "source_candidates": [
+          "sdk:estun:ros2_driver"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "movj_request_requires_native_units_and_control_evidence"
+        ],
+        "constraints": [
+          "Linux SCHED_RR priority 51 blocked EPERM; exact controller/firmware and joint units remain unverified",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "blocked",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "estun-native/receipt.json",
+          "receipt_sha256": "04137f5ba9c19b32316b9d0835bd232a35249b6d12bdf2a9388e57883650b86c",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Estun_RCS2.py",
+      "Estun_RCS3.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ER6-1600",
+          "manufacturer": "ESTUN",
+          "variant": "",
+          "path": "Components/ESTUN/Robots/ER6-1600.vcmx",
+          "type": "Robots",
+          "payload": "6",
+          "reach": "1600.0",
+          "vcid": "d8778b7b-b3c1-46c7-bbdf-13b6254a6f30",
+          "library_assets": [
+            "f16b3515-5bdb-5a5a-bbf6-c555d42ad403"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ER6-1600.vcmx",
+        "path": "simready_usd/ER6-1600.vcmx",
+        "sha256": "9f4bfe22ea698388b6d2c27ee80117b7dbd1f56b96f8e71253878e0e91c54128"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

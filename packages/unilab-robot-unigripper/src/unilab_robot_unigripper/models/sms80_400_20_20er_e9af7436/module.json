@@ -1,0 +1,662 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unigripper",
+  "model": "sms80:400:20:20er",
+  "title": "SMS 80-400-20-20-ER",
+  "asset": {
+    "asset_id": "7b42a7bd-6772-53fd-9110-bc69bc8c6c4b",
+    "package_digest": "7340ecaf68f809cd0f3f69624a9450d12e0d83937b07a37cc67b730af4d72c20",
+    "package_path": "03_机构模块/unigripper/sms_80-400-20-20-er__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7b42a7bd-6772-53fd-9110-bc69bc8c6c4b",
+      "package_digest": "7340ecaf68f809cd0f3f69624a9450d12e0d83937b07a37cc67b730af4d72c20",
+      "package_path": "03_机构模块/unigripper/sms_80-400-20-20-er__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "aa31d63c6065df45488ffa438942b5cecc5ba1e1533e04449f2a2201cbac111e",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "aa31d63c6065df45488ffa438942b5cecc5ba1e1533e04449f2a2201cbac111e",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": []
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:1060",
+              "kind": "Node",
+              "line": 1060,
+              "name": "TCP",
+              "node_id": "node:1060",
+              "node_path": [
+                {
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1060"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "b504815994949fac4bc5ee416a0e0727397b1e86d0365a9598ce96c71306fcf0",
+        "scoped_physical_fields": [
+          {
+            "fields": {
+              "CenterOfGravity": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 832,
+                "owner": {
+                  "id": "baseframe:723",
+                  "kind": "BaseFrame",
+                  "line": 723,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "c22584cf6c8677ba060eb3fc0d0ecee2bde06b57d4ff47627531bfd9a628bdd4",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Inertia": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 844,
+                "owner": {
+                  "id": "baseframe:723",
+                  "kind": "BaseFrame",
+                  "line": 723,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "f890cba2389d1cd746142accbffcf7b867f61f0cf18adeed15b89e43260e904c",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rVector>",
+                "unit_status": "not_declared",
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Mass": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 818,
+                "magnitude": 1000,
+                "owner": {
+                  "id": "baseframe:723",
+                  "kind": "BaseFrame",
+                  "line": 723,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "quantity": "Mass",
+                "raw_block_sha256": "a0a1b74d585eec15d086f37a5dd52b04c18e709465603475e6283e155f5a7370",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              }
+            },
+            "owner": {
+              "id": "baseframe:723",
+              "kind": "BaseFrame",
+              "line": 723,
+              "name": "TCP",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimBaseFrame"
+            },
+            "scope": "payload_frame_not_body"
+          }
+        ],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 962,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 990,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "131c11eb7596cc5e8b9b6416bcc928ddcfb4f88f888bc4556f200a2479837bd3",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "UniGripper SMS 80-400-20-20-ER"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 976,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "b1c64166717e0d6c02a8a2dc04494abe1ce4052247af3525b0906d67d1e24400",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "SMS 80-400-20-20-ER"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 880,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1004,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 915,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1018,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 866,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "SMS 80-400-20-20-ER",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(159.5)",
+                "line": 1066,
+                "owner": {
+                  "id": "node:1060",
+                  "kind": "Node",
+                  "line": 1060,
+                  "name": "TCP",
+                  "node_id": "node:1060",
+                  "node_path": [
+                    {
+                      "name": "SMS 80-400-20-20-ER",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:1060"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "11f439de7f339d70b37fea6784d567761aea96c385e3f0f2380bc65a7eca6226",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:1060",
+              "kind": "Node",
+              "line": 1060,
+              "name": "TCP",
+              "node_id": "node:1060",
+              "node_path": [
+                {
+                  "name": "SMS 80-400-20-20-ER",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1060"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "aa31d63c6065df45488ffa438942b5cecc5ba1e1533e04449f2a2201cbac111e"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "b33c6bdcb2742f00e5f0c0aa54df9806ea6bd5f8e122b4103d47c48ce5c96358",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sms_80-400-20-20-er__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "SMS 80-400-20-20-ER",
+          "manufacturer": "UniGripper",
+          "variant": "",
+          "path": "Components/UniGripper/Robot Tools/SMS 80-400-20-20-ER.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "216ac5e3-a488-46fc-b812-6598f4bb5aaa",
+          "library_assets": [
+            "7b42a7bd-6772-53fd-9110-bc69bc8c6c4b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SMS 80-400-20-20-ER.vcmx",
+        "path": "simready_usd/SMS 80-400-20-20-ER.vcmx",
+        "sha256": "aa31d63c6065df45488ffa438942b5cecc5ba1e1533e04449f2a2201cbac111e"
+      }
+    ]
+  }
+}

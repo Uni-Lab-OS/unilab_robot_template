@@ -1,0 +1,127 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "adept",
+  "models": {
+    "cobras350": {
+      "title": "Adept Cobra s350",
+      "asset": {
+        "asset_id": "759b02b6-1aa4-5ce5-a079-77068ee50661",
+        "package_digest": "cc79a3d7ca40932154a0923e679593df5a048d740055173ba2e7514f91ba2a2a",
+        "package_path": "04_设备/adept/cobra_s350__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cobras350/module.json",
+      "module_sha256": "76afe0404d683f28ff919a406899d8cf267ca5c8e71335fdf8f4a5bf699460c1"
+    },
+    "cobras600": {
+      "title": "Adept Cobra s600",
+      "asset": {
+        "asset_id": "29f764d3-80e9-5c39-b4c8-d1f6eea33f0f",
+        "package_digest": "a2d2ab4ce2f255d5455d7ba5a7e5aa41a3174cb534b59b8b96e9689c92838a2f",
+        "package_path": "04_设备/adept/cobra_s600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cobras600/module.json",
+      "module_sha256": "92300449bf8cb2c7322636985b215d1590368ac6fbc7fd758bf12531a7ff4eaf"
+    },
+    "cobras800": {
+      "title": "Adept Cobra s800",
+      "asset": {
+        "asset_id": "407fd44c-9444-5de7-a968-09741bf66fe6",
+        "package_digest": "20e59cf69376780d8bdd95ae80ca31a3f143abd4bf0f5c08c859458f3990e5c7",
+        "package_path": "04_设备/adept/cobra_s800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cobras800/module.json",
+      "module_sha256": "3528582c671f4b0e32fb3c0b7a63a604a9cd36e4c11e4dac850b5e9e76e2c94c"
+    },
+    "ecobra800inverted": {
+      "title": "Adept eCobra 800 Inverted",
+      "asset": {
+        "asset_id": "84eadb60-7915-5fe8-b89f-1207e779b33a",
+        "package_digest": "9d4268c3b58fedec1fa9f8390a59e1203322083310f9a6625cc9f006aa9fbbee",
+        "package_path": "04_设备/adept/ecobra_800_inverted__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ecobra800inverted/module.json",
+      "module_sha256": "93092c3b0dba5c327d9003e1dd8a54e4a962478842171f75de65b6b565174def"
+    },
+    "six300": {
+      "title": "Adept Six 300",
+      "asset": {
+        "asset_id": "5caa4396-ae18-52d1-8349-08dbe5f2ccd1",
+        "package_digest": "ff1898f287ffbb17db45b855bb53d8da28fc7e4b3ec4dd3f685f7e6ea4fde403",
+        "package_path": "04_设备/adept/six_300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/six300/module.json",
+      "module_sha256": "b9f2a12f35d0340dda82759e5a186e4b88e2c68bd43b752260f4ad013c7299e2"
+    },
+    "vipers1700": {
+      "title": "Adept Viper s1700",
+      "asset": {
+        "asset_id": "c06de7f4-e4ef-5275-868b-558d0a5ceb47",
+        "package_digest": "6be28bd15a8bf11d55e48dce95350424d33a2ea85754f54c9a47e517c16afaa1",
+        "package_path": "04_设备/adept/viper_s1700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vipers1700/module.json",
+      "module_sha256": "4d6b016f7279fcce8ed9097536c7fd2fe844953681ce8fb18b19e3cb569e3bc4"
+    },
+    "vipers650": {
+      "title": "Adept Viper s650",
+      "asset": {
+        "asset_id": "5b55db03-4d7f-55c9-be95-c5ad75b783dd",
+        "package_digest": "933bfbbf0deaa79ade5e74e16b01a3551d09a8b9403971461916075df9b9a0bb",
+        "package_path": "04_设备/adept/viper_s650__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vipers650/module.json",
+      "module_sha256": "f1c4229c3c18fb89477bc8c6f69c89a26cd081ae6ebd89b4df62c8a340297cca"
+    },
+    "vipers850": {
+      "title": "Adept Viper s850",
+      "asset": {
+        "asset_id": "8ce149ac-fa14-5e0d-9a26-d007872415c9",
+        "package_digest": "31a4dadd2c3e38750595261aec488cc670ba131c7ef8e0d86e892564d56fabe1",
+        "package_path": "04_设备/adept/viper_s850__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/vipers850/module.json",
+      "module_sha256": "65d815769a4cc732d4edba8f0f0fc5efdb8a7a557e5d62385caa5ad7ad0fbc72"
+    }
+  },
+  "source_profiles": []
+}

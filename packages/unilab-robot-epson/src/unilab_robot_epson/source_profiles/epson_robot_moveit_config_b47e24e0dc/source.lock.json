@@ -1,0 +1,1648 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "epson_robot_moveit_config_b47e24e0dc",
+  "source": {
+    "url": "https://github.com/Epson-Robots/epson-robot-ros2.git",
+    "commit": "7ead19a7189e052ab7fb49fdc6922f484f893cdd",
+    "path": "robots/epson/ros2/epson_robot_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "b1bf692d3f84bf1f7d7433aea0924763e0bde93e0ff67ea3d6bf8c35388586f5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/chomp_planning.yaml",
+      "sha256": "0913fdf5b77f9a5be355f0edf351d611032d1f442c1a2fab842b3cac64265ad9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "15c60523231a066433f09106330a5c80bc10dfbf01fe056a13f1a62bb3428c22",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "5ac8e2b48b8721993da86a7c01709db8c316f44e3f7346e035032243d5973d4a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401C/config/joint_limits.yaml",
+      "sha256": "43d18da28fbd9d8ea086ab6f32e55afa75759d65216c5eb7aa26e3ebdf41189e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401C/srdf/epson_robot.srdf.xacro",
+      "sha256": "37062685cdcebdcd150e9c0d1902ec830635a7c87741fcee241fe3baf4ee134c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401S/config/epson_robot_controllers.yaml",
+      "sha256": "d4427c3a273455072cab4fbfb6fcd70f2980f090eee3c464a691d6cefec9d27d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401S/config/joint_limits.yaml",
+      "sha256": "4ff0e71b70fdd3d3efea04d89cb5f1432f418f881094214afe2f532bb8957b3c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C12-C1401S/srdf/epson_robot.srdf.xacro",
+      "sha256": "a92d2123a605f39806775123774844d0eda8752400aedbafe786e2d38e63ea60",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401C/config/joint_limits.yaml",
+      "sha256": "43d18da28fbd9d8ea086ab6f32e55afa75759d65216c5eb7aa26e3ebdf41189e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401C/srdf/epson_robot.srdf.xacro",
+      "sha256": "1a6c6f1e78e71f9750e5252a0fe02f08632a5524f3a51d20374cf3812e8922c7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401CR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401CR/config/joint_limits.yaml",
+      "sha256": "43d18da28fbd9d8ea086ab6f32e55afa75759d65216c5eb7aa26e3ebdf41189e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401CR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401CR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "8806ecf1ede84b98a9c9d1a235fb1cd265c480874e5e573da2e97f6e2b659d2a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401S/config/epson_robot_controllers.yaml",
+      "sha256": "d4427c3a273455072cab4fbfb6fcd70f2980f090eee3c464a691d6cefec9d27d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401S/config/joint_limits.yaml",
+      "sha256": "4ff0e71b70fdd3d3efea04d89cb5f1432f418f881094214afe2f532bb8957b3c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401S/srdf/epson_robot.srdf.xacro",
+      "sha256": "bc89ae80c1b44e28bdaf6d3c0d7c60f12dac8acd9417d182bf6a5a73ed3b650c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401SR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401SR/config/joint_limits.yaml",
+      "sha256": "43d18da28fbd9d8ea086ab6f32e55afa75759d65216c5eb7aa26e3ebdf41189e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401SR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401SR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C1401SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "f2683dbeaf6e1c5fd24e3f0c0c5774271361d17306f9738a01b3cc776ecbb0d9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901C/config/joint_limits.yaml",
+      "sha256": "bc2daa201f920a63d8a5f9f34764aa2663691a1ee2d8b7f77bdbbe3c75ef0304",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901C/srdf/epson_robot.srdf.xacro",
+      "sha256": "05e1de1c6c950b18e43fa2e1b832db7abdb487a706281d17d44c6b89689a386e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901CR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901CR/config/joint_limits.yaml",
+      "sha256": "bc2daa201f920a63d8a5f9f34764aa2663691a1ee2d8b7f77bdbbe3c75ef0304",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901CR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901CR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "03353fffda1a0d187af313adf3a8b56ee9782e02dfde9f1ce487e738437c529c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901S/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901S/config/joint_limits.yaml",
+      "sha256": "bc2daa201f920a63d8a5f9f34764aa2663691a1ee2d8b7f77bdbbe3c75ef0304",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901S/srdf/epson_robot.srdf.xacro",
+      "sha256": "359c12711adbcff8f5a73d7a8d6a36ccbae691b2f4e0b232668085895050474f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901SR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901SR/config/joint_limits.yaml",
+      "sha256": "bc2daa201f920a63d8a5f9f34764aa2663691a1ee2d8b7f77bdbbe3c75ef0304",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901SR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901SR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/C8-C901SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "0aa9c54a91ba9ab0a376f046ce970496b67fafd26e1923d90ed41fefe4b62397",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601C/config/joint_limits.yaml",
+      "sha256": "6319e920f8fcc4f3f0a819063b592610bee743c2989f9b9c6bc7e374e1c2a19f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601C/srdf/epson_robot.srdf.xacro",
+      "sha256": "1e3de3f8a1d79efa6e06e6c42393aedc72f2a70d7d85bf35994cb6b08c1bd83c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601CR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601CR/config/joint_limits.yaml",
+      "sha256": "6319e920f8fcc4f3f0a819063b592610bee743c2989f9b9c6bc7e374e1c2a19f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601CR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601CR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "3f65cb8e2a3557b7f6f88dfde6baeef5e9fb4204a421c26686f3fc47b9241495",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601S/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601S/config/joint_limits.yaml",
+      "sha256": "6319e920f8fcc4f3f0a819063b592610bee743c2989f9b9c6bc7e374e1c2a19f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601S/srdf/epson_robot.srdf.xacro",
+      "sha256": "48561612895dcc59f5f087acbaf370fb30b0e3e5f73d8b8e3605fcdc9d6715ec",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601SR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601SR/config/joint_limits.yaml",
+      "sha256": "6319e920f8fcc4f3f0a819063b592610bee743c2989f9b9c6bc7e374e1c2a19f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601SR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601SR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX4-A601SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "0c30a527d5224b83aa6f5f57e056d7517e2f3e1e69b467f51ca93b46f5199dd6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701C/config/joint_limits.yaml",
+      "sha256": "cda94d95a043653a57c3432b71dd882cfa98eb53cd7dab4525b9b10734ef13df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701C/srdf/epson_robot.srdf.xacro",
+      "sha256": "8004540fa80d06f38e6b6cb24ed955eb84449c73005ef517df81be22d87c7e3e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701CR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701CR/config/joint_limits.yaml",
+      "sha256": "cda94d95a043653a57c3432b71dd882cfa98eb53cd7dab4525b9b10734ef13df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701CR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701CR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "e2d789cfa81a5e5cc9c1e8a8b746cb3e23274f0c61aa6b5b97a5e6d8548c51be",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701S/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701S/config/joint_limits.yaml",
+      "sha256": "cda94d95a043653a57c3432b71dd882cfa98eb53cd7dab4525b9b10734ef13df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701S/srdf/epson_robot.srdf.xacro",
+      "sha256": "797f75df9a99156b9a5cf43db8e799573ecc30c944ffd80e66b3d9ad3c58855c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701SR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701SR/config/joint_limits.yaml",
+      "sha256": "cda94d95a043653a57c3432b71dd882cfa98eb53cd7dab4525b9b10734ef13df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701SR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701SR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A701SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "a1bf1f0b3104ef57f76f5351e36cc578ecc8e8daa5ae00a555c397cc074b35d9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901C/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901C/config/joint_limits.yaml",
+      "sha256": "41630ee014d70fa4c98efce2cd644eb266d6ef99e07f2a90baf11da03c0ce255",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901C/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901C/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901C/srdf/epson_robot.srdf.xacro",
+      "sha256": "f6652d74c5b56f35b4a0e93220949637e98ddcd279373410a07d82eea36b8f92",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901CR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901CR/config/joint_limits.yaml",
+      "sha256": "41630ee014d70fa4c98efce2cd644eb266d6ef99e07f2a90baf11da03c0ce255",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901CR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901CR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "bec2757750df187b3d93218a3dbbca3420aa97c655579b338e0e693150226277",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901S/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901S/config/joint_limits.yaml",
+      "sha256": "41630ee014d70fa4c98efce2cd644eb266d6ef99e07f2a90baf11da03c0ce255",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901S/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901S/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901S/srdf/epson_robot.srdf.xacro",
+      "sha256": "812ffaa045d2f24ccff997574785233ca7a467f2c657a822d6cfc12f6b31c706",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901SR/config/epson_robot_controllers.yaml",
+      "sha256": "dc125d93e657215b49714a08d6a2b95bc6fc2ec84bfa52977c5c9e5487b56126",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901SR/config/joint_limits.yaml",
+      "sha256": "41630ee014d70fa4c98efce2cd644eb266d6ef99e07f2a90baf11da03c0ce255",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901SR/config/moveit_controllers.yaml",
+      "sha256": "254390fdea0cb1e3366fd1d5323375dfce2d1c780d0c0be1326c4a8f39723734",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901SR/rviz/view_robot.rviz",
+      "sha256": "4fee80a062254b3d350855360248558691c6fb1c06ab57b993eddac81261946d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/CX7-A901SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "49d50e4a6351e694f5b9b5d125922c14c9d18e1b443b8bb0b4615e9d7f45c901",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251C/config/joint_limits.yaml",
+      "sha256": "db197fe6f8a9165f097dce20d6b78dd93d13e9bb3c6babb6632c2288862e091a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251C/rviz/view_robot.rviz",
+      "sha256": "9b6ebd428ffad42362288fc5c9447fb245878dd543c8905268a93f3488132816",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251C/srdf/epson_robot.srdf.xacro",
+      "sha256": "622b49f7508e3a77ecc1f064244aa284ca048bebd76d2873c8361793c95481ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251S/config/joint_limits.yaml",
+      "sha256": "db197fe6f8a9165f097dce20d6b78dd93d13e9bb3c6babb6632c2288862e091a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251S/rviz/view_robot.rviz",
+      "sha256": "98caddece9152fdd565aff338e8e597bfd3ac70520a8c45da29bd43f6406d4ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C251S/srdf/epson_robot.srdf.xacro",
+      "sha256": "e8a16c43f731c4bd9fd0c5f84d324c30a4d3e2850a50eab800c22184e222cbb3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301C/config/joint_limits.yaml",
+      "sha256": "8eeac27646d84d805365329c14a7fc8c328e334844ae8b63b9cc25bd7b7dcfb0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301C/rviz/view_robot.rviz",
+      "sha256": "9b6ebd428ffad42362288fc5c9447fb245878dd543c8905268a93f3488132816",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301C/srdf/epson_robot.srdf.xacro",
+      "sha256": "571d8af03148f65760e835aa252ce63a49e489c50c6321b69dbe2118a7e6abf8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301CM/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301CM/config/joint_limits.yaml",
+      "sha256": "8eeac27646d84d805365329c14a7fc8c328e334844ae8b63b9cc25bd7b7dcfb0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301CM/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301CM/rviz/view_robot.rviz",
+      "sha256": "6a88275aa25d9d33f4c3bebc659d70442e452f70c1de718bf3f8c2c3149fb60d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301CM/srdf/epson_robot.srdf.xacro",
+      "sha256": "6d0cd56e42d2f872225126716e67dd935e411312dd216b5fc2db2ed701687224",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301S/config/joint_limits.yaml",
+      "sha256": "8eeac27646d84d805365329c14a7fc8c328e334844ae8b63b9cc25bd7b7dcfb0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301S/rviz/view_robot.rviz",
+      "sha256": "98caddece9152fdd565aff338e8e597bfd3ac70520a8c45da29bd43f6406d4ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301S/srdf/epson_robot.srdf.xacro",
+      "sha256": "d423803db0844f974103e0007d18760284093b5c601a4f3d93dcc3b0b7b4b574",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301SM/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301SM/config/joint_limits.yaml",
+      "sha256": "8eeac27646d84d805365329c14a7fc8c328e334844ae8b63b9cc25bd7b7dcfb0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301SM/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301SM/rviz/view_robot.rviz",
+      "sha256": "5091a407ba4f3c02bf794c645de49ba7bf94b44a4bb95328e77d99a526483a24",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C301SM/srdf/epson_robot.srdf.xacro",
+      "sha256": "08567c351574828e480574f4afc4ffd306ccc4fb70776ee935ba56d1d7a54755",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C/rviz/view_robot.rviz",
+      "sha256": "9b6ebd428ffad42362288fc5c9447fb245878dd543c8905268a93f3488132816",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C/srdf/epson_robot.srdf.xacro",
+      "sha256": "7de2560a4bd5a26fa98a908850a0e7abd3a964b32d42372d7fc88b65dffc2dab",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-L/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-L/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-L/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-L/rviz/view_robot.rviz",
+      "sha256": "9b6ebd428ffad42362288fc5c9447fb245878dd543c8905268a93f3488132816",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-L/srdf/epson_robot.srdf.xacro",
+      "sha256": "204cdcb21584065adb81e48336deb2acdac00db867546bf15ddfaf3feed51893",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-R/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-R/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-R/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-R/rviz/view_robot.rviz",
+      "sha256": "9b6ebd428ffad42362288fc5c9447fb245878dd543c8905268a93f3488132816",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351C-R/srdf/epson_robot.srdf.xacro",
+      "sha256": "a0043b818d93ab18ca630cc4cbe754f9a0c878daeb34bea56bbc19cfeaf73f03",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351CM/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351CM/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351CM/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351CM/rviz/view_robot.rviz",
+      "sha256": "6a88275aa25d9d33f4c3bebc659d70442e452f70c1de718bf3f8c2c3149fb60d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351CM/srdf/epson_robot.srdf.xacro",
+      "sha256": "d6e1d83d02949d0f9db0b7497c6c700f96c5d925a23910aa0dbe5f481b0c531f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S/rviz/view_robot.rviz",
+      "sha256": "98caddece9152fdd565aff338e8e597bfd3ac70520a8c45da29bd43f6406d4ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S/srdf/epson_robot.srdf.xacro",
+      "sha256": "2696a1c7f21aef32062ac742fa2e312d69043044c5aa970a20a2316c18fd0154",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-L/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-L/config/joint_limits.yaml",
+      "sha256": "27be4eac3bedfb093ac2b4277da9daeeb1ec046a1eaeb820199407bb9868f105",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-L/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-L/rviz/view_robot.rviz",
+      "sha256": "98caddece9152fdd565aff338e8e597bfd3ac70520a8c45da29bd43f6406d4ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-L/srdf/epson_robot.srdf.xacro",
+      "sha256": "26af179190399194b519c8417a9642af12591218d65145f91ad48f458f658110",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-R/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-R/config/joint_limits.yaml",
+      "sha256": "27be4eac3bedfb093ac2b4277da9daeeb1ec046a1eaeb820199407bb9868f105",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-R/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-R/rviz/view_robot.rviz",
+      "sha256": "98caddece9152fdd565aff338e8e597bfd3ac70520a8c45da29bd43f6406d4ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351S-R/srdf/epson_robot.srdf.xacro",
+      "sha256": "b88356d9e25a249e2f50e1dda33a1991675caae4017aaf593750618575292703",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351SM/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351SM/config/joint_limits.yaml",
+      "sha256": "018662b7d0f2baddbfb1049a7b9f68ef0b11efd8a2b6ea689265aba127b01dca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351SM/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351SM/rviz/view_robot.rviz",
+      "sha256": "5091a407ba4f3c02bf794c645de49ba7bf94b44a4bb95328e77d99a526483a24",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX4-C351SM/srdf/epson_robot.srdf.xacro",
+      "sha256": "5155dad637abf7fbb3584d37a62aa437d5045d18a53a4830d0aefb4ad1d1f8d7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452C/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452C/srdf/epson_robot.srdf.xacro",
+      "sha256": "25fb06637d11a38dfb6763482b3f5b4f79af86b95ffc70eb401b6d21903233f2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452CR/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "1b6be9c4b4b7174653c3ce6eadcd85fa93234437d4d9e363761405fb383c052e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452S/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452S/srdf/epson_robot.srdf.xacro",
+      "sha256": "625de5d7fe2146d73985b6b366d25e06ed31fe946af9c590b84922ee0304a579",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452SR/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C452SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "246575d1072e0678aa29f82196480d972742317108c1aae73d909aa09bb182e5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453C/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453C/srdf/epson_robot.srdf.xacro",
+      "sha256": "b4023ca1a7ceb7e52eac7b77e639b6396fb9f3310a16abaa0a06f7142558d93c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453CR/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "d3826acd3dc655500fe43266a140e0e5c91e755dbc3cfe1b29633fd3efebb222",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453S/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453S/srdf/epson_robot.srdf.xacro",
+      "sha256": "7d7fc2c2a55cd15fcb568c6790cf8fe08e25ab1c4c26e41189f3cf2b66fabd28",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453SR/config/joint_limits.yaml",
+      "sha256": "1f600ffcdd616138293508b53a9e3388a92c20a2a01021693f4b829c2d3cb92e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C453SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "1f002cf993512d91c720b63c8f73fe9e792acb84e2f4767792c56632972af5c7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552C/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552C/srdf/epson_robot.srdf.xacro",
+      "sha256": "caa854b57fb9881a490833d717daaaafd7e84919c97f2d212ae595da136cc929",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552CR/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "0a15fbb2da4c2e4de369ba811343e0113c7aa7f5f4cbd6f0227a21a31ed20a44",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552S/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552S/srdf/epson_robot.srdf.xacro",
+      "sha256": "eab0a06ddf6da0b43738918fb60e5beaecc7768c72d9130dd0e843894546353f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552SR/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C552SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "ac4955d4d51fd5bb1f236c022c6f5532f553753edc9c54b03cdbee7d20fa7231",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553C/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553C/srdf/epson_robot.srdf.xacro",
+      "sha256": "f1b12a5c78d9fc9c5d4ba46c3b4a19f6b2022a4c501b6d3759c03fab0ffbe75a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553CR/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "e28a78e4c5b77cd3a480b7a62dca2e0401adaa68ea7ff980f4d865abf1ef186d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553S/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553S/srdf/epson_robot.srdf.xacro",
+      "sha256": "d103def0117723c76c0c2b054818884bac74d6c09b2e66328c13b10f8dc00872",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553SR/config/joint_limits.yaml",
+      "sha256": "c56e8d63ffbd6952c9fe9f188c508fe270b0c09941a3d27d98ede10542ea1e2f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C553SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "bc26d4be77e26dbfd408c79fdacba4e2e9c4bb8a644893352afb1e62f01b93ad",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652C/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652C/srdf/epson_robot.srdf.xacro",
+      "sha256": "89324b4ef13cecb4dc80f5507140a1c4d86d056d2b195ab699d6749266758750",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652CR/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "87bcdadb198546bd21a93239f42cd9954fa09c64c8ab2d7e94b39c0e6c1ffcae",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652S/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652S/srdf/epson_robot.srdf.xacro",
+      "sha256": "badb8bbf34818d4ba5e1a368a16602a738b53c3fbc002d473704c9a57c16ec8a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652SR/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C652SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "7282070ab0e1c3e5c99c136e6896a50a047eb061445d95213f4d25dc299914b0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653C/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653C/rviz/view_robot.rviz",
+      "sha256": "84fb4086a06ae8ea449474a51cad9aab7e6708218e440c1cb5bed80dc94588ac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653C/srdf/epson_robot.srdf.xacro",
+      "sha256": "6f8030841a6d950a45e745f043aa56cbf485ea33c77c98556f8e8e9114c2213f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653CR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653CR/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653CR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653CR/rviz/view_robot.rviz",
+      "sha256": "b828e68e43bcef84ae18cb4dd8fb0e85b091e8abb0ff351c2e05a96e21b4131e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653CR/srdf/epson_robot.srdf.xacro",
+      "sha256": "5aee2bb57b8feac42f2fa57484d6479da0f78879880e718e5378862745c625e7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653S/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653S/rviz/view_robot.rviz",
+      "sha256": "e4e194c7ec46b9672fe8f2b22d9c4c22c26e1c83eba1510d616756ce80173fcd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653S/srdf/epson_robot.srdf.xacro",
+      "sha256": "58d796212ebccaa92ab96d35eeb017f06fbebe8f6eda855929f493b5b8ef77b9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653SR/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653SR/config/joint_limits.yaml",
+      "sha256": "297cdeaa46130a96c90d0f9b460179eb4f941069463dee27e89bc404c4e2ba1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653SR/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653SR/rviz/view_robot.rviz",
+      "sha256": "5674065ba150224ea3fd62fdfdfa03f88fc2009fa34b18c33954bbe921923971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/GX8-C653SR/srdf/epson_robot.srdf.xacro",
+      "sha256": "d0ba86b596d283d9220fc107ec5f41b18106a11d1e314f90788ce78411f27f3a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351C/config/joint_limits.yaml",
+      "sha256": "9a25aa13e5994417ccb0055f99126bd5789404e84277c979333a341980698bdc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351C/rviz/view_robot.rviz",
+      "sha256": "3b8888f94b7602aefc7072f4ae8532be2e72f04846ae81514fec19bb8f0b62fa",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351C/srdf/epson_robot.srdf.xacro",
+      "sha256": "b8990da9c8c0daefba306f44e38b56bca71680b077b874b40c4d8d4fa5f08285",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351S/config/joint_limits.yaml",
+      "sha256": "9a25aa13e5994417ccb0055f99126bd5789404e84277c979333a341980698bdc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351S/rviz/view_robot.rviz",
+      "sha256": "7b70741d95a2c452f0de26cab109330d083dbe4ffc27ea9bc64156389c41c161",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS4-C351S/srdf/epson_robot.srdf.xacro",
+      "sha256": "252b4a0cc4cbea6f79f50056b5541911257c33780353a46a69224b41968c88db",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552C/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552C/config/joint_limits.yaml",
+      "sha256": "fd915e84845ceabcbb86ee30dd43ad30dd70cc52e6dd7f7adfca3cb2608894d8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552C/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552C/rviz/view_robot.rviz",
+      "sha256": "7cf084aeb31739ba5025ddb33932ace1dcaaa4f7100e00dbbc685606f4b46973",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552C/srdf/epson_robot.srdf.xacro",
+      "sha256": "1abcbccd9054209eb2777517a571c558733e23f1e0e35c52e60bf5cf2804cefa",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552S/config/epson_robot_controllers.yaml",
+      "sha256": "9431dd972f644814eb6db8651996255feb379d072aff7fb6f2fd45286c555f70",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552S/config/joint_limits.yaml",
+      "sha256": "157ea1e9c6020c4c252818ffc5d690d943b77e33b58e275abf8057e3a5856414",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552S/config/moveit_controllers.yaml",
+      "sha256": "114c057d337e5937a767e12aebfb44b90cce2f92cafaaeba5927e1aafb0aec8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552S/rviz/view_robot.rviz",
+      "sha256": "1f4187de125b81b34b5b8bc4878016590882629095063305147b65ff7716d3fd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "models/RS6-C552S/srdf/epson_robot.srdf.xacro",
+      "sha256": "d88b2d6cebd7c7807521cccab6d31548d7b84cabad53c4340048f4e9435680fe",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "a88a26e7f9654738445bb995a7ea69acee736d61cd4c3bcc25af0264def320f3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a6d810145e1b0e74b88fdefded43bb370cc6014055a1889d2d891acd6e899264"
+    },
+    {
+      "path": "upstream_notices/NOTICE.txt",
+      "sha256": "abf39ddd00c962d78b4fc027dcf2f4287bb99a3dbbb03fcd64f14783c13be31a"
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "doosan",
+  "model": "m1509white",
+  "title": "Doosan Robotics M1509 White",
+  "asset": {
+    "asset_id": "59ae4065-7c9e-5fff-804c-241d6df14976",
+    "package_digest": "89ec79baaeb48a42316dd117ef29e7894bed3bbd107510920067ad24e59df3db",
+    "package_path": "04_设备/doosan_robotics/m1509_white__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "59ae4065-7c9e-5fff-804c-241d6df14976",
+      "package_digest": "89ec79baaeb48a42316dd117ef29e7894bed3bbd107510920067ad24e59df3db",
+      "package_path": "04_设备/doosan_robotics/m1509_white__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          3.141592653589793
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          3.141592653589793
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -150.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            152.5
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            -34.506
+          ],
+          [
+            0.0,
+            411.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            368.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            121.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          -1.0,
+          -1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          150.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ba5530a379955df23cb65bd257448ba1be04b8220fbd383c2a68909717bc5b95",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/m1509_white__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DoosanDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DoosanDriver.exe",
+        "sha256": "3786ac682ef91a6e52f46f081682a9befc5b068d1f0c5ecd81c58faed6df40ff",
+        "bytes": 56320,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "doosan controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:doosan:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/doosan/ros2",
+        "repository_url": "https://github.com/DoosanRobotics/doosan-robot2.git",
+        "code_tree_sha256": "dc0cde231fbf374684cbf1050a3fba0a4726f591d549490fd045eb28fe346a60",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "fd056f67a353e5d8799f14aa9ca3cd47351ebdc62613bab6233651972d203e6f"
+          },
+          {
+            "path": "dsr_mujoco/README.md",
+            "sha256": "5b8cb55b269bfc0c0a2c1a5a44104c225453bd5298164552b58dc8e1fd481058"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "97bf488c404871bbc446828ebaf629f5832b2f9804fcc5276f0ccf98802fd3c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:doosan:drfl",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/doosan/drfl",
+        "repository_url": "https://github.com/DoosanRobotics/API-DRFL.git",
+        "code_tree_sha256": "5b2892bcc6f8d835bca74fc57feeb83ef2f386c8150cd47a2a564b6b8aadc616",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "e98cc1041fcd38e0748cd1e611735cc1d025f9297aad9ede7aabe17e7fceb7e1"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "26568700d9d9d61bddd2919bf2058cedc658c030f79877bf0f426c00bfe4adfa"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Doosan_Robotics.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "M1509 White",
+          "manufacturer": "Doosan Robotics",
+          "variant": "",
+          "display": "Doosan Robotics M1509 White",
+          "path": "robots/models/Doosan-Robotics-M1509-White.robot",
+          "type": "robots",
+          "payload": 15,
+          "reach": 900,
+          "axes": 6,
+          "library_assets": [
+            "59ae4065-7c9e-5fff-804c-241d6df14976"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Doosan-Robotics-M1509-White.robot",
+        "path": "simready_usd/Doosan-Robotics-M1509-White.robot",
+        "sha256": "0b4b0ce521a188db03a988e63b5300989b88c3b86b0401ba912eace9f8ab162c"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

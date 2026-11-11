@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "cpr",
+  "models": {
+    "mover6": {
+      "title": "CPR Mover6",
+      "asset": {
+        "asset_id": "79f01b82-cbd6-58ab-a53b-40c1b754c6ab",
+        "package_digest": "5918d66dffba84212b791ce7a1505f1d792b3a2ab9dd3e5aaea228b7b97a579d",
+        "package_path": "04_设备/cpr/mover6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mover6/module.json",
+      "module_sha256": "2e3b2a3961c16e1533b695a5b050392191cef715b541aaf79214dcd57c410dee"
+    }
+  },
+  "source_profiles": []
+}

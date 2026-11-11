@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "sander",
+  "title": "OnRobot Sander",
+  "asset": {
+    "asset_id": "79fa7968-e25f-5f66-a0da-712238dd0b09",
+    "package_digest": "ccee44b62016c3fef0232dd586512386f4430e0a0beedfa97b1577f9ab67737a",
+    "package_path": "01_零部件/onrobot/sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "79fa7968-e25f-5f66-a0da-712238dd0b09",
+      "package_digest": "ccee44b62016c3fef0232dd586512386f4430e0a0beedfa97b1577f9ab67737a",
+      "package_path": "01_零部件/onrobot/sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4e1b766b94e13ee268e3a1d20325119bfb0a47db43dcd6f5ad5c54000b976b14",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Sander",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "display": "OnRobot Sander",
+          "path": "tools/models/OnRobot-Sander.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "79fa7968-e25f-5f66-a0da-712238dd0b09"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/OnRobot-Sander.tool",
+        "path": "simready_usd/OnRobot-Sander.tool",
+        "sha256": "06d60b677490ec69fc9ce3eabb610d5674cc7df5676fdcc19ef48809279fa271"
+      }
+    ]
+  }
+}

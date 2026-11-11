@@ -1,0 +1,360 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "comau",
+  "model": "smart5nj60:2.2offsetbending",
+  "title": "Comau Smart5 NJ 60-2.2 Off-set Bending",
+  "asset": {
+    "asset_id": "dd350fba-8843-5e7f-a4ae-f48cfc6869ca",
+    "package_digest": "8374e82954f4259d0a3df627ebf4601c6888e832e877626596c476271ff22ee2",
+    "package_path": "04_设备/comau/smart5_nj_60-2.2_off-set_bending__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "dd350fba-8843-5e7f-a4ae-f48cfc6869ca",
+      "package_digest": "8374e82954f4259d0a3df627ebf4601c6888e832e877626596c476271ff22ee2",
+      "package_path": "04_设备/comau/smart5_nj_60-2.2_off-set_bending__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -83.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -60.0,
+          -165.0,
+          -2700.0,
+          -2700.0,
+          -2700.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            550.0
+          ],
+          [
+            -1.5707963267948966,
+            400.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            860.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            210.0,
+            0.0,
+            975.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            170.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            170.0
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          12.0,
+          500.0,
+          0.0,
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          125.0,
+          57.0,
+          2700.0,
+          2700.0,
+          2700.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "336fc7e3411faa1a1d5fd74b13a4e04a68d30d8cd99aab71456432b1a5f8b99f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/smart5_nj_60-2.2_off-set_bending__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apicomau",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apicomau.py",
+        "sha256": "7f15b271518894616acb00df1c36a6273317a5ef8a6b49ffc71c217ec19f5f09",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apicomau.pyc",
+            "sha256": "6eea6cb8135c90b04b02fb12bbaf8839c8d8f1b6bff99d20f9edac04647fd650"
+          },
+          {
+            "relative_path": "api/Robot/v311/apicomau.pyc",
+            "sha256": "601809649beab56fa580755d0a57b85012e19feaa480a6de80907cded26bed2f"
+          },
+          {
+            "relative_path": "api/Robot/v312/apicomau.pyc",
+            "sha256": "22cf40673d24acdc1c6eb95edc598d6c21a61246af3ca28337de0cafde4a7d05"
+          },
+          {
+            "relative_path": "api/Robot/v38/apicomau.pyc",
+            "sha256": "ac17ef033b7edfa2cd8878b2e1b8623d00f88b805dc36dc9fe829e296645b73f"
+          },
+          {
+            "relative_path": "api/Robot/v39/apicomau.pyc",
+            "sha256": "f04fe40eadb1b5e2fba3bf4167013e03c4557cb458fa1ffafbba3643e0de8747"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "comau controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:comau:crcopen_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/comau/crcopen_ros2",
+        "repository_url": "https://github.com/ukaea/CRCOpenROS2Driver.git",
+        "code_tree_sha256": "a23250b33cd023e104c0e2c98910b63b9588a6901779f4d05daeb43c0332a145",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "9884ae4817bf21bf65c9de4e60a235807b5295ff1d215e9d900c368601aff706"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "036d6afa876fbf6c81287b3321e0e6ae1ed6b22afddb18a39d8c3545717cb23c"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Comau_C5G.py",
+      "Comau_C5G_Joints.py",
+      "Comau_Nodal.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Smart5 NJ 60-2.2 Off-set Bending",
+          "manufacturer": "Comau",
+          "variant": "",
+          "display": "Comau Smart5 NJ 60-2.2 Off-set Bending",
+          "path": "robots/models/Comau-Smart5-NJ-60-2-2-Off-set-Bending.robot",
+          "type": "robots",
+          "payload": 60,
+          "reach": 2503,
+          "axes": 6,
+          "library_assets": [
+            "dd350fba-8843-5e7f-a4ae-f48cfc6869ca"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Comau-Smart5-NJ-60-2-2-Off-set-Bending.robot",
+        "path": "simready_usd/Comau-Smart5-NJ-60-2-2-Off-set-Bending.robot",
+        "sha256": "245f95d836b780530a3485ff0c4ba7e275388599b0006d13af4fd9671de54d59"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

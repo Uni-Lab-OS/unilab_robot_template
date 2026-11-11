@@ -1,0 +1,807 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr22r1610",
+  "title": "KUKA KR 22 R1610｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "2f579e27-6d80-5d3c-87b1-36ef6198c9bf",
+    "package_digest": "00a59a185ecd09c9f0c63b9c9ea9ebc0d4fd05d4dc0e27c4e8add26ce3d50cc5",
+    "package_path": "04_设备/kuka/kr22r1610__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2f579e27-6d80-5d3c-87b1-36ef6198c9bf",
+      "package_digest": "00a59a185ecd09c9f0c63b9c9ea9ebc0d4fd05d4dc0e27c4e8add26ce3d50cc5",
+      "package_path": "04_设备/kuka/kr22r1610__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR 22 R1610",
+              "source": "robots/models/KUKA-KR-22-R1610.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 22 R1610",
+              "source": "robots/models/KUKA-KR-22-R1610.robot",
+              "source_family": "RoboDK",
+              "value": 22.0
+            },
+            {
+              "model": "KR 22 R1610",
+              "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 22 R1610.vcmx",
+              "source_family": "VC",
+              "value": 22.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 22.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 22 R1610",
+              "source": "robots/models/KUKA-KR-22-R1610.robot",
+              "source_family": "RoboDK",
+              "value": 1612.0
+            },
+            {
+              "model": "KR 22 R1610",
+              "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 22 R1610.vcmx",
+              "source_family": "VC",
+              "value": 1610.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1612,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Manufacturer indexed PDF text; endpoint redirects; no -2 variant substitution",
+              "title": "KUKA KR22R1610 0000-261-981 V8.1 2022-09-23",
+              "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000261981_en.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 5,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -185.0,
+          -185.0,
+          -138.0,
+          -350.0,
+          -130.0,
+          -350.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            520.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            780.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            0.0,
+            655.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            153.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          1.0,
+          5.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          185.0,
+          65.0,
+          175.0,
+          350.0,
+          130.0,
+          350.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "c470f51c-5753-5d77-b9ad-c2cef61eb492",
+              "entrypoints": {
+                "usd": "simready_usd/kr_22_r1610__r001.usdc"
+              },
+              "package_digest": "b775cc7d8590c7bd77809e38b6ef3ad6cff6aa0bfdf501dc1928160167983d9c",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 5,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -185.0,
+                    -185.0,
+                    -138.0,
+                    -350.0,
+                    -130.0,
+                    -350.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      520.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      160.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      780.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      150.0,
+                      0.0,
+                      655.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      153.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    1.0,
+                    5.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    185.0,
+                    65.0,
+                    175.0,
+                    350.0,
+                    130.0,
+                    350.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "165ccd66a36d8064c686eef6ce3f4e9b8d0b40bb4ca18c7087fe148a9272d6d6",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "KUKA KR 22 R1610",
+          "family": "RoboDK",
+          "library_assets": [
+            "c470f51c-5753-5d77-b9ad-c2cef61eb492"
+          ],
+          "manufacturer": "KUKA",
+          "name": "KR 22 R1610",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR-22-R1610.robot",
+            "path": "simready_usd/KUKA-KR-22-R1610.robot",
+            "sha256": "348cea881dde0d7e5649489b5cb669e52cbc5bc555316f58db7b80a19943e2cf"
+          },
+          "path": "robots/models/KUKA-KR-22-R1610.robot",
+          "payload": 22,
+          "reach": 1612,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 22 R1610",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 22 R1610.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_22_r1610/KR 22 R1610.vcmx",
+            "sha256": "aeaa30e07af27de10be4673ed7233d4d44d5e6e0430c00ada14cdad4193e5ae7"
+          },
+          "path": "Components/KUKA/Robots/Low Payloads/Legacy/KR 22 R1610.vcmx",
+          "payload": "22",
+          "reach": "1610",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "4efe240a-ebf2-4348-9860-155b2b7fcd84"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "165ccd66a36d8064c686eef6ce3f4e9b8d0b40bb4ca18c7087fe148a9272d6d6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr22r1610__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR 22 R1610｜多源合并",
+          "id": "merged_robot_2f579e27_6d80_5d3c_87b1_36ef6198c9bf",
+          "metadata": {
+            "asset_id": "2f579e27-6d80-5d3c-87b1-36ef6198c9bf",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR-22-R1610.robot",
+        "path": "simready_usd/KUKA-KR-22-R1610.robot",
+        "sha256": "348cea881dde0d7e5649489b5cb669e52cbc5bc555316f58db7b80a19943e2cf"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 22 R1610.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_22_r1610/KR 22 R1610.vcmx",
+        "sha256": "aeaa30e07af27de10be4673ed7233d4d44d5e6e0430c00ada14cdad4193e5ae7"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "KR 22 R1610",
+                "source": "robots/models/KUKA-KR-22-R1610.robot",
+                "source_family": "RoboDK",
+                "value": 1612.0
+              },
+              {
+                "model": "KR 22 R1610",
+                "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 22 R1610.vcmx",
+                "source_family": "VC",
+                "value": 1610.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1612,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Manufacturer indexed PDF text; endpoint redirects; no -2 variant substitution",
+                "title": "KUKA KR22R1610 0000-261-981 V8.1 2022-09-23",
+                "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000261981_en.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1610.0,
+            1612.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "kuka",
+        "kr22r1610"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Manufacturer indexed PDF text; endpoint redirects; no -2 variant substitution",
+            "title": "KUKA KR22R1610 0000-261-981 V8.1 2022-09-23",
+            "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000261981_en.pdf"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1612
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "c470f51c-5753-5d77-b9ad-c2cef61eb492",
+        "original_package_digest": "b775cc7d8590c7bd77809e38b6ef3ad6cff6aa0bfdf501dc1928160167983d9c",
+        "source": "robots/models/KUKA-KR-22-R1610.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

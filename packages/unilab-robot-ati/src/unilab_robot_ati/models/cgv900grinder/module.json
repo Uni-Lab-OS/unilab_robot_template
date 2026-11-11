@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "cgv900grinder",
+  "title": "ATI CGV-900 Grinder",
+  "asset": {
+    "asset_id": "c548714f-9733-55a3-acb7-47a6a0cc5c24",
+    "package_digest": "144ba11f4cf69003b7e37a69fc1ad31b33d288056840fc4d6ed54360ee508c09",
+    "package_path": "01_零部件/ati/cgv-900_grinder__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c548714f-9733-55a3-acb7-47a6a0cc5c24",
+      "package_digest": "144ba11f4cf69003b7e37a69fc1ad31b33d288056840fc4d6ed54360ee508c09",
+      "package_path": "01_零部件/ati/cgv-900_grinder__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a76786d334b4984e5169a62327d4233b1169a5e679ec8f0878cbec2e7f22bb11",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cgv-900_grinder__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "CGV-900 Grinder",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI CGV-900 Grinder",
+          "path": "tools/models/ATI-CGV-900-Grinder.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "c548714f-9733-55a3-acb7-47a6a0cc5c24"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-CGV-900-Grinder.tool",
+        "path": "simready_usd/ATI-CGV-900-Grinder.tool",
+        "sha256": "1bad840d6b1e68fecb23415ebad3fb41532b6fb2369a9f08c2e91c636f6223ae"
+      }
+    ]
+  }
+}

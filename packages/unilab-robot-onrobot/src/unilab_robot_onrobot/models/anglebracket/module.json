@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "anglebracket",
+  "title": "OnRobot Angle Bracket",
+  "asset": {
+    "asset_id": "2c34df2d-2a17-516d-b8b8-c47b49592b38",
+    "package_digest": "266c55c46c88680e4897d6c33e4fb68f6f77a7493db3bed49d84c13b0ba383b0",
+    "package_path": "01_零部件/onrobot/angle_bracket__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2c34df2d-2a17-516d-b8b8-c47b49592b38",
+      "package_digest": "266c55c46c88680e4897d6c33e4fb68f6f77a7493db3bed49d84c13b0ba383b0",
+      "package_path": "01_零部件/onrobot/angle_bracket__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4411f608969394413ad884dfc5c8f6bca45b8e02898543b1a0c9689b03026729",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/angle_bracket__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Angle Bracket",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "display": "OnRobot Angle Bracket",
+          "path": "tools/models/OnRobot-Angle-Bracket.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "2c34df2d-2a17-516d-b8b8-c47b49592b38"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/OnRobot-Angle-Bracket.tool",
+        "path": "simready_usd/OnRobot-Angle-Bracket.tool",
+        "sha256": "a56245d8a71bb96f4c4faa5778b303f571f296a020dcb584a4ca91a34570715c"
+      }
+    ]
+  }
+}

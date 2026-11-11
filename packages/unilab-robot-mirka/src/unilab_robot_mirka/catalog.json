@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "mirka",
+  "models": {
+    "airop312nvsander": {
+      "title": "Mirka AIROP 312NV Sander",
+      "asset": {
+        "asset_id": "2068e20b-2b0a-501a-a5e1-d8793f38a06c",
+        "package_digest": "33d53a5ae1a63f849acd2ec4487324b509a6b35dd216c54e039b2cc1e6c0b667",
+        "package_path": "01_零部件/mirka/airop_312nv_sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/airop312nvsander/module.json",
+      "module_sha256": "fe9ed2e1716ed4f56120d9fdb9e34640597326a317d2cc79495e59229e12950b"
+    },
+    "airos650cvsander": {
+      "title": "Mirka AIROS 650CV Sander",
+      "asset": {
+        "asset_id": "fad991a1-c681-596d-9991-72def59c9edb",
+        "package_digest": "158c985556d9f93441d4fc0398c247ea01c2053e5eae37e3c2bc0324818d5dce",
+        "package_path": "01_零部件/mirka/airos_650cv_sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/airos650cvsander/module.json",
+      "module_sha256": "0b4b0c7edc349b6669034d68f40eccdc8c7574e8066b5ddcff68a1d5c9152eb6"
+    }
+  },
+  "source_profiles": []
+}

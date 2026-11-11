@@ -1,0 +1,403 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yaskawa",
+  "model": "nex4",
+  "title": "NEX4",
+  "asset": {
+    "asset_id": "e7e12e49-7486-5cf3-9127-2e76d52248a0",
+    "package_digest": "78d43ecc7a6518036d4c226d65611842c115b84860ede52667b907beafdf2323",
+    "package_path": "04_设备/yaskawa/nex4__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e7e12e49-7486-5cf3-9127-2e76d52248a0",
+      "package_digest": "78d43ecc7a6518036d4c226d65611842c115b84860ede52667b907beafdf2323",
+      "package_path": "04_设备/yaskawa/nex4__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:15562",
+            "id": "dof:15808",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -180.0,
+                180.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                180.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:16092",
+            "id": "dof:16340",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -85.0,
+              130.0
+            ],
+            "parent_node_id": "node:15562",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -85.0,
+                130.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -85.0,
+                130.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:16624",
+            "id": "dof:16872",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -65.0,
+              200.0
+            ],
+            "parent_node_id": "node:16092",
+            "source_axis_label": "-Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -200.0,
+                65.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -65.0,
+                200.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:17156",
+            "id": "dof:17404",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -200.0,
+              200.0
+            ],
+            "parent_node_id": "node:16624",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -200.0,
+                200.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -200.0,
+                200.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:17688",
+            "id": "dof:17936",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -33.0,
+              213.0
+            ],
+            "parent_node_id": "node:17156",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -213.0,
+                33.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -33.0,
+                213.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:18220",
+            "id": "dof:18468",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -455.0,
+              455.0
+            ],
+            "parent_node_id": "node:17688",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -455.0,
+                455.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -455.0,
+                455.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "d7a910e90248d959e906eb367252318f00cef213ec59b7bef800cf2d23f302fc",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "d7a910e90248d959e906eb367252318f00cef213ec59b7bef800cf2d23f302fc",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "34743b9773956df1f8ea22700c87763f31539d66632fc62bb49fa071fb95085a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/nex4__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:MotomanHSE",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/MotomanHSE.exe",
+        "sha256": "bbf58c38493a5678525bfca47b450f9a1d38309f4948ac503aeaa309036cefe1",
+        "bytes": 87040,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimotoman",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimotoman.exe",
+        "sha256": "33a37818f812cb9321716fa31fe575bc05a55dc142cc7802c9ed68f716725ddf",
+        "bytes": 418816,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Motoman.py",
+      "Motoman_Cartesian.py",
+      "Motoman_CartesianOnly.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/yaskawa/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/yaskawa/ros_industrial",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "NEX4",
+          "manufacturer": "Yaskawa",
+          "variant": "",
+          "path": "Components/Yaskawa/Robots/NEX4.vcmx",
+          "type": "Robots",
+          "payload": "4",
+          "reach": "550",
+          "vcid": "e55f74dd-5db0-42b8-8cee-0e4c611c2459",
+          "library_assets": [
+            "e7e12e49-7486-5cf3-9127-2e76d52248a0"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/NEX4.vcmx",
+        "path": "simready_usd/NEX4.vcmx",
+        "sha256": "d7a910e90248d959e906eb367252318f00cef213ec59b7bef800cf2d23f302fc"
+      }
+    ],
+    "published_revision_mapping_sha256": "f64c7476d5990ce770ae3312ff8c413e1d01388eeaa871cb531d4fce346fb8ff"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

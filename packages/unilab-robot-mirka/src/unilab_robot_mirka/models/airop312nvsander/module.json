@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mirka",
+  "model": "airop312nvsander",
+  "title": "Mirka AIROP 312NV Sander",
+  "asset": {
+    "asset_id": "2068e20b-2b0a-501a-a5e1-d8793f38a06c",
+    "package_digest": "33d53a5ae1a63f849acd2ec4487324b509a6b35dd216c54e039b2cc1e6c0b667",
+    "package_path": "01_零部件/mirka/airop_312nv_sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2068e20b-2b0a-501a-a5e1-d8793f38a06c",
+      "package_digest": "33d53a5ae1a63f849acd2ec4487324b509a6b35dd216c54e039b2cc1e6c0b667",
+      "package_path": "01_零部件/mirka/airop_312nv_sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "fea996888ee74d3d4e88dd714af8273efa53ddf62f7a4088e8bee8b105893077",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/airop_312nv_sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AIROP 312NV Sander",
+          "manufacturer": "Mirka",
+          "variant": "",
+          "display": "Mirka AIROP 312NV Sander",
+          "path": "tools/models/Mirka-AIROP-312NV-Sander.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "2068e20b-2b0a-501a-a5e1-d8793f38a06c"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Mirka-AIROP-312NV-Sander.tool",
+        "path": "simready_usd/Mirka-AIROP-312NV-Sander.tool",
+        "sha256": "f832d13d2ae36ee58ec9e8158faca862f5a75fab0f81892b67e6df4a89b2fc66"
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "cr10af_moveit_ff72e32912",
+  "source": {
+    "url": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git",
+    "commit": "37730d08b08c74061ae10d4fa5565b4c4c914885",
+    "path": "robots/dobot/ros2_v4/cr10af_moveit",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "0803b49a77d85b10124da61b3e80f570c80c692e4392d01845f4b4d50e414714",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/cr10af_robot.ros2_control.xacro",
+      "sha256": "01bc8927c4d9d4be4dadb8ab3766dfeec793b0ff5879f2468016f2d8120e3e5e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/cr10af_robot.srdf",
+      "sha256": "59c1bf02fde1620b9b785ce7b700cfc74f2a789b190ef11c9f9b5be1ade2c135",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/cr10af_robot.urdf.xacro",
+      "sha256": "f17959cf6c96e2e691c310959056ecc0f584c5046c1e0777247c5f1098132cce",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/initial_positions.yaml",
+      "sha256": "f016c1d8aa0eb3921b0ec945b07446d70919ad0502c324cee02ce07597aba427",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "637a07c95eb9e5793802e989df112343ecbbc646efa2224ca4d7db5e14b58fdc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "7b41628138d9094870672e4acef5de30b9e873a355bd29319ed383db49f6f986",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit.rviz",
+      "sha256": "66e1dfd4b6e16a17228fd4e77e84e09f19dcb4d5badce353df6942b6ec07589e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "8e470a29054d66309d63fbdd6201fbc620be01f6a31b800bad8a38248744acc1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "8b9dc055f0845f8b2313bd2b6d867328645bcad02132ce51081606de5d3dab9c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ros2_controllers.yaml",
+      "sha256": "1f59ed056809427b23b5c07421609a24e7d4beb82623153d710e42a5829f7711",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch.py",
+      "sha256": "2463cec6336d8020b8962066f4b94f3df5b7ceb05b545d8493477d70a4ca1b4c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/dobot_moveit.launch.py",
+      "sha256": "26b9e6783cc81cbbff1842aea4d49beb8fc990bf31359dde8d2c28efb315ae46",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch.py",
+      "sha256": "fe291405702289f7f5cc1b1ec80b4601acf5c60abee683c2b063f2cf72c0fe4e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_gazebo.launch.py",
+      "sha256": "1bb5ce2a9051b1e002bb631fca7f1592f5d38491031308ad30dce12b7bc0e448",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_rviz.launch.py",
+      "sha256": "4b2e61d008111bc847da62faa45692e77e140acf78691da63b2c4b38f03d4ed5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/rsp.launch.py",
+      "sha256": "0e45ac03e95c13a68bc2f8c5c7715000015626076fa1c93b7960e76129c840db",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/setup_assistant.launch.py",
+      "sha256": "ba7cd9a1ea3548957cb8c5d08e85b3fed33c3e1a0c34242a8bab8c62158b9c54",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/spawn_controllers.launch.py",
+      "sha256": "a8fc87f8190c36db8b903bfe1b691fd234ce1a56a4f21ba92a7cb02b6066449c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/static_virtual_joint_tfs.launch.py",
+      "sha256": "d80d386b2b90f592da34443fc7353eea3cfe79c9fb27097c723411ab075a2078",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse_db.launch.py",
+      "sha256": "6e7c2e4aa3f14b08dffda8e15ec0010357d1f5a9367d96eda53855d9dc51c0e9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "488caafaa274a73626b63152d0b90c3c2ea54215e67eb16ad14f18361ac46946",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "1f11e8247c5ef61f89352c934e79ebd9b375bbd8947b79c42201c69d99d0073e"
+    }
+  ]
+}

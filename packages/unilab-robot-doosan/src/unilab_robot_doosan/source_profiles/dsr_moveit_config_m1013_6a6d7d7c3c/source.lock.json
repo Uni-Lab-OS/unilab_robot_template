@@ -1,0 +1,109 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "dsr_moveit_config_m1013_6a6d7d7c3c",
+  "source": {
+    "url": "https://github.com/DoosanRobotics/doosan-robot2.git",
+    "commit": "ec9242546ec6202835900dbcd8498e2daabfa6a6",
+    "path": "robots/doosan/ros2/dsr_moveit2/dsr_moveit_config_m1013",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "b7c6e7ecf21204e1665ada03317fae9ef1a61b5521a8b81c0314e72f28b42740",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/chomp_planning.yaml",
+      "sha256": "332c7cdd0712f16bba8b857963982316b9520e9d13db4f2b3512da069f1a33f5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/dsr.ros2_control.xacro",
+      "sha256": "750c94835d3bc749eb1772c0404dff078b019ec1b8a4d4e2155d9da98a3d0b8b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/dsr.srdf",
+      "sha256": "340b79913c3870d10056021dce4ef6faa006fddb9e31f4af1a1074623bb4cf58",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/initial_positions.yaml",
+      "sha256": "68660bd30a4da2ca9f3b442e86e26f5af96f06efe66df813bce970bdb3d66c16",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "1336a8a5b117ebc58f63d6996ae0622aff51ab656146e88ab24f060939c6af48",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "d0839c50fcc57bc3cd6d937c9e86f9e6e8e8039676279f7f19f4373f3c1a4cf5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/m1013.urdf.xacro",
+      "sha256": "0c05236ef6fca1c2b68a11c19a2e10fb1f204526cc46c5204e4221a255888112",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "ecb0f181d10ec9163300953cdfd994018fba53156e1b5c099db4b77f7a6cc00c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "ea455410e9f42c02e7e88f2b5d03697ce573e5770397e596049f966940c6d224",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "75d3e9d1817c848dcce2bf34a2f28bb52e99fc9c70143cd598cfca3b3e341b05",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_industrial_motion_planner_planning.yaml",
+      "sha256": "4fd860386f0d7f99f9877c4ddbf28fb6222dfa7b8ededd6841cfd9a0c6b84d63",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ros2_controllers.yaml",
+      "sha256": "18c71f0950f54b232732d688cc76cce5438e663bd1ac3e99206d6d83af9c6f4d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/sensors_3d.yaml",
+      "sha256": "33216208092ad387864688397c59ffc0f77908c17f3ef729678f6acdd48bfb31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch.py",
+      "sha256": "940145211c5cc96aec914b4490cf6060f15923c2ff8047f918c3206e4391937c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit.rviz",
+      "sha256": "272ff0d5766647fea026b3e874a6fc1362e0f289e80a379c4b2e3f1cbbdf36ff",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/start.launch.py",
+      "sha256": "ce03ac7169bb49eb4b5e3bb9e4a08de14ba9508e06d72a857e1257f7691705a6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "cc0e649dc72dd6dcb77000f48a1f6f7dabc9ad9c4347a984d6060cc6a88933d1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "97bf488c404871bbc446828ebaf629f5832b2f9804fcc5276f0ccf98802fd3c0"
+    }
+  ]
+}

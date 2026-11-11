@@ -1,0 +1,701 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "r2000ib250f",
+  "title": "Fanuc R-2000iB/250F｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "c3e163d9-af5b-514d-bf2b-76d2463ce2e9",
+    "package_digest": "052d7ec2cc4752cf7f1634eae369d925d9b5707382b0bde5ccc641c1f1ba72d6",
+    "package_path": "04_设备/fanuc/r2000ib250f__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c3e163d9-af5b-514d-bf2b-76d2463ce2e9",
+      "package_digest": "052d7ec2cc4752cf7f1634eae369d925d9b5707382b0bde5ccc641c1f1ba72d6",
+      "package_path": "04_设备/fanuc/r2000ib250f__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "auxiliary_linkage": {
+          "contract_attribute": "unilab:auxiliaryLinkage",
+          "implementation": "behavior/linkage.py:apply_auxiliary_poses",
+          "required": true,
+          "scope": "offline kinematic replay; physical loop closure and dynamics not qualified",
+          "update_order": "Update six driven link world transforms, then evaluate all dependent auxiliary frames; inputs column-vector transforms in metres"
+        },
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "R-2000iB/250F",
+              "source": "robots/models/Fanuc-R-2000iB-250F.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "R-2000iB/250F",
+              "source": "robots/models/Fanuc-R-2000iB-250F.robot",
+              "source_family": "RoboDK",
+              "value": 250.0
+            },
+            {
+              "model": "R-2000iB/250F",
+              "source": "Components/Fanuc/Robots/R-2000iB_250F.vcmx",
+              "source_family": "VC",
+              "value": 250.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 250.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "R-2000iB/250F",
+              "source": "robots/models/Fanuc-R-2000iB-250F.robot",
+              "source_family": "RoboDK",
+              "value": 2655.0
+            },
+            {
+              "model": "R-2000iB/250F",
+              "source": "Components/Fanuc/Robots/R-2000iB_250F.vcmx",
+              "source_family": "VC",
+              "value": 2655.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2655.0
+        }
+      },
+      "robot_parameters": {
+        "auxiliary_linkage": {
+          "anchor_links": [
+            1,
+            2
+          ],
+          "anchors_m": [
+            [
+              -0.308,
+              0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.215,
+              0
+            ]
+          ],
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "kind": "robodk_two_anchor_slide",
+          "native_function": "0x1405b0c10:0x1405b12e0..0x1405b17f4",
+          "orientation_column": 1,
+          "orientation_link": 1,
+          "output_links": [
+            7,
+            8
+          ],
+          "scope": "source graphical closed linkage pose dependency; not physical constraint or actuator model"
+        },
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -670.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_constraint": {
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "formula": "usd_joint_degrees = matrix @ source_controller_degrees; signed axes encoded in joint frames",
+          "kind": "invertible_linear_coordinate_map",
+          "limits_scope": "USD limits are per-axis enclosure only. Coupled domain requires inverse(matrix) @ usd_coordinates within original source limits; dynamics remains disabled",
+          "native_function": "0x14055e6a0",
+          "source_lower": [
+            -180.0,
+            -56.0,
+            -65.0,
+            -360.0,
+            -125.0,
+            -360.0
+          ],
+          "source_upper": [
+            180.0,
+            80.0,
+            245.0,
+            360.0,
+            125.0,
+            360.0
+          ]
+        },
+        "controller_coordinate_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "controller_to_mdh_mode": 2,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -56.0,
+          -65.0,
+          -360.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            670.0
+          ],
+          [
+            -1.5707963267948966,
+            312.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1075.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            225.0,
+            0.0,
+            1280.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            235.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          2.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          80.0,
+          245.0,
+          360.0,
+          125.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Fanuc R-2000iB/250F",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "R-2000iB/250F",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-R-2000iB-250F.robot",
+            "path": "simready_usd/source/Fanuc-R-2000iB-250F.robot",
+            "sha256": "64f11589e203c2b28cf5ad465209c5e9a465ed7d620ee5f1f888b8324c730912"
+          },
+          "path": "robots/models/Fanuc-R-2000iB-250F.robot",
+          "payload": 250,
+          "reach": 2655,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "R-2000iB/250F",
+          "original": {
+            "family": "VC",
+            "original_name": "R-2000iB_250F.vcmx",
+            "path": "simready_usd/source_assets/VC/0_r-2000ib_250f/R-2000iB_250F.vcmx",
+            "sha256": "690188fe1f8ae140e72ffc82698e9f87680032f06ff92e4a2cbb2a416bb46879"
+          },
+          "path": "Components/Fanuc/Robots/R-2000iB_250F.vcmx",
+          "payload": "250",
+          "reach": "2655",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "fc1371c8-8677-4b20-8c2f-6f714f1270c8"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/r2000ib250f__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc R-2000iB/250F｜多源合并",
+          "id": "merged_robot_c3e163d9_af5b_514d_bf2b_76d2463ce2e9",
+          "metadata": {
+            "asset_id": "c3e163d9-af5b-514d-bf2b-76d2463ce2e9",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-R-2000iB-250F.robot",
+        "path": "simready_usd/source/Fanuc-R-2000iB-250F.robot",
+        "sha256": "64f11589e203c2b28cf5ad465209c5e9a465ed7d620ee5f1f888b8324c730912"
+      },
+      {
+        "family": "VC",
+        "original_name": "R-2000iB_250F.vcmx",
+        "path": "simready_usd/source_assets/VC/0_r-2000ib_250f/R-2000iB_250F.vcmx",
+        "sha256": "690188fe1f8ae140e72ffc82698e9f87680032f06ff92e4a2cbb2a416bb46879"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "fanuc",
+        "r2000ib250f"
+      ],
+      "label": "RoboDK+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "cbe8a3a3-ff42-536b-8422-f1af1796ba8f",
+        "original_package_digest": "2b42c79f1f7dc32c0d8cf0b552123be94f909d3f69fe070317f3fc75eea95b2b",
+        "source": "robots/models/Fanuc-R-2000iB-250F.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

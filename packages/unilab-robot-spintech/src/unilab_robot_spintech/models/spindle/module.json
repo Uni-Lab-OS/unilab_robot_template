@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "spintech",
+  "model": "spindle",
+  "title": "Spintech Spindle",
+  "asset": {
+    "asset_id": "524b5233-6e42-51e6-9619-ad886296108a",
+    "package_digest": "03933ee1cc5c0c39bd851faf7d24eceb38ab20dfba054aeb1a20847f9e2358d5",
+    "package_path": "01_零部件/spintech/spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "524b5233-6e42-51e6-9619-ad886296108a",
+      "package_digest": "03933ee1cc5c0c39bd851faf7d24eceb38ab20dfba054aeb1a20847f9e2358d5",
+      "package_path": "01_零部件/spintech/spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0f7e5475ef39a7d63dc57cd4ec1144756679cbbe320fb1281bd0b26aa411b64f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Spindle",
+          "manufacturer": "Spintech",
+          "variant": "",
+          "display": "Spintech Spindle",
+          "path": "tools/models/Spintech-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "524b5233-6e42-51e6-9619-ad886296108a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Spintech-Spindle.tool",
+        "path": "simready_usd/Spintech-Spindle.tool",
+        "sha256": "acc569790847dbd5595c95ca254350ab8d7246b2188e2fa80c8e0c1db2737281"
+      }
+    ]
+  }
+}

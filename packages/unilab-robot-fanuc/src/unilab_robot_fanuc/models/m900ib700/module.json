@@ -1,0 +1,1213 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "m900ib700",
+  "title": "Fanuc M-900iB/700｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "0f7844a1-7402-508b-ac4b-d612b8f1b2cb",
+    "package_digest": "3941cbb4ea1d3548412040e7c23d23f001264f539f0fb7cdb8155338f2ebcfeb",
+    "package_path": "04_设备/fanuc/m900ib700__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "0f7844a1-7402-508b-ac4b-d612b8f1b2cb",
+      "package_digest": "3941cbb4ea1d3548412040e7c23d23f001264f539f0fb7cdb8155338f2ebcfeb",
+      "package_path": "04_设备/fanuc/m900ib700__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "auxiliary_linkage": {
+          "contract_attribute": "unilab:auxiliaryLinkage",
+          "implementation": "behavior/linkage.py:apply_auxiliary_poses",
+          "required": true,
+          "scope": "offline kinematic replay; physical loop closure and dynamics not qualified",
+          "update_order": "Update six driven link world transforms, then evaluate all dependent auxiliary frames; inputs column-vector transforms in metres"
+        },
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "M-900iB/700",
+              "source": "robots/models/Fanuc-M-900iB-700.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "M-900iB/700",
+              "source": "robots/models/Fanuc-M-900iB-700.robot",
+              "source_family": "RoboDK",
+              "value": 700.0
+            },
+            {
+              "model": "M-900iB/700",
+              "source": "Components/Fanuc/Robots/M-900iB_700.vcmx",
+              "source_family": "VC",
+              "value": 700.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 700.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "M-900iB/700",
+              "source": "robots/models/Fanuc-M-900iB-700.robot",
+              "source_family": "RoboDK",
+              "value": 2832.0
+            },
+            {
+              "model": "M-900iB/700",
+              "source": "Components/Fanuc/Robots/M-900iB_700.vcmx",
+              "source_family": "VC",
+              "value": 2832.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2832.0
+        }
+      },
+      "robot_parameters": {
+        "auxiliary_linkage": {
+          "anchor_links": [
+            2,
+            3
+          ],
+          "anchors_m": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0.0,
+              -0.75,
+              0
+            ]
+          ],
+          "assembly_branch": "positive displacement along normalized ((B-A) cross source link2 Z)",
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "kind": "robodk_four_bar",
+          "lengths_m": [
+            0.75,
+            1.12
+          ],
+          "native_function": "0x1405b0c10:0x1405b1dd3..0x1405b25c3",
+          "orientation_column": 2,
+          "orientation_link": 2,
+          "output_links": [
+            7,
+            8
+          ],
+          "scope": "source graphical four-bar closure; infeasible/singular triangles rejected; no dynamics qualification"
+        },
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -940.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_constraint": {
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "formula": "usd_joint_degrees = matrix @ source_controller_degrees; signed axes encoded in joint frames",
+          "kind": "invertible_linear_coordinate_map",
+          "limits_scope": "USD limits are per-axis enclosure only. Coupled domain requires inverse(matrix) @ usd_coordinates within original source limits; dynamics remains disabled",
+          "native_function": "0x14055e6a0",
+          "source_lower": [
+            -180.0,
+            -44.0,
+            -65.0,
+            -360.0,
+            -122.0,
+            -360.0
+          ],
+          "source_upper": [
+            180.0,
+            110.0,
+            95.0,
+            360.0,
+            122.0,
+            360.0
+          ]
+        },
+        "controller_coordinate_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "controller_to_mdh_mode": 2,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -44.0,
+          -65.0,
+          -360.0,
+          -122.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            940.0
+          ],
+          [
+            -1.5707963267948966,
+            410.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1120.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            250.0,
+            0.0,
+            1285.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            300.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          2.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          110.0,
+          95.0,
+          360.0,
+          122.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Fanuc M-900iB/700",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "M-900iB/700",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-M-900iB-700.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-900ib-700/Fanuc-M-900iB-700.robot",
+            "sha256": "a093a03c489450c211011d3f536067c2b0827574494fb9c8164b31aaeecfae83"
+          },
+          "path": "robots/models/Fanuc-M-900iB-700.robot",
+          "payload": 700,
+          "reach": 2832,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 28,
+          "movable_declared": 12,
+          "name": "m900ib700",
+          "original": {
+            "family": "UniLab",
+            "original_name": "m900ib700_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+            "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+          },
+          "path": "fanuc/ros_industrial/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+          "raw_name": "m900ib700_macro.xacro",
+          "robot_description": {
+            "commit": "d8f42bd73584b255df87098395512538882caea1",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.940\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"-3.1415\" upper=\"3.1415\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.410 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"-1.1170\" upper=\"1.5707\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.2689\" upper=\"0.5235\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.250\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2831\" upper=\"6.2831\" velocity=\"1.7453\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"1.285 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.1293\" upper=\"2.1293\" velocity=\"1.7453\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.300 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2831\" upper=\"6.2831\" velocity=\"2.7925\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}pjoint_1\" type=\"continuous\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}plink_1\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_3\" multiplier=\"-1\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}pjoint_2\" type=\"continuous\">\n      <origin xyz=\"-0.75 0.08 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}plink_2\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_3\" multiplier=\"1\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}balancer_left_joint\" type=\"continuous\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}balancer_left\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"0.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}piston_left_joint\" type=\"continuous\">\n      <origin xyz=\"0.410 0 0.235\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}piston_left\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"1.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}balancer_right_joint\" type=\"continuous\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}balancer_right\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"0.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}piston_right_joint\" type=\"continuous\">\n      <origin xyz=\"0.410 0 0.235\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}piston_right\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"1.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}forklift_pockets_joint\" type=\"fixed\">\n      <origin xyz=\"0 0 ${-(0.940 - 0.445)}\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}forklift_pockets\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.940\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 28,
+          "movable_declared": 12,
+          "name": "m900ib700",
+          "original": {
+            "family": "UniLab",
+            "original_name": "m900ib700_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+            "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+          },
+          "path": "fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+          "raw_name": "m900ib700_macro.xacro",
+          "robot_description": {
+            "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.940\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"-3.1415\" upper=\"3.1415\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.410 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"-1.1170\" upper=\"1.5707\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.2689\" upper=\"0.5235\" velocity=\"1.3962\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.250\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2831\" upper=\"6.2831\" velocity=\"1.7453\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"1.285 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.1293\" upper=\"2.1293\" velocity=\"1.7453\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.300 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2831\" upper=\"6.2831\" velocity=\"2.7925\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}pjoint_1\" type=\"continuous\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}plink_1\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_3\" multiplier=\"-1\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}pjoint_2\" type=\"continuous\">\n      <origin xyz=\"-0.75 0.08 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}plink_2\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_3\" multiplier=\"1\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}balancer_left_joint\" type=\"continuous\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}balancer_left\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"0.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}piston_left_joint\" type=\"continuous\">\n      <origin xyz=\"0.410 0 0.235\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}piston_left\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"1.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}balancer_right_joint\" type=\"continuous\">\n      <origin xyz=\"0 0 1.120\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}balancer_right\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"0.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}piston_right_joint\" type=\"continuous\">\n      <origin xyz=\"0.410 0 0.235\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}piston_right\" />\n      <axis xyz=\"0 1 0\" />\n      <mimic joint=\"${prefix}joint_2\" multiplier=\"1.18\" offset=\"0\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}forklift_pockets_joint\" type=\"fixed\">\n      <origin xyz=\"0 0 ${-(0.940 - 0.445)}\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}forklift_pockets\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.940\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "M-900iB/700",
+          "original": {
+            "family": "VC",
+            "original_name": "M-900iB_700.vcmx",
+            "path": "simready_usd/source_assets/VC/0_m-900ib_700/M-900iB_700.vcmx",
+            "sha256": "0d47e719b6b15ea12a77a514d435ad7e566f51e45199a9d5a4695a5067945107"
+          },
+          "path": "Components/Fanuc/Robots/M-900iB_700.vcmx",
+          "payload": "700",
+          "reach": "2832",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "6551f2ec-909e-47b3-bdec-7251df9c08c4"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/m900ib700__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc M-900iB/700｜多源合并",
+          "id": "merged_robot_0f7844a1_7402_508b_ac4b_d612b8f1b2cb",
+          "metadata": {
+            "asset_id": "0f7844a1-7402-508b-ac4b-d612b8f1b2cb",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "Fanuc-M-900iB-700.robot",
+        "path": "simready_usd/source/Fanuc-M-900iB-700.robot",
+        "sha256": "a093a03c489450c211011d3f536067c2b0827574494fb9c8164b31aaeecfae83"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-M-900iB-700.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-900ib-700/Fanuc-M-900iB-700.robot",
+        "sha256": "a093a03c489450c211011d3f536067c2b0827574494fb9c8164b31aaeecfae83"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m900ib700_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_m900ib700_macro/m900ib700_macro.xacro",
+        "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m900ib700.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/config/joint_names_m900ib700.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/package.xml",
+        "sha256": "90f212e21e842786ec5e21ef13b00a49d46b2322f3dc166f66f128b2eb35c6d1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m900ib700_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+        "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "forklift_pockets.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/forklift_pockets.stl",
+        "sha256": "9083574e56aa19c0c59d98bd3532e62ced23e3a4fe8be1dda290f10dc861fa1e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "forklift_pockets.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/forklift_pockets.stl",
+        "sha256": "9083574e56aa19c0c59d98bd3532e62ced23e3a4fe8be1dda290f10dc861fa1e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "piston.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/piston.stl",
+        "sha256": "a95df426f514f60be204bd5c288a24bed03672f6c78c829f1b2420e05ff28919"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "piston.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/piston.stl",
+        "sha256": "a95df426f514f60be204bd5c288a24bed03672f6c78c829f1b2420e05ff28919"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "balancer.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/balancer.stl",
+        "sha256": "24d498507dd5fb8c3c9216c3b86564101225959205d94603b931a02572776bc5"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "balancer.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/balancer.stl",
+        "sha256": "24d498507dd5fb8c3c9216c3b86564101225959205d94603b931a02572776bc5"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "bar.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/bar.stl",
+        "sha256": "2f74e4277a3dc0d1da0917b602b271c38d698bff55ffc82dda84c0d7e6341e8f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "bar.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/bar.stl",
+        "sha256": "2f74e4277a3dc0d1da0917b602b271c38d698bff55ffc82dda84c0d7e6341e8f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "counterweight.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/counterweight.stl",
+        "sha256": "6865611e4d2d0ba64449aab1941855431d913ca8981b41dffbce0cdbd4d997ff"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "counterweight.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/counterweight.stl",
+        "sha256": "6865611e4d2d0ba64449aab1941855431d913ca8981b41dffbce0cdbd4d997ff"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_6.stl",
+        "sha256": "0a57c3afb9bb21dd24f1f96e504726f990b13b2059009523ed296d003af33930"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_6.stl",
+        "sha256": "0a57c3afb9bb21dd24f1f96e504726f990b13b2059009523ed296d003af33930"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_5.stl",
+        "sha256": "0de84d01ecb198a7109cacbd6bf1242a7af78fe369a5b98842c7df93a5e25e49"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_5.stl",
+        "sha256": "0de84d01ecb198a7109cacbd6bf1242a7af78fe369a5b98842c7df93a5e25e49"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_4.stl",
+        "sha256": "9d6f58c2597309c0590cb70b6bdf257bcde4272e59451fc2abcdebebcecd23c4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_4.stl",
+        "sha256": "9d6f58c2597309c0590cb70b6bdf257bcde4272e59451fc2abcdebebcecd23c4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_3.stl",
+        "sha256": "c77442820997ebbdf9644f972f0ddd62b6e8ff5340982b78733b2a8685b6829e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_3.stl",
+        "sha256": "c77442820997ebbdf9644f972f0ddd62b6e8ff5340982b78733b2a8685b6829e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_2.stl",
+        "sha256": "faa386efebf2fba9aff196f9b0314ea2297c3ab09a5055dc766dd7f5acb18bd4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_2.stl",
+        "sha256": "faa386efebf2fba9aff196f9b0314ea2297c3ab09a5055dc766dd7f5acb18bd4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/link_1.stl",
+        "sha256": "202472d38dfc91c0b6fad78b3f36635157e889a814656fbd5e08987a2eaadf53"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/link_1.stl",
+        "sha256": "202472d38dfc91c0b6fad78b3f36635157e889a814656fbd5e08987a2eaadf53"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/collision/base_link.stl",
+        "sha256": "db00bda207e6f882ffd82cfea336c5a49313779ab0284d9c10a6a39f1aa0af13"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m900ib_support/meshes/m900ib700/visual/base_link.stl",
+        "sha256": "db00bda207e6f882ffd82cfea336c5a49313779ab0284d9c10a6a39f1aa0af13"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m900ib700_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/1_m900ib700_macro/m900ib700_macro.xacro",
+        "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m900ib700.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/config/joint_names_m900ib700.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/package.xml",
+        "sha256": "a0fc8d860a460b656942a0928e67fccc529f26dc7e384c9ede1c4918e2cb7d68"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m900ib700_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/urdf/m900ib700_macro.xacro",
+        "sha256": "0c405ec933cf77b8c5009105b34b3bb2ce945026cbfaf6fdac726ad189f9cbf8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "forklift_pockets.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/forklift_pockets.stl",
+        "sha256": "9083574e56aa19c0c59d98bd3532e62ced23e3a4fe8be1dda290f10dc861fa1e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "forklift_pockets.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/forklift_pockets.stl",
+        "sha256": "9083574e56aa19c0c59d98bd3532e62ced23e3a4fe8be1dda290f10dc861fa1e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "piston.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/piston.stl",
+        "sha256": "a95df426f514f60be204bd5c288a24bed03672f6c78c829f1b2420e05ff28919"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "piston.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/piston.stl",
+        "sha256": "a95df426f514f60be204bd5c288a24bed03672f6c78c829f1b2420e05ff28919"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "balancer.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/balancer.stl",
+        "sha256": "24d498507dd5fb8c3c9216c3b86564101225959205d94603b931a02572776bc5"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "balancer.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/balancer.stl",
+        "sha256": "24d498507dd5fb8c3c9216c3b86564101225959205d94603b931a02572776bc5"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "bar.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/bar.stl",
+        "sha256": "2f74e4277a3dc0d1da0917b602b271c38d698bff55ffc82dda84c0d7e6341e8f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "bar.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/bar.stl",
+        "sha256": "2f74e4277a3dc0d1da0917b602b271c38d698bff55ffc82dda84c0d7e6341e8f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "counterweight.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/counterweight.stl",
+        "sha256": "6865611e4d2d0ba64449aab1941855431d913ca8981b41dffbce0cdbd4d997ff"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "counterweight.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/counterweight.stl",
+        "sha256": "6865611e4d2d0ba64449aab1941855431d913ca8981b41dffbce0cdbd4d997ff"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_6.stl",
+        "sha256": "0a57c3afb9bb21dd24f1f96e504726f990b13b2059009523ed296d003af33930"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_6.stl",
+        "sha256": "0a57c3afb9bb21dd24f1f96e504726f990b13b2059009523ed296d003af33930"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_5.stl",
+        "sha256": "0de84d01ecb198a7109cacbd6bf1242a7af78fe369a5b98842c7df93a5e25e49"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_5.stl",
+        "sha256": "0de84d01ecb198a7109cacbd6bf1242a7af78fe369a5b98842c7df93a5e25e49"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_4.stl",
+        "sha256": "9d6f58c2597309c0590cb70b6bdf257bcde4272e59451fc2abcdebebcecd23c4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_4.stl",
+        "sha256": "9d6f58c2597309c0590cb70b6bdf257bcde4272e59451fc2abcdebebcecd23c4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_3.stl",
+        "sha256": "c77442820997ebbdf9644f972f0ddd62b6e8ff5340982b78733b2a8685b6829e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_3.stl",
+        "sha256": "c77442820997ebbdf9644f972f0ddd62b6e8ff5340982b78733b2a8685b6829e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_2.stl",
+        "sha256": "faa386efebf2fba9aff196f9b0314ea2297c3ab09a5055dc766dd7f5acb18bd4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_2.stl",
+        "sha256": "faa386efebf2fba9aff196f9b0314ea2297c3ab09a5055dc766dd7f5acb18bd4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/link_1.stl",
+        "sha256": "202472d38dfc91c0b6fad78b3f36635157e889a814656fbd5e08987a2eaadf53"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/link_1.stl",
+        "sha256": "202472d38dfc91c0b6fad78b3f36635157e889a814656fbd5e08987a2eaadf53"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/collision/base_link.stl",
+        "sha256": "db00bda207e6f882ffd82cfea336c5a49313779ab0284d9c10a6a39f1aa0af13"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m900ib_support/meshes/m900ib700/visual/base_link.stl",
+        "sha256": "db00bda207e6f882ffd82cfea336c5a49313779ab0284d9c10a6a39f1aa0af13"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "VC",
+        "original_name": "M-900iB_700.vcmx",
+        "path": "simready_usd/source_assets/VC/0_m-900ib_700/M-900iB_700.vcmx",
+        "sha256": "0d47e719b6b15ea12a77a514d435ad7e566f51e45199a9d5a4695a5067945107"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "key": [
+        "fanuc",
+        "m900ib700"
+      ],
+      "label": "RoboDK+UniLab+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "d8f42bd73584b255df87098395512538882caea1",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_m900ib700_macro/m900ib700_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "file identity, literal dependencies and declared joints/inertials; not numerical agreement with USD"
+        },
+        {
+          "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/1_m900ib700_macro/m900ib700_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "file identity, literal dependencies and declared joints/inertials; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "d1346e75-dfbc-5ae6-8b3c-a6eb24727b7c",
+        "original_package_digest": "96047129e4e41390c0309dd4ef25ffab32de5d0da3d02be9ec58fba83e31635b",
+        "source": "robots/models/Fanuc-M-900iB-700.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "UniLab",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

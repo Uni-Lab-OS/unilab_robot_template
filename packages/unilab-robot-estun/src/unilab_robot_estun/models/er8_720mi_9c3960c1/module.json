@@ -1,0 +1,285 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "estun",
+  "model": "er8:720mi",
+  "title": "Estun ER8-720-MI",
+  "asset": {
+    "asset_id": "7c4983bd-affe-5977-8956-39a43add8bb7",
+    "package_digest": "abd5c00798e8533554c12eb5b244a8062341e3fc16a749b95a14801ef40833f3",
+    "package_path": "04_设备/estun/er8-720-mi__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7c4983bd-affe-5977-8956-39a43add8bb7",
+      "package_digest": "abd5c00798e8533554c12eb5b244a8062341e3fc16a749b95a14801ef40833f3",
+      "package_path": "04_设备/estun/er8-720-mi__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -170.0,
+          -140.0,
+          -200.0,
+          -173.0,
+          -130.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            391.0
+          ],
+          [
+            -1.5707963267948966,
+            40.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            340.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            40.0,
+            0.0,
+            345.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          140.0,
+          70.0,
+          173.0,
+          130.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f4d791a398b145e30ba001fec2cda00f7242b2b9faa3c7137defa91aceaff88c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/er8-720-mi__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:estun:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/estun/ros2_driver",
+        "repository_url": "https://github.com/ESTUN-R-D/estun_ros2.git",
+        "code_tree_sha256": "88e640016a65f047d5555642b4c353d4e772b7688ffe59cee26620a6da678aff",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b93c5ef970d3944bc9d48a4eff68a54a5654a172a6e80b57ce328597f7650bcb"
+          },
+          {
+            "path": "README.zh-CN.md",
+            "sha256": "9e56ccd7b0574561b67b246c916b5d632b3c3119301b0686419c1330a98b1fda"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "b7d0373f53d8d213519f23184b1fe9d1dc7fb3fe250cc5d970f6b9d32b5a112e"
+          },
+          {
+            "path": "estun_libs/LICENSE",
+            "sha256": "78e10cdb9168541cf321a46d4cb1d5f76e7d81a14b08e82b4c3e20e022be2c79"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:estun_eri",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "estun_eri",
+        "controller_choices": [
+          "ESTUN ERI"
+        ],
+        "sdk_version_requirement": "ERI SDK 1.0.0.17",
+        "source_candidates": [
+          "sdk:estun:ros2_driver"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "movj_request_requires_native_units_and_control_evidence"
+        ],
+        "constraints": [
+          "Linux SCHED_RR priority 51 blocked EPERM; exact controller/firmware and joint units remain unverified",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "blocked",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "estun-native/receipt.json",
+          "receipt_sha256": "04137f5ba9c19b32316b9d0835bd232a35249b6d12bdf2a9388e57883650b86c",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Estun_RCS2.py",
+      "Estun_RCS3.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ER8-720-MI",
+          "manufacturer": "Estun",
+          "variant": "",
+          "display": "Estun ER8-720-MI",
+          "path": "robots/models/Estun-ER8-720-MI.robot",
+          "type": "robots",
+          "payload": 8,
+          "reach": 727,
+          "axes": 6,
+          "library_assets": [
+            "7c4983bd-affe-5977-8956-39a43add8bb7"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Estun-ER8-720-MI.robot",
+        "path": "simready_usd/Estun-ER8-720-MI.robot",
+        "sha256": "3f34d5ba3cea7c2da178fc8cf9bbf0e0bfed05afc1da20135df593f52537725b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

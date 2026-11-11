@@ -1,0 +1,666 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr240r3700:2",
+  "title": "KUKA KR 240 R3700-2｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "8cf9c5f0-fb23-5e75-bfd0-def27d979786",
+    "package_digest": "2cb58245bfb3d0daa553268e3a1186aaec08fce38459a005ab600c31e3a3b4bb",
+    "package_path": "04_设备/kuka/kr240r3700_2__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8cf9c5f0-fb23-5e75-bfd0-def27d979786",
+      "package_digest": "2cb58245bfb3d0daa553268e3a1186aaec08fce38459a005ab600c31e3a3b4bb",
+      "package_path": "04_设备/kuka/kr240r3700_2__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR 240 R3700-2",
+              "source": "robots/models/KUKA-KR-240-R3700-2.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 240 R3700-2",
+              "source": "robots/models/KUKA-KR-240-R3700-2.robot",
+              "source_family": "RoboDK",
+              "value": 300.0
+            },
+            {
+              "model": "KR 240 R3700-2",
+              "source": "Components/KUKA/Deprecated/Robots/Heavy-Duty/KR FORTEC-2/KR 240 R3700-2.vcmx",
+              "source_family": "VC",
+              "value": 300.0
+            },
+            {
+              "model": "KR 240 R3700-2",
+              "source": "Components/KUKA/Robots/Heavy Payloads/KR FORTEC-2/KR 240 R3700-2.vcmx",
+              "source_family": "VC",
+              "value": 240.0
+            }
+          ],
+          "note": "Exact KR240R3700-2 rated payload 240 kg. Current webpage lists reach 3750 mm: reach edition discrepancy is not silently propagated.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 240,
+          "verification": [
+            {
+              "authority": "manufacturer original document or official product table",
+              "retrieval": "web indexed official source text; direct PDF unavailable; no PDF digest claimed",
+              "reviewed_at": "2026-11-08",
+              "scope": "payload",
+              "title": "KUKA KR FORTEC official product table",
+              "url": "https://www.kuka.com/pl-pl/produkty-i-us%C5%82ugi/systemy-robot%C3%B3w/roboty-przemys%C5%82owe/kr-fortec"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 240 R3700-2",
+              "source": "robots/models/KUKA-KR-240-R3700-2.robot",
+              "source_family": "RoboDK",
+              "value": 3750.0
+            },
+            {
+              "model": "KR 240 R3700-2",
+              "source": "Components/KUKA/Deprecated/Robots/Heavy-Duty/KR FORTEC-2/KR 240 R3700-2.vcmx",
+              "source_family": "VC",
+              "value": 3750.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 3750.0
+        }
+      },
+      "robot_parameters": {
+        "auxiliary_linkage": {
+          "anchor_links": [
+            1,
+            2
+          ],
+          "anchors_m": [
+            [
+              -0.464,
+              0,
+              -0.042
+            ],
+            [
+              0.01,
+              -0.24779830507894923,
+              0
+            ]
+          ],
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "kind": "robodk_two_anchor_slide",
+          "native_function": "0x1405b0c10:0x1405b12e0..0x1405b17f4",
+          "orientation_column": 1,
+          "orientation_link": 1,
+          "output_links": [
+            7,
+            8
+          ],
+          "scope": "source graphical closed linkage pose dependency; not physical constraint or actuator model"
+        },
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -185.0,
+          -130.0,
+          -110.0,
+          -350.0,
+          -122.5,
+          -350.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            800.0
+          ],
+          [
+            -1.5707963267948966,
+            500.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1550.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            0.0,
+            1693.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            240.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          1.0,
+          12.0,
+          500.0,
+          0.0,
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          0.0,
+          1.0,
+          1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          185.0,
+          5.0,
+          162.0,
+          350.0,
+          122.5,
+          350.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "KUKA KR 240 R3700-2",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 240 R3700-2",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR-240-R3700-2.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_kuka-kr-240-r3700-2/KUKA-KR-240-R3700-2.robot",
+            "sha256": "d03e376a0f41ea8baaa1ef957e5a91306a3f620cb5cf5205e29cf599107804d4"
+          },
+          "path": "robots/models/KUKA-KR-240-R3700-2.robot",
+          "payload": 300,
+          "reach": 3750,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 240 R3700-2",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 240 R3700-2.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_240_r3700-2/KR 240 R3700-2.vcmx",
+            "sha256": "685ce0bedbae4b81024298780dcf7b5ac280a22430bc56d391f99eb13b3aee0f"
+          },
+          "path": "Components/KUKA/Deprecated/Robots/Heavy-Duty/KR FORTEC-2/KR 240 R3700-2.vcmx",
+          "payload": "300",
+          "reach": "3750",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "a9d4ebfb-42c1-429f-801a-b45cc1173feb"
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 240 R3700-2",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 240 R3700-2.vcmx",
+            "path": "simready_usd/source_assets/VC/1_kr_240_r3700-2/KR 240 R3700-2.vcmx",
+            "sha256": "5d5112708fa5b75fbcbd53eb1b7f314d3bdbfd9d2674070f826289e7250a759d"
+          },
+          "path": "Components/KUKA/Robots/Heavy Payloads/KR FORTEC-2/KR 240 R3700-2.vcmx",
+          "payload": "240",
+          "reach": "0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "e3522942-c90d-48f6-a368-94b824a80d21"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr240r3700_2__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR 240 R3700-2｜多源合并",
+          "id": "merged_robot_8cf9c5f0_fb23_5e75_bfd0_def27d979786",
+          "metadata": {
+            "asset_id": "8cf9c5f0-fb23-5e75-bfd0-def27d979786",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "KUKA-KR-240-R3700-2.robot",
+        "path": "simready_usd/source/KUKA-KR-240-R3700-2.robot",
+        "sha256": "d03e376a0f41ea8baaa1ef957e5a91306a3f620cb5cf5205e29cf599107804d4"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR-240-R3700-2.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_kuka-kr-240-r3700-2/KUKA-KR-240-R3700-2.robot",
+        "sha256": "d03e376a0f41ea8baaa1ef957e5a91306a3f620cb5cf5205e29cf599107804d4"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 240 R3700-2.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_240_r3700-2/KR 240 R3700-2.vcmx",
+        "sha256": "685ce0bedbae4b81024298780dcf7b5ac280a22430bc56d391f99eb13b3aee0f"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 240 R3700-2.vcmx",
+        "path": "simready_usd/source_assets/VC/1_kr_240_r3700-2/KR 240 R3700-2.vcmx",
+        "sha256": "5d5112708fa5b75fbcbd53eb1b7f314d3bdbfd9d2674070f826289e7250a759d"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "KR 240 R3700-2",
+                "source": "robots/models/KUKA-KR-240-R3700-2.robot",
+                "source_family": "RoboDK",
+                "value": 300.0
+              },
+              {
+                "model": "KR 240 R3700-2",
+                "source": "Components/KUKA/Deprecated/Robots/Heavy-Duty/KR FORTEC-2/KR 240 R3700-2.vcmx",
+                "source_family": "VC",
+                "value": 300.0
+              },
+              {
+                "model": "KR 240 R3700-2",
+                "source": "Components/KUKA/Robots/Heavy Payloads/KR FORTEC-2/KR 240 R3700-2.vcmx",
+                "source_family": "VC",
+                "value": 240.0
+              }
+            ],
+            "note": "Exact KR240R3700-2 rated payload 240 kg. Current webpage lists reach 3750 mm: reach edition discrepancy is not silently propagated.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 240,
+            "verification": [
+              {
+                "authority": "manufacturer original document or official product table",
+                "retrieval": "web indexed official source text; direct PDF unavailable; no PDF digest claimed",
+                "reviewed_at": "2026-11-08",
+                "scope": "payload",
+                "title": "KUKA KR FORTEC official product table",
+                "url": "https://www.kuka.com/pl-pl/produkty-i-us%C5%82ugi/systemy-robot%C3%B3w/roboty-przemys%C5%82owe/kr-fortec"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            240.0,
+            300.0
+          ]
+        }
+      ],
+      "key": [
+        "kuka",
+        "kr240r3700:2"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "manufacturer original document or official product table",
+            "retrieval": "web indexed official source text; direct PDF unavailable; no PDF digest claimed",
+            "reviewed_at": "2026-11-08",
+            "scope": "payload",
+            "title": "KUKA KR FORTEC official product table",
+            "url": "https://www.kuka.com/pl-pl/produkty-i-us%C5%82ugi/systemy-robot%C3%B3w/roboty-przemys%C5%82owe/kr-fortec"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "note": "Exact KR240R3700-2 rated payload 240 kg. Current webpage lists reach 3750 mm: reach edition discrepancy is not silently propagated.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 240
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "f4b0991b-fbfe-5a56-aa82-16ae4379fe18",
+        "original_package_digest": "1882774ca032d9075884dafe8a4e9617f7b6955ae08817068082fd23dd1c583b",
+        "source": "robots/models/KUKA-KR-240-R3700-2.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees",
+        "reach_zero_unverified",
+        "multiple_VC"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

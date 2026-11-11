@@ -1,0 +1,183 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mitsubishi",
+  "model": "rv13frsh",
+  "title": "RV-13FR-SH",
+  "asset": {
+    "asset_id": "3b45dda4-c810-5f9c-944d-751d78451bcb",
+    "package_digest": "1ce44220aedda0c067e69056b5cd9e87d1ea87fed1e587e468decd6a606b90c0",
+    "package_path": "04_设备/mitsubishi_electric/rv-13fr-sh__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3b45dda4-c810-5f9c-944d-751d78451bcb",
+      "package_digest": "1ce44220aedda0c067e69056b5cd9e87d1ea87fed1e587e468decd6a606b90c0",
+      "package_path": "04_设备/mitsubishi_electric/rv-13fr-sh__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "3d2ef0ed47026913faaaedf80fa295339bdfce09200bc1bf6a2e6f61abc7b8b3",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "e1a15fe4684f70e767a3d8e53967f7bad39a62890eac33be1d5174ee6521c1a7",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rv-13fr-sh__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apimitsubishi",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimitsubishi.py",
+        "sha256": "66ab7e01fb45298d06f4dfd82cfc381a7c204d1607eefbe797bb9cf50618efa9",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimitsubishi.pyc",
+            "sha256": "2857c103cb52034d317674b098296d6270f9476aaffef5f82dddc7befddeef2c"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimitsubishi.pyc",
+            "sha256": "573b15586a2b808d990aa8a65f90ff47d776bfe81b7a9688053a4e5b8ec559f3"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimitsubishi.pyc",
+            "sha256": "be4a94868e9979bc8fa3616e7e623a2757425c52d99f8acb8c6923653243c932"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimitsubishi.pyc",
+            "sha256": "7a404f16b5c6def7fd0d7bde2345b24a6d1ee34b1f79b1e8133455a85b3cd57b"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimitsubishi.pyc",
+            "sha256": "f76e70928c69e64a1bbb130712b717f6fc15e4f12aa4b7f39a3a95c77681006e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mitsubishi controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Mitsubishi.py",
+      "Mitsubishi_Movemaster_EX.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/mitsubishi/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "RV-13FR-SH",
+          "manufacturer": "Mitsubishi Electric",
+          "variant": "",
+          "path": "Components/Mitsubishi Electric/Robots/RV-13FR-SH.vcmx",
+          "type": "Robots",
+          "payload": "13",
+          "reach": "1094",
+          "vcid": "2c749e52-9c8e-400c-936b-d02633ee2200",
+          "library_assets": [
+            "3b45dda4-c810-5f9c-944d-751d78451bcb"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RV-13FR-SH.vcmx",
+        "path": "simready_usd/RV-13FR-SH.vcmx",
+        "sha256": "3d2ef0ed47026913faaaedf80fa295339bdfce09200bc1bf6a2e6f61abc7b8b3"
+      }
+    ],
+    "source_brand_alias": "mitsubishielectric"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "robotiq",
+  "model": "hande",
+  "title": "RobotiQ Hand-E Gripper｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "d284572e-da53-5cde-93a1-e65394febdfb",
+    "package_digest": "5858133ea5e7f98cbc4a8f70a75cd09f43b3cb299c5b9d48f795e719717afce9",
+    "package_path": "03_机构模块/robotiq/hande__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d284572e-da53-5cde-93a1-e65394febdfb",
+      "package_digest": "5858133ea5e7f98cbc4a8f70a75cd09f43b3cb299c5b9d48f795e719717afce9",
+      "package_path": "03_机构模块/robotiq/hande__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robot Tools",
+      "tools"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:1987",
+            "id": "dof:2302",
+            "independent": true,
+            "initial_source": 25.0,
+            "input_limits_at_initial_configuration": [
+              0.0,
+              25.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+X",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                0.0,
+                0.025
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                0.0,
+                25.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:2614",
+            "id": "dof:2862",
+            "independent": false,
+            "initial_source": 25.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "-X",
+            "source_type": "TranslationalFollower",
+            "standard_axis_limits": null,
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "d3be6e5edc94f34699dce8a08cc8ec7bea324e02a721a6e5f410ba06518362b8",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "6be9461a4f4b9d47082fd8b4eda82d1ba8f7a90f472d2b974c71464e83f86a1e",
+        "physics_contract_sha256": "04d373d8f3582d95e7a47e6614b9db1388cff2e6f1762acf2a7686ab2ba7225b",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "d3be6e5edc94f34699dce8a08cc8ec7bea324e02a721a6e5f410ba06518362b8",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "Hand-E Gripper",
+              "source": "tools/models/RobotiQ-Hand-E-Gripper.robot",
+              "source_family": "RoboDK",
+              "value": 1.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 1.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "Hand-E",
+              "source": "Components/Robotiq/Robot Tools/Hand-E.vcmx",
+              "source_family": "VC",
+              "value": 5.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "kg",
+          "value": 5.0
+        },
+        "reach": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "mm"
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Robotiq",
+          "name": "Hand-E",
+          "original": {
+            "family": "VC",
+            "original_name": "Hand-E.vcmx",
+            "path": "simready_usd/source_assets/VC/0_hand-e/Hand-E.vcmx",
+            "sha256": "d3be6e5edc94f34699dce8a08cc8ec7bea324e02a721a6e5f410ba06518362b8"
+          },
+          "path": "Components/Robotiq/Robot Tools/Hand-E.vcmx",
+          "payload": "5",
+          "reach": "0",
+          "type": "Robot Tools",
+          "variant": "",
+          "vcid": "fa24f7b3-75a5-4490-b061-49f6bfc16902"
+        },
+        {
+          "axes": 1,
+          "converted_parameters": [
+            {
+              "asset_id": "6a50d384-e0b2-5d79-aaa4-15e9450fb99d",
+              "entrypoints": {
+                "usd": "simready_usd/hand-e_gripper__r001.usda"
+              },
+              "package_digest": "c3d2af9b78a8c8ab9aaaf4729c38e7b11c334d1cdfe1f5a282931f7982bd3f75",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "ed41db0a32073d7f10ebe743f9b746b8f57cac84ea4544834f044df05091604e",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 2,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 3
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RobotiQ Hand-E Gripper",
+          "family": "RoboDK",
+          "library_assets": [
+            "6a50d384-e0b2-5d79-aaa4-15e9450fb99d"
+          ],
+          "manufacturer": "RobotiQ",
+          "name": "Hand-E Gripper",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-Hand-E-Gripper.robot",
+            "path": "simready_usd/source/RobotiQ-Hand-E-Gripper.robot",
+            "sha256": "db2a1208c273df78921d6b98f8b005a9d53f95aacf28391fff129ef97525791a"
+          },
+          "path": "tools/models/RobotiQ-Hand-E-Gripper.robot",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/hande__多源合并_r003.usda"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot_tool": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot_tool"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "RobotiQ Hand-E Gripper｜多源合并",
+          "id": "merged_robot_tool_d284572e_da53_5cde_93a1_e65394febdfb",
+          "metadata": {
+            "asset_id": "d284572e-da53-5cde-93a1-e65394febdfb",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/robotiq/ros2_gripper",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-Hand-E-Gripper.robot",
+        "path": "simready_usd/source/RobotiQ-Hand-E-Gripper.robot",
+        "sha256": "db2a1208c273df78921d6b98f8b005a9d53f95aacf28391fff129ef97525791a"
+      },
+      {
+        "original_name": "RobotiQ-Hand-E-Gripper.png",
+        "path": "simready_usd/source/RobotiQ-Hand-E-Gripper.png",
+        "sha256": "ee6452bc3710e49e3a6f671b62db72ccd51ee040d9c97b2bd6ad097edc6d711b"
+      },
+      {
+        "family": "VC",
+        "original_name": "Hand-E.vcmx",
+        "path": "simready_usd/source_assets/VC/0_hand-e/Hand-E.vcmx",
+        "sha256": "d3be6e5edc94f34699dce8a08cc8ec7bea324e02a721a6e5f410ba06518362b8"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "robotiq",
+        "hande"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "6a50d384-e0b2-5d79-aaa4-15e9450fb99d",
+        "original_package_digest": "c3d2af9b78a8c8ab9aaaf4729c38e7b11c334d1cdfe1f5a282931f7982bd3f75",
+        "source": "tools/models/RobotiQ-Hand-E-Gripper.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "reach_zero_unverified"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "tool"
+  ]
+}

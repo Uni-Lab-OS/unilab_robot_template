@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "teknomotor",
+  "models": {
+    "atc710039spindle": {
+      "title": "Teknomotor ATC710039 Spindle",
+      "asset": {
+        "asset_id": "6e934141-c672-5ac5-ae66-470fe6d68e12",
+        "package_digest": "86d3fab7b1f04bddfe64861a94c058b15951e9890a7939590ad7c75ca8ed7967",
+        "package_path": "01_零部件/teknomotor/atc710039_spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atc710039spindle/module.json",
+      "module_sha256": "7f9447c120247fc17161031fd2bda4ecae030ff8c78fe9061a55b3eabe3d9cb7"
+    },
+    "atc71clnspindle": {
+      "title": "Teknomotor ATC71-C-LN Spindle",
+      "asset": {
+        "asset_id": "1162c33a-a3d7-531b-a9ba-49ba98cc0059",
+        "package_digest": "29e30d53e173dc553f0be0193ecd97bb7ed1673c01a4c803f13ac1e29bd1bd64",
+        "package_path": "01_零部件/teknomotor/atc71-c-ln_spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atc71clnspindle/module.json",
+      "module_sha256": "40979841689be0c1635541d78b7988a603ba9309551e5b244c3eb3bf51140a1c"
+    },
+    "c31:40cdbler20spindle": {
+      "title": "Teknomotor C31/40-C-DBL-ER20 Spindle",
+      "asset": {
+        "asset_id": "b2ba41bd-aab7-5a5f-a31c-c33b708e161d",
+        "package_digest": "3e128b4fd8f13c0af2c36f52a56fe4a85d39038e61a0f79b7a11d187af579c56",
+        "package_path": "01_零部件/teknomotor/c31-40-c-dbl-er20_spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c31_40cdbler20spindle_16f4d4a4/module.json",
+      "module_sha256": "d136446bee1831a49f89c66567eb6bd62f01974e94274ef6dad0ab6e2ff58155"
+    },
+    "qtcc4147cdbspindle": {
+      "title": "Teknomotor QTC C4147-C-DB Spindle",
+      "asset": {
+        "asset_id": "01468b5d-d50d-530d-8701-9aaa13d5f70e",
+        "package_digest": "fcccb547810038c2875ff1a69006bc5958bfdd64166d03772c5787b6f6b6a7d7",
+        "package_path": "01_零部件/teknomotor/qtc_c4147-c-db_spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qtcc4147cdbspindle/module.json",
+      "module_sha256": "858abd8e5acb3bb60609faee06a2c74978bc871ac997b2e42b1f213ed42bcddb"
+    },
+    "qtcc5160d2dbsspindle": {
+      "title": "Teknomotor QTC-C5160-D-2DBS Spindle",
+      "asset": {
+        "asset_id": "2ad15f92-1061-5a47-8025-9a62608ac5d6",
+        "package_digest": "31894375d2d336c5112a1b0e4767d09428ba0febd976df62bf5a65ed922113d6",
+        "package_path": "01_零部件/teknomotor/qtc-c5160-d-2dbs_spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qtcc5160d2dbsspindle/module.json",
+      "module_sha256": "b9f744215aa3d033c1ca088bde891d85c7122304c5da11a486d750f68c180070"
+    }
+  },
+  "source_profiles": []
+}

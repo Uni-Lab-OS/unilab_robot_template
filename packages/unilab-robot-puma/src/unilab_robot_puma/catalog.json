@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "puma",
+  "models": {
+    "560": {
+      "title": "PUMA 560",
+      "asset": {
+        "asset_id": "7f00bded-6b39-524c-8d66-cbef39b0447e",
+        "package_digest": "86a3f50234d80061ce47bc1afc000aa884a7ab11bd7012e793768a9a52696b5f",
+        "package_path": "04_设备/puma/560__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/560/module.json",
+      "module_sha256": "23f57f16d008df2a872763e6532f08361e3f43aef6fd6e409b925a26fa9b4368"
+    }
+  },
+  "source_profiles": []
+}

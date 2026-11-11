@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "inovo",
+  "models": {
+    "prdarmlong1340": {
+      "title": "Inovo Robotics PRD ArmLong 1340",
+      "asset": {
+        "asset_id": "f852aaf4-2187-5b08-9ac5-49f2b5b87345",
+        "package_digest": "f7acde91fca8bf6d5f11edde4ade35282afd168a9b6f21dbebe162ef1a9cef2f",
+        "package_path": "04_设备/inovo_robotics/prd_armlong_1340__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/prdarmlong1340/module.json",
+      "module_sha256": "0f46c795257cbb8e04eef0bb84d07ce054603216a52d291e298a8cace13a93fc"
+    }
+  },
+  "source_profiles": []
+}

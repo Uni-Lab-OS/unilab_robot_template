@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "leantec",
+  "model": "la2100:60c",
+  "title": "Leantec LA2100-60-C",
+  "asset": {
+    "asset_id": "b5d0e104-b134-5086-8f8b-f0c5fcc4a74b",
+    "package_digest": "45969a32795502fcdbed47da15134a627489254b102533ad1b3ee840e4d732a9",
+    "package_path": "04_设备/leantec/la2100-60-c__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "b5d0e104-b134-5086-8f8b-f0c5fcc4a74b",
+      "package_digest": "45969a32795502fcdbed47da15134a627489254b102533ad1b3ee840e4d732a9",
+      "package_path": "04_设备/leantec/la2100-60-c__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -80.0,
+          -194.0,
+          -170.0,
+          -119.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            645.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            900.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            1024.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            209.5
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          144.0,
+          54.0,
+          170.0,
+          119.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "81fd8d6d19ef2ab7a45085e087c496b8327c0c5f1f993bc1a357613e0904c7f9",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/la2100-60-c__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "LA2100-60-C",
+          "manufacturer": "Leantec",
+          "variant": "",
+          "display": "Leantec LA2100-60-C",
+          "path": "robots/models/Leantec-LA2100-60-C.robot",
+          "type": "robots",
+          "payload": 60,
+          "reach": 2100,
+          "axes": 6,
+          "library_assets": [
+            "b5d0e104-b134-5086-8f8b-f0c5fcc4a74b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Leantec-LA2100-60-C.robot",
+        "path": "simready_usd/Leantec-LA2100-60-C.robot",
+        "sha256": "0e16411b77b814c94f717ac963b72f260473e05158c184b2f381ece5ec82ce96"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

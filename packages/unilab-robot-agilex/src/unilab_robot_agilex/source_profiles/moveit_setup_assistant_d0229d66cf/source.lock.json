@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_setup_assistant_d0229d66cf",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_setup_assistant",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "b42d2cd7bfad0f2cd930a07b784925b9ac6d49fef5ec03df655073cd9e520ec7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/setup_assistant.launch",
+      "sha256": "418547437455556d78a8c5d9fe54d8bbd283fc43c14f50f553281f519fa6ad5d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "446c3830057acdb5db76cce3fff4d88e2f77796005dbfa81c5ead2b8d18ec643",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "c822e6d4d7a304842aef1e38117ae54a7f2c295f2108ae1bb05d3ec679aac3fd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/CMakeLists.txt",
+      "sha256": "a0b18a26e99cf2527721ff769037bc20ad5803fd14309ca0bb4ca2072d117abd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/config/cartesian_limits.yaml",
+      "sha256": "1051b00e7aa3a6eb9cda7e4d4d6ca815ba47fd188ff748d375b06eaa6afd04e7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/config/chomp_planning.yaml",
+      "sha256": "ce44e95aa8bce219af4192f4399466ee72e4abf22f7d072013c86939912abe2c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/config/gazebo_controllers.yaml",
+      "sha256": "ac751eb790053b473472fd85f241ed496e0dfcdbbfff7662b53f4b2e04f33364",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/config/sensors_3d.yaml",
+      "sha256": "703693066b408e1e5b5a19cb6323dbfc8fb60ad65d72bdf9e543d38d5d5eb0b0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/chomp_planning_pipeline.launch.xml",
+      "sha256": "6b20a865e1f3c0e04755d8b54fadc156e91644e1431b121569be0dd5080ce232",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/default_warehouse_db.launch",
+      "sha256": "8c478e994b17fd8478b02bbb2a6b69d55beeac4ad78459739b15ef5a07c69397",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/demo.launch",
+      "sha256": "24f6a2cba604c81ada0fa64708466cb740468b4064ac639e03dd42740df29f59",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/demo_gazebo.launch",
+      "sha256": "bd9e6748c006ea2680c21fcc61fffd65f9173bd9155ce7c5f4d418e6f60e0808",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/edit_configuration_package.launch",
+      "sha256": "c3938970534585b600fa8e8de42a2ee1a8c9555767784b09d7e4dea336484998",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/fake_moveit_controller_manager.launch.xml",
+      "sha256": "5b765b83c804c1fec929cb38a6c01e7b247ceb4a22eafe7f9a1698f8d9f4ca60",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/gazebo.launch",
+      "sha256": "a978ceaf3b287ec4cc99524bae1f4b58f5e1f91ac80dbf83dc4fb1040df6b75c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/joystick_control.launch",
+      "sha256": "1540df5f1c88fd9b5e26c22b2c994a10e69f99054887e15592fc16d08fc7d40b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/move_group.launch",
+      "sha256": "095b12a33d4498baa1ff26ad81302970912917922514d049c5c4f2b2ef9a877e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/moveit.rviz",
+      "sha256": "d5084bd221504ab2f2f6405aa01df533acab49a0c4edeacbb94f5d157ded3ef1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/moveit_rviz.launch",
+      "sha256": "0d17b40ac58c972b7bbf811681cdfb880d701a1005a27456b208b0dd44cfb3df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/moveit_sensor_manager.launch.xml",
+      "sha256": "4938eb666b36949e4a5a44c4e7ac528e05c9a85ad451d0bf4facfe8292ba7867",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/ompl-chomp_planning_pipeline.launch.xml",
+      "sha256": "f2b008c387021657b625cad8268a99a2646f340134b5533265dd01033dce5d54",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/ompl_planning_pipeline.launch.xml",
+      "sha256": "c57a51263bced527d00f6aa0dadb03064b83bb74434a91f25cff571c9c50e19c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/pilz_industrial_motion_planner_planning_pipeline.launch.xml",
+      "sha256": "ab5e44f3a96972caa5bcf7333ae917a4cb110f4a7a7a391e5c6b9e6483a3b014",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/planning_context.launch",
+      "sha256": "e5bfab70f279892437b839a7e947e82b24542651a4c765a3de044c29b27031b6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/planning_pipeline.launch.xml",
+      "sha256": "0223288ff47d936e5a0a98bd2176c895475a7f3b1287b8009d17783e9c645471",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/ros_control_moveit_controller_manager.launch.xml",
+      "sha256": "05319f58bba893bb433bb9539bcd04a847f8e887fa23b813b6232598bb302a37",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/ros_controllers.launch",
+      "sha256": "acd94fedc4b23fc8ea8f3645046991cf82e13a7c7e82a06c3c6387512d0267fb",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/run_benchmark_ompl.launch",
+      "sha256": "a18f8b4e4eb6fe2a08c75086804e3b31d42dceab0d9dc034b527b8af5270e04b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/run_benchmark_trajopt.launch",
+      "sha256": "2de2cc344a0fbc5f802bf9c473d7a095432bd72de11d30ef31d819266e178e64",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/sensor_manager.launch.xml",
+      "sha256": "91e8321c4fc67a42f837679257247cebf0352afee1cd79309982e76ac6da99c3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/simple_moveit_controller_manager.launch.xml",
+      "sha256": "1b9b34443096bb71aed67f27924cc4b18c72f669d0c78736e89895589183c2e9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/stomp_planning_pipeline.launch.xml",
+      "sha256": "8e7a5bbccb904e95be502e6fcc7610a58a90dd34db155828621d5b4ee1c2b02e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/trajectory_execution.launch.xml",
+      "sha256": "d4ee5ea1ccd19d082b35c60c0a6525e94f6fe09a5c1b8a77983943d0886a48fc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/trajopt_planning_pipeline.launch.xml",
+      "sha256": "694ace0460fde47cee56b237519efe457b1c5237be535b52cb55ea964e06d08e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/warehouse.launch",
+      "sha256": "debd21878a83eda0b3ce2c6a71338dbef80f5c7e658076c1930bbc9a19d66eff",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "templates/moveit_config_pkg_template/launch/warehouse_settings.launch.xml",
+      "sha256": "4a4e0c44b1125def7402f08e716dd0131622e8d0380c51b418111bd053d9e345",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

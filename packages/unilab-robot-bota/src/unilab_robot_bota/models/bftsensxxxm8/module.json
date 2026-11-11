@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "bota",
+  "model": "bftsensxxxm8",
+  "title": "Bota BFT-SENS-xxx-M8",
+  "asset": {
+    "asset_id": "dc38cbd0-53c4-5449-b680-6ed7e567ce00",
+    "package_digest": "4cd22c7592a1cf0a9a3cbcd89fc9104a478040bb6b4405d8ff4c8131a509eeab",
+    "package_path": "01_零部件/bota/bft-sens-xxx-m8__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "dc38cbd0-53c4-5449-b680-6ed7e567ce00",
+      "package_digest": "4cd22c7592a1cf0a9a3cbcd89fc9104a478040bb6b4405d8ff4c8131a509eeab",
+      "package_path": "01_零部件/bota/bft-sens-xxx-m8__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4d2dcd077e797776f1daf0b2ee45e9a4a113fbdbabfa21b110ff7b903c8f16c6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/bft-sens-xxx-m8__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "BFT-SENS-xxx-M8",
+          "manufacturer": "Bota",
+          "variant": "",
+          "display": "Bota BFT-SENS-xxx-M8",
+          "path": "tools/models/Bota-BFT-SENS-xxx-M8.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "dc38cbd0-53c4-5449-b680-6ed7e567ce00"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Bota-BFT-SENS-xxx-M8.tool",
+        "path": "simready_usd/Bota-BFT-SENS-xxx-M8.tool",
+        "sha256": "297ea46a9f0cfd20c530fdd3aa58f38f39ba98f4e9fa77c251172102e2a5280f"
+      }
+    ]
+  }
+}

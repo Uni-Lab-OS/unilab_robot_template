@@ -1,0 +1,217 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "ferrobotics",
+  "models": {
+    "acfk1536000:30rsander": {
+      "title": "FerRobotics ACF K-1536000-30-R-Sander",
+      "asset": {
+        "asset_id": "1191b87c-fb8c-5f80-bd1a-87dc983f9ea5",
+        "package_digest": "4288f424818ce420455847e26affa62cf37a7958dd4f970c36a732c3d83cc669",
+        "package_path": "04_设备/ferrobotics/acf_k-1536000-30-r-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfk1536000_30rsander_bfe42822/module.json",
+      "module_sha256": "f55471347d3437fe90e70c9b876d7d41d78a4fd9961f9af8475e6d04e3320719"
+    },
+    "acfk5681900lsander": {
+      "title": "FerRobotics ACF K-5681900-L-Sander",
+      "asset": {
+        "asset_id": "6d8bc244-0444-581e-9b6e-8eeab9a5a462",
+        "package_digest": "1085505ead988200707488f4f9d88cd30d8b07db8a79891c06997b158f141836",
+        "package_path": "04_设备/ferrobotics/acf_k-5681900-l-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfk5681900lsander/module.json",
+      "module_sha256": "e0d7100b2b82b2f86d044bfb2cc320f472a82e61d751d6944724765bfe7ae7d7"
+    },
+    "acfk5683000lsander": {
+      "title": "FerRobotics ACF K-5683000-L-Sander",
+      "asset": {
+        "asset_id": "005b23d2-1cd7-5bea-847f-52ab2afc974b",
+        "package_digest": "ee1ea938ba5919e5a06cfa935b18a8fa1c5f3419ecdec3978935d6c888b77450",
+        "package_path": "04_设备/ferrobotics/acf_k-5683000-l-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfk5683000lsander/module.json",
+      "module_sha256": "f08d59772da61664195304dfbc29c9770a7c3548794bf43b6da067be0e35d683"
+    },
+    "acfk5781400lsander": {
+      "title": "FerRobotics ACF K-5781400-L-Sander",
+      "asset": {
+        "asset_id": "b0b8680a-e689-5308-8f43-6aba82d5475a",
+        "package_digest": "5e826225d4a27312c27e9094e07a076ece0cf731ea1371aed5b0b088e20932bd",
+        "package_path": "04_设备/ferrobotics/acf_k-5781400-l-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfk5781400lsander/module.json",
+      "module_sha256": "1bfa40dcbd00c300abe65a17d8d8a7f4301d721b008715119b8ef3e61f9ec5d9"
+    },
+    "acfk5851000sander": {
+      "title": "FerRobotics ACF K-5851000-Sander",
+      "asset": {
+        "asset_id": "ae838522-a28d-549a-a2c7-4e0e07bb7ab8",
+        "package_digest": "4aac634234ca94fb5aec7ad8e94e776498e58d0c757a19b03395025c75130f94",
+        "package_path": "04_设备/ferrobotics/acf_k-5851000-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfk5851000sander/module.json",
+      "module_sha256": "13c87483cf48a11a17e852a1aeca0ee39595fd566d0e566cc9f8ed8e3777402d"
+    },
+    "acfkns11v00sander": {
+      "title": "FerRobotics ACF K-NS11V00-Sander",
+      "asset": {
+        "asset_id": "006f1f41-3b0c-529d-8388-6bcfea2c7d45",
+        "package_digest": "8b2827020d44da3b3726fd30cf58a35031e179f6da287f5882023c11543157aa",
+        "package_path": "04_设备/ferrobotics/acf_k-ns11v00-sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acfkns11v00sander/module.json",
+      "module_sha256": "a71c6750416a13c5321e039bcd1a1002b1bd45e95db972d5ac00ee1ced39766e"
+    },
+    "aok905sander": {
+      "title": "FerRobotics AOK/905 Sander",
+      "asset": {
+        "asset_id": "c2dc3150-f70b-5eda-a456-421f57ae6b84",
+        "package_digest": "c2b9318d0cba5dc47f5fbb3e04c23c192c31b3cdb6b2fb1c490781bf06af35ab",
+        "package_path": "01_零部件/ferrobotics/aok-905_sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/aok905sander/module.json",
+      "module_sha256": "b2017db93eadf7521ef97c57da08a5d8012305b284e842549ef65a92db48c881"
+    },
+    "aok905sandermechanism": {
+      "title": "FerRobotics AOK/905 Sander (Mechanism)",
+      "asset": {
+        "asset_id": "46314416-fd07-5e18-a322-688db4d05549",
+        "package_digest": "052b5b099254a124034687a10969866afd230a4c7aaef475c934dc3a76cd35d7",
+        "package_path": "04_设备/ferrobotics/aok-905_sander_mechanism___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/aok905sandermechanism/module.json",
+      "module_sha256": "382b9c2f346ce01f6c0ef10ec823ec70abf386f042aa4d4338cbe88eb4cae13d"
+    },
+    "atk201l015tapingtool": {
+      "title": "FerRobotics ATK 201-L-015 Taping Tool",
+      "asset": {
+        "asset_id": "2185b06f-4653-506b-982e-01d41811541b",
+        "package_digest": "70e55a590dec7153b2388d9788203f031490955dbf0c354ab4cec236d661a4e5",
+        "package_path": "04_设备/ferrobotics/atk_201-l-015_taping_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201l015tapingtool/module.json",
+      "module_sha256": "f43246b734614a2453b01bd41956a4b8a5374cc6a66726f31a6830e10073115a"
+    },
+    "atk201l027tapingtool": {
+      "title": "FerRobotics ATK 201-L-027-Taping-Tool",
+      "asset": {
+        "asset_id": "7a2140f8-f190-5538-aef2-de2c3a6ef40e",
+        "package_digest": "c2670d546ab493c1ec2f7a8f232650448644f088b77c71f540a95416a508ee0b",
+        "package_path": "04_设备/ferrobotics/atk_201-l-027-taping-tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201l027tapingtool/module.json",
+      "module_sha256": "f2c48330090ba582ef2a72e0ab97b95b7d0ccc8c67c3f5fbcc6f20b414619257"
+    },
+    "atk201l065tapingtool": {
+      "title": "FerRobotics ATK 201-L-065 Taping Tool",
+      "asset": {
+        "asset_id": "f69e5a0e-d63d-5b34-8b79-e5e1c444dac4",
+        "package_digest": "6e8d1ebd951b0c3ce66b253b41a4efef7e5232d76073b7253bd83b349f570e3c",
+        "package_path": "04_设备/ferrobotics/atk_201-l-065_taping_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201l065tapingtool/module.json",
+      "module_sha256": "830f537a9b5e28bb8950b3715f4fd7cc59a237bed8a6bf77269f7f57b8cd8351"
+    },
+    "atk201r015tapingtool": {
+      "title": "FerRobotics ATK 201-R-015 Taping Tool",
+      "asset": {
+        "asset_id": "d511b1b7-9534-5871-ab06-c71457b45ab0",
+        "package_digest": "6c493b4aceb8fa301a6a8e3f26848a21c8e950cdd2add43fa30d8b79cfe35dd8",
+        "package_path": "04_设备/ferrobotics/atk_201-r-015_taping_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201r015tapingtool/module.json",
+      "module_sha256": "a677bbe0b2aa05b85cb86ce7a8b370ce2d558da22cb66628b6fa946984f8c3d7"
+    },
+    "atk201r027tapingtool": {
+      "title": "FerRobotics ATK 201-R-027-Taping-Tool",
+      "asset": {
+        "asset_id": "1829a7b6-55f7-50f9-9328-87eaf7e10ed9",
+        "package_digest": "41dba83a9d225d06a82710b29573032edd8741d57351b776204e68f0edc3f236",
+        "package_path": "04_设备/ferrobotics/atk_201-r-027-taping-tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201r027tapingtool/module.json",
+      "module_sha256": "a9156ef92dad6f10907e4a7ded6e12541cacd02e12b828563ee7fbfcd0828308"
+    },
+    "atk201r065tapingtool": {
+      "title": "FerRobotics ATK 201-R-065 Taping Tool",
+      "asset": {
+        "asset_id": "127dc4e2-6307-5d62-97e4-ce5afb33a6a7",
+        "package_digest": "ff1432863c137e1bbc57b819fc80f1f3ab05bbfe28ee6a54c38f1fd18a10079b",
+        "package_path": "04_设备/ferrobotics/atk_201-r-065_taping_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/atk201r065tapingtool/module.json",
+      "module_sha256": "4627433dec72184d85620e9f6ec0c47ac1db20701f34b2fe0864233db7ce4740"
+    }
+  },
+  "source_profiles": []
+}

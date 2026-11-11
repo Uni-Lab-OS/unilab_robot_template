@@ -2,6 +2,8 @@
 
 这是机械臂、导轨和组合工作单元（WorkCell）的共享 monorepo。根项目只提供开发、测试和统一治理，不发布一个兼容性总包；各能力作为独立 Python distribution 发布。
 
+2026-11-08 起，型号按品牌发行：`unilab-robot-dobot` 持有 CR5/CR7 实现与其他 Dobot 型号模块，`unilab-robot-rokae` 持有 CR12 实现，其余品牌以同样结构维护。每型号 `module.json` 保存组合引用、源运动参数、行为/驱动/规划能力及资产锁。`uni-lab-assets` 是一次性来源输入，运行与构建不读取它。规范、导入和独立安装验证见 [品牌模块](docs/brand-modules.md)。下表原 `unilab-arm-*` 名称仅为兼容入口，其实现已经归入对应品牌发行包。
+
 根目录作为独立 Git 仓库维护。`scripts/build_distributions.sh` 分别构建
 `packages/` 中的 wheel/sdist，CI 在 Python 3.11/3.12 上执行统一测试和制品构建。
 
@@ -21,13 +23,7 @@ unilab-robot-runtime       L2：依据 HardwareProfile 选择并装配上述模�
 
 领域仓库不应复制通用 Adapter、运行时路由或 WorkCell 状态机。机械臂型号包不保存现场点位、Warehouse 传感器地址或 Site 绑定。
 
-领域仓如何引用本仓（两个 `@device`、导轨父级、禁止合一体 MoveIt）见
-`.cursor/skills/use-unilab-arm-package/`。权威样本是 `Uni-Lab-pTLC`，不要按现场即兴拼 URDF。
-检查器：
-
-```bash
-python .cursor/skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.py --domain ../Uni-Lab-pTLC
-```
+领域仓通过型号 provider 和公共场景/规划合同引用本仓。导轨与机械臂保留独立关节集合；领域持有安装、工具、点位和工艺。旧 pTLC 技能和 checker 已废止，见 `AGENTS.md`。
 
 ## 公共边界
 
@@ -35,6 +31,8 @@ python .cursor/skills/use-unilab-arm-package/scripts/check_domain_arm_assembly.p
 - `RobotCommand` 只携带已解析目标，不携带 Site、Material 或原始地址。
 - PLC、TCP/SDK、MoveIt 都实现相同的 `RobotExecutionBackend` 生命周期。
 - MoveIt 只规划机械臂关节；RViz 是可选客户端，不参与启动和完成判定。
+- 路径规划使用厂商无关的 `PlanRequest`/`PlanResult` 合同；MoveItPy/FCL 只是
+  `MoveItPlanner` 的一个延迟导入后端，见[规划合同](docs/planning-contract.md)。
 - 真实导轨机械臂由一个 WorkCell 公开动作，导轨到位并获得硬件许可后才派发机械臂。
 - `execution_unknown` 不得自动重放；生产仍依赖 OS 持久作业执行占用（JobExecutionClaim）和栅栏（Fence）。
 

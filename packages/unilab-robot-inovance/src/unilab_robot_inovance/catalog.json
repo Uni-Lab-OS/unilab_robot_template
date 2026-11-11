@@ -1,0 +1,398 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "inovance",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "irr25:178sint": {
+      "title": "INOVANCE IR-R25-178S-INT｜多源合并",
+      "asset": {
+        "asset_id": "5eb5a774-b759-58b3-8399-1557cee9253c",
+        "package_digest": "d2451b15e7afad57ed18d3b80c06e62991eace47b0285db9c87f7145dd7c333b",
+        "package_path": "04_设备/inovance/irr25_178sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irr25_178sint_86c5f603/module.json",
+      "module_sha256": "85d26933657daef8298502ef6f809d6aceb30602d79c9b534d40533b10b4d3d6"
+    },
+    "irs10:70z20sint": {
+      "title": "INOVANCE IR-S10-70Z20S-INT｜多源合并",
+      "asset": {
+        "asset_id": "b94728ef-b574-5bc4-9021-22f65ffa234e",
+        "package_digest": "8b941f74927799f6878a36e9ab15f282a5ec3fa1b82894c31a866568b0da30e5",
+        "package_path": "04_设备/inovance/irs10_70z20sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs10_70z20sint_89f8adf5/module.json",
+      "module_sha256": "c45c3396090346c7eb679738b5c6da85c84beb0bbb93eb370f5c3d8eb952097a"
+    },
+    "irs10:80z20sint": {
+      "title": "INOVANCE IR-S10-80Z20S-INT｜多源合并",
+      "asset": {
+        "asset_id": "3664fbf4-8025-5327-882e-48c965465406",
+        "package_digest": "265d028434b5d5f46bcd58b620b90941ae690bded74150f6377076a754ba2b02",
+        "package_path": "04_设备/inovance/irs10_80z20sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs10_80z20sint_bc21d859/module.json",
+      "module_sha256": "4d12b1a3158632a7935a98351e38b19db8cb0d2141487a656b31571dcc91382d"
+    },
+    "irs20:100z42sint": {
+      "title": "INOVANCE IR-S20-100Z42S-INT｜多源合并",
+      "asset": {
+        "asset_id": "8b6ade63-e4bb-5f69-850b-2f5218116b56",
+        "package_digest": "92df24d003af15a4e9d1591bbc740f5a7b268edfbaba4df6d14754bee742bea6",
+        "package_path": "04_设备/inovance/irs20_100z42sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs20_100z42sint_dbd43af6/module.json",
+      "module_sha256": "095ccb962018db1d897bc2f125677ff754698feb8a14dfdcce45f2ade036f682"
+    },
+    "irs20:80z42sint": {
+      "title": "INOVANCE IR-S20-80Z42S-INT｜多源合并",
+      "asset": {
+        "asset_id": "ebce989b-2ff3-5a17-ad56-358e5b3db20d",
+        "package_digest": "53f7a4a5355d05d522cae04c5b228dc2867ccdda6daec04e841b897797932568",
+        "package_path": "04_设备/inovance/irs20_80z42sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs20_80z42sint_01df824e/module.json",
+      "module_sha256": "97677b5601e3449ef818aed9f1f6b3b0483d0ee47c8854520d2ab146b6335fd6"
+    },
+    "irs4:40z15sint": {
+      "title": "INOVANCE IR-S4-40Z15S-INT｜多源合并",
+      "asset": {
+        "asset_id": "8fd814ab-113c-55e2-ae27-67aafcf17830",
+        "package_digest": "06637cf8955d8fea1a240181e0c5912ced9cddd87019f29216b6798b9a793f0f",
+        "package_path": "04_设备/inovance/irs4_40z15sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs4_40z15sint_a8f98af5/module.json",
+      "module_sha256": "d73b2ff53e1087bedf1506f3e5a469fd4da63db3e6cc767b0b3cb19a54003766"
+    },
+    "irs7:50z20sint": {
+      "title": "INOVANCE IR-S7-50Z20S-INT｜多源合并",
+      "asset": {
+        "asset_id": "2177ac3c-35ab-59f6-b18c-595f7858c878",
+        "package_digest": "e16fe2f11b417e0eb14e79961eac675cbf61f7523176904fbb2aacc195712a36",
+        "package_path": "04_设备/inovance/irs7_50z20sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs7_50z20sint_b1d0fce2/module.json",
+      "module_sha256": "92ef4a42e1fe7c294ea6f8df0be965421d6498b896c9391a2459e939e446756e"
+    },
+    "irs7:60z20sint": {
+      "title": "INOVANCE IR-S7-60Z20S-INT｜多源合并",
+      "asset": {
+        "asset_id": "7fe148c3-85b2-58c8-bf4f-1d02d29d3aa4",
+        "package_digest": "3d809c227c3ba6eec7c026c266d24f7bec7df7ea8dca249d36bec1b94008ab6e",
+        "package_path": "04_设备/inovance/irs7_60z20sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs7_60z20sint_fa48be1c/module.json",
+      "module_sha256": "91b2cfcbe7aee67938db8fc494d538422b28edd2174e605dc7029918f36a595a"
+    },
+    "irs7:70z20sint": {
+      "title": "INOVANCE IR-S7-70Z20S-INT｜多源合并",
+      "asset": {
+        "asset_id": "77c67e61-9c09-5ad5-b7b0-51bd5cfbda98",
+        "package_digest": "72d16da99c8f8da23712d93e20778a1e0e494a00aafc4c01ff3189e3c0189216",
+        "package_path": "04_设备/inovance/irs7_70z20sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irs7_70z20sint_aeabd251/module.json",
+      "module_sha256": "f1eaa5f3574f760b2835d5a7c2e4174d53cd9759bebd2eca5e558a85ef4e98e4"
+    },
+    "irts4:35z15sint": {
+      "title": "INOVANCE IR-TS4-35Z15S-INT｜多源合并",
+      "asset": {
+        "asset_id": "20dd5204-f990-5c49-a655-f672942454d9",
+        "package_digest": "d171a09f6d4028f14a6435a492a64d691c0ac025261ed0a21bc78c4da002cef4",
+        "package_path": "04_设备/inovance/irts4_35z15sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irts4_35z15sint_306f6317/module.json",
+      "module_sha256": "0e397b8a3b2177987530c72c3b2667fb0091381e8c260b04a231094c72cf2d7c"
+    },
+    "irts5:55z15sint": {
+      "title": "INOVANCE IR-TS5-55Z15S-INT｜多源合并",
+      "asset": {
+        "asset_id": "45cc1eac-4cff-5e86-9e37-ad4c8d7c013e",
+        "package_digest": "be3424d1a7ee3d646006fb57cb86de627b3aeadfec262c89c883a38bcbc4f3db",
+        "package_path": "04_设备/inovance/irts5_55z15sint__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irts5_55z15sint_7c49d40a/module.json",
+      "module_sha256": "c99ca7d3f733e5db696cc9a060bf06cf93d67205e60e028dd7f943eab4522503"
+    },
+    "irr10:110sint": {
+      "title": "INOVANCE IR-R10-110S-INT｜多源合并",
+      "asset": {
+        "asset_id": "a1826110-5763-5dd0-8eb9-07883da266a2",
+        "package_digest": "82aeeca7244078fcaddcc6e3e5cdbeb7fde1c87b9c0831f9a6e15ce0809ff6e2",
+        "package_path": "04_设备/inovance/irr10_110sint__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irr10_110sint_86b39c6e/module.json",
+      "module_sha256": "998751746eacd6701c58067077f9e65c539897ca6544603ee3e1f2f17fb9c0ad"
+    },
+    "irr4:56sint": {
+      "title": "INOVANCE IR-R4-56S-INT｜多源合并",
+      "asset": {
+        "asset_id": "fc3241d2-f0d9-598d-8de7-6b09626d5aff",
+        "package_digest": "325463880c4a59c4aae2909f13ae3fb4d943b7715d6bb90cf24e4ef70adb100c",
+        "package_path": "04_设备/inovance/irr4_56sint__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irr4_56sint_df48b726/module.json",
+      "module_sha256": "563448514740bc2b3885245066447485346c01f3e0e9003bf238a90e20055d2a"
+    },
+    "irr4h54sint": {
+      "title": "INOVANCE IR-R4H-54S-INT｜多源合并",
+      "asset": {
+        "asset_id": "b39e1eb1-2748-598d-b4a2-732990586ca2",
+        "package_digest": "7e6eb71fc15d91ff4a324bbad7a3eeb7a3871224bce4e7c6080d238faaa8a0e6",
+        "package_path": "04_设备/inovance/irr4h54sint__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irr4h54sint/module.json",
+      "module_sha256": "5d64aea641af1538d30a7252045147c2937db97652e7a8bc3fc3df7228ea4354"
+    },
+    "irr11:90sint": {
+      "title": "INOVANCE IR-R11-90S-INT｜多源合并",
+      "asset": {
+        "asset_id": "dc39e1d0-eb8c-5a8c-98e2-49da9be083d2",
+        "package_digest": "74b8f825c30bd386d6d4833b448f36e965eac1236f989bb2bf84e28f418ca389",
+        "package_path": "04_设备/inovance/irr11_90sint__多源合并_r004"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/irr11_90sint_eb6c1dd0/module.json",
+      "module_sha256": "29112b7900c6c0820729cca1a9aa4189dbfe8ff7f19bdd3a2bb684892e65b4c8"
+    },
+    "ir311:7:90tsint": {
+      "title": "INOVANCE IR311-7-90TS-INT",
+      "asset": {
+        "asset_id": "5b90ee5f-fbcd-5016-ae5f-02f41c2d22dd",
+        "package_digest": "4b1aeca9d129db2e62f0b771b2ea651ad4bd9d35ef14858ed4b87dc68818bb57",
+        "package_path": "04_设备/inovance/ir311-7-90ts-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ir311_7_90tsint_56240d48/module.json",
+      "module_sha256": "b00135b3e6a708c624ed3b0fab160f511832372ef4b96cd5366021b907613ef4"
+    },
+    "irgs20:100z42sint": {
+      "title": "INOVANCE IR-GS20-100Z42S-INT",
+      "asset": {
+        "asset_id": "dd5821b0-a839-5d9c-ad86-e1ec9fe6d45d",
+        "package_digest": "0ba0b9f6c01c3b86175457c59c689671c34d92c8f6c79a7b97b4ce96c27e8338",
+        "package_path": "04_设备/inovance/ir-gs20-100z42s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irgs20_100z42sint_52e1488a/module.json",
+      "module_sha256": "40b9b94d5b68f6be1ab320e46699af1475536d2c7c7613a632e61d328ffb6c26"
+    },
+    "irgs20:80z42sint": {
+      "title": "INOVANCE IR-GS20-80Z42S-INT",
+      "asset": {
+        "asset_id": "d29b973e-b0b4-58d3-a08d-b7a1579ebebc",
+        "package_digest": "bafcae20f95d04ed6f7f16895c43535991df61311815153488a71c2346fa4efc",
+        "package_path": "04_设备/inovance/ir-gs20-80z42s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irgs20_80z42sint_60a6b4df/module.json",
+      "module_sha256": "02abaaba0b72858bbb7423478af1b79a107576f7bc572c7755ed210a73bf81bf"
+    },
+    "irr10:140sint": {
+      "title": "INOVANCE IR-R10-140S-INT",
+      "asset": {
+        "asset_id": "a5fd1ce9-6815-5880-9c88-140ddb83cfdc",
+        "package_digest": "ca9936c79df626953d99f2de5bbc173ff64465899be4fa794f3a603a88e752e2",
+        "package_path": "04_设备/inovance/ir-r10-140s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irr10_140sint_fbed537d/module.json",
+      "module_sha256": "a1f34a4c648292aca8603fc096e8d5737e174b0361fcbe10ae2313d55ec3a24a"
+    },
+    "irr10:200sint": {
+      "title": "INOVANCE IR-R10-200S-INT",
+      "asset": {
+        "asset_id": "c558aaa1-e4d8-582a-923c-075ec9e928e8",
+        "package_digest": "4907286dc2982e2376e58defdf24869855076febcdfcc05b62fde9053b7a78a5",
+        "package_path": "04_设备/inovance/ir-r10-200s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irr10_200sint_78f24acb/module.json",
+      "module_sha256": "560286038bd5c8b9cc4af83dee1ceb00bc64d9b26631499fce7ec1417871b62e"
+    },
+    "irr20:170sint": {
+      "title": "INOVANCE IR-R20-170S-INT",
+      "asset": {
+        "asset_id": "8f784b1e-e4e1-5fb4-a6ca-72121e964e4c",
+        "package_digest": "4817cbf88cc784c604ba8ac161a1b30e4a0d73c7fd4b6805b43744b92572b18b",
+        "package_path": "04_设备/inovance/ir-r20-170s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irr20_170sint_7d80d431/module.json",
+      "module_sha256": "fcd4ea66d0bce301ed8021eb6b07e0ebbdd893abe36a8aa1174411a284de352e"
+    },
+    "irs10:60z20sint": {
+      "title": "INOVANCE IR-S10-60Z20S-INT",
+      "asset": {
+        "asset_id": "40a8531d-5e6e-52e6-94c8-2226267df952",
+        "package_digest": "d5ec9da2357feda06fd1e6bf780f52ebeeb9148bbd96bf78b9b72a70dc126a99",
+        "package_path": "04_设备/inovance/ir-s10-60z20s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irs10_60z20sint_447e0508/module.json",
+      "module_sha256": "f6d9880b5088cabac3e605408936a600187cd48b0e82d5990487b3f42314badd"
+    },
+    "irs311:7:70tsint": {
+      "title": "INOVANCE IRS311-7-70TS-INT",
+      "asset": {
+        "asset_id": "3e0cbaee-85e4-5398-994e-e874ed029a28",
+        "package_digest": "ffb09630850e2a06e2e8719d4d6297be5eb7b1de67434344ad4257ef3c14b95d",
+        "package_path": "04_设备/inovance/irs311-7-70ts-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irs311_7_70tsint_c39f456c/module.json",
+      "module_sha256": "d6c9ff912b3327651e73ded67d3169068857e12f4dfc64eb59cbc65705af2b83"
+    },
+    "irs311:7:90tsint": {
+      "title": "INOVANCE IRS311-7-90TS-INT",
+      "asset": {
+        "asset_id": "6fa12c16-9309-57b2-8549-b2a878f08522",
+        "package_digest": "ae4fa584e952ae3cdcc21d61a49fa31d63dad3e6de2c41a24b6b54ffa8104f81",
+        "package_path": "04_设备/inovance/irs311-7-90ts-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irs311_7_90tsint_cfc8f6af/module.json",
+      "module_sha256": "837ce94b9293036d1b1c9c1ab030505e184ed1a48be784c6918ad0b30a93af8c"
+    },
+    "irs50:120z40sint": {
+      "title": "INOVANCE IR-S50-120Z40S-INT",
+      "asset": {
+        "asset_id": "28ee6ca3-294a-5483-b518-179cf2c10ea7",
+        "package_digest": "b59c98226b7131a7a5dda989971a09d3a4e4b8809fe55d38de86e86af81099d4",
+        "package_path": "04_设备/inovance/ir-s50-120z40s-int__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/irs50_120z40sint_90bb579d/module.json",
+      "module_sha256": "e1fe969caff3129c8cdb9363ee414eeaac3b8d10c2d1845bf954745cffacd397"
+    }
+  },
+  "source_profiles": []
+}

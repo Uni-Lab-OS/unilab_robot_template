@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "esi",
+  "models": {
+    "c15": {
+      "title": "ESI C15",
+      "asset": {
+        "asset_id": "7637e2a1-bd03-5451-99f4-ebfdbf0d6c90",
+        "package_digest": "6e21a14b411faa6f0fa3baba933615a5e8d8ef3a350fa81ba0bb5e1ca1c2a5f5",
+        "package_path": "04_设备/esi/c15__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c15/module.json",
+      "module_sha256": "9b24e90797d1fb0900304bea215d339651e95f522962c61f17af21284b75fdb7"
+    },
+    "c7": {
+      "title": "ESI C7",
+      "asset": {
+        "asset_id": "fe815fb8-ea85-54f2-914b-64f6dab0f2b0",
+        "package_digest": "1d7a57ff0eb19dff05c53354f4900f9d843bb37247bb88392805b3782ffbd60c",
+        "package_path": "04_设备/esi/c7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c7/module.json",
+      "module_sha256": "3b78e1a44e73af60a8cc4d601b201fce62205756152f1cadc105ad0047bb4b78"
+    }
+  },
+  "source_profiles": []
+}

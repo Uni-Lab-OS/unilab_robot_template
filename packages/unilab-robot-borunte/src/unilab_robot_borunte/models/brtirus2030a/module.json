@@ -1,0 +1,247 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "borunte",
+  "model": "brtirus2030a",
+  "title": "BORUNTE BRTIRUS2030A",
+  "asset": {
+    "asset_id": "bf6ca90b-021a-5f9b-8fbd-d7dcf438f615",
+    "package_digest": "4248ef21e8b2a73a72b33f3717259e67a7e69aedbed2065742ba04f3339ef27c",
+    "package_path": "04_设备/borunte/brtirus2030a__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "bf6ca90b-021a-5f9b-8fbd-d7dcf438f615",
+      "package_digest": "4248ef21e8b2a73a72b33f3717259e67a7e69aedbed2065742ba04f3339ef27c",
+      "package_path": "04_设备/borunte/brtirus2030a__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -150.0,
+          -90.0,
+          -55.0,
+          -180.0,
+          -115.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            504.6
+          ],
+          [
+            -1.5707963267948966,
+            180.0,
+            -1.5707963267948966,
+            51.5
+          ],
+          [
+            0.0,
+            800.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            135.5,
+            0.0,
+            930.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            148.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          150.0,
+          70.0,
+          105.0,
+          180.0,
+          115.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3908651ac28ac9261b72c5e715c939b1bae079362ac4b51b1dc80c67480d7c46",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/brtirus2030a__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:BorunteDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/BorunteDriver.exe",
+        "sha256": "81a65abd1d09e59ccda70fbe37a242c0d6aeaf6c0813f46e9f3041f37a28e913",
+        "bytes": 49152,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "borunte controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Borunte.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "BRTIRUS2030A",
+          "manufacturer": "BORUNTE",
+          "variant": "",
+          "display": "BORUNTE BRTIRUS2030A",
+          "path": "robots/models/BORUNTE-BRTIRUS2030A.robot",
+          "type": "robots",
+          "payload": 30,
+          "reach": 2058,
+          "axes": 6,
+          "library_assets": [
+            "bf6ca90b-021a-5f9b-8fbd-d7dcf438f615"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/BORUNTE-BRTIRUS2030A.robot",
+        "path": "simready_usd/BORUNTE-BRTIRUS2030A.robot",
+        "sha256": "72d3c9bf67f36cd9eecbfe1aa6c9731e02774e72c561dfe254ea4a15f06b8a80"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

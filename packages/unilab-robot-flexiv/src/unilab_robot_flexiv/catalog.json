@@ -1,0 +1,77 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "flexiv",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "rizon10": {
+      "title": "Flexiv Rizon 10｜多源合并",
+      "asset": {
+        "asset_id": "6a1406ff-67ae-57f5-abe4-b0458faf1a0a",
+        "package_digest": "2c002c3db4466637a0d7c122c8fb48939bf8abf68624079091e7c62179035c45",
+        "package_path": "04_设备/flexiv/rizon10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rizon10/module.json",
+      "module_sha256": "7a0535257b3aff2c884860dc7cf065e734cfb0c7611894ce1e7b84b6c0618bdd"
+    },
+    "rizon4": {
+      "title": "Flexiv Rizon 4｜多源合并",
+      "asset": {
+        "asset_id": "a4ca5650-4acb-5696-b9ab-7bb0ada64a90",
+        "package_digest": "2e20c487d54003ad91b4b28347b00cc69d64fd65e4610dbf303c4a1efba4a9cb",
+        "package_path": "04_设备/flexiv/rizon4__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rizon4/module.json",
+      "module_sha256": "e9788fe5cfa776783d9eebf700c9c57765140b05a7d05a9c9cb4c7d2b04d07c7"
+    },
+    "rizon10s": {
+      "title": "Flexiv Rizon 10s",
+      "asset": {
+        "asset_id": "47c72ccf-2ad1-5eb4-90c6-1f054dee27c7",
+        "package_digest": "ec45d0e7425237325ff739f43d3095b97acde881be63d3842aae38c70dcd3fb0",
+        "package_path": "04_设备/flexiv/rizon_10s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rizon10s/module.json",
+      "module_sha256": "d7f412658500594914f2d12c00cc3ea62ded06969cc3c9d6a7c7cf198f4bda13"
+    },
+    "rizon4s": {
+      "title": "Flexiv Rizon 4s",
+      "asset": {
+        "asset_id": "cb912f96-f3a2-5028-a8d4-8e0493223e87",
+        "package_digest": "0fd4a1bfe563f687a672d5092d6bef02e0ba73124836dae8cb73bb4c2f4013e4",
+        "package_path": "04_设备/flexiv/rizon_4s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rizon4s/module.json",
+      "module_sha256": "7fff4077a70688c696a74c1cff3b5c4c5c73f2d37e5118d7f4930660e26241a5"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "flexiv_moveit_config_a8b92841ea",
+      "manifest": "source_profiles/flexiv_moveit_config_a8b92841ea/source.lock.json",
+      "sha256": "c70c81584c6722bdef5f70829fbc126b85decd33fd8deaa73a25cebcb5bade89",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pmc",
+  "model": "sc30",
+  "title": "SC 30",
+  "asset": {
+    "asset_id": "a8979ee0-d817-5eb5-80b8-8fe8827e69ee",
+    "package_digest": "56141b973f3b4a35256026a6ca47880784ba59f04fcc86ba243d4ec9f661aa41",
+    "package_path": "04_设备/pmc/sc_30__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a8979ee0-d817-5eb5-80b8-8fe8827e69ee",
+      "package_digest": "56141b973f3b4a35256026a6ca47880784ba59f04fcc86ba243d4ec9f661aa41",
+      "package_path": "04_设备/pmc/sc_30__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "7de94933f3802231feaab57ddfb96fa16cc1822c96c0c6fe6b5fadd4d8c7a9a0",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "521ca8529f9b4f11126a69dfc202701bcff171c9a6f6e6fc5b8d8f5309c19309",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sc_30__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "SC 30",
+          "manufacturer": "PMC",
+          "variant": "",
+          "path": "Components/PMC/Robots/SC 30.vcmx",
+          "type": "Robots",
+          "payload": "30",
+          "reach": "0",
+          "vcid": "961de2d1-b48e-4f4b-849e-af19ab4b68f1",
+          "library_assets": [
+            "a8979ee0-d817-5eb5-80b8-8fe8827e69ee"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SC 30.vcmx",
+        "path": "simready_usd/SC 30.vcmx",
+        "sha256": "7de94933f3802231feaab57ddfb96fa16cc1822c96c0c6fe6b5fadd4d8c7a9a0"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

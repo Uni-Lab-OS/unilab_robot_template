@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "tangcheng",
+  "models": {
+    "tc06:2010a": {
+      "title": "TANGCHENG TC-06-2010A",
+      "asset": {
+        "asset_id": "cd1e0910-730d-5f4e-80d4-ca820784bf31",
+        "package_digest": "dfb05013d71c073d1552b921c16f25104b79272c75fa76a13214b9095d80bbba",
+        "package_path": "04_设备/tangcheng/tc-06-2010a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tc06_2010a_99aabda4/module.json",
+      "module_sha256": "32896e10e05a2263e971c857fcebaf05584c71cc81162583bf69a5180bf42919"
+    }
+  },
+  "source_profiles": []
+}

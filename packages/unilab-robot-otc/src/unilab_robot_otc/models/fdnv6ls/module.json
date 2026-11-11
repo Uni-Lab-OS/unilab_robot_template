@@ -1,0 +1,298 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "otc",
+  "model": "fdnv6ls",
+  "title": "Daihen OTC FD-NV6Ls",
+  "asset": {
+    "asset_id": "9281dacc-fa44-5458-a49b-282742238e73",
+    "package_digest": "ee1ea6826a7504b26944b5ed36dad2a43bb048ce97cb121c4d0159b4ddfc7c60",
+    "package_path": "04_设备/otc_daihen/fd-nv6ls__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "9281dacc-fa44-5458-a49b-282742238e73",
+      "package_digest": "ee1ea6826a7504b26944b5ed36dad2a43bb048ce97cb121c4d0159b4ddfc7c60",
+      "package_path": "04_设备/otc_daihen/fd-nv6ls__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -170.0,
+          -65.0,
+          -360.0,
+          -270.0,
+          -180.0,
+          -140.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            525.0
+          ],
+          [
+            -1.5707963267948966,
+            185.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            760.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -150.0,
+            0.0,
+            1038.2201115370478
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            99.5
+          ]
+        ],
+        "mechanism_type": 3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          170.0,
+          190.0,
+          360.0,
+          450.0,
+          180.0,
+          140.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0285d94f63e3d9e3d8b72329cacda25aa284ff4f162454921310069ff88bb220",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fd-nv6ls__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "OTC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FD-NV6Ls",
+          "manufacturer": "OTC Daihen",
+          "variant": "",
+          "display": "Daihen OTC FD-NV6Ls",
+          "path": "robots/models/Daihen-OTC-FD-NV6Ls.robot",
+          "type": "robots",
+          "payload": 6,
+          "reach": 2006,
+          "axes": 7,
+          "library_assets": [
+            "9281dacc-fa44-5458-a49b-282742238e73"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Daihen-OTC-FD-NV6Ls.robot",
+        "path": "simready_usd/Daihen-OTC-FD-NV6Ls.robot",
+        "sha256": "751c4002e7d47d3212b53e9a735a3877f8116a2071c35cdd8aa88be254589e16"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

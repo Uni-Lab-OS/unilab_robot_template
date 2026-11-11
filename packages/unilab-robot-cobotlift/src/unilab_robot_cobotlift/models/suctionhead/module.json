@@ -1,0 +1,447 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "cobotlift",
+  "model": "suctionhead",
+  "title": "Suction Head",
+  "asset": {
+    "asset_id": "0dd34cc4-c362-5966-b6d0-95c6c3f6011f",
+    "package_digest": "17a1e4bf39d40cf3ff2bb63d14bb14a3074075c6b6e90810b3bff932383771ea",
+    "package_path": "03_机构模块/cobot_lift/suction_head__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "0dd34cc4-c362-5966-b6d0-95c6c3f6011f",
+      "package_digest": "17a1e4bf39d40cf3ff2bb63d14bb14a3074075c6b6e90810b3bff932383771ea",
+      "package_path": "03_机构模块/cobot_lift/suction_head__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "822336815614e96b87b4f82dcbdf3886407ec662ab2662c18d58d7f8d78c43da",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "822336815614e96b87b4f82dcbdf3886407ec662ab2662c18d58d7f8d78c43da",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": []
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [],
+        "rsc_sha256": "65afb16034396e612defbdfd98f7967364f5de239fd9814cc1537caa011677bf",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 765,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 793,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "a155b711bb5456c50b751357a3e6ecc14fc17efdaaa1aff71d73b6d9405af800",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Cobot Lift Suction Head"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 779,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "ccfd878b406bd742244af25cf8a42bc4f0d89051760e593f797dac19a852492c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Suction Head"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "BackfaceOn",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 683,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0e94217ff246041fe649b5e29663a18757cc7e9d708f6a1bbf64b104eb5e703c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 2
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 807,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 718,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 821,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 669,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Suction Head",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Suction Head",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "Suction Head",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Suction Head",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          }
+        ],
+        "source_sha256": "822336815614e96b87b4f82dcbdf3886407ec662ab2662c18d58d7f8d78c43da"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8b199318f7539c9fadb1804ce2fea2286e878d68c1895feed1af4437d186fdfc",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/suction_head__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Suction Head",
+          "manufacturer": "Cobot Lift",
+          "variant": "",
+          "path": "Components/Cobot Lift/Robot Tools/Suction Head.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "b704bc64-910a-4c11-a9ef-f2c39cec0312",
+          "library_assets": [
+            "0dd34cc4-c362-5966-b6d0-95c6c3f6011f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Suction Head.vcmx",
+        "path": "simready_usd/Suction Head.vcmx",
+        "sha256": "822336815614e96b87b4f82dcbdf3886407ec662ab2662c18d58d7f8d78c43da"
+      }
+    ]
+  }
+}

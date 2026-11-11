@@ -1,0 +1,84 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "flexiv_moveit_config_a8b92841ea",
+  "source": {
+    "url": "https://github.com/flexivrobotics/flexiv_ros2.git",
+    "commit": "56a7927159b866a00eafc3d7fc972479bdb305ba",
+    "path": "robots/flexiv/ros2/flexiv_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "4d680a9a493ed1d1b25da2664dcbb1b5731e18b54bd6983b83a5d9cd52c8bbca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "3ba3fe561676e56843535e421670cc9cb6bb52e59bfed8f9e5ee226cf2e67436",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "c4a5c47ce195335b14fc4de8e0e45e7f1bb505582fa82a169bc7c74a5ff0aa31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "16c42d959b2b55d13851ce315d1d962959f001852518821851ef7ea9a8051a09",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers_dual.yaml",
+      "sha256": "0b9b9e479c9c44beedb8985471608ea7d7f7e09a463133a116259b1bf0891cc5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers_mico.yaml",
+      "sha256": "9dd23bd8ae71f7899695c69942e6ae5f75a007474d223b520ea758e1e281e2a1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_servo_config.yaml",
+      "sha256": "7f16907948ae9a660d43117bdb17ae3a24cc382b1e2ba55f991f8af56ff9bf89",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "ffec40ca7c0d9c0adc3f2eac59248444c4e97ea6f5cc6f2b7d51f7331845eba6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "3cc8c442e5ab7a97591b16d763b83ca15f141072d14ad40fda8a507b46ca3bb7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "683bf3a2d27e1501341a64f2edc5698a1d6722329080713d9ffe1427f29ad8b3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/flexiv.srdf.xacro",
+      "sha256": "848df8e808f4a39f06d78b3f48ccb73e54027eb39085249f7b0c4b9ccf6142c4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/flexiv_macro.srdf.xacro",
+      "sha256": "0ee0986ca93f762c4a486dfb0ab54266eea8355143a8157f9c607c47d61bcf1d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/grav.srdf.xacro",
+      "sha256": "710837bcf736c3da84d57645dbad68d8fa54cb495cff4066f594ab3103f08cef",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "autonoxrobotics",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "articc6:1557:3kgat00004": {
+      "title": "autonox Robotics articc6-1557-3kg (AT_00004)｜多源合并",
+      "asset": {
+        "asset_id": "b04118cb-a966-5e6b-add0-5cc1c96a66b3",
+        "package_digest": "9b6cba2daf05087d354e314639ae2385d0b53205a1c26616d4c9f7008a33b718",
+        "package_path": "04_设备/autonox_robotics/articc6_1557_3kgat00004__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/articc6_1557_3kgat00004_0276b48e/module.json",
+      "module_sha256": "66d4dc8812d6638606844c1123163132d5259063859f2a1dde59cc8c722d487a"
+    },
+    "articc6:1959:60kgat00005": {
+      "title": "autonox Robotics articc6-1959-60kg (AT_00005)｜多源合并",
+      "asset": {
+        "asset_id": "281dcae7-174b-5d99-a1d0-13fdaa8f42d1",
+        "package_digest": "a6d24e64ba029fa0873886aa096bde2f635f83e07063d3066f578fa17805e5c3",
+        "package_path": "04_设备/autonox_robotics/articc6_1959_60kgat00005__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/articc6_1959_60kgat00005_cb400a26/module.json",
+      "module_sha256": "b42b3a98a830cb5026b7878dca46c61712c128fdfcb0f77cb4497426acd97484"
+    },
+    "articc6:2118:45kgat00010": {
+      "title": "autonox Robotics articc6-2118-45kg (AT_00010)｜多源合并",
+      "asset": {
+        "asset_id": "99059ecd-2455-5321-9c27-69125c53f9cb",
+        "package_digest": "1d9ccf3cfa42f271ca2ada8aca8613e7949080ab183ccf14369999a2ebe9096f",
+        "package_path": "04_设备/autonox_robotics/articc6_2118_45kgat00010__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/articc6_2118_45kgat00010_d812e12f/module.json",
+      "module_sha256": "40a81b36506db5e753930532ed51665296a817759da472ba80703dcf33d6a9d1"
+    },
+    "articc6:2257:30kgat00006": {
+      "title": "autonox Robotics articc6-2257-30kg (AT_00006)｜多源合并",
+      "asset": {
+        "asset_id": "8ed1396a-b863-5edc-bac0-abee12940af2",
+        "package_digest": "62b63e2e966ecccbfe8585cb2061df606499e43fcbe341ce1dffeb633322307b",
+        "package_path": "04_设备/autonox_robotics/articc6_2257_30kgat00006__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/articc6_2257_30kgat00006_16147b91/module.json",
+      "module_sha256": "6f4ec1c484393ad6a005d9d02e2edaeef67333367694c7de0763971fef2f537c"
+    },
+    "articc.m6:1665:30kgat00026": {
+      "title": "articc.m6-1665-30kg (AT_00026)",
+      "asset": {
+        "asset_id": "7b1df90a-b31a-59e5-ae2e-98025a9aacac",
+        "package_digest": "2394cce6b875dc40a5c04059d36897a4fb6fd24adf7f326f76ff294a61b965f7",
+        "package_path": "04_设备/autonox_robotics/articc_m6-1665-30kg_at_00026___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc_m6_1665_30kgat00026_5b129134/module.json",
+      "module_sha256": "843b2f8f6407dc04053dacc5df1be228900c592fb706795a084678b542268a0b"
+    },
+    "articc.m6:1704:30kgat00026se01": {
+      "title": "autonox Robotics articc.m6-1704-30kg (AT_00026-SE01)",
+      "asset": {
+        "asset_id": "f520ee97-d436-5c93-aa8a-a4cbdb168872",
+        "package_digest": "587182cc3dcc76836a4ecbb1359beefa88d179f4625a2ceb270afe255158a220",
+        "package_path": "04_设备/autonox_robotics/articc.m6-1704-30kg_at_00026-se01___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc_m6_1704_30kgat00026se01_b8a892ff/module.json",
+      "module_sha256": "1f9b589321df47242b8df9a8732afb54a6a2e3f76f6e7fef2fc4002b14077427"
+    },
+    "articc.m6:2407:150kgat00016se01": {
+      "title": "articc.m6-2407-150kg (AT_00016-SE01)",
+      "asset": {
+        "asset_id": "7f424031-e393-5e5b-9e03-998718eba177",
+        "package_digest": "8209905b11cc64562f031638963e2db4bdb150de0dfbbd522ce28e80a928babe",
+        "package_path": "04_设备/autonox_robotics/articc.m6-2407-150kg_at_00016-se01___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc_m6_2407_150kgat00016se01_cfb0d4dd/module.json",
+      "module_sha256": "ffb9954a4e283f4d249ed2666798cacfb0a452a0727f55c7b305d65724ab9c4a"
+    },
+    "articc3:1015:15kgat00017": {
+      "title": "articc3-1015-15kg (AT_00017)",
+      "asset": {
+        "asset_id": "4f9d07b1-4684-5df5-af90-8d92b996e7cb",
+        "package_digest": "f16195dc11c031dd296a86f28010346d01a23364865c23e2bdd1f8b9a6201752",
+        "package_path": "04_设备/autonox_robotics/articc3-1015-15kg_at_00017___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc3_1015_15kgat00017_677ce0e4/module.json",
+      "module_sha256": "aff2a572f94ac3328f2a7ea5df4fd1e6f031e203a2bd2af87348a2fc62450958"
+    },
+    "articc3:1035:30kgat00003": {
+      "title": "articc3-1035-30kg (AT_00003)",
+      "asset": {
+        "asset_id": "d01be337-1f67-5e5c-bf5d-6cea786b9dda",
+        "package_digest": "f421243811848fcbe1028d539b37df9a8442998a6d118d1c33e6cca5866dc761",
+        "package_path": "04_设备/autonox_robotics/articc3-1035-30kg_at_00003___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc3_1035_30kgat00003_b106e732/module.json",
+      "module_sha256": "94fa94626a96e67e8230031f8a45ccdf139e4b706cd300e394a50de92b77edf5"
+    },
+    "articc3:1155:8kgat30025": {
+      "title": "articc3-1155-8kg (AT_30025)",
+      "asset": {
+        "asset_id": "0a8dbd65-52a7-5848-bd27-704dc376e01a",
+        "package_digest": "98296cdc65a579e662a2175b482f0c761425362da2f1d3c32c7d283f138989e8",
+        "package_path": "04_设备/autonox_robotics/articc3-1155-8kg_at_30025___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc3_1155_8kgat30025_633a7c59/module.json",
+      "module_sha256": "c33441924605df1ed664cbab090b116001e30dd2d3c25a29b1dd9068f7a40f22"
+    },
+    "articc5:1918:45kgat10010": {
+      "title": "articc5-1918-45kg (AT_10010)",
+      "asset": {
+        "asset_id": "ae43be07-c3f3-5961-b604-c829dd96a6f9",
+        "package_digest": "cba6b4efab5f13fc9ed7936055a91b813eddba135e7ce198a22564ab81a101c9",
+        "package_path": "04_设备/autonox_robotics/articc5-1918-45kg_at_10010___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc5_1918_45kgat10010_c3ff7d88/module.json",
+      "module_sha256": "c805026ef7581dc3f88bae85f5fb89c8e5dad858c115eedab8bac7d9c1a9ca6b"
+    },
+    "articc6:1199:3kgat00011": {
+      "title": "articc6-1199-3kg (AT_00011)",
+      "asset": {
+        "asset_id": "645e02c8-5918-589a-b470-afa7704e9f20",
+        "package_digest": "3b015720718290be8bb9f83670e549c28a327942c5d014668612df4aba97d4ba",
+        "package_path": "04_设备/autonox_robotics/articc6-1199-3kg_at_00011___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc6_1199_3kgat00011_a8967af2/module.json",
+      "module_sha256": "efe5df57fb6f7d71b54d2a23ccb5f52f9fc81cbbd8eae893525a29ec466a79e8"
+    },
+    "articc6:1215:6kgat00025": {
+      "title": "articc6-1215-6kg (AT_00025)",
+      "asset": {
+        "asset_id": "6c9ccfe4-e0ec-5deb-a47c-f68c26edb9b3",
+        "package_digest": "6ac9964b794e6e5aebe72e537e8831465430d68635f88e330491216c4c12aac6",
+        "package_path": "04_设备/autonox_robotics/articc6-1215-6kg_at_00025___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc6_1215_6kgat00025_13b4ef30/module.json",
+      "module_sha256": "e1ae9661f14409eebdb3c23a1c3879afbe742954fbe1b8aa3cdda3d25e147849"
+    },
+    "articc6:1803:20kgat00014": {
+      "title": "articc6-1803-20kg (AT_00014)",
+      "asset": {
+        "asset_id": "33da6162-7b4e-598a-a0d0-c13dc1f4955c",
+        "package_digest": "dde05d5b767c4c53b92c92db5d0f0d4a3f8493034ae1088fc38cd3a5ec6df756",
+        "package_path": "04_设备/autonox_robotics/articc6-1803-20kg_at_00014___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc6_1803_20kgat00014_7d061a66/module.json",
+      "module_sha256": "40b46b18175da1d3bd0aa0aa8835d2c341391471cf1613d6baada8d7e0142fba"
+    },
+    "articc6:2757:20kgat00028": {
+      "title": "articc6-2757-20kg (AT_00028)",
+      "asset": {
+        "asset_id": "bbc60293-1e8e-5559-8c26-2304c94072ca",
+        "package_digest": "ebd6a55d14c50a708d8d2dd636431556f46c1e238b57a2454cff7e166795a21d",
+        "package_path": "04_设备/autonox_robotics/articc6-2757-20kg_at_00028___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articc6_2757_20kgat00028_e073a52e/module.json",
+      "module_sha256": "9c9d5f6ecec4f5f832c56e39d2a7c26e682c85d5fc9f95fe80fbc3eacb243b88"
+    },
+    "articcm6:2838:80kgat00035": {
+      "title": "articc m6-2838-80kg (AT_00035)",
+      "asset": {
+        "asset_id": "6528717c-3a07-5994-8968-70207e79866c",
+        "package_digest": "4f15860f66b43b84eaeac92c5181d1788f3c89390345c13a15b2441025fdd85d",
+        "package_path": "04_设备/autonox_robotics/articc_m6-2838-80kg_at_00035___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/articcm6_2838_80kgat00035_1a34b8f7/module.json",
+      "module_sha256": "b8150d42544a89421f3d64e940bf34e5f1e20ca9905b17ee863c6914b2cf63da"
+    }
+  },
+  "source_profiles": []
+}

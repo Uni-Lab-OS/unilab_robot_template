@@ -1,0 +1,700 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kawasaki",
+  "model": "fs20n",
+  "title": "Kawasaki FS20N｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "918f5101-2671-59fe-a553-e2eaf7ed7455",
+    "package_digest": "7e2b07007a7f5f5ee3276e38ad2c1ab626bad507f4f9b39a200de327e2f33952",
+    "package_path": "04_设备/kawasaki/fs20n__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "918f5101-2671-59fe-a553-e2eaf7ed7455",
+      "package_digest": "7e2b07007a7f5f5ee3276e38ad2c1ab626bad507f4f9b39a200de327e2f33952",
+      "package_path": "04_设备/kawasaki/fs20n__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "FS20N",
+              "source": "robots/models/Kawasaki-FS20N.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "FS20N",
+              "source": "Components/Kawasaki/Robots/FS20N.vcmx",
+              "source_family": "VC",
+              "value": 20.0
+            },
+            {
+              "model": "FS20N",
+              "source": "robots/models/Kawasaki-FS20N.robot",
+              "source_family": "RoboDK",
+              "value": 20.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 20.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "FS20N",
+              "source": "Components/Kawasaki/Robots/FS20N.vcmx",
+              "source_family": "VC",
+              "value": 1653.0
+            },
+            {
+              "model": "FS20N",
+              "source": "robots/models/Kawasaki-FS20N.robot",
+              "source_family": "RoboDK",
+              "value": 1653.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1653.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -570.0,
+          0.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.5707963267948966
+        ],
+        "flange_z_radians": -1.5707963267948966,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -160.0,
+          -105.0,
+          -155.0,
+          -270.0,
+          -145.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            570.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            800.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            60.0,
+            0.0,
+            700.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            120.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          7.0,
+          500.0,
+          0.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          160.0,
+          140.0,
+          120.0,
+          270.0,
+          145.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Kawasaki",
+          "name": "FS20N",
+          "original": {
+            "family": "VC",
+            "original_name": "FS20N.vcmx",
+            "path": "simready_usd/source_assets/VC/0_fs20n/FS20N.vcmx",
+            "sha256": "7646443adde2a608036c14cb0415e8cbaed3241c1fe145c05f040aad6bb7e645"
+          },
+          "path": "Components/Kawasaki/Robots/FS20N.vcmx",
+          "payload": "20",
+          "reach": "1653",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "86f63081-7f10-4793-a74e-58b11df8e3e9"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "df9784e2-6f23-5e36-8641-999bb3898662",
+              "entrypoints": {
+                "usd": "simready_usd/fs20n__r001.usdc"
+              },
+              "package_digest": "a7449237e41d206fa292669729f2890a2f58a1f902d73bfbb3ede03219f35427",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -570.0,
+                    0.0,
+                    0.0,
+                    1.5707963267948966
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    -1.5707963267948966
+                  ],
+                  "flange_z_radians": -1.5707963267948966,
+                  "home": [
+                    0.0,
+                    0.0,
+                    -90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -160.0,
+                    -105.0,
+                    -155.0,
+                    -270.0,
+                    -145.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      570.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      150.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      800.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      60.0,
+                      0.0,
+                      700.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      120.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    2.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    160.0,
+                    140.0,
+                    120.0,
+                    270.0,
+                    145.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "2b55809d2d93c9dc8b42cb57c8d7ad0f3f60ef8890464ec3f2995010e3801bf2",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Kawasaki FS20N",
+          "family": "RoboDK",
+          "library_assets": [
+            "df9784e2-6f23-5e36-8641-999bb3898662"
+          ],
+          "manufacturer": "Kawasaki",
+          "name": "FS20N",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Kawasaki-FS20N.robot",
+            "path": "simready_usd/Kawasaki-FS20N.robot",
+            "sha256": "fcfdb20458ccd1fdaf2f775f553de8421e210197b6de1f498e99a5c91c2204b8"
+          },
+          "path": "robots/models/Kawasaki-FS20N.robot",
+          "payload": 20,
+          "reach": 1653,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2b55809d2d93c9dc8b42cb57c8d7ad0f3f60ef8890464ec3f2995010e3801bf2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/fs20n__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Kawasaki FS20N｜多源合并",
+          "id": "merged_robot_918f5101_2671_59fe_a553_e2eaf7ed7455",
+          "metadata": {
+            "asset_id": "918f5101-2671-59fe-a553-e2eaf7ed7455",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:KawasakiDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/KawasakiDriver.py",
+        "sha256": "83e73e60317840b1d1c0a61666125c20523638c46c92f1ebd0a10f1a5dc0a129",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/KawasakiDriver.pyc",
+            "sha256": "f2c9dab6e5b98ab6519d661d5327f9b57d915fb7e0c8ba061e77c5d583ef817d"
+          },
+          {
+            "relative_path": "api/Robot/v311/KawasakiDriver.pyc",
+            "sha256": "ed7c727804483795ab5f1ed4f5b515d5c836dc67d7ca740fa4fda5ba12567238"
+          },
+          {
+            "relative_path": "api/Robot/v312/KawasakiDriver.pyc",
+            "sha256": "d987bd44d7c9e59d2b308f66278f2359d13de0605395c0b17487d3edce78347b"
+          },
+          {
+            "relative_path": "api/Robot/v38/KawasakiDriver.pyc",
+            "sha256": "c2fc4de56785d853473c35f33477a4ea200eabf81551584a4498de04c7c55ad6"
+          },
+          {
+            "relative_path": "api/Robot/v39/KawasakiDriver.pyc",
+            "sha256": "04f5c77caadf02a9552248f585b67c582bb0b5ac42d781ea35de9d5d3646f54e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "kawasaki controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Kawasaki.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kawasaki/ros",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kawasaki/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Kawasaki-FS20N.robot",
+        "path": "simready_usd/Kawasaki-FS20N.robot",
+        "sha256": "fcfdb20458ccd1fdaf2f775f553de8421e210197b6de1f498e99a5c91c2204b8"
+      },
+      {
+        "family": "VC",
+        "original_name": "FS20N.vcmx",
+        "path": "simready_usd/source_assets/VC/0_fs20n/FS20N.vcmx",
+        "sha256": "7646443adde2a608036c14cb0415e8cbaed3241c1fe145c05f040aad6bb7e645"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "kawasaki",
+        "fs20n"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "df9784e2-6f23-5e36-8641-999bb3898662",
+        "original_package_digest": "a7449237e41d206fa292669729f2890a2f58a1f902d73bfbb3ede03219f35427",
+        "source": "robots/models/Kawasaki-FS20N.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

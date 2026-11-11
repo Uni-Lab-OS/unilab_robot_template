@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "bota",
+  "model": "acclaxiso9409:1:50:4m6",
+  "title": "Bota ACC-LAX-ISO-9409-1-50-4-M6",
+  "asset": {
+    "asset_id": "365d7f5a-197d-5a52-b827-451849545cad",
+    "package_digest": "6d7ff2aad72d77ccac9005e802cab8c1f4cfcd86681c33c288288062414bc189",
+    "package_path": "01_零部件/bota/acc-lax-iso-9409-1-50-4-m6__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "365d7f5a-197d-5a52-b827-451849545cad",
+      "package_digest": "6d7ff2aad72d77ccac9005e802cab8c1f4cfcd86681c33c288288062414bc189",
+      "package_path": "01_零部件/bota/acc-lax-iso-9409-1-50-4-m6__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "e3d0cf6e1d6ccd642210f0668db1c8935ef0eee6114b4fe6004559dcd9cfc169",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/acc-lax-iso-9409-1-50-4-m6__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ACC-LAX-ISO-9409-1-50-4-M6",
+          "manufacturer": "Bota",
+          "variant": "",
+          "display": "Bota ACC-LAX-ISO-9409-1-50-4-M6",
+          "path": "tools/models/Bota-ACC-LAX-ISO-9409-1-50-4-M6.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "365d7f5a-197d-5a52-b827-451849545cad"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Bota-ACC-LAX-ISO-9409-1-50-4-M6.tool",
+        "path": "simready_usd/Bota-ACC-LAX-ISO-9409-1-50-4-M6.tool",
+        "sha256": "acef3e02a596af260d1e0b94eddcd21d8b8d88d80cb718bc7fdc7174895eea53"
+      }
+    ]
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "aubo",
+  "model": "is20l",
+  "title": "AUBO-iS20L",
+  "asset": {
+    "asset_id": "b91eae05-a0ad-5644-addb-4833ab3888b4",
+    "package_digest": "cef9d8325b2af1527cbff53d10f9097d7c828effc45e3ac42e39b2fb884b60d2",
+    "package_path": "04_设备/aubo/aubo-is20l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "b91eae05-a0ad-5644-addb-4833ab3888b4",
+      "package_digest": "cef9d8325b2af1527cbff53d10f9097d7c828effc45e3ac42e39b2fb884b60d2",
+      "package_path": "04_设备/aubo/aubo-is20l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -15.0,
+          100.0,
+          25.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            210.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1050.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            825.0,
+            -1.5707963267948966,
+            208.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            125.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            108.3
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1ff2477da365c9bcd6b76b32f44875e9441145f5d90a0b76ced5ffec3e5b00ab",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/aubo-is20l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DriverAubo",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverAubo.py",
+        "sha256": "ac6f0dd9df562f443f9b27a7456b0cd4f266c9e02a0b82c6d3df8d464e2307a9",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DriverAubo.pyc",
+            "sha256": "744eb0a0447c38e79c689ee99e17eaf9f6eb5e47dc5fccc9aabb046fc59dede9"
+          },
+          {
+            "relative_path": "api/Robot/v311/DriverAubo.pyc",
+            "sha256": "cb3809de26fa15dc2556af4901a41ead3d0d2c65e5c4076285fbcc2dd983c536"
+          },
+          {
+            "relative_path": "api/Robot/v312/DriverAubo.pyc",
+            "sha256": "1439b1b6063f25075598437cf9f36a3011ac5d5f5cde9c46569f039afef8fcd7"
+          },
+          {
+            "relative_path": "api/Robot/v38/DriverAubo.pyc",
+            "sha256": "23a35675a212712575975b138b8d2259aaa6a43f1ef112b0ea08a7c75b471426"
+          },
+          {
+            "relative_path": "api/Robot/v39/DriverAubo.pyc",
+            "sha256": "fffde54b6358bb023b21ca4daf3650572dff88f391e82a3fb383eef44af10df9"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "aubo controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:DriverAuboArcs",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverAuboArcs.py",
+        "sha256": "0074cc3cae4c4dcf13b9d6c64eddc3743ed04644ed9201eb980b34d44d50543c",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DriverAuboArcs.pyc",
+            "sha256": "23b18c272f54c985083e10492594e2f27ccc956ce335b024daf997689f3ff523"
+          },
+          {
+            "relative_path": "api/Robot/v311/DriverAuboArcs.pyc",
+            "sha256": "1c573321897231e721c7ae7667dd5208de786cc960b60a563308fc34fa91f937"
+          },
+          {
+            "relative_path": "api/Robot/v312/DriverAuboArcs.pyc",
+            "sha256": "7aad97c13af12c0a88d098de6e039138a0ddf02fff4c6f0bb935697a08961456"
+          },
+          {
+            "relative_path": "api/Robot/v38/DriverAuboArcs.pyc",
+            "sha256": "d75f8b96a1e89fb7bcb602c1533f0e33a99004ae4927a60481071adf4df3b189"
+          },
+          {
+            "relative_path": "api/Robot/v39/DriverAuboArcs.pyc",
+            "sha256": "42816ee85977bc678065a65ef1c962a9b41b9af0b407bbde66d32e3ed576961b"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "aubo controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:aubo:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/aubo/ros2_driver",
+        "repository_url": "https://github.com/AuboRobot/aubo_ros2_driver.git",
+        "code_tree_sha256": "986564c3b608402e858126216cc07123df6b8c02d7c4da3ae27a030580a39470",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "ec6300048433250a64ddaf90d3a986369a02b9a029bf6eb436acf1c44734adfb"
+          },
+          {
+            "path": "aubo_description/README.md",
+            "sha256": "de70f0498f114781daad581e2f5cd08e6815c3d02e3384aa9d1671501093b82d"
+          },
+          {
+            "path": "aubo_msgs/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:aubo:ros_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/aubo/ros_driver",
+        "repository_url": "https://github.com/AuboRobot/aubo_ros_driver.git",
+        "code_tree_sha256": "498d7cbf64d26ee4b65a917bc2c124f445dc97e6fcf6aedb58205edbd3457663",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b56141feb67b8e409b602b655144e8acb8983bf513fdd2b7bee0599294f6d832"
+          },
+          {
+            "path": "aubo_description/README.md",
+            "sha256": "de70f0498f114781daad581e2f5cd08e6815c3d02e3384aa9d1671501093b82d"
+          },
+          {
+            "path": "aubo_dashboard_msgs/LICENSE",
+            "sha256": "d2b5607202c9b6aa86814053d27e28c1c063cd1dfdfdbf1c1b7f8acec8644353"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "AUBO.py",
+      "AUBO_ARCS.py",
+      "AUBO_Move_Track.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AUBO-iS20L",
+          "manufacturer": "AUBO",
+          "variant": "",
+          "display": "AUBO-iS20L",
+          "path": "robots/models/AUBO-iS20L.robot",
+          "type": "robots",
+          "payload": 20,
+          "reach": 2000,
+          "axes": 6,
+          "library_assets": [
+            "b91eae05-a0ad-5644-addb-4833ab3888b4"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/AUBO-iS20L.robot",
+        "path": "simready_usd/AUBO-iS20L.robot",
+        "sha256": "e462c890a2b78f8c11fbf0215155352251f47e5cca24607ff0cd090d2d30a240"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kawasaki",
+  "model": "zx300s",
+  "title": "Kawasaki ZX300S｜多源合并",
+  "asset": {
+    "asset_id": "86c75227-89e7-5fa1-9e98-21c7f4f78e72",
+    "package_digest": "44d32f0c3f9bc786693a575a66734e62dcd3053052269395db92a8ca63085ed6",
+    "package_path": "04_设备/kawasaki/zx300s__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "86c75227-89e7-5fa1-9e98-21c7f4f78e72",
+      "package_digest": "44d32f0c3f9bc786693a575a66734e62dcd3053052269395db92a8ca63085ed6",
+      "package_path": "04_设备/kawasaki/zx300s__多源合并_r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "external_material_presets": [
+        {
+          "id": "red",
+          "scope": "selected static preset values; not proof of legacy renderer selection or contact physics",
+          "selector": "Material[@Name='red']",
+          "source_attributes": {
+            "BaseColor.X": "0.87",
+            "BaseColor.Y": "0",
+            "BaseColor.Z": "0",
+            "Clearcoat": "0.0",
+            "ClearcoatRoughness": "0.0",
+            "IndexOfRefraction": "1.5",
+            "Metallic": "0.0",
+            "Name": "red",
+            "Opacity": "1.0",
+            "Roughness": "0.4",
+            "ShaderName": "Physical",
+            "TextureScale": "1.0"
+          },
+          "source_sha256": "8a2a46df810e26295d005573240924a47a5cfa0a2fe2f54011deb07daa98a2cf",
+          "usd_preview_inputs": {
+            "clearcoat": 0.0,
+            "clearcoatRoughness": 0.0,
+            "diffuseColor": [
+              0.87,
+              0.0,
+              0.0
+            ],
+            "ior": 1.5,
+            "metallic": 0.0,
+            "opacity": 1.0,
+            "roughness": 0.4
+          }
+        }
+      ],
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7847",
+            "id": "dof:8369",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -180.0,
+                180.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                180.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8653",
+            "id": "dof:8901",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:7847",
+            "source_axis_label": "+Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9020",
+            "id": "dof:9269",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -60.0,
+              75.0
+            ],
+            "parent_node_id": "node:7847",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -60.0,
+                75.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -60.0,
+                75.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9553",
+            "id": "dof:9801",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:9020",
+            "source_axis_label": "-Y",
+            "source_type": "RotationalFollower",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:9919",
+            "id": "dof:10986",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -79.9,
+              210.0
+            ],
+            "parent_node_id": "node:9553",
+            "source_axis_label": "-Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:11270",
+            "id": "dof:11519",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9919",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          },
+          {
+            "child_node_id": "node:11803",
+            "id": "dof:12052",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -120.0,
+              120.0
+            ],
+            "parent_node_id": "node:11270",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -120.0,
+                120.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -120.0,
+                120.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_6"
+          },
+          {
+            "child_node_id": "node:12336",
+            "id": "dof:12585",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:11803",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_7"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "fb6a1945d0f6a56166fdd945d86f8fb7fd4db4a30077a108aacd3cc76b37e506",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "55f957ffa569e2c36dc336f7185a265e8fd8bb54c92098b900ab5bfd1088d649",
+        "physics_contract_sha256": "ab37367539bcaf0b826174b363522ff7296f633a9c1f8301e19dd443741fb2b3",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "fb6a1945d0f6a56166fdd945d86f8fb7fd4db4a30077a108aacd3cc76b37e506",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "ZX300S",
+              "source": "robots/models/Kawasaki-ZX300S.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "ZX300S",
+              "source": "robots/models/Kawasaki-ZX300S.robot",
+              "source_family": "RoboDK",
+              "value": 300.0
+            },
+            {
+              "model": "ZX300S",
+              "source": "Components/Kawasaki/Robots/ZX300S.vcmx",
+              "source_family": "VC",
+              "value": 300.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 300.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "ZX300S",
+              "source": "robots/models/Kawasaki-ZX300S.robot",
+              "source_family": "RoboDK",
+              "value": 2501.0
+            },
+            {
+              "model": "ZX300S",
+              "source": "Components/Kawasaki/Robots/ZX300S.vcmx",
+              "source_family": "VC",
+              "value": 2501.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2501.0
+        }
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Kawasaki ZX300S",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Kawasaki",
+          "name": "ZX300S",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Kawasaki-ZX300S.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_kawasaki-zx300s/Kawasaki-ZX300S.robot",
+            "sha256": "4c71a997cb0211293896def4f2b4025a72efbd271e130f42d0be2c0fdabb265b"
+          },
+          "path": "robots/models/Kawasaki-ZX300S.robot",
+          "payload": 300,
+          "reach": 2501,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Kawasaki",
+          "name": "ZX300S",
+          "original": {
+            "family": "VC",
+            "original_name": "ZX300S.vcmx",
+            "path": "simready_usd/source_assets/VC/0_zx300s/ZX300S.vcmx",
+            "sha256": "fb6a1945d0f6a56166fdd945d86f8fb7fd4db4a30077a108aacd3cc76b37e506"
+          },
+          "path": "Components/Kawasaki/Robots/ZX300S.vcmx",
+          "payload": "300",
+          "reach": "2501",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "c1f8838b-4460-4cca-b8e7-243d410d9ee1"
+        }
+      ]
+    },
+    "entrypoints": {
+      "usd": "simready_usd/zx300s__多源合并_r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "arm"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:KawasakiDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/KawasakiDriver.py",
+        "sha256": "83e73e60317840b1d1c0a61666125c20523638c46c92f1ebd0a10f1a5dc0a129",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/KawasakiDriver.pyc",
+            "sha256": "f2c9dab6e5b98ab6519d661d5327f9b57d915fb7e0c8ba061e77c5d583ef817d"
+          },
+          {
+            "relative_path": "api/Robot/v311/KawasakiDriver.pyc",
+            "sha256": "ed7c727804483795ab5f1ed4f5b515d5c836dc67d7ca740fa4fda5ba12567238"
+          },
+          {
+            "relative_path": "api/Robot/v312/KawasakiDriver.pyc",
+            "sha256": "d987bd44d7c9e59d2b308f66278f2359d13de0605395c0b17487d3edce78347b"
+          },
+          {
+            "relative_path": "api/Robot/v38/KawasakiDriver.pyc",
+            "sha256": "c2fc4de56785d853473c35f33477a4ea200eabf81551584a4498de04c7c55ad6"
+          },
+          {
+            "relative_path": "api/Robot/v39/KawasakiDriver.pyc",
+            "sha256": "04f5c77caadf02a9552248f585b67c582bb0b5ac42d781ea35de9d5d3646f54e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "kawasaki controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Kawasaki.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kawasaki/ros",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kawasaki/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Kawasaki ZX300S｜多源合并",
+          "id": "merged_robot_86c75227_89e7_5fa1_9e98_21c7f4f78e72",
+          "metadata": {
+            "asset_id": "86c75227-89e7-5fa1-9e98-21c7f4f78e72",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ZX300S",
+          "manufacturer": "Kawasaki",
+          "variant": "",
+          "path": "Components/Kawasaki/Robots/ZX300S.vcmx",
+          "type": "Robots",
+          "payload": "300",
+          "reach": "2501",
+          "vcid": "c1f8838b-4460-4cca-b8e7-243d410d9ee1",
+          "library_assets": []
+        }
+      ],
+      "RoboDK": [
+        {
+          "name": "ZX300S",
+          "manufacturer": "Kawasaki",
+          "variant": "",
+          "display": "Kawasaki ZX300S",
+          "path": "robots/models/Kawasaki-ZX300S.robot",
+          "type": "robots",
+          "payload": 300,
+          "reach": 2501,
+          "axes": 6,
+          "library_assets": []
+        }
+      ]
+    },
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Kawasaki-ZX300S.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_kawasaki-zx300s/Kawasaki-ZX300S.robot",
+        "sha256": "4c71a997cb0211293896def4f2b4025a72efbd271e130f42d0be2c0fdabb265b"
+      },
+      {
+        "family": "VC",
+        "original_name": "ZX300S.vcmx",
+        "path": "simready_usd/source_assets/VC/0_zx300s/ZX300S.vcmx",
+        "sha256": "fb6a1945d0f6a56166fdd945d86f8fb7fd4db4a30077a108aacd3cc76b37e506"
+      }
+    ],
+    "published_revision_mapping_sha256": "9533c84565093daa406b3247d926aadcc5141924d80eb0e5e431e51431834e11"
+  }
+}

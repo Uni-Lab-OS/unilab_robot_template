@@ -1,0 +1,447 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "cobotlift",
+  "model": "quickconnectorbottom",
+  "title": "Quick Connector Bottom",
+  "asset": {
+    "asset_id": "8104acfc-afad-5ef0-9d74-09be5e4377dc",
+    "package_digest": "0cd6bd34a0e20efad4af41d06014bf47896148c1361792323b68207e482c9682",
+    "package_path": "03_机构模块/cobot_lift/quick_connector_bottom__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8104acfc-afad-5ef0-9d74-09be5e4377dc",
+      "package_digest": "0cd6bd34a0e20efad4af41d06014bf47896148c1361792323b68207e482c9682",
+      "package_path": "03_机构模块/cobot_lift/quick_connector_bottom__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "d5336cf066789c829575700c742591fc6b43d0d4e9ac88f8cffc932ed1aef7f4",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "d5336cf066789c829575700c742591fc6b43d0d4e9ac88f8cffc932ed1aef7f4",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": []
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [],
+        "rsc_sha256": "8a601fc371c6e770e0e7eae19be8a12074566cb5f360df88a2f275c024cb4a7a",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1022,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1050,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "3d405de9838f83252a25ea9e79d40fad87bb86b469157797a5304ffc8f810901",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Cobot Lift Quick Connector Bottom"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1036,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "1bcf8f0ed6dce94150624e0260e3ec8cc461ccbd04bb448df766f86a4fa69a76",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Quick Connector Bottom"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "BackfaceOn",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 940,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0e94217ff246041fe649b5e29663a18757cc7e9d708f6a1bbf64b104eb5e703c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 2
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1064,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 975,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1078,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 926,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Connector Bottom",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "Quick Connector Bottom",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Quick Connector Bottom",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          }
+        ],
+        "source_sha256": "d5336cf066789c829575700c742591fc6b43d0d4e9ac88f8cffc932ed1aef7f4"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f1902e2de9e1f2c2e843c0dc2aac2b35fdea07c7481a5d8a455c02d05c31d283",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/quick_connector_bottom__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Quick Connector Bottom",
+          "manufacturer": "Cobot Lift",
+          "variant": "",
+          "path": "Components/Cobot Lift/Robot Tools/Quick Connector Bottom.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "2757d723-089c-484c-b31f-2da87a7a79c1",
+          "library_assets": [
+            "8104acfc-afad-5ef0-9d74-09be5e4377dc"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Quick Connector Bottom.vcmx",
+        "path": "simready_usd/Quick Connector Bottom.vcmx",
+        "sha256": "d5336cf066789c829575700c742591fc6b43d0d4e9ac88f8cffc932ed1aef7f4"
+      }
+    ]
+  }
+}

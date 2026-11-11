@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-robot-rokae"
+version = "0.1.0"
+description = "Uni-Lab rokae brand models and reviewed capability bindings"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["unilab_robot_rokae", "unilab_arm_rokae_cr12*"]
+
+[tool.setuptools.package-data]
+unilab_robot_rokae = ["catalog.json", "models/**/*", "source_profiles/**/*"]
+unilab_arm_rokae_cr12 = ["models/**/*"]

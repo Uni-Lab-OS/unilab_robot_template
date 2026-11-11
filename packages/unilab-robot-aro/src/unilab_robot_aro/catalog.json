@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "aro",
+  "models": {
+    "spotweldinggun": {
+      "title": "ARO Spot Welding Gun",
+      "asset": {
+        "asset_id": "71cafa35-fc3e-5bc8-9381-8bb33976acad",
+        "package_digest": "0ccae818dc4b9ebf31f8c9c963f47372eb6498a0781065a1f52000ddc465025d",
+        "package_path": "04_设备/aro/spot_welding_gun__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/spotweldinggun/module.json",
+      "module_sha256": "41e5a6489dff72a92dd7ca15bf2049f54a99418d47b5d772dd7eb622d43ec669"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,337 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "denso",
+  "model": "cobottapro1300touchsensingsoftcover",
+  "title": "Denso Cobotta PRO 1300 Touch sensing soft cover",
+  "asset": {
+    "asset_id": "6f0eeb41-d85d-5a37-8b7f-be90b83ea755",
+    "package_digest": "81106f24a3663dd695eb8b889d69c1de2302186a6a87068593617b490b3415bd",
+    "package_path": "04_设备/denso/cobotta_pro_1300_touch_sensing_soft_cover__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6f0eeb41-d85d-5a37-8b7f-be90b83ea755",
+      "package_digest": "81106f24a3663dd695eb8b889d69c1de2302186a6a87068593617b490b3415bd",
+      "package_path": "04_设备/denso/cobotta_pro_1300_touch_sensing_soft_cover__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -270.0,
+          -150.0,
+          -150.0,
+          -270.0,
+          -150.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            220.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            -50.0
+          ],
+          [
+            0.0,
+            710.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            590.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            150.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            160.0
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          270.0,
+          150.0,
+          150.0,
+          270.0,
+          150.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "e948309e35e72431d9d180c6a804605331b02f9d298df737e75d48cc16514b0a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cobotta_pro_1300_touch_sensing_soft_cover__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apidenso",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apidenso.exe",
+        "sha256": "da6ba4fad2aa125465505530f229adafb4b753664d36be72b943eccdd9f5a601",
+        "bytes": 75264,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "denso controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:denso:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/denso/ros2",
+        "repository_url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+        "code_tree_sha256": "fcf506a6ff09f4d4c797de17a19962e77aa91d73ac7959bd2b39a676190b1acb",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "04688c5564e029aafccd85afb490594ca069c64e2e72501e1e5fd75b514a7d7a"
+          },
+          {
+            "path": "bcap_service/README.md",
+            "sha256": "43fd9233384085d99bbde0797ef017e287270fd7afd7c0992e945cba9d5b5b31"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Denso_RC7.py",
+      "Denso_RC8.py",
+      "Denso_RC9.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Cobotta PRO 1300 Touch sensing soft cover",
+          "manufacturer": "Denso",
+          "variant": "",
+          "display": "Denso Cobotta PRO 1300 Touch sensing soft cover",
+          "path": "robots/models/Denso-Cobotta-PRO-1300-Touch-sensing-soft-cover.robot",
+          "type": "robots",
+          "payload": 12,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "6f0eeb41-d85d-5a37-8b7f-be90b83ea755"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Denso-Cobotta-PRO-1300-Touch-sensing-soft-cover.robot",
+        "path": "simready_usd/Denso-Cobotta-PRO-1300-Touch-sensing-soft-cover.robot",
+        "sha256": "35886900fd5e445d6e02fe4ac3d2bff876017d23aeca213b98335fd7901619a1"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

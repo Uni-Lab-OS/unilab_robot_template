@@ -1,0 +1,172 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "schneiderelectric",
+  "models": {
+    "lexiumcobotlxmrl03s0000": {
+      "title": "Schneider Electric Lexium Cobot LXMRL03S0000",
+      "asset": {
+        "asset_id": "d5685d44-deb2-5273-835f-304018ddeff0",
+        "package_digest": "8779ea520486c8b5371f5f6254c3e094084f439d0e22e7897efaffe87091fae7",
+        "package_path": "04_设备/schneider_electric/lexium_cobot_lxmrl03s0000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumcobotlxmrl03s0000/module.json",
+      "module_sha256": "8fd33c11c740cb675d4535df7c8aa9f0777af01238bb4864e25bc0150650cda4"
+    },
+    "lexiumcobotlxmrl05s0000": {
+      "title": "Schneider Electric Lexium Cobot LXMRL05S0000",
+      "asset": {
+        "asset_id": "508805c9-8103-5313-a92f-b9969dd831ea",
+        "package_digest": "7505469b08e654f1ab21c25f3e7d36da2355fd7d22a289e5e5b4a4c1108eefb6",
+        "package_path": "04_设备/schneider_electric/lexium_cobot_lxmrl05s0000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumcobotlxmrl05s0000/module.json",
+      "module_sha256": "7f1fef4b79fdab858540eed77653b75e49ccfce58a8e6f52145a707d3d1bcd45"
+    },
+    "lexiumcobotlxmrl07s0000": {
+      "title": "Schneider Electric Lexium Cobot LXMRL07S0000",
+      "asset": {
+        "asset_id": "a9cf8bfa-41bf-5fe3-a6f7-5da7e81df77b",
+        "package_digest": "7fb97a53e23ee5ee39350fd0a0d824402623a523385437ef7433ff1243018046",
+        "package_path": "04_设备/schneider_electric/lexium_cobot_lxmrl07s0000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumcobotlxmrl07s0000/module.json",
+      "module_sha256": "8d38d787285f1bb1c27c048acfbe44b3e497d09ab973f2252c93b35bd7c8f6c1"
+    },
+    "lexiumcobotlxmrl12s0000": {
+      "title": "Schneider Electric Lexium Cobot LXMRL12S0000",
+      "asset": {
+        "asset_id": "130898a5-4a37-5d75-8054-cafb5bf4721e",
+        "package_digest": "f1619da84ca0673e265a6ee1c72f6d4b4366d09cb906dc0775928242c0b679c4",
+        "package_path": "04_设备/schneider_electric/lexium_cobot_lxmrl12s0000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumcobotlxmrl12s0000/module.json",
+      "module_sha256": "3926ed6111d6efc5784c3b3eca26d1406c3415fd7120d38ffb6ffad59362d8a1"
+    },
+    "lexiumcobotlxmrl18s0000": {
+      "title": "Schneider Electric Lexium Cobot LXMRL18S0000",
+      "asset": {
+        "asset_id": "5ad6d077-81ba-5e8f-ad73-5d35c0578276",
+        "package_digest": "57e9174427be1b1642eb91f86a98371d1b3f46606daa4ad0a3887938149857b8",
+        "package_path": "04_设备/schneider_electric/lexium_cobot_lxmrl18s0000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumcobotlxmrl18s0000/module.json",
+      "module_sha256": "3bb4d6eefb38a1588ce044f77e913c97cb8c29bcd8064ad0b1e423fac1b240e9"
+    },
+    "lexiumscaralxmrsp0650200": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0650200",
+      "asset": {
+        "asset_id": "f904fc34-b5e9-5528-8427-2667242c0ab5",
+        "package_digest": "90f670119cd8e1cd7bc0c3f0b06eb929ef0d444582430d68f87c69a61236481e",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0650200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0650200/module.json",
+      "module_sha256": "c59d2b2753a81033e2f1cb76d362db1f96b81da21e523750db594915d1dc5a96"
+    },
+    "lexiumscaralxmrsp0650300": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0650300",
+      "asset": {
+        "asset_id": "075dec8e-f992-5241-ad63-926e3129950c",
+        "package_digest": "349296884165f5c360ec26ba7383deb10875e7907785d08463d7515e212f2386",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0650300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0650300/module.json",
+      "module_sha256": "d1aa2871f8e3875b7becc7b7cfed257df4da8f1b117129a35d8b435d329cc25c"
+    },
+    "lexiumscaralxmrsp0660200": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0660200",
+      "asset": {
+        "asset_id": "8783511f-2f89-573b-ae60-5d8c75427a60",
+        "package_digest": "95c46fd64842805cc748ff65a3d87d4d73117ac2da04854fbf291e0dc2a8d20b",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0660200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0660200/module.json",
+      "module_sha256": "88ea628fbe2e3dc06071cba3a0f40f8f41c8df714ab02efbadcd7c75d5ca0075"
+    },
+    "lexiumscaralxmrsp0660300": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0660300",
+      "asset": {
+        "asset_id": "846b2118-a2e1-5f20-b826-b99438672a9a",
+        "package_digest": "4eaccbbb74e4a0941f943f39f6658bbd31f47f73edaffa8cddb6623eb86ca3ca",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0660300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0660300/module.json",
+      "module_sha256": "20f05521893ddfd2ec204e13ec4cec3cb85edc98a5aa75d9814678f3f264507b"
+    },
+    "lexiumscaralxmrsp0670200": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0670200",
+      "asset": {
+        "asset_id": "4133895a-d9de-59ae-a71c-aaf83a2fa72c",
+        "package_digest": "00bce8656d67cda36bfd2e450e17bfd8d4455dec0c3e7b10dc0ba58749591a73",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0670200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0670200/module.json",
+      "module_sha256": "795e1b9b324ffb9b9ae6b04727510c2f1b3c32a7915b1e54984da6580db35252"
+    },
+    "lexiumscaralxmrsp0670300": {
+      "title": "Schneider Electric Lexium SCARA LXMRSP0670300",
+      "asset": {
+        "asset_id": "9bb792c6-7e9a-5486-bfe2-225c12137835",
+        "package_digest": "924928756df7c547dc30226a03d9f3b8e54c209dba694946c1417885be50c89e",
+        "package_path": "04_设备/schneider_electric/lexium_scara_lxmrsp0670300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lexiumscaralxmrsp0670300/module.json",
+      "module_sha256": "bf9ff73776dc068287c3788d7581b97a10d878f310e8ce59e79f056334721ef5"
+    }
+  },
+  "source_profiles": []
+}

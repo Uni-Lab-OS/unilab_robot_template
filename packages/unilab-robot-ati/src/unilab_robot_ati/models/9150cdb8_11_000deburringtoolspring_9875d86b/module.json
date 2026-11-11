@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "9150cdb8:11:000deburringtoolspring",
+  "title": "ATI 9150-CDB-8-11-000 Deburring Tool (Spring)",
+  "asset": {
+    "asset_id": "9dc739e3-6bc9-5dae-84d1-25d7d083ad7e",
+    "package_digest": "4de33e1b6de6beaf634d2dcbb401f36544a02eead9d8112ba3f2eb4fac3a035e",
+    "package_path": "01_零部件/ati/9150-cdb-8-11-000_deburring_tool_spring___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "9dc739e3-6bc9-5dae-84d1-25d7d083ad7e",
+      "package_digest": "4de33e1b6de6beaf634d2dcbb401f36544a02eead9d8112ba3f2eb4fac3a035e",
+      "package_path": "01_零部件/ati/9150-cdb-8-11-000_deburring_tool_spring___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "15e0daa70adb233c5a4e30b3d454b05bcfe82881d66ed9f0f0dc309041084651",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/9150-cdb-8-11-000_deburring_tool_spring___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "9150-CDB-8-11-000 Deburring Tool (Spring)",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI 9150-CDB-8-11-000 Deburring Tool (Spring)",
+          "path": "tools/models/ATI-9150-CDB-8-11-000-Deburring-Tool-Spring.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "9dc739e3-6bc9-5dae-84d1-25d7d083ad7e"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-9150-CDB-8-11-000-Deburring-Tool-Spring.tool",
+        "path": "simready_usd/ATI-9150-CDB-8-11-000-Deburring-Tool-Spring.tool",
+        "sha256": "44875df64b5eafaa35c6a454de5322f0c80ad15dd929d2002e74d4d905f64e85"
+      }
+    ]
+  }
+}

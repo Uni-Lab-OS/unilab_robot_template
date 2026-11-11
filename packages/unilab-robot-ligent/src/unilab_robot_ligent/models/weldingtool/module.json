@@ -1,0 +1,91 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ligent",
+  "model": "weldingtool",
+  "title": "Ligent Welding Tool",
+  "asset": {
+    "asset_id": "1ac28472-eed7-515e-9ecb-1681c37ea9f2",
+    "package_digest": "a5f41568594c01ea6c94b769f9e4d8884f17bd565de3bb2b891285f09de2f758",
+    "package_path": "01_零部件/ligent/welding_tool__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "1ac28472-eed7-515e-9ecb-1681c37ea9f2",
+      "package_digest": "a5f41568594c01ea6c94b769f9e4d8884f17bd565de3bb2b891285f09de2f758",
+      "package_path": "01_零部件/ligent/welding_tool__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c461c54b847ef2810c786e0cbecefa2d0a7518bf370d6031ea9669a469b2926a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/welding_tool__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Ligent.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Welding Tool",
+          "manufacturer": "Ligent",
+          "variant": "",
+          "display": "Ligent Welding Tool",
+          "path": "tools/models/Ligent-Welding-Tool.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "1ac28472-eed7-515e-9ecb-1681c37ea9f2"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Ligent-Welding-Tool.tool",
+        "path": "simready_usd/Ligent-Welding-Tool.tool",
+        "sha256": "94ae62bdf4636596d8d2a67c2c479a60d35f8d41263e0a78a4ea4f6e91fe35da"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_lrmate200ib_moveit_plugins_87d4a9d83a",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+    "path": "robots/fanuc/ros_industrial_melodic_source/moveit_cfgs/fanuc_lrmate200ib_moveit_plugins",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "bb1cb82f7ce0b798986741dd82a498ea12035c4a98706c20d24c846b8703997f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ib3l_kinematics/CMakeLists.txt",
+      "sha256": "5f997f6caafc4c42b93e875ccca790b9137b41861aa9ad5ec1e60a7c135cdb30",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ib3l_kinematics/fanuc_lrmate200ib3l_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "1c91b9dcf49c292c6932700e3be0eca07ea86a58e2128473b23873f901074022",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ib_kinematics/CMakeLists.txt",
+      "sha256": "4963f6e797fba55aff6564a1b2eb743ed1f7fec31ed40eb51ecb43588125ab44",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ib_kinematics/fanuc_lrmate200ib_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "e9f6ac4a8b508ebc06904b19eb3ed284946e987e0bf60860f521bf076d02059a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "bc81ade89dc56915e7ddd02487d4525b92ec4abb4e56296d7e47ba8d63040499",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "625aeab088d0fbf317ef91a2289b3f2d4ec2e8e3a9733e095b43fec09467f58e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

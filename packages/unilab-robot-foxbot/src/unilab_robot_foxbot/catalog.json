@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "foxbot",
+  "models": {
+    "a1200": {
+      "title": "Foxbot A1200",
+      "asset": {
+        "asset_id": "8d1d525b-81ce-5dd7-b0ef-a238941a7fa8",
+        "package_digest": "692c0041dd47022b96302c7de1c85a1d794081929b9b0bbac983a51e06b6cc65",
+        "package_path": "04_设备/foxbot/a1200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/a1200/module.json",
+      "module_sha256": "1084347586cc6441b4cae181f6f3fed7689d22f348e6166359992d4508b2fab0"
+    },
+    "a1700": {
+      "title": "Foxbot A1700",
+      "asset": {
+        "asset_id": "6197aa07-fc54-5645-9171-6cf7c38eccad",
+        "package_digest": "fb3ddfc65800a892329033d951b7173707a4decaf7cf67d8f9bcb8de2ad8793f",
+        "package_path": "04_设备/foxbot/a1700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/a1700/module.json",
+      "module_sha256": "77e4a803dcdde7753071f9968a058e6f4567a297729414fff3f2c5b44515f1fc"
+    }
+  },
+  "source_profiles": []
+}

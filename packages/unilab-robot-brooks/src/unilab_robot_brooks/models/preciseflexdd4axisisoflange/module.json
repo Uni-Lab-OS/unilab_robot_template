@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "brooks",
+  "model": "preciseflexdd4axisisoflange",
+  "title": "Brooks PreciseFlex DD 4-axis ISO Flange",
+  "asset": {
+    "asset_id": "4f800dde-a50d-561b-b530-ace0d6558244",
+    "package_digest": "8fc8547330fbf04bc93a36aec7b3cdffdde0dad786102c27cb7b5b1293bc130f",
+    "package_path": "01_零部件/brooks/preciseflex_dd_4-axis_iso_flange__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "4f800dde-a50d-561b-b530-ace0d6558244",
+      "package_digest": "8fc8547330fbf04bc93a36aec7b3cdffdde0dad786102c27cb7b5b1293bc130f",
+      "package_path": "01_零部件/brooks/preciseflex_dd_4-axis_iso_flange__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2f254befcf8a3ae7d7cd3e89e1f83ade57d6ac9fe4dceb9ad30deb80da7e7854",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/preciseflex_dd_4-axis_iso_flange__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "PreciseFlex DD 4-axis ISO Flange",
+          "manufacturer": "Brooks",
+          "variant": "",
+          "display": "Brooks PreciseFlex DD 4-axis ISO Flange",
+          "path": "tools/models/Brooks-PreciseFlex-DD-4-axis-ISO-Flange.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "4f800dde-a50d-561b-b530-ace0d6558244"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Brooks-PreciseFlex-DD-4-axis-ISO-Flange.tool",
+        "path": "simready_usd/Brooks-PreciseFlex-DD-4-axis-ISO-Flange.tool",
+        "sha256": "b50c380f321e601cee541f0efb39a9156500268b81c0c7724bebb5883558743a"
+      }
+    ]
+  }
+}

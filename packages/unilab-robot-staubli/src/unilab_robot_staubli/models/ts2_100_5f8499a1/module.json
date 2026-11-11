@@ -1,0 +1,304 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "staubli",
+  "model": "ts2:100",
+  "title": "TS2-100",
+  "asset": {
+    "asset_id": "6ed1d65c-098d-504b-9cea-3c28142577ce",
+    "package_digest": "4b0f876c9feb495170b12adb31e08b72e8b04f9dc21acf5c694b66fcbcbadaca",
+    "package_path": "04_设备/staubli/ts2-100__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6ed1d65c-098d-504b-9cea-3c28142577ce",
+      "package_digest": "4b0f876c9feb495170b12adb31e08b72e8b04f9dc21acf5c694b66fcbcbadaca",
+      "package_path": "04_设备/staubli/ts2-100__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:9786",
+            "id": "dof:10034",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -180.0,
+                180.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                180.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:10318",
+            "id": "dof:11677",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -160.0,
+              160.0
+            ],
+            "parent_node_id": "node:9786",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -160.0,
+                160.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -160.0,
+                160.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:11961",
+            "id": "dof:12432",
+            "independent": true,
+            "initial_source": 200.0,
+            "input_limits_at_initial_configuration": [
+              0.0,
+              200.0
+            ],
+            "parent_node_id": "node:10318",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                0.0,
+                0.2
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                0.0,
+                200.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:12743",
+            "id": "dof:13436",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -500.0,
+              500.0
+            ],
+            "parent_node_id": "node:11961",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -500.0,
+                500.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -500.0,
+                500.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "8a1a6c648de24d3b08507326f763ef46004d93d2e5925126f0601b2975937ec4",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "8a1a6c648de24d3b08507326f763ef46004d93d2e5925126f0601b2975937ec4",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "050120da31bd00789fda2d6889e008e0b4dc6f4ba166356ecbda9b432bfee414",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ts2-100__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apistaubli",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apistaubli.exe",
+        "sha256": "a875103302d07802b297357519782c73691d2a16af26d36a80ee04e63aa4b2d0",
+        "bytes": 451584,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "staubli controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Staubli_Adept_Vplus.py",
+      "Staubli_S6.py",
+      "Staubli_VAL3.py",
+      "Staubli_VAL3_Machining.py",
+      "Staubli_VAL3_simplified.py",
+      "Staubli_VAL3_XMOVE.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/staubli/val3_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/staubli/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "TS2-100",
+          "manufacturer": "Staubli",
+          "variant": "",
+          "path": "Components/Staubli/Robots/TS2-100.vcmx",
+          "type": "Robots",
+          "payload": "8",
+          "reach": "1000",
+          "vcid": "a4d37e52-f01a-4e77-8deb-e549ccc6eec5",
+          "library_assets": [
+            "6ed1d65c-098d-504b-9cea-3c28142577ce"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/TS2-100.vcmx",
+        "path": "simready_usd/TS2-100.vcmx",
+        "sha256": "8a1a6c648de24d3b08507326f763ef46004d93d2e5925126f0601b2975937ec4"
+      }
+    ],
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

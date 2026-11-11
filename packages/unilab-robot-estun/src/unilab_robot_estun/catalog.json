@@ -1,0 +1,399 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "estun",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "er30b2700": {
+      "title": "Estun ER30B-2700｜多源合并",
+      "asset": {
+        "asset_id": "bc83bb3d-1dca-5bf7-966c-752f16430a38",
+        "package_digest": "cb9de1f7ca15e711ea0996d0719141a2aa0c9030f09a8abf366675386c610f41",
+        "package_path": "04_设备/estun/er30b2700__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/er30b2700/module.json",
+      "module_sha256": "0bd46a55c578c9526d2953e22c4fd438cf307ddb7cc77416e42372d6f852853b"
+    },
+    "er350:3300": {
+      "title": "Estun ER350-3300｜多源合并",
+      "asset": {
+        "asset_id": "44bfbb05-0789-5185-960b-10392f7acefa",
+        "package_digest": "705dff2dae0b1c28ef8146b05abd0b068867110f932de58087e79255d77ec70b",
+        "package_path": "04_设备/estun/er350_3300__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/er350_3300_18fa617a/module.json",
+      "module_sha256": "ccb653f50f6dbd49fcb908109e2f56ac7fd2a2adbf2fa4412be426b9630f8940"
+    },
+    "er500:2800": {
+      "title": "Estun ER500-2800｜多源合并",
+      "asset": {
+        "asset_id": "4eca9aac-4ac7-5e47-a776-903fac89303e",
+        "package_digest": "f1de9c4b1b59c23ebc1a96e99de8075b8f5e44b129c1a59ce1a3af8dab3e61ce",
+        "package_path": "04_设备/estun/er500_2800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/er500_2800_6d30eca3/module.json",
+      "module_sha256": "10237dd23044c2062148417895bd2ac98550a7a52cf26a939541464aad565d95"
+    },
+    "er12b1510": {
+      "title": "ER_12B_1510",
+      "asset": {
+        "asset_id": "70887e30-799d-5079-bf81-31a23a8f9029",
+        "package_digest": "8ab2da27c073dcf80cba69c0a890d89ab2aba7773fec37817dff83168407981c",
+        "package_path": "04_设备/estun/er_12b_1510__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er12b1510/module.json",
+      "module_sha256": "f2779a0e0a3fcec2487adb71963730e5742a147569a5c5c05ca1a461356b089e"
+    },
+    "er16:1600": {
+      "title": "Estun ER16-1600",
+      "asset": {
+        "asset_id": "74e97810-2c5f-5c9c-9f87-4c29f327171f",
+        "package_digest": "e798f5acb519a0bafb3985d8be64b33786b86c3ba12f281d633f8b3bf3294ef5",
+        "package_path": "04_设备/estun/er16-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er16_1600_7ad3824c/module.json",
+      "module_sha256": "7b836e533299ab57ff3a8c0bfed5436b95453afcebd94fe25fcd3f1ae500cd44"
+    },
+    "er20:1780": {
+      "title": "Estun ER20-1780",
+      "asset": {
+        "asset_id": "8f355e1c-5d2e-51ae-aade-467952bb5b8d",
+        "package_digest": "75e1ceef6e3bae23e34feb316b9c609dcc0ec3e10b4e0db7bedea0ac89addf5f",
+        "package_path": "04_设备/estun/er20-1780__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20_1780_67f8cb6f/module.json",
+      "module_sha256": "a86e6a14f90f656c2d45f597c85b6084edd3c434006191a2dc6a2680c77655b2"
+    },
+    "er20:2000": {
+      "title": "Estun ER20-2000",
+      "asset": {
+        "asset_id": "243638a6-1190-5b99-b0fa-18a5b4f26a27",
+        "package_digest": "3a531072cd15fdb9900a2fb042d97f4f8bc2319c35200f624074aa882cd52277",
+        "package_path": "04_设备/estun/er20-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20_2000_52852f3a/module.json",
+      "module_sha256": "dfa319e59e97b1401804b5f5ed1f7c2393a0d86a01be70196e561c2a8069aac8"
+    },
+    "er20:2000hi": {
+      "title": "Estun ER20-2000-HI",
+      "asset": {
+        "asset_id": "59e386c3-e08c-53d9-b2ed-f7f90640bd1d",
+        "package_digest": "072bdb9b6f572eae0ccf77feee302e4cf9412f59b72da2fd36ff4e425068c41c",
+        "package_path": "04_设备/estun/er20-2000-hi__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20_2000hi_75a5351c/module.json",
+      "module_sha256": "611f0cd4cf5556f8c369f5c32f861da70b4f98703b18ef2378ac4ea316310de3"
+    },
+    "er20:2300": {
+      "title": "ER_20_2300",
+      "asset": {
+        "asset_id": "5e3ec335-c0c8-574e-952f-116405e5c33f",
+        "package_digest": "d5556a3626f0248448464828103c6b2a0486048e12385fe24aca84d0a9324875",
+        "package_path": "04_设备/estun/er_20_2300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20_2300_65bc7bde/module.json",
+      "module_sha256": "d96b8a16c0b36eaa200d11a985f0dcfd4851786879a64eae9db8ce84c303ff1c"
+    },
+    "er20b10:2010": {
+      "title": "ER_20B/10_2010",
+      "asset": {
+        "asset_id": "4176e055-88a9-5fb8-9135-096f84e900bc",
+        "package_digest": "3b441cb7546f248ccbd04089136e19630aaa6f1bbddeb1a0e163e60949226cd5",
+        "package_path": "04_设备/estun/er_20b10_2010__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20b10_2010_fcd4f794/module.json",
+      "module_sha256": "215a93be98ae3a71f23ad3db052b8f35fa50e6641ae78c4c4de3a789f249bf07"
+    },
+    "er20b1760": {
+      "title": "ER_20B_1760",
+      "asset": {
+        "asset_id": "2c63503a-0633-5484-9326-6cf74acdc606",
+        "package_digest": "bc20d3d457f7c0852d2b918b984f588ee95fc3f562c3ea2e395359921c299f87",
+        "package_path": "04_设备/estun/er_20b_1760__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20b1760/module.json",
+      "module_sha256": "06ad4eb4acdd4e6e4e644e7bde6a65dc3aa9c3efb3aee6672cce9a9133515420"
+    },
+    "er35b1810": {
+      "title": "ER_35B_1810",
+      "asset": {
+        "asset_id": "e15b977a-0560-5b7a-9e25-0020a6d95143",
+        "package_digest": "a0c8e358373ce34d49a2d88af4287a674ca3ddceb177ff648c7b2233bd31baae",
+        "package_path": "04_设备/estun/er_35b_1810__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er35b1810/module.json",
+      "module_sha256": "2b75a2a68c9e685800397e0fcb22136a3aaf21c2ffe8fb766de79a21ea3d8bb9"
+    },
+    "er3:400sr": {
+      "title": "Estun ER3-400-SR",
+      "asset": {
+        "asset_id": "3a602c37-7d0d-586a-832f-b37048728545",
+        "package_digest": "7cf21eb39c726cd60060072f4a25858030deb69361969c66c2a9663ae6d90345",
+        "package_path": "04_设备/estun/er3-400-sr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er3_400sr_88ba9c23/module.json",
+      "module_sha256": "0854daf156c9c17afecaf605595327de7c0d8b66c32234bbd729f65884c74b90"
+    },
+    "er50b2100": {
+      "title": "ER_50B_2100",
+      "asset": {
+        "asset_id": "49ab4949-1a5d-5f5f-ade8-33651c71498a",
+        "package_digest": "84100cb411fc95cd9d84ca590f3e566e11a1ce76fd7a6a051b412baeffc1fe02",
+        "package_path": "04_设备/estun/er_50b_2100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er50b2100/module.json",
+      "module_sha256": "0aaad49352363e43b442b996c28fc6b9614013c40051bda3250b18c2a7aa8a45"
+    },
+    "er6:1600": {
+      "title": "ER6-1600",
+      "asset": {
+        "asset_id": "f16b3515-5bdb-5a5a-bbf6-c555d42ad403",
+        "package_digest": "a7497f348a5a95294f3ca071baaf43b00584bafb2ad595db52e56016e4ac6ef4",
+        "package_path": "04_设备/estun/er6-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er6_1600_77a2d7cc/module.json",
+      "module_sha256": "aadeeb13ab6ad643f1678eae27dbe707efa0ba82a0ef71c666f962f0f3d0c2e5"
+    },
+    "er6:600sr": {
+      "title": "Estun ER6-600-SR",
+      "asset": {
+        "asset_id": "6a0445ec-c4d8-5ca7-ac89-1b088647360b",
+        "package_digest": "8071e47d39a50582f36ad506ca22d87eae21096f5cb5ae368f7be77cf8cc540c",
+        "package_path": "04_设备/estun/er6-600-sr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er6_600sr_0297257d/module.json",
+      "module_sha256": "2bb7b6197c8a94fd39dd8bee8731109be72bea81a03e0cd9fefaad908eed6d30"
+    },
+    "er70b2100": {
+      "title": "ER_70B_2100",
+      "asset": {
+        "asset_id": "8f74cfea-8dad-54b3-8e2a-979c2e772684",
+        "package_digest": "fe6161900e6cf172f6e9ff39328fba4bf4379daabb1f95b97a2868b0d6a9f592",
+        "package_path": "04_设备/estun/er_70b_2100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er70b2100/module.json",
+      "module_sha256": "c23cd25df361af64994e3e2a3f3563a3c65047a412c04237a1d2365c707def69"
+    },
+    "er7:910mi": {
+      "title": "Estun ER7-910-MI",
+      "asset": {
+        "asset_id": "51028d14-032c-5173-b031-6728cc418ded",
+        "package_digest": "5ba9705f0e5b85ff54a236a54d8bb8a362e6b603742405031fc228db019e59c7",
+        "package_path": "04_设备/estun/er7-910-mi__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er7_910mi_77cc8558/module.json",
+      "module_sha256": "27e038104651fe1fa6ea3ad1801a90fccfd47d8546573c02c5634196248cb4ed"
+    },
+    "er80b2565bd": {
+      "title": "Estun ER80B-2565-BD",
+      "asset": {
+        "asset_id": "de788901-f68d-516f-a1de-d1619cca7972",
+        "package_digest": "860b9b055f2b4ceb4f483698fe8d81354717ab07e94770b663105e9a59b7993b",
+        "package_path": "04_设备/estun/er80b-2565-bd__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er80b2565bd/module.json",
+      "module_sha256": "fde82f74948c350960e8db32671668360fb798f408c64be9614a52d917389076"
+    },
+    "er8:1450h": {
+      "title": "Estun ER8-1450-H",
+      "asset": {
+        "asset_id": "adac7fc5-21f2-55a0-bae4-283b97f3f0fd",
+        "package_digest": "6de1adf25cc324a7b722af6e0b840e3aae291ba45f76fa114b00a359398f27a5",
+        "package_path": "04_设备/estun/er8-1450-h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er8_1450h_79cc510e/module.json",
+      "module_sha256": "3e25834790f2de2f5bf1098a04dc88ef1fa137f4e95317d7fb7539c0c3cdf25b"
+    },
+    "er8:1450hw": {
+      "title": "Estun ER8-1450-HW",
+      "asset": {
+        "asset_id": "34a48f9f-a6ce-5a8b-8a35-03af78ef2174",
+        "package_digest": "3ab32e18a0d469adbedfd1aeb27870566f0c36d9b9151f07531ef0e906f63572",
+        "package_path": "04_设备/estun/er8-1450-hw__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er8_1450hw_8ab92c41/module.json",
+      "module_sha256": "733272b004664cb51e095531faba6bd476551569fe63e3bb5f9b1eaed99eed03"
+    },
+    "er8:720mi": {
+      "title": "Estun ER8-720-MI",
+      "asset": {
+        "asset_id": "7c4983bd-affe-5977-8956-39a43add8bb7",
+        "package_digest": "abd5c00798e8533554c12eb5b244a8062341e3fc16a749b95a14801ef40833f3",
+        "package_path": "04_设备/estun/er8-720-mi__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er8_720mi_9c3960c1/module.json",
+      "module_sha256": "d8849dd1df97c49d7e234937ea49223032f2a5054cd142f9ffbbccdb0acce876"
+    },
+    "s20:180eco": {
+      "title": "Estun S20-180 Eco",
+      "asset": {
+        "asset_id": "12310c0a-ba6c-5191-bcf0-b87c3a742f59",
+        "package_digest": "276a6a1124102c7f303ef4b4ba25818a7162bbbac4a8bc8dbd037fc1d6ae5fd5",
+        "package_path": "04_设备/estun/s20-180_eco__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s20_180eco_e910055e/module.json",
+      "module_sha256": "3391a17a3bba8a6a12059b773aeb8dd2ed5bdb673fcb46bba193c71cbcb747b7"
+    },
+    "s3:60eco": {
+      "title": "Estun S3-60 Eco",
+      "asset": {
+        "asset_id": "b77cf664-fbd8-577d-b8d2-024a037d05e4",
+        "package_digest": "9d49d3bc9f989dbc8b934ba4163094cf9743bc5b0554ee5867721b8a60259c4a",
+        "package_path": "04_设备/estun/s3-60_eco__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s3_60eco_a76a1432/module.json",
+      "module_sha256": "a8c2e8c812d5f97895bef1bcba6ae41c82f7e874a28cfe9ef5469aa48410a875"
+    },
+    "s3:60pro": {
+      "title": "Estun S3-60 Pro",
+      "asset": {
+        "asset_id": "9bd07eee-b9b5-59ac-887a-a5abe0d64d3b",
+        "package_digest": "66ff95ee649ff66dd4a85efe785337244014c64b434ccb0b8ce6fecb2e0277a3",
+        "package_path": "04_设备/estun/s3-60_pro__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s3_60pro_ee7fa467/module.json",
+      "module_sha256": "6d618dcedca68299a4ea9af9d271fa06581ba56627c81af2d7d9ca65cb3c6f63"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "estun_dual_arm_example_486f788ebc",
+      "manifest": "source_profiles/estun_dual_arm_example_486f788ebc/source.lock.json",
+      "sha256": "de855d8c3248ef7f0b9002f9e47ec9c8fff41e4647745cecb5aabc59c7afec82",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "estun_moveit_config_b07a6efb47",
+      "manifest": "source_profiles/estun_moveit_config_b07a6efb47/source.lock.json",
+      "sha256": "f2662b04f11dbd961c35934104ff8add9ccf21aa55ca9a185e03ba9c33dbad42",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

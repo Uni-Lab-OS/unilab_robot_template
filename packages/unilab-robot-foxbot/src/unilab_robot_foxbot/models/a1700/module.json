@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "foxbot",
+  "model": "a1700",
+  "title": "Foxbot A1700",
+  "asset": {
+    "asset_id": "6197aa07-fc54-5645-9171-6cf7c38eccad",
+    "package_digest": "fb3ddfc65800a892329033d951b7173707a4decaf7cf67d8f9bcb8de2ad8793f",
+    "package_path": "04_设备/foxbot/a1700__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6197aa07-fc54-5645-9171-6cf7c38eccad",
+      "package_digest": "fb3ddfc65800a892329033d951b7173707a4decaf7cf67d8f9bcb8de2ad8793f",
+      "package_path": "04_设备/foxbot/a1700__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -160.0,
+          -50.0,
+          -30.0,
+          -180.0,
+          -125.0,
+          -359.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            525.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            760.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            140.0,
+            0.0,
+            795.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            100.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          160.0,
+          120.0,
+          170.0,
+          180.0,
+          125.0,
+          359.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8197d2285f2dcbf7d7b4405e5141b6a92dc2ae9a4c5f4868770bda2b1acb60a8",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/a1700__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Foxbot.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "A1700",
+          "manufacturer": "Foxbot",
+          "variant": "",
+          "display": "Foxbot A1700",
+          "path": "robots/models/Foxbot-A1700.robot",
+          "type": "robots",
+          "payload": 20,
+          "reach": 1717,
+          "axes": 6,
+          "library_assets": [
+            "6197aa07-fc54-5645-9171-6cf7c38eccad"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Foxbot-A1700.robot",
+        "path": "simready_usd/Foxbot-A1700.robot",
+        "sha256": "3b1e08c51a7a43e7cace9f43dbd16090a4ec3136225dc97a8bea962a69219895"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

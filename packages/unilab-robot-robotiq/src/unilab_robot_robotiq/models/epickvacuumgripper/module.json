@@ -1,0 +1,837 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "robotiq",
+  "model": "epickvacuumgripper",
+  "title": "RobotiQ EPick Vacuum Gripper (1 Cup)｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "dbd0c9e0-b080-5da3-9228-1ef25c502889",
+    "package_digest": "d2737cbd6ada92c724a400f2e4787c66ae1e341288219714ae875f5315c4ec5a",
+    "package_path": "01_零部件/robotiq/epickvacuumgripper__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "dbd0c9e0-b080-5da3-9228-1ef25c502889",
+      "package_digest": "d2737cbd6ada92c724a400f2e4787c66ae1e341288219714ae875f5315c4ec5a",
+      "package_path": "01_零部件/robotiq/epickvacuumgripper__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robot Tools",
+      "tools"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "count"
+        },
+        "payload": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "kg"
+        },
+        "reach": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "mm"
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "699c31e4-c89c-5d3a-a020-12133feaf652",
+              "entrypoints": {
+                "usd": "simready_usd/epick_vacuum_gripper__r001.usdc"
+              },
+              "package_digest": "520c77f37c018b8f269e182398ca70c58a593a83feafe78c2ac6b34840faddfc",
+              "parameters": {
+                "kinematics": {
+                  "gaps": [],
+                  "joints": [],
+                  "schema": "vc-offline-kinematics/1",
+                  "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+                  "source_sha256": "707c822ccb7729cd88e205294576711c9031e4898db7e7b745726b34812a19b2",
+                  "status": "not_applicable"
+                },
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "707c822ccb7729cd88e205294576711c9031e4898db7e7b745726b34812a19b2",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "source_behavior": {
+                  "archive_member": "component.rsc",
+                  "execution": "not_os_executable",
+                  "scripts": []
+                },
+                "source_physics": {
+                  "archive_member": "component.rsc",
+                  "colliders": [],
+                  "controllers": [],
+                  "entities": [],
+                  "joints_and_drivers": [],
+                  "rsc_sha256": "e066e16a1e15b709234c4d5fa59f6f86ff59a3dc3987f725226f0f2726856c79",
+                  "scoped_physical_fields": [
+                    {
+                      "fields": {
+                        "CenterOfGravity": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1422,
+                          "owner": {
+                            "id": "baseframe:1313",
+                            "kind": "BaseFrame",
+                            "line": 1313,
+                            "name": "GripperTCP",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimBaseFrame"
+                          },
+                          "raw_block_sha256": "c22584cf6c8677ba060eb3fc0d0ecee2bde06b57d4ff47627531bfd9a628bdd4",
+                          "source_settings": [
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rMatrix>",
+                          "unit_status": "not_declared",
+                          "value": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        },
+                        "Inertia": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1434,
+                          "owner": {
+                            "id": "baseframe:1313",
+                            "kind": "BaseFrame",
+                            "line": 1313,
+                            "name": "GripperTCP",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimBaseFrame"
+                          },
+                          "raw_block_sha256": "f890cba2389d1cd746142accbffcf7b867f61f0cf18adeed15b89e43260e904c",
+                          "source_settings": [
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rVector>",
+                          "unit_status": "not_declared",
+                          "value": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                          ]
+                        },
+                        "Mass": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1408,
+                          "magnitude": 1000,
+                          "owner": {
+                            "id": "baseframe:1313",
+                            "kind": "BaseFrame",
+                            "line": 1313,
+                            "name": "GripperTCP",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimBaseFrame"
+                          },
+                          "quantity": "Mass",
+                          "raw_block_sha256": "a0a1b74d585eec15d086f37a5dd52b04c18e709465603475e6283e155f5a7370",
+                          "source_settings": [
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rDouble>",
+                          "unit_status": "source_quantity_and_magnitude_only",
+                          "value": 0
+                        }
+                      },
+                      "owner": {
+                        "id": "baseframe:1313",
+                        "kind": "BaseFrame",
+                        "line": 1313,
+                        "name": "GripperTCP",
+                        "node_id": "node:2",
+                        "node_path": [
+                          {
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2"
+                          }
+                        ],
+                        "type": "rSimBaseFrame"
+                      },
+                      "scope": "payload_frame_not_body"
+                    }
+                  ],
+                  "source_parameters": [
+                    {
+                      "fields": {
+                        "BOM": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1890,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "f3491a424f650a231de308e22a28aa2568f4aa6a5ab1c6af9469563b18278b12",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rBool>",
+                          "unit_status": "not_declared",
+                          "value": 0
+                        },
+                        "BOMdescription": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1918,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "76416597912ea91b849004009397f9f9aa498fc18c6678d1eea9e51c9c6a25ad",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rString>",
+                          "unit_status": "not_declared",
+                          "value": "Robotiq EPick Vacuum Gripper"
+                        },
+                        "BOMname": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1904,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "a7ce8d71f45042a2289f9c7613045499a7c2e4286e8f3a66737195a0b2238126",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rString>",
+                          "unit_status": "not_declared",
+                          "value": "EPick Vacuum Gripper"
+                        },
+                        "BackfaceMode": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "enum": [
+                            {
+                              "label": "FeatureBackfaceMode",
+                              "value": 0
+                            },
+                            {
+                              "label": "BackfaceOff",
+                              "value": 1
+                            },
+                            {
+                              "label": "BackfaceOn",
+                              "value": 2
+                            }
+                          ],
+                          "enum_label": "FeatureBackfaceMode",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1808,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTEnumVariable<rInt>",
+                          "unit_status": "not_declared",
+                          "value": 0
+                        },
+                        "Category": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1932,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rString>",
+                          "unit_status": "not_declared",
+                          "value": "Robot Tools"
+                        },
+                        "PDFExportLevel": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "enum": [
+                            {
+                              "label": "No export",
+                              "value": 0
+                            },
+                            {
+                              "label": "Complete",
+                              "value": 1
+                            },
+                            {
+                              "label": "Geometry bound",
+                              "value": 2
+                            },
+                            {
+                              "label": "Node bound",
+                              "value": 3
+                            },
+                            {
+                              "label": "Component bound",
+                              "value": 4
+                            }
+                          ],
+                          "enum_label": "Complete",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1843,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTEnumVariable<rInt>",
+                          "unit_status": "not_declared",
+                          "value": 1
+                        },
+                        "SimulationLevel": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "enum": [
+                            {
+                              "label": "Detailed",
+                              "value": 0
+                            },
+                            {
+                              "label": "Balanced",
+                              "value": 1
+                            },
+                            {
+                              "label": "Fast",
+                              "value": 2
+                            }
+                          ],
+                          "enum_label": "Detailed",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1946,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTEnumVariable<rInt>",
+                          "unit_status": "not_declared",
+                          "value": 0
+                        },
+                        "VacuumCupAssembly": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1981,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "abbf9555a807e9316c15003846bf1b0d4042e6571ab6616e331f75cfa4f31096",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "ON_EDIT_REBUILD",
+                            "TRANSLATE_USING_GETTEXT"
+                          ],
+                          "type": "rTStepVariable<rString>",
+                          "unit_status": "not_declared",
+                          "value": "Two"
+                        },
+                        "Visible": {
+                          "archive_member": "component.rsc",
+                          "classification": "parsed_serialized_value",
+                          "evidence_class": "direct_serialized",
+                          "expression": null,
+                          "line": 1794,
+                          "owner": {
+                            "id": "node:2",
+                            "kind": "Node",
+                            "line": 2,
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2",
+                            "node_path": [
+                              {
+                                "name": "EPick Vacuum Gripper",
+                                "node_id": "node:2"
+                              }
+                            ],
+                            "type": "rSimResource"
+                          },
+                          "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                          "source_settings": [
+                            "VISIBLE",
+                            "EDITABLE_DISCONNECTED",
+                            "EDITABLE_CONNECTED",
+                            "EDITABLE_SIMULATING",
+                            "MANAGED"
+                          ],
+                          "type": "rTVariable<rBool>",
+                          "unit_status": "not_declared",
+                          "value": 1
+                        }
+                      },
+                      "owner": {
+                        "id": "node:2",
+                        "kind": "Node",
+                        "line": 2,
+                        "name": "EPick Vacuum Gripper",
+                        "node_id": "node:2",
+                        "node_path": [
+                          {
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2"
+                          }
+                        ],
+                        "type": "rSimResource"
+                      }
+                    },
+                    {
+                      "fields": {},
+                      "owner": {
+                        "id": "node:2021",
+                        "kind": "Node",
+                        "line": 2021,
+                        "name": "Robot World",
+                        "node_id": "node:2021",
+                        "node_path": [
+                          {
+                            "name": "EPick Vacuum Gripper",
+                            "node_id": "node:2"
+                          },
+                          {
+                            "name": "Robot World",
+                            "node_id": "node:2021"
+                          }
+                        ],
+                        "type": "rBaseNode"
+                      }
+                    }
+                  ],
+                  "source_sha256": "707c822ccb7729cd88e205294576711c9031e4898db7e7b745726b34812a19b2"
+                },
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "b61ba34ccabe8d4e8baecd57427c3daccf0cd0450db29397e2bfd60805213f07",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "699c31e4-c89c-5d3a-a020-12133feaf652"
+          ],
+          "manufacturer": "Robotiq",
+          "name": "EPick Vacuum Gripper",
+          "original": {
+            "family": "VC",
+            "original_name": "EPick Vacuum Gripper.vcmx",
+            "path": "simready_usd/source_assets/VC/0_epick_vacuum_gripper/EPick Vacuum Gripper.vcmx",
+            "sha256": "707c822ccb7729cd88e205294576711c9031e4898db7e7b745726b34812a19b2"
+          },
+          "path": "Components/Robotiq/Robot Tools/EPick Vacuum Gripper.vcmx",
+          "payload": "0",
+          "reach": "0",
+          "type": "Robot Tools",
+          "variant": "",
+          "vcid": "8ce27236-1a1c-4c81-af18-7c7b822c84da"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "25a5d645-e987-50ae-bf40-673957c6d2b3",
+              "entrypoints": {
+                "usd": "simready_usd/epick_vacuum_gripper_1_cup___r001.usdc"
+              },
+              "package_digest": "0dc22a29566bf95e1228a7d2f2333ed6543fbd7b56a6a4643a5231f7fb569e86",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "4737f776b228d25f5cfdfb5895f1ed3cdde74f7191cab51ddf35024d82426357",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RobotiQ EPick Vacuum Gripper (1 Cup)",
+          "family": "RoboDK",
+          "library_assets": [
+            "25a5d645-e987-50ae-bf40-673957c6d2b3"
+          ],
+          "manufacturer": "RobotiQ",
+          "name": "EPick Vacuum Gripper (1 Cup)",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool",
+            "path": "simready_usd/RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool",
+            "sha256": "9c57a3c7166f8b9b14d0dc958217086da6f7cd8ee4885649f3d5bfe6b3c8857e"
+          },
+          "path": "tools/models/RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "1 Cup"
+        },
+        {
+          "axes": 0,
+          "converted_parameters": [
+            {
+              "asset_id": "f416b161-b1b4-5e73-8b05-840618ab40ef",
+              "entrypoints": {
+                "usd": "simready_usd/epick_vacuum_gripper_4_cups___r001.usdc"
+              },
+              "package_digest": "296ceac446c824311528c1887ff228b2f993f3c5c6fac1f357dae5f1d1c2f184",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "0e3285f1e72ee26cf749fc8a8ce5ca36b23d352b3d7438d41735bbf1e8f9135e",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 0,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RobotiQ EPick Vacuum Gripper (4 Cups)",
+          "family": "RoboDK",
+          "library_assets": [
+            "f416b161-b1b4-5e73-8b05-840618ab40ef"
+          ],
+          "manufacturer": "RobotiQ",
+          "name": "EPick Vacuum Gripper (4 Cups)",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RobotiQ-EPick-Vacuum-Gripper-4-Cups.tool",
+            "path": "simready_usd/source_assets/RoboDK/1_robotiq-epick-vacuum-gripper-4-cups/RobotiQ-EPick-Vacuum-Gripper-4-Cups.tool",
+            "sha256": "4da00f14cb962b409d50b36f72327a120b2a65464c25acac18d8cf1dddb5314e"
+          },
+          "path": "tools/models/RobotiQ-EPick-Vacuum-Gripper-4-Cups.tool",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": "4 Cups"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4737f776b228d25f5cfdfb5895f1ed3cdde74f7191cab51ddf35024d82426357",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/epickvacuumgripper__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {},
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/robotiq/ros2_gripper",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool",
+        "path": "simready_usd/RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool",
+        "sha256": "9c57a3c7166f8b9b14d0dc958217086da6f7cd8ee4885649f3d5bfe6b3c8857e"
+      },
+      {
+        "family": "VC",
+        "original_name": "EPick Vacuum Gripper.vcmx",
+        "path": "simready_usd/source_assets/VC/0_epick_vacuum_gripper/EPick Vacuum Gripper.vcmx",
+        "sha256": "707c822ccb7729cd88e205294576711c9031e4898db7e7b745726b34812a19b2"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "RobotiQ-EPick-Vacuum-Gripper-4-Cups.tool",
+        "path": "simready_usd/source_assets/RoboDK/1_robotiq-epick-vacuum-gripper-4-cups/RobotiQ-EPick-Vacuum-Gripper-4-Cups.tool",
+        "sha256": "4da00f14cb962b409d50b36f72327a120b2a65464c25acac18d8cf1dddb5314e"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "robotiq",
+        "epickvacuumgripper"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "25a5d645-e987-50ae-bf40-673957c6d2b3",
+        "original_package_digest": "0dc22a29566bf95e1228a7d2f2333ed6543fbd7b56a6a4643a5231f7fb569e86",
+        "source": "tools/models/RobotiQ-EPick-Vacuum-Gripper-1-Cup.tool"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "payload_zero_unverified",
+        "reach_zero_unverified",
+        "configuration_or_pose",
+        "multiple_RoboDK"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "tool"
+  ]
+}

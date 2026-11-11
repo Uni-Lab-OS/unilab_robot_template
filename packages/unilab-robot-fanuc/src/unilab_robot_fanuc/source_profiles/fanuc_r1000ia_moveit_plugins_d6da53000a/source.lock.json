@@ -1,0 +1,44 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_r1000ia_moveit_plugins_d6da53000a",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+    "path": "robots/fanuc/ros_industrial_melodic_source/moveit_cfgs/fanuc_r1000ia_moveit_plugins",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "bb219d6ac7946b16316ac579d112bd713af9a5582405af3a4aeec1e1748f520b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "b4f9b501a72aa8640c2ccf1df2c7c9897733ee59099a8c324d2967090e09d25e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "r1000ia80f_kinematics/CMakeLists.txt",
+      "sha256": "ccf2508d13282889d3ee00a1ac39176347dd744f0e2535774b039db452fbfa5c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "r1000ia80f_kinematics/fanuc_r1000ia80f_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "b4132f46a049a2f3da5c29c8ebfc92b00839a5832b759d5dca4d6312bacfef6c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "76ed753389506febb01217313e631244f72225e270f326e72d3d2b1026785380",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

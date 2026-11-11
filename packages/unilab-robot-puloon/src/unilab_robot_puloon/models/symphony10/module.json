@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "puloon",
+  "model": "symphony10",
+  "title": "PULOON Symphony 10",
+  "asset": {
+    "asset_id": "e7983783-5170-577d-a196-3dcbff14f7bb",
+    "package_digest": "7667b899b61c9341b74f973c3520c574be71ba3c99df222b2912309676867f09",
+    "package_path": "04_设备/puloon/symphony_10__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e7983783-5170-577d-a196-3dcbff14f7bb",
+      "package_digest": "7667b899b61c9341b74f973c3520c574be71ba3c99df222b2912309676867f09",
+      "package_path": "04_设备/puloon/symphony_10__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -160.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            184.4
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            612.7,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            575.25,
+            -1.5707963267948966,
+            166.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            115.9
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            124.4
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          160.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0d4ef3c67c72149d899c715882fc34f8096c1ed764170bbb587fc29eef86b260",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/symphony_10__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Symphony 10",
+          "manufacturer": "PULOON",
+          "variant": "",
+          "display": "PULOON Symphony 10",
+          "path": "robots/models/PULOON-Symphony-10.robot",
+          "type": "robots",
+          "payload": 10,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "e7983783-5170-577d-a196-3dcbff14f7bb"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/PULOON-Symphony-10.robot",
+        "path": "simready_usd/PULOON-Symphony-10.robot",
+        "sha256": "c1199109a839626ddf5748077bf4d6a0598a448ab087b116a55bd41d8e1e4037"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

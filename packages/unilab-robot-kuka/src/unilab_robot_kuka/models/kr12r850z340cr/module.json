@@ -1,0 +1,719 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr12r850z340cr",
+  "title": "KUKA KR12 R850 Z340 CR｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "3ac94360-8dcf-54e5-94ac-3b9099af90c7",
+    "package_digest": "128e24027da92a632af4af44274f1e66800040b8e54b331132d858fe7a4fe9e3",
+    "package_path": "04_设备/kuka/kr12r850z340cr__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3ac94360-8dcf-54e5-94ac-3b9099af90c7",
+      "package_digest": "128e24027da92a632af4af44274f1e66800040b8e54b331132d858fe7a4fe9e3",
+      "package_path": "04_设备/kuka/kr12r850z340cr__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR12 R850 Z340 CR",
+              "source": "robots/models/KUKA-KR12-R850-Z340-CR.robot",
+              "source_family": "RoboDK",
+              "value": 4.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 4.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 12 R850 Z340 CR",
+              "source": "Components/KUKA/Robots/Small Robots/SCARA/KR 12 R850 Z340 CR.vcmx",
+              "source_family": "VC",
+              "value": 6.0
+            },
+            {
+              "model": "KR12 R850 Z340 CR",
+              "source": "robots/models/KUKA-KR12-R850-Z340-CR.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 6.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 12 R850 Z340 CR",
+              "source": "Components/KUKA/Robots/Small Robots/SCARA/KR 12 R850 Z340 CR.vcmx",
+              "source_family": "VC",
+              "value": 850.0
+            },
+            {
+              "model": "KR12 R850 Z340 CR",
+              "source": "robots/models/KUKA-KR12-R850-Z340-CR.robot",
+              "source_family": "RoboDK",
+              "value": 850.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 850.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "mm",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "prismatic",
+          "revolute"
+        ],
+        "lower": [
+          -145.0,
+          -145.0,
+          -340.0,
+          -355.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            450.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            400.0,
+            0.0,
+            175.95
+          ],
+          [
+            3.141592653589793,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          1.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          145.0,
+          145.0,
+          1.0,
+          355.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 12 R850 Z340 CR",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 12 R850 Z340 CR.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_12_r850_z340_cr/KR 12 R850 Z340 CR.vcmx",
+            "sha256": "9565d4fd49d6ed8b64f1f5697cc439f37f205182e263828cca7049bdefaee26f"
+          },
+          "path": "Components/KUKA/Robots/Small Robots/SCARA/KR 12 R850 Z340 CR.vcmx",
+          "payload": "6",
+          "reach": "850",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "5ba258ae-8076-4c64-95b3-f5b28495f98a"
+        },
+        {
+          "axes": 4,
+          "converted_parameters": [
+            {
+              "asset_id": "eeb6c177-3c00-5a2e-a7cb-e1c829e8ea3c",
+              "entrypoints": {
+                "usd": "simready_usd/kr12_r850_z340_cr__r001.usdc"
+              },
+              "package_digest": "269486043e268f44ddc8d980db1377d3856b3794662cf2b32a25f2bdf38eec5b",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "generic_axis_directions": 64,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "mm",
+                    "degree"
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "prismatic",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -145.0,
+                    -145.0,
+                    -340.0,
+                    -355.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      450.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      400.0,
+                      0.0,
+                      175.95
+                    ],
+                    [
+                      3.141592653589793,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  ],
+                  "mechanism_type": 2,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+                    "generic_direction_mapping": "0x1405dbe20",
+                    "generic_fallback": "0x1405dafb0",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    1.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+                  "upper": [
+                    145.0,
+                    145.0,
+                    1.0,
+                    355.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "73818fd48e273a64c883dee2c0e4e7a98f24943e663a678814038e78d2515d8f",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 5
+                  }
+                }
+              }
+            }
+          ],
+          "display": "KUKA KR12 R850 Z340 CR",
+          "family": "RoboDK",
+          "library_assets": [
+            "eeb6c177-3c00-5a2e-a7cb-e1c829e8ea3c"
+          ],
+          "manufacturer": "KUKA",
+          "name": "KR12 R850 Z340 CR",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR12-R850-Z340-CR.robot",
+            "path": "simready_usd/KUKA-KR12-R850-Z340-CR.robot",
+            "sha256": "02ddd4b6eed829dec0fa0ebd05bf754b913ef0cb38f6bc5bab79f1a65a5ee447"
+          },
+          "path": "robots/models/KUKA-KR12-R850-Z340-CR.robot",
+          "payload": 6,
+          "reach": 850,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "73818fd48e273a64c883dee2c0e4e7a98f24943e663a678814038e78d2515d8f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr12r850z340cr__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR12 R850 Z340 CR｜多源合并",
+          "id": "merged_robot_3ac94360_8dcf_54e5_94ac_3b9099af90c7",
+          "metadata": {
+            "asset_id": "3ac94360-8dcf-54e5-94ac-3b9099af90c7",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR12-R850-Z340-CR.robot",
+        "path": "simready_usd/KUKA-KR12-R850-Z340-CR.robot",
+        "sha256": "02ddd4b6eed829dec0fa0ebd05bf754b913ef0cb38f6bc5bab79f1a65a5ee447"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 12 R850 Z340 CR.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_12_r850_z340_cr/KR 12 R850 Z340 CR.vcmx",
+        "sha256": "9565d4fd49d6ed8b64f1f5697cc439f37f205182e263828cca7049bdefaee26f"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "kuka",
+        "kr12r850z340cr"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "eeb6c177-3c00-5a2e-a7cb-e1c829e8ea3c",
+        "original_package_digest": "269486043e268f44ddc8d980db1377d3856b3794662cf2b32a25f2bdf38eec5b",
+        "source": "robots/models/KUKA-KR12-R850-Z340-CR.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

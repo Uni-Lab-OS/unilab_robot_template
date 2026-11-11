@@ -1,0 +1,254 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "nachi",
+  "model": "es06:5520",
+  "title": "ES06-5520",
+  "asset": {
+    "asset_id": "fcd659ce-a8a7-5615-be51-5481fcf29e94",
+    "package_digest": "708a8f4f060be6acec876036161fc5fbfcd037b040bcc539839b9ccf967a44aa",
+    "package_path": "04_设备/nachi/es06-5520__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "fcd659ce-a8a7-5615-be51-5481fcf29e94",
+      "package_digest": "708a8f4f060be6acec876036161fc5fbfcd037b040bcc539839b9ccf967a44aa",
+      "package_path": "04_设备/nachi/es06-5520__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:8373",
+            "id": "dof:8620",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -170.0,
+              170.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -170.0,
+                170.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -170.0,
+                170.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8904",
+            "id": "dof:9596",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -145.0,
+              145.0
+            ],
+            "parent_node_id": "node:8373",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -145.0,
+                145.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -145.0,
+                145.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9880",
+            "id": "dof:10129",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -200.0,
+              0.0
+            ],
+            "parent_node_id": "node:8904",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -0.2,
+                0.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -200.0,
+                0.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:10440",
+            "id": "dof:10688",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9880",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "07553c15dc61b5daff8485e2fa67140aa8f3ba725cef731675baa64465746e1a",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "07553c15dc61b5daff8485e2fa67140aa8f3ba725cef731675baa64465746e1a",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8a29c0731f301e69a9b9a16e2386cf7ec101dfd8011951cb02e2f1043fda143c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/es06-5520__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Nachi_AX_FD.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/nachi/rosweld_drivers",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ES06-5520",
+          "manufacturer": "Nachi",
+          "variant": "",
+          "path": "Components/Nachi/Robots/ES06-5520.vcmx",
+          "type": "Robots",
+          "payload": "6",
+          "reach": "550.0",
+          "vcid": "59330625-e5ee-4d4c-a9a3-83b775f5b8b8",
+          "library_assets": [
+            "fcd659ce-a8a7-5615-be51-5481fcf29e94"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ES06-5520.vcmx",
+        "path": "simready_usd/ES06-5520.vcmx",
+        "sha256": "07553c15dc61b5daff8485e2fa67140aa8f3ba725cef731675baa64465746e1a"
+      }
+    ],
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

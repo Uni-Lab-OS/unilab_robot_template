@@ -1,0 +1,567 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rainbowrobotics",
+  "model": "rb3:1200",
+  "title": "RB3-1200｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "bbbb306a-7758-52e5-b9c3-3344f200341b",
+    "package_digest": "da6e02780131fdd0dd2f91acbba08ef45c7069c023949b1e58a175c07b4fe2b5",
+    "package_path": "04_设备/rainbow_robotics/rb3_1200__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "bbbb306a-7758-52e5-b9c3-3344f200341b",
+      "package_digest": "da6e02780131fdd0dd2f91acbba08ef45c7069c023949b1e58a175c07b4fe2b5",
+      "package_path": "04_设备/rainbow_robotics/rb3_1200__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "RB3-1200",
+              "source": "robots/models/RB3-1200.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "RB3 1200",
+              "source": "Components/Rainbow Robotics/Robots/RB3 1200.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "RB3-1200",
+              "source": "robots/models/RB3-1200.robot",
+              "source_family": "RoboDK",
+              "value": 3.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 3.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "RB3 1200",
+              "source": "Components/Rainbow Robotics/Robots/RB3 1200.vcmx",
+              "source_family": "VC",
+              "value": 1200.0
+            },
+            {
+              "model": "RB3-1200",
+              "source": "robots/models/RB3-1200.robot",
+              "source_family": "RoboDK",
+              "value": 1200.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1200.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            169.2
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            566.9,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            522.4,
+            -1.5707963267948966,
+            110.7
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            110.7
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            96.7
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "e4ad5949-eb59-54b7-b429-8b02ebfde081",
+              "entrypoints": {
+                "usd": "simready_usd/rb3_1200__r001.usdc"
+              },
+              "package_digest": "1be64a6d891a81b31eb6365e151ba51b654f8e94347e0caa3d417f43fa191a95",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "29b29a8e4a6d7ae7af96c35d1229ee0dd19e4102c6138487aa0f951704d87c41",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "3b9dd2fefa41591e722c346feb1022c30f17f1a6ab83ed8d1cc273f2d652dc46",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "e4ad5949-eb59-54b7-b429-8b02ebfde081"
+          ],
+          "manufacturer": "Rainbow Robotics",
+          "name": "RB3 1200",
+          "original": {
+            "family": "VC",
+            "original_name": "RB3 1200.vcmx",
+            "path": "simready_usd/source_assets/VC/0_rb3_1200/RB3 1200.vcmx",
+            "sha256": "29b29a8e4a6d7ae7af96c35d1229ee0dd19e4102c6138487aa0f951704d87c41"
+          },
+          "path": "Components/Rainbow Robotics/Robots/RB3 1200.vcmx",
+          "payload": "3",
+          "reach": "1200",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "041fc4ad-3667-4499-834f-61f28e518ae3"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "e3aa3eac-9c39-5d0c-80c3-55861e7084af",
+              "entrypoints": {
+                "usd": "simready_usd/rb3-1200__r001.usdc"
+              },
+              "package_digest": "2f061ddd90d7a9ce6d9225d99c1b07f6df1329b8a0db4ebb59a1310da191edca",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      169.2
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      566.9,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      522.4,
+                      -1.5707963267948966,
+                      110.7
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      110.7
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      96.7
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "2d14f4c2f02d38cac25aa8117d9f52f4bb1bc48e72294265e9f88fea19d81c93",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "RB3-1200",
+          "family": "RoboDK",
+          "library_assets": [
+            "e3aa3eac-9c39-5d0c-80c3-55861e7084af"
+          ],
+          "manufacturer": "Rainbow Robotics",
+          "name": "RB3-1200",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "RB3-1200.robot",
+            "path": "simready_usd/RB3-1200.robot",
+            "sha256": "52b7e386a26fd7ce3152e3164e8be9ffd3591078a0b4dd06428021403c9865e4"
+          },
+          "path": "robots/models/RB3-1200.robot",
+          "payload": 3,
+          "reach": 1200,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2d14f4c2f02d38cac25aa8117d9f52f4bb1bc48e72294265e9f88fea19d81c93",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/rb3_1200__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "RB3-1200｜多源合并",
+          "id": "merged_robot_bbbb306a_7758_52e5_b9c3_3344f200341b",
+          "metadata": {
+            "asset_id": "bbbb306a-7758-52e5-b9c3-3344f200341b",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "RainbowRobotics.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/rainbow/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "RB3-1200.robot",
+        "path": "simready_usd/RB3-1200.robot",
+        "sha256": "52b7e386a26fd7ce3152e3164e8be9ffd3591078a0b4dd06428021403c9865e4"
+      },
+      {
+        "family": "VC",
+        "original_name": "RB3 1200.vcmx",
+        "path": "simready_usd/source_assets/VC/0_rb3_1200/RB3 1200.vcmx",
+        "sha256": "29b29a8e4a6d7ae7af96c35d1229ee0dd19e4102c6138487aa0f951704d87c41"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "rainbowrobotics",
+        "rb3:1200"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "e3aa3eac-9c39-5d0c-80c3-55861e7084af",
+        "original_package_digest": "2f061ddd90d7a9ce6d9225d99c1b07f6df1329b8a0db4ebb59a1310da191edca",
+        "source": "robots/models/RB3-1200.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

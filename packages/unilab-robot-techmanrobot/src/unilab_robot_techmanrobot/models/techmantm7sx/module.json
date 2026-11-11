@@ -1,0 +1,287 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "techmanrobot",
+  "model": "techmantm7sx",
+  "title": "Techman TM7S-X",
+  "asset": {
+    "asset_id": "7bd4ade5-55c6-5f02-846d-c2884e73f564",
+    "package_digest": "926b74775b15c940a133c360ac653418b8cbf3d3e27819680f4487e1ce916235",
+    "package_path": "04_设备/techman_robot/techman_tm7s-x__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7bd4ade5-55c6-5f02-846d-c2884e73f564",
+      "package_digest": "926b74775b15c940a133c360ac653418b8cbf3d3e27819680f4487e1ce916235",
+      "package_path": "04_设备/techman_robot/techman_tm7s-x__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          -90.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -152.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            148.4
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            329.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            298.0,
+            -1.5707963267948966,
+            149.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            131.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            134.95
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          152.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f2d4029cc684453cd26affdbd54cfdb445aa2e876e4f4a4bd56fe6502810512f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/techman_tm7s-x__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:TMDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/TMDriver.py",
+        "sha256": "e1178b95602f2d4861a133dc2bc54f3094c0c0a461779be07995619206c5cdbf",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/TMDriver.pyc",
+            "sha256": "b8b0069f0d0dff6b9395583c376fafee45dba8ebe944f13d9699e9c93d859f99"
+          },
+          {
+            "relative_path": "api/Robot/v311/TMDriver.pyc",
+            "sha256": "286451cfb86d2bb9dc5f3184662b6d243a7016212ef0ac5bc4b66c742b79f360"
+          },
+          {
+            "relative_path": "api/Robot/v312/TMDriver.pyc",
+            "sha256": "15bc207ecc0b1a9860df661001733d2eb084ef38d8df66a35c2725a4f218dca5"
+          },
+          {
+            "relative_path": "api/Robot/v38/TMDriver.pyc",
+            "sha256": "4d78d4d9e8714e62fd8f225a20b0edc056f47ad2c7f2be3895f988ad5757305a"
+          },
+          {
+            "relative_path": "api/Robot/v39/TMDriver.pyc",
+            "sha256": "1081905541299c8ba61c8de9d74e9ca457e0213b818a056b5972b45a0eb68de5"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Techman TM"
+        ],
+        "constraints": [
+          "TM driver does not establish support for Omron Adept or LD mobile robots",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Techman.py",
+      "Techman_FerRobotics.py",
+      "Techman_PathNode.py",
+      "Techman_Remote.py",
+      "Techman_TMscript.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/techman/ros2_legacy",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/techman/ros2_s_series",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Techman TM7S-X",
+          "manufacturer": "Techman Robot",
+          "variant": "",
+          "display": "Techman TM7S-X",
+          "path": "robots/models/Techman-TM7S-X.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 700,
+          "axes": 6,
+          "library_assets": [
+            "7bd4ade5-55c6-5f02-846d-c2884e73f564"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Techman-TM7S-X.robot",
+        "path": "simready_usd/Techman-TM7S-X.robot",
+        "sha256": "6a9d4a10306a36e3dda81a757b76fe2ff5c4c4aba6fddbb5709b9ab84487f7c7"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

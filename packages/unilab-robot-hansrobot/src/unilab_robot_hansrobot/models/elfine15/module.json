@@ -1,0 +1,176 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hansrobot",
+  "model": "elfine15",
+  "title": "Elfin E15",
+  "asset": {
+    "asset_id": "6deaed1b-77d1-5f7b-bd94-1cd9c5a89bdc",
+    "package_digest": "c34767ad8c9214efafa06c6f8a8b110cb879c39bfb9ab095da7620b3c34bafba",
+    "package_path": "04_设备/han_s_robot/elfin_e15__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6deaed1b-77d1-5f7b-bd94-1cd9c5a89bdc",
+      "package_digest": "c34767ad8c9214efafa06c6f8a8b110cb879c39bfb9ab095da7620b3c34bafba",
+      "package_path": "04_设备/han_s_robot/elfin_e15__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "908a00ef876e71daddb859365916672a21e9dcfec635a3e3d3793935e575347c",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "d9e1b45dbb66368bac0682afcdbab91f176edca67c67b8cfabdc845ae8217d25",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/elfin_e15__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:HansDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/HansDriver.py",
+        "sha256": "f9f319605eb3b648bd59c7f69efb1624dc4126a04a014e2f188615b13bb4ddf4",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/HansDriver.pyc",
+            "sha256": "ed0fed4f3186d1857cb29b05b7dafb84be0939db33f62fa6751eefc4f3d25eb2"
+          },
+          {
+            "relative_path": "api/Robot/v311/HansDriver.pyc",
+            "sha256": "7fb80fbe3d6ab166f55014917592aff483344e9fa36bced6c8849dcf23fe8be6"
+          },
+          {
+            "relative_path": "api/Robot/v312/HansDriver.pyc",
+            "sha256": "8c6410a5901671704e34057b976d6b9c31fc8cd06205a1239d742100c2db3e56"
+          },
+          {
+            "relative_path": "api/Robot/v38/HansDriver.pyc",
+            "sha256": "5e0b32813b0dc7c74f1db3ebaae5b52c9512eec5b31139857efe9f13637b57ee"
+          },
+          {
+            "relative_path": "api/Robot/v39/HansDriver.pyc",
+            "sha256": "86e267d7db343c8dd24cd1caa187a6d78c88ad37fc2d8a486d73c2cd5ec01682"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "hansrobot controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Hans.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Elfin E15",
+          "manufacturer": "Han's Robot",
+          "variant": "",
+          "path": "Components/Han's Robot/Robots/Elfin E15.vcmx",
+          "type": "Robots",
+          "payload": "15",
+          "reach": "700.0",
+          "vcid": "139b013b-aee6-4d40-84a2-ba4c53636a9d",
+          "library_assets": [
+            "6deaed1b-77d1-5f7b-bd94-1cd9c5a89bdc"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Elfin E15.vcmx",
+        "path": "simready_usd/Elfin E15.vcmx",
+        "sha256": "908a00ef876e71daddb859365916672a21e9dcfec635a3e3d3793935e575347c"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

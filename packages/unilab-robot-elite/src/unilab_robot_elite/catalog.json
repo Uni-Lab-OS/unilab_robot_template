@@ -1,0 +1,472 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "elite",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ec616": {
+      "title": "Elite Robots EC616｜多源合并",
+      "asset": {
+        "asset_id": "8a317936-abeb-55b9-a94f-22f6dee085a5",
+        "package_digest": "78279e13c4bd3f27d13b67064a7bbdc6c3dc242a4abfe169e312606457d05869",
+        "package_path": "04_设备/elite_robots/ec616__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec616/module.json",
+      "module_sha256": "8fc43dba0162cef0c8a12616dd32ad17ccb7148f0b24ce252764c06e7929fdb2"
+    },
+    "ec63": {
+      "title": "Elite Robots EC63｜多源合并",
+      "asset": {
+        "asset_id": "a15b74a2-a7b3-51ec-81d1-4737a40a2444",
+        "package_digest": "43637fc9855198baf2763a3e45006b6f24638bc08d534cc758fef8ad109d6bcd",
+        "package_path": "04_设备/elite_robots/ec63__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec63/module.json",
+      "module_sha256": "5d8e7036ae45fe5dd43bea8f477cac27c1a9fba1d82f7787a190d322c1e8e3c7"
+    },
+    "ec64:19": {
+      "title": "Elite Robots EC64-19｜多源合并",
+      "asset": {
+        "asset_id": "512b9e88-0fea-50f5-841d-e07bff2b71fa",
+        "package_digest": "64b6ef50e13ae688c036bec534f44d205fe7c7045ae9d9360b658f86b1ddcd30",
+        "package_path": "04_设备/elite_robots/ec64_19__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec64_19_201289fc/module.json",
+      "module_sha256": "808bafd6abca2a8c94771b437b5a99c5ec773ec7987c0241954a11d106df90f4"
+    },
+    "ec66": {
+      "title": "Elite Robots EC66｜多源合并",
+      "asset": {
+        "asset_id": "711d0d6a-f5ba-538a-b13a-ece7aa020ec8",
+        "package_digest": "e25b158d14e020fad86d24e3704067fd1ff437c5d15da4964dca1709eacabe02",
+        "package_path": "04_设备/elite_robots/ec66__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "revalidation_required_after_asset_revision"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec66/module.json",
+      "module_sha256": "b17a8298d17e788130bbabc26805fb543c4f2cbdf9ae171482301f9365cd68f3"
+    },
+    "ec68:08": {
+      "title": "Elite Robots EC68-08｜多源合并",
+      "asset": {
+        "asset_id": "2725117e-3d0b-597a-90af-6de39478d193",
+        "package_digest": "ea9e1696d52d36e71336d51d7b24591f00dd7a603ba7a28597ccdc3c6d4f4e8e",
+        "package_path": "04_设备/elite_robots/ec68_08__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec68_08_c680676a/module.json",
+      "module_sha256": "aa5131da92b054a68f1919028b0a78bf352ed6d3f9c84b5794ab596f2d8e1cca"
+    },
+    "ec612": {
+      "title": "Elite Robots EC612｜多源合并",
+      "asset": {
+        "asset_id": "86f949c2-c74d-5604-b321-5c27905b439d",
+        "package_digest": "521167bcc8881cca774caf0ce37f568f2d5bc51f0f894fbe1c6921a3fb42744d",
+        "package_path": "04_设备/elite_robots/ec612__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ec612/module.json",
+      "module_sha256": "77d7806d1a0024330b2b5013b08127b6a9a7d438953a8498e81363fea8af6766"
+    },
+    "cs530h": {
+      "title": "Elite Robots CS530H",
+      "asset": {
+        "asset_id": "caa72092-3634-5484-acd9-eb372dd874a7",
+        "package_digest": "d44b80e24b52b3121e2599a37f996bac6d057a3978f77174cb6f53f3ef4b9320",
+        "package_path": "04_设备/elite_robots/cs530h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs530h/module.json",
+      "module_sha256": "30a7882b6c880d5ec496c67c2510b0dc96fecacdcb6d5a497ba543cf5312089f"
+    },
+    "cs530hv1.1": {
+      "title": "CS530H_v1.1",
+      "asset": {
+        "asset_id": "29bc1ee3-ed39-5b7b-8916-b88cd48b3aed",
+        "package_digest": "fae5222a92bc9741ff04a36abe1fd01912bbf448c4d4abd21eb91a021b82bde5",
+        "package_path": "04_设备/elite_robots/cs530h_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs530hv1_1_fb17a617/module.json",
+      "module_sha256": "7f69131f0e207a633eaa9aa38935e293267b8906799e1b1999eeefe23215884f"
+    },
+    "cs530hv1.2": {
+      "title": "CS530H_v1.2",
+      "asset": {
+        "asset_id": "95fa1c4e-c119-5c11-8756-fa2ec8f42ac5",
+        "package_digest": "387df695d20f85b659925636316b1e33663e66f4c489578cf59bf96aaf88d45f",
+        "package_path": "04_设备/elite_robots/cs530h_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs530hv1_2_411b5e66/module.json",
+      "module_sha256": "722d29a0ff54a4c4e245cd48112f7f6d5143990dc545e3a707705304d2335acf"
+    },
+    "cs612": {
+      "title": "Elite Robots CS612",
+      "asset": {
+        "asset_id": "f8272f34-a03d-5123-a6cd-e1f3cdad0c89",
+        "package_digest": "af7214bc594c8227a4d4d0cebf8814188872884d2a92e7d61165c1a8e6d1e8c9",
+        "package_path": "04_设备/elite_robots/cs612__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs612/module.json",
+      "module_sha256": "eda064d941e94d6532b3832b633d06499e7cf428103d68fbd0801e75c1b62e42"
+    },
+    "cs612v1.1": {
+      "title": "CS612_v1.1",
+      "asset": {
+        "asset_id": "1f8b6d50-070a-536e-b086-b09756bd3e28",
+        "package_digest": "18c7d7db713a4245b2343f9b3e2a0332801b0cacd768b28cd3416db37575b6e7",
+        "package_path": "04_设备/elite_robots/cs612_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs612v1_1_6eb33d7a/module.json",
+      "module_sha256": "d362dc12cff8d8a9be5275731dcef16d82863027a2eb8dfaaba361121479fd47"
+    },
+    "cs612v1.2": {
+      "title": "CS612_v1.2",
+      "asset": {
+        "asset_id": "23e7d6a7-c1d6-5934-903b-4bd5f2220472",
+        "package_digest": "d9872513cad7ede65d573f9c50f81e425e640c46a3b99d9172f9c2e047cdd49d",
+        "package_path": "04_设备/elite_robots/cs612_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs612v1_2_a1fecefa/module.json",
+      "module_sha256": "a76c5a6b833a056dc912a281af24e16ca396e6b7c98c63cbe4d13017f7f87165"
+    },
+    "cs616v1.1": {
+      "title": "CS616_v1.1",
+      "asset": {
+        "asset_id": "47373428-b4af-5b2d-8ce0-bb485fae94ae",
+        "package_digest": "38fc1f01df48e6e23d05c7c6bf675b3fdc91e79afa3e13abf8100b80e23ec875",
+        "package_path": "04_设备/elite_robots/cs616_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs616v1_1_808cc781/module.json",
+      "module_sha256": "42b888c6c5350e88942e93d2ee1d3c80ab46af6be37ce0484a2f4eb60d88a20f"
+    },
+    "cs616v1.2": {
+      "title": "CS616_v1.2",
+      "asset": {
+        "asset_id": "fee25ada-65de-50b3-8a94-eca3c1a11b59",
+        "package_digest": "8d38976b44c85532dfbe52db7a9e6c0ea81e170eac91a2fa82eaa5e4cabaee74",
+        "package_path": "04_设备/elite_robots/cs616_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs616v1_2_4e847871/module.json",
+      "module_sha256": "93a0e0c02f48e4e037e068f7ed45039461095e53f7a6574716bd58733d180658"
+    },
+    "cs618v1.1": {
+      "title": "CS618_v1.1",
+      "asset": {
+        "asset_id": "7b632580-de5f-5d13-86d5-d7adddc9a6e8",
+        "package_digest": "3fb69bc4fcb8deebf3dd222dff44a795497d2dd9d9e9876916d1a990586b0e3a",
+        "package_path": "04_设备/elite_robots/cs618_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs618v1_1_f59b7149/module.json",
+      "module_sha256": "54756a823d35a9c95c36166610ce28be25b604b3d46e242204c21f1e242cef52"
+    },
+    "cs618v1.2": {
+      "title": "CS618_v1.2",
+      "asset": {
+        "asset_id": "5df0ae87-c530-58de-8702-0c1811ddeee2",
+        "package_digest": "3f73b79190b577eaca5df2c7324101c2e63172dbc5b3e60a5807ed7f67ccae77",
+        "package_path": "04_设备/elite_robots/cs618_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs618v1_2_bad2980b/module.json",
+      "module_sha256": "71662773b24de396cf40e82bb50fbfd12d6290ffa3d7a5514fccc01510513ce1"
+    },
+    "cs620": {
+      "title": "Elite Robots CS620",
+      "asset": {
+        "asset_id": "1cccd56f-35c0-5c83-8e2d-805136c73282",
+        "package_digest": "3cdbe26c5d2fdff284729ce943ec73b2b8b643c35bc90e253d4279e2615a29d2",
+        "package_path": "04_设备/elite_robots/cs620__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs620/module.json",
+      "module_sha256": "6f701e8813c200026a32a1e6912a53247c0edc65999789dbc0a92e57d277ae2d"
+    },
+    "cs620v1.1": {
+      "title": "CS620_v1.1",
+      "asset": {
+        "asset_id": "eae52c30-9aff-5a3d-a635-d8e64c571daa",
+        "package_digest": "5486ee2d8e725e6eebf315001beb9d60adda93ee18f1040744557342252422f6",
+        "package_path": "04_设备/elite_robots/cs620_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs620v1_1_028d8f83/module.json",
+      "module_sha256": "f36ab5377cb2c5be5dc6606d98712e08c3f1dd0da5353591707b267411664970"
+    },
+    "cs620v1.2": {
+      "title": "CS620_v1.2",
+      "asset": {
+        "asset_id": "26d6adf1-7fb5-5166-b8a6-148d9c330c59",
+        "package_digest": "a0e29eb1b32c887cf82f2f116ff8a4b380ba56503b09ab9c4759080f18de3dd7",
+        "package_path": "04_设备/elite_robots/cs620_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs620v1_2_eac948cd/module.json",
+      "module_sha256": "dcae2c519bb96707da39dc50e3039c1af15424197283bea59a448c3692493c2f"
+    },
+    "cs625": {
+      "title": "Elite Robots CS625",
+      "asset": {
+        "asset_id": "cc30e4b3-9094-5f5d-a911-5297ee15d4ef",
+        "package_digest": "8acb733d0fb8f06fd5e2c0bdba4db66f861ba08c7e6ca650c5f871211edd733e",
+        "package_path": "04_设备/elite_robots/cs625__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs625/module.json",
+      "module_sha256": "9d70f9ca0b9309cf3cf8b8d43f1e1d0989ce9e1066af6fdd3d8413fb4a7aa0c2"
+    },
+    "cs625v1.1": {
+      "title": "CS625_v1.1",
+      "asset": {
+        "asset_id": "730ee850-1355-5a47-a023-bea30f1ce3b4",
+        "package_digest": "7ed6940fc2c3a5e516c5e57fd4eec168d92da6931cfb4e7be433073ebf796aa0",
+        "package_path": "04_设备/elite_robots/cs625_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs625v1_1_25a42baa/module.json",
+      "module_sha256": "1ef07ce6467cc1d6374d3bf22015173719d130670124cd69c72cbf797ea6848f"
+    },
+    "cs625v1.2": {
+      "title": "CS625_v1.2",
+      "asset": {
+        "asset_id": "b3c15e0d-c0ca-5d32-81ca-d21e356300d5",
+        "package_digest": "dec3aa63402cf63f35554d21ef6072e47d4f233d1b4afaef6409bbe48e2e43bf",
+        "package_path": "04_设备/elite_robots/cs625_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs625v1_2_418083e4/module.json",
+      "module_sha256": "2e8360760714657dafcf38aa24c7fab525d296446c253f0bc5885566b0cc976c"
+    },
+    "cs63": {
+      "title": "Elite Robots CS63",
+      "asset": {
+        "asset_id": "124ef91e-1b02-5855-9adb-eeea653fca33",
+        "package_digest": "503a7d5a21fec444d846e6ba1e82f56fda6ca6a9e40be2060a397c4eefa01985",
+        "package_path": "04_设备/elite_robots/cs63__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs63/module.json",
+      "module_sha256": "2dc934429e4b6fd6d64a585bd9623973ea589a73a072dbbcf360e7044d0758a0"
+    },
+    "cs63v1.1": {
+      "title": "CS63_v1.1",
+      "asset": {
+        "asset_id": "03417ad4-bcbc-5059-a2b8-5feeed486c90",
+        "package_digest": "c0a7466d89092fc78528b95e28826b4e8b7fac371901d60ea1a699a8fc2068b2",
+        "package_path": "04_设备/elite_robots/cs63_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs63v1_1_8d60e0f8/module.json",
+      "module_sha256": "99c2dcb392807eed4c9cb0699c9b78e801668e3864d72a05d58066c453103c32"
+    },
+    "cs63v1.2": {
+      "title": "CS63_v1.2",
+      "asset": {
+        "asset_id": "b86eb99c-0b8d-579f-8d53-a68f678bae6a",
+        "package_digest": "486ed7cd5517ec2d30912e8b85babfb2a1c29e7ab298605a508c21a473ed16e5",
+        "package_path": "04_设备/elite_robots/cs63_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs63v1_2_3d119cb7/module.json",
+      "module_sha256": "8705a9b82599b20324bea7c9ad7cfbb547ab45f2f7a480009dcbcf9dc31ef77f"
+    },
+    "cs66": {
+      "title": "Elite Robots CS66",
+      "asset": {
+        "asset_id": "259d9883-17dc-54c3-b578-782dff0175cc",
+        "package_digest": "10a3eb8a9d39c416bfebc48a8293a019822906c64f49be1678ca2a285714f906",
+        "package_path": "04_设备/elite_robots/cs66__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs66/module.json",
+      "module_sha256": "25e8b0400b43d7d937c759ed6669efcfb82cbe53f4c8da36961f8707d560872e"
+    },
+    "cs66v1.1": {
+      "title": "CS66_v1.1",
+      "asset": {
+        "asset_id": "4f9e8745-d9a0-528e-bc54-9af99f05e32e",
+        "package_digest": "6f654790933d6b46272fadae18d7244cdd6319a94e39e504da8bc917b20ebe05",
+        "package_path": "04_设备/elite_robots/cs66_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs66v1_1_023bd8a7/module.json",
+      "module_sha256": "5d37a8de6fc6447ed215146abf058ee2fef2d38735c4f7c80a84eee36034a7b2"
+    },
+    "cs66v1.2": {
+      "title": "CS66_v1.2",
+      "asset": {
+        "asset_id": "d4c178ae-7601-54aa-b3b5-bd89d1f0c6eb",
+        "package_digest": "7577706acb653c88d1c46179a26f355a07584693ecec1bda2fa497af988f99f7",
+        "package_path": "04_设备/elite_robots/cs66_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs66v1_2_3e54b148/module.json",
+      "module_sha256": "9e12d8e9158938ca6522d0be09f8e5c420217fbad60a0b9e8c36cb037fab0317"
+    },
+    "cs68v1.1": {
+      "title": "CS68_v1.1",
+      "asset": {
+        "asset_id": "87bcffef-eca3-5546-bf30-26683e5e6aa5",
+        "package_digest": "0b8e1d922bc6a05eda40940cdf65d5ab5ee97fc7223df90f33d7600a9ec839a7",
+        "package_path": "04_设备/elite_robots/cs68_v1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs68v1_1_340ce4f0/module.json",
+      "module_sha256": "360953d8e979c6b7884f0c2a7418287e57e3903424b1b00d5c1ee41cbc288831"
+    },
+    "cs68v1.2": {
+      "title": "CS68_v1.2",
+      "asset": {
+        "asset_id": "e69976a7-35b8-57ab-93eb-74e98667c4a8",
+        "package_digest": "e7059c016258529c7d55232b1234fa56adc76248cc18078b0a7641938d9288ea",
+        "package_path": "04_设备/elite_robots/cs68_v1.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cs68v1_2_e07b5d08/module.json",
+      "module_sha256": "144b262e7d6e14c242c901f7fc295bfa2fc07bb6710e21d81fe536e9da310e5f"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "eli_cs_robot_moveit_config_8d8422dae6",
+      "manifest": "source_profiles/eli_cs_robot_moveit_config_8d8422dae6/source.lock.json",
+      "sha256": "19dffa6984d91bd630953421cd35464115bd52a2063eceade632a94cbcf2be18",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

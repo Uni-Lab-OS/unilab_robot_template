@@ -1,0 +1,164 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "estun_moveit_config_b07a6efb47",
+  "source": {
+    "url": "https://github.com/ESTUN-R-D/estun_ros2.git",
+    "commit": "2bfd09fe4fc704b3305116a197144478c31fcb86",
+    "path": "robots/estun/ros2_driver/estun_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "55e1b857edb3fcb997417a7b45b4baecdd7dfcde37ce9e3a818fb4682ea86cdd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ER20-1780-A6/ER20-1780-A6.srdf",
+      "sha256": "6423e0ccc17167519d7f948835c4965a76793b534ba8bf49999214b44374399a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER12-1510/iER12-1510.srdf",
+      "sha256": "5fd03863ec0dacc989bc6ea0fd9f9028ca23ba5339721067062514664304dd0a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER15-1430-MI/iER15-1430-MI.srdf",
+      "sha256": "caa0e37b8ff012ec3df16451b9e39898bc948c119f281684b6bb411a0a55232e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER20-1200-MI/iER20-1200-MI.srdf",
+      "sha256": "1f257d2ed9a1d1aa1e8743f754b072fdb652939f405d7a55a2c51f291cb59d30",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER20-1760/iER20-1760.srdf",
+      "sha256": "37e5003427c7e2cf35835b18ac246bec81f58834d4346285cda4e3888184aff4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER20-2300-HI/iER20-2300-HI.srdf",
+      "sha256": "7664e901538122e665a786a09430191523786cb679237f9b6c5b8a1632e9596b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER30-2700/iER30-2700.srdf",
+      "sha256": "a2d99087b909c58e50b3d38aa0b034433f24023f586318697c909a801d871016",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER45-2200-BD/iER45-2200-BD.srdf",
+      "sha256": "ef8aea7c2599802b0691dde1e22f4ff34afb949923f82d9bcccc216b4fbc687b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER7-910-MI/iER7-910-MI.srdf",
+      "sha256": "d8b358cf364d8a3d9d58f5f6f56e23fd234f5c32382dffddc0eecb4b565499c6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/iER8-720-MI/iER8-720-MI.srdf",
+      "sha256": "392458d908924aa33ec16809255827ef2e32c4f0dacfaaa17822fc39c4f91c9b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "0d1ae49e34e1ebe8700aab28c6e1e7c249aeb46f7ece4d64bc5c62311ac39f84",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "8de4ab336147421c94226aaf2dfc89f6bd80d99ee52bd2119ba6b1cc77d3e12f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "ca1178f2d1757ec4d5e2f559b4695f82ecce3216a0c0a1d24f5aa8a67b8938a6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "1f54fd85af58b98026e30a31a6cb8048528f5530e9a58fed0fd4e2a2909a9159",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_planning.yaml",
+      "sha256": "a8d36706e07ea4ff54d4dcb6ec62d3457e0192406f9dfec8e04ada0418396fbe",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/servo.yaml",
+      "sha256": "3bf07c7abd8412285bcfc66ce873331610b481b6bf2f374a7a4d8858b36ac8e7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch.py",
+      "sha256": "9850bc02c1c81dccfc7a8fe2fc0c35de04dc3684247148f08fa53e1c68e4ec00",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "d4f7195eaeec355b240b745525729975b895beffa73a0f91ed0fe22429d12733",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "9189022c427dde4055925c67a2b461b4025de9a16bc4b5c4c8105a668bf0c85f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "dbd8c4e1b2de786a3dcbb163166db6d802f2d3119c40472f016aebab14fc4711",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "f676ef5806de22e3ebc99b16c5455e4a6c5c6e8706db21173b36cd3ef1280192",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_config_contracts.py",
+      "sha256": "cb110b01a9ae574a934a2ecee40aa809569d06b23cd9459ba7e4b12730d430c5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_control_mode_contract.py",
+      "sha256": "696e743283b39cbe529d20d8d686d25f73537df44bf61688ea1cda8fe4caab72",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_controller_mode_matrix.py",
+      "sha256": "6db295000b17ae2165f39e6e65a0280a8e1466fcba45355d6736b3a13202b6f0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_controller_state_converger_logging.py",
+      "sha256": "bf11562ce3e62c5a2e0ee30b28bc07bab126e52f87bc472907282fd495b5957b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_estun_controllers_contract.py",
+      "sha256": "35295d52e30bc6ebd6ae307cbee34531cee9f4be8992404763d7ca7fdaabaedc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_launch_logic.py",
+      "sha256": "05a876f98aa760ca3ed875843192ba9779ecb25bef383c0d0f430f39e5f222f1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_message_interface_contracts.py",
+      "sha256": "1ae7831331f6b1b998a4c13e47d12731d3f2c5fce5c9d289d9e11c8b8849615f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "b7d0373f53d8d213519f23184b1fe9d1dc7fb3fe250cc5d970f6b9d32b5a112e"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "jaka",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "zu12": {
+      "title": "JAKA Zu12｜多源合并",
+      "asset": {
+        "asset_id": "567b9a8f-1a4b-5803-884e-517b0011c7b7",
+        "package_digest": "78c0292d6d4788896b8cdcd4447e949a5f16453bd060b3beea2a67536d1d1b29",
+        "package_path": "04_设备/jaka/zu12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/zu12/module.json",
+      "module_sha256": "9b3c0d93a3e41bfe61293c11f045124ff147f0778025b0216a8fd769452c4a0c"
+    },
+    "zu18": {
+      "title": "JAKA Zu18｜多源合并",
+      "asset": {
+        "asset_id": "7b9477df-f4a3-561c-8d82-b6b5c1b91321",
+        "package_digest": "5ef87b702de38436355efe6ccbbc7f37daecc0446b36836a12688b5fac4cb474",
+        "package_path": "04_设备/jaka/zu18__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/zu18/module.json",
+      "module_sha256": "9606e21a1637505afdf8aa61c6c0a82bc96afc5692fbbf55bbf19525d0e195e9"
+    },
+    "zu3": {
+      "title": "JAKA Zu3｜多源合并",
+      "asset": {
+        "asset_id": "96c62fdb-a6f0-5351-b6c6-5027639d4e1d",
+        "package_digest": "6bec07e9aa58ad337ac66793c3470a917d0f0d84af6422424076f0e3433a0ade",
+        "package_path": "04_设备/jaka/zu3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/zu3/module.json",
+      "module_sha256": "54f445c65afed62f95a08158d006e2d5a97f191ce3bc1de0c930be9e5cfd89e8"
+    },
+    "zu5": {
+      "title": "JAKA Zu5｜多源合并",
+      "asset": {
+        "asset_id": "92ff9f16-b283-5f93-aa3a-c26442489652",
+        "package_digest": "92c9973c0da5937115a9fdd0e91d4322a4164cce568d1b5f94dce47d88da8f0b",
+        "package_path": "04_设备/jaka/zu5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/zu5/module.json",
+      "module_sha256": "909ea21131666cca29e6b45a830ed5af4820e2661db66429c65ef7615012b4aa"
+    },
+    "zu7": {
+      "title": "JAKA Zu7｜多源合并",
+      "asset": {
+        "asset_id": "26b00f99-b8b9-544b-a0c8-332f3520a02c",
+        "package_digest": "897f01846daa4ec39c304c5ca1efaf020c74fa8792194714bb74a5c2ecfc4e49",
+        "package_path": "04_设备/jaka/zu7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/zu7/module.json",
+      "module_sha256": "010e41b76901e41cc283bc587a80767a74c742ef2126a62e5a207d70249e1539"
+    },
+    "a12": {
+      "title": "JAKA A12｜多源合并",
+      "asset": {
+        "asset_id": "ad328813-cccd-5144-9d50-dedf72aee803",
+        "package_digest": "dd6d391f709894527b92671b214d55dd9d0ef903fc65fc0f280781685a8ba6be",
+        "package_path": "04_设备/jaka/a12__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/a12/module.json",
+      "module_sha256": "e7c638cd15cf9f9f2fe7f12e591f67117aed9ba265ec51fe70b571044cf4a4cb"
+    },
+    "12l": {
+      "title": "JAKA 12L",
+      "asset": {
+        "asset_id": "c078db78-ea4a-51e9-93ce-290d69cff6e8",
+        "package_digest": "adda6c86609a6024f1876c00e56670b709e9d58324d0eab18c741325b7530a4d",
+        "package_path": "04_设备/jaka/12l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/12l/module.json",
+      "module_sha256": "c231c4814b3f12f62613ed1f7809f20113b2189fa36d4c3df038bb5df45ab010"
+    },
+    "a5": {
+      "title": "JAKA A5",
+      "asset": {
+        "asset_id": "2accfbcb-c1ef-560e-9dde-f6dbb7ca9656",
+        "package_digest": "3975abf2602ce7f04c768729128643bbf97c823a8fd7488e246b69927f0d30e9",
+        "package_path": "04_设备/jaka/a5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/a5/module.json",
+      "module_sha256": "c2cf9aed1c74f2f561be93c60355f97b5df321e4b6ba68980d06aa81bd8ddc0b"
+    },
+    "c12": {
+      "title": "JAKA C 12",
+      "asset": {
+        "asset_id": "a5d24d7d-b4ad-5217-bc70-d610d1d738cb",
+        "package_digest": "206fbc02e9b0b65887833e6d56d144fd57ccf888a40a428e0acbf3aeb80712da",
+        "package_path": "04_设备/jaka/c_12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c12/module.json",
+      "module_sha256": "6f103ba0117f7b6bf1035ab732fb22ba4b192467c9dbc60a7916a6b14715ab25"
+    },
+    "c5": {
+      "title": "JAKA C 5",
+      "asset": {
+        "asset_id": "06a53e2e-84c9-5b1f-b1d8-cf69d9a21c3f",
+        "package_digest": "03112f0f52dd16e6060991fb894f9bdea8e96ed891945ea454233153324a3176",
+        "package_path": "04_设备/jaka/c_5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c5/module.json",
+      "module_sha256": "15bce9a35a41efe4d144ea2437c72ba796dabd81bcf31cfd9003cacc2628c1a5"
+    },
+    "c7": {
+      "title": "JAKA C 7",
+      "asset": {
+        "asset_id": "0b7b5f83-4864-5ab8-bd06-d3cbea44f329",
+        "package_digest": "cb3d542ef5f88f58073fff72612a60f3d3bac5ba93200d20136de86d1adc6fa5",
+        "package_path": "04_设备/jaka/c_7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/c7/module.json",
+      "module_sha256": "1a30a7707c62581071ccde98975454b9b0f22694e2de855d3e584cd8687881a7"
+    },
+    "k1left": {
+      "title": "JAKA K1 Left",
+      "asset": {
+        "asset_id": "ac393db8-3fd7-55bc-854d-a26787204126",
+        "package_digest": "53552922947b8b9cdd236e915481b61a2369ba3bff9c2f79df88540c119f8b10",
+        "package_path": "04_设备/jaka/k1_left__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/k1left/module.json",
+      "module_sha256": "e53d9fd5905ccbc508ea251965f2aa5a9da565773fcae9070185d888da77131c"
+    },
+    "k1right": {
+      "title": "JAKA K1 Right",
+      "asset": {
+        "asset_id": "77d5fc2f-fd6f-51b3-8748-a81b1e6d52fa",
+        "package_digest": "3180f4723669174b0c95aaaf17ce04cd5290116d00b43844217909bc3fce141c",
+        "package_path": "04_设备/jaka/k1_right__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/k1right/module.json",
+      "module_sha256": "38e11f09de48e775b6e1e0a8e5652c755434a52a2f9e4727d89f67cee550d8bc"
+    },
+    "max40": {
+      "title": "JAKA MAX40",
+      "asset": {
+        "asset_id": "535087fc-ca83-50da-8a43-6a284430217c",
+        "package_digest": "d8c86b7feff06cddac3147f05ea4bb8bf1203e1c0198c152679b58688f338ced",
+        "package_path": "04_设备/jaka/max40__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/max40/module.json",
+      "module_sha256": "caefa2a077e6c8265f80e3f22b3082b198c94ecf86a9e00de02f49388387ced2"
+    },
+    "minicobo": {
+      "title": "JAKA MiniCobo",
+      "asset": {
+        "asset_id": "c03b0d07-7995-562e-8a91-8c03866ab39c",
+        "package_digest": "ac16e4231d9b256d40bea82ec4df65c5eb35f9249c97904ad034cb69d0ff334b",
+        "package_path": "04_设备/jaka/minicobo__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/minicobo/module.json",
+      "module_sha256": "80e55f67f1785015d104aada2f86cc8069a090a9e54c9c095e8b4924ca3877b6"
+    },
+    "pro16": {
+      "title": "JAKA Pro 16",
+      "asset": {
+        "asset_id": "d2267a8e-e95e-51c7-a06f-18e97c67e801",
+        "package_digest": "7a7c6f2fe088fbacee8800ddec000cba2ec610921c9ef9d18609f7306314f760",
+        "package_path": "04_设备/jaka/pro_16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pro16/module.json",
+      "module_sha256": "ac94b089394637fd1f1b581f1ee28710b273b76272cc1bf6716299b52d24e355"
+    },
+    "zu20": {
+      "title": "JAKA Zu20",
+      "asset": {
+        "asset_id": "d9517a4e-5bed-5696-8106-7493c864ee44",
+        "package_digest": "d46a3e302e98d634a692e157f3c0e62318a97be2e99c5f2c9afac03b8aef0a88",
+        "package_path": "04_设备/jaka/zu20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zu20/module.json",
+      "module_sha256": "1ea2d923862ad12d260a9812b6458d5e7ad95d0bf30c47701e1813b0bae5b6b5"
+    },
+    "zu30": {
+      "title": "JAKA Zu30",
+      "asset": {
+        "asset_id": "bea09b2b-bdcd-5ce2-ba14-a575ee74e205",
+        "package_digest": "5f835165b7229360a18338d9891ff16fd9f7b46849242939e105eb0a164f22e6",
+        "package_path": "04_设备/jaka/zu30__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zu30/module.json",
+      "module_sha256": "8b480dab34704c0db93cccf7767db475ef4c381e594c3768b69549063650fc8e"
+    }
+  },
+  "source_profiles": []
+}

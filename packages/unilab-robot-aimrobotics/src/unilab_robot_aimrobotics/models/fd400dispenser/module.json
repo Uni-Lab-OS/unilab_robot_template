@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "aimrobotics",
+  "model": "fd400dispenser",
+  "title": "Aim Robotics FD 400 Dispenser",
+  "asset": {
+    "asset_id": "34ea388b-e617-5ccd-808c-5dde4429aec8",
+    "package_digest": "eed6d7c598ff38fcec71db54b748fbc70da1209c58a3703a8d811fc7bba0288b",
+    "package_path": "01_零部件/aim_robotics/fd_400_dispenser__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "34ea388b-e617-5ccd-808c-5dde4429aec8",
+      "package_digest": "eed6d7c598ff38fcec71db54b748fbc70da1209c58a3703a8d811fc7bba0288b",
+      "package_path": "01_零部件/aim_robotics/fd_400_dispenser__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5ad3bd8dbd9d9c6f853bcd2c6860d73917899694684bf2bf2c83351e692d25c3",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fd_400_dispenser__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FD 400 Dispenser",
+          "manufacturer": "Aim Robotics",
+          "variant": "",
+          "display": "Aim Robotics FD 400 Dispenser",
+          "path": "tools/models/Aim-Robotics-FD-400-Dispenser.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "34ea388b-e617-5ccd-808c-5dde4429aec8"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Aim-Robotics-FD-400-Dispenser.tool",
+        "path": "simready_usd/Aim-Robotics-FD-400-Dispenser.tool",
+        "sha256": "5f8cf0495d78fe78c37d71ea8c21413bf0c343c4005b3ec3cb1be24d35ef1189"
+      }
+    ]
+  }
+}

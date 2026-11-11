@@ -1,0 +1,391 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "abb",
+  "model": "irb1660:4:1.55",
+  "title": "ABB IRB 1660-4/1.55",
+  "asset": {
+    "asset_id": "48112c39-5f3c-511d-a537-917b5d71abf1",
+    "package_digest": "b7b333b0d7f6ef668cf7a90d74910209685e9c12295c9ecf4102d3b3f5d4964f",
+    "package_path": "04_设备/abb/irb_1660-4-1.55__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "48112c39-5f3c-511d-a537-917b5d71abf1",
+      "package_digest": "b7b333b0d7f6ef668cf7a90d74910209685e9c12295c9ecf4102d3b3f5d4964f",
+      "package_path": "04_设备/abb/irb_1660-4-1.55__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -90.0,
+          -238.0,
+          -175.0,
+          -120.0,
+          -400.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            481.5
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            700.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            110.0,
+            0.0,
+            678.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            135.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          150.0,
+          79.0,
+          175.0,
+          120.0,
+          400.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2deb147de26eb33fa60ded67fba67bca873e17c635b92a39d4685d29c3072ade",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/irb_1660-4-1.55__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ABBDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ABBDriver.exe",
+        "sha256": "2822b76d242d1a5fe6c84d05cfbb8902dbc8e22e9145356fd0685c9943ad9891",
+        "bytes": 59392,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiabb",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiabb.exe",
+        "sha256": "bf67f4b01a4012d2d80e96cceec1dc6790b8e9572fb5dcd3f9262b84376fe4aa",
+        "bytes": 40960,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:libegm",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/libegm",
+        "repository_url": "https://github.com/ros-industrial/abb_libegm.git",
+        "code_tree_sha256": "05ae772f6b060a4851e32c2808d09118917653ef6de48eb28b9958e4688383a3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "faf76f7dc89d5465fe3be9bc5bfd91aeef2ad885092c406c27cadf47dbd9ebe2"
+          },
+          {
+            "path": "proto/README.md",
+            "sha256": "62ba67ae9bc07e42cda6ba6b9daa6eb10e5700924acd80a07c36f6cab223d7a7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:librws",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/librws",
+        "repository_url": "https://github.com/ros-industrial/abb_librws.git",
+        "code_tree_sha256": "73bb9876797ddd09ca17ab1bcd4cda66e35a2e8f48767247005a608201fb94df",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d90025fae893d0591aa64e72fb3f381c5b2215431558116b701ca48d952a1d7b"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/ros2",
+        "repository_url": "https://github.com/PickNikRobotics/abb_ros2.git",
+        "code_tree_sha256": "615b7308b930f0e4a2134caef7ac704212b289bdebe3d0e69727f640aa109f63",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "5c7b360ab136ec66474ed2ac9ebd32717d4135047026f80c414482e43a306d16"
+          },
+          {
+            "path": "docs/README.md",
+            "sha256": "33bd595a1fbe5c3d7d3a3c1da3d3bae09f9db13bf1a450d04c6514096f46d713"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "ABB_RAPID_IRC5.py",
+      "ABB_RAPID_IRC5_Robtargets.py",
+      "ABB_RAPID_OmniCore.py",
+      "ABB_RAPID_S4C.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "IRB 1660-4/1.55",
+          "manufacturer": "ABB",
+          "variant": "",
+          "display": "ABB IRB 1660-4/1.55",
+          "path": "robots/models/ABB-IRB-1660-4-1-55.robot",
+          "type": "robots",
+          "payload": 4,
+          "reach": 1550,
+          "axes": 6,
+          "library_assets": [
+            "48112c39-5f3c-511d-a537-917b5d71abf1"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ABB-IRB-1660-4-1-55.robot",
+        "path": "simready_usd/ABB-IRB-1660-4-1-55.robot",
+        "sha256": "42025c1867878760a6c03bdd5daef95d8ea9a938abb635e04b9316677223bfcb"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

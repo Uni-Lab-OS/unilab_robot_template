@@ -1,0 +1,24 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "codianrobotics",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "d2:1000": {
+      "title": "Codian Robotics D2-1000｜多源合并",
+      "asset": {
+        "asset_id": "06d2c708-516d-5d97-aae9-cc6aa04c548c",
+        "package_digest": "1d2e3c6ccac3e46b12deb4a1c1c6afb0e819b514e768087b84ddab574ab9b8ae",
+        "package_path": "04_设备/codian_robotics/d2_1000__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/d2_1000_36fe8d8f/module.json",
+      "module_sha256": "9db80c0eb123de276867878280bac5f7968bccee5ccdaf8def2e9687e00a3505"
+    }
+  },
+  "source_profiles": []
+}

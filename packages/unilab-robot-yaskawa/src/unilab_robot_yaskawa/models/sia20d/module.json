@@ -1,0 +1,866 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yaskawa",
+  "model": "sia20d",
+  "title": "Yaskawa Motoman SIA20D｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "d0ff6a11-bd75-5944-a7dc-6dedb5248765",
+    "package_digest": "7bad4995dbec5af15b7d5557406b1f06161b91968b1c7a8cc2e2a5bffbacd4bb",
+    "package_path": "04_设备/yaskawa_motoman/sia20d__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d0ff6a11-bd75-5944-a7dc-6dedb5248765",
+      "package_digest": "7bad4995dbec5af15b7d5557406b1f06161b91968b1c7a8cc2e2a5bffbacd4bb",
+      "package_path": "04_设备/yaskawa_motoman/sia20d__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "SIA20D",
+              "source": "robots/models/Yaskawa-Motoman-SIA20D.robot",
+              "source_family": "RoboDK",
+              "value": 7.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 7.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "SIA20D",
+              "source": "robots/models/Yaskawa-Motoman-SIA20D.robot",
+              "source_family": "RoboDK",
+              "value": 10.0
+            },
+            {
+              "model": "SIA20D",
+              "source": "Components/Yaskawa/Robots/SIA20D.vcmx",
+              "source_family": "VC",
+              "value": 20.0
+            }
+          ],
+          "note": "Exact SIA20D, DX100, Yaskawa DS-404-D June 2011 page2.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 20,
+          "verification": [
+            {
+              "authority": "OEM-authored original brochure on distributor archive",
+              "page": 2,
+              "reviewed_at": "2026-11-08",
+              "scope": "payload; no per-link inertia inference",
+              "sha256": "2f290cc91875e6309bf1504a465640c8005edfc00c3110eb757accc17d771412",
+              "title": "Yaskawa SIA20D DS-404-D June2011",
+              "url": "https://archiv.robolution.eu/letoltes.php?name=1491-motoman-sia20d-robot-adatlap.pdf&type=media"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "SIA20D",
+              "source": "robots/models/Yaskawa-Motoman-SIA20D.robot",
+              "source_family": "RoboDK",
+              "value": 910.0
+            },
+            {
+              "model": "SIA20D",
+              "source": "Components/Yaskawa/Robots/SIA20D.vcmx",
+              "source_family": "VC",
+              "value": 910.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 910.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -400.9,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -180.0,
+          -110.0,
+          -170.0,
+          -130.0,
+          -180.0,
+          -110.0,
+          -180.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            400.9
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            490.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -0.0,
+            0.0,
+            420.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            180.0
+          ]
+        ],
+        "mechanism_type": 3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          180.0,
+          110.0,
+          170.0,
+          130.0,
+          180.0,
+          110.0,
+          180.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 7,
+          "converted_parameters": [
+            {
+              "asset_id": "57acd243-62fb-5534-8d32-9cf27cb92b37",
+              "entrypoints": {
+                "usd": "simready_usd/sia20d__r001.usdc"
+              },
+              "package_digest": "730f055ddf02262c68a8877aeb9335de4036692ee8fb4eb2fbd1b93e19a4a790",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -400.9,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300,
+                      320
+                    ],
+                    "seven_axis_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree"
+                  ],
+                  "joint_source_indices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -180.0,
+                    -110.0,
+                    -170.0,
+                    -130.0,
+                    -180.0,
+                    -110.0,
+                    -180.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      400.9
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      490.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      -0.0,
+                      0.0,
+                      420.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      180.0
+                    ]
+                  ],
+                  "mechanism_type": 3,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+                    "joint_input_mapping": "0x14055c4d0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+                    "seven_axis_core": "0x1405b7280",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+                  "raw_controller_mapping_fields": [
+                    4.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+                  "upper": [
+                    180.0,
+                    110.0,
+                    170.0,
+                    130.0,
+                    180.0,
+                    110.0,
+                    180.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "35e3a4ddd2882cc1f3443dbd83ca0202866b54175b130ba1581d4cd3d3e8c27c",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 7,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 8
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Yaskawa Motoman SIA20D",
+          "family": "RoboDK",
+          "library_assets": [
+            "57acd243-62fb-5534-8d32-9cf27cb92b37"
+          ],
+          "manufacturer": "Yaskawa Motoman",
+          "name": "SIA20D",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Yaskawa-Motoman-SIA20D.robot",
+            "path": "simready_usd/Yaskawa-Motoman-SIA20D.robot",
+            "sha256": "05ab6d4e36df49d05ece4895af588e8c866ba62f03e784c86d743653d9b1a444"
+          },
+          "path": "robots/models/Yaskawa-Motoman-SIA20D.robot",
+          "payload": 10,
+          "reach": 910,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Yaskawa",
+          "name": "SIA20D",
+          "original": {
+            "family": "VC",
+            "original_name": "SIA20D.vcmx",
+            "path": "simready_usd/source_assets/VC/0_sia20d/SIA20D.vcmx",
+            "sha256": "017b80e8b9e272f7a63fd62c62aaa2aa10a31fa3154c0d68f21cd7d3a2de0cc0"
+          },
+          "path": "Components/Yaskawa/Robots/SIA20D.vcmx",
+          "payload": "20",
+          "reach": "910.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "1ae3de0e-555f-4f26-a7ed-314b82374c9e"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "35e3a4ddd2882cc1f3443dbd83ca0202866b54175b130ba1581d4cd3d3e8c27c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/sia20d__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Yaskawa Motoman SIA20D｜多源合并",
+          "id": "merged_robot_d0ff6a11_bd75_5944_a7dc_6dedb5248765",
+          "metadata": {
+            "asset_id": "d0ff6a11-bd75-5944-a7dc-6dedb5248765",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:MotomanHSE",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/MotomanHSE.exe",
+        "sha256": "bbf58c38493a5678525bfca47b450f9a1d38309f4948ac503aeaa309036cefe1",
+        "bytes": 87040,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimotoman",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimotoman.exe",
+        "sha256": "33a37818f812cb9321716fa31fe575bc05a55dc142cc7802c9ed68f716725ddf",
+        "bytes": 418816,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Motoman.py",
+      "Motoman_Cartesian.py",
+      "Motoman_CartesianOnly.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/yaskawa/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/yaskawa/ros_industrial",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Yaskawa-Motoman-SIA20D.robot",
+        "path": "simready_usd/Yaskawa-Motoman-SIA20D.robot",
+        "sha256": "05ab6d4e36df49d05ece4895af588e8c866ba62f03e784c86d743653d9b1a444"
+      },
+      {
+        "family": "VC",
+        "original_name": "SIA20D.vcmx",
+        "path": "simready_usd/source_assets/VC/0_sia20d/SIA20D.vcmx",
+        "sha256": "017b80e8b9e272f7a63fd62c62aaa2aa10a31fa3154c0d68f21cd7d3a2de0cc0"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "SIA20D",
+                "source": "robots/models/Yaskawa-Motoman-SIA20D.robot",
+                "source_family": "RoboDK",
+                "value": 10.0
+              },
+              {
+                "model": "SIA20D",
+                "source": "Components/Yaskawa/Robots/SIA20D.vcmx",
+                "source_family": "VC",
+                "value": 20.0
+              }
+            ],
+            "note": "Exact SIA20D, DX100, Yaskawa DS-404-D June 2011 page2.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 20,
+            "verification": [
+              {
+                "authority": "OEM-authored original brochure on distributor archive",
+                "page": 2,
+                "reviewed_at": "2026-11-08",
+                "scope": "payload; no per-link inertia inference",
+                "sha256": "2f290cc91875e6309bf1504a465640c8005edfc00c3110eb757accc17d771412",
+                "title": "Yaskawa SIA20D DS-404-D June2011",
+                "url": "https://archiv.robolution.eu/letoltes.php?name=1491-motoman-sia20d-robot-adatlap.pdf&type=media"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            10.0,
+            20.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "yaskawa",
+        "sia20d"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original brochure on distributor archive",
+            "page": 2,
+            "reviewed_at": "2026-11-08",
+            "scope": "payload; no per-link inertia inference",
+            "sha256": "2f290cc91875e6309bf1504a465640c8005edfc00c3110eb757accc17d771412",
+            "title": "Yaskawa SIA20D DS-404-D June2011",
+            "url": "https://archiv.robolution.eu/letoltes.php?name=1491-motoman-sia20d-robot-adatlap.pdf&type=media"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "note": "Exact SIA20D, DX100, Yaskawa DS-404-D June 2011 page2.",
+            "status": "manufacturer_verified",
+            "value": 20
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "57acd243-62fb-5534-8d32-9cf27cb92b37",
+        "original_package_digest": "730f055ddf02262c68a8877aeb9335de4036692ee8fb4eb2fbd1b93e19a4a790",
+        "source": "robots/models/Yaskawa-Motoman-SIA20D.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

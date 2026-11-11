@@ -1,0 +1,141 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "hiwin",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ra605:710": {
+      "title": "RA605-710",
+      "asset": {
+        "asset_id": "abe140e6-c4b2-5baa-bb05-9df25b66b835",
+        "package_digest": "8edbf164b7bd6e1f2a7dccc658444698b401b8982ca6f74ed443c50bb8af550d",
+        "package_path": "04_设备/hiwin/ra605-710__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra605_710_67c77e34/module.json",
+      "module_sha256": "8361089ede7e00d2500c2e1b8f25e65e8230530232c23d9b19e9c35d8f6180d9"
+    },
+    "ra605:710gb": {
+      "title": "HIWIN RA605-710-GB",
+      "asset": {
+        "asset_id": "37a55490-680a-5d1f-be34-85dc70d7f9d9",
+        "package_digest": "8568614e2ab30854b32b34044c97040dbea6fcde3b5eb952009af22a57f41e3a",
+        "package_path": "04_设备/hiwin/ra605-710-gb__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra605_710gb_b329ed1c/module.json",
+      "module_sha256": "aabaa58f035a29d52b6e07c9ed0e483f60507923d47aa1dfbe76f8eb2dc66779"
+    },
+    "ra610:1355ga": {
+      "title": "HIWIN RA610-1355-GA",
+      "asset": {
+        "asset_id": "146774ab-ae31-5054-88de-c4d3a5aa5fd7",
+        "package_digest": "22a5a6cd025e2df543c97235c4ebc58894d3cb15596a65f36154fe8034b5d53b",
+        "package_path": "04_设备/hiwin/ra610-1355-ga__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra610_1355ga_b47f34c3/module.json",
+      "module_sha256": "6798d3ec18f794d2e3e7b5b0e576ebbbd23d94bfec2ec1e040d772328c282708"
+    },
+    "ra610:1476ga": {
+      "title": "HIWIN RA610-1476-GA",
+      "asset": {
+        "asset_id": "a96af3c1-4ebf-5a84-8a89-19f3b4b0fdff",
+        "package_digest": "b0b0f43338169cc758c8753da3397f3273109377854940bc357384580924cf33",
+        "package_path": "04_设备/hiwin/ra610-1476-ga__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra610_1476ga_e7af3c23/module.json",
+      "module_sha256": "74b529a848e032ea487940a30da059a6822e33fb60779b497c7794f058c1019a"
+    },
+    "ra610:1672ga": {
+      "title": "HIWIN RA610-1672-GA",
+      "asset": {
+        "asset_id": "f701a96b-979e-5d27-b956-b0a9a81c8e43",
+        "package_digest": "51cdabb7113397d0ad29ffedc480bd709f9e9b42181595c6e927c65c2892c278",
+        "package_path": "04_设备/hiwin/ra610-1672-ga__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra610_1672ga_1352cc2c/module.json",
+      "module_sha256": "83b170a5d15bad3066df28209ef3e7c7c671720d961da77329a379725201b54e"
+    },
+    "ra610:1869ga": {
+      "title": "HIWIN RA610-1869-GA",
+      "asset": {
+        "asset_id": "238ae4a4-3287-5571-984b-79335535648a",
+        "package_digest": "2bf5ad8418f4c088f3b40e159813ad66eac0728c1bef49eb10edb0c0d719873b",
+        "package_path": "04_设备/hiwin/ra610-1869-ga__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra610_1869ga_0aef520b/module.json",
+      "module_sha256": "18aa516b81d612a32cb12a21d7c56258159d9112b774d337e868940427165199"
+    },
+    "rt605:710gb": {
+      "title": "HIWIN RT605-710-GB",
+      "asset": {
+        "asset_id": "267c54a6-1386-573d-ab3e-2177b41d92f2",
+        "package_digest": "db1ce7c7b98fbb9b07e5027f01e182fa0ae80cb52a0d1f3b50682c49ac891dff",
+        "package_path": "04_设备/hiwin/rt605-710-gb__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rt605_710gb_2e399169/module.json",
+      "module_sha256": "683d7c6e0126f555d73b088fcee70f9ed43f218176728545fc85acffb056eeea"
+    },
+    "rt605:909gb": {
+      "title": "HIWIN RT605-909-GB",
+      "asset": {
+        "asset_id": "54b65e5c-dc2e-5113-a502-4d29c6fa3d63",
+        "package_digest": "5cb19dcb96200f94899e918bd65c79b9a484aa3c1d5cf00bb076893e051c1f72",
+        "package_path": "04_设备/hiwin/rt605-909-gb__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rt605_909gb_e63e6be9/module.json",
+      "module_sha256": "bb17552de0b75c29cd72a9c61b72735672c71809b584ae5d96a4b6d003feea23"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "hiwin_ra6_moveit_config_09ed7dfe64",
+      "manifest": "source_profiles/hiwin_ra6_moveit_config_09ed7dfe64/source.lock.json",
+      "sha256": "721441caa5633c280a182b2052217fdf8a2edca8839096d46532cc66fff85ea8",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "hiwin_rs4_moveit_config_165dfd6259",
+      "manifest": "source_profiles/hiwin_rs4_moveit_config_165dfd6259/source.lock.json",
+      "sha256": "5dd5ff8268ca67d2dafba4914ad6ea147cf06ddf51b5d01095fc3784c57696ef",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

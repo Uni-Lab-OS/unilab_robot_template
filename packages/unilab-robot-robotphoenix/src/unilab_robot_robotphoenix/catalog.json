@@ -1,0 +1,157 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "robotphoenix",
+  "models": {
+    "python450b6": {
+      "title": "Robotphoenix Python450-B6",
+      "asset": {
+        "asset_id": "a1fd6335-bad5-56d4-81f2-c09938c8322c",
+        "package_digest": "a4a31494c3281348a29c4a7b58c0ab6c9aef5295e34664f854adedb465a45fd6",
+        "package_path": "04_设备/robotphoenix/python450-b6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/python450b6/module.json",
+      "module_sha256": "1087a0e5247c31f13a0526c5e3470b6e62ab8d54f61c9437ebe712a642fff963"
+    },
+    "python550b6": {
+      "title": "Robotphoenix Python550-B6",
+      "asset": {
+        "asset_id": "fd455c77-614f-5463-be07-6f0a826f2bfc",
+        "package_digest": "bc12e97e848229cbb579d1250f661a2f096f13fdacebcdc6843ca977c17ceb64",
+        "package_path": "04_设备/robotphoenix/python550-b6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/python550b6/module.json",
+      "module_sha256": "e679a9f7f8f5eea3c3ee622ace59f26d068b6615624b707add48a76921312585"
+    },
+    "python550fb3": {
+      "title": "Robotphoenix Python550F-B3",
+      "asset": {
+        "asset_id": "39301262-d22c-5875-a668-ec0736c1a43f",
+        "package_digest": "9adb708831f1c0400f90141287ab88516429c31961c448b5af897cf9f4e5a800",
+        "package_path": "04_设备/robotphoenix/python550f-b3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/python550fb3/module.json",
+      "module_sha256": "c834faa079d5baea21a7312135c36232584d5a3ebcd62a7c4bcbc50fd0da7f6f"
+    },
+    "python650b6": {
+      "title": "Robotphoenix Python650-B6",
+      "asset": {
+        "asset_id": "291da5fd-a417-5ad7-b085-b4d406a89d6d",
+        "package_digest": "714e295f3fdc05113ebac774e23729f2abeaea0460833687eba79a897ceba244",
+        "package_path": "04_设备/robotphoenix/python650-b6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/python650b6/module.json",
+      "module_sha256": "397ad14e98fad6e58db5b04d31a6e523238efa67f14d1223be18600f199da2dc"
+    },
+    "python800b10": {
+      "title": "Robotphoenix Python800-B10",
+      "asset": {
+        "asset_id": "489cec17-9349-5b60-b4fb-4ab96c617344",
+        "package_digest": "754ad4a35a42346b0e31f875ed9cfb27c861a72a0ca439c11b3d9d4a1ef47c36",
+        "package_path": "04_设备/robotphoenix/python800-b10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/python800b10/module.json",
+      "module_sha256": "eab7c1450ee8cf3699761969f20f32371b837b7f67115bde0a65d8b77229c1a1"
+    },
+    "bat1100s3": {
+      "title": "Robotphoenix Bat1100-S3｜多源合并",
+      "asset": {
+        "asset_id": "0e01a2e6-9ca2-5990-98d1-ffec9dfea5cb",
+        "package_digest": "6265644ce1a4cb230e544569b5de7c3dfb3882e66d9e3f527261cdd93cd6e322",
+        "package_path": "04_设备/robotphoenix/bat1100s3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bat1100s3/module.json",
+      "module_sha256": "dbd15ac8a24104c31b47d7f0489c170136aca19e8a71e5b215efa28bae937186"
+    },
+    "bat1300s6": {
+      "title": "Robotphoenix Bat1300-S6｜多源合并",
+      "asset": {
+        "asset_id": "e97df83a-7777-520c-bc45-5d203c2d2996",
+        "package_digest": "64bbfee824acd16b5ee5e129bc68f6e61e27152339753341e65bc15734e9b6f2",
+        "package_path": "04_设备/robotphoenix/bat1300s6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bat1300s6/module.json",
+      "module_sha256": "15fb6ffb49b208cf77df17518063db157a4647075dc4936869f9d9c570a98a55"
+    },
+    "bat1600s6": {
+      "title": "Robotphoenix Bat1600-S6｜多源合并",
+      "asset": {
+        "asset_id": "a1f49ce0-4575-5ff5-8969-8d4b164c8924",
+        "package_digest": "fca76cdda1ddf7804524ada5a7564813ddd2f9ebf7a289d5fc1bb2dc3834865c",
+        "package_path": "04_设备/robotphoenix/bat1600s6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bat1600s6/module.json",
+      "module_sha256": "1fda2a2e827c566fcc005d672d0f02116fa4a1656b4f142fc1030759c44cfa49"
+    },
+    "bat2000ms15": {
+      "title": "Robotphoenix Bat2000M-S15｜多源合并",
+      "asset": {
+        "asset_id": "c7be512d-7a25-586f-be69-418c0ea82c8b",
+        "package_digest": "3318aa816fb8c63c4981fa91752f9bedcfd09e7a714268a7a285f39a304cf208",
+        "package_path": "04_设备/robotphoenix/bat2000ms15__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bat2000ms15/module.json",
+      "module_sha256": "ae446ac7b38d5acbd1c10af4157707553bdbc73e3d52098ee64507713fae4b6d"
+    },
+    "bat800s3": {
+      "title": "Robotphoenix Bat800-S3｜多源合并",
+      "asset": {
+        "asset_id": "1a2f02fd-7e55-5fd4-bd4b-efc2462c2e58",
+        "package_digest": "67728fde3d24a34ab7427b3cc92f2f267b553398e5bdc760a4a0264c7bcc98a9",
+        "package_path": "04_设备/robotphoenix/bat800s3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bat800s3/module.json",
+      "module_sha256": "d29be80a2033ea2f17b79bd136f639cd5bc20f3ff36482559f3e198d7f50215d"
+    }
+  },
+  "source_profiles": []
+}

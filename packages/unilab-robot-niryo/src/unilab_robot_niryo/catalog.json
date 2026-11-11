@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "niryo",
+  "models": {
+    "ned": {
+      "title": "Niryo NED",
+      "asset": {
+        "asset_id": "5a673f51-7c1f-51d0-90c4-0851066480db",
+        "package_digest": "2c8617719c7683a6ce601bb82fc176c8695f483fb2277c87f21e7019260519f8",
+        "package_path": "04_设备/niryo/ned__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ned/module.json",
+      "module_sha256": "377eaca7dd2892908b57b657b86f8bde81567589895a29907d55bbbcf3c49c88"
+    },
+    "ned2": {
+      "title": "Niryo Ned2",
+      "asset": {
+        "asset_id": "e911e870-e58b-52a7-9ca9-b9ae10df4608",
+        "package_digest": "2abbef2993a420c81627cd6c3c940071a3562ac4594f7227f630f4927fe4c3d3",
+        "package_path": "04_设备/niryo/ned2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ned2/module.json",
+      "module_sha256": "ce6b81df1ace4bf98c453407b919e39fafe8721ea5f830db206843f2d7afab7f"
+    },
+    "one": {
+      "title": "Niryo One",
+      "asset": {
+        "asset_id": "52564060-a0a8-52a4-9536-59919cbe174e",
+        "package_digest": "3c99a8e6ffe01ac4ced7c5e39767468a2ab38603810603bdc6170c8bd615c27a",
+        "package_path": "04_设备/niryo/one__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/one/module.json",
+      "module_sha256": "5b3b942edfc51d84897075ca4028c5545b9c1b3469d08333998b5272ad902cf5"
+    }
+  },
+  "source_profiles": []
+}

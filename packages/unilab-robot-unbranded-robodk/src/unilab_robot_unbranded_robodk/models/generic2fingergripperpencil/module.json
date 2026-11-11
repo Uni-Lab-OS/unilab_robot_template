@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "generic2fingergripperpencil",
+  "title": "Generic 2-Finger Gripper (Pencil)",
+  "asset": {
+    "asset_id": "f0d7aa73-b192-50a7-a69a-4f4c7d99f52a",
+    "package_digest": "89b3e5fd3264ba227835cb6877cb19f23694db21bcfb21daf57c16fed31d5d3f",
+    "package_path": "01_零部件/未知厂家/2-finger_gripper_pencil___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f0d7aa73-b192-50a7-a69a-4f4c7d99f52a",
+      "package_digest": "89b3e5fd3264ba227835cb6877cb19f23694db21bcfb21daf57c16fed31d5d3f",
+      "package_path": "01_零部件/未知厂家/2-finger_gripper_pencil___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c0b96057b9f36c93b2a189be7f6686513eddff2bfd27cdb0c06166ad37c4e05c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/2-finger_gripper_pencil___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic 2-Finger Gripper (Pencil)",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-2-Finger-Gripper-Pencil.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-2-Finger-Gripper-Pencil.tool",
+        "path": "simready_usd/Generic-2-Finger-Gripper-Pencil.tool",
+        "sha256": "a14b370c0e6cfdc68a43fc6e1a26d100d07d1f127a2b60be75e2b236ef167217"
+      }
+    ]
+  }
+}

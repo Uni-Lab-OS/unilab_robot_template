@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "unbranded_vc",
+  "models": {
+    "gripper2finger": {
+      "title": "Gripper 2-Finger",
+      "asset": {
+        "asset_id": "2712a7ff-f287-5933-aa5f-043ab1263198",
+        "package_digest": "cd0e16e23363eb34b6345976a1bfac8e8c1a289429f28e817f3473298481baef",
+        "package_path": "03_机构模块/未指定_通用模型/gripper_2-finger__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gripper2finger/module.json",
+      "module_sha256": "b441c2c2bdbd9b28902fba066fb3e419a4bbb08c5cf2d4059288c03b96f89791"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "geckosp1singlepadgripper",
+  "title": "OnRobot Gecko SP1 Single Pad Gripper",
+  "asset": {
+    "asset_id": "e0cbfc62-2468-505f-b279-aaa4c3f4a1b5",
+    "package_digest": "08445c66fb09f24851af5079eb342ef66fbef744ee0992fa6032c8d23b898543",
+    "package_path": "01_零部件/onrobot/gecko_sp1_single_pad_gripper__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e0cbfc62-2468-505f-b279-aaa4c3f4a1b5",
+      "package_digest": "08445c66fb09f24851af5079eb342ef66fbef744ee0992fa6032c8d23b898543",
+      "package_path": "01_零部件/onrobot/gecko_sp1_single_pad_gripper__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "437a466ad3523bcc4081d04f42bc60320a05270893c13e3505ba8b41269337f2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gecko_sp1_single_pad_gripper__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Gecko SP1 Single Pad Gripper",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "display": "OnRobot Gecko SP1 Single Pad Gripper",
+          "path": "tools/models/OnRobot-Gecko-SP1-Single-Pad-Gripper.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "e0cbfc62-2468-505f-b279-aaa4c3f4a1b5"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/OnRobot-Gecko-SP1-Single-Pad-Gripper.tool",
+        "path": "simready_usd/OnRobot-Gecko-SP1-Single-Pad-Gripper.tool",
+        "sha256": "c140cd923132862379542995b8b08cc06325b117b1c1b9fbf9e09e61bda42a18"
+      }
+    ]
+  }
+}

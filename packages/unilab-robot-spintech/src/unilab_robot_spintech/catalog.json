@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "spintech",
+  "models": {
+    "spindle": {
+      "title": "Spintech Spindle",
+      "asset": {
+        "asset_id": "524b5233-6e42-51e6-9619-ad886296108a",
+        "package_digest": "03933ee1cc5c0c39bd851faf7d24eceb38ab20dfba054aeb1a20847f9e2358d5",
+        "package_path": "01_零部件/spintech/spindle__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/spindle/module.json",
+      "module_sha256": "0df33e6f96fcf4452b61dab90dfc1090e6d96fe72c2145bd5db2365d2150e092"
+    }
+  },
+  "source_profiles": []
+}

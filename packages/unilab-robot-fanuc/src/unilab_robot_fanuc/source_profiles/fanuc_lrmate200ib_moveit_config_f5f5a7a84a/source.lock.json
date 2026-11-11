@@ -1,0 +1,164 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_lrmate200ib_moveit_config_f5f5a7a84a",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "d8f42bd73584b255df87098395512538882caea1",
+    "path": "robots/fanuc/ros_industrial/moveit_cfgs/fanuc_lrmate200ib_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "038835ae5137f1b9ebf8d82cfd6a91f68e32fd512bd95faf58b6ad61361ecf17",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/controllers.yaml",
+      "sha256": "c06463cad76a6a4c3ff58ba9732c3b508a779617366765eb7a54d223df6fda60",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fake_controllers.yaml",
+      "sha256": "0a14ebdf9547be75822f2cadaed760f584c68e0ae43f43d5f9f8a29cbeca9425",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fanuc_lrmate200ib.srdf",
+      "sha256": "40ca855441a2dfde05f6bccc1e938364336143e707ee7cef6c9a5697e340b03d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "2ddbaba6a5001abbe45c03178356e2f93a8db250be832b613067e7537d0cc763",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "f9c3fecacb5c9edf3b42623602da679907ebc9fe44319858a7ed1e7249636d15",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "923321f75287f44141a0904698c9ba364c9d8d1c8f7aaae4ca02847294d2697a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/default_warehouse_db.launch",
+      "sha256": "3b8fe50b8c5c48fade0968eb2224a145a0739213e4f239b936f7165d4cd432de",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch",
+      "sha256": "4afacd73e6babe86bc5bcd687edaac7ddb48fa19e6006a9f6c48cc13fc8230b3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/fake_moveit_controller_manager.launch.xml",
+      "sha256": "83033216fdb412e8848f253ee18e81b84a1e9f7714f14e28d641b99120787ed2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/fanuc_lrmate200ib_moveit_controller_manager.launch.xml",
+      "sha256": "86ac026bda269440b74ec406a241c812b80916d4342f3deb3e871305e18c4f35",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/fanuc_lrmate200ib_moveit_sensor_manager.launch.xml",
+      "sha256": "4938eb666b36949e4a5a44c4e7ac528e05c9a85ad451d0bf4facfe8292ba7867",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/joystick_control.launch",
+      "sha256": "f161981ad3796eaaebc0309a5e6a4ca1dc41dce9d21873e206e6fc1d6cb9259a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch",
+      "sha256": "6c060057d6238663f71fc9988c55066cd75c9e07fa9bae430692fe94419d6926",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit.rviz",
+      "sha256": "b5ec9047a4d0c29f6f44db1f8abf8827bb2812c0aeb934948f48f57d0569f34a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_planning_execution.launch",
+      "sha256": "e7b573688686b077d5418dfd356a4b68084fa34e3f1fb2fe3ef55915d0646338",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_rviz.launch",
+      "sha256": "a5012e8a9b9f78f21e4819b865f3a3d7c425d92781ded4caf0826c2fc27aff0c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/ompl_planning_pipeline.launch.xml",
+      "sha256": "cc1966c947213b640fcb3ee39a15c9a99c396a929ce6ee082c71bfda53b94543",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/planning_context.launch",
+      "sha256": "00af0f5dc5a38f4cacd5c45b0e4ead33e036b4284cd086ab98269034d547beff",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/planning_pipeline.launch.xml",
+      "sha256": "3b000f3eea1eb6f6fccf121bff96ee51f50be924cb87a64c21267260168e76bd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/run_benchmark_ompl.launch",
+      "sha256": "bcfd6d8ec982bcf98051b7f722409ac2cac9ae727d0af7944a7dd12e9ea04cd3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/sensor_manager.launch.xml",
+      "sha256": "53e3167b065e78671807d6083d8348780c7569270371c76f6ace42130f961edb",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/setup_assistant.launch",
+      "sha256": "b4fbb40c1920845fb3c38de40bafaba803dae681a9425e1523c661df82f2fb54",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/trajectory_execution.launch.xml",
+      "sha256": "1ce22449ac28c1b6926de85b7494472c62c81c8330df6a8426489a21b83ca91b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse.launch",
+      "sha256": "b4d1af6f5fd265a74806bc71798bdac2ef9945533f29a3f7e4ca711fcfb891f1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse_settings.launch.xml",
+      "sha256": "d59b315264f6208e0d4f92624f6178a0a84d53e38afc8652da9b505a2616698a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "a4ffc518879166d4187dce359f29958bbc5cc86501247d44239e694bee7d9549",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "3682b525946f3d2a0531a04394c4a70d76c16ae3afafa046541e7623e5b3f6f6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "tests/moveit_planning_execution.xml",
+      "sha256": "d440a54872b5288616289044f46d32d182f3ef60db54b8c1e512fe46fee9e798",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

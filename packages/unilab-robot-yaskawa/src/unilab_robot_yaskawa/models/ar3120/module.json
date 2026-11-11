@@ -1,0 +1,858 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yaskawa",
+  "model": "ar3120",
+  "title": "Yaskawa Motoman AR3120｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "fc7790a8-fd96-5e5c-b4b6-60c149b9d9e3",
+    "package_digest": "6ffa191aed9225ebfd5f91e02148a43e7cf85b914b60705ba5d66e3f43909da3",
+    "package_path": "04_设备/yaskawa_motoman/ar3120__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "fc7790a8-fd96-5e5c-b4b6-60c149b9d9e3",
+      "package_digest": "6ffa191aed9225ebfd5f91e02148a43e7cf85b914b60705ba5d66e3f43909da3",
+      "package_path": "04_设备/yaskawa_motoman/ar3120__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "AR3120",
+              "source": "robots/models/Yaskawa-Motoman-AR3120.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "count",
+          "value": 6,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Yaskawa MOTOMAN AR3120 brochure",
+              "url": "https://www.yaskawa.eu.com/_downloads/download_d2253"
+            }
+          ]
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "AR3120",
+              "source": "robots/models/Yaskawa-Motoman-AR3120.robot",
+              "source_family": "RoboDK",
+              "value": 20.0
+            },
+            {
+              "model": "AR3120",
+              "source": "Components/Yaskawa/Robots/AR3120.vcmx",
+              "source_family": "VC",
+              "value": 20.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 20,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Yaskawa MOTOMAN AR3120 brochure",
+              "url": "https://www.yaskawa.eu.com/_downloads/download_d2253"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "AR3120",
+              "source": "robots/models/Yaskawa-Motoman-AR3120.robot",
+              "source_family": "RoboDK",
+              "value": 3120.0
+            },
+            {
+              "model": "AR3120",
+              "source": "Components/Yaskawa/Robots/AR3120.vcmx",
+              "source_family": "VC",
+              "value": 3124.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 3124,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Yaskawa MOTOMAN AR3120 brochure",
+              "url": "https://www.yaskawa.eu.com/_downloads/download_d2253"
+            }
+          ]
+        },
+        "robot_mass": {
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 560
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -540.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 3,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -90.0,
+          -80.0,
+          -200.0,
+          -150.0,
+          -455.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            540.0
+          ],
+          [
+            -1.5707963267948966,
+            145.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1150.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            250.0,
+            0.0,
+            1812.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            100.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          3.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          135.0,
+          206.0,
+          200.0,
+          150.0,
+          455.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "ed3e8a97-5155-5ab1-8813-939d9eb0a75a",
+              "entrypoints": {
+                "usd": "simready_usd/ar3120__r001.usdc"
+              },
+              "package_digest": "ea6aca5d9ae2c8fa0de12c52344157b6fd6ffd0535a9469cf0c620fd4a7f8f5a",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -540.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 3,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -180.0,
+                    -90.0,
+                    -80.0,
+                    -200.0,
+                    -150.0,
+                    -455.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      540.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      145.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      1150.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      250.0,
+                      0.0,
+                      1812.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      100.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    4.0,
+                    3.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    180.0,
+                    135.0,
+                    206.0,
+                    200.0,
+                    150.0,
+                    455.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "426faed6075b60531dbba6c6e78e8ce2672dc4b95e6717fc7dd2f932db6e4501",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Yaskawa Motoman AR3120",
+          "family": "RoboDK",
+          "library_assets": [
+            "ed3e8a97-5155-5ab1-8813-939d9eb0a75a"
+          ],
+          "manufacturer": "Yaskawa Motoman",
+          "name": "AR3120",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Yaskawa-Motoman-AR3120.robot",
+            "path": "simready_usd/Yaskawa-Motoman-AR3120.robot",
+            "sha256": "497d8523a9a20714d442cb4ff46e755ae4105a42cbe0b2d89d2256a25562fd33"
+          },
+          "path": "robots/models/Yaskawa-Motoman-AR3120.robot",
+          "payload": 20,
+          "reach": 3120,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "b9526e80-6f45-547b-9c54-1aa49811d42c",
+              "entrypoints": {
+                "usd": "simready_usd/ar3120__r001.usdc"
+              },
+              "package_digest": "5104c97ac09f8d72d1014d7c78552ee899164512f4187b2e1ee0cb299facf0ef",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "e13ccdd40799b56d94edb7af6d208fba52045b082fcbdf58eccad474c000224a",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "7502cc033b00e000702380cfae58bff3e0429fdb7cb38abf71432b3abddd254b",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "b9526e80-6f45-547b-9c54-1aa49811d42c"
+          ],
+          "manufacturer": "Yaskawa",
+          "name": "AR3120",
+          "original": {
+            "family": "VC",
+            "original_name": "AR3120.vcmx",
+            "path": "simready_usd/source_assets/VC/0_ar3120/AR3120.vcmx",
+            "sha256": "e13ccdd40799b56d94edb7af6d208fba52045b082fcbdf58eccad474c000224a"
+          },
+          "path": "Components/Yaskawa/Robots/AR3120.vcmx",
+          "payload": "20",
+          "reach": "3124",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "c9d2b1d3-8005-4902-b7c9-fcf82d498fb8"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "426faed6075b60531dbba6c6e78e8ce2672dc4b95e6717fc7dd2f932db6e4501",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/ar3120__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Yaskawa Motoman AR3120｜多源合并",
+          "id": "merged_robot_fc7790a8_fd96_5e5c_b4b6_60c149b9d9e3",
+          "metadata": {
+            "asset_id": "fc7790a8-fd96-5e5c-b4b6-60c149b9d9e3",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:MotomanHSE",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/MotomanHSE.exe",
+        "sha256": "bbf58c38493a5678525bfca47b450f9a1d38309f4948ac503aeaa309036cefe1",
+        "bytes": 87040,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimotoman",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimotoman.exe",
+        "sha256": "33a37818f812cb9321716fa31fe575bc05a55dc142cc7802c9ed68f716725ddf",
+        "bytes": 418816,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "yaskawa controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Motoman.py",
+      "Motoman_Cartesian.py",
+      "Motoman_CartesianOnly.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/yaskawa/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/yaskawa/ros_industrial",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Yaskawa-Motoman-AR3120.robot",
+        "path": "simready_usd/Yaskawa-Motoman-AR3120.robot",
+        "sha256": "497d8523a9a20714d442cb4ff46e755ae4105a42cbe0b2d89d2256a25562fd33"
+      },
+      {
+        "family": "VC",
+        "original_name": "AR3120.vcmx",
+        "path": "simready_usd/source_assets/VC/0_ar3120/AR3120.vcmx",
+        "sha256": "e13ccdd40799b56d94edb7af6d208fba52045b082fcbdf58eccad474c000224a"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "AR3120",
+                "source": "robots/models/Yaskawa-Motoman-AR3120.robot",
+                "source_family": "RoboDK",
+                "value": 3120.0
+              },
+              {
+                "model": "AR3120",
+                "source": "Components/Yaskawa/Robots/AR3120.vcmx",
+                "source_family": "VC",
+                "value": 3124.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 3124,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Exact model catalog fields; geometry and controller version not certified",
+                "title": "Yaskawa MOTOMAN AR3120 brochure",
+                "url": "https://www.yaskawa.eu.com/_downloads/download_d2253"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            3120.0,
+            3124.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "yaskawa",
+        "ar3120"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Exact model catalog fields; geometry and controller version not certified",
+            "title": "Yaskawa MOTOMAN AR3120 brochure",
+            "url": "https://www.yaskawa.eu.com/_downloads/download_d2253"
+          }
+        ],
+        "fields": {
+          "axes": {
+            "status": "manufacturer_verified",
+            "unit": "count",
+            "value": 6
+          },
+          "payload": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 20
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 3124
+          },
+          "robot_mass": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 560
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "ed3e8a97-5155-5ab1-8813-939d9eb0a75a",
+        "original_package_digest": "ea6aca5d9ae2c8fa0de12c52344157b6fd6ffd0535a9469cf0c620fd4a7f8f5a",
+        "source": "robots/models/Yaskawa-Motoman-AR3120.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

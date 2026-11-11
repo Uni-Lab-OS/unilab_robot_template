@@ -1,0 +1,878 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "lrmate200id7l",
+  "title": "Fanuc LR Mate 200iD/7L｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "c55bbcff-624d-5b79-a933-3805bf1849eb",
+    "package_digest": "918218136de24967ec8fb7bbddbbb6cf32c1d6ccbeed0f66d050583ce0890b3d",
+    "package_path": "04_设备/fanuc/lrmate200id7l__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c55bbcff-624d-5b79-a933-3805bf1849eb",
+      "package_digest": "918218136de24967ec8fb7bbddbbb6cf32c1d6ccbeed0f66d050583ce0890b3d",
+      "package_path": "04_设备/fanuc/lrmate200id7l__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "LR Mate 200iD/7L",
+              "source": "robots/models/Fanuc-LR-Mate-200iD-7L.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "LR Mate 200iD/7L",
+              "source": "robots/models/Fanuc-LR-Mate-200iD-7L.robot",
+              "source_family": "RoboDK",
+              "value": 7.0
+            },
+            {
+              "model": "LR Mate 200iD/7L",
+              "source": "Components/Fanuc/Robots/LR Mate 200iD_7L.vcmx",
+              "source_family": "VC",
+              "value": 7.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 7.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "LR Mate 200iD/7L",
+              "source": "robots/models/Fanuc-LR-Mate-200iD-7L.robot",
+              "source_family": "RoboDK",
+              "value": 911.0
+            },
+            {
+              "model": "LR Mate 200iD/7L",
+              "source": "Components/Fanuc/Robots/LR Mate 200iD_7L.vcmx",
+              "source_family": "VC",
+              "value": 911.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 911.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -330.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_constraint": {
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "formula": "usd_joint_degrees = matrix @ source_controller_degrees; signed axes encoded in joint frames",
+          "kind": "invertible_linear_coordinate_map",
+          "limits_scope": "USD limits are per-axis enclosure only. Coupled domain requires inverse(matrix) @ usd_coordinates within original source limits; dynamics remains disabled",
+          "native_function": "0x14055e6a0",
+          "source_lower": [
+            -180.0,
+            -100.0,
+            -150.0,
+            -190.0,
+            -125.0,
+            -360.0
+          ],
+          "source_upper": [
+            180.0,
+            145.0,
+            280.0,
+            190.0,
+            125.0,
+            360.0
+          ]
+        },
+        "controller_coordinate_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "controller_to_mdh_mode": 2,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -100.0,
+          -150.0,
+          -190.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            330.0
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            440.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            35.0,
+            0.0,
+            420.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          2.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          145.0,
+          280.0,
+          190.0,
+          125.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Fanuc LR Mate 200iD/7L",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "LR Mate 200iD/7L",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-LR-Mate-200iD-7L.robot",
+            "path": "simready_usd/source/Fanuc-LR-Mate-200iD-7L.robot",
+            "sha256": "2b047aa3c621dd9034781c652fc24f5556f2a67c971df7a95263239aa8e5212c"
+          },
+          "path": "robots/models/Fanuc-LR-Mate-200iD-7L.robot",
+          "payload": 7,
+          "reach": 911,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "lrmate200id7l",
+          "original": {
+            "family": "UniLab",
+            "original_name": "lrmate200id7l_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_lrmate200id7l_macro/lrmate200id7l_macro.xacro",
+            "sha256": "f9cda37d1e46fe305b3cb3c8167ecf4682101d785163bc090a8748d243fece20"
+          },
+          "path": "fanuc/ros_industrial/fanuc_lrmate200id_support/urdf/lrmate200id7l_macro.xacro",
+          "raw_name": "lrmate200id7l_macro.xacro",
+          "robot_description": {
+            "commit": "d8f42bd73584b255df87098395512538882caea1",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"${radians(-170)}\" upper=\"${radians(170)}\" velocity=\"${radians(370)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.050 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-100)}\" upper=\"${radians(145)}\" velocity=\"${radians(310)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.440\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-70)}\" upper=\"${radians(213)}\" velocity=\"${radians(410)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.035\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"${radians(-190)}\" upper=\"${radians(190)}\" velocity=\"${radians(550)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.420 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-125)}\" upper=\"${radians(125)}\" velocity=\"${radians(545)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.080 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"${radians(-360)}\" upper=\"${radians(360)}\" velocity=\"${radians(1000)}\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}flange-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial/fanuc_lrmate200id_support/urdf/lrmate200id7l_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "lrmate200id7l",
+          "original": {
+            "family": "UniLab",
+            "original_name": "lrmate200id7l_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_lrmate200id7l_macro/lrmate200id7l_macro.xacro",
+            "sha256": "f9cda37d1e46fe305b3cb3c8167ecf4682101d785163bc090a8748d243fece20"
+          },
+          "path": "fanuc/ros_industrial_melodic_source/fanuc_lrmate200id_support/urdf/lrmate200id7l_macro.xacro",
+          "raw_name": "lrmate200id7l_macro.xacro",
+          "robot_description": {
+            "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"${radians(-170)}\" upper=\"${radians(170)}\" velocity=\"${radians(370)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.050 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-100)}\" upper=\"${radians(145)}\" velocity=\"${radians(310)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.440\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-70)}\" upper=\"${radians(213)}\" velocity=\"${radians(410)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.035\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"${radians(-190)}\" upper=\"${radians(190)}\" velocity=\"${radians(550)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.420 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"${radians(-125)}\" upper=\"${radians(125)}\" velocity=\"${radians(545)}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.080 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"${radians(-360)}\" upper=\"${radians(360)}\" velocity=\"${radians(1000)}\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}flange-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_lrmate200id_support/urdf/lrmate200id7l_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "LR Mate 200iD/7L",
+          "original": {
+            "family": "VC",
+            "original_name": "LR Mate 200iD_7L.vcmx",
+            "path": "simready_usd/source_assets/VC/0_lr_mate_200id_7l/LR Mate 200iD_7L.vcmx",
+            "sha256": "11d699b908555fde306fcb5e74cf2688a18e8f10cfd80c450c393477461a2bfd"
+          },
+          "path": "Components/Fanuc/Robots/LR Mate 200iD_7L.vcmx",
+          "payload": "7",
+          "reach": "911",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "5b3e113a-d554-4fb7-96ef-436215a8c932"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/lrmate200id7l__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc LR Mate 200iD/7L｜多源合并",
+          "id": "merged_robot_c55bbcff_624d_5b79_a933_3805bf1849eb",
+          "metadata": {
+            "asset_id": "c55bbcff-624d-5b79-a933-3805bf1849eb",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-LR-Mate-200iD-7L.robot",
+        "path": "simready_usd/source/Fanuc-LR-Mate-200iD-7L.robot",
+        "sha256": "2b047aa3c621dd9034781c652fc24f5556f2a67c971df7a95263239aa8e5212c"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "lrmate200id7l_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_lrmate200id7l_macro/lrmate200id7l_macro.xacro",
+        "sha256": "f9cda37d1e46fe305b3cb3c8167ecf4682101d785163bc090a8748d243fece20"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_lrmate200id.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/config/joint_names_lrmate200id7lc.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_lrmate200id4sh.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/config/joint_names_lrmate200id7h.yaml",
+        "sha256": "38f960e83066757bee1eb3e38c983b54ed7c0f668bb9c6c87f2fbf282074a0c6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/package.xml",
+        "sha256": "88a0ca4f178fb15f84164b7609ac93d05b201af790123e014fd209329bafed75"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_6.stl",
+        "sha256": "77b9b50f1c2edfd5384aa88b2371807640e638e5d2b597b5c7ecffe9a897a720"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_5.stl",
+        "sha256": "4ece3a0851d58a1bbf50a917b80659ad6a3b90083f7def9db6fd230514b0dc5f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id7l/collision/link_4.stl",
+        "sha256": "26f7f2b13f3f86f09888203c10a51d5f3f7fb2f22b710575d1dd2d6769814e82"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_3.stl",
+        "sha256": "dc1a5d033ea34ca5fdc1b1305eec3993fa63afb715e69e9ee934315de2fa07ed"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id7l/collision/link_2.stl",
+        "sha256": "89a761f3d0c7a724ceca75390a6ec75aa9103659220e200fc4357cbd737a9be6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id/collision/link_1.stl",
+        "sha256": "353992336fd3daaca21d8adc28bcc5b4e64052df262f8e40738c1b147bc44db3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_lrmate200id_support/meshes/lrmate200id/collision/base_link.stl",
+        "sha256": "e7d6f17f3012445ab8bacd18885db9437646b131253b92ac7f880dcc03267642"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_lrmate200id_support/package.xml",
+        "sha256": "0e9b0cc31850e3ef11ff115332487249146683d12203810bb3879c4efa037656"
+      },
+      {
+        "family": "VC",
+        "original_name": "LR Mate 200iD_7L.vcmx",
+        "path": "simready_usd/source_assets/VC/0_lr_mate_200id_7l/LR Mate 200iD_7L.vcmx",
+        "sha256": "11d699b908555fde306fcb5e74cf2688a18e8f10cfd80c450c393477461a2bfd"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "fanuc",
+        "lrmate200id7l"
+      ],
+      "label": "RoboDK+UniLab+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "d8f42bd73584b255df87098395512538882caea1",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_lrmate200id7l_macro/lrmate200id7l_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_lrmate200id7l_macro/lrmate200id7l_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "442390b1-e3e2-5ca6-bb85-0685e0a0d19c",
+        "original_package_digest": "181f69a1962df0d2935c33156a3df15d4cdb127abc2452ffc1134ca21009cb43",
+        "source": "robots/models/Fanuc-LR-Mate-200iD-7L.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "UniLab",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

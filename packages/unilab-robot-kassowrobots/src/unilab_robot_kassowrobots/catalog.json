@@ -1,0 +1,87 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "kassowrobots",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "kr1018": {
+      "title": "Kassow Robots KR1018｜多源合并",
+      "asset": {
+        "asset_id": "f925448b-b5a4-5f29-ba22-57485f2b452e",
+        "package_digest": "e2ada56d63a175b11cff276666acc75c041297cf1e38cfbae9b91379944d0233",
+        "package_path": "04_设备/kassow_robots/kr1018__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1018/module.json",
+      "module_sha256": "ad69e1afb406efa6021ee992475472b9e073aa2c79d177af005cff531edfcc7c"
+    },
+    "kr1205": {
+      "title": "Kassow Robots KR1205｜多源合并",
+      "asset": {
+        "asset_id": "207c5d33-e061-50f6-8628-c3a6537e5997",
+        "package_digest": "c17a039de4220c2735ed95c9803159bf2f4c0ad7ff90b7ce3e6e71c696f7bd65",
+        "package_path": "04_设备/kassow_robots/kr1205__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1205/module.json",
+      "module_sha256": "07e5bbaff7440209e314db2e818d6c8752ef287442d7fccee38802444c20516d"
+    },
+    "kr1410": {
+      "title": "Kassow Robots KR1410｜多源合并",
+      "asset": {
+        "asset_id": "7c28bfaa-3a92-53b5-bbc5-d6d0c6878ebc",
+        "package_digest": "43d9b1c8a5fc51035d6dc5d9665b465f59ba18795fa30d1f776f7a3eee0f1c08",
+        "package_path": "04_设备/kassow_robots/kr1410__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1410/module.json",
+      "module_sha256": "94462315ebd2e032d499aa18a0e4b2c038be8172fe64059ab548de5e406504e0"
+    },
+    "kr1805": {
+      "title": "Kassow Robots KR1805｜多源合并",
+      "asset": {
+        "asset_id": "a1364789-f675-5f1c-b876-8ecb383e37d6",
+        "package_digest": "631f0e7f1c1dd377ae1d2bf77b041fd5461a7aa4cd199d1f2baffc7db56376b7",
+        "package_path": "04_设备/kassow_robots/kr1805__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1805/module.json",
+      "module_sha256": "737031f034fc40183ea2ee0af7b6bda813a74831f0d90ac892669d96e0a1bd8a"
+    },
+    "kr0810": {
+      "title": "Kassow Robots KR0810",
+      "asset": {
+        "asset_id": "588ccd32-6df0-5880-a4a5-70fce6e90483",
+        "package_digest": "91f99dd441b389d1cf631778a28d4881e5cd3c117696771d19050e7fab64aa6b",
+        "package_path": "04_设备/kassow_robots/kr0810__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr0810/module.json",
+      "module_sha256": "83ef35dad74bbbed127acdc46309002ac2a654952ceda9858dce336def28d3f6"
+    }
+  },
+  "source_profiles": []
+}

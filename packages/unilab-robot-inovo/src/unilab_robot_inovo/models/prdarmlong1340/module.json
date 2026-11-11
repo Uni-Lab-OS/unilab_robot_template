@@ -1,0 +1,275 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "inovo",
+  "model": "prdarmlong1340",
+  "title": "Inovo Robotics PRD ArmLong 1340",
+  "asset": {
+    "asset_id": "f852aaf4-2187-5b08-9ac5-49f2b5b87345",
+    "package_digest": "f7acde91fca8bf6d5f11edde4ade35282afd168a9b6f21dbebe162ef1a9cef2f",
+    "package_path": "04_设备/inovo_robotics/prd_armlong_1340__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f852aaf4-2187-5b08-9ac5-49f2b5b87345",
+      "package_digest": "f7acde91fca8bf6d5f11edde4ade35282afd168a9b6f21dbebe162ef1a9cef2f",
+      "package_path": "04_设备/inovo_robotics/prd_armlong_1340__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            248.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            640.0,
+            -0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            700.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            92.6
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "303e61812629e81bfd6c6ea930c1aee335ff5526391928ae9f109f46fd858b86",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/prd_armlong_1340__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:inovo:ros",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/inovo/ros",
+        "repository_url": "https://github.com/inovorobotics/inovo_ros.git",
+        "code_tree_sha256": "b283fc8518b15ced00560ec96ca00cdb7f06c30f21de8f33ee375a711a819344",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b99e95a2a8497eafd823e19f92901bf8e6d3c7aaea1b3554624a1db2db1073b3"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "49df6ffccac046b81082ca63a1eb363f7ae4dcadb63bd33f7668af0fae0b4206"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:inovo_commander",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "inovo_commander",
+        "controller_choices": [
+          "Inovo ROS Noetic Commander"
+        ],
+        "sdk_version_requirement": "commander_api pinned source",
+        "source_candidates": [
+          "sdk:inovo:ros"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_cartesian_action"
+        ],
+        "constraints": [
+          "ROS1 Noetic messages/action server required; no joint-target API in this SDK; external Python3.8 worker",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "inovo-native/factory-receipt.json",
+          "receipt_sha256": "6e1d20ee8520b43517811b2777d63ed741cb8dba0689d9526a8b33347e0b6115",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "PRD ArmLong 1340",
+          "manufacturer": "Inovo Robotics",
+          "variant": "",
+          "display": "Inovo Robotics PRD ArmLong 1340",
+          "path": "robots/models/Inovo-Robotics-PRD-ArmLong-1340.robot",
+          "type": "robots",
+          "payload": 3,
+          "reach": 1340,
+          "axes": 6,
+          "library_assets": [
+            "f852aaf4-2187-5b08-9ac5-49f2b5b87345"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Inovo-Robotics-PRD-ArmLong-1340.robot",
+        "path": "simready_usd/Inovo-Robotics-PRD-ArmLong-1340.robot",
+        "sha256": "e275cd594af1e3276660eb58618b5f57fd6302c24c0be16a777273efca09f522"
+      }
+    ],
+    "source_brand_alias": "inovorobotics"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

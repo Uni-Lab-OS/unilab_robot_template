@@ -1,0 +1,698 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mitsubishi",
+  "model": "rh3frh3515",
+  "title": "Mitsubishi RH-3FRH3515",
+  "asset": {
+    "asset_id": "3e129e54-d457-5a5b-9bc4-09da69854d6d",
+    "package_digest": "c175873523719adf725d1f7f534cd73fc58632386ef13e912e44f1e6c90bf61c",
+    "package_path": "04_设备/mitsubishi/rh3frh3515__多源合并_r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3e129e54-d457-5a5b-9bc4-09da69854d6d",
+      "package_digest": "c175873523719adf725d1f7f534cd73fc58632386ef13e912e44f1e6c90bf61c",
+      "package_path": "04_设备/mitsubishi/rh3frh3515__多源合并_r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "Inverse-map USD targets and check original lower/upper; axis enclosures alone are insufficient",
+        "dynamics": "disabled; not qualified by decoding",
+        "input": "source controller degrees in serialized joint order",
+        "si_backend": "Convert degrees to radians at OS runtime boundary; do not pass coupled USD coordinates as independent controller inputs",
+        "usd_coordinates": "controller_coordinate_matrix @ source_input; signed axes already represented by USD frames"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "RH-3FRH3515",
+              "source": "robots/models/Mitsubishi-RH-3FRH3515.robot",
+              "source_family": "RoboDK",
+              "value": 4.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 4.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "RH-3FRH3515",
+              "source": "Components/Mitsubishi Electric/Robots/RH-3FRH3515.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "RH-3FRH3515",
+              "source": "robots/models/Mitsubishi-RH-3FRH3515.robot",
+              "source_family": "RoboDK",
+              "value": 3.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 3.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "RH-3FRH3515",
+              "source": "Components/Mitsubishi Electric/Robots/RH-3FRH3515.vcmx",
+              "source_family": "VC",
+              "value": 350.0
+            },
+            {
+              "model": "RH-3FRH3515",
+              "source": "robots/models/Mitsubishi-RH-3FRH3515.robot",
+              "source_family": "RoboDK",
+              "value": 350.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 350.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          3.141592653589793,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          150.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "mm",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "prismatic",
+          "revolute"
+        ],
+        "lower": [
+          -132.0,
+          -150.0,
+          0.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            125.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            225.0,
+            0.0,
+            220.0
+          ],
+          [
+            3.141592653589793,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          132.0,
+          150.0,
+          150.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "57af1b35-b2fc-5896-9381-906a49d8ae49",
+              "entrypoints": {
+                "usd": "simready_usd/rh-3frh3515__r001.usdc"
+              },
+              "package_digest": "9558ad3d9ba412068aa71349899283791916a6964f8903c46f4fce668c66bf58",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "5630760eff9c3aae65ab43034ef9dab7bbf415338535279a51018aba77d41b91",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "751b683df50eb4a65cfaebb4babc908076fbed58d3b61fbeaf7876e0c749d411",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "57af1b35-b2fc-5896-9381-906a49d8ae49"
+          ],
+          "manufacturer": "Mitsubishi Electric",
+          "name": "RH-3FRH3515",
+          "original": {
+            "family": "VC",
+            "original_name": "RH-3FRH3515.vcmx",
+            "path": "simready_usd/source_assets/VC/0_rh-3frh3515/RH-3FRH3515.vcmx",
+            "sha256": "5630760eff9c3aae65ab43034ef9dab7bbf415338535279a51018aba77d41b91"
+          },
+          "path": "Components/Mitsubishi Electric/Robots/RH-3FRH3515.vcmx",
+          "payload": "3",
+          "reach": "350",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "d3886c6b-e83b-4bcf-b05e-f3035a009d3b"
+        },
+        {
+          "axes": 4,
+          "converted_parameters": [
+            {
+              "asset_id": "9a9a0c23-1249-5ee8-87ba-d00b862a62d9",
+              "entrypoints": {
+                "usd": "simready_usd/rh-3frh3515__r001.usdc"
+              },
+              "package_digest": "17c1e9382037e0d4b87bf36f9b78450ffefd406141c2849d1773b8a17ecf549c",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "generic_axis_directions": 64,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    3.141592653589793,
+                    0.0,
+                    -0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    150.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "mm",
+                    "degree"
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "prismatic",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -132.0,
+                    -150.0,
+                    0.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      125.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      225.0,
+                      0.0,
+                      220.0
+                    ],
+                    [
+                      3.141592653589793,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  ],
+                  "mechanism_type": 2,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+                    "generic_direction_mapping": "0x1405dbe20",
+                    "generic_fallback": "0x1405dafb0",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    4.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+                  "upper": [
+                    132.0,
+                    150.0,
+                    150.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "46664670a1288998564e473f1d48831e2b4a4f921dd2b689e31f7ca8fef90755",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 5
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Mitsubishi RH-3FRH3515",
+          "family": "RoboDK",
+          "library_assets": [
+            "9a9a0c23-1249-5ee8-87ba-d00b862a62d9"
+          ],
+          "manufacturer": "Mitsubishi",
+          "name": "RH-3FRH3515",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Mitsubishi-RH-3FRH3515.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_mitsubishi-rh-3frh3515/Mitsubishi-RH-3FRH3515.robot",
+            "sha256": "6f1a0b5685716e608d810b22249cc61f1e4200b52fa38e96ea2f9d936aff3ea1"
+          },
+          "path": "robots/models/Mitsubishi-RH-3FRH3515.robot",
+          "payload": 3,
+          "reach": 350,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "46664670a1288998564e473f1d48831e2b4a4f921dd2b689e31f7ca8fef90755",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rh3frh3515__多源合并_r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apimitsubishi",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimitsubishi.py",
+        "sha256": "66ab7e01fb45298d06f4dfd82cfc381a7c204d1607eefbe797bb9cf50618efa9",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimitsubishi.pyc",
+            "sha256": "2857c103cb52034d317674b098296d6270f9476aaffef5f82dddc7befddeef2c"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimitsubishi.pyc",
+            "sha256": "573b15586a2b808d990aa8a65f90ff47d776bfe81b7a9688053a4e5b8ec559f3"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimitsubishi.pyc",
+            "sha256": "be4a94868e9979bc8fa3616e7e623a2757425c52d99f8acb8c6923653243c932"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimitsubishi.pyc",
+            "sha256": "7a404f16b5c6def7fd0d7bde2345b24a6d1ee34b1f79b1e8133455a85b3cd57b"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimitsubishi.pyc",
+            "sha256": "f76e70928c69e64a1bbb130712b717f6fc15e4f12aa4b7f39a3a95c77681006e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mitsubishi controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Mitsubishi.py",
+      "Mitsubishi_Movemaster_EX.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/mitsubishi/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Mitsubishi RH-3FRH3515｜多源合并",
+          "id": "merged_robot_3e129e54_d457_5a5b_9bc4_09da69854d6d",
+          "metadata": {
+            "asset_id": "3e129e54-d457-5a5b-9bc4-09da69854d6d",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RH-3FRH3515",
+          "manufacturer": "Mitsubishi",
+          "variant": "",
+          "display": "Mitsubishi RH-3FRH3515",
+          "path": "robots/models/Mitsubishi-RH-3FRH3515.robot",
+          "type": "robots",
+          "payload": 3,
+          "reach": 350,
+          "axes": 4,
+          "library_assets": [
+            "9a9a0c23-1249-5ee8-87ba-d00b862a62d9"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Mitsubishi-RH-3FRH3515.robot",
+        "path": "simready_usd/Mitsubishi-RH-3FRH3515.robot",
+        "sha256": "6f1a0b5685716e608d810b22249cc61f1e4200b52fa38e96ea2f9d936aff3ea1"
+      }
+    ],
+    "published_revision_mapping_sha256": "41eec60b19c44093da2017905fce14b12d5b202ac615c728da9ac1fdb133f4ea"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

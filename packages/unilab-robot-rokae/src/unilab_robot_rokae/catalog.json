@@ -1,0 +1,567 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "rokae",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "cr20:17:2.0c5": {
+      "title": "Rokae CR20-17/2.0C-5｜多源合并",
+      "asset": {
+        "asset_id": "2d9bc1eb-dbd2-50ac-858a-bac464c659dd",
+        "package_digest": "c1fc873c17b17d8b0d9546289e583b5602d0a26f1d86ad5e4b60822cbbc4fba7",
+        "package_path": "04_设备/rokae/cr20_17_2.0c5__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr20_17_2_0c5_b300b370/module.json",
+      "module_sha256": "cfadf4878062c8d412e62fb76c9efc741c78646db9a1a949ab5df1fbb79010f0"
+    },
+    "cr20:25:1.8c5": {
+      "title": "Rokae CR20-25/1.8C-5｜多源合并",
+      "asset": {
+        "asset_id": "a8a30c87-4781-56e2-b620-6f00efe9b850",
+        "package_digest": "453ab82d265fb66ecdfee049771c4afc0633754d89bba9dae6a63e906e7132fc",
+        "package_path": "04_设备/rokae/cr20_25_1.8c5__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr20_25_1_8c5_dcafc6d1/module.json",
+      "module_sha256": "06104b9578d52576caf1ab1558a62adaa5bc3e92f050abcb19be4fd5f5d450f1"
+    },
+    "xb7": {
+      "title": "Rokae XB7｜多源合并",
+      "asset": {
+        "asset_id": "4d19239f-1705-5d47-84d5-4a0656c9105c",
+        "package_digest": "0afb78c97ff9d5af772a1d5c6aca50efaa7e5262aee574ec96843d6f5dcf0fd1",
+        "package_path": "04_设备/rokae/xb7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/xb7/module.json",
+      "module_sha256": "c7e0716798619340df5913be5960fd43271fe99c1a072f8c5765941c86f70ba4"
+    },
+    "xmatecr12": {
+      "title": "xmatecr12",
+      "asset": {
+        "asset_id": "f09d1a8c-7324-5c5e-875b-e53b363000a6",
+        "package_digest": "731dc10964d3d76191cb80f68587251844a41856ba8a168f8522e78c7bf11eed",
+        "package_path": "04_设备/rokae/cr12__r002"
+      },
+      "model_equivalence": "not_verified",
+      "provider": "unilab_arm_rokae_cr12:build_moveit_model",
+      "capabilities": {
+        "planning": "existing_provider_contract",
+        "hardware": "requires_explicit_backend_qualification"
+      },
+      "module_path": "models/xmatecr12/module.json",
+      "module_sha256": "dad56ab55da5d21589fce0ee7154c96383ea8902c053956102df208e38b88fe3"
+    },
+    "cr12:12:1.4": {
+      "title": "CR12-12/1.4",
+      "asset": {
+        "asset_id": "6c6d801e-73db-52cc-84b0-2e51cb38a733",
+        "package_digest": "b4cfde3db278b527e875f132a64688ee1ce127f6750c8098245c9ed917b765d1",
+        "package_path": "04_设备/rokae/cr12-12_1.4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr12_12_1_4_f3edeb43/module.json",
+      "module_sha256": "2ebf6066f956201dd2ec42ffb8ab5709eb459ba00893ad1ae1daba6aa1608bd9"
+    },
+    "cr12:12:1.4c": {
+      "title": "CR12-12/1.4C",
+      "asset": {
+        "asset_id": "bfcacab7-89a9-54d5-8db0-a9d80262ce95",
+        "package_digest": "765e33d91bd53fcb40b6f0ce77ddd0e9ec10db8d4f17d3b1d8891eb9cd3e1cca",
+        "package_path": "04_设备/rokae/cr12-12_1.4c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr12_12_1_4c_db861568/module.json",
+      "module_sha256": "62078a82535c6f17d79b5360d6ddec77ed5058d5384f48bd06cca0991d7ce85b"
+    },
+    "cr12c": {
+      "title": "Rokae CR12-C",
+      "asset": {
+        "asset_id": "d5cbc677-80e1-5799-bea4-d1ff432feade",
+        "package_digest": "959818aa69c9f4063a4793577f0c3a26197bb50cb56c4cc669131a6663e7b693",
+        "package_path": "04_设备/rokae/cr12-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr12c/module.json",
+      "module_sha256": "5949f0a38428deefcbb6b3a20a0636552780cd4dc037786361ac6185397b12cb"
+    },
+    "cr18:18:1.0": {
+      "title": "CR18-18/1.0",
+      "asset": {
+        "asset_id": "9f2fc478-dee4-56ea-991e-cb6bd1038161",
+        "package_digest": "8c4320638aa277d255c7a23fe9cedccec019e560c31261d0195598a292a6dcda",
+        "package_path": "04_设备/rokae/cr18-18_1.0__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr18_18_1_0_e0f19c4f/module.json",
+      "module_sha256": "94fc647370001af35b55a59b389190224b8456b7d412766073b9bff280e9e492"
+    },
+    "cr18:18:1.0c": {
+      "title": "CR18-18/1.0C",
+      "asset": {
+        "asset_id": "828aff34-b992-5fc3-a60c-8efd48208e8f",
+        "package_digest": "20d55f89632404bcbf066a7a1bd6512be5d05495747e00b973d93a7399e3f60d",
+        "package_path": "04_设备/rokae/cr18-18_1.0c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr18_18_1_0c_e4d2def8/module.json",
+      "module_sha256": "e51c7a35cc903e2a41bc293956411d3be674458311f666670c6d2e5b313a1102"
+    },
+    "cr18c": {
+      "title": "Rokae CR18-C",
+      "asset": {
+        "asset_id": "0f17b15d-0ca1-5644-83cd-a2ef2e52cce1",
+        "package_digest": "7e97a48a82b5986714882f170813d31ab9b3372cb843503ceb7d67423bd6a296",
+        "package_path": "04_设备/rokae/cr18-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr18c/module.json",
+      "module_sha256": "0cb8b6711e741c40f5af352e17c85e84da081f615844316c6c6333bf508527be"
+    },
+    "cr20:20:1.8": {
+      "title": "CR20-20/1.8",
+      "asset": {
+        "asset_id": "494b87dc-7aec-53b5-a699-0fd84909204c",
+        "package_digest": "ebafce68c8b7fe9f027147e7266f92a9141652abba3fb7593e7211196858d225",
+        "package_path": "04_设备/rokae/cr20-20_1.8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr20_20_1_8_8e5e70a1/module.json",
+      "module_sha256": "878b1bec5b3f9c106356ed6aeecada1b742d8da28ff9f50371bccbfa492645a8"
+    },
+    "cr20:20:1.8c": {
+      "title": "CR20-20/1.8C",
+      "asset": {
+        "asset_id": "27e2f284-18a7-5e83-9d67-fef03c31d4b5",
+        "package_digest": "d02bb36be4e75e1eb5566119b65ad1705370d857532cd5bf60387ce7401cddb0",
+        "package_path": "04_设备/rokae/cr20-20_1.8c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr20_20_1_8c_5f18163b/module.json",
+      "module_sha256": "fdc998a8cf713fe095b809fb091eabb847da30d671d6e7d0a5c6946b935d22ba"
+    },
+    "cr20c": {
+      "title": "Rokae CR20-C",
+      "asset": {
+        "asset_id": "3beaf17f-3372-5e60-b9ee-03bd53ef5c95",
+        "package_digest": "ab2b08497e7f28641ba972b6fe62d069b007119f26887c1a385784b8f2182d99",
+        "package_path": "04_设备/rokae/cr20-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr20c/module.json",
+      "module_sha256": "3ab9fe7a3c90fa9872d5686b93166e5213deee22e84d8934b52a0dd532d30f95"
+    },
+    "cr35:35:2.2c": {
+      "title": "Rokae CR35-35/2.2C",
+      "asset": {
+        "asset_id": "c3889e5e-717b-51b6-bfba-f5c65f105959",
+        "package_digest": "fa17bb0a36aad2902bc0c5b9fe1fe6429d2a84ee18a2826c4100307f9454dd54",
+        "package_path": "04_设备/rokae/cr35-35-2.2c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr35_35_2_2c_5b158a32/module.json",
+      "module_sha256": "253dd819e96bc3768dcd667f97b3f07cea4d0714fc8e9a1a3312b6da27877107"
+    },
+    "cr35:45:1.9c": {
+      "title": "Rokae CR35-45/1.9C",
+      "asset": {
+        "asset_id": "6f1736ba-4caf-5f15-ba71-bb496f7a9607",
+        "package_digest": "d77370193978bf506449b1f299b8edbb8598ff33a7bf9adee0b8b91e24f72628",
+        "package_path": "04_设备/rokae/cr35-45-1.9c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr35_45_1_9c_c4bead64/module.json",
+      "module_sha256": "7a68139aa06d67fbaaf6780a7f4726854781aca60bd728775aadb7e8735fa8f3"
+    },
+    "cr7:7:0.98": {
+      "title": "CR7-7/0.98",
+      "asset": {
+        "asset_id": "15735633-2066-5915-afd4-eb817843d7fa",
+        "package_digest": "e3c16cf419aaa6ad9bd3bed5a06c58ca1a1a65eacffa4ea46190bb88f9ad0c5a",
+        "package_path": "04_设备/rokae/cr7-7_0.98__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr7_7_0_98_3b9c4938/module.json",
+      "module_sha256": "32bd223e7993a457691a8d172033eba08dad666814656be4e25a46b18ca6bfd2"
+    },
+    "cr7:7:0.98c": {
+      "title": "CR7-7/0.98C",
+      "asset": {
+        "asset_id": "a1db001c-74fc-52f6-b4bc-d41f0f6ae1cb",
+        "package_digest": "1796019810585d07321ea6f9e9cc447cd82009eef2c96ffbfacce83b3f946c2b",
+        "package_path": "04_设备/rokae/cr7-7_0.98c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr7_7_0_98c_5eb5fba6/module.json",
+      "module_sha256": "7ab3cc3266696f4631772c70d1434837d7e57634d83364195ef7a9b6598f6f03"
+    },
+    "cr7c": {
+      "title": "Rokae CR7-C",
+      "asset": {
+        "asset_id": "2bb88d80-6368-5200-9f2f-c2d6f51bea51",
+        "package_digest": "3ff5b9f28b0c0982d892edd62526977336b5b45f89395b099e4d4b341260f909",
+        "package_path": "04_设备/rokae/cr7-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr7c/module.json",
+      "module_sha256": "318f383b190d9aa52eb25bc5aaa0ca03d19b329ac21b8697555841b6bf4053f6"
+    },
+    "nb12": {
+      "title": "NB12",
+      "asset": {
+        "asset_id": "2d323a36-2317-5acd-a347-441d0ed5d77a",
+        "package_digest": "5895a2a6a1085c0c35c7a86d08a941298cf61d366cc540de6b22fe7d85331adc",
+        "package_path": "04_设备/rokae/nb12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nb12/module.json",
+      "module_sha256": "6b52f8c6db29f9c60582fa35a7214e077d8c508cb5880dcc20ff9f76feb69011"
+    },
+    "nb25": {
+      "title": "NB25",
+      "asset": {
+        "asset_id": "3506542a-5454-5219-971d-8255afd03ce9",
+        "package_digest": "4fc8ba61e42de96bbe131dacfbd074ddc19a957b0ed3bc2661fd09a060e52e21",
+        "package_path": "04_设备/rokae/nb25__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nb25/module.json",
+      "module_sha256": "9b0f836a5c1302346c2babd5ef6a59637fe45c2c734b48abf16005842bc2b3c9"
+    },
+    "nb25:20:2.0": {
+      "title": "Rokae NB25-20/2.0",
+      "asset": {
+        "asset_id": "22948f8c-5f53-5253-ad86-48fdb0117136",
+        "package_digest": "9f6decdbafbe7f886071d0a1a7b992eabaa1430631918829b5e90539e8431155",
+        "package_path": "04_设备/rokae/nb25-20-2.0__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nb25_20_2_0_bcd37f0e/module.json",
+      "module_sha256": "d6c094b458fc8feeadef80d60fad982f24306830898a43ea75594fb5687e51f6"
+    },
+    "rs3:4515": {
+      "title": "Rokae RS3-4515",
+      "asset": {
+        "asset_id": "0606daf2-f62c-51c5-a304-eef27b54bcdb",
+        "package_digest": "195f02f3760f7fa90142d419ae80203b4ff7ba58a38a684dd3efdb6e813f30e9",
+        "package_path": "04_设备/rokae/rs3-4515__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs3_4515_dee475e5/module.json",
+      "module_sha256": "4468d84472ed45205cfd6cbc23887f694681c6baa57aa14a4af4fb26cfda0cb2"
+    },
+    "rs3:5515": {
+      "title": "Rokae RS3-5515",
+      "asset": {
+        "asset_id": "d5a9077d-5bdd-5f4d-befb-4b0f65c0648f",
+        "package_digest": "9612388c928479d0b2140bcfd88dba501122ec7cb90c3b77de963dd2d0c713e2",
+        "package_path": "04_设备/rokae/rs3-5515__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs3_5515_0769f921/module.json",
+      "module_sha256": "6f852f6f90f4cfe0647a0b3fedac2f8ffb334a6b11ceeb31ffb04b190a8ce6e2"
+    },
+    "sr3:3:0.7": {
+      "title": "SR3-3/0.7",
+      "asset": {
+        "asset_id": "93e9012c-2dfd-5ad2-ac20-06f41796391e",
+        "package_digest": "af3a2adf8ee2cf7b88dd8b08adfa1fe4d7d87063fff7ee92b5257a1cf65556d7",
+        "package_path": "04_设备/rokae/sr3-3_0.7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr3_3_0_7_372f4883/module.json",
+      "module_sha256": "9aeb4e52f82f830ed6a8b9a0c1cfaff77497617fc77adbbd1e694c7458673742"
+    },
+    "sr3:3:0.7c": {
+      "title": "SR3-3/0.7C",
+      "asset": {
+        "asset_id": "90be7969-87cd-580b-8dc9-fb93e6c0e296",
+        "package_digest": "d88607aa3dc5ac0e611766a2d54e44f6e235ee626f0459271a340009620ba18c",
+        "package_path": "04_设备/rokae/sr3-3_0.7c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr3_3_0_7c_37c27473/module.json",
+      "module_sha256": "e0d7a9d080167224c70df1eb43c34d4456a2999ba88c11a967eb5f65184adb6a"
+    },
+    "sr3c": {
+      "title": "Rokae SR3C",
+      "asset": {
+        "asset_id": "c424b1eb-3931-5bd3-89d2-1eeef8f54b86",
+        "package_digest": "e46b78cbafece98d15243e1e489788f523f6b13be34670cbe7a783dc33587d78",
+        "package_path": "04_设备/rokae/sr3c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr3c/module.json",
+      "module_sha256": "28334ad4a0b9be0ccb611ce3e69cf003ff136d9e2a91df02a8c9704bd27741e3"
+    },
+    "sr4c": {
+      "title": "Rokae SR4-C",
+      "asset": {
+        "asset_id": "91505614-eb6c-591a-a8b8-06060baf8485",
+        "package_digest": "aaff19b90ac7ecd0c5ec4c87bc4f73cd0fd6cc51504832f1a04166b3ed7d255a",
+        "package_path": "04_设备/rokae/sr4-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr4c/module.json",
+      "module_sha256": "0d559f1584a61b0083e6a0a2b8fa390bb78ce600c1b533b22fb68aa6ba573d71"
+    },
+    "sr5:5:0.9": {
+      "title": "SR5-5/0.9",
+      "asset": {
+        "asset_id": "5f1421be-cd14-5ca2-b1e3-cc339203f8f5",
+        "package_digest": "d0ac98df1066be2c96f997b1b552567ec5443371130a06d1fa6d199d1350d8c9",
+        "package_path": "04_设备/rokae/sr5-5_0.9__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr5_5_0_9_4bab9907/module.json",
+      "module_sha256": "1740a8c1454b0207a4fc0299defdb318e063431bf52293cb606f9a4398352daf"
+    },
+    "sr5:5:0.9c": {
+      "title": "SR5-5/0.9C",
+      "asset": {
+        "asset_id": "6bf74206-cf9a-5713-bfe9-965cd11f0fe1",
+        "package_digest": "84a89513833b1c0e240ee238f73d29ffcfe9c45605444ea27eb901512c571cf7",
+        "package_path": "04_设备/rokae/sr5-5_0.9c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr5_5_0_9c_2e51e349/module.json",
+      "module_sha256": "a64497caec55a9f049b6f769af6c55bd5c8f7149067c065b54debcb984479a2e"
+    },
+    "xb25": {
+      "title": "Rokae XB25",
+      "asset": {
+        "asset_id": "0c8a7fe6-6869-55cb-b40b-76a9b33cf2f5",
+        "package_digest": "48f77b77088cf850b2e0326dfe59d1337a532984cf1a49caece9bf43f9422cb9",
+        "package_path": "04_设备/rokae/xb25__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb25/module.json",
+      "module_sha256": "f1c28720083bdc0618b11bf9761768fff2f6324e3b3644c9d1ed710d0cf18698"
+    },
+    "xb4": {
+      "title": "Rokae XB4",
+      "asset": {
+        "asset_id": "83e00c54-96b1-53f3-b540-01773e7e1e7d",
+        "package_digest": "deca3b1f3b440465ec024c81af0ab4e421b1163e6d8db20bfe172d1280bb703b",
+        "package_path": "04_设备/rokae/xb4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb4/module.json",
+      "module_sha256": "02ac5a798daf2717d3b3ba58929f37c3f3ca3d22e70e83be8d88d156f0f05aad"
+    },
+    "xb6": {
+      "title": "Rokae XB6",
+      "asset": {
+        "asset_id": "e5d0f51a-5881-59e6-b9f6-3d2af0a14cda",
+        "package_digest": "0e0067bb577a81f2cdaf1aaa52d65fef91ab9778ece26a372b2dd28190ac417e",
+        "package_path": "04_设备/rokae/xb6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb6/module.json",
+      "module_sha256": "c78b7004d9c1b62c635db8c7db15040bc36c7a95e12433aa1cd99ca9b57d178b"
+    },
+    "xb7l": {
+      "title": "Rokae XB7L",
+      "asset": {
+        "asset_id": "76ba2ca4-76b0-5b12-b93d-3c777b5eee64",
+        "package_digest": "ab8d9ebd5317332ea31907ccc33e561cdd88e6c9a2460617c0424947a61eca5e",
+        "package_path": "04_设备/rokae/xb7l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb7l/module.json",
+      "module_sha256": "10cb7743344199c6cbc5c71e137adef3ded484b3f8b5aad7cd1b8436c7ffa423"
+    },
+    "xb7lh": {
+      "title": "Rokae XB7Lh",
+      "asset": {
+        "asset_id": "db320fbd-b337-533f-809b-989f60948353",
+        "package_digest": "4be64ccbc5f329e7c76b3f68bab8abfa7b2b4f4125d71d04938adf2c7a7af070",
+        "package_path": "04_设备/rokae/xb7lh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb7lh/module.json",
+      "module_sha256": "48906d8d3e62fa47bf347921f064ea872d35f2f6599da959b626d444a5b5130e"
+    },
+    "xb7ls": {
+      "title": "Rokae XB7Ls",
+      "asset": {
+        "asset_id": "f5a662f9-ff50-5870-b680-40381e8bcf05",
+        "package_digest": "2c22670b9b7d4b2d916fa1d4789fdbaa055887367269511cc6d7424e00079331",
+        "package_path": "04_设备/rokae/xb7ls__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb7ls/module.json",
+      "module_sha256": "dd655fa4054b4bc67a97043b5dd367a6302fdd019e07794c2de128d3c9c109bc"
+    },
+    "xb7s": {
+      "title": "Rokae XB7s",
+      "asset": {
+        "asset_id": "d48edbc2-9072-5ba4-9fcb-bbf3eb7e8624",
+        "package_digest": "b6a8818529c6766574dc2f6f9fdf3e6c19a016e00cced7fd90cf3a49c43a8cbd",
+        "package_path": "04_设备/rokae/xb7s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb7s/module.json",
+      "module_sha256": "5afbae64158968ce469ebc9be8cc14b33e56d3c585487ebdb395590f587dcbc5"
+    },
+    "xb7xl": {
+      "title": "Rokae XB7XL",
+      "asset": {
+        "asset_id": "dcd330d0-721c-539d-abbc-b0dbbbf59768",
+        "package_digest": "f1bf83714bc5ab6bf86906aee159cda5c1f252020ed6646f96d25a9da68731a5",
+        "package_path": "04_设备/rokae/xb7xl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/xb7xl/module.json",
+      "module_sha256": "7957f0e834d00a0a801c73672f177d7725d87fb8912c6d69e84d9066002ef3a7"
+    }
+  },
+  "source_profiles": []
+}

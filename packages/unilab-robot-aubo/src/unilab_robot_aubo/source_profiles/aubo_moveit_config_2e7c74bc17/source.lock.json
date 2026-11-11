@@ -1,0 +1,100 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "aubo_moveit_config_2e7c74bc17",
+  "source": {
+    "url": "https://github.com/AuboRobot/aubo_ros2_driver.git",
+    "commit": "85684075d6ff06c5385e39611208e99ebf0f94c6",
+    "path": "robots/aubo/ros2_driver/aubo_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "3ae0b489bdda1205144f0452956e2f6e0998052bf3284dc25a8fcbf1600cf832",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/aubo_i5.srdf",
+      "sha256": "d4cfd69400901ab7c1a406844f682b2aaa2f1540d3bbb9f133c98ff8c7f176b6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/aubo_i5.srdf.xacro",
+      "sha256": "a2a9247d75b68c912d9b65b4863bc107e7867647e1e4627c7c6da709bd925070",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/aubo_i5_macro.srdf.xacro",
+      "sha256": "78db0c730722f93d20e347d8da512796f0b12c988a545f44fae02a2049dafc3f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/aubo_iS7_CM02.srdf",
+      "sha256": "21b25453cdb3377d57bde80d9771a75048bd17bf047c89d06427676dddf7fcdf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/aubo_robot.srdf",
+      "sha256": "d4cfd69400901ab7c1a406844f682b2aaa2f1540d3bbb9f133c98ff8c7f176b6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "2824ce5267ca56eaeb29ae1757625e5dfe891b10b89c07f111ae0137f2805bd0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics(old).yaml",
+      "sha256": "c4875d2a52ab1754992faed54e648749c961c1eb76788e0200bfb48064a254a1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "a39d1a9453164eb464020b1851b57e4a31ec78ea17fdb11a6824b2f1eaf75fca",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit.rviz",
+      "sha256": "cf43695f1acb6169ad3dbb0c8498f579af65475a4e48bf93d8a2909eed989b42",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "9bd83e2d35f19af1582c68030935051e2306e0b266181f2ec5afabf109934860",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning(old).yaml",
+      "sha256": "c8314c48fb0e8f310324858a473e8fb0bcd427b4f996f87d99b0b7f03301bb2a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "ecfdd7bfe9075079a4eb602a7bcb634a6abfbfa3677dea0b2432573f72617dc0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "8b9dc055f0845f8b2313bd2b6d867328645bcad02132ce51081606de5d3dab9c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/view_robot.rviz",
+      "sha256": "1086ef749a9ff59610b35cf5fda5edd9a15f113b51a56c81163e1d2bcecd8cc2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/aubo_moveit.launch.py",
+      "sha256": "c20b7da5f2474992305186ff4b1fecd5b8628a4c436211250f218d367b093ba6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "1ffa44e8d61914ca7aef4ceb022229d4707174145b046d4ac1c1a4c5a189d702",
+      "git_lfs_pointer": false
+    }
+  ]
+}

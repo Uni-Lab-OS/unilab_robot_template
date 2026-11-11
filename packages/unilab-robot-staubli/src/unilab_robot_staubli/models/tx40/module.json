@@ -1,0 +1,859 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "staubli",
+  "model": "tx40",
+  "title": "Staubli TX40｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "76d43143-a22c-5d43-acb0-74043f05a991",
+    "package_digest": "ff696aad4ae829653b6e5091fc664634278951eb1c36af6494fff4b92e3ec0ca",
+    "package_path": "04_设备/staubli/tx40__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "76d43143-a22c-5d43-acb0-74043f05a991",
+      "package_digest": "ff696aad4ae829653b6e5091fc664634278951eb1c36af6494fff4b92e3ec0ca",
+      "package_path": "04_设备/staubli/tx40__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "TX40",
+              "source": "robots/models/Staubli-TX40.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "TX40",
+              "source": "robots/models/Staubli-TX40.robot",
+              "source_family": "RoboDK",
+              "value": 1.7
+            },
+            {
+              "model": "TX40",
+              "source": "Components/Staubli/Robots/TX40.vcmx",
+              "source_family": "VC",
+              "value": 1.0
+            }
+          ],
+          "maximum_payload_kg": 2,
+          "maximum_scope": "special conditions; consult manufacturer; not nominal",
+          "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 1.7,
+          "verification": [
+            {
+              "authority": "OEM-authored original brochure on third-party archive",
+              "page": 2,
+              "retrieval": "web parsed PDF; direct binary download HTTP403, not hash-archived",
+              "reviewed_at": "2026-11-08",
+              "scope": "standard arm nominal payload and wrist reach",
+              "title": "Stäubli D181.595.04 September 2010, standard arm range table",
+              "url": "https://robotforum.ru/assets/files/Staubli/Product_Robotics_122010_GB_D18159504.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "TX40",
+              "source": "robots/models/Staubli-TX40.robot",
+              "source_family": "RoboDK",
+              "value": 450.0
+            },
+            {
+              "model": "TX40",
+              "source": "Components/Staubli/Robots/TX40.vcmx",
+              "source_family": "VC",
+              "value": 515.0
+            }
+          ],
+          "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 515,
+          "verification": [
+            {
+              "authority": "OEM-authored original brochure on third-party archive",
+              "page": 2,
+              "retrieval": "web parsed PDF; direct binary download HTTP403, not hash-archived",
+              "reviewed_at": "2026-11-08",
+              "scope": "standard arm nominal payload and wrist reach",
+              "title": "Stäubli D181.595.04 September 2010, standard arm range table",
+              "url": "https://robotforum.ru/assets/files/Staubli/Product_Robotics_122010_GB_D18159504.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -320.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 0,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -125.0,
+          -138.0,
+          -270.0,
+          -120.0,
+          -270.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            320.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            35.0
+          ],
+          [
+            0.0,
+            225.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            225.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            65.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          0.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          125.0,
+          138.0,
+          270.0,
+          133.5,
+          270.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "e765a3ba-360b-51b0-a11f-236117876c97",
+              "entrypoints": {
+                "usd": "simready_usd/tx40__r001.usdc"
+              },
+              "package_digest": "e73dd40e21e2a922d4d2822aada4507d4cf7f3652e7b2ca2807c9292429e36cf",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -320.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 0,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -180.0,
+                    -125.0,
+                    -138.0,
+                    -270.0,
+                    -120.0,
+                    -270.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      320.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      35.0
+                    ],
+                    [
+                      0.0,
+                      225.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      225.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      65.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    0.0,
+                    0.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    180.0,
+                    125.0,
+                    138.0,
+                    270.0,
+                    133.5,
+                    270.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "951930593bb91e5f23aff25755352f925631cbab620c53b675f331b7ea853b55",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Staubli TX40",
+          "family": "RoboDK",
+          "library_assets": [
+            "e765a3ba-360b-51b0-a11f-236117876c97"
+          ],
+          "manufacturer": "Staubli",
+          "name": "TX40",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Staubli-TX40.robot",
+            "path": "simready_usd/Staubli-TX40.robot",
+            "sha256": "de03bc1156dda6c13dc1f9c9b80d7239dfc8fa8a101e09f7758fa1f1fa96a926"
+          },
+          "path": "robots/models/Staubli-TX40.robot",
+          "payload": 1.7,
+          "reach": 450,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "9158bcb9-3e16-56ed-90a1-4822724b5fc8",
+              "entrypoints": {
+                "usd": "simready_usd/tx40__款2__r001.usdc"
+              },
+              "package_digest": "de67d8d6685b9efdea02e12711b9a09476ffa001b401e371bcfac619b5aec7cf",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "f769e7381d790d06ccc002e1468a4b7066415ac7c195de3c45707666cae4bb00",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "380ccdd747fa9c0cf232eca895bdafb81e4a53eda15c8d2396559ea2f2beda2b",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "9158bcb9-3e16-56ed-90a1-4822724b5fc8"
+          ],
+          "manufacturer": "Staubli",
+          "name": "TX40",
+          "original": {
+            "family": "VC",
+            "original_name": "TX40.vcmx",
+            "path": "simready_usd/source_assets/VC/0_tx40/TX40.vcmx",
+            "sha256": "f769e7381d790d06ccc002e1468a4b7066415ac7c195de3c45707666cae4bb00"
+          },
+          "path": "Components/Staubli/Robots/TX40.vcmx",
+          "payload": "1",
+          "reach": "515.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "cf23e5e8-624f-4752-b925-e01ebb86c13f"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "951930593bb91e5f23aff25755352f925631cbab620c53b675f331b7ea853b55",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/tx40__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Staubli TX40｜多源合并",
+          "id": "merged_robot_76d43143_a22c_5d43_acb0_74043f05a991",
+          "metadata": {
+            "asset_id": "76d43143-a22c-5d43-acb0-74043f05a991",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apistaubli",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apistaubli.exe",
+        "sha256": "a875103302d07802b297357519782c73691d2a16af26d36a80ee04e63aa4b2d0",
+        "bytes": 451584,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "staubli controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Staubli_Adept_Vplus.py",
+      "Staubli_S6.py",
+      "Staubli_VAL3.py",
+      "Staubli_VAL3_Machining.py",
+      "Staubli_VAL3_simplified.py",
+      "Staubli_VAL3_XMOVE.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/staubli/val3_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/staubli/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Staubli-TX40.robot",
+        "path": "simready_usd/Staubli-TX40.robot",
+        "sha256": "de03bc1156dda6c13dc1f9c9b80d7239dfc8fa8a101e09f7758fa1f1fa96a926"
+      },
+      {
+        "family": "VC",
+        "original_name": "TX40.vcmx",
+        "path": "simready_usd/source_assets/VC/0_tx40/TX40.vcmx",
+        "sha256": "f769e7381d790d06ccc002e1468a4b7066415ac7c195de3c45707666cae4bb00"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "TX40",
+                "source": "robots/models/Staubli-TX40.robot",
+                "source_family": "RoboDK",
+                "value": 1.7
+              },
+              {
+                "model": "TX40",
+                "source": "Components/Staubli/Robots/TX40.vcmx",
+                "source_family": "VC",
+                "value": 1.0
+              }
+            ],
+            "maximum_payload_kg": 2,
+            "maximum_scope": "special conditions; consult manufacturer; not nominal",
+            "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 1.7,
+            "verification": [
+              {
+                "authority": "OEM-authored original brochure on third-party archive",
+                "page": 2,
+                "retrieval": "web parsed PDF; direct binary download HTTP403, not hash-archived",
+                "reviewed_at": "2026-11-08",
+                "scope": "standard arm nominal payload and wrist reach",
+                "title": "Stäubli D181.595.04 September 2010, standard arm range table",
+                "url": "https://robotforum.ru/assets/files/Staubli/Product_Robotics_122010_GB_D18159504.pdf"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1.0,
+            1.7
+          ]
+        },
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "TX40",
+                "source": "robots/models/Staubli-TX40.robot",
+                "source_family": "RoboDK",
+                "value": 450.0
+              },
+              {
+                "model": "TX40",
+                "source": "Components/Staubli/Robots/TX40.vcmx",
+                "source_family": "VC",
+                "value": 515.0
+              }
+            ],
+            "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 515,
+            "verification": [
+              {
+                "authority": "OEM-authored original brochure on third-party archive",
+                "page": 2,
+                "retrieval": "web parsed PDF; direct binary download HTTP403, not hash-archived",
+                "reviewed_at": "2026-11-08",
+                "scope": "standard arm nominal payload and wrist reach",
+                "title": "Stäubli D181.595.04 September 2010, standard arm range table",
+                "url": "https://robotforum.ru/assets/files/Staubli/Product_Robotics_122010_GB_D18159504.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            450.0,
+            515.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "staubli",
+        "tx40"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original brochure on third-party archive",
+            "page": 2,
+            "retrieval": "web parsed PDF; direct binary download HTTP403, not hash-archived",
+            "reviewed_at": "2026-11-08",
+            "scope": "standard arm nominal payload and wrist reach",
+            "title": "Stäubli D181.595.04 September 2010, standard arm range table",
+            "url": "https://robotforum.ru/assets/files/Staubli/Product_Robotics_122010_GB_D18159504.pdf"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "maximum_payload_kg": 2,
+            "maximum_scope": "special conditions; consult manufacturer; not nominal",
+            "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+            "status": "manufacturer_verified",
+            "value": 1.7
+          },
+          "reach": {
+            "note": "OEM-authored September 2010 D181.595.04, standard arm range; nominal payload or reach at wrist. Archived third-party mirror, not current OEM hosting.",
+            "status": "manufacturer_verified",
+            "value": 515
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "e765a3ba-360b-51b0-a11f-236117876c97",
+        "original_package_digest": "e73dd40e21e2a922d4d2822aada4507d4cf7f3652e7b2ca2807c9292429e36cf",
+        "source": "robots/models/Staubli-TX40.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees",
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

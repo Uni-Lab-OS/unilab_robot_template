@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "zeus",
+  "models": {
+    "zra0514n": {
+      "title": "ZRA0514N",
+      "asset": {
+        "asset_id": "9ffd7dbd-b790-5146-b527-f1cd0233d7ab",
+        "package_digest": "6427fd6fb36ddb4b136227e1a60f50cffe668eed161938a312858de173666169",
+        "package_path": "04_设备/zeus/zra0514n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zra0514n/module.json",
+      "module_sha256": "7dcc8ef50b03f370ecbdbb392f8e49d385cb287ce96d5bd3cea76ebd54a67142"
+    },
+    "zra0515p": {
+      "title": "ZRA0515P",
+      "asset": {
+        "asset_id": "a05a29ce-6c5a-513f-b6ff-00302d88591f",
+        "package_digest": "e16cfd286bb8358538788046926c63ba1176032ed68d9d3ed7c76572df20f7b4",
+        "package_path": "04_设备/zeus/zra0515p__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zra0515p/module.json",
+      "module_sha256": "9dd0f6676f6ed6ca54f3f11864128b51ed7b7d7146a9b5ba3324872dd587dc16"
+    }
+  },
+  "source_profiles": []
+}

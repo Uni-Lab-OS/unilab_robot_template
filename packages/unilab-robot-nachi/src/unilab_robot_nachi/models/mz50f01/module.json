@@ -1,0 +1,113 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "nachi",
+  "model": "mz50f01",
+  "title": "MZ50F-01",
+  "asset": {
+    "asset_id": "535f7a70-7d45-5ef2-8c94-04dea954fa2b",
+    "package_digest": "1cf124472ffc2da4ef718b2283fad5924573681d8cfdb2da459cb332523779e3",
+    "package_path": "04_设备/nachi/mz50f-01__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "535f7a70-7d45-5ef2-8c94-04dea954fa2b",
+      "package_digest": "1cf124472ffc2da4ef718b2283fad5924573681d8cfdb2da459cb332523779e3",
+      "package_path": "04_设备/nachi/mz50f-01__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "ee3e08385bab9ac5dfea9602b198c2baf77fd20ee5292e37ea7b56b330020068",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "da889c320682b3e2812e86f08fdfa106c8a7a36bd76193cf7f1841ea7af2f8e6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/mz50f-01__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Nachi_AX_FD.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/nachi/rosweld_drivers",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "MZ50F-01",
+          "manufacturer": "Nachi",
+          "variant": "",
+          "path": "Components/Nachi/Robots/MZ50F-01.vcmx",
+          "type": "Robots",
+          "payload": "50",
+          "reach": "2102",
+          "vcid": "d8893a60-62fd-49a8-baea-4a290feb5466",
+          "library_assets": [
+            "535f7a70-7d45-5ef2-8c94-04dea954fa2b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/MZ50F-01.vcmx",
+        "path": "simready_usd/MZ50F-01.vcmx",
+        "sha256": "ee3e08385bab9ac5dfea9602b198c2baf77fd20ee5292e37ea7b56b330020068"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

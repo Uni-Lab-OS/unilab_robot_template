@@ -1,0 +1,280 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mitsubishi",
+  "model": "rv7frllmc",
+  "title": "Mitsubishi RV-7FRLL-MC",
+  "asset": {
+    "asset_id": "8fa64231-8fed-58f5-b35a-c5e4c8aeb60a",
+    "package_digest": "9cddfb5bfb70b27927521cda7cb064ae29a052e68390e62d2932cdae4f95ef9d",
+    "package_path": "04_设备/mitsubishi/rv-7frll-mc__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8fa64231-8fed-58f5-b35a-c5e4c8aeb60a",
+      "package_digest": "9cddfb5bfb70b27927521cda7cb064ae29a052e68390e62d2932cdae4f95ef9d",
+      "package_path": "04_设备/mitsubishi/rv-7frll-mc__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -190.0,
+          -90.0,
+          -10.0,
+          -200.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            450.0
+          ],
+          [
+            -1.5707963267948966,
+            130.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            565.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            65.0,
+            0.0,
+            805.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            85.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          190.0,
+          150.0,
+          157.5,
+          200.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "bc7e928cba826257bd340993d7066bb01ba3b9c19ed0fad6d1260866d797853a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rv-7frll-mc__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apimitsubishi",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimitsubishi.py",
+        "sha256": "66ab7e01fb45298d06f4dfd82cfc381a7c204d1607eefbe797bb9cf50618efa9",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimitsubishi.pyc",
+            "sha256": "2857c103cb52034d317674b098296d6270f9476aaffef5f82dddc7befddeef2c"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimitsubishi.pyc",
+            "sha256": "573b15586a2b808d990aa8a65f90ff47d776bfe81b7a9688053a4e5b8ec559f3"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimitsubishi.pyc",
+            "sha256": "be4a94868e9979bc8fa3616e7e623a2757425c52d99f8acb8c6923653243c932"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimitsubishi.pyc",
+            "sha256": "7a404f16b5c6def7fd0d7bde2345b24a6d1ee34b1f79b1e8133455a85b3cd57b"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimitsubishi.pyc",
+            "sha256": "f76e70928c69e64a1bbb130712b717f6fc15e4f12aa4b7f39a3a95c77681006e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mitsubishi controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Mitsubishi.py",
+      "Mitsubishi_Movemaster_EX.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/mitsubishi/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RV-7FRLL-MC",
+          "manufacturer": "Mitsubishi",
+          "variant": "",
+          "display": "Mitsubishi RV-7FRLL-MC",
+          "path": "robots/models/Mitsubishi-RV-7FRLL-MC.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 1503,
+          "axes": 6,
+          "library_assets": [
+            "8fa64231-8fed-58f5-b35a-c5e4c8aeb60a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Mitsubishi-RV-7FRLL-MC.robot",
+        "path": "simready_usd/Mitsubishi-RV-7FRLL-MC.robot",
+        "sha256": "08f0eb58e7b39f1bed23a9a558717cd7dd568e9b5c80509fab4f79bfe373a0fa"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

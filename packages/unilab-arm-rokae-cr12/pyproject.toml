@@ -5,12 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "unilab-arm-rokae-cr12"
 version = "0.1.0"
-description = "珞石 xMateCR12 冻结六轴型号与静态 MoveIt 模型"
+description = "Compatibility distribution; implementation owned by brand package"
 requires-python = ">=3.11"
-dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
+dependencies = ["unilab-robot-rokae==0.1.0"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[tool.setuptools.package-data]
-unilab_arm_rokae_cr12 = ["models/**/*"]
+[tool.setuptools]
+packages = []

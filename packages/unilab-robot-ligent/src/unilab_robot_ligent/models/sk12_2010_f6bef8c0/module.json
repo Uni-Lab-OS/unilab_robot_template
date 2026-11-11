@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ligent",
+  "model": "sk12:2010",
+  "title": "Ligent SK12-2010",
+  "asset": {
+    "asset_id": "eaf7436b-23ad-5fcd-aed8-b55725de2970",
+    "package_digest": "43f7117ed1d320df35b534793b296369c8b04fd0b848ef3b5705e945d215738e",
+    "package_path": "04_设备/ligent/sk12-2010__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "eaf7436b-23ad-5fcd-aed8-b55725de2970",
+      "package_digest": "43f7117ed1d320df35b534793b296369c8b04fd0b848ef3b5705e945d215738e",
+      "package_path": "04_设备/ligent/sk12-2010__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -165.0,
+          -145.0,
+          -75.0,
+          -190.0,
+          -145.0,
+          -220.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            525.5
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            760.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            1082.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            112.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          165.0,
+          80.0,
+          155.0,
+          190.0,
+          125.0,
+          220.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a0c84b864582787689c52010d2508807f82d06b8aab29408fe3273553db0f442",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sk12-2010__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Ligent.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "SK12-2010",
+          "manufacturer": "Ligent",
+          "variant": "",
+          "display": "Ligent SK12-2010",
+          "path": "robots/models/Ligent-SK12-2010.robot",
+          "type": "robots",
+          "payload": 12,
+          "reach": 2010,
+          "axes": 6,
+          "library_assets": [
+            "eaf7436b-23ad-5fcd-aed8-b55725de2970"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Ligent-SK12-2010.robot",
+        "path": "simready_usd/Ligent-SK12-2010.robot",
+        "sha256": "32b1851e47caa3748fed28154399ccc991e88499e48d5d1398c419a49d67a7aa"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

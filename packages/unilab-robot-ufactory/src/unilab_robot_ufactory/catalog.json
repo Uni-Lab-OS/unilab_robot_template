@@ -1,0 +1,101 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "ufactory",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "xarm5": {
+      "title": "uFactory xArm5｜多源合并",
+      "asset": {
+        "asset_id": "98fcd69b-51d1-52a6-8a46-a48f4b60d994",
+        "package_digest": "e5bb3b85eefaedb334eebc1f53726402192316b65b1621e0bb81b9db3018ef47",
+        "package_path": "04_设备/ufactory/xarm5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/xarm5/module.json",
+      "module_sha256": "383f1c1f88548eb0cf0120c899afcc08ea5501fb3fbd1ccee292905d9014e177"
+    },
+    "xarm6": {
+      "title": "uFactory xArm6｜多源合并",
+      "asset": {
+        "asset_id": "6a652f5a-27cb-5a98-bb79-4efdee67c784",
+        "package_digest": "b34765b41e3c14d5c24f0b9751627c80b29bdd1e0c9c2e7607a1f00bc82db4fb",
+        "package_path": "04_设备/ufactory/xarm6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/xarm6/module.json",
+      "module_sha256": "8c6f111bf0ba18f44d1235b61664276123d4aad130e317510c76fe745a8ee8cb"
+    },
+    "xarm7": {
+      "title": "uFactory xArm7｜多源合并",
+      "asset": {
+        "asset_id": "a04a8fa6-c2d4-58fd-bd28-a737d8447149",
+        "package_digest": "fd09f733bbb74201f25fe034cbb99a26221d1c3a0c99914c94b84660f6aec0c3",
+        "package_path": "04_设备/ufactory/xarm7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/xarm7/module.json",
+      "module_sha256": "0da26977d86c42be58dea1ba060a1c2d7884f2eba1b13ec67af7be6a26ab153d"
+    },
+    "850": {
+      "title": "uFactory 850",
+      "asset": {
+        "asset_id": "7c2da37d-cace-5606-9813-c06ca8214d20",
+        "package_digest": "17adf9225f55638783330fb06f72ee7feecdb6f5af0dcc5145612f1524b11091",
+        "package_path": "04_设备/ufactory/850__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/850/module.json",
+      "module_sha256": "64093368614ccda3828c1871e7b115f7a6bf9a237b2d0719d136b814e6aca4fa"
+    },
+    "lite6": {
+      "title": "uFactory Lite6",
+      "asset": {
+        "asset_id": "301b47e7-9b3a-5de0-98be-3bdd5a81827e",
+        "package_digest": "85fce57d176bbc93df7614a61144c58d41df802c3932ea94ca7e7d35cb1f6d93",
+        "package_path": "04_设备/ufactory/lite6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lite6/module.json",
+      "module_sha256": "facf6b852a09f7638d2d63b0a47348923b137788a62f0bc57a87675933e58888"
+    },
+    "lite6vacuumgripper": {
+      "title": "uFactory Lite6 Vacuum Gripper",
+      "asset": {
+        "asset_id": "81e45628-17e2-5f93-87c1-3cd990a5feb4",
+        "package_digest": "2b848293753b6a57442d9bd9368622a6413c3c5e11cb312fb7ab5d14c9ae589c",
+        "package_path": "01_零部件/ufactory/lite6_vacuum_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lite6vacuumgripper/module.json",
+      "module_sha256": "d382a3845470944f6b116796c5bc31f86fde209b46819318fad2fedbe5da2c6c"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "denso_robot_moveit_config_7398f34c7d",
+  "source": {
+    "url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+    "commit": "2805694999b0375861e632426b5abc484d9a9936",
+    "path": "robots/denso/ros2/denso_robot_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "3650d8065579061568d37c285a6324025a5ec5a9a3c04a22b99025a7e181db05",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "6e706102bd90edc755c2efb392e9ca4e2e8bfbce23d8ad2f735854d5cfe6b971",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "119cb381357375a6577d31cd5069bb42c8c0529c3c61ef1b719211f27c3c9eab",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "3e05141b6a582f574e173757fb0700f612e164f4d77edea9c2bc7618e3dbd015",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/cobotta/config/denso_robot_controllers.yaml",
+      "sha256": "6db4f90d022b5d3d40b4506f12197a5ed4347985b628e4c649a2d4d1e5f92e98",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/cobotta/config/joint_limits.yaml",
+      "sha256": "2cde0e7cd1711273f7e00554e58733fca8cf13f1f8af72d6ad054dcec5f79f71",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/cobotta/config/moveit_controllers.yaml",
+      "sha256": "0aebd3becf231f8a7c0eb0098db9ac5c1f329788d727fdf958209dbff86cd2a2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/cobotta/srdf/denso_robot_macro.srdf.xacro",
+      "sha256": "fa6cfb37a9f25dbb3ed2a4dfcdabd703ad2d241ceb9233e583105bae5a24b9fa",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/hsr065a1_n32/config/denso_robot_controllers.yaml",
+      "sha256": "dde59058e468b28a611f26ce0061cb4f62e1c861ccdbb806853d9541251e0032",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/hsr065a1_n32/config/joint_limits.yaml",
+      "sha256": "d69394152bf599ab3cd68a08bd421776ea01d1ae0e05d3a8bdbfe310e1becd87",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/hsr065a1_n32/config/moveit_controllers.yaml",
+      "sha256": "e25b656c1c15c63717e2b0440a4f01a7b66f80b9c7ef7b46aff74148da87e6eb",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/hsr065a1_n32/srdf/denso_robot_macro.srdf.xacro",
+      "sha256": "dc65853fc3e0270689b7b60855aec871c12ccb0f16b2754ec96087e41fd7ba79",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/vs060/config/denso_robot_controllers.yaml",
+      "sha256": "6db4f90d022b5d3d40b4506f12197a5ed4347985b628e4c649a2d4d1e5f92e98",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/vs060/config/joint_limits.yaml",
+      "sha256": "b0ad7d19fa9bed9717d1e253b0bd37d8bfb9e175bcfa25dbafd73af9477c4611",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/vs060/config/moveit_controllers.yaml",
+      "sha256": "0aebd3becf231f8a7c0eb0098db9ac5c1f329788d727fdf958209dbff86cd2a2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robots/vs060/srdf/denso_robot_macro.srdf.xacro",
+      "sha256": "fa6cfb37a9f25dbb3ed2a4dfcdabd703ad2d241ceb9233e583105bae5a24b9fa",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/view_robot.rviz",
+      "sha256": "3b8971512b8d0cb2465736346398f8ce6127eee18717f3fa93f4d381989a3a2d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/denso_robot.srdf.xacro",
+      "sha256": "a79f4caac1751d538508eadc40779de46a5340af6ba84f53cf4324845f98a31d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+    }
+  ]
+}

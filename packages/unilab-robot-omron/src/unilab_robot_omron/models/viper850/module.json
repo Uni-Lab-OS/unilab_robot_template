@@ -1,0 +1,121 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "omron",
+  "model": "viper850",
+  "title": "Viper 850",
+  "asset": {
+    "asset_id": "55c9acca-22aa-5174-b1df-904efc735830",
+    "package_digest": "d82b84b0e833a765643e28983f5b0e9e49650cabb78584c1a25e5bafdfb7a438",
+    "package_path": "04_设备/omron/viper_850__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "55c9acca-22aa-5174-b1df-904efc735830",
+      "package_digest": "d82b84b0e833a765643e28983f5b0e9e49650cabb78584c1a25e5bafdfb7a438",
+      "package_path": "04_设备/omron/viper_850__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "518296ca689af1dff68192324246818b9095e7c56487da6d294b508537a7669e",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4aec6e8f35d03f002a7006a4cef94cff56bd1abfad988cb082c461f16827674d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/viper_850__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Omron.py",
+      "Omron_Adept_Vplus.py",
+      "Omron_FerRobotics.py",
+      "Omron_PathNode.py",
+      "Omron_Remote.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "TMDriver.py",
+        "reason": "TM driver does not establish support for Omron Adept or LD mobile robots"
+      },
+      {
+        "source": "robots/omron/tm_ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Viper 850",
+          "manufacturer": "Omron",
+          "variant": "",
+          "path": "Components/Omron/Robots/Viper 850.vcmx",
+          "type": "Robots",
+          "payload": "5",
+          "reach": "855",
+          "vcid": "17fe45e6-39fb-4f25-b2b5-c837d3b6c238",
+          "library_assets": [
+            "55c9acca-22aa-5174-b1df-904efc735830"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Viper 850.vcmx",
+        "path": "simready_usd/Viper 850.vcmx",
+        "sha256": "518296ca689af1dff68192324246818b9095e7c56487da6d294b508537a7669e"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

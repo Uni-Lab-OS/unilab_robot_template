@@ -1,0 +1,2364 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "m10ia",
+  "title": "Fanuc M-10iA｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+    "package_digest": "45ad16edfd548e9857d74176b74fc793ac5d10172b3e58204f7b9b67a0269df9",
+    "package_path": "04_设备/fanuc/m10ia__多源合并_r004"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+      "package_digest": "45ad16edfd548e9857d74176b74fc793ac5d10172b3e58204f7b9b67a0269df9",
+      "package_path": "04_设备/fanuc/m10ia__多源合并_r004"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "M-10iA",
+              "source": "robots/models/Fanuc-M-10iA.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "M-10iA",
+              "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+              "source_family": "VC",
+              "value": 10.0
+            },
+            {
+              "model": "M-10iA",
+              "source": "robots/models/Fanuc-M-10iA.robot",
+              "source_family": "RoboDK",
+              "value": 10.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 10.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "M-10iA",
+              "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+              "source_family": "VC",
+              "value": 1422.0
+            },
+            {
+              "model": "M-10iA",
+              "source": "robots/models/Fanuc-M-10iA.robot",
+              "source_family": "RoboDK",
+              "value": 1420.0
+            }
+          ],
+          "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+          "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1420,
+          "verification": [
+            {
+              "authority": "OEM-authored original on third-party archive",
+              "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+              "reviewed_at": "2026-11-08",
+              "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+              "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+              "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -450.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_constraint": {
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "formula": "usd_joint_degrees = matrix @ source_controller_degrees; signed axes encoded in joint frames",
+          "kind": "invertible_linear_coordinate_map",
+          "limits_scope": "USD limits are per-axis enclosure only. Coupled domain requires inverse(matrix) @ usd_coordinates within original source limits; dynamics remains disabled",
+          "native_function": "0x14055e6a0",
+          "source_lower": [
+            -180.0,
+            -90.0,
+            -95.0,
+            -190.0,
+            -190.0,
+            -360.0
+          ],
+          "source_upper": [
+            180.0,
+            160.0,
+            180.0,
+            190.0,
+            190.0,
+            360.0
+          ]
+        },
+        "controller_coordinate_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "controller_to_mdh_mode": 2,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -90.0,
+          -95.0,
+          -190.0,
+          -190.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            450.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            600.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            640.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            100.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          2.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          160.0,
+          180.0,
+          190.0,
+          190.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+              "entrypoints": {
+                "usd": "simready_usd/m10ia__多源合并_r003.usda"
+              },
+              "package_digest": "79059ef81c964b2c7e1c9145ef70a82448f6ba4a9c30f76bdb5d536cb875c75e",
+              "parameters": {
+                "product_catalog": {
+                  "axes": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 6.0
+                      }
+                    ],
+                    "status": "source_single",
+                    "unit": "count",
+                    "value": 6.0
+                  },
+                  "payload": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 10.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 10.0
+                      }
+                    ],
+                    "status": "source_agreement",
+                    "unit": "kg",
+                    "value": 10.0
+                  },
+                  "reach": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 1420.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 1422.0
+                      }
+                    ],
+                    "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                    "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+                    "status": "manufacturer_verified",
+                    "unit": "mm",
+                    "value": 1420,
+                    "verification": [
+                      {
+                        "authority": "OEM-authored original on third-party archive",
+                        "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                        "reviewed_at": "2026-11-08",
+                        "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                        "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+                        "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+                      }
+                    ]
+                  }
+                },
+                "source_models": [
+                  {
+                    "axes": 6,
+                    "converted_parameters": [],
+                    "display": "Fanuc M-10iA",
+                    "family": "RoboDK",
+                    "library_assets": [],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "RoboDK",
+                      "original_name": "Fanuc-M-10iA.robot",
+                      "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+                      "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+                    },
+                    "path": "robots/models/Fanuc-M-10iA.robot",
+                    "payload": 10,
+                    "reach": 1420,
+                    "type": "robots",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "d8f42bd73584b255df87098395512538882caea1",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [
+                      {
+                        "asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+                        "entrypoints": {
+                          "usd": "simready_usd/m-10ia__r001.usda"
+                        },
+                        "package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+                        "parameters": {
+                          "usd_content": {
+                            "authored_field_names": [
+                              "physics:axis",
+                              "physics:body0",
+                              "physics:body1",
+                              "physics:jointEnabled",
+                              "physics:localPos0",
+                              "physics:localPos1",
+                              "physics:localRot0",
+                              "physics:localRot1",
+                              "physics:lowerLimit",
+                              "physics:rigidBodyEnabled",
+                              "physics:upperLimit"
+                            ],
+                            "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                            "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                            "usd_authored": {
+                              "collision_api": 0,
+                              "enabled_joints": 0,
+                              "enabled_rigid_bodies": 0,
+                              "joints": 6,
+                              "mass_api": 0,
+                              "physical_material_bindings": 0,
+                              "physics_materials": 0,
+                              "rigid_bodies": 7
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "family": "VC",
+                    "library_assets": [
+                      "afd97251-2f51-5f7e-8143-be4b0183ba26"
+                    ],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "VC",
+                      "original_name": "M-10iA.vcmx",
+                      "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+                      "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+                    },
+                    "path": "Components/Fanuc/Robots/M-10iA.vcmx",
+                    "payload": "10",
+                    "reach": "1422.0",
+                    "type": "Robots",
+                    "variant": "",
+                    "vcid": "c8d18199-7fd8-42c5-9fbd-ea6ed6ec0b76"
+                  }
+                ],
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            },
+            {
+              "asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+              "entrypoints": {
+                "usd": "simready_usd/m-10ia__r001.usda"
+              },
+              "package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "a1e6cb3e-385b-5281-9199-23316047e23c",
+            "afd97251-2f51-5f7e-8143-be4b0183ba26"
+          ],
+          "manufacturer": "Fanuc",
+          "name": "M-10iA",
+          "original": {
+            "family": "VC",
+            "original_name": "M-10iA.vcmx",
+            "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+            "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+          },
+          "path": "Components/Fanuc/Robots/M-10iA.vcmx",
+          "payload": "10",
+          "reach": "1422.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "c8d18199-7fd8-42c5-9fbd-ea6ed6ec0b76"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+              "entrypoints": {
+                "usd": "simready_usd/m10ia__多源合并_r003.usda"
+              },
+              "package_digest": "79059ef81c964b2c7e1c9145ef70a82448f6ba4a9c30f76bdb5d536cb875c75e",
+              "parameters": {
+                "product_catalog": {
+                  "axes": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 6.0
+                      }
+                    ],
+                    "status": "source_single",
+                    "unit": "count",
+                    "value": 6.0
+                  },
+                  "payload": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 10.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 10.0
+                      }
+                    ],
+                    "status": "source_agreement",
+                    "unit": "kg",
+                    "value": 10.0
+                  },
+                  "reach": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 1420.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 1422.0
+                      }
+                    ],
+                    "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                    "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+                    "status": "manufacturer_verified",
+                    "unit": "mm",
+                    "value": 1420,
+                    "verification": [
+                      {
+                        "authority": "OEM-authored original on third-party archive",
+                        "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                        "reviewed_at": "2026-11-08",
+                        "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                        "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+                        "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+                      }
+                    ]
+                  }
+                },
+                "source_models": [
+                  {
+                    "axes": 6,
+                    "converted_parameters": [],
+                    "display": "Fanuc M-10iA",
+                    "family": "RoboDK",
+                    "library_assets": [],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "RoboDK",
+                      "original_name": "Fanuc-M-10iA.robot",
+                      "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+                      "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+                    },
+                    "path": "robots/models/Fanuc-M-10iA.robot",
+                    "payload": 10,
+                    "reach": 1420,
+                    "type": "robots",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "d8f42bd73584b255df87098395512538882caea1",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [
+                      {
+                        "asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+                        "entrypoints": {
+                          "usd": "simready_usd/m-10ia__r001.usda"
+                        },
+                        "package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+                        "parameters": {
+                          "usd_content": {
+                            "authored_field_names": [
+                              "physics:axis",
+                              "physics:body0",
+                              "physics:body1",
+                              "physics:jointEnabled",
+                              "physics:localPos0",
+                              "physics:localPos1",
+                              "physics:localRot0",
+                              "physics:localRot1",
+                              "physics:lowerLimit",
+                              "physics:rigidBodyEnabled",
+                              "physics:upperLimit"
+                            ],
+                            "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                            "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                            "usd_authored": {
+                              "collision_api": 0,
+                              "enabled_joints": 0,
+                              "enabled_rigid_bodies": 0,
+                              "joints": 6,
+                              "mass_api": 0,
+                              "physical_material_bindings": 0,
+                              "physics_materials": 0,
+                              "rigid_bodies": 7
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "family": "VC",
+                    "library_assets": [
+                      "afd97251-2f51-5f7e-8143-be4b0183ba26"
+                    ],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "VC",
+                      "original_name": "M-10iA.vcmx",
+                      "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+                      "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+                    },
+                    "path": "Components/Fanuc/Robots/M-10iA.vcmx",
+                    "payload": "10",
+                    "reach": "1422.0",
+                    "type": "Robots",
+                    "variant": "",
+                    "vcid": "c8d18199-7fd8-42c5-9fbd-ea6ed6ec0b76"
+                  }
+                ],
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Fanuc M-10iA",
+          "family": "RoboDK",
+          "library_assets": [
+            "a1e6cb3e-385b-5281-9199-23316047e23c"
+          ],
+          "manufacturer": "Fanuc",
+          "name": "M-10iA",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-M-10iA.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+            "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+          },
+          "path": "robots/models/Fanuc-M-10iA.robot",
+          "payload": 10,
+          "reach": 1420,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+              "entrypoints": {
+                "usd": "simready_usd/m10ia__多源合并_r003.usda"
+              },
+              "package_digest": "79059ef81c964b2c7e1c9145ef70a82448f6ba4a9c30f76bdb5d536cb875c75e",
+              "parameters": {
+                "product_catalog": {
+                  "axes": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 6.0
+                      }
+                    ],
+                    "status": "source_single",
+                    "unit": "count",
+                    "value": 6.0
+                  },
+                  "payload": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 10.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 10.0
+                      }
+                    ],
+                    "status": "source_agreement",
+                    "unit": "kg",
+                    "value": 10.0
+                  },
+                  "reach": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 1420.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 1422.0
+                      }
+                    ],
+                    "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                    "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+                    "status": "manufacturer_verified",
+                    "unit": "mm",
+                    "value": 1420,
+                    "verification": [
+                      {
+                        "authority": "OEM-authored original on third-party archive",
+                        "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                        "reviewed_at": "2026-11-08",
+                        "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                        "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+                        "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+                      }
+                    ]
+                  }
+                },
+                "source_models": [
+                  {
+                    "axes": 6,
+                    "converted_parameters": [],
+                    "display": "Fanuc M-10iA",
+                    "family": "RoboDK",
+                    "library_assets": [],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "RoboDK",
+                      "original_name": "Fanuc-M-10iA.robot",
+                      "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+                      "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+                    },
+                    "path": "robots/models/Fanuc-M-10iA.robot",
+                    "payload": 10,
+                    "reach": 1420,
+                    "type": "robots",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "d8f42bd73584b255df87098395512538882caea1",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [
+                      {
+                        "asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+                        "entrypoints": {
+                          "usd": "simready_usd/m-10ia__r001.usda"
+                        },
+                        "package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+                        "parameters": {
+                          "usd_content": {
+                            "authored_field_names": [
+                              "physics:axis",
+                              "physics:body0",
+                              "physics:body1",
+                              "physics:jointEnabled",
+                              "physics:localPos0",
+                              "physics:localPos1",
+                              "physics:localRot0",
+                              "physics:localRot1",
+                              "physics:lowerLimit",
+                              "physics:rigidBodyEnabled",
+                              "physics:upperLimit"
+                            ],
+                            "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                            "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                            "usd_authored": {
+                              "collision_api": 0,
+                              "enabled_joints": 0,
+                              "enabled_rigid_bodies": 0,
+                              "joints": 6,
+                              "mass_api": 0,
+                              "physical_material_bindings": 0,
+                              "physics_materials": 0,
+                              "rigid_bodies": 7
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "family": "VC",
+                    "library_assets": [
+                      "afd97251-2f51-5f7e-8143-be4b0183ba26"
+                    ],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "VC",
+                      "original_name": "M-10iA.vcmx",
+                      "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+                      "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+                    },
+                    "path": "Components/Fanuc/Robots/M-10iA.vcmx",
+                    "payload": "10",
+                    "reach": "1422.0",
+                    "type": "Robots",
+                    "variant": "",
+                    "vcid": "c8d18199-7fd8-42c5-9fbd-ea6ed6ec0b76"
+                  }
+                ],
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "family": "UniLab",
+          "library_assets": [
+            "a1e6cb3e-385b-5281-9199-23316047e23c"
+          ],
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "m10ia",
+          "original": {
+            "family": "UniLab",
+            "original_name": "m10ia_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+            "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+          },
+          "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+          "raw_name": "m10ia_macro.xacro",
+          "robot_description": {
+            "commit": "d8f42bd73584b255df87098395512538882caea1",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+              "entrypoints": {
+                "usd": "simready_usd/m10ia__多源合并_r003.usda"
+              },
+              "package_digest": "79059ef81c964b2c7e1c9145ef70a82448f6ba4a9c30f76bdb5d536cb875c75e",
+              "parameters": {
+                "product_catalog": {
+                  "axes": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 6.0
+                      }
+                    ],
+                    "status": "source_single",
+                    "unit": "count",
+                    "value": 6.0
+                  },
+                  "payload": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 10.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 10.0
+                      }
+                    ],
+                    "status": "source_agreement",
+                    "unit": "kg",
+                    "value": 10.0
+                  },
+                  "reach": {
+                    "claims": [
+                      {
+                        "model": "M-10iA",
+                        "source": "robots/models/Fanuc-M-10iA.robot",
+                        "source_family": "RoboDK",
+                        "value": 1420.0
+                      },
+                      {
+                        "model": "M-10iA",
+                        "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                        "source_family": "VC",
+                        "value": 1422.0
+                      }
+                    ],
+                    "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                    "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+                    "status": "manufacturer_verified",
+                    "unit": "mm",
+                    "value": 1420,
+                    "verification": [
+                      {
+                        "authority": "OEM-authored original on third-party archive",
+                        "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                        "reviewed_at": "2026-11-08",
+                        "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                        "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+                        "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+                      }
+                    ]
+                  }
+                },
+                "source_models": [
+                  {
+                    "axes": 6,
+                    "converted_parameters": [],
+                    "display": "Fanuc M-10iA",
+                    "family": "RoboDK",
+                    "library_assets": [],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "RoboDK",
+                      "original_name": "Fanuc-M-10iA.robot",
+                      "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+                      "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+                    },
+                    "path": "robots/models/Fanuc-M-10iA.robot",
+                    "payload": 10,
+                    "reach": 1420,
+                    "type": "robots",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "d8f42bd73584b255df87098395512538882caea1",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [],
+                    "family": "UniLab",
+                    "manufacturer": "fanuc",
+                    "mesh_refs": 14,
+                    "movable_declared": 6,
+                    "name": "m10ia",
+                    "original": {
+                      "family": "UniLab",
+                      "original_name": "m10ia_macro.xacro",
+                      "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                      "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+                    },
+                    "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                    "raw_name": "m10ia_macro.xacro",
+                    "robot_description": {
+                      "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+                      "declarations": [
+                        {
+                          "inertials": [],
+                          "joints": [
+                            "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                            "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                            "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                          ],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        },
+                        {
+                          "inertials": [],
+                          "joints": [],
+                          "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                          "transmissions_and_control": [],
+                          "units": "URDF SI; expressions are not evaluated"
+                        }
+                      ],
+                      "dependency_gaps": [],
+                      "repository": "https://github.com/ros-industrial/fanuc.git"
+                    },
+                    "type": "xml_geometry",
+                    "variant": ""
+                  },
+                  {
+                    "converted_parameters": [
+                      {
+                        "asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+                        "entrypoints": {
+                          "usd": "simready_usd/m-10ia__r001.usda"
+                        },
+                        "package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+                        "parameters": {
+                          "usd_content": {
+                            "authored_field_names": [
+                              "physics:axis",
+                              "physics:body0",
+                              "physics:body1",
+                              "physics:jointEnabled",
+                              "physics:localPos0",
+                              "physics:localPos1",
+                              "physics:localRot0",
+                              "physics:localRot1",
+                              "physics:lowerLimit",
+                              "physics:rigidBodyEnabled",
+                              "physics:upperLimit"
+                            ],
+                            "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                            "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                            "usd_authored": {
+                              "collision_api": 0,
+                              "enabled_joints": 0,
+                              "enabled_rigid_bodies": 0,
+                              "joints": 6,
+                              "mass_api": 0,
+                              "physical_material_bindings": 0,
+                              "physics_materials": 0,
+                              "rigid_bodies": 7
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "family": "VC",
+                    "library_assets": [
+                      "afd97251-2f51-5f7e-8143-be4b0183ba26"
+                    ],
+                    "manufacturer": "Fanuc",
+                    "name": "M-10iA",
+                    "original": {
+                      "family": "VC",
+                      "original_name": "M-10iA.vcmx",
+                      "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+                      "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+                    },
+                    "path": "Components/Fanuc/Robots/M-10iA.vcmx",
+                    "payload": "10",
+                    "reach": "1422.0",
+                    "type": "Robots",
+                    "variant": "",
+                    "vcid": "c8d18199-7fd8-42c5-9fbd-ea6ed6ec0b76"
+                  }
+                ],
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "884152c999e5df489c267558ceba2f90c9356a5326cad92844c68099c07e825d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "family": "UniLab",
+          "library_assets": [
+            "a1e6cb3e-385b-5281-9199-23316047e23c"
+          ],
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "m10ia",
+          "original": {
+            "family": "UniLab",
+            "original_name": "m10ia_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+            "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+          },
+          "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+          "raw_name": "m10ia_macro.xacro",
+          "robot_description": {
+            "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-3.14\" upper=\"3.14\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.150 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-1.57\" upper=\"2.79\" effort=\"0\" velocity=\"3.32\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.600\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.14\" upper=\"4.61\" effort=\"0\" velocity=\"3.67\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.200\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.640 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit lower=\"-3.31\" upper=\"3.31\" effort=\"0\" velocity=\"6.98\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.100 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"10.47\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.450\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-vc",
+    "entrypoints": {
+      "usd": "simready_usd/m10ia__多源合并_r004.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc M-10iA｜多源合并",
+          "id": "merged_robot_a1e6cb3e_385b_5281_9199_23316047e23c",
+          "metadata": {
+            "asset_id": "a1e6cb3e-385b-5281-9199-23316047e23c",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "simready_usd/M-10iA.vcmx",
+        "path": "simready_usd/M-10iA.vcmx",
+        "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-M-10iA.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-10ia/Fanuc-M-10iA.robot",
+        "sha256": "3b7276745a39ca05873d07eafad5ae84ec97b2a166e85d86bafce84b3af7efbe"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m10ia_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_m10ia_macro/m10ia_macro.xacro",
+        "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_m10ia7l.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/config/opw_parameters_m10ia7l.yaml",
+        "sha256": "0db6e85a07ec40a32a247c4854573d2e80121b1077faf8f412675ccc70606a33"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_m10ia.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/config/opw_parameters_m10ia.yaml",
+        "sha256": "35a26f42f2083e10c00f068e039bfe1d4d6cebd059b01284be36cdfc2b0edbf3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m10ia7l.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/config/joint_names_m10ia7l.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m10ia.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/config/joint_names_m10ia.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/package.xml",
+        "sha256": "1f4005e3f905f664c4a591de9ec67878b713beabf6948611ee341db1d359210e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m10ia_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+        "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_6.stl",
+        "sha256": "a912fe390cee8dc606aa71c25d48b6711f7adfc0a998c3d353e55e752cfd87e1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_6.stl",
+        "sha256": "a912fe390cee8dc606aa71c25d48b6711f7adfc0a998c3d353e55e752cfd87e1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_5.stl",
+        "sha256": "f1a312572be5060b524e5f5183e7fb7ca71c02a78fb9088bc58168aead1283e8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_5.stl",
+        "sha256": "f1a312572be5060b524e5f5183e7fb7ca71c02a78fb9088bc58168aead1283e8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_4.stl",
+        "sha256": "5990f5c090c0fdfc721f295f323bcb1a1ce446ba29e163ea8e35176741b27a9d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_4.stl",
+        "sha256": "5990f5c090c0fdfc721f295f323bcb1a1ce446ba29e163ea8e35176741b27a9d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_3.stl",
+        "sha256": "1da17c51855c4c812ae24183207d8635d5c209858e64795e5da2147d9a26b891"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_3.stl",
+        "sha256": "1da17c51855c4c812ae24183207d8635d5c209858e64795e5da2147d9a26b891"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_2.stl",
+        "sha256": "97aaab47f7ecc2e634c349b5adebc78f67a68f5884a2a82c51428a4552d454db"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_2.stl",
+        "sha256": "97aaab47f7ecc2e634c349b5adebc78f67a68f5884a2a82c51428a4552d454db"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/link_1.stl",
+        "sha256": "bcd525ce4f2c86e6bf03b82477eefcc599f347c4ab9014170f6e303c74ea60f4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/link_1.stl",
+        "sha256": "bcd525ce4f2c86e6bf03b82477eefcc599f347c4ab9014170f6e303c74ea60f4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/collision/base_link.stl",
+        "sha256": "6ae3c49f2660c759c4686ffe9d6e91e0a81105d4f4fe87b92cc398b6360a847f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_m10ia_support/meshes/m10ia/visual/base_link.stl",
+        "sha256": "6ae3c49f2660c759c4686ffe9d6e91e0a81105d4f4fe87b92cc398b6360a847f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m10ia_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/1_m10ia_macro/m10ia_macro.xacro",
+        "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_m10ia7l.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/config/opw_parameters_m10ia7l.yaml",
+        "sha256": "0db6e85a07ec40a32a247c4854573d2e80121b1077faf8f412675ccc70606a33"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_m10ia.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/config/opw_parameters_m10ia.yaml",
+        "sha256": "35a26f42f2083e10c00f068e039bfe1d4d6cebd059b01284be36cdfc2b0edbf3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m10ia7l.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/config/joint_names_m10ia7l.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_m10ia.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/config/joint_names_m10ia.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/package.xml",
+        "sha256": "ebc2e1ea69594262690df6bc03f094e40a9ccbe9b0a223743489000c610277fc"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "m10ia_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/urdf/m10ia_macro.xacro",
+        "sha256": "3b32f4e25320f98db6560e611086d16250f154d1b6e9f014795fa754dd4ac344"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_6.stl",
+        "sha256": "a912fe390cee8dc606aa71c25d48b6711f7adfc0a998c3d353e55e752cfd87e1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_6.stl",
+        "sha256": "a912fe390cee8dc606aa71c25d48b6711f7adfc0a998c3d353e55e752cfd87e1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_5.stl",
+        "sha256": "f1a312572be5060b524e5f5183e7fb7ca71c02a78fb9088bc58168aead1283e8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_5.stl",
+        "sha256": "f1a312572be5060b524e5f5183e7fb7ca71c02a78fb9088bc58168aead1283e8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_4.stl",
+        "sha256": "5990f5c090c0fdfc721f295f323bcb1a1ce446ba29e163ea8e35176741b27a9d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_4.stl",
+        "sha256": "5990f5c090c0fdfc721f295f323bcb1a1ce446ba29e163ea8e35176741b27a9d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_3.stl",
+        "sha256": "1da17c51855c4c812ae24183207d8635d5c209858e64795e5da2147d9a26b891"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_3.stl",
+        "sha256": "1da17c51855c4c812ae24183207d8635d5c209858e64795e5da2147d9a26b891"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_2.stl",
+        "sha256": "97aaab47f7ecc2e634c349b5adebc78f67a68f5884a2a82c51428a4552d454db"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_2.stl",
+        "sha256": "97aaab47f7ecc2e634c349b5adebc78f67a68f5884a2a82c51428a4552d454db"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/link_1.stl",
+        "sha256": "bcd525ce4f2c86e6bf03b82477eefcc599f347c4ab9014170f6e303c74ea60f4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/link_1.stl",
+        "sha256": "bcd525ce4f2c86e6bf03b82477eefcc599f347c4ab9014170f6e303c74ea60f4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/collision/base_link.stl",
+        "sha256": "6ae3c49f2660c759c4686ffe9d6e91e0a81105d4f4fe87b92cc398b6360a847f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_m10ia_support/meshes/m10ia/visual/base_link.stl",
+        "sha256": "6ae3c49f2660c759c4686ffe9d6e91e0a81105d4f4fe87b92cc398b6360a847f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "VC",
+        "original_name": "M-10iA.vcmx",
+        "path": "simready_usd/source_assets/VC/0_m-10ia/M-10iA.vcmx",
+        "sha256": "bafc8b7e71e6db48be0fd12cfb002c5abdafa5df2e7f0f3147a77fbdc64c52f3"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "M-10iA",
+                "source": "robots/models/Fanuc-M-10iA.robot",
+                "source_family": "RoboDK",
+                "value": 1420.0
+              },
+              {
+                "model": "M-10iA",
+                "source": "Components/Fanuc/Robots/M-10iA.vcmx",
+                "source_family": "VC",
+                "value": 1422.0
+              }
+            ],
+            "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+            "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1420,
+            "verification": [
+              {
+                "authority": "OEM-authored original on third-party archive",
+                "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                "reviewed_at": "2026-11-08",
+                "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+                "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+                "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1420.0,
+            1422.0
+          ]
+        }
+      ],
+      "key": [
+        "fanuc",
+        "m10ia"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original on third-party archive",
+            "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+            "reviewed_at": "2026-11-08",
+            "scope": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+            "title": "FANUC B-82754SP/08 original manual, printed page 15 figure 3.2(a)",
+            "url": "https://studylib.net/doc/25975321/arcmate100ic-and-m-10ia--b-82754sp-08-"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "datum": "Old M-10iA horizontal J5 rotation-center reach; not /10M",
+            "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1420
+          }
+        }
+      },
+      "public_sources": [
+        {
+          "commit": "d8f42bd73584b255df87098395512538882caea1",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_m10ia_macro/m10ia_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "file identity, literal dependencies and declared joints/inertials; not numerical agreement with USD"
+        },
+        {
+          "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/1_m10ia_macro/m10ia_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "file identity, literal dependencies and declared joints/inertials; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "VC",
+        "original_asset_id": "afd97251-2f51-5f7e-8143-be4b0183ba26",
+        "original_package_digest": "593b3a78907ccc4101009f112691667b71ec310ab3ff6cde35be7daf696b37c7",
+        "source": "Components/Fanuc/Robots/M-10iA.vcmx"
+      },
+      "source_families": [
+        "RoboDK",
+        "UniLab",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

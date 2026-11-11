@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "cloos",
+  "models": {
+    "qiroxqrc350": {
+      "title": "CLOOS QIROX QRC-350",
+      "asset": {
+        "asset_id": "6224d3c1-8760-549d-aafc-3c3f5e0638bd",
+        "package_digest": "ca62b22fd389a91583dddcc84527f1dc92c1748ec673a15fc3318e18815c198d",
+        "package_path": "04_设备/cloos/qirox_qrc-350__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qiroxqrc350/module.json",
+      "module_sha256": "30c7361eeebd2ac229835a83fcbdf7983a4a929642cabd4e063009d79d1f2e1c"
+    },
+    "qrc290": {
+      "title": "QRC-290",
+      "asset": {
+        "asset_id": "57625be8-5274-5d4f-a8b7-7ef84362fcfc",
+        "package_digest": "259960bc2304554ffe3e9cf90eb0cc16168f2421a77b9d32412c51a91669c80a",
+        "package_path": "04_设备/cloos/qrc-290__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qrc290/module.json",
+      "module_sha256": "82e42c5aedf607619f8fe8a866ccd07261ef2b9f493de2104bf6c22744ba505a"
+    },
+    "romat310": {
+      "title": "CLOOS Romat 310",
+      "asset": {
+        "asset_id": "f5664440-cb98-5672-8cda-78d41de4b162",
+        "package_digest": "2cb9466813ef411c2518e53773ea086e0507ab344b3d0a34e31ac9b954f1cceb",
+        "package_path": "04_设备/cloos/romat_310__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/romat310/module.json",
+      "module_sha256": "918d12669868dd79494ecc4f9622d6466bf21f4cd7f79d2492c3f31e98d8dd09"
+    }
+  },
+  "source_profiles": []
+}

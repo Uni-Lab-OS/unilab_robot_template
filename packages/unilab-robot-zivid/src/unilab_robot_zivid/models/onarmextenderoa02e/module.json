@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "zivid",
+  "model": "onarmextenderoa02e",
+  "title": "Zivid On-Arm Extender OA02E",
+  "asset": {
+    "asset_id": "4259b1ef-dd68-55b7-bae0-852ee6438b68",
+    "package_digest": "c6dcfa69b733c811c485bda423a941aca3caaa415f37d26a8bda8013959efddd",
+    "package_path": "01_零部件/zivid/on-arm_extender_oa02e__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "4259b1ef-dd68-55b7-bae0-852ee6438b68",
+      "package_digest": "c6dcfa69b733c811c485bda423a941aca3caaa415f37d26a8bda8013959efddd",
+      "package_path": "01_零部件/zivid/on-arm_extender_oa02e__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1c170f0ba0a0623d6d0215ddd512754b192dd50941cb676db567965f4e07b508",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/on-arm_extender_oa02e__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "On-Arm Extender OA02E",
+          "manufacturer": "Zivid",
+          "variant": "",
+          "display": "Zivid On-Arm Extender OA02E",
+          "path": "tools/models/Zivid-On-Arm-Extender-OA02E.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "4259b1ef-dd68-55b7-bae0-852ee6438b68"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Zivid-On-Arm-Extender-OA02E.tool",
+        "path": "simready_usd/Zivid-On-Arm-Extender-OA02E.tool",
+        "sha256": "4df8fc2426069f114199223d070c546f6ebb99e2096143d4db3e08d5bf4fe311"
+      }
+    ]
+  }
+}

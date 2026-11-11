@@ -1,0 +1,963 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "aubo",
+  "model": "is20",
+  "title": "AUBO-iS20｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "c7f07eb6-e0f2-5afd-9bfc-35bacd313466",
+    "package_digest": "0222843633ace9456fb6d91203616eaca561525a8c09e111de669f458da44995",
+    "package_path": "04_设备/aubo/is20__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c7f07eb6-e0f2-5afd-9bfc-35bacd313466",
+      "package_digest": "0222843633ace9456fb6d91203616eaca561525a8c09e111de669f458da44995",
+      "package_path": "04_设备/aubo/is20__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "AUBO-iS20",
+              "source": "robots/models/AUBO-iS20.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "AUBO-iS20",
+              "source": "robots/models/AUBO-iS20.robot",
+              "source_family": "RoboDK",
+              "value": 20.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "kg",
+          "value": 20.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "AUBO-iS20",
+              "source": "robots/models/AUBO-iS20.robot",
+              "source_family": "RoboDK",
+              "value": 1647.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "mm",
+          "value": 1647.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -15.0,
+          100.0,
+          25.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            185.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            803.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            719.0,
+            -1.5707963267948966,
+            181.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            125.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            108.3
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "793b04bf-eb4a-5219-b0e5-84c9090258b7",
+              "entrypoints": {
+                "usd": "simready_usd/aubo-is20__r001.usdc"
+              },
+              "package_digest": "f81a37c6750a5afa3f68664c013e7f5998dfbcecbc1b8ba239890b995c6b753d",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    -15.0,
+                    100.0,
+                    25.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      185.5
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      803.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      719.0,
+                      -1.5707963267948966,
+                      181.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      125.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      108.3
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "49721a2e95c9602339b01e47065ff3ef353b25f8407a54dcb994d24416206eaa",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "AUBO-iS20",
+          "family": "RoboDK",
+          "library_assets": [
+            "793b04bf-eb4a-5219-b0e5-84c9090258b7"
+          ],
+          "manufacturer": "AUBO",
+          "name": "AUBO-iS20",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "AUBO-iS20.robot",
+            "path": "simready_usd/AUBO-iS20.robot",
+            "sha256": "f43a5cd6a454f05a2fc673368e8d49828a17feb98b62c64c4b0e205e093fc938"
+          },
+          "path": "robots/models/AUBO-iS20.robot",
+          "payload": 20,
+          "reach": 1647,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "aubo",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "is20",
+          "original": {
+            "family": "UniLab",
+            "original_name": "aubo_iS20.urdf",
+            "path": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+            "sha256": "ee7185d32de29640e98670fd0ba2b700fb04e22ef9b1ec60e1816b7bb708a3c1"
+          },
+          "path": "aubo/description/urdf/aubo_iS20.urdf",
+          "raw_name": "aubo_iS20.urdf",
+          "robot_description": {
+            "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "base_link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.01392 0.03668\" rpy=\"0 0 0\" />\n      <mass value=\"3.21884\" />\n      <inertia ixx=\"0.01636\" ixy=\"0\" ixz=\"0\" iyy=\"0.01304\" iyz=\"0.00027\" izz=\"0.02491\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "shoulder_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.00372 -0.03497\" rpy=\"0 0 0\" />\n      <mass value=\"15.37779\" />\n      <inertia ixx=\"0.08014\" ixy=\"-0.00002\" ixz=\"0.00002\" iyy=\"0.07972\" iyz=\"-0.00249\" izz=\"0.0666\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "upperArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.32007 0.0 0.01388\" rpy=\"0 0 0\" />\n      <mass value=\"30.81523\" />\n      <inertia ixx=\"0.15023\" ixy=\"0.00007\" ixz=\"-0.04352\" iyy=\"4.12564\" iyz=\"-0.00003\" izz=\"4.09815\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "foreArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.47472 -0.00001 0.11277\" rpy=\"0 0 0\" />\n      <mass value=\"6.2752\" />\n      <inertia ixx=\"0.01262\" ixy=\"0.00001\" ixz=\"0.00353\" iyy=\"0.50164\" iyz=\"0\" izz=\"0.50044\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist1_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.00001 0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"-0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist2_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 -0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist3_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00068 0.0005 -0.01915\" rpy=\"0 0 0\" />\n      <mass value=\"0.379\" />\n      <inertia ixx=\"0.00029\" ixy=\"0\" ixz=\"0\" iyy=\"0.0003\" iyz=\"0\" izz=\"0.00051\" />\n    </inertial>\n    "
+                  }
+                ],
+                "joints": [
+                  "<joint name=\"shoulder_joint\" type=\"revolute\">\n    <origin xyz=\"0 0 0.1855\" rpy=\"0 0 3.1415926535897932384626433832795\" />\n    <parent link=\"base_link\" />\n    <child link=\"shoulder_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"upperArm_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.181 0\" rpy=\"-1.5707963267948966192313216916398 -1.5707963267948966192313216916398 0\" />\n    <parent link=\"shoulder_Link\" />\n    <child link=\"upperArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"foreArm_joint\" type=\"revolute\">\n    <origin xyz=\"0.803 0 0\" rpy=\"-3.1415926535897932384626433832795 0 0\" />\n    <parent link=\"upperArm_Link\" />\n    <child link=\"foreArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"267\" start_stop=\"433\" velocity=\"3.1067\" />\n    <property inertia=\"4.9\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"9.54\" ratio=\"101\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist1_joint\" type=\"revolute\">\n    <origin xyz=\"0.719 0 0\" rpy=\"3.1415926535897932384626433832795 0 1.5707963267948966192313216916398\" />\n    <parent link=\"foreArm_Link\" />\n    <child link=\"wrist1_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist2_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.125 0\" rpy=\"-1.5707963267948966192313216916398 0 0\" />\n    <parent link=\"wrist1_Link\" />\n    <child link=\"wrist2_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist3_joint\" type=\"revolute\">\n    <origin xyz=\"0 -0.1083 0\" rpy=\"1.5707963267948966192313216916398 0 1.7907E-15\" />\n    <parent link=\"wrist2_Link\" />\n    <child link=\"wrist3_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"world_joint\" type=\"fixed\">\n    <parent link=\"world\" />\n    <child link=\"base_link\" />\n    <origin xyz=\"0.0 0.0 0.0\" rpy=\"0.0 0.0 0.0\" />\n  </joint>\n"
+                ],
+                "path": "aubo/description/urdf/aubo_iS20.urdf",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/AuboRobot/aubo_description.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "aubo",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "is20",
+          "original": {
+            "family": "UniLab",
+            "original_name": "aubo_iS20.urdf",
+            "path": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+            "sha256": "ee7185d32de29640e98670fd0ba2b700fb04e22ef9b1ec60e1816b7bb708a3c1"
+          },
+          "path": "aubo/ros2_driver/aubo_description/urdf/aubo_iS20.urdf",
+          "raw_name": "aubo_iS20.urdf",
+          "robot_description": {
+            "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "base_link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.01392 0.03668\" rpy=\"0 0 0\" />\n      <mass value=\"3.21884\" />\n      <inertia ixx=\"0.01636\" ixy=\"0\" ixz=\"0\" iyy=\"0.01304\" iyz=\"0.00027\" izz=\"0.02491\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "shoulder_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.00372 -0.03497\" rpy=\"0 0 0\" />\n      <mass value=\"15.37779\" />\n      <inertia ixx=\"0.08014\" ixy=\"-0.00002\" ixz=\"0.00002\" iyy=\"0.07972\" iyz=\"-0.00249\" izz=\"0.0666\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "upperArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.32007 0.0 0.01388\" rpy=\"0 0 0\" />\n      <mass value=\"30.81523\" />\n      <inertia ixx=\"0.15023\" ixy=\"0.00007\" ixz=\"-0.04352\" iyy=\"4.12564\" iyz=\"-0.00003\" izz=\"4.09815\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "foreArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.47472 -0.00001 0.11277\" rpy=\"0 0 0\" />\n      <mass value=\"6.2752\" />\n      <inertia ixx=\"0.01262\" ixy=\"0.00001\" ixz=\"0.00353\" iyy=\"0.50164\" iyz=\"0\" izz=\"0.50044\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist1_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.00001 0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"-0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist2_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 -0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist3_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00068 0.0005 -0.01915\" rpy=\"0 0 0\" />\n      <mass value=\"0.379\" />\n      <inertia ixx=\"0.00029\" ixy=\"0\" ixz=\"0\" iyy=\"0.0003\" iyz=\"0\" izz=\"0.00051\" />\n    </inertial>\n    "
+                  }
+                ],
+                "joints": [
+                  "<joint name=\"shoulder_joint\" type=\"revolute\">\n    <origin xyz=\"0 0 0.1855\" rpy=\"0 0 3.1415926535897932384626433832795\" />\n    <parent link=\"base_link\" />\n    <child link=\"shoulder_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"upperArm_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.181 0\" rpy=\"-1.5707963267948966192313216916398 -1.5707963267948966192313216916398 0\" />\n    <parent link=\"shoulder_Link\" />\n    <child link=\"upperArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"foreArm_joint\" type=\"revolute\">\n    <origin xyz=\"0.803 0 0\" rpy=\"-3.1415926535897932384626433832795 0 0\" />\n    <parent link=\"upperArm_Link\" />\n    <child link=\"foreArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"267\" start_stop=\"433\" velocity=\"3.1067\" />\n    <property inertia=\"4.9\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"9.54\" ratio=\"101\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist1_joint\" type=\"revolute\">\n    <origin xyz=\"0.719 0 0\" rpy=\"3.1415926535897932384626433832795 0 1.5707963267948966192313216916398\" />\n    <parent link=\"foreArm_Link\" />\n    <child link=\"wrist1_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist2_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.125 0\" rpy=\"-1.5707963267948966192313216916398 0 0\" />\n    <parent link=\"wrist1_Link\" />\n    <child link=\"wrist2_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist3_joint\" type=\"revolute\">\n    <origin xyz=\"0 -0.1083 0\" rpy=\"1.5707963267948966192313216916398 0 1.7907E-15\" />\n    <parent link=\"wrist2_Link\" />\n    <child link=\"wrist3_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"world_joint\" type=\"fixed\">\n    <parent link=\"world\" />\n    <child link=\"base_link\" />\n    <origin xyz=\"0.0 0.0 0.0\" rpy=\"0.0 0.0 0.0\" />\n  </joint>\n"
+                ],
+                "path": "aubo/ros2_driver/aubo_description/urdf/aubo_iS20.urdf",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/AuboRobot/aubo_description.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "aubo",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "is20",
+          "original": {
+            "family": "UniLab",
+            "original_name": "aubo_iS20.urdf",
+            "path": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+            "sha256": "ee7185d32de29640e98670fd0ba2b700fb04e22ef9b1ec60e1816b7bb708a3c1"
+          },
+          "path": "aubo/ros_driver/aubo_description/urdf/aubo_iS20.urdf",
+          "raw_name": "aubo_iS20.urdf",
+          "robot_description": {
+            "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "base_link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.01392 0.03668\" rpy=\"0 0 0\" />\n      <mass value=\"3.21884\" />\n      <inertia ixx=\"0.01636\" ixy=\"0\" ixz=\"0\" iyy=\"0.01304\" iyz=\"0.00027\" izz=\"0.02491\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "shoulder_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 0.00372 -0.03497\" rpy=\"0 0 0\" />\n      <mass value=\"15.37779\" />\n      <inertia ixx=\"0.08014\" ixy=\"-0.00002\" ixz=\"0.00002\" iyy=\"0.07972\" iyz=\"-0.00249\" izz=\"0.0666\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "upperArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.32007 0.0 0.01388\" rpy=\"0 0 0\" />\n      <mass value=\"30.81523\" />\n      <inertia ixx=\"0.15023\" ixy=\"0.00007\" ixz=\"-0.04352\" iyy=\"4.12564\" iyz=\"-0.00003\" izz=\"4.09815\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "foreArm_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.47472 -0.00001 0.11277\" rpy=\"0 0 0\" />\n      <mass value=\"6.2752\" />\n      <inertia ixx=\"0.01262\" ixy=\"0.00001\" ixz=\"0.00353\" iyy=\"0.50164\" iyz=\"0\" izz=\"0.50044\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist1_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.00001 0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"-0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist2_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00001 -0.0193 -0.00172\" rpy=\"0 0 0\" />\n      <mass value=\"2.89061\" />\n      <inertia ixx=\"0.00467\" ixy=\"0\" ixz=\"0\" iyy=\"0.00332\" iyz=\"0.00012\" izz=\"0.00464\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "wrist3_Link",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.00068 0.0005 -0.01915\" rpy=\"0 0 0\" />\n      <mass value=\"0.379\" />\n      <inertia ixx=\"0.00029\" ixy=\"0\" ixz=\"0\" iyy=\"0.0003\" iyz=\"0\" izz=\"0.00051\" />\n    </inertial>\n    "
+                  }
+                ],
+                "joints": [
+                  "<joint name=\"shoulder_joint\" type=\"revolute\">\n    <origin xyz=\"0 0 0.1855\" rpy=\"0 0 3.1415926535897932384626433832795\" />\n    <parent link=\"base_link\" />\n    <child link=\"shoulder_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"upperArm_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.181 0\" rpy=\"-1.5707963267948966192313216916398 -1.5707963267948966192313216916398 0\" />\n    <parent link=\"shoulder_Link\" />\n    <child link=\"upperArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"557\" start_stop=\"802\" velocity=\"2.5953\" />\n    <property inertia=\"9.5\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"17.45\" ratio=\"121\" />\n  </joint>\n\n  ",
+                  "<joint name=\"foreArm_joint\" type=\"revolute\">\n    <origin xyz=\"0.803 0 0\" rpy=\"-3.1415926535897932384626433832795 0 0\" />\n    <parent link=\"upperArm_Link\" />\n    <child link=\"foreArm_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"267\" start_stop=\"433\" velocity=\"3.1067\" />\n    <property inertia=\"4.9\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"9.54\" ratio=\"101\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist1_joint\" type=\"revolute\">\n    <origin xyz=\"0.719 0 0\" rpy=\"3.1415926535897932384626433832795 0 1.5707963267948966192313216916398\" />\n    <parent link=\"foreArm_Link\" />\n    <child link=\"wrist1_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist2_joint\" type=\"revolute\">\n    <origin xyz=\"0 0.125 0\" rpy=\"-1.5707963267948966192313216916398 0 0\" />\n    <parent link=\"wrist1_Link\" />\n    <child link=\"wrist2_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"wrist3_joint\" type=\"revolute\">\n    <origin xyz=\"0 -0.1083 0\" rpy=\"1.5707963267948966192313216916398 0 1.7907E-15\" />\n    <parent link=\"wrist2_Link\" />\n    <child link=\"wrist3_Link\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.283185307179586476925286766559\" upper=\"6.283185307179586476925286766559\" effort=\"58\" start_stop=\"107\" velocity=\"5.1714\" />\n    <property inertia=\"0.96\" damping=\"0\" stiffness=\"0\" offset=\"0\" motor_constant=\"8.58\" ratio=\"81\" />\n  </joint>\n\n  ",
+                  "<joint name=\"world_joint\" type=\"fixed\">\n    <parent link=\"world\" />\n    <child link=\"base_link\" />\n    <origin xyz=\"0.0 0.0 0.0\" rpy=\"0.0 0.0 0.0\" />\n  </joint>\n"
+                ],
+                "path": "aubo/ros_driver/aubo_description/urdf/aubo_iS20.urdf",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/AuboRobot/aubo_description.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "49721a2e95c9602339b01e47065ff3ef353b25f8407a54dcb994d24416206eaa",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/is20__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {},
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DriverAubo",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverAubo.py",
+        "sha256": "ac6f0dd9df562f443f9b27a7456b0cd4f266c9e02a0b82c6d3df8d464e2307a9",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DriverAubo.pyc",
+            "sha256": "744eb0a0447c38e79c689ee99e17eaf9f6eb5e47dc5fccc9aabb046fc59dede9"
+          },
+          {
+            "relative_path": "api/Robot/v311/DriverAubo.pyc",
+            "sha256": "cb3809de26fa15dc2556af4901a41ead3d0d2c65e5c4076285fbcc2dd983c536"
+          },
+          {
+            "relative_path": "api/Robot/v312/DriverAubo.pyc",
+            "sha256": "1439b1b6063f25075598437cf9f36a3011ac5d5f5cde9c46569f039afef8fcd7"
+          },
+          {
+            "relative_path": "api/Robot/v38/DriverAubo.pyc",
+            "sha256": "23a35675a212712575975b138b8d2259aaa6a43f1ef112b0ea08a7c75b471426"
+          },
+          {
+            "relative_path": "api/Robot/v39/DriverAubo.pyc",
+            "sha256": "fffde54b6358bb023b21ca4daf3650572dff88f391e82a3fb383eef44af10df9"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "aubo controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:DriverAuboArcs",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverAuboArcs.py",
+        "sha256": "0074cc3cae4c4dcf13b9d6c64eddc3743ed04644ed9201eb980b34d44d50543c",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DriverAuboArcs.pyc",
+            "sha256": "23b18c272f54c985083e10492594e2f27ccc956ce335b024daf997689f3ff523"
+          },
+          {
+            "relative_path": "api/Robot/v311/DriverAuboArcs.pyc",
+            "sha256": "1c573321897231e721c7ae7667dd5208de786cc960b60a563308fc34fa91f937"
+          },
+          {
+            "relative_path": "api/Robot/v312/DriverAuboArcs.pyc",
+            "sha256": "7aad97c13af12c0a88d098de6e039138a0ddf02fff4c6f0bb935697a08961456"
+          },
+          {
+            "relative_path": "api/Robot/v38/DriverAuboArcs.pyc",
+            "sha256": "d75f8b96a1e89fb7bcb602c1533f0e33a99004ae4927a60481071adf4df3b189"
+          },
+          {
+            "relative_path": "api/Robot/v39/DriverAuboArcs.pyc",
+            "sha256": "42816ee85977bc678065a65ef1c962a9b41b9af0b407bbde66d32e3ed576961b"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "aubo controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:aubo:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/aubo/ros2_driver",
+        "repository_url": "https://github.com/AuboRobot/aubo_ros2_driver.git",
+        "code_tree_sha256": "986564c3b608402e858126216cc07123df6b8c02d7c4da3ae27a030580a39470",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "ec6300048433250a64ddaf90d3a986369a02b9a029bf6eb436acf1c44734adfb"
+          },
+          {
+            "path": "aubo_description/README.md",
+            "sha256": "de70f0498f114781daad581e2f5cd08e6815c3d02e3384aa9d1671501093b82d"
+          },
+          {
+            "path": "aubo_msgs/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:aubo:ros_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/aubo/ros_driver",
+        "repository_url": "https://github.com/AuboRobot/aubo_ros_driver.git",
+        "code_tree_sha256": "498d7cbf64d26ee4b65a917bc2c124f445dc97e6fcf6aedb58205edbd3457663",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b56141feb67b8e409b602b655144e8acb8983bf513fdd2b7bee0599294f6d832"
+          },
+          {
+            "path": "aubo_description/README.md",
+            "sha256": "de70f0498f114781daad581e2f5cd08e6815c3d02e3384aa9d1671501093b82d"
+          },
+          {
+            "path": "aubo_dashboard_msgs/LICENSE",
+            "sha256": "d2b5607202c9b6aa86814053d27e28c1c063cd1dfdfdbf1c1b7f8acec8644353"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "AUBO.py",
+      "AUBO_ARCS.py",
+      "AUBO_Move_Track.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "AUBO-iS20.robot",
+        "path": "simready_usd/AUBO-iS20.robot",
+        "sha256": "f43a5cd6a454f05a2fc673368e8d49828a17feb98b62c64c4b0e205e093fc938"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "aubo_iS20.urdf",
+        "path": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+        "sha256": "ee7185d32de29640e98670fd0ba2b700fb04e22ef9b1ec60e1816b7bb708a3c1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link6.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link6.STL",
+        "sha256": "2c5d9bacee00280daf9214a8aae440d40e20fd36710be354996800d2e605700b"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link6.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link6.DAE",
+        "sha256": "c4fcef0d2d7f8edfae7114cfbbb28e13b3d7d8cc2c6c223ffe24f344978026fb"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link5.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link5.STL",
+        "sha256": "12bd87dade7269fb54c6be6aa14cc8dddb5b975fbe5f5fc211df9e5c9b5cc6ac"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link5.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link5.DAE",
+        "sha256": "d3713c1fcc280ba73ce51c791a6c3f033eb58ebdf1e3ac90cf5d0a8cb903d321"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link4.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link4.STL",
+        "sha256": "c3a6484cbca9f7419aa0fa62b3ea051b50ec420cba059836e33f62ce0e60a401"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link4.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link4.DAE",
+        "sha256": "a17f1762a0699a71107b228c3d48b285daa546e11bfa43547668a226d720aedc"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link3.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link3.STL",
+        "sha256": "311098cb6790ac22c2f0a715c6ec59ca567192aa61dfac05ff6a21032f2c1bfc"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link3.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link3.DAE",
+        "sha256": "248aefa436fb40b7088874541b50c5bdd209aea16d9a7ab1911330f9c3d8def1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link2.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link2.STL",
+        "sha256": "68052d4f2f4cdc86036a302ac3b17b34423add1054ba646ad901519e61a32691"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link2.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link2.DAE",
+        "sha256": "0f822c61ed88f7b005c4485416bf630ee146332ee5ceaa6f13c5e8a22f7960d7"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link1.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link1.STL",
+        "sha256": "a12793f8ae1299b74ba190bf309aac1d12adb767862aaebf45f6b40192528992"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link1.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link1.DAE",
+        "sha256": "7bba29e672872ce77ee563c98d7b124449a1bd9bee5e5fab1c4ec5ea6ad5ecf3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link0.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/collision/link0.STL",
+        "sha256": "220c6acff8b289d42db3c80ef803c0ad9e502192818adbac2824a03457881789"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link0.DAE",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/meshes/aubo_iS20/visual/link0.DAE",
+        "sha256": "53d8f970ca00aa8bfebabddba0159ca78e4f002bacf0a444c00915448b7f1fc6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/aubo/description/package.xml",
+        "sha256": "56aa00592def5e68bf68da682c35838029adb2ebabf029c3d26e69302a2d8cb0"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "aubo",
+        "is20"
+      ],
+      "label": "RoboDK+UniLab｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+          "repository": "https://github.com/AuboRobot/aubo_description.git",
+          "source": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+          "repository": "https://github.com/AuboRobot/aubo_description.git",
+          "source": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "47fa5e02fa873f27f7e812d31f31e3f4cf5e56b1",
+          "repository": "https://github.com/AuboRobot/aubo_description.git",
+          "source": "simready_usd/source_assets/UniLab/0_aubo_is20/aubo_iS20.urdf",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "793b04bf-eb4a-5219-b0e5-84c9090258b7",
+        "original_package_digest": "f81a37c6750a5afa3f68664c013e7f5998dfbcecbc1b8ba239890b995c6b753d",
+        "source": "robots/models/AUBO-iS20.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "UniLab"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

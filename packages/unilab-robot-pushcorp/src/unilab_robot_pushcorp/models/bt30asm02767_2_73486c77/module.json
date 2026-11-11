@@ -1,0 +1,767 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "bt30asm02767:2",
+  "title": "BT30 ASM02767-2",
+  "asset": {
+    "asset_id": "dcdb297c-7b0d-5e2b-b6f7-a51a4ee99dfa",
+    "package_digest": "122039442e670c0ee3959e22e565c7c1d55a51cb862b59bfbcd58e732eb53439",
+    "package_path": "03_机构模块/pushcorp/bt30_asm02767-2__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "dcdb297c-7b0d-5e2b-b6f7-a51a4ee99dfa",
+      "package_digest": "122039442e670c0ee3959e22e565c7c1d55a51cb862b59bfbcd58e732eb53439",
+      "package_path": "03_机构模块/pushcorp/bt30_asm02767-2__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "0f5c65fa027ee24875f7e68e199cc3ac10d899edf043c8cc8ca0675bc8cd2304",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "0f5c65fa027ee24875f7e68e199cc3ac10d899edf043c8cc8ca0675bc8cd2304",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": []
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:1488",
+              "kind": "Node",
+              "line": 1488,
+              "name": "TCP",
+              "node_id": "node:1488",
+              "node_path": [
+                {
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1488"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "8d0c161c45a869ebcec434495984fe87f658c758650be86d124d27f500f536f0",
+        "scoped_physical_fields": [
+          {
+            "fields": {
+              "CenterOfGravity": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1210,
+                "owner": {
+                  "id": "baseframe:1101",
+                  "kind": "BaseFrame",
+                  "line": 1101,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "c22584cf6c8677ba060eb3fc0d0ecee2bde06b57d4ff47627531bfd9a628bdd4",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Inertia": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1222,
+                "owner": {
+                  "id": "baseframe:1101",
+                  "kind": "BaseFrame",
+                  "line": 1101,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "f890cba2389d1cd746142accbffcf7b867f61f0cf18adeed15b89e43260e904c",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rVector>",
+                "unit_status": "not_declared",
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Mass": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1196,
+                "magnitude": 1000,
+                "owner": {
+                  "id": "baseframe:1101",
+                  "kind": "BaseFrame",
+                  "line": 1101,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "quantity": "Mass",
+                "raw_block_sha256": "a0a1b74d585eec15d086f37a5dd52b04c18e709465603475e6283e155f5a7370",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              }
+            },
+            "owner": {
+              "id": "baseframe:1101",
+              "kind": "BaseFrame",
+              "line": 1101,
+              "name": "TCP",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimBaseFrame"
+            },
+            "scope": "payload_frame_not_body"
+          }
+        ],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1339,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1367,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "5c91a99ccdfa991a44c9bb39cb6940c22547350f452f185b699e5052aecaf65f",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "BT30 ASM02767-2"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1353,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "89ca5389039164f8f54c18fb081a7b95b105f01fda538f1b5ee2ace6141dc233",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "BT30 ASM02767-2"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "BackfaceOn",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1257,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0e94217ff246041fe649b5e29663a18757cc7e9d708f6a1bbf64b104eb5e703c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 2
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1381,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1292,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1395,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "ToolDiameter": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1430,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "c155f75e2426a97771ee4aab850d729712de4b216df620476b19eaac36e90946",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 90
+              },
+              "ToolOffset": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1464,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "4fd2fc6b41f3754556775491591a286b3a595bbfa9c2799c92bf578c3ab19763",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 25
+              },
+              "ToolThickness": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1447,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "14b5700a3123613cc0b9b34b231515856e5bb6a75914f03f4c5164b4f2f8b1b0",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 10
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1243,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "BT30 ASM02767-2",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(-(ToolThickness+ToolOffset)-37.500000).Ry(180)",
+                "line": 1494,
+                "owner": {
+                  "id": "node:1488",
+                  "kind": "Node",
+                  "line": 1488,
+                  "name": "TCP",
+                  "node_id": "node:1488",
+                  "node_path": [
+                    {
+                      "name": "BT30 ASM02767-2",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:1488"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "adc1a122bdb9da5bd08b6ff0569c07d17d4c03913269d53dafd1a6e3e2698ba2",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:1488",
+              "kind": "Node",
+              "line": 1488,
+              "name": "TCP",
+              "node_id": "node:1488",
+              "node_path": [
+                {
+                  "name": "BT30 ASM02767-2",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1488"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "0f5c65fa027ee24875f7e68e199cc3ac10d899edf043c8cc8ca0675bc8cd2304"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8da3d8d0db608426a36a2a40cab34194f5400c35450b309f9e3dba540946fdeb",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/bt30_asm02767-2__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "BT30 ASM02767-2",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/BT30 ASM02767-2.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "bdbb9356-fdc1-447e-a9df-c949bebadad4",
+          "library_assets": [
+            "dcdb297c-7b0d-5e2b-b6f7-a51a4ee99dfa"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/BT30 ASM02767-2.vcmx",
+        "path": "simready_usd/BT30 ASM02767-2.vcmx",
+        "sha256": "0f5c65fa027ee24875f7e68e199cc3ac10d899edf043c8cc8ca0675bc8cd2304"
+      }
+    ]
+  }
+}

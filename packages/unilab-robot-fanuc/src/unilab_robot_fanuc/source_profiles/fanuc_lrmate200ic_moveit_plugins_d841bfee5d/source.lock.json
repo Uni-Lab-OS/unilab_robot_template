@@ -1,0 +1,74 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_lrmate200ic_moveit_plugins_d841bfee5d",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+    "path": "robots/fanuc/ros_industrial_melodic_source/moveit_cfgs/fanuc_lrmate200ic_moveit_plugins",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "2c7c1549cb967fd2aadc4528b87ff34886bdc86732d7a28142b5d722ef6aa9c2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5f_kinematics/CMakeLists.txt",
+      "sha256": "10e4b6dd2bd558fe0fda95f77dd0c3d26074a8cc5ec7dfdee09bc17497f1f9f5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5f_kinematics/fanuc_lrmate200ic5f_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "43a6271bf0e2d5b35bb69b8927e6abc287133ddef4d53b6d24f3563b901f5fd7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5h_kinematics/CMakeLists.txt",
+      "sha256": "733a4ccaf03b1cff7d3e82b296b789facac8a4560316eedd9ac3970fc418b5c5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5h_kinematics/fanuc_lrmate200ic5h_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "cf9e49ba098d264ed9a855d904cc78e1cbea8cb470f0707667e5347401cb0543",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5l_kinematics/CMakeLists.txt",
+      "sha256": "545edee373ef46ee682d9a492b2b3174ab17cb5109a7ddc57169a095c7b8feee",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic5l_kinematics/fanuc_lrmate200ic5l_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "103878db0ed98dfdff8bc941af1c1a60f93767a4153dd821cba1ad5bd3a21a78",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic_kinematics/CMakeLists.txt",
+      "sha256": "6da07cc03dd073f0798990337347f6a15c25ff48eacd3a2901cd737a5125b6f7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200ic_kinematics/fanuc_lrmate200ic_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "f1d88f0ec05b58afa58221bf0bf51695935231f70e46e6c88dd8926aab626f09",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "abcaf9996a2a992005f6f496794265766bd8479bfb1e3f289c4eaf465b61578b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "b298d4b1d8d4c0cf08e090518e510232d71d0e0a6de1d359e2af0a840cf6e285",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

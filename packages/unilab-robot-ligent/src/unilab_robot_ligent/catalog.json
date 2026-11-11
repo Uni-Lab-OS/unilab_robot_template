@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "ligent",
+  "models": {
+    "sk12:2010": {
+      "title": "Ligent SK12-2010",
+      "asset": {
+        "asset_id": "eaf7436b-23ad-5fcd-aed8-b55725de2970",
+        "package_digest": "43f7117ed1d320df35b534793b296369c8b04fd0b848ef3b5705e945d215738e",
+        "package_path": "04_设备/ligent/sk12-2010__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sk12_2010_f6bef8c0/module.json",
+      "module_sha256": "4372a70f43ef06cc173ea437f5bac5cfcbcaef8d7d852ed0494e8831a7cddd3d"
+    },
+    "weldingtool": {
+      "title": "Ligent Welding Tool",
+      "asset": {
+        "asset_id": "1ac28472-eed7-515e-9ecb-1681c37ea9f2",
+        "package_digest": "a5f41568594c01ea6c94b769f9e4d8884f17bd565de3bb2b891285f09de2f758",
+        "package_path": "01_零部件/ligent/welding_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/weldingtool/module.json",
+      "module_sha256": "cc0c50ebda7da6f60d219cd6af0395dd051dfd16a742dd8dc1752c62c3499a46"
+    }
+  },
+  "source_profiles": []
+}

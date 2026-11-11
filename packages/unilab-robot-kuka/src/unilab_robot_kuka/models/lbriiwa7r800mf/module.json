@@ -1,0 +1,382 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "lbriiwa7r800mf",
+  "title": "KUKA LBR iiwa 7 R800 MF",
+  "asset": {
+    "asset_id": "37fb6609-0bae-561f-a25b-38ba3dad0722",
+    "package_digest": "cabf1da17c8e61054fbe405c13504f403684b5222f6e9f82a15d638e42d49f60",
+    "package_path": "04_设备/kuka/lbr_iiwa_7_r800_mf__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "37fb6609-0bae-561f-a25b-38ba3dad0722",
+      "package_digest": "cabf1da17c8e61054fbe405c13504f403684b5222f6e9f82a15d638e42d49f60",
+      "package_path": "04_设备/kuka/lbr_iiwa_7_r800_mf__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -170.0,
+          -120.0,
+          -170.0,
+          -120.0,
+          -170.0,
+          -120.0,
+          -175.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            340.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            400.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -0.0,
+            0.0,
+            400.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            152.0
+          ]
+        ],
+        "mechanism_type": 3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          1.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          170.0,
+          120.0,
+          170.0,
+          120.0,
+          170.0,
+          120.0,
+          175.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "47ddec227e84818831c43ce4366f3b83f6ab3758b2e81302e33cc1c50dca0374",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/lbr_iiwa_7_r800_mf__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apikukaiiwa",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikukaiiwa.py",
+        "sha256": "9f48cc1b7a37512db2ed2dbca622b519de4b60f051b6559605ad2263f8006d3d",
+        "bytes": 23692,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA Sunrise IIWA"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "kukabridge.exe",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "apikuka.exe",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "LBR iiwa 7 R800 MF",
+          "manufacturer": "KUKA",
+          "variant": "",
+          "display": "KUKA LBR iiwa 7 R800 MF",
+          "path": "robots/models/KUKA-LBR-iiwa-7-R800-MF.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 800,
+          "axes": 7,
+          "library_assets": [
+            "37fb6609-0bae-561f-a25b-38ba3dad0722"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/KUKA-LBR-iiwa-7-R800-MF.robot",
+        "path": "simready_usd/KUKA-LBR-iiwa-7-R800-MF.robot",
+        "sha256": "8bb7b00719339ccd8cacf4e90dba1d3c6df67565354fdc25ef640872be3d4cf9"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

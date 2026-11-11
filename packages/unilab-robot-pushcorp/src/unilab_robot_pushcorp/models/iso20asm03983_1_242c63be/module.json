@@ -1,0 +1,767 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "iso20asm03983:1",
+  "title": "ISO20 ASM03983-1",
+  "asset": {
+    "asset_id": "debd2ad9-9e46-5df7-bf99-3152b0b4022f",
+    "package_digest": "28f86a4a1b73519bdf622a862cf4a41950875783d3022d0311f1b8e5fe3ba434",
+    "package_path": "03_机构模块/pushcorp/iso20_asm03983-1__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "debd2ad9-9e46-5df7-bf99-3152b0b4022f",
+      "package_digest": "28f86a4a1b73519bdf622a862cf4a41950875783d3022d0311f1b8e5fe3ba434",
+      "package_path": "03_机构模块/pushcorp/iso20_asm03983-1__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "6bbca27673a16b71b04219dd083cb4026e86d67b820c043bcf889fd1e05c2d8f",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "6bbca27673a16b71b04219dd083cb4026e86d67b820c043bcf889fd1e05c2d8f",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": []
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:1489",
+              "kind": "Node",
+              "line": 1489,
+              "name": "TCP",
+              "node_id": "node:1489",
+              "node_path": [
+                {
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1489"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "a3140a216aca7148ad1c5772c13ab10f0459199f737fe552c11a11c86654be47",
+        "scoped_physical_fields": [
+          {
+            "fields": {
+              "CenterOfGravity": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1211,
+                "owner": {
+                  "id": "baseframe:1102",
+                  "kind": "BaseFrame",
+                  "line": 1102,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "c22584cf6c8677ba060eb3fc0d0ecee2bde06b57d4ff47627531bfd9a628bdd4",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Inertia": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1223,
+                "owner": {
+                  "id": "baseframe:1102",
+                  "kind": "BaseFrame",
+                  "line": 1102,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "f890cba2389d1cd746142accbffcf7b867f61f0cf18adeed15b89e43260e904c",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rVector>",
+                "unit_status": "not_declared",
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Mass": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1197,
+                "magnitude": 1000,
+                "owner": {
+                  "id": "baseframe:1102",
+                  "kind": "BaseFrame",
+                  "line": 1102,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "quantity": "Mass",
+                "raw_block_sha256": "a0a1b74d585eec15d086f37a5dd52b04c18e709465603475e6283e155f5a7370",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              }
+            },
+            "owner": {
+              "id": "baseframe:1102",
+              "kind": "BaseFrame",
+              "line": 1102,
+              "name": "TCP",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimBaseFrame"
+            },
+            "scope": "payload_frame_not_body"
+          }
+        ],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1340,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1368,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "1a11693bd06bfa044b5a960ad78ed3a59c6daccd347d60454b708689a92770c0",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "ISO20 ASM03983-1"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1354,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "7a8adb5cc43415d415d4e97c7a0cb9dea9571ff08b0b555e7c386ce73d380bd3",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "ISO20 ASM03983-1"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1258,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1382,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1293,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1396,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "ToolDiameter": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1448,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "edf7412bffd4d075d83083e5a8d4160dcbf0e22e9ce7763cfad6e8f2c56271b9",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 90
+              },
+              "ToolOffset": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1465,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "4fd2fc6b41f3754556775491591a286b3a595bbfa9c2799c92bf578c3ab19763",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 25
+              },
+              "ToolThickness": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1431,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "8934adeb77de75c1affd4e4a8acd1dc02153a2080f83d33bbd4eaac39c49de25",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 10
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1244,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "ISO20 ASM03983-1",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(-ToolThickness-ToolOffset-40).Ry(180)",
+                "line": 1495,
+                "owner": {
+                  "id": "node:1489",
+                  "kind": "Node",
+                  "line": 1489,
+                  "name": "TCP",
+                  "node_id": "node:1489",
+                  "node_path": [
+                    {
+                      "name": "ISO20 ASM03983-1",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:1489"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "8217e12ac45247845c29f4418e79ea50b644e44821b6b765bd99980515bdc853",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:1489",
+              "kind": "Node",
+              "line": 1489,
+              "name": "TCP",
+              "node_id": "node:1489",
+              "node_path": [
+                {
+                  "name": "ISO20 ASM03983-1",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1489"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "6bbca27673a16b71b04219dd083cb4026e86d67b820c043bcf889fd1e05c2d8f"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "aa8bf78ccadcd963fcb7541d5be0020464963699105a84cdd83cd03f03bc1ef1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/iso20_asm03983-1__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ISO20 ASM03983-1",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/ISO20 ASM03983-1.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "6786867e-d924-4afb-ac4f-6667ec9cf88b",
+          "library_assets": [
+            "debd2ad9-9e46-5df7-bf99-3152b0b4022f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ISO20 ASM03983-1.vcmx",
+        "path": "simready_usd/ISO20 ASM03983-1.vcmx",
+        "sha256": "6bbca27673a16b71b04219dd083cb4026e86d67b820c043bcf889fd1e05c2d8f"
+      }
+    ]
+  }
+}

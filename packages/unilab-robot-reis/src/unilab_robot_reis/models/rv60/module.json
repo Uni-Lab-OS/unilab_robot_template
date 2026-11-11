@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "reis",
+  "model": "rv60",
+  "title": "RV60",
+  "asset": {
+    "asset_id": "e1a1a0fb-40af-5536-bd85-ba645a89e23d",
+    "package_digest": "8a86f1ddf8a132b1539f94ab18726d1e2355593af665c129c51d7727f852b0d4",
+    "package_path": "04_设备/reis/rv60__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e1a1a0fb-40af-5536-bd85-ba645a89e23d",
+      "package_digest": "8a86f1ddf8a132b1539f94ab18726d1e2355593af665c129c51d7727f852b0d4",
+      "package_path": "04_设备/reis/rv60__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "cbc2aa8364016be0f26bd56752f41794254263c97a2c58bf765654b3618cdc51",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "23e95c6324436eaa4ea1081d9fc7309f7c901c877e7fd0e173ace0dd04bbd88a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rv60__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "RV60",
+          "manufacturer": "Reis",
+          "variant": "",
+          "path": "Components/Reis/Robots/RV60.vcmx",
+          "type": "Robots",
+          "payload": "60",
+          "reach": null,
+          "vcid": "fbe21a49-6aba-4bbc-9b1c-46f7e509cd16",
+          "library_assets": [
+            "e1a1a0fb-40af-5536-bd85-ba645a89e23d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RV60.vcmx",
+        "path": "simready_usd/RV60.vcmx",
+        "sha256": "cbc2aa8364016be0f26bd56752f41794254263c97a2c58bf765654b3618cdc51"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

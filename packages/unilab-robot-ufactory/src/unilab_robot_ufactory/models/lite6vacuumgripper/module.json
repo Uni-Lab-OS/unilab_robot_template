@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ufactory",
+  "model": "lite6vacuumgripper",
+  "title": "uFactory Lite6 Vacuum Gripper",
+  "asset": {
+    "asset_id": "81e45628-17e2-5f93-87c1-3cd990a5feb4",
+    "package_digest": "2b848293753b6a57442d9bd9368622a6413c3c5e11cb312fb7ab5d14c9ae589c",
+    "package_path": "01_零部件/ufactory/lite6_vacuum_gripper__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "81e45628-17e2-5f93-87c1-3cd990a5feb4",
+      "package_digest": "2b848293753b6a57442d9bd9368622a6413c3c5e11cb312fb7ab5d14c9ae589c",
+      "package_path": "01_零部件/ufactory/lite6_vacuum_gripper__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5255aa62076bfddcabacaba797e1074d8b791fc3865f099d01477ff9ca904940",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/lite6_vacuum_gripper__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/ufactory/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/ufactory/xarm_ros2_master_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Lite6 Vacuum Gripper",
+          "manufacturer": "uFactory",
+          "variant": "",
+          "display": "uFactory Lite6 Vacuum Gripper",
+          "path": "tools/models/uFactory-Lite6-Vacuum-Gripper.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "81e45628-17e2-5f93-87c1-3cd990a5feb4"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/uFactory-Lite6-Vacuum-Gripper.tool",
+        "path": "simready_usd/uFactory-Lite6-Vacuum-Gripper.tool",
+        "sha256": "7764b71e01ab2d028f1f2432601a42c408d60a52531e767819ddc98bb8653fcf"
+      }
+    ]
+  }
+}

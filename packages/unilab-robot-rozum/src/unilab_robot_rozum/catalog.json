@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "rozum",
+  "models": {
+    "rc10": {
+      "title": "Rozum RC10",
+      "asset": {
+        "asset_id": "ca149747-5c4d-51e2-9496-a58345fe071d",
+        "package_digest": "f4e013900f253ddd1871094037109f1e9f3a7b692a73d51c6a713bd2f1ee2ae8",
+        "package_path": "04_设备/rozum/rc10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rc10/module.json",
+      "module_sha256": "90094752ddfdb10fc46561832e8dc33700df44188a8b2f6cb3935e2982b36af4"
+    },
+    "rc16": {
+      "title": "Rozum RC16",
+      "asset": {
+        "asset_id": "4cfaf52e-1dbe-5ea2-b930-0dbb05f06251",
+        "package_digest": "70d931c3374706582c298ffc732ff147833a616cc4d7ef044137cdf87821f4f8",
+        "package_path": "04_设备/rozum/rc16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rc16/module.json",
+      "module_sha256": "6dcea6c768d7a23b8dc9e722282be9c337c641361c43ae35e5a45d45d76c7109"
+    },
+    "rc5": {
+      "title": "Rozum RC5",
+      "asset": {
+        "asset_id": "b8b3d330-daeb-5b79-a588-447ea98a84f6",
+        "package_digest": "5a98664abe2a50e5299c28ac63de4f3494ef21e017b9e8eb09d68f84553b2a0b",
+        "package_path": "04_设备/rozum/rc5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rc5/module.json",
+      "module_sha256": "f8420d3389a03c7deee07ba4bf7c80b43d4e0ff01d2c48f75f0ac9beee5cdb1b"
+    }
+  },
+  "source_profiles": []
+}

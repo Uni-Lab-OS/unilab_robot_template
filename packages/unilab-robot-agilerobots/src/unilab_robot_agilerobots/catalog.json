@@ -1,0 +1,67 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "agilerobots",
+  "models": {
+    "diana7": {
+      "title": "Agile Robots Diana 7",
+      "asset": {
+        "asset_id": "2e6f7f01-7f7b-5c88-abb3-c4015278780e",
+        "package_digest": "4951011ad3ce55c3767ff1ca3a78fd0f720268972c1672c893b91a0c6e4c3f39",
+        "package_path": "04_设备/agile_robots/diana_7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/diana7/module.json",
+      "module_sha256": "4de35f6bcf7e12feec5c27b7cf5b23f8cc7c9107c59c0750651790aea6050abd"
+    },
+    "thor3": {
+      "title": "Thor3",
+      "asset": {
+        "asset_id": "4965b984-c397-5608-82ee-4e4ea62fb0b8",
+        "package_digest": "0c3db14d797ebfa5123dbb69fe2b2ad6d5475fa2e66aa62f0c340f76e8afdd83",
+        "package_path": "04_设备/agile_robots_ag/thor3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/thor3/module.json",
+      "module_sha256": "2fca859332485d2f2a4e8a0f10c28cfd615d21775804b62af47c68b6d0e47a48"
+    },
+    "thor7": {
+      "title": "Thor7",
+      "asset": {
+        "asset_id": "6025b8f7-2545-5716-ab80-3234d1a49fd5",
+        "package_digest": "0b8b1662d42eaa60a3a9913e4dd7008abbef5eb37476c2c13d6b184885d2abe2",
+        "package_path": "04_设备/agile_robots_ag/thor7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/thor7/module.json",
+      "module_sha256": "89ccafc97ee9ac1863fa7dd2caeb5421a75bd597d0cfe95b9af0c0a17488ab01"
+    },
+    "yu5industrial": {
+      "title": "Yu 5 Industrial",
+      "asset": {
+        "asset_id": "454d7f12-48a7-5ba2-890f-8b5f8004c66b",
+        "package_digest": "9eed1cc41c62622439d16833bd6bfb001d4397eecf678da28317a332f73eef0e",
+        "package_path": "04_设备/agile_robots_ag/yu_5_industrial__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yu5industrial/module.json",
+      "module_sha256": "f14e0f39ba9505513a25df1eb2bcd0d3a5c1eecc4a1d4245ca7c2a7e2f2d3cf2"
+    }
+  },
+  "source_profiles": []
+}

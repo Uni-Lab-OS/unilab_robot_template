@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "hansrobot",
+  "models": {
+    "elfine03": {
+      "title": "Elfin E03",
+      "asset": {
+        "asset_id": "a6281c07-c662-5ded-9531-e5e907ab90c5",
+        "package_digest": "fd1ca575f7515c7fc6494abe2112edc19afa966446cf075c4070408e32bf34b8",
+        "package_path": "04_设备/han_s_robot/elfin_e03__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/elfine03/module.json",
+      "module_sha256": "ee9f003fabc94018e0ec4309d75e8e7a72924061e2fd1c9a1913ea3b1bca0f4b"
+    },
+    "elfine05": {
+      "title": "Elfin E05",
+      "asset": {
+        "asset_id": "aa7adb2b-196f-5f0e-8770-397737ee480a",
+        "package_digest": "a820b3c9d8c3dc633ffb8a4418c50879ffc6d33121754a23e60081e438f22344",
+        "package_path": "04_设备/han_s_robot/elfin_e05__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/elfine05/module.json",
+      "module_sha256": "53f72d86bcd3579b940d685239eef5c751422e6a41f1b7b275e89a6134429f5c"
+    },
+    "elfine05l": {
+      "title": "Elfin E05-L",
+      "asset": {
+        "asset_id": "e007efb6-794f-5cfe-89d2-ca101cc3a1fd",
+        "package_digest": "aba7b76cc4734a7c9f0eb08b76572d64acaeae84039238442b322161b737a713",
+        "package_path": "04_设备/han_s_robot/elfin_e05-l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/elfine05l/module.json",
+      "module_sha256": "56a5dc61af252d63115d27d93a0f5f7405fb0663f3341f597fb3c6f4669137c6"
+    },
+    "elfine10": {
+      "title": "Elfin E10",
+      "asset": {
+        "asset_id": "9529f675-d279-54c5-8cb6-eed3c706771f",
+        "package_digest": "a13cf99f550d0c1a51adab0058e85d6e2e0baa943a756eb8db2bb96fc51fcaf0",
+        "package_path": "04_设备/han_s_robot/elfin_e10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/elfine10/module.json",
+      "module_sha256": "367b3efb1e99a158b73fce14b8fb9c74fe7bf3145f7e676ccdd47720402aade6"
+    },
+    "elfine15": {
+      "title": "Elfin E15",
+      "asset": {
+        "asset_id": "6deaed1b-77d1-5f7b-bd94-1cd9c5a89bdc",
+        "package_digest": "c34767ad8c9214efafa06c6f8a8b110cb879c39bfb9ab095da7620b3c34bafba",
+        "package_path": "04_设备/han_s_robot/elfin_e15__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/elfine15/module.json",
+      "module_sha256": "3dcf84eb12fb501f7e713d89080e671f65d9f242155903384bf7787c5f19ec2f"
+    }
+  },
+  "source_profiles": []
+}

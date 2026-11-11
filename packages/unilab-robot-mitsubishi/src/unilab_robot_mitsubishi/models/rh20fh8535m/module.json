@@ -1,0 +1,324 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mitsubishi",
+  "model": "rh20fh8535m",
+  "title": "RH-20FH8535M",
+  "asset": {
+    "asset_id": "5f487d10-f798-505e-b8ff-a5352a6529a6",
+    "package_digest": "56d6fa5c683c61119c053668d24ffc90784f60c88c1f6ca28170c8ea2354b4d5",
+    "package_path": "04_设备/mitsubishi_electric/rh-20fh8535m__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "5f487d10-f798-505e-b8ff-a5352a6529a6",
+      "package_digest": "56d6fa5c683c61119c053668d24ffc90784f60c88c1f6ca28170c8ea2354b4d5",
+      "package_path": "04_设备/mitsubishi_electric/rh-20fh8535m__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:9089",
+            "id": "dof:9337",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -170.0,
+              170.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -170.0,
+                170.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -170.0,
+                170.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:9621",
+            "id": "dof:10698",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -153.0,
+              153.0
+            ],
+            "parent_node_id": "node:9089",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -153.0,
+                153.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -153.0,
+                153.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:10982",
+            "id": "dof:11231",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -350.0,
+              0.0
+            ],
+            "parent_node_id": "node:9621",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -0.35000000000000003,
+                0.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -350.0,
+                0.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:11542",
+            "id": "dof:11789",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:10982",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "848c7a4a819521b75bb2c686339066347ebbb728e74819611b7846960fc812c8",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "848c7a4a819521b75bb2c686339066347ebbb728e74819611b7846960fc812c8",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0f2f1e62de43bdbde64aa198aeaa603bc1ccd138412f58f526ea2e1a2a130946",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rh-20fh8535m__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apimitsubishi",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimitsubishi.py",
+        "sha256": "66ab7e01fb45298d06f4dfd82cfc381a7c204d1607eefbe797bb9cf50618efa9",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimitsubishi.pyc",
+            "sha256": "2857c103cb52034d317674b098296d6270f9476aaffef5f82dddc7befddeef2c"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimitsubishi.pyc",
+            "sha256": "573b15586a2b808d990aa8a65f90ff47d776bfe81b7a9688053a4e5b8ec559f3"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimitsubishi.pyc",
+            "sha256": "be4a94868e9979bc8fa3616e7e623a2757425c52d99f8acb8c6923653243c932"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimitsubishi.pyc",
+            "sha256": "7a404f16b5c6def7fd0d7bde2345b24a6d1ee34b1f79b1e8133455a85b3cd57b"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimitsubishi.pyc",
+            "sha256": "f76e70928c69e64a1bbb130712b717f6fc15e4f12aa4b7f39a3a95c77681006e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mitsubishi controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Mitsubishi.py",
+      "Mitsubishi_Movemaster_EX.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/mitsubishi/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "RH-20FH8535M",
+          "manufacturer": "Mitsubishi Electric",
+          "variant": "",
+          "path": "Components/Mitsubishi Electric/Robots/RH-20FH8535M.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "850.0",
+          "vcid": "f571bb9f-e9fe-4fd9-9594-49faee5aaeb9",
+          "library_assets": [
+            "5f487d10-f798-505e-b8ff-a5352a6529a6"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RH-20FH8535M.vcmx",
+        "path": "simready_usd/RH-20FH8535M.vcmx",
+        "sha256": "848c7a4a819521b75bb2c686339066347ebbb728e74819611b7846960fc812c8"
+      }
+    ],
+    "source_brand_alias": "mitsubishielectric",
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

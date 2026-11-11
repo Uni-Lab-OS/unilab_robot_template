@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mirka",
+  "model": "airos650cvsander",
+  "title": "Mirka AIROS 650CV Sander",
+  "asset": {
+    "asset_id": "fad991a1-c681-596d-9991-72def59c9edb",
+    "package_digest": "158c985556d9f93441d4fc0398c247ea01c2053e5eae37e3c2bc0324818d5dce",
+    "package_path": "01_零部件/mirka/airos_650cv_sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "fad991a1-c681-596d-9991-72def59c9edb",
+      "package_digest": "158c985556d9f93441d4fc0398c247ea01c2053e5eae37e3c2bc0324818d5dce",
+      "package_path": "01_零部件/mirka/airos_650cv_sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f63ac465d7c9a43498a9cb40bac98470404bedd74d6c3cf49db386d482e5d936",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/airos_650cv_sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AIROS 650CV Sander",
+          "manufacturer": "Mirka",
+          "variant": "",
+          "display": "Mirka AIROS 650CV Sander",
+          "path": "tools/models/Mirka-AIROS-650CV-Sander.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "fad991a1-c681-596d-9991-72def59c9edb"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Mirka-AIROS-650CV-Sander.tool",
+        "path": "simready_usd/Mirka-AIROS-650CV-Sander.tool",
+        "sha256": "f47cd9a5c27d3149bf3a22b9f90f3a25ce7e909840e47050a7ef8726878d7e56"
+      }
+    ]
+  }
+}

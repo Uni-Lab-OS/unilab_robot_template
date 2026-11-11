@@ -1,0 +1,307 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "comau",
+  "model": "myco15:1.30",
+  "title": "Comau MyCo-15-1.30",
+  "asset": {
+    "asset_id": "d0a6af8a-8490-5731-8567-d68b5847893b",
+    "package_digest": "d58f70f9d79d47e2c31ba28057e38d6adddbc7823708c68d68a485c0bdb76562",
+    "package_path": "04_设备/comau/myco-15-1.30__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d0a6af8a-8490-5731-8567-d68b5847893b",
+      "package_digest": "d58f70f9d79d47e2c31ba28057e38d6adddbc7823708c68d68a485c0bdb76562",
+      "package_path": "04_设备/comau/myco-15-1.30__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -135.0,
+          -153.0,
+          -370.0,
+          -180.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            262.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            730.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            570.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            192.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          135.0,
+          153.0,
+          370.0,
+          180.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "889c3611383bf462af950fd5877cef0344109ee6262431e512dace84e30cd490",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/myco-15-1.30__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apicomau",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apicomau.py",
+        "sha256": "7f15b271518894616acb00df1c36a6273317a5ef8a6b49ffc71c217ec19f5f09",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apicomau.pyc",
+            "sha256": "6eea6cb8135c90b04b02fb12bbaf8839c8d8f1b6bff99d20f9edac04647fd650"
+          },
+          {
+            "relative_path": "api/Robot/v311/apicomau.pyc",
+            "sha256": "601809649beab56fa580755d0a57b85012e19feaa480a6de80907cded26bed2f"
+          },
+          {
+            "relative_path": "api/Robot/v312/apicomau.pyc",
+            "sha256": "22cf40673d24acdc1c6eb95edc598d6c21a61246af3ca28337de0cafde4a7d05"
+          },
+          {
+            "relative_path": "api/Robot/v38/apicomau.pyc",
+            "sha256": "ac17ef033b7edfa2cd8878b2e1b8623d00f88b805dc36dc9fe829e296645b73f"
+          },
+          {
+            "relative_path": "api/Robot/v39/apicomau.pyc",
+            "sha256": "f04fe40eadb1b5e2fba3bf4167013e03c4557cb458fa1ffafbba3643e0de8747"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "comau controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:comau:crcopen_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/comau/crcopen_ros2",
+        "repository_url": "https://github.com/ukaea/CRCOpenROS2Driver.git",
+        "code_tree_sha256": "a23250b33cd023e104c0e2c98910b63b9588a6901779f4d05daeb43c0332a145",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "9884ae4817bf21bf65c9de4e60a235807b5295ff1d215e9d900c368601aff706"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "036d6afa876fbf6c81287b3321e0e6ae1ed6b22afddb18a39d8c3545717cb23c"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Comau_C5G.py",
+      "Comau_C5G_Joints.py",
+      "Comau_Nodal.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MyCo-15-1.30",
+          "manufacturer": "Comau",
+          "variant": "",
+          "display": "Comau MyCo-15-1.30",
+          "path": "robots/models/Comau-MyCo-15-1-30.robot",
+          "type": "robots",
+          "payload": 15,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "d0a6af8a-8490-5731-8567-d68b5847893b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Comau-MyCo-15-1-30.robot",
+        "path": "simready_usd/Comau-MyCo-15-1-30.robot",
+        "sha256": "e0078303f24effe173a5e6a82eb35a30a0fc83c9cecad22773154323b50fcd2f"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

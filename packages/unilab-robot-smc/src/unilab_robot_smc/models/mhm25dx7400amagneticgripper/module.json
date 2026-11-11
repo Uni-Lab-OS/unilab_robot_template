@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "smc",
+  "model": "mhm25dx7400amagneticgripper",
+  "title": "SMC MHM-25D-X7400A Magnetic Gripper",
+  "asset": {
+    "asset_id": "fc32babf-f157-5f75-a570-18f53b7faf27",
+    "package_digest": "09637b8b9fc2b842ad85dbc0297acfcda236b6b69bb7cc1a90f631f0b7cdd43e",
+    "package_path": "01_零部件/smc/mhm-25d-x7400a_magnetic_gripper__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "fc32babf-f157-5f75-a570-18f53b7faf27",
+      "package_digest": "09637b8b9fc2b842ad85dbc0297acfcda236b6b69bb7cc1a90f631f0b7cdd43e",
+      "package_path": "01_零部件/smc/mhm-25d-x7400a_magnetic_gripper__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1aa11124f9c0a9a0c9e6ea43ac55b3a4535652191f533c33de7c82668b7d0e0f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/mhm-25d-x7400a_magnetic_gripper__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MHM-25D-X7400A Magnetic Gripper",
+          "manufacturer": "SMC",
+          "variant": "",
+          "display": "SMC MHM-25D-X7400A Magnetic Gripper",
+          "path": "tools/models/SMC-MHM-25D-X7400A-Magnetic-Gripper.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "fc32babf-f157-5f75-a570-18f53b7faf27"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SMC-MHM-25D-X7400A-Magnetic-Gripper.tool",
+        "path": "simready_usd/SMC-MHM-25D-X7400A-Magnetic-Gripper.tool",
+        "sha256": "934e00c52507153cec4b24924df343ce800d16a712bdc465f5092c0d349c920d"
+      }
+    ]
+  }
+}

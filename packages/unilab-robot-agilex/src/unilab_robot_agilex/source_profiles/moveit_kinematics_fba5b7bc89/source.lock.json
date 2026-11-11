@@ -1,0 +1,139 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_kinematics_fba5b7bc89",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_kinematics",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "cached_ik_kinematics_plugin/CMakeLists.txt",
+      "sha256": "106f8431effe17e8b8284a499d921bb9381f5e2da36815b2410ca4688129301c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/kdl.yaml",
+      "sha256": "de959b1bb41c1a24b09b88433992695cfab9a81be6cb6402e6e3e944925d9862",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/kdl_cached.yaml",
+      "sha256": "40ecfdad0d5c84dbfe126a9dfe2875a8487396ada4a31b51330cb95836edd01c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/trac.yaml",
+      "sha256": "8327456552f2674c292455210e88750998bf1db938bfbb64ba4f29a9b6847cac",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/trac_cached.yaml",
+      "sha256": "b05bf34254398d0026e84d52d68dbc637882575dfdfe6df92e96e3cfcaedcb55",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/ur5.yaml",
+      "sha256": "2d2058605e5f3f61d46e84f1700b8af3e367ee3789776d33146d3ac47dc27310",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/config/ur5_cached.yaml",
+      "sha256": "9baee0635d379c870fd2dc5d758f30a774a0006f1619ce1fd9a75c6097f7c3a0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/launch/measure_ik_call_cost.launch",
+      "sha256": "9bc4f1541f8194450c8000804de3c9eec85941a76e41114207b9952b59c9cab3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin/README.md",
+      "sha256": "ce0a9b2926347be30a92a0192064e62824266baa472ca94c4030fcb634ee06f2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cached_ik_kinematics_plugin_description.xml",
+      "sha256": "3792b40cd3810a1bdda5e4d5327d205b478c4f798d1651ba388718bf42242050",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "a01ed42cec223f5d87076b32b7596b3788449e712f955a7060747c6cacf28cd5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "ikfast_kinematics_plugin/CMakeLists.txt",
+      "sha256": "cbbde7ca0dc0dd99fd3c06c6975812ef23a2832534bced248d4d0f0db555d575",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "ikfast_kinematics_plugin/README.md",
+      "sha256": "03e67223a40b0b665928c5fd547fff5b33916982e82d0a2588865c3b21bcd4c8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "ikfast_kinematics_plugin/scripts/create_ikfast_moveit_plugin.py",
+      "sha256": "5f6f4c3e4a30983bd8eb15be3968fb2b0c89f4fd8cd6af8ce3b7e7ec2dcdcf28",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "ikfast_kinematics_plugin/scripts/round_collada_numbers.py",
+      "sha256": "94d71546cdfc119c0d6eb4653929a38267ae85ec7cc3c642c6e79cab1511c3ea",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "ikfast_kinematics_plugin/templates/CMakeLists.txt",
+      "sha256": "8c949a631701ee98bbb69e90fb94939bc673d7dc40330da296efd8389dbee16a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "kdl_kinematics_plugin/CMakeLists.txt",
+      "sha256": "806dd6f36c11de0b866bb0c22d039802e72472efe6e5ab02bea00749446a815d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "kdl_kinematics_plugin_description.xml",
+      "sha256": "519d375bd84ee47b8cbcdd59ec9c3aaccd20f902c73e840e09d2bc31ac949b84",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lma_kinematics_plugin/CMakeLists.txt",
+      "sha256": "857e291eaf228f42954baf1a252e1a2805670537336fa06ef404344f5e895c6c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lma_kinematics_plugin_description.xml",
+      "sha256": "26cf61a562990f2fe57b61fe589307d25b183ccfc7653d74693716be07929702",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "2e9cb4b9c46ed9ef9cd9d3210c59998ae99e99febe4b947574f6b45bfc32ab3a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srv_kinematics_plugin/CMakeLists.txt",
+      "sha256": "7db92aeae5397b608e898936670f1d04a8604264990af41b7edd0c511bb55d51",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srv_kinematics_plugin_description.xml",
+      "sha256": "7edd275cf62c1cf40b5884559207fe97b7e1d0466ba4ee7d01b11404d2fc57c0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/CMakeLists.txt",
+      "sha256": "e2468a04d78741ce6bf2bd0625e522b3a84c2166ed89ab4015c4467652763f14",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

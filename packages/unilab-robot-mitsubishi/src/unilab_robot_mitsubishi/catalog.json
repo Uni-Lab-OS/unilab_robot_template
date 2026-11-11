@@ -1,0 +1,2242 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "mitsubishi",
+  "models": {
+    "rh12sh5535": {
+      "title": "Mitsubishi RH-12SH5535",
+      "asset": {
+        "asset_id": "eb6d0940-2e94-5053-9b29-af4241a8d761",
+        "package_digest": "d1d8d3f80cb05d686d3bffaf62235fbb0a252bc1e012dc879755d6e039d9341b",
+        "package_path": "04_设备/mitsubishi/rh12sh5535__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh5535/module.json",
+      "module_sha256": "8c98be8841528eb52ecc7207a70ef6b37a56ab0c03def2caf936ee256b3cde36"
+    },
+    "rh3ch": {
+      "title": "Mitsubishi RH-3CH",
+      "asset": {
+        "asset_id": "802e1761-0868-5b79-80d8-e588fcda4835",
+        "package_digest": "d318ca961f425c5834099955d962016dc9319495c08ea50d838a2f513f363cb2",
+        "package_path": "04_设备/mitsubishi/rh-3ch__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3ch/module.json",
+      "module_sha256": "a45832e1d374c7094077a104dfeac51fb42cce7b16e69ab49c6588696cf023ac"
+    },
+    "rh3frh3515": {
+      "title": "Mitsubishi RH-3FRH3515",
+      "asset": {
+        "asset_id": "3e129e54-d457-5a5b-9bc4-09da69854d6d",
+        "package_digest": "c175873523719adf725d1f7f534cd73fc58632386ef13e912e44f1e6c90bf61c",
+        "package_path": "04_设备/mitsubishi/rh3frh3515__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh3515/module.json",
+      "module_sha256": "ed0c2ba543da1b3704f754a09c77a450dda02a3defc9dc56903d3f279ab79fa2"
+    },
+    "rh3frh4515": {
+      "title": "Mitsubishi RH-3FRH4515",
+      "asset": {
+        "asset_id": "d00c7dda-374f-5a31-b3ec-5f0db4c3b21a",
+        "package_digest": "8bbfadb90dbc2240edd826eeee97729134e49ba701fa671efdd883fbd07acd7c",
+        "package_path": "04_设备/mitsubishi/rh-3frh4515__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh4515/module.json",
+      "module_sha256": "406f2878790bbfadc6104f472abc6781759eea32274f858e7cb476314b1a9576"
+    },
+    "rh3frh5515": {
+      "title": "Mitsubishi RH-3FRH5515",
+      "asset": {
+        "asset_id": "8d92cd1a-ba19-51ee-b715-3f349b57c6fa",
+        "package_digest": "22cee82b6cd221dc9788c97ab104d1b77bbf081c97d85fafaa59eb149fb01783",
+        "package_path": "04_设备/mitsubishi/rh3frh5515__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh5515/module.json",
+      "module_sha256": "476cda53516739d7688401893850295d7326ee3017e36b102286399cb5522b7f"
+    },
+    "rh6ch60": {
+      "title": "Mitsubishi RH-6CH60",
+      "asset": {
+        "asset_id": "64c0fdab-9b21-574a-8efb-f5ac3f2dc085",
+        "package_digest": "e28807d7b3a1f3c2ca59e583bc9a1e8421e4705d37460bc08d44cccb5230139b",
+        "package_path": "04_设备/mitsubishi/rh-6ch60__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6ch60/module.json",
+      "module_sha256": "db826b044193807acfb8ba4c2cc172b6b0f29f2e2eb1f06deb69878fcbf40faf"
+    },
+    "rh6ch70": {
+      "title": "Mitsubishi RH-6CH70",
+      "asset": {
+        "asset_id": "0a8f5d66-8b96-5558-a097-81c671023351",
+        "package_digest": "4b90bd123d0f04300ecd07358ee28033f661659857b22d68e58bc6e868f1a3a9",
+        "package_path": "04_设备/mitsubishi/rh-6ch70__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6ch70/module.json",
+      "module_sha256": "8a43520916b162ac278c603845a1611fee93a0ef32ed36e81704c8e363aa229e"
+    },
+    "rv12crl": {
+      "title": "Mitsubishi RV-12CRL",
+      "asset": {
+        "asset_id": "9ca8314b-9b44-54bf-b8bc-146c4cf381d1",
+        "package_digest": "a8332b7cc5120eff9566dbc6190bd856f6512d8bb476fe5e83d24f30e3b38858",
+        "package_path": "04_设备/mitsubishi/rv12crl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv12crl/module.json",
+      "module_sha256": "e264511a0082ead0f03f8732f77ef518730c0bf761039567cc38008d4ab00714"
+    },
+    "rv12crld": {
+      "title": "Mitsubishi RV-12CRL-D",
+      "asset": {
+        "asset_id": "9b3533a5-bd6e-53a6-a698-7f1ea915eafc",
+        "package_digest": "272efc480d2b2d151d4b7d9267c3c717753e7aa5119bea4cfbfa4a83c84eea74",
+        "package_path": "04_设备/mitsubishi/rv-12crl-d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv12crld/module.json",
+      "module_sha256": "70758e26d51b8864ba93ce5336bdcded05ff18548341e062cdc5d8c206d7fdbc"
+    },
+    "rv12s": {
+      "title": "Mitsubishi RV-12S",
+      "asset": {
+        "asset_id": "b007836e-80c1-583e-93da-d571a420d32f",
+        "package_digest": "b554521686aa7f2e5e201b85bd32f345fb7c6badc7eb3515c6a9f9022dd4ce3b",
+        "package_path": "04_设备/mitsubishi/rv12s__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv12s/module.json",
+      "module_sha256": "1254ddf5b10fa23c6485ddb56e48d0f87c90595bff47fe2a8cdcdae687185d03"
+    },
+    "rv13fl": {
+      "title": "Mitsubishi RV-13FL",
+      "asset": {
+        "asset_id": "a0d441cd-eea8-5e87-a259-96af3936045f",
+        "package_digest": "bcb4185ca8e609b81d805d5a3bc152d5793cf8d7de59deaf750d8036b58d17ff",
+        "package_path": "04_设备/mitsubishi/rv-13fl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13fl/module.json",
+      "module_sha256": "55ef8731e00fe7f763f6c2714d75b08ca43655380454d9e78a22874f6795c359"
+    },
+    "rv13fr": {
+      "title": "Mitsubishi RV-13FR",
+      "asset": {
+        "asset_id": "52e675f2-a73e-57cd-8c0f-1ff9539dd4d2",
+        "package_digest": "5f4bf6e76511bf9bff76ac5b60a28538267b8788216873675a6680dd797dafd4",
+        "package_path": "04_设备/mitsubishi/rv13fr__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13fr/module.json",
+      "module_sha256": "7e808d31f2a16e35219ae70c0a1ab3eaba08e59a17887645c3c14b7d8900273c"
+    },
+    "rv13frl": {
+      "title": "Mitsubishi RV-13FRL",
+      "asset": {
+        "asset_id": "d45f2d40-4fb1-5aaa-a7bd-4b0fb4a529d3",
+        "package_digest": "9ec818fb37117141aa09d668dcc17d0dd7f7081b77fc4496bd497c55c0323665",
+        "package_path": "04_设备/mitsubishi/rv13frl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13frl/module.json",
+      "module_sha256": "0abc5609798d8cbee4a38000be7be2ea7b8a87bff81fe70e6007456b89da8729"
+    },
+    "rv13frlmc": {
+      "title": "Mitsubishi RV-13FRL-MC",
+      "asset": {
+        "asset_id": "84e9c9df-dcd3-5337-9187-dc453add1f83",
+        "package_digest": "24fadaa621f80b14fdefa55ade54695efc393f6dca6430f904c10e4d9dec7889",
+        "package_path": "04_设备/mitsubishi/rv-13frl-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13frlmc/module.json",
+      "module_sha256": "7a11d1ace1d583409d63ca74cec175a4be9fa3a7faad09f439717c825d1fabb7"
+    },
+    "rv13frlsh": {
+      "title": "Mitsubishi RV-13FRL-SH",
+      "asset": {
+        "asset_id": "9f1f6fda-9077-5118-b951-ed206a418f8d",
+        "package_digest": "c720ed26ac0b541ba0752e1652e1f778f531f6140771f4ac2fb2a02a707a84bd",
+        "package_path": "04_设备/mitsubishi/rv13frlsh__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13frlsh/module.json",
+      "module_sha256": "4a8a21300d85a51153de20621fd672bee86732fc83991a9a6260445a090725b0"
+    },
+    "rv20fr": {
+      "title": "Mitsubishi RV-20FR",
+      "asset": {
+        "asset_id": "a76089f9-7aa2-563b-9900-7dff1a696c4a",
+        "package_digest": "41baad3933e6b1344061f6c30d26f8678877a7aa10a57090ff54474207dfecc7",
+        "package_path": "04_设备/mitsubishi/rv-20fr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv20fr/module.json",
+      "module_sha256": "581ee7ff2ee29f23fe949b7dea3b35d4e47c6ac26b2bd7b6d18bf1a4f700b9c4"
+    },
+    "rv2aj": {
+      "title": "Mitsubishi RV-2AJ",
+      "asset": {
+        "asset_id": "a39d83d2-e538-5a71-af8d-01d5b3a23d80",
+        "package_digest": "38b9f25ec7c9b785b7dbc3b7cc4614ffacffdf7c00a6c962865fa430a23bbda9",
+        "package_path": "04_设备/mitsubishi/rv2aj__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2aj/module.json",
+      "module_sha256": "2cf6df148de0c8b2d5117149d6e617213b63ad22e03f9c74e709649abed0540e"
+    },
+    "rv2f": {
+      "title": "Mitsubishi RV-2F",
+      "asset": {
+        "asset_id": "31cdad2a-f583-55d6-915a-950766eb89f3",
+        "package_digest": "a72b53b2ffbf81cb296888175add6eff61bbe01d45a354e40af457d28a065ed7",
+        "package_path": "04_设备/mitsubishi/rv2f__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2f/module.json",
+      "module_sha256": "0bbe8a44db5ba6328e72d0b722f2095d39b257398eab6846f749ae26c50e49c9"
+    },
+    "rv2fr": {
+      "title": "Mitsubishi RV-2FR",
+      "asset": {
+        "asset_id": "50bbb781-cdff-5eca-9298-146ae0ba9f79",
+        "package_digest": "b021fe58e42aaa4b2847f525c1893b0f893420492870e80421d7e0fd9b54f27e",
+        "package_path": "04_设备/mitsubishi/rv2fr__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2fr/module.json",
+      "module_sha256": "df06d41710cf88104ae9d6d0f7197a5818814557bef42ff13569d1533e700051"
+    },
+    "rv2frl": {
+      "title": "Mitsubishi RV-2FRL",
+      "asset": {
+        "asset_id": "6339e792-a0dd-5520-a7a2-32575afdcb05",
+        "package_digest": "e6fbeb9afb53f9004b2986655065a640d7638cb87af7600267edc99698e6a6c5",
+        "package_path": "04_设备/mitsubishi/rv2frl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2frl/module.json",
+      "module_sha256": "a1ae471b4b572e6160f64e0e25fe4772082e9693f3f9a4e71e4c06efc8c3aaf1"
+    },
+    "rv35f": {
+      "title": "Mitsubishi RV-35F",
+      "asset": {
+        "asset_id": "77844eae-5211-5c9d-b8bb-220b437ebc71",
+        "package_digest": "66e47aa6b26709d4235d64c7c3ff63aac785d826df8ac2b92ebf8f104def34b0",
+        "package_path": "04_设备/mitsubishi/rv35f__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv35f/module.json",
+      "module_sha256": "ae96e04da7d0dfd7e8b6c51fedb1a54bc3faa8245e326fd5b24f414ac7464fe6"
+    },
+    "rv3s": {
+      "title": "Mitsubishi RV-3S",
+      "asset": {
+        "asset_id": "ee4d21a1-a756-5da9-806b-b8e812b22e7b",
+        "package_digest": "707bee3b6630f946fc7e75abb3654c4cfa4b8d45736023d655af9ecb4f5157c9",
+        "package_path": "04_设备/mitsubishi/rv-3s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv3s/module.json",
+      "module_sha256": "c722a02f0bf101dac36f2e8728168344e3ff739d8008fadb6acbab4c7367f751"
+    },
+    "rv4fl": {
+      "title": "Mitsubishi RV-4FL",
+      "asset": {
+        "asset_id": "8bfc5373-2aeb-58a0-a828-fefd28e81e13",
+        "package_digest": "4ffb53b141af2c97ade96cc0984ebf1cf477b058560536fa9ca8431f17e08acd",
+        "package_path": "04_设备/mitsubishi/rv4fl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4fl/module.json",
+      "module_sha256": "5c696ab3b8d9705559afde0d1d875ba88f2fd88487d96e016b448c862d911a45"
+    },
+    "rv4frl": {
+      "title": "Mitsubishi RV-4FRL",
+      "asset": {
+        "asset_id": "e049fcb0-661a-5fa3-84b9-3473ecf395cc",
+        "package_digest": "28f5d14fccc497bf972d665bf93168ac00b3a2faf2511179485c3bce17bc2839",
+        "package_path": "04_设备/mitsubishi/rv4frl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4frl/module.json",
+      "module_sha256": "557415a19f23c4cb935e3a997d4fa8edbbba767929d8e6e4b548f6efaa74f003"
+    },
+    "rv4frlmc": {
+      "title": "Mitsubishi RV-4FRL-MC",
+      "asset": {
+        "asset_id": "8af1a72f-0279-5902-9830-c266bff1e4e7",
+        "package_digest": "a4249aad280e469a2494713a0efeafd93e0f3f75987a156c6fa6128b34632d1f",
+        "package_path": "04_设备/mitsubishi/rv-4frl-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4frlmc/module.json",
+      "module_sha256": "aaa46595e2725c9303fd7c5455979bd8d6121c0ef9e1570aefe3dbd6b77f95fb"
+    },
+    "rv4frlsh": {
+      "title": "Mitsubishi RV-4FRL-SH",
+      "asset": {
+        "asset_id": "8d749711-3893-5e9c-bb0f-96b373994d8c",
+        "package_digest": "3fd6a52d99d7854bb15fe70be10d25597fb3a18d4dded29371cca648eb0e1bc4",
+        "package_path": "04_设备/mitsubishi/rv4frlsh__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4frlsh/module.json",
+      "module_sha256": "b8ab051736fba1e2ed3be6f00b6d52d586c5f9856789c815583a13d05b09d156"
+    },
+    "rv4frmc": {
+      "title": "Mitsubishi RV-4FR-MC",
+      "asset": {
+        "asset_id": "31069ee9-d1c1-528f-96d8-04a0a06d8595",
+        "package_digest": "878b03ab7aaa41146908d0e449d0843b0b28ff2dd131353577e674b532bd3a51",
+        "package_path": "04_设备/mitsubishi/rv-4fr-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4frmc/module.json",
+      "module_sha256": "4e4914aa61c3dd6fca6ac30cb82385d19bcdb7cff774e79b37ba38f27c923192"
+    },
+    "rv4frsh": {
+      "title": "Mitsubishi RV-4FR-SH",
+      "asset": {
+        "asset_id": "9b1583e9-d878-5338-8964-3bcc4930f0cc",
+        "package_digest": "33ca30b2b8059e81739b27984f83ca8e484f234c4aa4fd0855a6613d3052666d",
+        "package_path": "04_设备/mitsubishi/rv4frsh__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4frsh/module.json",
+      "module_sha256": "768710f4a754f3c294305d05797f3bab2077b13379574531ba70a2b042a7400c"
+    },
+    "rv50f": {
+      "title": "Mitsubishi RV-50F",
+      "asset": {
+        "asset_id": "4deb187a-3d8c-5418-929e-62661bbf52fd",
+        "package_digest": "66cb11da8a3a99c3d214dfeb8536a6707086c4e38f6ab892e4d87dd920c02631",
+        "package_path": "04_设备/mitsubishi/rv50f__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv50f/module.json",
+      "module_sha256": "cc6c8331bca87deca93612f51124bde9429e5a71324944515caffbae21d9174a"
+    },
+    "rv5asd": {
+      "title": "Mitsubishi RV-5AS-D",
+      "asset": {
+        "asset_id": "4bb5a850-ab3a-50a7-9a19-dc1c1005ef32",
+        "package_digest": "169f41f24331ca0c4dc84ee3aacd99ada03acb2cf96f3fbb97d1e1c678c972a0",
+        "package_path": "04_设备/mitsubishi/rv-5as-d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv5asd/module.json",
+      "module_sha256": "84aace7383f0c7f00445e0bb8fa229e6a71c923bf660196e2edb0856e3f07fcd"
+    },
+    "rv6sl": {
+      "title": "Mitsubishi RV-6SL",
+      "asset": {
+        "asset_id": "57c7e7eb-3bcc-52f3-bc99-f7446755883c",
+        "package_digest": "c25f9f96083c5fa680b3a1da5fb642e5f0a01a78a1095296ceb280058d52e777",
+        "package_path": "04_设备/mitsubishi/rv-6sl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv6sl/module.json",
+      "module_sha256": "a63ea034de765176637eb99b496eafd1863d90a8f3a0d819514ebcaa9c203013"
+    },
+    "rv70f": {
+      "title": "Mitsubishi RV-70F",
+      "asset": {
+        "asset_id": "a9bdbdab-3869-54d4-ade4-86f1ccb80d66",
+        "package_digest": "a404e817acac0247bff6a3e9311e54a73001ec9c2cbab6b4c1fe3acc10d3ec8c",
+        "package_path": "04_设备/mitsubishi/rv70f__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv70f/module.json",
+      "module_sha256": "14e993f46bf3bb2171132e2ae60a46140acc9a5a36dfb0b190c8138fd68ccca4"
+    },
+    "rv7fl": {
+      "title": "Mitsubishi RV-7FL",
+      "asset": {
+        "asset_id": "492aa866-6797-5694-84d8-36b09d67e246",
+        "package_digest": "06dabc6444c91cc8511fe089e04c5a50dec227bbe0807b5938910b1a1fd58e4c",
+        "package_path": "04_设备/mitsubishi/rv7fl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7fl/module.json",
+      "module_sha256": "0ec5250902f2aa10a7ae26cc7e6f9628ce667bd412f559e373e8d2163ffcd44b"
+    },
+    "rv7fr": {
+      "title": "Mitsubishi RV-7FR",
+      "asset": {
+        "asset_id": "59bc7388-4f7d-511d-9e94-db56232e675f",
+        "package_digest": "bc2d12e9ae916490d5c69983a2f94688200ed028d0044afac33abbd02657bf47",
+        "package_path": "04_设备/mitsubishi/rv7fr__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7fr/module.json",
+      "module_sha256": "e5e6208b0f030a36fb7d8eb0ed537114ac1bf9632b1c2ad4ef90d6b1df2307e0"
+    },
+    "rv7frl": {
+      "title": "Mitsubishi RV-7FRL",
+      "asset": {
+        "asset_id": "5f502857-b2eb-5da0-8745-6a9f27751f9d",
+        "package_digest": "0aa019db8bd12da82973cedf25c9a7211300f6113c0bc61d9b63747cdb3086ae",
+        "package_path": "04_设备/mitsubishi/rv7frl__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frl/module.json",
+      "module_sha256": "3f6188f30f656907222cd9f842233e3b7a378741666e95a9b5680171bb4fa901"
+    },
+    "rv7frll": {
+      "title": "Mitsubishi RV-7FRLL",
+      "asset": {
+        "asset_id": "94e6440b-2947-573c-9f07-cb3d2c595d54",
+        "package_digest": "d37b2564b6dae7acfb68e59191c6fe0ac005071138c10ad46de68d9eec7ce204",
+        "package_path": "04_设备/mitsubishi/rv7frll__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frll/module.json",
+      "module_sha256": "97d9f7fb86e89df4e9fec27d4569081d7177283775ea65d8e1ce9a6698a29f7f"
+    },
+    "rv7frllmc": {
+      "title": "Mitsubishi RV-7FRLL-MC",
+      "asset": {
+        "asset_id": "8fa64231-8fed-58f5-b35a-c5e4c8aeb60a",
+        "package_digest": "9cddfb5bfb70b27927521cda7cb064ae29a052e68390e62d2932cdae4f95ef9d",
+        "package_path": "04_设备/mitsubishi/rv-7frll-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frllmc/module.json",
+      "module_sha256": "3e6663a2291f16251e4d039f881436bb1886bf2305acfc98957a5a285d860797"
+    },
+    "rv7frlmc": {
+      "title": "Mitsubishi RV-7FRL-MC",
+      "asset": {
+        "asset_id": "798c2e29-a7b6-5fb1-a23c-732f7960f4a3",
+        "package_digest": "7623f685d9d6e1844b1eccd5c10365afdc3baa6cb1d1427b1b84900df0b4fa57",
+        "package_path": "04_设备/mitsubishi/rv-7frl-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frlmc/module.json",
+      "module_sha256": "5f06375a768b555e367948a66a4d5acbcaaf74ba947a6b9531fe63afbe23cee6"
+    },
+    "rv7frlsh": {
+      "title": "Mitsubishi RV-7FRL-SH",
+      "asset": {
+        "asset_id": "d3b81de7-4003-5b45-85d6-f7e0b3ae8d66",
+        "package_digest": "5cb93b40f2b63680fe246c7a0dc5417f722bf52fc5c461c4f77e6e46d27590a5",
+        "package_path": "04_设备/mitsubishi/rv7frlsh__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frlsh/module.json",
+      "module_sha256": "8b4661d6ad72cd5acc00ab8cb38d4acb277aad8778a2e5fca765e878bbde6ee6"
+    },
+    "rv7frmc": {
+      "title": "Mitsubishi RV-7FR-MC",
+      "asset": {
+        "asset_id": "8cc6188f-5c29-5b08-8a4f-47cabbb400f1",
+        "package_digest": "e80383fb8e1cb0839e54cb1f619e77aecd4be9efda4d6491b2af6019e854483c",
+        "package_path": "04_设备/mitsubishi/rv-7fr-mc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frmc/module.json",
+      "module_sha256": "ba725540cb22baa597768aacc4b7219efd7ab0befa996299f51b4d71d69a6a1e"
+    },
+    "rv7frsh": {
+      "title": "Mitsubishi RV-7FR-SH",
+      "asset": {
+        "asset_id": "346de858-b847-5e86-a133-dac9f2c2f66c",
+        "package_digest": "138068e0ee68c137a8a44196aa487051ce4b1f2a25bd97a74110c32278cad8de",
+        "package_path": "04_设备/mitsubishi/rv7frsh__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frsh/module.json",
+      "module_sha256": "60ac67363ada3998c1cbaba3b61dfd6c80ce8e92033b5505fa8437c2ff1ebdd2"
+    },
+    "rv8crl": {
+      "title": "Mitsubishi RV-8CRL",
+      "asset": {
+        "asset_id": "160dd4f6-846e-5bfd-9c02-d9995c5da515",
+        "package_digest": "d2a2ddeee80de64721724bad35188bc3411bdd0ea31ff6f1f447c3d3c06df12a",
+        "package_path": "04_设备/mitsubishi/rv-8crl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv8crl/module.json",
+      "module_sha256": "a9dd15c8bfd60bd0318550cd06eb028d794c6bb71d4be704dc65bfd7c6ed45a6"
+    },
+    "rh10ah55": {
+      "title": "RH-10AH55",
+      "asset": {
+        "asset_id": "069abaa4-be3b-5d15-ad04-ec68145ec13a",
+        "package_digest": "6a20351423e28cd2a5788e0d599db546fd57a19685722c80d99fd3dc1e01f8c6",
+        "package_path": "04_设备/mitsubishi_electric/rh-10ah55__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh10ah55/module.json",
+      "module_sha256": "2f46738b50354adfbfb9e3bf1aaa0b5dda4e50d440904948920ad9dcdd21986a"
+    },
+    "rh10ah85": {
+      "title": "RH-10AH85",
+      "asset": {
+        "asset_id": "47aa8cf5-1031-550a-ae04-718310fdcb5e",
+        "package_digest": "2faa3275d7025a2336f86be74e1eece37f1d09df1bff773036392b5109f6251d",
+        "package_path": "04_设备/mitsubishi_electric/rh-10ah85__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh10ah85/module.json",
+      "module_sha256": "41b386ce463b1ca78bd0eccd8d83790350b3e90a9e9cd8f33b4a642ffe4711f1"
+    },
+    "rh12fh5535": {
+      "title": "RH-12FH5535",
+      "asset": {
+        "asset_id": "b8258d64-59af-5ccc-9a7c-2b67f428b46f",
+        "package_digest": "d760f7d30b781f4501f8581a557f158c4491c55933bf7d676a2e171c4a402634",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5535/module.json",
+      "module_sha256": "e59d2cac7361ad5800542477d97b63a05fb52d43e9e071fab8e74abd7e846dab"
+    },
+    "rh12fh5535c": {
+      "title": "RH-12FH5535C",
+      "asset": {
+        "asset_id": "2b141aaa-6b32-5af1-bdb9-978fcc46940b",
+        "package_digest": "36d78c48c066336ac3b56b8defedd19495cfca1fb770ca02fccf7a2d143b0de8",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5535c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5535c/module.json",
+      "module_sha256": "406a3981e68659ed98231f84c007e1228e082f9de4683fa6ef3ecee35068f729"
+    },
+    "rh12fh5535m": {
+      "title": "RH-12FH5535M",
+      "asset": {
+        "asset_id": "bbb778d6-75b4-506e-8ffa-fda94584df0c",
+        "package_digest": "85291e505ec98d7b68d3def6a5c8d183b9f34adb6d108f5572cb1ad654b7df03",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5535m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5535m/module.json",
+      "module_sha256": "7e56dfee2dd5d9b1c074b6cec830e8c7c170a2ad93abd8d20a7663216cd56c49"
+    },
+    "rh12fh5545": {
+      "title": "RH-12FH5545",
+      "asset": {
+        "asset_id": "3e03a481-a800-5d87-99da-a90733a5edc3",
+        "package_digest": "2632da94af8f59188c232ef6e4e8f49997aa18f3281a12c00cdc9d6608494c9e",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5545/module.json",
+      "module_sha256": "2ee9c5fa76c231d0e8e6a928f55b73c67de22a3a6702c0545d4ec9f10ffd60ef"
+    },
+    "rh12fh5545c": {
+      "title": "RH-12FH5545C",
+      "asset": {
+        "asset_id": "7cff7ad0-3291-5514-99bc-2261f84adae9",
+        "package_digest": "f7e67f65ecda6ac1c78edfbbb3f188e75c6155d3ca8583c546bcfb35887fb92c",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5545c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5545c/module.json",
+      "module_sha256": "953099d260b62a3b7d0cee758688c46d4532f719ab781fc446eb7f7edb94cec8"
+    },
+    "rh12fh5545m": {
+      "title": "RH-12FH5545M",
+      "asset": {
+        "asset_id": "85b377e5-ab35-51ea-95a1-cebfee1a1b89",
+        "package_digest": "720cbbb73714ce30dc8eb61dd651312795d55c775fe46c75947a9ee6eb25d88a",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh5545m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh5545m/module.json",
+      "module_sha256": "62e1094c91426d4434e156dfb4ceeffd4528d7b40febd4a31eadd0190cf1639b"
+    },
+    "rh12fh7035": {
+      "title": "RH-12FH7035",
+      "asset": {
+        "asset_id": "b746bd4c-3a99-52e7-90c0-37363a132035",
+        "package_digest": "e41b2076ac6bdd9e3897c67fdc4eb80714a513a44db6abc502827c94ffa88f2a",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh7035__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh7035/module.json",
+      "module_sha256": "fc5007459bc0f72e20416e98762e025a246ee37ce35963f41e9e5754af7f4d86"
+    },
+    "rh12fh7035c": {
+      "title": "RH-12FH7035C",
+      "asset": {
+        "asset_id": "195c834d-2aa8-5058-95d6-2c797fe0088c",
+        "package_digest": "70899432efd413b501519d7988961ee7ce1360c44009cd855f21f376fcea4d83",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh7035c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh7035c/module.json",
+      "module_sha256": "6642cd27aa2d3bc23f072852c0b92b8202dca5ae0d2d8828f65f0e809de5accf"
+    },
+    "rh12fh7035m": {
+      "title": "RH-12FH7035M",
+      "asset": {
+        "asset_id": "3f3b35b9-e835-5b0b-b07c-7e7ccdb70dd4",
+        "package_digest": "4390084b5dc80601be27b7237d42bd07ea9b3ffdc016b216c750f58d552a5c22",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh7035m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh7035m/module.json",
+      "module_sha256": "5832bb22183f5d782686baf5aab41d8d65eade41b1ed8f5b2d843e40d4792845"
+    },
+    "rh12fh8535": {
+      "title": "RH-12FH8535",
+      "asset": {
+        "asset_id": "40610493-3a1e-5a39-85d4-212831fd9e3a",
+        "package_digest": "77622f27306472740abd7785ab1c5a650d6919c66ba93d8ef7be07a1093c4070",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh8535/module.json",
+      "module_sha256": "b650503a7632fe7545fe0c0e5ca713adfd2876d84e82b53464ed0f4a81e0e8d0"
+    },
+    "rh12fh8535c": {
+      "title": "RH-12FH8535C",
+      "asset": {
+        "asset_id": "01253ccc-2537-5179-b832-4b919636c33a",
+        "package_digest": "3ef72e31ac52bef366e5e14a854f4780032f4e4708fbfe0bb84b6c1ae00a6478",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh8535c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh8535c/module.json",
+      "module_sha256": "66a9bad6d40f9b11f22d57ce97aaa66ba25c80b8f88e67ea4013cd94971ef7f8"
+    },
+    "rh12fh8535m": {
+      "title": "RH-12FH8535M",
+      "asset": {
+        "asset_id": "28699fe9-ee99-55e4-89b6-a1ae9f3c6f97",
+        "package_digest": "0fb0adfee95fdcd3c7921042644416a2d6c47175ff1601846c17395b77556116",
+        "package_path": "04_设备/mitsubishi_electric/rh-12fh8535m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12fh8535m/module.json",
+      "module_sha256": "22acda04c34d7b9318737b19a2ff93a224f57e7a8cf8a7a11335fced2a3bcf93"
+    },
+    "rh12frh5535": {
+      "title": "RH-12FRH5535",
+      "asset": {
+        "asset_id": "8b99cd56-5f8e-56f9-b11d-7acebddb0a8f",
+        "package_digest": "188b7c11064862b9bc916ad7ebe5507a78cf393a9778978967499b4697bf177c",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh5535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh5535/module.json",
+      "module_sha256": "c096fe895feb986f1c420a5d388aef439bcb16bb7e00f6e8606d0abbd4f3c120"
+    },
+    "rh12frh5545": {
+      "title": "RH-12FRH5545",
+      "asset": {
+        "asset_id": "77f38917-f5ad-5626-8e6c-3243fd0018d1",
+        "package_digest": "d6a0508de13b8ac887c11958386bf10e8128c4cf8ac3ee8e8772eb853ce24cfb",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh5545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh5545/module.json",
+      "module_sha256": "a26a43c8c5717f08751724d769e808acb587ba6211e8b57d83263f924123bd91"
+    },
+    "rh12frh7035": {
+      "title": "RH-12FRH7035",
+      "asset": {
+        "asset_id": "5c95d7d0-cd6f-59ea-a8a6-59a71bf3316d",
+        "package_digest": "12bfb1912c10ccab83fecc46fdb24880f018e6a734f1477e0240ec03515bd8de",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh7035__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh7035/module.json",
+      "module_sha256": "0375ac41fbfbc467873afa8465cfdd2c9e5a4432eda0e58beba1583d127ee138"
+    },
+    "rh12frh7045": {
+      "title": "RH-12FRH7045",
+      "asset": {
+        "asset_id": "e7e69727-c0f9-5480-9364-5601d7fac857",
+        "package_digest": "f9832b3b4b669a51b332303da75f6e50c96bc9c6a47af19d5eb2d513901d5984",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh7045__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh7045/module.json",
+      "module_sha256": "71290a3253e09cedf56c1b5a81d150e8e5e41d6c07d2c7727d1cb524e97f6e1f"
+    },
+    "rh12frh8535": {
+      "title": "RH-12FRH8535",
+      "asset": {
+        "asset_id": "41dbb912-ff41-5565-904e-8d38a702e56e",
+        "package_digest": "96f57650f959ea6671ea5fdaec7bffb2593de827b15bbfe793513cb46cb7fc5c",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh8535/module.json",
+      "module_sha256": "78807f3cee602865625824f5d3eddbc5125f271a79db686ecf442f3297904693"
+    },
+    "rh12frh8545": {
+      "title": "RH-12FRH8545",
+      "asset": {
+        "asset_id": "4c9ee77b-58f0-5aad-a1d8-d72614672244",
+        "package_digest": "99245a3087977d181aa4ea1d0ca26b62e89c323ced09c664f6523195a68584b7",
+        "package_path": "04_设备/mitsubishi_electric/rh-12frh8545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12frh8545/module.json",
+      "module_sha256": "dc48f3f4d8c4f8ba2225936573b97c8b991d2440c585fea161df339e0fafb971"
+    },
+    "rh12sh5530m": {
+      "title": "RH-12SH5530M",
+      "asset": {
+        "asset_id": "acc9cf9e-10a4-5f40-9a34-f0c8f80ada94",
+        "package_digest": "e22f426d441e5ccbfc148b74ba20bd1f21898b45eaefc2bdfec52e034d582186",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh5530m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh5530m/module.json",
+      "module_sha256": "d60164e6da369c5a7fbc15bf644bc83c1dae3caca64e32399d890c08ece82fd7"
+    },
+    "rh12sh5538m": {
+      "title": "RH-12SH5538M",
+      "asset": {
+        "asset_id": "8b40ec23-0c38-5489-9532-f4e6c9f1d67f",
+        "package_digest": "c878520e9ebcc6d7c3fc3971e7cbf8d926095ac249a6ec9a09aaf0fb4ab09029",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh5538m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh5538m/module.json",
+      "module_sha256": "d6b48739aa38162ced185d7897937373b4b86c1c406175997f99f2849bc38115"
+    },
+    "rh12sh5545": {
+      "title": "RH-12SH5545",
+      "asset": {
+        "asset_id": "e516047c-40b3-58b3-be2a-56b6be280c7c",
+        "package_digest": "9cc5c77f034d65db8fca5ef1a03a22df935054e0987da3b2770f8a5ffd8e1df0",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh5545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh5545/module.json",
+      "module_sha256": "634189718d674909a829eec4f32fdbe9ea7a65ef732b00f2590a27459ae1077b"
+    },
+    "rh12sh7030m": {
+      "title": "RH-12SH7030M",
+      "asset": {
+        "asset_id": "c4fc9e67-e6ea-554c-869d-68f8b534042b",
+        "package_digest": "0bd24ffd7d40f9799540dd630717cbd597a82973c9f1697a9a6fec133034b1d9",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh7030m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh7030m/module.json",
+      "module_sha256": "01af1100d91b347d61c6e3f6c7cec6b6954c5fa08819650698373b064fa0ab0c"
+    },
+    "rh12sh7035": {
+      "title": "RH-12SH7035",
+      "asset": {
+        "asset_id": "c2ad1929-e002-5429-9b68-f3218c198d63",
+        "package_digest": "d02d87fc0b19a7599da7d0ebf1449e9d6a6e03dcdab152ab5b1c01228f461256",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh7035__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh7035/module.json",
+      "module_sha256": "c987cc0b560dd32346d2959bcb471a23d8af0f25a8f9120a4b2da5c73853bb60"
+    },
+    "rh12sh7038m": {
+      "title": "RH-12SH7038M",
+      "asset": {
+        "asset_id": "e097edad-a5a5-5952-b09a-d10e6927caec",
+        "package_digest": "90addec9fd8e33faeb693a0d70c1e400053ec25d659f920938a6974d6cbca65b",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh7038m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh7038m/module.json",
+      "module_sha256": "3e39b6743793deec8d7507cd33176cdce5edfa6d2be73fd27e296a20960e7787"
+    },
+    "rh12sh7045": {
+      "title": "RH-12SH7045",
+      "asset": {
+        "asset_id": "a08596e2-35a2-5259-aba9-51550e121f66",
+        "package_digest": "7b70b6671f37b57a6a4a0017c8757e7b255d1adcb06ba4cd657d13f5d672e7fc",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh7045__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh7045/module.json",
+      "module_sha256": "bb7b2e8df7830828d786a41ba835358961a3cedfea32a68acadbc49d448412a5"
+    },
+    "rh12sh8530m": {
+      "title": "RH-12SH8530M",
+      "asset": {
+        "asset_id": "42a9dddf-daec-50a1-91c4-57d3ccff7f2f",
+        "package_digest": "1223e17dcbd597404cf40955b2230b519663c9a22c108b9a06039b932741fe22",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh8530m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh8530m/module.json",
+      "module_sha256": "fa6f31e9c1c70c41f63e61d6c1478453720ae51e75304ad961b5678a8ff16876"
+    },
+    "rh12sh8535": {
+      "title": "RH-12SH8535",
+      "asset": {
+        "asset_id": "acde33d7-068b-50ae-b95e-c9f20590bc22",
+        "package_digest": "b60d09d98b1ec9ffcd48ac414fe97a412ef561604acc9bf369f4600e9b9a9827",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh8535/module.json",
+      "module_sha256": "f58ec1def14ca1013a5c615085464fda6c233bd4b9241203d9980f9010792d16"
+    },
+    "rh12sh8538m": {
+      "title": "RH-12SH8538M",
+      "asset": {
+        "asset_id": "2819ed30-8a74-5214-b837-277aa9ab68be",
+        "package_digest": "4787935a1bacc4a0492f600774d379e4add8d33347bc9cf2e7cb2d111a189112",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh8538m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh8538m/module.json",
+      "module_sha256": "342111c618d73bdd4694c1aebb52bb153fd4706ed20f90222395e24105e27731"
+    },
+    "rh12sh8545": {
+      "title": "RH-12SH8545",
+      "asset": {
+        "asset_id": "571d9642-a817-5bd3-902f-9f2edd1c0a28",
+        "package_digest": "ca564c83d9538d580ed6b56de21159ee473931ea982f80f242ca6c7ce2d8f202",
+        "package_path": "04_设备/mitsubishi_electric/rh-12sh8545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh12sh8545/module.json",
+      "module_sha256": "b2723026327378c440a235298c08cc1d331925aed69ccd875711b1cc14e2fc54"
+    },
+    "rh18sh8530m": {
+      "title": "RH-18SH8530M",
+      "asset": {
+        "asset_id": "b7df000d-8f9a-5bb2-9331-1e2af2904433",
+        "package_digest": "b6f18ce070e99ba95e6ebc077334374c489ab31a3bdb75cf69930979055815dc",
+        "package_path": "04_设备/mitsubishi_electric/rh-18sh8530m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh18sh8530m/module.json",
+      "module_sha256": "a46dc8bd0bd32971884aba800a2e4e0fe0d78f2605ac8fb937c2d14decad6612"
+    },
+    "rh18sh8535": {
+      "title": "RH-18SH8535",
+      "asset": {
+        "asset_id": "fa29fff2-b39d-5675-9731-c769ac94303c",
+        "package_digest": "51ef50cad21f057b38577eb74fa30685ad293a9fad5ece104c48cd4f0d0135ef",
+        "package_path": "04_设备/mitsubishi_electric/rh-18sh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh18sh8535/module.json",
+      "module_sha256": "2294fcd7841b1054834e92f23e57ede89dfca8a43465351da9d732deab859a41"
+    },
+    "rh1fhr5515": {
+      "title": "RH-1FHR5515",
+      "asset": {
+        "asset_id": "bd2b760b-3ff8-562f-90f1-a4b99008b59a",
+        "package_digest": "929fe9a514dbe1b5717d5102c4c50a0db6cee56e9cb15f8b16d0b8fc737eaf58",
+        "package_path": "04_设备/mitsubishi_electric/rh-1fhr5515__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh1fhr5515/module.json",
+      "module_sha256": "1b7202c5d6939c56ad1b36b6e04995b5c87b80af222f612d5fbde60eff81665b"
+    },
+    "rh1frhr5515": {
+      "title": "RH-1FRHR5515",
+      "asset": {
+        "asset_id": "c3d424f1-21ab-5695-9c00-82eed0ae6b56",
+        "package_digest": "7fbf2f1c133dc5e98fd7029a6ab621494250096d6703f330361a1caa4ea0b362",
+        "package_path": "04_设备/mitsubishi_electric/rh-1frhr5515__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh1frhr5515/module.json",
+      "module_sha256": "6a83eb7b2fa71c587c0ffbc66b8603fac0cc010f5d511db2e7f8428359686e39"
+    },
+    "rh20crh10042": {
+      "title": "RH-20CRH10042",
+      "asset": {
+        "asset_id": "0606a4af-0205-56ba-a5e3-c5b3d8c97abf",
+        "package_digest": "2eaddf0d2ec69369aa37ba03db57e846d5a148b94faecb47d02ec6904973d854",
+        "package_path": "04_设备/mitsubishi_electric/rh-20crh10042__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20crh10042/module.json",
+      "module_sha256": "a429e29aeac52b620b1e0d9f5474d713eaf33412a47fd3352fb97c593fa38705"
+    },
+    "rh20crh8542": {
+      "title": "RH-20CRH8542",
+      "asset": {
+        "asset_id": "72161385-312b-5336-8838-b2a306f42c77",
+        "package_digest": "4858c04f4bbdf18eec4700e794cbd88f4ac815e4b15fe1ab1128a4825fdc2d56",
+        "package_path": "04_设备/mitsubishi_electric/rh-20crh8542__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20crh8542/module.json",
+      "module_sha256": "2d333b2e42d5e763b3afef7c8132647d5674ca83be14e702d9219997e74d7a12"
+    },
+    "rh20fh10035": {
+      "title": "RH-20FH10035",
+      "asset": {
+        "asset_id": "a38c26e5-d938-52b4-95ad-0ba61561a6d4",
+        "package_digest": "3b36ab34c24a36f9208acbafbb619d620774173b4d42b27a30452440ba762d13",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh10035__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh10035/module.json",
+      "module_sha256": "2151b971e7d6ef3ede0a6903af6d590a6d670db28722e9e4bd8349a853872f9b"
+    },
+    "rh20fh10035c": {
+      "title": "RH-20FH10035C",
+      "asset": {
+        "asset_id": "42a1e49a-af7a-53c2-adec-4b47e38af316",
+        "package_digest": "15fde537b0f79ad024fd7176c30cc3d1ed429b674ecca06916007c3f228f28d4",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh10035c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh10035c/module.json",
+      "module_sha256": "98f917eb4bc40d16640dd4499e7a89524fc280553beea7eb79e5f7733cb0fa46"
+    },
+    "rh20fh10035m": {
+      "title": "RH-20FH10035M",
+      "asset": {
+        "asset_id": "3daf3ba7-73b4-589e-ace7-d416e77d91fc",
+        "package_digest": "77e46e213a90396246eb4623d6d3ec7dcf6a50222efee6ad6d5a0fdc7edc76d9",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh10035m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh10035m/module.json",
+      "module_sha256": "1cb2bc3e477ce795486f64369161d18bf62796d5576fbe41b73d2b5909910200"
+    },
+    "rh20fh8535": {
+      "title": "RH-20FH8535",
+      "asset": {
+        "asset_id": "5707bb40-7f5b-5640-88b7-129de8670189",
+        "package_digest": "bf74f6ae564916e9eb5804439d090b33ebb955c76bfc9bcc1f853d3f39c46f95",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh8535/module.json",
+      "module_sha256": "418ddd355b487b3e9969f402eb92af316df4d330efa75e91c1b6519c18ef1757"
+    },
+    "rh20fh8535c": {
+      "title": "RH-20FH8535C",
+      "asset": {
+        "asset_id": "442d4503-4e3e-51ed-976f-3b25bc77b6d7",
+        "package_digest": "266270a9bb049a4f45947c5d35abdf7e8b3c9337e4bf91f61011e17b696c2853",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh8535c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh8535c/module.json",
+      "module_sha256": "06e10ad7987ac7483d273d2f87651b86d8db6a1872ee4563d887fae8f0ec7140"
+    },
+    "rh20fh8535m": {
+      "title": "RH-20FH8535M",
+      "asset": {
+        "asset_id": "5f487d10-f798-505e-b8ff-a5352a6529a6",
+        "package_digest": "56d6fa5c683c61119c053668d24ffc90784f60c88c1f6ca28170c8ea2354b4d5",
+        "package_path": "04_设备/mitsubishi_electric/rh-20fh8535m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20fh8535m/module.json",
+      "module_sha256": "35d5bd55c70746e1d0d6b4b872e110079874fb2a9240370d97ad3ce5e7905203"
+    },
+    "rh20frh8535": {
+      "title": "RH-20FRH8535",
+      "asset": {
+        "asset_id": "1da0754c-0df2-59e4-87a3-d66b7e52c69e",
+        "package_digest": "10ad96b45452ab02714c4d09ae8854b8af41c3e644cf618fa2f884f967d29333",
+        "package_path": "04_设备/mitsubishi_electric/rh-20frh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20frh8535/module.json",
+      "module_sha256": "7911a4291270e72f5c678746702090ed4873e89bc99dceb3bb944c8f71c5db1f"
+    },
+    "rh20frh8545": {
+      "title": "RH-20FRH8545",
+      "asset": {
+        "asset_id": "c8b50ac4-a0ae-500f-b49a-93ba7c12d37c",
+        "package_digest": "70d4dca845e17fac6aa16285043d6af0da43bdc7a69d962897527293860c0974",
+        "package_path": "04_设备/mitsubishi_electric/rh-20frh8545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20frh8545/module.json",
+      "module_sha256": "79abaf4c9bf8350a6726e4872370f9063d151d186fbe19d7fc3fe69b1e5aa364"
+    },
+    "rh20sdh10035": {
+      "title": "RH-20SDH10035",
+      "asset": {
+        "asset_id": "a5ba0e1e-9594-5e13-94c5-92a0765e92ae",
+        "package_digest": "3c7dcc33f7c1515ed01ee41327ddd663b7e1c3bcbd2d3b63df94b6f7562e78a1",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sdh10035__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sdh10035/module.json",
+      "module_sha256": "a5fcd17097138e8e7e12be92bc425dd1bf97e71ed51bb0fd4585e99d7d5f9fec"
+    },
+    "rh20sdh10045": {
+      "title": "RH-20SDH10045",
+      "asset": {
+        "asset_id": "1148647b-0ce2-50d1-9b06-e31a2b993255",
+        "package_digest": "85f3ed0bb8e301a42b1bec0bcb65294e8095e333852af4be402baa1179a037e1",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sdh10045__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sdh10045/module.json",
+      "module_sha256": "2fb9b6504fe8c66fa31e0cf9a699922b635a0dac2f5ad7fe7c04fdf6336b32f0"
+    },
+    "rh20sh8530m": {
+      "title": "RH-20SH8530M",
+      "asset": {
+        "asset_id": "1d847326-e2bd-5b14-ac00-c4a62506d0b1",
+        "package_digest": "c6af7d9086f666d53838c5cbbaa598409a7506efb4b6954dfb9126f4961f2fdd",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sh8530m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sh8530m/module.json",
+      "module_sha256": "d3483cf7a01eb606b944a50142d9318dcebbef06bea2953de5ff19fc24fe49af"
+    },
+    "rh20sh8535": {
+      "title": "RH-20SH8535",
+      "asset": {
+        "asset_id": "dd557b93-e840-52ee-b66b-a4adfa8cdd55",
+        "package_digest": "beff8f066b50b6d188492d231da925cf29beba34808ed2f6b6366e6ddc18bb09",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sh8535__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sh8535/module.json",
+      "module_sha256": "389afe69e1fd939c173a6fbe1a14009ff755774769292313cfe3d8535f15acb8"
+    },
+    "rh20sh8538m": {
+      "title": "RH-20SH8538M",
+      "asset": {
+        "asset_id": "dcfb5b8b-8c3e-57f6-a11b-3bf6f35d7de8",
+        "package_digest": "1295b63785813c23b954a3d9d3df2f6eea22d5de03c078ed24314266a06e38fe",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sh8538m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sh8538m/module.json",
+      "module_sha256": "b520aeda3d83d52eba4fa9517d76290cafc15c0daac8089e522f5a30f436aed2"
+    },
+    "rh20sh8545": {
+      "title": "RH-20SH8545",
+      "asset": {
+        "asset_id": "2c982cc8-0055-5414-a264-e5586d7ab47e",
+        "package_digest": "8a3594cbfcaa11810c21980c45c88019cd915d758a50eb351fcf2a0ce99396f7",
+        "package_path": "04_设备/mitsubishi_electric/rh-20sh8545__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh20sh8545/module.json",
+      "module_sha256": "be3de0c4d32712bec51afcfe110f026d12d55f82aa0bd66f821a185c81b88a00"
+    },
+    "rh3fh3515": {
+      "title": "RH-3FH3515",
+      "asset": {
+        "asset_id": "c19be1c5-bb7c-5702-aed0-4e91a39a28e2",
+        "package_digest": "f50587ecb90549b7b62021ba59285a73828325be93cbad1dd318b255ece4c774",
+        "package_path": "04_设备/mitsubishi_electric/rh-3fh3515__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3fh3515/module.json",
+      "module_sha256": "d4b0be3f154bd1bb7750275e4bb29cc7474c6dba9f64531d2461cce521002bc2"
+    },
+    "rh3fh4515": {
+      "title": "RH-3FH4515",
+      "asset": {
+        "asset_id": "558c84c4-f97c-57a2-a899-53b8a2b2a80b",
+        "package_digest": "b1e6f60dbd42d268eb6fddd052fda20c0619dfff3c5806e92c37db85008596f4",
+        "package_path": "04_设备/mitsubishi_electric/rh-3fh4515__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3fh4515/module.json",
+      "module_sha256": "a21545f041cb2eacff1192bed8284cfa7f4f43d4e101496a064c7d4b1bd858e8"
+    },
+    "rh3fh5515": {
+      "title": "RH-3FH5515",
+      "asset": {
+        "asset_id": "749c88a8-7d5a-5f45-8dbe-b3b08746b263",
+        "package_digest": "16fdcfaae17d745f557fa3d23e255f319df5b2bf3245c168339a148dbbd0603a",
+        "package_path": "04_设备/mitsubishi_electric/rh-3fh5515__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3fh5515/module.json",
+      "module_sha256": "61be7a3ebe737c65ebae6c2bb14eefe37002a83aeea6d50f5a067a823f892c2f"
+    },
+    "rh3fhr3513:1dsa11": {
+      "title": "RH-3FHR3513-1D-SA11",
+      "asset": {
+        "asset_id": "472e87c2-2543-5c08-b10a-b6fc7e6cae13",
+        "package_digest": "ed82e9fbb23b47de4ed44c5483c94d244959ce60d187b893bf4fee83428333c9",
+        "package_path": "04_设备/mitsubishi_electric/rh-3fhr3513-1d-sa11__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3fhr3513_1dsa11_a9ac8d32/module.json",
+      "module_sha256": "b8db5f5d3e4dc7e196843baf7602ac6bcab92b4f83a07b053f0ee73967f70318"
+    },
+    "rh3frh3512c": {
+      "title": "RH-3FRH3512C",
+      "asset": {
+        "asset_id": "9b2c248f-5320-5f68-8b58-dba714ccd6a8",
+        "package_digest": "361d5ae0066b708260c75c2cc683502403dca9566c7fe8c2014d21c9ed6a11cd",
+        "package_path": "04_设备/mitsubishi_electric/rh-3frh3512c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh3512c/module.json",
+      "module_sha256": "3dedd6462ba2a13a390c1c83567deffcff0235af627291e0e7abb0dce9035860"
+    },
+    "rh3frh4512c": {
+      "title": "RH-3FRH4512C",
+      "asset": {
+        "asset_id": "683e576e-d7d9-53ac-8d54-f6a52778cbf9",
+        "package_digest": "3876240f054e46bace4289f1a2b3a24b5964c6862d93205873344ef82f4b46aa",
+        "package_path": "04_设备/mitsubishi_electric/rh-3frh4512c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh4512c/module.json",
+      "module_sha256": "f78c31d03fc710b7263485963a4e475ba7890999a4f85c5e085d00f5533b93e5"
+    },
+    "rh3frh5512c": {
+      "title": "RH-3FRH5512C",
+      "asset": {
+        "asset_id": "bb474cb4-2c27-5442-8e7b-45e29f400eae",
+        "package_digest": "65ff95c7f130e167db7270ba3cf3907b923cbae929d252a4dbe3d328c6c2a579",
+        "package_path": "04_设备/mitsubishi_electric/rh-3frh5512c__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3frh5512c/module.json",
+      "module_sha256": "b0d5b8048eb614c313b5935996c91bdb1e57d6746dd7da8631a9fafbdfb049d0"
+    },
+    "rh3sdhr": {
+      "title": "RH-3SDHR",
+      "asset": {
+        "asset_id": "8fec6fc3-4b44-5153-9f88-d95c8008230d",
+        "package_digest": "e664b23fbf05bbb92c8c453485384842571e04a793ddcb5f19c955735b5fbd92",
+        "package_path": "04_设备/mitsubishi_electric/rh-3sdhr__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh3sdhr/module.json",
+      "module_sha256": "df088cd636e91c380ceffe2d188eb50e584e134298e6b7c68f1d089bf9e58164"
+    },
+    "rh5ah35": {
+      "title": "RH-5AH35",
+      "asset": {
+        "asset_id": "649b93a1-00c7-5163-a03d-97c1df221c94",
+        "package_digest": "dca402afc9276e86dbc547ed588e18a52f53f1e213178dc133c7687e872878a7",
+        "package_path": "04_设备/mitsubishi_electric/rh-5ah35__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh5ah35/module.json",
+      "module_sha256": "96c1f448a73c6ecfa49a9a3bba082b5be88ca175dadb75414fc8b1501a712769"
+    },
+    "rh5ah45": {
+      "title": "RH-5AH45",
+      "asset": {
+        "asset_id": "057c4fab-d4ca-5ffa-af01-19470fdd9c50",
+        "package_digest": "81950939087d2de5b0950e7a0cebcdb63ab77044cb36e215b828d120accb587f",
+        "package_path": "04_设备/mitsubishi_electric/rh-5ah45__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh5ah45/module.json",
+      "module_sha256": "12762533082e0f98a0ae7b1d2f4e203db711028af14beb50103f7e3916b5fca4"
+    },
+    "rh5ah55": {
+      "title": "RH-5AH55",
+      "asset": {
+        "asset_id": "2ed9f5a3-476e-5287-a45e-938256af5953",
+        "package_digest": "a798239ae1849749241b845e743fead0b777907db32f1cbfb7a145a140ce6bed",
+        "package_path": "04_设备/mitsubishi_electric/rh-5ah55__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh5ah55/module.json",
+      "module_sha256": "2aa5ede25aaeb245f10c943768fc560335c37e866219230292e948f6547725f7"
+    },
+    "rh6fh3520": {
+      "title": "RH-6FH3520",
+      "asset": {
+        "asset_id": "7909152b-c017-5004-a188-8ba8f0994fb8",
+        "package_digest": "6a9a080f0fb02a6c0738eba1df13446f79d2f8755c3025f72c8dcc178b7e5c14",
+        "package_path": "04_设备/mitsubishi_electric/rh-6fh3520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6fh3520/module.json",
+      "module_sha256": "9b242bcba0093dafb54985508c852595c52306ec1496785b503a2c9a1ac3eebb"
+    },
+    "rh6fh4520": {
+      "title": "RH-6FH4520",
+      "asset": {
+        "asset_id": "4f4c07ef-5508-5d6b-a544-7c3c1f9a8281",
+        "package_digest": "c0292150b57c9a6ba78e38012cc4548e647ac2f7d72816d5f772b5f5f624a0ee",
+        "package_path": "04_设备/mitsubishi_electric/rh-6fh4520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6fh4520/module.json",
+      "module_sha256": "289e21100ec67f2e6e2f8974124fdce2b39db6faafb95d7055965e02a1effbd8"
+    },
+    "rh6fh5520": {
+      "title": "RH-6FH5520",
+      "asset": {
+        "asset_id": "f158be0f-e0a2-55e1-85cb-ac9248f7da86",
+        "package_digest": "a81da9b4c52a6ef753595af59d054c941aa89ad225c98b1f011b0b28e6b00791",
+        "package_path": "04_设备/mitsubishi_electric/rh-6fh5520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6fh5520/module.json",
+      "module_sha256": "972187969ee6038a7004b112853cc3d78d91380b9c82efe0638ddcff06a5a7d7"
+    },
+    "rh6frh3520": {
+      "title": "RH-6FRH3520",
+      "asset": {
+        "asset_id": "a28eabbe-200a-5d9e-8121-12c73c3295c2",
+        "package_digest": "d997a6df136cac48a0b8c0ad4b064d81d2ddd391e03fecd5f625ee84d941587e",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh3520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh3520/module.json",
+      "module_sha256": "54d71a49d1925e52ad4c9f6fde5a2cc905c3973f620c883bfcbacbf941be6f97"
+    },
+    "rh6frh3520m": {
+      "title": "RH-6FRH3520M",
+      "asset": {
+        "asset_id": "a1ebec9e-8e82-52c8-a4a1-386bec4006fd",
+        "package_digest": "9cd005df154a67cf63aa88317cdfee5f9a24bd97b8138da5e4c046dd0935656b",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh3520m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh3520m/module.json",
+      "module_sha256": "44183c0017094274cbcbe590088ffeb699095cbe37c395ef25f092544d858616"
+    },
+    "rh6frh3534": {
+      "title": "RH-6FRH3534",
+      "asset": {
+        "asset_id": "78d41f00-784c-523a-b5f3-d2502dc6825b",
+        "package_digest": "7ea5712497d98884d0759a69d4d7e7eaeec3a9fb2ac6f23d673faa3643cc71a1",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh3534__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh3534/module.json",
+      "module_sha256": "b8369d574d533b6cee1242460dda646dd9465789f3cf220aaca545052455c327"
+    },
+    "rh6frh3534m": {
+      "title": "RH-6FRH3534M",
+      "asset": {
+        "asset_id": "5c24803f-0477-52d9-a200-46dfaf7fa9db",
+        "package_digest": "3cef1cc78580daa384455ec99d295706a8b95bbb8989a2d2270036c11c22634d",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh3534m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh3534m/module.json",
+      "module_sha256": "193794e0e3972dbc8bbd54399d3b9e1dcc3eb1e8c6032bbb3dc120b04327b784"
+    },
+    "rh6frh4520": {
+      "title": "RH-6FRH4520",
+      "asset": {
+        "asset_id": "f4a37fcc-bc2b-5d1f-aa51-695d920b4c9e",
+        "package_digest": "cbc92203a484d3cb76ce2bf774ae6f1fdd0669ee8ffc756d53a3bb189a5f2b7e",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh4520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh4520/module.json",
+      "module_sha256": "45472c36ae72ad8c92b391646b2d7b7c74a0154fe3dec5dc0d7740902de6d0bf"
+    },
+    "rh6frh4520m": {
+      "title": "RH-6FRH4520M",
+      "asset": {
+        "asset_id": "c6e6e277-5f4e-546f-a7a6-96eeb23a49a8",
+        "package_digest": "0c57eaa3b009f46b360ca4af5fb58905f98d2181d2841d91a09732bcc16e8f61",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh4520m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh4520m/module.json",
+      "module_sha256": "9101379f68fb2fc09475451ac034d894b0b7c25babae5a1c77662ecf09ba9a1b"
+    },
+    "rh6frh4534": {
+      "title": "RH-6FRH4534",
+      "asset": {
+        "asset_id": "5df3748a-11ef-51a8-b6fa-428684045764",
+        "package_digest": "d2cca10de4deb06bb29bd88fa04464ce65bd41934ccdb83f5265d982c20cb083",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh4534__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh4534/module.json",
+      "module_sha256": "4a00b40332cb306f1f93487ee35db8ae14133f81cb137e91c6c07e9b18403cf5"
+    },
+    "rh6frh4534m": {
+      "title": "RH-6FRH4534M",
+      "asset": {
+        "asset_id": "7868f87d-bb57-5931-8b8f-23eacb130b44",
+        "package_digest": "0d6a71ba18f84990e4fc4320a0b6bba9770db92c88829cffa43a2bbcddd419d2",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh4534m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh4534m/module.json",
+      "module_sha256": "04d469abe226d64112b8333e8ab7c4dba23b946ea3d6879f357936435cf6ded2"
+    },
+    "rh6frh5520": {
+      "title": "RH-6FRH5520",
+      "asset": {
+        "asset_id": "e61f7fc5-d1af-5898-96e2-a541a95e345e",
+        "package_digest": "4b1dc0ffddea2b18d6d345ce37c2871ba5e3f16901a5857093db67b9b776260e",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh5520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh5520/module.json",
+      "module_sha256": "f84e3d253da231dd8ce342a4e2eed8c35ed54d75b004059fc347bb09670372f5"
+    },
+    "rh6frh5520m": {
+      "title": "RH-6FRH5520M",
+      "asset": {
+        "asset_id": "61d83a7c-9114-5348-80a5-d4896e339945",
+        "package_digest": "13e9ad35145291f2a23fd191f10de7f64fa4dd5bcaf537395f72e7296095e304",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh5520m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh5520m/module.json",
+      "module_sha256": "b954737fa83a0bb8b76c502703db2b9439b49f55ed97a6da71a464784bcaff26"
+    },
+    "rh6frh5534": {
+      "title": "RH-6FRH5534",
+      "asset": {
+        "asset_id": "071c50bc-6384-5de9-8cbb-4de94c0c4eee",
+        "package_digest": "3f683e8966f18dbdbfc2ace852e09536b8732356051063934a121dfa455104f5",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh5534__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh5534/module.json",
+      "module_sha256": "64462952efbe4780e3a53e59114c9b4fc482673c776dc3c02db2f195a144cc6c"
+    },
+    "rh6frh5534m": {
+      "title": "RH-6FRH5534M",
+      "asset": {
+        "asset_id": "7b80dafd-039c-5026-8d1e-9cb66891d6d2",
+        "package_digest": "9f178f6f2f6c5e9e8ebf95096ad0155430e9d0d09efec1e2227747d1252826bf",
+        "package_path": "04_设备/mitsubishi_electric/rh-6frh5534m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6frh5534m/module.json",
+      "module_sha256": "51e64606dbdfb1bd851f81bc55751ff5463110e3dd7aa182681f45afa6f1a5c1"
+    },
+    "rh6sh3517m": {
+      "title": "RH-6SH3517M",
+      "asset": {
+        "asset_id": "d5f701a1-efde-5f4d-80fe-515a3c0ae651",
+        "package_digest": "a74462a35b3312b7486772ae0b21bd5509ed231437348358f7b796d454258ce4",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh3517m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh3517m/module.json",
+      "module_sha256": "0d1ce1ce52afce7143a8f0c60069c5307ada0f29d4cb6e0dd3dc1b503ad4b7a4"
+    },
+    "rh6sh3520": {
+      "title": "RH-6SH3520",
+      "asset": {
+        "asset_id": "db43af4d-fcd9-52fd-8f43-1a8b00f376cc",
+        "package_digest": "2db8436fc0e349c66c0dd56884ce0ce89c16a56877c2bfa88fe2daa48d461579",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh3520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh3520/module.json",
+      "module_sha256": "2edde718e2301c527a57253ebbb33fd35152fc67a5e052a6b29cb28094dc42c6"
+    },
+    "rh6sh3527m": {
+      "title": "RH-6SH3527M",
+      "asset": {
+        "asset_id": "05fde615-62ea-5c62-b630-2f2f4ef8956d",
+        "package_digest": "318555a838afe9f87427ed455ff3fdf7dc20c2aa828236ef5fd3ce9ec1988806",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh3527m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh3527m/module.json",
+      "module_sha256": "d58c202dc951846faf6a7b6635aee5afd72d0ce186587b0c480fead27a8e2c9a"
+    },
+    "rh6sh3532": {
+      "title": "RH-6SH3532",
+      "asset": {
+        "asset_id": "761c2113-5954-5204-99aa-687b63a78226",
+        "package_digest": "3319468977d7eeb112bb6c40287ca9d8c8c29fef813082c1e94e358fe8232c6a",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh3532__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh3532/module.json",
+      "module_sha256": "2032d133ac97b8529e8c927c8fa191add7a3b9cec45c9125c53fec48f73a5efd"
+    },
+    "rh6sh4517m": {
+      "title": "RH-6SH4517M",
+      "asset": {
+        "asset_id": "e1164672-3630-592e-ac97-de36120feaee",
+        "package_digest": "8190e34d18680aa108ca2078b8c011726abb8fab674b0f4def6f8eace613c620",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh4517m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh4517m/module.json",
+      "module_sha256": "8199d3ff02163ecc0bd1a5ff950f84f59b300a0014f95dc267d292da0873a064"
+    },
+    "rh6sh4520": {
+      "title": "RH-6SH4520",
+      "asset": {
+        "asset_id": "07f8439d-aaad-5bac-b184-5e76fe14d87e",
+        "package_digest": "d745687bc69ba649e8f1e0510b0e7d0df1c5f1bc6a961769bd3f6af441e82be4",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh4520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh4520/module.json",
+      "module_sha256": "1e56f9367bad67a8c5f5b69958a6a430c87b24c649ae8694c23a83b6d8690e9f"
+    },
+    "rh6sh4527m": {
+      "title": "RH-6SH4527M",
+      "asset": {
+        "asset_id": "5152c7c4-767b-59fd-ac81-ed3f23acb3c0",
+        "package_digest": "c533175f4b275dbefdabee6fdfbb6d7dce268af84a23c321d1fac2f9442c94d7",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh4527m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh4527m/module.json",
+      "module_sha256": "f4443d4835fbd69f3ccab27f581b639844a49e42d2c87466dbe7039fe87826ee"
+    },
+    "rh6sh4532": {
+      "title": "RH-6SH4532",
+      "asset": {
+        "asset_id": "a0320c16-f8d7-5871-967f-4dbd6e11a2a0",
+        "package_digest": "b7f01b548c4cd2157726f1df1503547250f8adefa4989f20a4b4295a0860ff3d",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh4532__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh4532/module.json",
+      "module_sha256": "8608cbca8cc27fc5098b48ef7c51f4547b23181c5773ac18d87398f3cccd2dc0"
+    },
+    "rh6sh5517m": {
+      "title": "RH-6SH5517M",
+      "asset": {
+        "asset_id": "507acaf6-a590-5e5c-bda7-108279ee6b0b",
+        "package_digest": "224877812ad5f0573d8ca78c84340623ac1e427118bbbe678af1696a59503de8",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh5517m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh5517m/module.json",
+      "module_sha256": "28aceba6b2a0368156529b4dc7d0a5b7e7490948575d7fc47d3b1e00a3490d55"
+    },
+    "rh6sh5520": {
+      "title": "RH-6SH5520",
+      "asset": {
+        "asset_id": "9b78c783-244b-5c86-9c5a-6a17e7fe6da2",
+        "package_digest": "c7f522bb6d026fe1aa33a5b324eba00c2cab84ce7007b0252e76fb29b947f1cb",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh5520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh5520/module.json",
+      "module_sha256": "99fe723e5f4e38363d55514fb75fd14813b11d40e7c1145e74b8273faebd2f96"
+    },
+    "rh6sh5527m": {
+      "title": "RH-6SH5527M",
+      "asset": {
+        "asset_id": "9b6c8c0c-09b1-520f-a33d-da9754f0fc93",
+        "package_digest": "8648fb7623bc222fedcf1a799486f729cf49becf9ee00095013e29486611a0ce",
+        "package_path": "04_设备/mitsubishi_electric/rh-6sh5527m__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rh6sh5527m/module.json",
+      "module_sha256": "984900ae11aada3780d575f918f71e5de4a3d23441bd99a0217c953180332b3a"
+    },
+    "rv12sl": {
+      "title": "RV-12SL",
+      "asset": {
+        "asset_id": "7d473e2c-cb66-5adc-bed8-00046f2b60d0",
+        "package_digest": "f8322d74dabee12cc6cafdb000d74f3fd0b6495e1cc9302b4b9cc9ddc0865bce",
+        "package_path": "04_设备/mitsubishi_electric/rv-12sl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv12sl/module.json",
+      "module_sha256": "df1225146ee8f602a7ccd463d6b3d90ca92f0b186a68da255da6d92983e9e269"
+    },
+    "rv13frsh": {
+      "title": "RV-13FR-SH",
+      "asset": {
+        "asset_id": "3b45dda4-c810-5f9c-944d-751d78451bcb",
+        "package_digest": "1ce44220aedda0c067e69056b5cd9e87d1ea87fed1e587e468decd6a606b90c0",
+        "package_path": "04_设备/mitsubishi_electric/rv-13fr-sh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv13frsh/module.json",
+      "module_sha256": "a5a06ccbbf378bdfdf4a5299709128196cedad52d96399f5bcc832b487c4cdc1"
+    },
+    "rv2a": {
+      "title": "RV-2A",
+      "asset": {
+        "asset_id": "1fa66ed7-33c1-5ed5-bd7b-137f12965e22",
+        "package_digest": "a11d60d855aed14061f501edcb51af08b6fc8116698cdfc7e5c98ae6509bc25b",
+        "package_path": "04_设备/mitsubishi_electric/rv-2a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2a/module.json",
+      "module_sha256": "f439ec6c3582bb0a5b14d944a2e1d6011476ea9a7ea8a60bef283be137c0e3ed"
+    },
+    "rv2sq": {
+      "title": "RV-2SQ",
+      "asset": {
+        "asset_id": "bae0c13c-6299-5e5e-b652-44bec09da257",
+        "package_digest": "4c6ea40715cd3f6c4960ec271da52f904d81fc0aeedd0c099c067de68d65a798",
+        "package_path": "04_设备/mitsubishi_electric/rv-2sq__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv2sq/module.json",
+      "module_sha256": "25bb2eb39a093c077cafa96a143b3ed475b5e51b6c913d59e8218f3bf8558655"
+    },
+    "rv35fr": {
+      "title": "RV-35FR",
+      "asset": {
+        "asset_id": "e7f4e90f-8498-5c7a-a88f-dbcb52043238",
+        "package_digest": "e710b4518154d6aa7acb9dcedbd75c6c39ce19c141db8e08a74928ffdbf16d11",
+        "package_path": "04_设备/mitsubishi_electric/rv-35fr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv35fr/module.json",
+      "module_sha256": "12d0dd8216766e15e02611e75922b3abaab1f694e9c68726b2fd4e677601d2b9"
+    },
+    "rv3aj": {
+      "title": "RV-3AJ",
+      "asset": {
+        "asset_id": "4b37429d-0614-53bf-8299-2c146f2a7608",
+        "package_digest": "40bae27716476ee360017b6476dbbc67276aaaa93e81ac5f79e7436d1056b337",
+        "package_path": "04_设备/mitsubishi_electric/rv-3aj__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv3aj/module.json",
+      "module_sha256": "e2947715df425ad7eeb9062194b930f716c50ff1c3025fcbda90ad6df1a542b3"
+    },
+    "rv3al": {
+      "title": "RV-3AL",
+      "asset": {
+        "asset_id": "304e30df-8ee6-5546-a410-53a98034fb16",
+        "package_digest": "a3e27d7f0a183437c23035b2448814bf1be1f7d4d0f00ea31838118b0a5f4ccc",
+        "package_path": "04_设备/mitsubishi_electric/rv-3al__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv3al/module.json",
+      "module_sha256": "ab858635dbca740b453a5723de44801998d8ce8d62da72bedd57e506022d7d32"
+    },
+    "rv4ajl": {
+      "title": "RV-4AJL",
+      "asset": {
+        "asset_id": "af41fdd0-ff1f-51a7-b9a3-2339b86483e4",
+        "package_digest": "f85695a564eea4676e7fbd07a1a02debcc8f63e6aeeaf2b881d5786dd5ef6d87",
+        "package_path": "04_设备/mitsubishi_electric/rv-4ajl__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4ajl/module.json",
+      "module_sha256": "6465920968c823314d84f3d2dcb5be6bbf6a8896bc18cac0b1470c257c0a1151"
+    },
+    "rv4f": {
+      "title": "RV-4F",
+      "asset": {
+        "asset_id": "1b41b8e8-7ac9-5bd1-8510-81ce1f0a7f95",
+        "package_digest": "75763845bbfa3a1d4994f78f4d1b14bf4de15dbb5749d24baef2fdb351831ed9",
+        "package_path": "04_设备/mitsubishi_electric/rv-4f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4f/module.json",
+      "module_sha256": "cac23e3488132dd91e280a10c3a80b9b42fdf9bbcbdc56e95183d7ebf6ddb9f6"
+    },
+    "rv4flsh": {
+      "title": "RV-4FL-SH",
+      "asset": {
+        "asset_id": "eab852aa-7756-5d8a-8389-e8d3ef4086a6",
+        "package_digest": "586b18eae27091e4c1dad23d76c8d79568599c267fdb656c2ae1730c9ff6eaef",
+        "package_path": "04_设备/mitsubishi_electric/rv-4fl-sh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4flsh/module.json",
+      "module_sha256": "c5440ac656c687f9a795e4a15023588189c3cf545f22df7c680904251f6935af"
+    },
+    "rv4fr": {
+      "title": "RV-4FR",
+      "asset": {
+        "asset_id": "66a9f523-50eb-536e-9e0a-7a8f8bf40e53",
+        "package_digest": "e5a2b1b876e59360d28b36c9b9a52502480c6f6b835990da5db6ed0eac101c27",
+        "package_path": "04_设备/mitsubishi_electric/rv-4fr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv4fr/module.json",
+      "module_sha256": "a3915569e6d39e2ac11af0cf9930d821dcfff8c60107261c34092adb5af967b6"
+    },
+    "rv50fr": {
+      "title": "RV-50FR",
+      "asset": {
+        "asset_id": "58cf3b12-8ec0-5362-bfaf-c19e214743d5",
+        "package_digest": "d8cbf8087bdadefef78bbd0223cd4e17d6f4a52600c3c10c613e21f57bccf455",
+        "package_path": "04_设备/mitsubishi_electric/rv-50fr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv50fr/module.json",
+      "module_sha256": "056ce3190077cea9ae2f415281b05f45411c9517c511633fd0e60381777847e4"
+    },
+    "rv5aj": {
+      "title": "RV-5AJ",
+      "asset": {
+        "asset_id": "257b35c4-04ad-5985-8c45-8827b40e5c06",
+        "package_digest": "abfc73545962503f3fcf74faedd33403c9a119323abfdf17e0e0bdb3768f2a9c",
+        "package_path": "04_设备/mitsubishi_electric/rv-5aj__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv5aj/module.json",
+      "module_sha256": "50d952548746cd1f5bf3719999e6ad48a798ba61192c8f9a503563c9548a7e25"
+    },
+    "rv7f": {
+      "title": "RV-7F",
+      "asset": {
+        "asset_id": "fcd1780a-163f-5ebd-aa1a-cf5da458f69d",
+        "package_digest": "06887cb9178ab0a1f75f7ac487d2b0f6dd9655d31a9a32bc61a313c0f1ae9430",
+        "package_path": "04_设备/mitsubishi_electric/rv-7f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7f/module.json",
+      "module_sha256": "50748747901180a1f71a29eb33739676b84a427b285e2699f90194bd65c26963"
+    },
+    "rv7fll": {
+      "title": "RV-7FLL",
+      "asset": {
+        "asset_id": "5b1d5ac9-ddee-5ebf-be5e-c4aa44fb1fd2",
+        "package_digest": "c541d71d4d21f7c9819afd46dca666418d83715e7fa8b15d9ec616fee1f64337",
+        "package_path": "04_设备/mitsubishi_electric/rv-7fll__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7fll/module.json",
+      "module_sha256": "14253d8832a5ab9dff75c36520e1dddffb911cce86b34760d3dd892e2f02100f"
+    },
+    "rv7flsh": {
+      "title": "RV-7FL-SH",
+      "asset": {
+        "asset_id": "def94e0a-f613-5ab1-8427-a9220e89cf84",
+        "package_digest": "45c4c76058106a904f9b069d589527161a3a710d233d253c3c16edb8fa6f22fe",
+        "package_path": "04_设备/mitsubishi_electric/rv-7fl-sh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7flsh/module.json",
+      "module_sha256": "2ae2ed95938049b54bff3513ded094d3fbeb7da009d36fd306ea1905182617f6"
+    },
+    "rv7frllsh": {
+      "title": "RV-7FRLL-SH",
+      "asset": {
+        "asset_id": "b78390b3-c992-521c-856c-cabb0a06b899",
+        "package_digest": "9b2a71158e38d11000fe3f7ffd27cc6d57f166ab31c3067756b17069e403e0e6",
+        "package_path": "04_设备/mitsubishi_electric/rv-7frll-sh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7frllsh/module.json",
+      "module_sha256": "140d2727f81f602f1d4210fda91c25316f908430ad2102ad03a9c5f2f2b6b99a"
+    },
+    "rv7fsh": {
+      "title": "RV-7F-SH",
+      "asset": {
+        "asset_id": "67a6ccac-eb49-56ab-a4ee-230603d4f4a9",
+        "package_digest": "bcd3c2f07acdf9612b50a82d2e4a22e847f351a500872e10124d1f37ba3e294e",
+        "package_path": "04_设备/mitsubishi_electric/rv-7f-sh__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv7fsh/module.json",
+      "module_sha256": "24885c015d7c74b75211f076d7970d0b7917262719250cea8576c699a9d01d02"
+    },
+    "rv80fr": {
+      "title": "RV-80FR",
+      "asset": {
+        "asset_id": "9b7c5fef-d005-5fa9-9b18-9ce2ac8596da",
+        "package_digest": "b19829e00f4c389f36b7d3f7b8023cfb6afbef75babf1aa120c9643bde461730",
+        "package_path": "04_设备/mitsubishi_electric/rv-80fr__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv80fr/module.json",
+      "module_sha256": "9589966fef347f6dd6142868b76cb048640f95a98507f513d4d00c21d940e491"
+    }
+  },
+  "source_profiles": []
+}

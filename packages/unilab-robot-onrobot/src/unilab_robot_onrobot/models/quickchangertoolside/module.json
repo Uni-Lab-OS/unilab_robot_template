@@ -1,0 +1,723 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "quickchangertoolside",
+  "title": "Quick Changer Tool Side",
+  "asset": {
+    "asset_id": "216017e5-d7c3-50f7-8e56-9880ab97fc9b",
+    "package_digest": "cc4efb6fba2c6550c11b27687578db855ff7175d71c98abb4e81362128fd2a0d",
+    "package_path": "03_机构模块/onrobot/quick_changer_tool_side__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "216017e5-d7c3-50f7-8e56-9880ab97fc9b",
+      "package_digest": "cc4efb6fba2c6550c11b27687578db855ff7175d71c98abb4e81362128fd2a0d",
+      "package_path": "03_机构模块/onrobot/quick_changer_tool_side__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "c46b7f4cb890f81d652293d98fff7093a6b1eb025484f473b8247856abd56b5d",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "c46b7f4cb890f81d652293d98fff7093a6b1eb025484f473b8247856abd56b5d",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": [
+          {
+            "analysis": "conservative lexical source analysis; not complete Python control/data flow",
+            "decoded_script": "C:\\Users\\DP\\files\\asset-pipeline-runs\\vendor-full-library-20261105\\vc\\attempt-04\\jobs\\c46b7f4cb890f81d652293d98fff7093a6b1eb025484f473b8247856abd56b5d\\attempt-01\\evidence\\physics\\scripts\\rsc-line-3231.py.txt",
+            "decoded_script_sha256": "d7e893daeebe00e24da757ee84e1d2c50217502a2256ca244acc6e2b3bbcbb27",
+            "effects": [
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 49,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  adapter_frame.PositionMatrix = node_pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 52,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  mount_frame.PositionMatrix = pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 53,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  mount_frame.rebuild()"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 54,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  adapter_frame.rebuild()"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_creation_path",
+                "decoded_script_line": 57,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  adapter_iface = mount_node.createBehavior(vc_beh.vcBehaviorType.ONE_TO_ONE_INTERFACE, ADAPTER_IFACE_NAME)"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 65,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "  adapter_field_ic.Value = 7001"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 121,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "cleanup",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "      mount_frame.PositionMatrix = pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 122,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "cleanup",
+                "owner": {
+                  "id": "functionality:3155",
+                  "kind": "Functionality",
+                  "line": 3155,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 3231,
+                "text": "      mount_frame.rebuild()"
+              }
+            ],
+            "executed": false,
+            "owner": {
+              "id": "functionality:3155",
+              "kind": "Functionality",
+              "line": 3155,
+              "name": "PythonScript",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rPythonScript"
+            },
+            "source_member": "component.rsc",
+            "source_variable_line": 3231
+          }
+        ]
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [],
+        "rsc_sha256": "34b30a4a6beb9f6d532387514e8eb471b2d6ab3e2c7c506e42e3e2ef566919ee",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "AdapterHeight": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 4034,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "fa9f67a30039fb089d72520a2e37740dc98771d992e3a667cb4b503926cd7ef1",
+                "source_settings": [
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 17.2
+              },
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3943,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3971,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "e728301df420ff4fc75d3db3d4aaf7e889de6cd3ec87f9872d55a890fe2a7c8f",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "OnRobot Quick Changer Tool Side"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3957,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9535630796f8bcdc5cc55b39a6544be0e3dc4728fd03f953b5f9e1fea1a3bec3",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Quick Changer Tool Side"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3861,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3985,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3896,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3999,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 3847,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Tool Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "Quick Changer Tool Side",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {},
+            "owner": {
+              "id": "node:4053",
+              "kind": "Node",
+              "line": 4053,
+              "name": "Robot World",
+              "node_id": "node:4053",
+              "node_path": [
+                {
+                  "name": "Quick Changer Tool Side",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "Robot World",
+                  "node_id": "node:4053"
+                }
+              ],
+              "type": "rBaseNode"
+            }
+          }
+        ],
+        "source_sha256": "c46b7f4cb890f81d652293d98fff7093a6b1eb025484f473b8247856abd56b5d"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "850ead05cec054080df22f1f05a45e280d79815ff6e3273aaaa91565c1c5fd8f",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/quick_changer_tool_side__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Quick Changer Tool Side",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "path": "Components/OnRobot/Robot Tools/Quick Changer Tool Side.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "9bc95b61-b106-41eb-bf03-92cd465a2be4",
+          "library_assets": [
+            "216017e5-d7c3-50f7-8e56-9880ab97fc9b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Quick Changer Tool Side.vcmx",
+        "path": "simready_usd/Quick Changer Tool Side.vcmx",
+        "sha256": "c46b7f4cb890f81d652293d98fff7093a6b1eb025484f473b8247856abd56b5d"
+      }
+    ]
+  }
+}

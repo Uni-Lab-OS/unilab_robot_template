@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "aimrobotics",
+  "model": "sd30:55dispenser5mm",
+  "title": "Aim Robotics SD 30/55 Dispenser (5mm)",
+  "asset": {
+    "asset_id": "91fad209-b8b2-5c4c-81ae-7997af496c94",
+    "package_digest": "83950ad4af84051682a867e8b60b52f08fa9505b92d6d85d813df9ca355ae541",
+    "package_path": "01_零部件/aim_robotics/sd_30-55_dispenser_5mm___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "91fad209-b8b2-5c4c-81ae-7997af496c94",
+      "package_digest": "83950ad4af84051682a867e8b60b52f08fa9505b92d6d85d813df9ca355ae541",
+      "package_path": "01_零部件/aim_robotics/sd_30-55_dispenser_5mm___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3d148f118657ce9ccf6ab37214bcb7816a8abebda0f4390e2b760d108140265c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sd_30-55_dispenser_5mm___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "SD 30/55 Dispenser (5mm)",
+          "manufacturer": "Aim Robotics",
+          "variant": "",
+          "display": "Aim Robotics SD 30/55 Dispenser (5mm)",
+          "path": "tools/models/Aim-Robotics-SD-30-55-Dispenser-5mm.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "91fad209-b8b2-5c4c-81ae-7997af496c94"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Aim-Robotics-SD-30-55-Dispenser-5mm.tool",
+        "path": "simready_usd/Aim-Robotics-SD-30-55-Dispenser-5mm.tool",
+        "sha256": "712d62c6460adb1786d8615a3789fbad50d5182c452d7c84209d042a82d0fb5c"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "abicorbinzel",
+  "models": {
+    "45degweldinggun": {
+      "title": "Abicor Binzel 45deg Welding Gun",
+      "asset": {
+        "asset_id": "1ef30a0a-bcc2-555e-bac0-00b0f09ecc2d",
+        "package_digest": "fbeeaf930f17ef1d08aa8d3b9a311cd843863b61e13c615b1b8910f4f9984b48",
+        "package_path": "01_零部件/abicor_binzel/45deg_welding_gun__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/45degweldinggun/module.json",
+      "module_sha256": "195ce849ec4102e9c447b15642cd3ff80ce8efa5fb9a0fd685284a0486d37975"
+    }
+  },
+  "source_profiles": []
+}

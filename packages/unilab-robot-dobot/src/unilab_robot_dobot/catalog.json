@@ -1,0 +1,475 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "dobot",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "cr10": {
+      "title": "Dobot CR10｜多源合并",
+      "asset": {
+        "asset_id": "8ebd98ad-61b9-5b6b-a992-88e605551aee",
+        "package_digest": "48f586b9879d48dedce7f648166cbcbc7f616eb78dcaa5440a35f8b93c29993c",
+        "package_path": "04_设备/dobot/cr10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr10/module.json",
+      "module_sha256": "48837c9e1e3a51e32c9d346b7ac1c96c3657744a6ddf6e831eec97f854566dd1"
+    },
+    "cr10a": {
+      "title": "Dobot CR10A｜多源合并",
+      "asset": {
+        "asset_id": "cd0e4d8e-8db3-5467-8293-add2044b734c",
+        "package_digest": "b9e1c4cd12f774af45d6dfd7f409081e761d14c0ab42379316531e3113db28b4",
+        "package_path": "04_设备/dobot/cr10a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr10a/module.json",
+      "module_sha256": "6ad7ffb01f762d76ef0b96465374c3afc09019e63d38215b65258f30e16b03e7"
+    },
+    "cr12": {
+      "title": "Dobot CR12｜多源合并",
+      "asset": {
+        "asset_id": "29ee8c52-825b-5077-8ba2-a60e382ccc90",
+        "package_digest": "631125f625c190d0443e001a56e8ebc8c08a25e177ddd6bbb1f5f96e6532ea88",
+        "package_path": "04_设备/dobot/cr12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr12/module.json",
+      "module_sha256": "2422570a75342b6faab517584cfc4d6515740c46a7180b94afb0493f8bc7c062"
+    },
+    "cr16": {
+      "title": "Dobot CR16｜多源合并",
+      "asset": {
+        "asset_id": "51ed2e79-12a2-5f45-9f1a-f6120825dd9c",
+        "package_digest": "20c5664ae664357d3f580c8adbf3aa718060e5710c1547b3ce39844b007b2c92",
+        "package_path": "04_设备/dobot/cr16__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr16/module.json",
+      "module_sha256": "3952a9055c9075c3a1191130362c957f14d2d862ebe8a9f3171b8a461e1b58d8"
+    },
+    "cr16a": {
+      "title": "Dobot CR16A｜多源合并",
+      "asset": {
+        "asset_id": "e422c27a-a708-52c4-b40f-48cc4fba0129",
+        "package_digest": "1355b1f45215b55b637ec9fe25123343283b863f79b26b6f184d3105657fdbb8",
+        "package_path": "04_设备/dobot/cr16a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr16a/module.json",
+      "module_sha256": "3c4dca095da9b64b2171be249cd6927919a80e5d31140e39aeec8229b87e5edd"
+    },
+    "cr20a": {
+      "title": "Dobot CR20A｜多源合并",
+      "asset": {
+        "asset_id": "0b652d9e-18ca-55aa-bb4b-3598baff0369",
+        "package_digest": "27ee9d3d38ba06035e15af01b5d8bd0e9e4c156eb24b66989b25fc2a18221783",
+        "package_path": "04_设备/dobot/cr20a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr20a/module.json",
+      "module_sha256": "625a3a5f6c73c67fb89a3241753724bb21468025ac416ad2888d3a23e5c1d00d"
+    },
+    "cr3": {
+      "title": "Dobot CR3｜多源合并",
+      "asset": {
+        "asset_id": "889c307f-7d62-50bf-be63-9ce4eeb1c5bb",
+        "package_digest": "5090faf90cffe5b6ca17ce4fcdb5ee14d93daaf4278248e84553ba8a9301bb6b",
+        "package_path": "04_设备/dobot/cr3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr3/module.json",
+      "module_sha256": "d02d7557cf12b8999400c5b36c1d43a15a515e8b449cf3d04aeb1455ecf6e905"
+    },
+    "cr30h": {
+      "title": "Dobot CR30H｜多源合并",
+      "asset": {
+        "asset_id": "d94dc7cb-955d-53ea-b3d8-0026f682e181",
+        "package_digest": "3e82fb5eef0cd70cd3deb95c016175d76a5ca9114948bb091f74b9a122058ed8",
+        "package_path": "04_设备/dobot/cr30h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr30h/module.json",
+      "module_sha256": "5be05ef2a30fdb7af5408f931b9a445baf3c459bdd0b69c4d0c53aa62e9de1ed"
+    },
+    "cr3a": {
+      "title": "Dobot CR3A｜多源合并",
+      "asset": {
+        "asset_id": "51fa0a3e-6742-5af6-98b6-b222cbf57575",
+        "package_digest": "06da7c693e7549339a61e412715f13c2f6aa039c806f4fff33eb3589e336e7cd",
+        "package_path": "04_设备/dobot/cr3a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr3a/module.json",
+      "module_sha256": "908074d5f6f2bccbfb80164abc07a95bcee1d68ab064a68c970d0adbd104ec0c"
+    },
+    "cr5": {
+      "title": "Dobot CR5｜多源合并",
+      "asset": {
+        "asset_id": "bc490ad0-03b8-56be-865e-57b61c7ff7ff",
+        "package_digest": "47dc8059dd8e9962c7134463a73597a1df268c8f5db9341bc0023e2363f87b18",
+        "package_path": "04_设备/dobot/cr5__多源合并_r002"
+      },
+      "provider": "unilab_arm_cr5:build_moveit_model",
+      "capabilities": {
+        "planning": "existing_provider_contract",
+        "hardware": "requires_explicit_backend_qualification",
+        "asset_planning": "revalidation_required_after_asset_revision"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr5/module.json",
+      "module_sha256": "3df7019fef59db0f4788ad2bdf009fb20cec7feb5d797620a8a2823f9d5083b6"
+    },
+    "cr5a": {
+      "title": "Dobot CR5A｜多源合并",
+      "asset": {
+        "asset_id": "3a803713-55b8-50b5-9686-3b19ef689d70",
+        "package_digest": "66ef48d83fb577340d085ac460ed4c1ec497d649795efe4509f9a3960c0dfce7",
+        "package_path": "04_设备/dobot/cr5a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr5a/module.json",
+      "module_sha256": "29bbddcacb54a33abdbd0ec1fe1abfea351a0fcd4245597ef4ecf2182d901e93"
+    },
+    "cr7": {
+      "title": "Dobot CR7｜多源合并",
+      "asset": {
+        "asset_id": "694eaeb2-181f-568a-8f59-d982928503bd",
+        "package_digest": "e12c12c0774c5b92a6dbb16ce717d6eb729454c16a684f6d04b278fb2b5ddaef",
+        "package_path": "04_设备/dobot/cr7__多源合并_r002"
+      },
+      "provider": "unilab_arm_cr7:build_moveit_model",
+      "capabilities": {
+        "planning": "existing_provider_contract",
+        "hardware": "requires_explicit_backend_qualification"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr7/module.json",
+      "module_sha256": "e1a7ee59ab10639bc2e64d00244505f9010d6687d90bedc7c87c9f4805a948b8"
+    },
+    "cr7a": {
+      "title": "Dobot CR7A｜多源合并",
+      "asset": {
+        "asset_id": "58eebe9d-7b76-5b62-b612-67224d86f4bb",
+        "package_digest": "6b5f2792a804bf968b092612b37812ff34dc4ed67b68a026b446c0d7f331da23",
+        "package_path": "04_设备/dobot/cr7a__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cr7a/module.json",
+      "module_sha256": "9fe0c76a952cb54616faa173f5b23be6da440a826e3a94673bd0bfccb8952dbd"
+    },
+    "magiciane6": {
+      "title": "Dobot Magician E6｜多源合并",
+      "asset": {
+        "asset_id": "5177a52a-9a81-547f-aa00-856f60f5a9c8",
+        "package_digest": "d7b9760a3c4d05554984aa4a673cb688def9a1bd03e7fcd6ef5721d7aa365dd4",
+        "package_path": "04_设备/dobot/magiciane6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/magiciane6/module.json",
+      "module_sha256": "d25404e818ad93a84f73d68cfd6a6675d86f16ebc6ec9b382bd8b6f540891094"
+    },
+    "nova2": {
+      "title": "Dobot Nova 2｜多源合并",
+      "asset": {
+        "asset_id": "0cd5bb63-b7f3-54bd-a83a-dd735fe8004c",
+        "package_digest": "f3ab36d7f9582af1c347cd7c57bd69dab94c854cdf95058bb3d5e7f1e44e52d6",
+        "package_path": "04_设备/dobot/nova2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/nova2/module.json",
+      "module_sha256": "e9636ac0fa55f5df073c5efbc44aac4a18900634623a12b51a755b3270b4afdc"
+    },
+    "nova5": {
+      "title": "Dobot Nova 5｜多源合并",
+      "asset": {
+        "asset_id": "3fbd9dc6-55d2-54f5-b0c7-d4d28d5741fe",
+        "package_digest": "6e875ec32764dd5f4b69c701baee06562c8b2ff2b6d6207f1888ccc089e6b8a2",
+        "package_path": "04_设备/dobot/nova5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/nova5/module.json",
+      "module_sha256": "2ba637431e6fe22d171189fe69d073e3983e11933e8263d8a48f533f088e6435"
+    },
+    "cr12a": {
+      "title": "Dobot CR12A",
+      "asset": {
+        "asset_id": "31a7054f-e61f-525a-8681-7318963379f1",
+        "package_digest": "f7b089fed4f56e6f4a71ae398638eb758f86f3cc0f5352625fa8c5e37dc1d3ce",
+        "package_path": "04_设备/dobot/cr12a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr12a/module.json",
+      "module_sha256": "6c4f4e620f8921b11e7ce4ffdfab8fa51c848986586059af4cbde5fc7b88afd1"
+    },
+    "cr3l": {
+      "title": "Dobot CR3L",
+      "asset": {
+        "asset_id": "fce8f9cc-5577-56be-aa2e-17d55bd95f3d",
+        "package_digest": "f60b3be2e6ebedc475fb1dadbb59329dbdc67704303c463d9749c07d46f001ca",
+        "package_path": "04_设备/dobot/cr3l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cr3l/module.json",
+      "module_sha256": "74644014036c9f9e5c66d8423aa9659e2a65bb8d5d335a1d0a3ac05cd2d2a853"
+    },
+    "m1": {
+      "title": "Dobot M1",
+      "asset": {
+        "asset_id": "4108329f-1997-5abf-bf23-cbbe245d0221",
+        "package_digest": "24c15f8945015e7a969e2c5eea6a77d10289cd19afa5ccd69285daeb1327635d",
+        "package_path": "04_设备/dobot/m1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m1/module.json",
+      "module_sha256": "cc2762d761ceeef5cf5652ad6bfd9d719d4a855405256320031eed62dc15740e"
+    },
+    "mg400": {
+      "title": "Dobot MG400｜多源合并",
+      "asset": {
+        "asset_id": "4fe95bce-969d-5625-9c1f-39f92a0793b2",
+        "package_digest": "a54d37456979209b59002fe4a2666bdde2cbcd90d4837908885cfbaedf4dbf53",
+        "package_path": "04_设备/dobot/mg400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mg400/module.json",
+      "module_sha256": "e812db2ec61c2192fdce8f13b3309306840421ef3f633500486c0fd8be98199a"
+    },
+    "nova2s": {
+      "title": "Dobot Nova 2s｜多源合并",
+      "asset": {
+        "asset_id": "cc0cd88a-e661-5369-919c-d74a7c5f7436",
+        "package_digest": "98b92cd6f5033d5ff911f9495e80d9a02c02f0c6b856883af1a50a22e6bc775d",
+        "package_path": "04_设备/dobot/nova2s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nova2s/module.json",
+      "module_sha256": "b9976b2097c0cdd5e80d378d854e1da85091d11c0f7a9caf691df8eb19436c4b"
+    },
+    "cr20": {
+      "title": "Dobot CR20 机械臂",
+      "asset": {
+        "asset_id": "9628ea94-d7d7-52e5-a327-082f65f32639",
+        "package_digest": "3436caf470f05314e00b447616e0112f8a1f6d464997f7faad6c7fa9502c8859",
+        "package_path": "04_设备/dobot/cr20_机械臂__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "qualified_selected_model"
+      },
+      "module_path": "models/cr20/module.json",
+      "module_sha256": "65d633bc57a1fb03e73dd86c17ec34cd660e82392004797d328b1fb7d32abaad"
+    },
+    "me6": {
+      "title": "Dobot ME6 机械臂",
+      "asset": {
+        "asset_id": "fd430b0b-c423-53b0-9ec0-cc599f05d70a",
+        "package_digest": "a61fe4fc4cc231c6ea4b0921c59bf7260f4d84e9bb978723a35d8fe750907c65",
+        "package_path": "04_设备/dobot/me6_机械臂__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "qualified_selected_model"
+      },
+      "module_path": "models/me6/module.json",
+      "module_sha256": "6e4194fe4365e4bfe94bf6d91a9a5d6040205d23f3fccb0c7788abb12c618606"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "cr10_moveit_2245af0823",
+      "manifest": "source_profiles/cr10_moveit_2245af0823/source.lock.json",
+      "sha256": "f175ef62e907595dd154d7ec21dcfb19692c5a2daabf212338a30e6852c89416",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr10af_moveit_ff72e32912",
+      "manifest": "source_profiles/cr10af_moveit_ff72e32912/source.lock.json",
+      "sha256": "29926220710335eaa96edac155a5cc4db81e781835e87a657ac3ce572a1bae74",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr12_moveit_53cec33fd2",
+      "manifest": "source_profiles/cr12_moveit_53cec33fd2/source.lock.json",
+      "sha256": "d0235f011db221bf627f8c25a43ebdf3b178d45a232a48654c988c79a58591e9",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr16_moveit_8717d1c61d",
+      "manifest": "source_profiles/cr16_moveit_8717d1c61d/source.lock.json",
+      "sha256": "def40cf882c313141db5cd1f2307e4ab612aa2e1903cd4723e29772f1d627b38",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr20_moveit_004dbb4a5a",
+      "manifest": "source_profiles/cr20_moveit_004dbb4a5a/source.lock.json",
+      "sha256": "333e810f8ab68a0a7f26d4180db815b064dbbb505efc34c6e1abab57a00cd65d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr20af_moveit_65bc77ecb8",
+      "manifest": "source_profiles/cr20af_moveit_65bc77ecb8/source.lock.json",
+      "sha256": "768a5cf583589ba7619a375980b0af0f1bfb945c728b6577d39e1ce71b06063d",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr30h_moveit_f849f3ae27",
+      "manifest": "source_profiles/cr30h_moveit_f849f3ae27/source.lock.json",
+      "sha256": "c25ed66dff7e062effddb18dee1b7e1173de8643e621f91fe6e3151f297a2d35",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr3_moveit_9f7e2155a5",
+      "manifest": "source_profiles/cr3_moveit_9f7e2155a5/source.lock.json",
+      "sha256": "a731d1545570e415612d52c8f661abe831e00deb6d0c430f4aad65770313f8e4",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr3af_moveit_1db8255cc1",
+      "manifest": "source_profiles/cr3af_moveit_1db8255cc1/source.lock.json",
+      "sha256": "13e451354dd2e7b0db451ede1d784946758f10c7f51e3a586031e928697d07ee",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr5_moveit_ecdff1fba2",
+      "manifest": "source_profiles/cr5_moveit_ecdff1fba2/source.lock.json",
+      "sha256": "dd5bc80072f57105bf35b791e9c12cf3d40c20180501a20f27c474864dbdbd13",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr5af_moveit_26de3f5adb",
+      "manifest": "source_profiles/cr5af_moveit_26de3f5adb/source.lock.json",
+      "sha256": "f347d3170d55ef7f5b135281024b0810d73f865bdeafb3ba7d78a75671125dc3",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "cr7_moveit_aa448b9b52",
+      "manifest": "source_profiles/cr7_moveit_aa448b9b52/source.lock.json",
+      "sha256": "07ab295c7a7baf69ca20abc6b4647053716763b15a1c6fa66afad722e9bb59b7",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dobot_moveit_7f363da34f",
+      "manifest": "source_profiles/dobot_moveit_7f363da34f/source.lock.json",
+      "sha256": "d656167df140ce372d8c8ce83662111df489464ab0e9f2ff3e4207de7fdd8547",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "me6_moveit_a3e60e9bcc",
+      "manifest": "source_profiles/me6_moveit_a3e60e9bcc/source.lock.json",
+      "sha256": "d99f67e3e46dcb8a16a63a18baf3119c65831d9ab2fb9b19a6341f66081f8431",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "nova2_moveit_a141393938",
+      "manifest": "source_profiles/nova2_moveit_a141393938/source.lock.json",
+      "sha256": "851d6e06d92ee23b13ab5e932733d62822b6ba24c773695219488dc7b440e537",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "nova2s_moveit_a5cfbfa196",
+      "manifest": "source_profiles/nova2s_moveit_a5cfbfa196/source.lock.json",
+      "sha256": "2f992c0322209413d2dea487ba7956deb8bc1e96b223b6b7ecfd2ad73808575e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "nova5_moveit_b105c01a08",
+      "manifest": "source_profiles/nova5_moveit_b105c01a08/source.lock.json",
+      "sha256": "680f1a3202b05356f51b64393df99cb4838de5b3eedb0525a21096076d734662",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

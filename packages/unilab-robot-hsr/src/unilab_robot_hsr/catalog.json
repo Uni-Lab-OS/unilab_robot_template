@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "hsr",
+  "models": {
+    "br609": {
+      "title": "HSR-BR609",
+      "asset": {
+        "asset_id": "cbaf851f-768d-5464-991b-e5701a14bece",
+        "package_digest": "86d99e771f8f1c9bf78845661ac9e9ac982bdfdb3828d1a11775f12608443a27",
+        "package_path": "04_设备/hsr/hsr-br609__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br609/module.json",
+      "module_sha256": "d45b7f632bea1004cc092ab55a51a40ad319e1d46afddd9b2b09b6545a99ad46"
+    },
+    "br616": {
+      "title": "HSR-BR616",
+      "asset": {
+        "asset_id": "5a077b16-0b29-5145-9800-bb1d45eedbfc",
+        "package_digest": "ed657c72063059911d4892967c21e483cd93aafa6c2507a8690a05e9c461e3b1",
+        "package_path": "04_设备/hsr/hsr-br616__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br616/module.json",
+      "module_sha256": "a651bc206a5a58e4b3bd0b4d3f168eb9f9488834ff84dca86db84672a79402b3"
+    }
+  },
+  "source_profiles": []
+}

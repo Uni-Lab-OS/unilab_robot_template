@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "lbbbd",
+  "models": {
+    "lt2100e6": {
+      "title": "LBBBD LT2100-E-6",
+      "asset": {
+        "asset_id": "a69c5343-923c-5236-87fa-f9f65a64e03b",
+        "package_digest": "6c51be8937d602ae5972f948c475c0165d44732d379d1d8044ddb3c15083caae",
+        "package_path": "04_设备/lbbbd/lt2100-e-6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lt2100e6/module.json",
+      "module_sha256": "aed4ac84947abb652754a49cbd44913d4388256f02a8803925702118aa9d67a7"
+    }
+  },
+  "source_profiles": []
+}

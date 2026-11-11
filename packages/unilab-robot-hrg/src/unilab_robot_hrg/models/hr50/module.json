@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hrg",
+  "model": "hr50",
+  "title": "HR50",
+  "asset": {
+    "asset_id": "af640d9a-90b2-5c10-b92b-1ba84837d053",
+    "package_digest": "006b5edeb59679a544cc0dbe0c1c9ad38eed3e2bd005e555b9a49e5483005da0",
+    "package_path": "04_设备/hrg/hr50__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "af640d9a-90b2-5c10-b92b-1ba84837d053",
+      "package_digest": "006b5edeb59679a544cc0dbe0c1c9ad38eed3e2bd005e555b9a49e5483005da0",
+      "package_path": "04_设备/hrg/hr50__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "f0a8ba51fc0c910ba41b8838d31a378c6ab05c1ddfb82c659d8ffa1c60261989",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "54fabcf3fbd3598c616cda91cb7687f2afc1eed5367fb4a5628cfdffb6aeb4fc",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/hr50__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "HR50",
+          "manufacturer": "HRG",
+          "variant": "",
+          "path": "Components/HRG/Robots/HR50.vcmx",
+          "type": "Robots",
+          "payload": "50",
+          "reach": "2370",
+          "vcid": "50a16ec2-18dd-4b86-b81f-e2bca58025c5",
+          "library_assets": [
+            "af640d9a-90b2-5c10-b92b-1ba84837d053"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/HR50.vcmx",
+        "path": "simready_usd/HR50.vcmx",
+        "sha256": "f0a8ba51fc0c910ba41b8838d31a378c6ab05c1ddfb82c659d8ffa1c60261989"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

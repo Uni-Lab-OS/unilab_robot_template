@@ -1,0 +1,311 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "universal_robots",
+  "model": "ur7e",
+  "title": "UR7e",
+  "asset": {
+    "asset_id": "326c9ddb-af58-591a-bfb2-cecd3f626957",
+    "package_digest": "6a8663f82178d06d0a1d3cdc2dc7f37ba2251614d94b28d141dec51a811fdee7",
+    "package_path": "04_设备/universal_robots/ur7e__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "326c9ddb-af58-591a-bfb2-cecd3f626957",
+      "package_digest": "6a8663f82178d06d0a1d3cdc2dc7f37ba2251614d94b28d141dec51a811fdee7",
+      "package_path": "04_设备/universal_robots/ur7e__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          -90.0,
+          -90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            162.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            425.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            392.25,
+            0.0,
+            133.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            99.7
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            99.6
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "379773758dfc01525d59999683f246841d2e5f7a9fbafcb4324c04704798d10b",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ur7e__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DriverUR",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverUR.exe",
+        "sha256": "e2c9e720cf4bab9d5ecd9eaa7aad334985c83f035333a2f6b86f421654c48a0f",
+        "bytes": 424448,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "universal_robots controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiur",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiur.exe",
+        "sha256": "93722f172b0426927fe68eec29bb559761a437bd4f3892764a1784cc5dfa5b01",
+        "bytes": 77824,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "universal_robots controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Universal_Robots.py",
+      "Universal_Robots_3D_Printing.py",
+      "Universal_Robots_Conveyor.py",
+      "Universal_Robots_FerRobotics.py",
+      "Universal_Robots_MoveP.py",
+      "Universal_Robots_RobotiQ.py",
+      "Universal_Robots_Sync.py",
+      "Universal_Robots_URP.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/universal_robots/ur_rtde",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/ros2_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/client_library",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/rtde_python",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "UR7e",
+          "manufacturer": "Universal Robots",
+          "variant": "",
+          "display": "UR7e",
+          "path": "robots/models/UR7e.robot",
+          "type": "robots",
+          "payload": 5,
+          "reach": 850,
+          "axes": 6,
+          "library_assets": [
+            "326c9ddb-af58-591a-bfb2-cecd3f626957"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/UR7e.robot",
+        "path": "simready_usd/UR7e.robot",
+        "sha256": "62d52a7a2dcd7349eb287d6b5edde387597c42b0af5b821aef3fdd98e61be636"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

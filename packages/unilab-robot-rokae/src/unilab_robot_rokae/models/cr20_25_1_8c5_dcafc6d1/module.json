@@ -1,0 +1,686 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rokae",
+  "model": "cr20:25:1.8c5",
+  "title": "Rokae CR20-25/1.8C-5｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "a8a30c87-4781-56e2-b620-6f00efe9b850",
+    "package_digest": "453ab82d265fb66ecdfee049771c4afc0633754d89bba9dae6a63e906e7132fc",
+    "package_path": "04_设备/rokae/cr20_25_1.8c5__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a8a30c87-4781-56e2-b620-6f00efe9b850",
+      "package_digest": "453ab82d265fb66ecdfee049771c4afc0633754d89bba9dae6a63e906e7132fc",
+      "package_path": "04_设备/rokae/cr20_25_1.8c5__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7166",
+            "id": "dof:7414",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:7698",
+            "id": "dof:7946",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:7166",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:8230",
+            "id": "dof:8700",
+            "independent": true,
+            "initial_source": -90.0,
+            "input_limits_at_initial_configuration": [
+              -170.0,
+              170.0
+            ],
+            "parent_node_id": "node:7698",
+            "source_axis_label": "-Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -170.0,
+                170.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -170.0,
+                170.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:8984",
+            "id": "dof:9232",
+            "independent": true,
+            "initial_source": -90.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:8230",
+            "source_axis_label": "-Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:9516",
+            "id": "dof:9765",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:8984",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "e18672689a3d56ac34f9d127f8b1c90dc167b248df03ff276f035437a415f958",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "0800b5a22aab7b6b381807abdebfdc06ce75249978c901d7b5572591359f54bf",
+        "physics_contract_sha256": "5952a2b15c80920bb7ba9fd22bad496509b48b2cad403a6e32c1349d029d9730",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "e18672689a3d56ac34f9d127f8b1c90dc167b248df03ff276f035437a415f958",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "CR20-25/1.8C-5",
+              "source": "robots/models/Rokae-CR20-25-1-8C-5.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "CR20-25/1.8C-5",
+              "source": "Components/ROKAE/Robots/CR20-25 1.8C-5.vcmx",
+              "source_family": "VC",
+              "value": 25.0
+            },
+            {
+              "model": "CR20-25/1.8C-5",
+              "source": "robots/models/Rokae-CR20-25-1-8C-5.robot",
+              "source_family": "RoboDK",
+              "value": 25.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 25.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "CR20-25/1.8C-5",
+              "source": "Components/ROKAE/Robots/CR20-25 1.8C-5.vcmx",
+              "source_family": "VC",
+              "value": 1798.0
+            },
+            {
+              "model": "CR20-25/1.8C-5",
+              "source": "robots/models/Rokae-CR20-25-1-8C-5.robot",
+              "source_family": "RoboDK",
+              "value": 1798.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1798.0
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "541de136-eb37-5b94-92be-208df5a37d8e",
+              "entrypoints": {
+                "usd": "simready_usd/cr20-25_1.8c-5__r001.usdc"
+              },
+              "package_digest": "4430d4b749baf690ce41d7b6c46c035fd9b2768f7df686ae2acb87c3b70e71dd",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "e18672689a3d56ac34f9d127f8b1c90dc167b248df03ff276f035437a415f958",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "ae41cc64c354f14c206ce431ab741cc9cc398d60f13cb313f44068536675d961",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 5,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "541de136-eb37-5b94-92be-208df5a37d8e"
+          ],
+          "manufacturer": "ROKAE",
+          "name": "CR20-25/1.8C-5",
+          "original": {
+            "family": "VC",
+            "original_name": "CR20-25 1.8C-5.vcmx",
+            "path": "simready_usd/source_assets/VC/0_cr20-25_1.8c-5/CR20-25 1.8C-5.vcmx",
+            "sha256": "e18672689a3d56ac34f9d127f8b1c90dc167b248df03ff276f035437a415f958"
+          },
+          "path": "Components/ROKAE/Robots/CR20-25 1.8C-5.vcmx",
+          "payload": "25",
+          "reach": "1798",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "cf685590-acbb-4d78-ad61-b0a9b451eebb"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "a1e496d2-3eac-5d9f-b513-563414f56642",
+              "entrypoints": {
+                "usd": "simready_usd/cr20-25-1.8c-5__r001.usdc"
+              },
+              "package_digest": "be772dd59a042042ffbd9592afd6b5b3e7d05bc8a6aeb8ffba7d7d19b19ecdd8",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 12,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    -90.0,
+                    0.0,
+                    -90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -170.0,
+                    -0.1,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      367.5
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      900.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      750.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      170.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      140.0
+                    ]
+                  ],
+                  "mechanism_type": 8,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    0.0,
+                    12.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    0.0,
+                    -1.0,
+                    -1.0,
+                    -0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    170.0,
+                    0.1,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "d628dc5abf07b4e68a176b80dfabde76ea2bb1bc3a149e37d8a635978f0ebfaf",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Rokae CR20-25/1.8C-5",
+          "family": "RoboDK",
+          "library_assets": [
+            "a1e496d2-3eac-5d9f-b513-563414f56642"
+          ],
+          "manufacturer": "Rokae",
+          "name": "CR20-25/1.8C-5",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Rokae-CR20-25-1-8C-5.robot",
+            "path": "simready_usd/Rokae-CR20-25-1-8C-5.robot",
+            "sha256": "440061eede6739c7bb95668bb6830553e863de30b8fa0e4c013a10ef2b861029"
+          },
+          "path": "robots/models/Rokae-CR20-25-1-8C-5.robot",
+          "payload": 25,
+          "reach": 1798,
+          "type": "robots",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/cr20_25_1.8c5__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Rokae CR20-25/1.8C-5｜多源合并",
+          "id": "merged_robot_a8a30c87_4781_56e2_b620_6f00efe9b850",
+          "metadata": {
+            "asset_id": "a8a30c87-4781-56e2-b620-6f00efe9b850",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Rokae.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/rokae/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Rokae-CR20-25-1-8C-5.robot",
+        "path": "simready_usd/Rokae-CR20-25-1-8C-5.robot",
+        "sha256": "440061eede6739c7bb95668bb6830553e863de30b8fa0e4c013a10ef2b861029"
+      },
+      {
+        "family": "VC",
+        "original_name": "CR20-25 1.8C-5.vcmx",
+        "path": "simready_usd/source_assets/VC/0_cr20-25_1.8c-5/CR20-25 1.8C-5.vcmx",
+        "sha256": "e18672689a3d56ac34f9d127f8b1c90dc167b248df03ff276f035437a415f958"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "rokae",
+        "cr20:25:1.8c5"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "a1e496d2-3eac-5d9f-b513-563414f56642",
+        "original_package_digest": "be772dd59a042042ffbd9592afd6b5b3e7d05bc8a6aeb8ffba7d7d19b19ecdd8",
+        "source": "robots/models/Rokae-CR20-25-1-8C-5.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "9533c84565093daa406b3247d926aadcc5141924d80eb0e5e431e51431834e11"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

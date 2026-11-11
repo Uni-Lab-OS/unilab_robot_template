@@ -1,0 +1,115 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fairino30_v6_moveit2_config_e450430ed7",
+  "source": {
+    "url": "https://github.com/FAIR-INNOVATION/frcobot_ros2.git",
+    "commit": "60755d44d521a5ad6bee8494cc19522f8801aa20",
+    "path": "robots/fairino/ros2/fairino30_v6_moveit2_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "f6fa2944768ca86c5f1dde8d24764aafaeb2d128f01220813a5131cde0e85d7f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fairino30_v6_robot.ros2_control.xacro",
+      "sha256": "0cbf5ecbe3e8f450a11e341c6eab316cac14020f859e464ca94706ecd1d12170",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fairino30_v6_robot.srdf",
+      "sha256": "341b255e53339caef57b763cea5757133462b89d656d480113f88f0a0e37723b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fairino30_v6_robot.urdf.xacro",
+      "sha256": "44223f34161f3880914d27cd83bb0c2ef5ee6bf43ddc03c7f58536f05613632b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/initial_positions.yaml",
+      "sha256": "ff3d3bd61647419866bc6d51df79f8680973b49ee262b3aaf4c4cb6d2a275813",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "d41b502c9b2a38760ba37d5c7f5966d7e42402632fa468ef9876f4738d1a5320",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "f92e2b6613e56f9e47169bc8de3c59e0578a22ec815a0583dbbb268295ace30c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit.rviz",
+      "sha256": "66e332c3ed3657a65f23903aa2210993cc52e4d4e92abfa56c7cce50d101ce4b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "2255a2f417b41233ee8721536d7664cd007ebdf9f069b29cc75118dfe41c94ec",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "8b9dc055f0845f8b2313bd2b6d867328645bcad02132ce51081606de5d3dab9c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ros2_controllers.yaml",
+      "sha256": "18f823de36d957735523949a326dc5d3dfe9c2c742f6f25eaee22b9ffec9c19c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch.py",
+      "sha256": "4ba16135cc2197493f15b97acb08728a0c49f20a8da6db4af211e5a9fe906bba",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch.py",
+      "sha256": "4e7e55fe69ebbf5f8b0488bf993df91304b93d6275506d11a24d0a06c6fbf020",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_rviz.launch.py",
+      "sha256": "f0c4c0dc87964f37d15fbee77058f10a23d5b959e325d2bfbd02506b93aa0b2b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/rsp.launch.py",
+      "sha256": "243bd783a282455a9e61e2fdfe68ff1cb1db6d353f623c40c7e749ca339c657b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/setup_assistant.launch.py",
+      "sha256": "298384efedd1ccb69c4d5165cd37b3f66a53539036f411737adc85e532a4ade0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/spawn_controllers.launch.py",
+      "sha256": "34011310f56001bb400ffda2dbb99f10c9d11bc1416e47a340e1fc8a38caa5cd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/static_virtual_joint_tfs.launch.py",
+      "sha256": "57c253f59262d632f4d4cbcc003e23527a5d3907fb448005a4800ef3084cecf4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse_db.launch.py",
+      "sha256": "f79c6d398079693da2c6218101d13d753a26bc7e80478a462b2d340fca59a18e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "953683c81cabac0a715f85d5957e3baa526317e5a5365998ccefe7531bd2bafc",
+      "git_lfs_pointer": false
+    }
+  ]
+}

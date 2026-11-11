@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "zivid",
+  "model": "pointedhandeyeverificationtool",
+  "title": "Zivid Pointed Hand-Eye Verification Tool",
+  "asset": {
+    "asset_id": "a14cae78-d3fb-560f-967a-b63200ca9656",
+    "package_digest": "cd9083f49f789961ceadab497bc5f8743d0993a42bef23f951ad69841e8a2076",
+    "package_path": "01_零部件/zivid/pointed_hand-eye_verification_tool__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a14cae78-d3fb-560f-967a-b63200ca9656",
+      "package_digest": "cd9083f49f789961ceadab497bc5f8743d0993a42bef23f951ad69841e8a2076",
+      "package_path": "01_零部件/zivid/pointed_hand-eye_verification_tool__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "d29bde61058ffd6f1b254a9d3e378a2ca7ab3a3c50470273c53f148ae32ccf6a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pointed_hand-eye_verification_tool__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Pointed Hand-Eye Verification Tool",
+          "manufacturer": "Zivid",
+          "variant": "",
+          "display": "Zivid Pointed Hand-Eye Verification Tool",
+          "path": "tools/models/Zivid-Pointed-Hand-Eye-Verification-Tool.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "a14cae78-d3fb-560f-967a-b63200ca9656"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Zivid-Pointed-Hand-Eye-Verification-Tool.tool",
+        "path": "simready_usd/Zivid-Pointed-Hand-Eye-Verification-Tool.tool",
+        "sha256": "eec7563f89a871a41658c130a266b3cfd17e51adfb7a830ec34cc6fda655f880"
+      }
+    ]
+  }
+}

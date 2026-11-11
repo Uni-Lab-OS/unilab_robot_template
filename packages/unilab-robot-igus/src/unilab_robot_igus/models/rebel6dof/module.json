@@ -1,0 +1,280 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "igus",
+  "model": "rebel6dof",
+  "title": "igus ReBeL 6DOF",
+  "asset": {
+    "asset_id": "2cb5be18-bc82-57a1-8056-6b728c33cc64",
+    "package_digest": "5e001188bb72ea4d382c77672fdbcda0ecaf583120e0157f7ff400ad68511275",
+    "package_path": "04_设备/igus/rebel_6dof__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2cb5be18-bc82-57a1-8056-6b728c33cc64",
+      "package_digest": "5e001188bb72ea4d382c77672fdbcda0ecaf583120e0157f7ff400ad68511275",
+      "package_path": "04_设备/igus/rebel_6dof__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -179.0,
+          -80.0,
+          -80.0,
+          -179.0,
+          -95.0,
+          -179.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            252.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            237.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            297.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            126.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          179.0,
+          140.0,
+          140.0,
+          179.0,
+          95.0,
+          179.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "158a6e3192f5cfce757e32188bb0ada3c9cf46bfc1c80ef88fad7123a75ccd4a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rebel_6dof__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:igus:irc_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/igus/irc_ros2",
+        "repository_url": "https://github.com/CommonplaceRobotics/iRC_ROS.git",
+        "code_tree_sha256": "6e11f50faaff549cecda1d7588de6727ebf5dd5e60bdac3a7ab17ad0779bebb3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "f615ac200515cdb2c7437e8bfeabdde8b91da5a3236b559846449db1a67d7dfb"
+          },
+          {
+            "path": "irc_ros_bringup/README.md",
+            "sha256": "35d28f2278d61f17995f983c8a1633f7f25b05387c8701bfa80923214e78d2d2"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "aa75af9f212103975e178773c750f894bd6edc3dd72990c54cd07f3b7063fe37"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:igus_cri",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "igus_cri",
+        "controller_choices": [
+          "igus Robot Control CRI"
+        ],
+        "sdk_version_requirement": "CRI-Python-Lib pinned source",
+        "source_candidates": [
+          "sdk:igus:irc_ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_joint_request"
+        ],
+        "constraints": [
+          "iRC model configuration and axes count require deployment confirmation",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "igus_cri-receipt.json",
+          "receipt_sha256": "c94c36dc7e7cde2a5b280cf2249242af5d41c0d4be59e06422290903141edc88",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "IGUS.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ReBeL 6DOF",
+          "manufacturer": "igus",
+          "variant": "",
+          "display": "igus ReBeL 6DOF",
+          "path": "robots/models/igus-ReBeL-6DOF.robot",
+          "type": "robots",
+          "payload": 2,
+          "reach": 664,
+          "axes": 6,
+          "library_assets": [
+            "2cb5be18-bc82-57a1-8056-6b728c33cc64"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/igus-ReBeL-6DOF.robot",
+        "path": "simready_usd/igus-ReBeL-6DOF.robot",
+        "sha256": "5c9de801317f7da0ae2b7e0c830d0ebdfc18b7def6075701ce1ba8bf9bbdf39b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

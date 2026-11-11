@@ -1,0 +1,269 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_core_58e9d71e4a",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_core",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "background_processing/CMakeLists.txt",
+      "sha256": "fd715d8e21a6cd4a366c4a3dc2e6ec349ec0b6fee8b07f5f378eea8a51a9050e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "backtrace/CMakeLists.txt",
+      "sha256": "812dceda0707d665426379123ea30c3d29c63d1885e316338d533175259d1e31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cmake/FindBullet.cmake",
+      "sha256": "87a1383310650621f03e389b5186f400ef1a837a0b4ba42880e3af408c51adb6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "cmake/moveit.cmake",
+      "sha256": "2227ef8d240eeb9fc3bda0c4900f87544eaad8e4686f23b2f7902c9cf9ac51f1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "08d1ae30731ed4a2752a95af56d1368e16fc5d532f43c87ac3a496b28bf94497",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detection/CMakeLists.txt",
+      "sha256": "a1e1a8287bf4d70d742f52954548ccdf1f74c7eaaf86a7fe36d5e86c943ad67e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detection_bullet/CMakeLists.txt",
+      "sha256": "42d2b9b931298496f127d11bf7c553c81874e10eb368364ac301901fb20b48e8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detection_bullet/empty_description.xml",
+      "sha256": "4b9a1c3f156378b4b806bc2786c5d60eaed36ab25a642aa85c549f1af6cec1f2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detection_bullet/README.md",
+      "sha256": "cd4423628455d4374d124591db5857bddd46546f2e06d449ae7a546739835721",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detection_fcl/CMakeLists.txt",
+      "sha256": "93deb18cb6ab02e700aff6e9cfc3bca547a92f83d74cb204670850560ebd7a0b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detector_bullet_description.xml",
+      "sha256": "1289b825966f7746e14affd56c277da79bcf78f79b5df1cfc156d4ebfddd9515",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_detector_fcl_description.xml",
+      "sha256": "1c39e77319446add195cab3449e8d4b18b4f7fa8f40b3a372772b6ba9fc4c07c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "collision_distance_field/CMakeLists.txt",
+      "sha256": "a4c1fa9c4aa4ebda9eb7b27b00f0dd76f9ed24cd94dd766e5e82ae77511db95e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "constraint_samplers/CMakeLists.txt",
+      "sha256": "7e1c4ceb4c700d7f2686e3d8fad8342bbc06b4bc8c5d6a01c8fe31d28d1a8d92",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "controller_manager/CMakeLists.txt",
+      "sha256": "812dceda0707d665426379123ea30c3d29c63d1885e316338d533175259d1e31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "distance_field/CMakeLists.txt",
+      "sha256": "0716865add7c5178af78a6b72cf4b6aa472f7de98a6dcaf4fb83b46319a5c204",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "doc/conf.py",
+      "sha256": "cfb868f4f653a5dff88c09784506c492a4024ffb9a4b7a2a5bf392dd20e3e479",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "dynamics_solver/CMakeLists.txt",
+      "sha256": "4339046ceb6f85d0c7221ffc3aa4f4759f91064635c487f3ef1e94a199917b34",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "exceptions/CMakeLists.txt",
+      "sha256": "66eda117e2bbc721748cad9428b83b661e5aa83765bc7dc986f62dd9643b7217",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "kinematic_constraints/CMakeLists.txt",
+      "sha256": "aa541ec774756a5ef1127b52ae837d41cf440563bfc4930c9bc09616dafdf2dd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "kinematics_base/CMakeLists.txt",
+      "sha256": "2ee4cfaec9eec673355a12c4ddb3494e9aa1144a5fad8c19537bf4d817983a31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "kinematics_metrics/CMakeLists.txt",
+      "sha256": "75947c63d20eb98cb9b8398ea68a56041dc106570e030dbc7b35e69c5176a371",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "macros/CMakeLists.txt",
+      "sha256": "812dceda0707d665426379123ea30c3d29c63d1885e316338d533175259d1e31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "55b8e3f287649a565029fc46a4c146e3605b5531351596c7bfc5fb783b4fed1f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "planning_interface/CMakeLists.txt",
+      "sha256": "65b255c72c6160928112fb5ca53fcf0afdd7b43de916dfdc130906b0344a408d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "planning_request_adapter/CMakeLists.txt",
+      "sha256": "e27c039226874115c702ec1139f349af5c114bfe09772de4e4412ec1f6614225",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "planning_scene/CMakeLists.txt",
+      "sha256": "a6c93bef89930221df477d5132b1286d32bc5804066506b78e546ce6322d2906",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "profiler/CMakeLists.txt",
+      "sha256": "a3970d1ce6aed68f9d328935cc4ebb4a69f340c32cf42feb37339b39ae5802a8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/CMakeLists.txt",
+      "sha256": "2ecba13f2bb02f63a899b78c5857234fc54010d05af18c70cea1b0499b3d7951",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/__init__.py",
+      "sha256": "c09ec7a3cd2366e00a591bf6faf0b4344edcd67f8b30b9b6f10af2480a2f92e5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/__init__.py",
+      "sha256": "9e182cb7e317aec7559dc5f30703df9611be0ccc6e6d31fc42347c20a42cf5a5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/collision_detection/__init__.py",
+      "sha256": "157d312f9b9e92750077c5de3fe21258e3a8bc6a25a9dca3e8d71f5ec878ad1e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/kinematic_constraints/__init__.py",
+      "sha256": "46db43f01300f60ff432fd1e195aa47f68f65e672c681057896320851292aa08",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/planning_scene/__init__.py",
+      "sha256": "58493cb34122c3d02ce0a592b1c0dba2f338b486725d54b3c9762f6aa513af8b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/robot_model/__init__.py",
+      "sha256": "0d624ebc1cf54d7eb3beb06b5cea82bf440a7538a9e0156961f34e218e8a5162",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/robot_state/__init__.py",
+      "sha256": "e5e078cf5d997f747fa1f17d5665430ab58a640d484dd0c5cdc4b681be309f83",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/src/moveit/core/transforms/__init__.py",
+      "sha256": "9158bba0f15f6d9d4e4efa86ddd3f5158bf81396e3b2ebe55fc259cab4f4d7fa",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "python/tools/CMakeLists.txt",
+      "sha256": "1f4d53fd29db2f50dc1fde0da634316a3bcdac4c8dc03924dd5e1c39e9ad0337",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "eefc53a79e00bb2b5732e70de733a43b1790c131c6d24e4d5d65e8f6564c9711",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robot_model/CMakeLists.txt",
+      "sha256": "3c8a6a0c2c9364b3309fe63862a71d14a5cf5897cbfd204b5b1d0ca4e96ecb61",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robot_state/CMakeLists.txt",
+      "sha256": "f86b3eeb3003864bd414f569caea7eef16cc2ef62d50213fea75e844ed1b7941",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "robot_trajectory/CMakeLists.txt",
+      "sha256": "8ed14feae3f9059ffc6aca102c01e14e69ced98e3681414a5a84911dfc5973d4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rosdoc.yaml",
+      "sha256": "045ff9c23b383b57c169f9ad4f0af5599abb8f698f76b60219fb38d376683813",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "sensor_manager/CMakeLists.txt",
+      "sha256": "812dceda0707d665426379123ea30c3d29c63d1885e316338d533175259d1e31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "setup.py",
+      "sha256": "1fe01ee71cd27609639e6df4628fb07e08390e517625d961c58fc43841bfc98e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "trajectory_processing/CMakeLists.txt",
+      "sha256": "0e17d70565ba3b1c8e28232fd47d15d5b800f9407e2bc21eda2bff9397d57c90",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "transforms/CMakeLists.txt",
+      "sha256": "2614f13312369e690bca73f4bd2ac1aeba820dd99862640b9998cd2efee4f60b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "utils/CMakeLists.txt",
+      "sha256": "bd4336a025e8f54a6a566f840f40b5e020876ec98364eff0be9ccb1ac75dba8e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "version/CMakeLists.txt",
+      "sha256": "073145773f130d1869191baa0f6095be9d341c8770e884a2575fb09c21be06ba",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "version/version.cmake",
+      "sha256": "340bdf498f428960ff2d719bf9522dbed78513ceafa828474cd83bc076b7b5a4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

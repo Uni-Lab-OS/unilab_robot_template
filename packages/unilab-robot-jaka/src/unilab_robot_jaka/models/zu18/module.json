@@ -1,0 +1,710 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "jaka",
+  "model": "zu18",
+  "title": "JAKA Zu18｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "7b9477df-f4a3-561c-8d82-b6b5c1b91321",
+    "package_digest": "5ef87b702de38436355efe6ccbbc7f37daecc0446b36836a12688b5fac4cb474",
+    "package_path": "04_设备/jaka/zu18__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7b9477df-f4a3-561c-8d82-b6b5c1b91321",
+      "package_digest": "5ef87b702de38436355efe6ccbbc7f37daecc0446b36836a12688b5fac4cb474",
+      "package_path": "04_设备/jaka/zu18__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "Zu18",
+              "source": "robots/models/JAKA-Zu18.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "Zu 18",
+              "source": "Components/JAKA/Robots/Zu 18.vcmx",
+              "source_family": "VC",
+              "value": 18.0
+            },
+            {
+              "model": "Zu18",
+              "source": "robots/models/JAKA-Zu18.robot",
+              "source_family": "RoboDK",
+              "value": 18.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 18.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "Zu 18",
+              "source": "Components/JAKA/Robots/Zu 18.vcmx",
+              "source_family": "VC",
+              "value": 1073.0
+            },
+            {
+              "model": "Zu18",
+              "source": "robots/models/JAKA-Zu18.robot",
+              "source_family": "RoboDK",
+              "value": 1073.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1073.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          90.0,
+          90.0,
+          180.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -85.0,
+          -175.0,
+          -85.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            142.65
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            510.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            400.0,
+            -3.141592653589793,
+            -154.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            115.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            103.5
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          265.0,
+          175.0,
+          265.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "6bc725d7-f4fb-5526-96ed-626d0fbd1d62",
+              "entrypoints": {
+                "usd": "simready_usd/zu_18__r001.usdc"
+              },
+              "package_digest": "86def93506fd8f6bb59d1e3e55a97da4b0ac966049d382196dd98c1eb3c1172b",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "633a1662df5807bd72f7160f44a927e617b4b28c82f0d140782ca5eb0a363c25",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "6aa4a72f1960415d05700b7ac6dd1c27e81396693814150b9cb7f7517231b3bc",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "6bc725d7-f4fb-5526-96ed-626d0fbd1d62"
+          ],
+          "manufacturer": "JAKA",
+          "name": "Zu 18",
+          "original": {
+            "family": "VC",
+            "original_name": "Zu 18.vcmx",
+            "path": "simready_usd/source_assets/VC/0_zu_18/Zu 18.vcmx",
+            "sha256": "633a1662df5807bd72f7160f44a927e617b4b28c82f0d140782ca5eb0a363c25"
+          },
+          "path": "Components/JAKA/Robots/Zu 18.vcmx",
+          "payload": "18",
+          "reach": "1073",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "b8511eeb-7166-4ffa-9e07-657fdfbfdde5"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "9b2e90c7-449b-505b-b5d1-102f35e2797f",
+              "entrypoints": {
+                "usd": "simready_usd/zu18__r001.usdc"
+              },
+              "package_digest": "dc2900a6f62206180b9af678cb86ae0a5b96384ab39ce0156b4eae09382fed49",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    90.0,
+                    90.0,
+                    180.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -85.0,
+                    -175.0,
+                    -85.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      142.65
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      510.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      400.0,
+                      -3.141592653589793,
+                      -154.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      115.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      103.5
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    265.0,
+                    175.0,
+                    265.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "d470e6e6571d3b336ba64e3b96f82f8cbe4624e2a400f00509d351503eb39887",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "JAKA Zu18",
+          "family": "RoboDK",
+          "library_assets": [
+            "9b2e90c7-449b-505b-b5d1-102f35e2797f"
+          ],
+          "manufacturer": "JAKA",
+          "name": "Zu18",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "JAKA-Zu18.robot",
+            "path": "simready_usd/JAKA-Zu18.robot",
+            "sha256": "3ca85159aecf9a9b7d9dcb18e48c3ae2b39f4ee9f4eacc957ad76b6ac6dd8990"
+          },
+          "path": "robots/models/JAKA-Zu18.robot",
+          "payload": 18,
+          "reach": 1073,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "d470e6e6571d3b336ba64e3b96f82f8cbe4624e2a400f00509d351503eb39887",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/zu18__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "JAKA Zu18｜多源合并",
+          "id": "merged_robot_7b9477df_f4a3_561c_8d82_b6b5c1b91321",
+          "metadata": {
+            "asset_id": "7b9477df-f4a3-561c-8d82-b6b5c1b91321",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:JakaDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/JakaDriver.py",
+        "sha256": "f80405541ed4dbf91e482806f1be1d7cbdc8c4849b811972b2a43e0250dcc6e3",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/JakaDriver.pyc",
+            "sha256": "e1f1fc125c01726fd48a086c474385246ee220fb9caeccb8c49d3db2ae4040e3"
+          },
+          {
+            "relative_path": "api/Robot/v311/JakaDriver.pyc",
+            "sha256": "0c3a4d48d85d425498c204b0c629bc3ecf497b1c00d5c2656870efd12bb1f61a"
+          },
+          {
+            "relative_path": "api/Robot/v312/JakaDriver.pyc",
+            "sha256": "4cf715ccdb37a8a3d318d68d90b4294fdf9a75c8ffb2de6b0c5780b03869fe64"
+          },
+          {
+            "relative_path": "api/Robot/v38/JakaDriver.pyc",
+            "sha256": "7984b4d75dcd785366f31c81cccb23225f8998e4aff6ba5e6cd51735dbc30f4b"
+          },
+          {
+            "relative_path": "api/Robot/v39/JakaDriver.pyc",
+            "sha256": "01e3084e8db7f69c9d15332bde75a13886895d45cb6937406b979223460e0660"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "jaka controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apijaka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apijaka.py",
+        "sha256": "d783fc02cc213de91b8dc16aa1e5212878f4c1ea71c18428866dc9e83529c264",
+        "bytes": 1342,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apijaka.pyc",
+            "sha256": "3e86bba3660038451261ec5fe37ba3e859c1c839fd4c031d1293b43cfa2e7f0f"
+          },
+          {
+            "relative_path": "api/Robot/v311/apijaka.pyc",
+            "sha256": "ff14ce1412bad9e225a0dcc27cff1e84e5e84b879626b08a3055b5c3fb92771b"
+          },
+          {
+            "relative_path": "api/Robot/v312/apijaka.pyc",
+            "sha256": "bbc983476be381259b90d016c7d37fccae56b7cee010f4666270cea628cba4f0"
+          },
+          {
+            "relative_path": "api/Robot/v38/apijaka.pyc",
+            "sha256": "9eb5ab3caaefade998142af6d6637ef9cc2fcee4f9370b728501f5192246f98a"
+          },
+          {
+            "relative_path": "api/Robot/v39/apijaka.pyc",
+            "sha256": "cd9c39f32141e96e4793c559586147d2fcc20a4d4fb53558a58aeb4867798642"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "jaka controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "JAKA.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/jaka/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/jaka/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/jaka/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "JAKA-Zu18.robot",
+        "path": "simready_usd/JAKA-Zu18.robot",
+        "sha256": "3ca85159aecf9a9b7d9dcb18e48c3ae2b39f4ee9f4eacc957ad76b6ac6dd8990"
+      },
+      {
+        "family": "VC",
+        "original_name": "Zu 18.vcmx",
+        "path": "simready_usd/source_assets/VC/0_zu_18/Zu 18.vcmx",
+        "sha256": "633a1662df5807bd72f7160f44a927e617b4b28c82f0d140782ca5eb0a363c25"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "jaka",
+        "zu18"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "9b2e90c7-449b-505b-b5d1-102f35e2797f",
+        "original_package_digest": "dc2900a6f62206180b9af678cb86ae0a5b96384ab39ce0156b4eae09382fed49",
+        "source": "robots/models/JAKA-Zu18.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "otc",
+  "model": "fdv6l",
+  "title": "Daihen OTC FD-V6L｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "f7651b6b-cb74-56d1-880b-a7daf6970195",
+    "package_digest": "3b27a6a4f3f480131e7afbac82981f595379e66acdcbefa9720ab34439159727",
+    "package_path": "04_设备/otc_daihen/fdv6l__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f7651b6b-cb74-56d1-880b-a7daf6970195",
+      "package_digest": "3b27a6a4f3f480131e7afbac82981f595379e66acdcbefa9720ab34439159727",
+      "package_path": "04_设备/otc_daihen/fdv6l__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "FD-V6L",
+              "source": "robots/models/Daihen-OTC-FD-V6L.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "FD-V6L",
+              "source": "robots/models/Daihen-OTC-FD-V6L.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            },
+            {
+              "model": "FD-V6L",
+              "source": "Components/OTC Daihen/Robots/FD-V6L.vcmx",
+              "source_family": "VC",
+              "value": 6.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 6.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "FD-V6L",
+              "source": "robots/models/Daihen-OTC-FD-V6L.robot",
+              "source_family": "RoboDK",
+              "value": 2006.0
+            },
+            {
+              "model": "FD-V6L",
+              "source": "Components/OTC Daihen/Robots/FD-V6L.vcmx",
+              "source_family": "VC",
+              "value": 2005.9999999999998
+            }
+          ],
+          "comparison": {
+            "absolute_tolerance": 1e-12,
+            "relative_tolerance": 1e-12,
+            "scope": "Floating representation only; not engineering rounding or manufacturer verification"
+          },
+          "status": "source_agreement_numeric_precision",
+          "unit": "mm",
+          "value": 2005.9999999999998
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -65.0,
+          -80.0,
+          -180.0,
+          -140.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            525.0
+          ],
+          [
+            -1.5707963267948966,
+            185.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            760.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            0.0,
+            1050.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            100.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          190.0,
+          350.0,
+          180.0,
+          140.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "66f712fe-40d8-5f77-9b53-e28082eb7c7a",
+              "entrypoints": {
+                "usd": "simready_usd/fd-v6l__r001.usdc"
+              },
+              "package_digest": "b5eb50551e219b8af862f421d3e3cc429ad959f3276695893a7dd58d08e9c047",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -65.0,
+                    -80.0,
+                    -180.0,
+                    -140.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      525.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      185.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      760.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      150.0,
+                      0.0,
+                      1050.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      100.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    190.0,
+                    350.0,
+                    180.0,
+                    140.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "5a47371cc747cfaf5703e68c83db09860142c40f8977136dfd8cef025efbaeac",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Daihen OTC FD-V6L",
+          "family": "RoboDK",
+          "library_assets": [
+            "66f712fe-40d8-5f77-9b53-e28082eb7c7a"
+          ],
+          "manufacturer": "OTC Daihen",
+          "name": "FD-V6L",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Daihen-OTC-FD-V6L.robot",
+            "path": "simready_usd/Daihen-OTC-FD-V6L.robot",
+            "sha256": "afe37710800ff93fb758db4c9751f860d6f966aca27ba687649023923d776138"
+          },
+          "path": "robots/models/Daihen-OTC-FD-V6L.robot",
+          "payload": 6,
+          "reach": 2006,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "OTC Daihen",
+          "name": "FD-V6L",
+          "original": {
+            "family": "VC",
+            "original_name": "FD-V6L.vcmx",
+            "path": "simready_usd/source_assets/VC/0_fd-v6l/FD-V6L.vcmx",
+            "sha256": "4e295bdecbb95f912b18da2533b46bb14f75ec39bceea44b0628da267fb879de"
+          },
+          "path": "Components/OTC Daihen/Robots/FD-V6L.vcmx",
+          "payload": "6",
+          "reach": "2005.9999999999998",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "dba75260-9757-4337-9000-75192a2f6348"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5a47371cc747cfaf5703e68c83db09860142c40f8977136dfd8cef025efbaeac",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/fdv6l__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Daihen OTC FD-V6L｜多源合并",
+          "id": "merged_robot_f7651b6b_cb74_56d1_880b_a7daf6970195",
+          "metadata": {
+            "asset_id": "f7651b6b-cb74-56d1-880b-a7daf6970195",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "OTC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Daihen-OTC-FD-V6L.robot",
+        "path": "simready_usd/Daihen-OTC-FD-V6L.robot",
+        "sha256": "afe37710800ff93fb758db4c9751f860d6f966aca27ba687649023923d776138"
+      },
+      {
+        "family": "VC",
+        "original_name": "FD-V6L.vcmx",
+        "path": "simready_usd/source_assets/VC/0_fd-v6l/FD-V6L.vcmx",
+        "sha256": "4e295bdecbb95f912b18da2533b46bb14f75ec39bceea44b0628da267fb879de"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "FD-V6L",
+                "source": "robots/models/Daihen-OTC-FD-V6L.robot",
+                "source_family": "RoboDK",
+                "value": 2006.0
+              },
+              {
+                "model": "FD-V6L",
+                "source": "Components/OTC Daihen/Robots/FD-V6L.vcmx",
+                "source_family": "VC",
+                "value": 2005.9999999999998
+              }
+            ],
+            "comparison": {
+              "absolute_tolerance": 1e-12,
+              "relative_tolerance": 1e-12,
+              "scope": "Floating representation only; not engineering rounding or manufacturer verification"
+            },
+            "status": "source_agreement_numeric_precision",
+            "unit": "mm",
+            "value": 2005.9999999999998
+          },
+          "field": "reach",
+          "resolution": "source_agreement_numeric_precision",
+          "values": [
+            2005.9999999999998,
+            2006.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "otcdaihen",
+        "fdv6l"
+      ],
+      "label": "RoboDK+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "66f712fe-40d8-5f77-9b53-e28082eb7c7a",
+        "original_package_digest": "b5eb50551e219b8af862f421d3e3cc429ad959f3276695893a7dd58d08e9c047",
+        "source": "robots/models/Daihen-OTC-FD-V6L.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

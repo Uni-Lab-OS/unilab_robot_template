@@ -1,0 +1,922 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "dobot",
+  "model": "cr3",
+  "title": "Dobot CR3｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "889c307f-7d62-50bf-be63-9ce4eeb1c5bb",
+    "package_digest": "5090faf90cffe5b6ca17ce4fcdb5ee14d93daaf4278248e84553ba8a9301bb6b",
+    "package_path": "04_设备/dobot/cr3__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "889c307f-7d62-50bf-be63-9ce4eeb1c5bb",
+      "package_digest": "5090faf90cffe5b6ca17ce4fcdb5ee14d93daaf4278248e84553ba8a9301bb6b",
+      "package_path": "04_设备/dobot/cr3__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "CR3",
+              "source": "robots/models/Dobot-CR3.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "CR3",
+              "source": "Components/Dobot/Robots/CR3.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "CR3",
+              "source": "robots/models/Dobot-CR3.robot",
+              "source_family": "RoboDK",
+              "value": 3.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 3.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "CR3",
+              "source": "Components/Dobot/Robots/CR3.vcmx",
+              "source_family": "VC",
+              "value": 620.0
+            },
+            {
+              "model": "CR3",
+              "source": "robots/models/Dobot-CR3.robot",
+              "source_family": "RoboDK",
+              "value": 620.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 620.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          90.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -155.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            134.8
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            274.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            230.0,
+            -1.5707963267948966,
+            128.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            116.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            105.0
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          155.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "da58681e-4b51-5d85-a5b6-cfb5e19dfdf5",
+              "entrypoints": {
+                "usd": "simready_usd/cr3__款2__r001.usda"
+              },
+              "package_digest": "ff917c9f3b8a3a71e975dd03698dd3e7bb5802420e6ebcce7a125681d56dff46",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "ba9d89e956a09aec300a59469b2c6dd3b15feda1eea7d93f831fcde41d5b5a40",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "da58681e-4b51-5d85-a5b6-cfb5e19dfdf5"
+          ],
+          "manufacturer": "Dobot",
+          "name": "CR3",
+          "original": {
+            "family": "VC",
+            "original_name": "CR3.vcmx",
+            "path": "simready_usd/source_assets/VC/0_cr3/CR3.vcmx",
+            "sha256": "878b2834035bce6442b550bf5daef8c5054fe212427d0b74ca6326ced6a229fc"
+          },
+          "path": "Components/Dobot/Robots/CR3.vcmx",
+          "payload": "3",
+          "reach": "620",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "0405a25d-30de-4d57-af6e-845240d964ec"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "eafc06f0-55c4-5169-b72c-e8f1e187e5dd",
+              "entrypoints": {
+                "usd": "simready_usd/cr3__r001.usda"
+              },
+              "package_digest": "0b357e50863fc03bd2b9d046611d463abd9fb305c77ef33e962ceba9aa16a0bc",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 3.141592653589793,
+                  "home": [
+                    0.0,
+                    0.0,
+                    -90.0,
+                    90.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -155.0,
+                    -360.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      134.8
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      274.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      230.0,
+                      -1.5707963267948966,
+                      128.3
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      116.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      105.0
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    155.0,
+                    360.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "drive:angular:physics:damping",
+                    "drive:angular:physics:maxForce",
+                    "drive:angular:physics:stiffness",
+                    "drive:angular:physics:targetPosition",
+                    "drive:angular:physics:targetVelocity",
+                    "drive:angular:physics:type",
+                    "physics:approximation",
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:centerOfMass",
+                    "physics:collisionEnabled",
+                    "physics:diagonalInertia",
+                    "physics:jointEnabled",
+                    "physics:kinematicEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:mass",
+                    "physics:principalAxes",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "c2d65744a2586fa385102de207cca91502bfcdcacff32a625c5ab93e5668a68f",
+                  "usd_authored": {
+                    "collision_api": 7,
+                    "enabled_joints": 7,
+                    "enabled_rigid_bodies": 7,
+                    "joints": 7,
+                    "mass_api": 7,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Dobot CR3",
+          "family": "RoboDK",
+          "library_assets": [
+            "eafc06f0-55c4-5169-b72c-e8f1e187e5dd"
+          ],
+          "manufacturer": "Dobot",
+          "name": "CR3",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Dobot-CR3.robot",
+            "path": "simready_usd/Dobot-CR3.robot",
+            "sha256": "5289dd5e24af6d9f75878c79f8c6671c37b00d6cec924e5dad096c850c1219c9"
+          },
+          "path": "robots/models/Dobot-CR3.robot",
+          "payload": 3,
+          "reach": 620,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "dobot",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "cr3",
+          "original": {
+            "family": "UniLab",
+            "original_name": "cr3_robot.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_cr3_robot/cr3_robot.xacro",
+            "sha256": "96f86b45861cfc54086f7a37389fb157ce0cace2908d015a87f31ac33de696e6"
+          },
+          "path": "dobot/ros2_v4/cra_description/urdf/cr3_robot.xacro",
+          "raw_name": "cr3_robot.xacro",
+          "robot_description": {
+            "commit": "37730d08b08c74061ae10d4fa5565b4c4c914885",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "base_link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.00230818905212046 -0.000732843557555838 0.028289656612971\" rpy=\"0 0 0\" />\n      <mass value=\"0.648931294984644\" />\n      <inertia ixx=\"0.000749921651777976\" ixy=\"4.21801992495725E-08\" ixz=\"1.27081371753695E-06\" iyy=\"0.000839640950438419\" iyz=\"1.61611917342073E-07\" izz=\"0.00112778981497252\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link1",
+                    "xml": "<inertial>\n      <origin xyz=\"-3.67781721123111E-05 -0.00394376486631129 0.00364267890020981\" rpy=\"0 0 0\" />\n      <mass value=\"1.31115064359517\" />\n      <inertia ixx=\"0.00319192385509536\" ixy=\"-1.81661180744991E-06\" ixz=\"-3.59316770697547E-07\" iyy=\"0.00307821666880085\" iyz=\"-1.88925967107205E-05\" izz=\"0.00190896903282013\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link2",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.129228226099202 1.43480420269969E-05 0.133174339594273\" rpy=\"0 0 0\" />\n      <mass value=\"3.40049600294342\" />\n      <inertia ixx=\"0.00665284748175434\" ixy=\"1.79448081220597E-06\" ixz=\"0.000635378334498705\" iyy=\"0.0177342976210456\" iyz=\"3.48633745916203E-07\" izz=\"0.0150462633110018\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link3",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.121267841067619 -5.95979094526938E-07 0.0103431444175778\" rpy=\"0 0 0\" />\n      <mass value=\"2.18803928124499\" />\n      <inertia ixx=\"0.0031393454782363\" ixy=\"2.60060285754048E-07\" ixz=\"-0.000151120131479005\" iyy=\"0.0236694689770697\" iyz=\"3.67396297009222E-08\" izz=\"0.0225795743545604\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link4",
+                    "xml": "<inertial>\n      <origin xyz=\"1.66290133222139E-07 0.00345100795834197 -0.00287330777509653\" rpy=\"0 0 0\" />\n      <mass value=\"0.842219175919104\" />\n      <inertia ixx=\"0.00173365879213697\" ixy=\"-4.56469972647882E-09\" ixz=\"-4.71044121344451E-10\" iyy=\"0.000822485798327018\" iyz=\"-9.31644060918737E-06\" izz=\"0.00169454892249307\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link5",
+                    "xml": "<inertial>\n      <origin xyz=\"1.66833832862591E-08 -0.00612503201462095 -0.00127182253112346\" rpy=\"0 0 0\" />\n      <mass value=\"0.741136954868999\" />\n      <inertia ixx=\"0.00212858333835282\" ixy=\"-3.05116516563277E-08\" ixz=\"1.84588350647225E-08\" iyy=\"0.000739514141681889\" iyz=\"5.38479499117246E-05\" izz=\"0.00208815449098071\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link6",
+                    "xml": "<inertial>\n      <origin xyz=\"4.94378411169622E-11 9.37632286146517E-05 -0.019285436425589\" rpy=\"0 0 0\" />\n      <mass value=\"0.157885369717385\" />\n      <inertia ixx=\"7.94006759268347E-05\" ixy=\"4.66210912267001E-15\" ixz=\"2.94413427013248E-14\" iyy=\"7.91691792019657E-05\" iyz=\"-9.61313747365421E-08\" izz=\"0.000130860179835048\" />\n    </inertial>\n    "
+                  }
+                ],
+                "joints": [
+                  "<joint name=\"world_joint\" type=\"fixed\">\n    <origin xyz=\"0 0 0.03\" rpy=\"0 0 0\" />\n    <parent link=\"world\" />\n    <child link=\"dummy_link\" />\n  </joint>\n\n  ",
+                  "<joint name=\"dummy_joint\" type=\"fixed\">\n      <parent link=\"dummy_link\" />\n      <child link=\"base_link\" />\n    </joint>\n\n  ",
+                  "<joint name=\"joint1\" type=\"revolute\">\n    <origin xyz=\"0 0 0.1348\" rpy=\"0 0 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"Link1\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint2\" type=\"revolute\">\n    <origin xyz=\"0 0 0\" rpy=\"1.5708 1.5708 0\" />\n    <parent link=\"Link1\" />\n    <child link=\"Link2\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint3\" type=\"revolute\">\n    <origin xyz=\"-0.274 0 0\" rpy=\"0 0 0\" />\n    <parent link=\"Link2\" />\n    <child link=\"Link3\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-2.7039\" upper=\"2.7039\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint4\" type=\"revolute\">\n    <origin xyz=\"-0.23 0 0.1283\" rpy=\"0 0 -1.5708\" />\n    <parent link=\"Link3\" />\n    <child link=\"Link4\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint5\" type=\"revolute\">\n    <origin xyz=\"0 -0.116 0\" rpy=\"1.5708 0 0\" />\n    <parent link=\"Link4\" />\n    <child link=\"Link5\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint6\" type=\"revolute\">\n    <origin xyz=\"0 0.105 0\" rpy=\"-1.5708 0 0\" />\n    <parent link=\"Link5\" />\n    <child link=\"Link6\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n    ",
+                  "<joint name=\"joint1\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        ",
+                  "<joint name=\"joint2\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        ",
+                  "<joint name=\"joint3\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        ",
+                  "<joint name=\"joint4\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        ",
+                  "<joint name=\"joint5\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        ",
+                  "<joint name=\"joint6\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n    "
+                ],
+                "path": "dobot/ros2_v4/cra_description/urdf/cr3_robot.xacro",
+                "transmissions_and_control": [
+                  "<gazebo reference=\"base_link\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link1\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link2\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link3\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link4\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link5\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo>\n    ",
+                  "<gazebo reference=\"Link6\">\n        <gravity>false</gravity>\n        <selfCollide>true</selfCollide>\n    </gazebo> \n    \n    ",
+                  "<gazebo>\n        <plugin filename=\"libgazebo_ros2_control.so\" name=\"gazebo_ros2_control\">\n            <parameters>$(find cr3_moveit)/config/ros2_controllers.yaml</parameters>\n            <robot_param_node>robot_state_publisher</robot_param_node>\n        </plugin>\n    </gazebo>\n\n",
+                  "<ros2_control name=\"GazeboSystem\" type=\"system\">\n        <hardware>\n            <plugin>gazebo_ros2_control/GazeboSystem</plugin>\n        </hardware>\n        <joint name=\"joint1\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        <joint name=\"joint2\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        <joint name=\"joint3\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        <joint name=\"joint4\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        <joint name=\"joint5\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n        <joint name=\"joint6\">\n            <command_interface name=\"position\">\n                <param name=\"min\">-1</param>\n                <param name=\"max\">1</param>\n            </command_interface>\n            <state_interface name=\"position\">\n                <param name=\"initial_value\">0.0</param>\n            </state_interface>\n            <state_interface name=\"velocity\" />\n        </joint>\n    </ros2_control>\n\n    "
+                ],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [
+              {
+                "reason": "missing or outside source root",
+                "source": "D:\\Design_projects\\Lab-OS-Testbed\\repos\\uni-lab-assets\\robots\\dobot\\ros2_v4\\cra_description\\urdf\\libgazebo_ros2_control.so"
+              }
+            ],
+            "repository": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "dobot",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "cr3",
+          "original": {
+            "family": "UniLab",
+            "original_name": "cr3_robot.urdf",
+            "path": "simready_usd/source_assets/UniLab/1_cr3_robot/cr3_robot.urdf",
+            "sha256": "b1a254bb8e0ac3c2e2b1c202555679607a2a929450f12ff1e2f98202dcd259f1"
+          },
+          "path": "dobot/ros2_v4/dobot_rviz/urdf/cr3_robot.urdf",
+          "raw_name": "cr3_robot.urdf",
+          "robot_description": {
+            "commit": "37730d08b08c74061ae10d4fa5565b4c4c914885",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "base_link",
+                    "xml": "<inertial>\n      <origin xyz=\"0.00230818905212046 -0.000732843557555838 0.028289656612971\" rpy=\"0 0 0\" />\n      <mass value=\"0.648931294984644\" />\n      <inertia ixx=\"0.000749921651777976\" ixy=\"4.21801992495725E-08\" ixz=\"1.27081371753695E-06\" iyy=\"0.000839640950438419\" iyz=\"1.61611917342073E-07\" izz=\"0.00112778981497252\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link1",
+                    "xml": "<inertial>\n      <origin xyz=\"-3.67781721123111E-05 -0.00394376486631129 0.00364267890020981\" rpy=\"0 0 0\" />\n      <mass value=\"1.31115064359517\" />\n      <inertia ixx=\"0.00319192385509536\" ixy=\"-1.81661180744991E-06\" ixz=\"-3.59316770697547E-07\" iyy=\"0.00307821666880085\" iyz=\"-1.88925967107205E-05\" izz=\"0.00190896903282013\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link2",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.129228226099202 1.43480420269969E-05 0.133174339594273\" rpy=\"0 0 0\" />\n      <mass value=\"3.40049600294342\" />\n      <inertia ixx=\"0.00665284748175434\" ixy=\"1.79448081220597E-06\" ixz=\"0.000635378334498705\" iyy=\"0.0177342976210456\" iyz=\"3.48633745916203E-07\" izz=\"0.0150462633110018\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link3",
+                    "xml": "<inertial>\n      <origin xyz=\"-0.121267841067619 -5.95979094526938E-07 0.0103431444175778\" rpy=\"0 0 0\" />\n      <mass value=\"2.18803928124499\" />\n      <inertia ixx=\"0.0031393454782363\" ixy=\"2.60060285754048E-07\" ixz=\"-0.000151120131479005\" iyy=\"0.0236694689770697\" iyz=\"3.67396297009222E-08\" izz=\"0.0225795743545604\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link4",
+                    "xml": "<inertial>\n      <origin xyz=\"1.66290133222139E-07 0.00345100795834197 -0.00287330777509653\" rpy=\"0 0 0\" />\n      <mass value=\"0.842219175919104\" />\n      <inertia ixx=\"0.00173365879213697\" ixy=\"-4.56469972647882E-09\" ixz=\"-4.71044121344451E-10\" iyy=\"0.000822485798327018\" iyz=\"-9.31644060918737E-06\" izz=\"0.00169454892249307\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link5",
+                    "xml": "<inertial>\n      <origin xyz=\"1.66833832862591E-08 -0.00612503201462095 -0.00127182253112346\" rpy=\"0 0 0\" />\n      <mass value=\"0.741136954868999\" />\n      <inertia ixx=\"0.00212858333835282\" ixy=\"-3.05116516563277E-08\" ixz=\"1.84588350647225E-08\" iyy=\"0.000739514141681889\" iyz=\"5.38479499117246E-05\" izz=\"0.00208815449098071\" />\n    </inertial>\n    "
+                  },
+                  {
+                    "link": "Link6",
+                    "xml": "<inertial>\n      <origin xyz=\"4.94378411169622E-11 9.37632286146517E-05 -0.019285436425589\" rpy=\"0 0 0\" />\n      <mass value=\"0.157885369717385\" />\n      <inertia ixx=\"7.94006759268347E-05\" ixy=\"4.66210912267001E-15\" ixz=\"2.94413427013248E-14\" iyy=\"7.91691792019657E-05\" iyz=\"-9.61313747365421E-08\" izz=\"0.000130860179835048\" />\n    </inertial>\n    "
+                  }
+                ],
+                "joints": [
+                  "<joint name=\"dummy_joint\" type=\"fixed\">\n      <parent link=\"dummy_link\" />\n      <child link=\"base_link\" />\n    </joint>\n\n  ",
+                  "<joint name=\"joint1\" type=\"revolute\">\n    <origin xyz=\"0 0 0.1348\" rpy=\"0 0 0\" />\n    <parent link=\"base_link\" />\n    <child link=\"Link1\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint2\" type=\"revolute\">\n    <origin xyz=\"0 0 0\" rpy=\"1.5708 1.5708 0\" />\n    <parent link=\"Link1\" />\n    <child link=\"Link2\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint3\" type=\"revolute\">\n    <origin xyz=\"-0.274 0 0\" rpy=\"0 0 0\" />\n    <parent link=\"Link2\" />\n    <child link=\"Link3\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-2.7039\" upper=\"2.7039\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint4\" type=\"revolute\">\n    <origin xyz=\"-0.23 0 0.1283\" rpy=\"0 0 -1.5708\" />\n    <parent link=\"Link3\" />\n    <child link=\"Link4\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint5\" type=\"revolute\">\n    <origin xyz=\"0 -0.116 0\" rpy=\"1.5708 0 0\" />\n    <parent link=\"Link4\" />\n    <child link=\"Link5\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n  ",
+                  "<joint name=\"joint6\" type=\"revolute\">\n    <origin xyz=\"0 0.105 0\" rpy=\"-1.5708 0 0\" />\n    <parent link=\"Link5\" />\n    <child link=\"Link6\" />\n    <axis xyz=\"0 0 1\" />\n    <limit lower=\"-6.28\" upper=\"6.28\" effort=\"0\" velocity=\"0\" />\n  </joint>\n"
+                ],
+                "path": "dobot/ros2_v4/dobot_rviz/urdf/cr3_robot.urdf",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "drive:angular:physics:damping",
+          "drive:angular:physics:maxForce",
+          "drive:angular:physics:stiffness",
+          "drive:angular:physics:targetPosition",
+          "drive:angular:physics:targetVelocity",
+          "drive:angular:physics:type",
+          "physics:approximation",
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:centerOfMass",
+          "physics:collisionEnabled",
+          "physics:diagonalInertia",
+          "physics:jointEnabled",
+          "physics:kinematicEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:mass",
+          "physics:principalAxes",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c2d65744a2586fa385102de207cca91502bfcdcacff32a625c5ab93e5668a68f",
+        "usd_authored": {
+          "collision_api": 7,
+          "enabled_joints": 7,
+          "enabled_rigid_bodies": 7,
+          "joints": 7,
+          "mass_api": 7,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/cr3__多源合并_r002.usda"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Dobot CR3｜多源合并",
+          "id": "merged_robot_889c307f_7d62_50bf_be63_9ce4eeb1c5bb",
+          "metadata": {
+            "asset_id": "889c307f-7d62-50bf-be63-9ce4eeb1c5bb",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DobotV3Driver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DobotV3Driver.py",
+        "sha256": "c5ae6004a3fa5fc7871d5560010e1994085c93b1ff6b5a28af0ffa32399224a4",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DobotV3Driver.pyc",
+            "sha256": "ad0eab928f13c88e1986302c4931fdf8218bd575c0f90c4460be88ab3817ba4f"
+          },
+          {
+            "relative_path": "api/Robot/v311/DobotV3Driver.pyc",
+            "sha256": "a7e4b26b1b6f8e1638f0dfdf64ba803bd71dae282fdd948af76259a9e1453b9b"
+          },
+          {
+            "relative_path": "api/Robot/v312/DobotV3Driver.pyc",
+            "sha256": "e232921ee6786c3202cd2f42411d9db822de273cbf5e25d743f6c2221f010c3e"
+          },
+          {
+            "relative_path": "api/Robot/v38/DobotV3Driver.pyc",
+            "sha256": "4858fb2951f525ee30ac1a058daf6a2ae471c4a9671fa1c52f2fc6ea705412e3"
+          },
+          {
+            "relative_path": "api/Robot/v39/DobotV3Driver.pyc",
+            "sha256": "8570047122fd651daf91c406b7b33933bc9c379ff51b778c8568917555a54d45"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Dobot V3"
+        ],
+        "constraints": [
+          "CR/Nova V3 family; controller generation must be confirmed",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Dobot.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Dobot_Magician.py",
+      "Dobot_MG400.py",
+      "Dobot_V3.py",
+      "Dobot_V4.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "DobotV4Driver.py",
+        "reason": "CRA/Magician E6 V4 family; do not apply to CR V3"
+      },
+      {
+        "source": "DobotMG400Driver.py",
+        "reason": "MG400/M1 Pro only"
+      },
+      {
+        "source": "DobotDriver.exe",
+        "reason": "Magician controller only"
+      },
+      {
+        "source": "robots/dobot/python_v4",
+        "reason": "V4 CRA/E6 family; CR5 V3 is not covered by this SDK"
+      },
+      {
+        "source": "robots/dobot/ros2_v4",
+        "reason": "V4 CRA/E6 family; CR5 V3 is not covered by this SDK"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [
+      {
+        "id": "cr3_moveit_9f7e2155a5",
+        "status": "exact_name_candidate_not_qualified"
+      }
+    ],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Dobot-CR3.robot",
+        "path": "simready_usd/Dobot-CR3.robot",
+        "sha256": "5289dd5e24af6d9f75878c79f8c6671c37b00d6cec924e5dad096c850c1219c9"
+      },
+      {
+        "family": "VC",
+        "original_name": "CR3.vcmx",
+        "path": "simready_usd/source_assets/VC/0_cr3/CR3.vcmx",
+        "sha256": "878b2834035bce6442b550bf5daef8c5054fe212427d0b74ca6326ced6a229fc"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "cr3_robot.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_cr3_robot/cr3_robot.xacro",
+        "sha256": "96f86b45861cfc54086f7a37389fb157ce0cace2908d015a87f31ac33de696e6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "cr3_robot.urdf",
+        "path": "simready_usd/source_assets/UniLab/1_cr3_robot/cr3_robot.urdf",
+        "sha256": "b1a254bb8e0ac3c2e2b1c202555679607a2a929450f12ff1e2f98202dcd259f1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J6.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J6.STL",
+        "sha256": "a74c427c61b3991d1e05212456e48807b8dc6ba6f1628ebff4c184e60c3e16ea"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J5.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J5.STL",
+        "sha256": "852a94eb9f900da345d77967fad2f927deab777d121a861e0ad7d6f1b91995f7"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J4.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J4.STL",
+        "sha256": "f1ee36bfd9f3e96a4666694df326106a824212f43d9a610b67fce150e0fd3e34"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J3.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J3.STL",
+        "sha256": "24768f47c1ccddedd22bb75f417d2a14503688b6b2416752acd7e5602b52a674"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J2.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J2.STL",
+        "sha256": "1fe1454681fc145c33bcd870995541134635ff604aeb471c047d9b976a707c26"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "J1.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/J1.STL",
+        "sha256": "326d387004613ca07e1113f42b7d9198edd57dd72b03e773859cb50f1cf60dd6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.STL",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/meshes/cr3/base_link.STL",
+        "sha256": "50cb152eda36c45c1a2d24c8e1319ee44cd4f08dde7167e18ef2d38140f5059a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/cra_description/package.xml",
+        "sha256": "07d15bb43d18327112cf0e027d7f82458d2757163b973cb12c3ae684f078d3e3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/dobot/ros2_v4/dobot_rviz/package.xml",
+        "sha256": "6095ef2b48fe25696f636341f27a433375c15761e6daafc0bae09b3c17501fc1"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "dobot",
+        "cr3"
+      ],
+      "label": "VC+RoboDK+UniLab｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "37730d08b08c74061ae10d4fa5565b4c4c914885",
+          "repository": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git",
+          "source": "simready_usd/source_assets/UniLab/0_cr3_robot/cr3_robot.xacro",
+          "status": "dependency_gaps",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "37730d08b08c74061ae10d4fa5565b4c4c914885",
+          "repository": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git",
+          "source": "simready_usd/source_assets/UniLab/1_cr3_robot/cr3_robot.urdf",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "eafc06f0-55c4-5169-b72c-e8f1e187e5dd",
+        "original_package_digest": "0b357e50863fc03bd2b9d046611d463abd9fb305c77ef33e962ceba9aa16a0bc",
+        "source": "robots/models/Dobot-CR3.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK",
+        "UniLab"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

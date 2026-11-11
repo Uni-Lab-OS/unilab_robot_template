@@ -1,0 +1,446 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "jaka",
+  "model": "k1right",
+  "title": "JAKA K1 Right",
+  "asset": {
+    "asset_id": "77d5fc2f-fd6f-51b3-8748-a81b1e6d52fa",
+    "package_digest": "3180f4723669174b0c95aaaf17ce04cd5290116d00b43844217909bc3fce141c",
+    "package_path": "04_设备/jaka/k1_right__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "77d5fc2f-fd6f-51b3-8748-a81b1e6d52fa",
+      "package_digest": "3180f4723669174b0c95aaaf17ce04cd5290116d00b43844217909bc3fce141c",
+      "package_path": "04_设备/jaka/k1_right__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            210.0
+          ],
+          [
+            -1.5707963267948966,
+            0.4,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            -0.4,
+            0.0,
+            328.5
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            234.89999999999998
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            200.0
+          ]
+        ],
+        "mechanism_type": -3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          180.0,
+          180.0,
+          180.0,
+          180.0,
+          180.0,
+          180.0,
+          180.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4f9cb361f039fff7cf8407faa52dd4e9caff4c5b91b14530bd23e86c51e57a0b",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/k1_right__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:JakaDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/JakaDriver.py",
+        "sha256": "f80405541ed4dbf91e482806f1be1d7cbdc8c4849b811972b2a43e0250dcc6e3",
+        "bytes": 1351,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/JakaDriver.pyc",
+            "sha256": "e1f1fc125c01726fd48a086c474385246ee220fb9caeccb8c49d3db2ae4040e3"
+          },
+          {
+            "relative_path": "api/Robot/v311/JakaDriver.pyc",
+            "sha256": "0c3a4d48d85d425498c204b0c629bc3ecf497b1c00d5c2656870efd12bb1f61a"
+          },
+          {
+            "relative_path": "api/Robot/v312/JakaDriver.pyc",
+            "sha256": "4cf715ccdb37a8a3d318d68d90b4294fdf9a75c8ffb2de6b0c5780b03869fe64"
+          },
+          {
+            "relative_path": "api/Robot/v38/JakaDriver.pyc",
+            "sha256": "7984b4d75dcd785366f31c81cccb23225f8998e4aff6ba5e6cd51735dbc30f4b"
+          },
+          {
+            "relative_path": "api/Robot/v39/JakaDriver.pyc",
+            "sha256": "01e3084e8db7f69c9d15332bde75a13886895d45cb6937406b979223460e0660"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "jaka controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apijaka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apijaka.py",
+        "sha256": "d783fc02cc213de91b8dc16aa1e5212878f4c1ea71c18428866dc9e83529c264",
+        "bytes": 1342,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apijaka.pyc",
+            "sha256": "3e86bba3660038451261ec5fe37ba3e859c1c839fd4c031d1293b43cfa2e7f0f"
+          },
+          {
+            "relative_path": "api/Robot/v311/apijaka.pyc",
+            "sha256": "ff14ce1412bad9e225a0dcc27cff1e84e5e84b879626b08a3055b5c3fb92771b"
+          },
+          {
+            "relative_path": "api/Robot/v312/apijaka.pyc",
+            "sha256": "bbc983476be381259b90d016c7d37fccae56b7cee010f4666270cea628cba4f0"
+          },
+          {
+            "relative_path": "api/Robot/v38/apijaka.pyc",
+            "sha256": "9eb5ab3caaefade998142af6d6637ef9cc2fcee4f9370b728501f5192246f98a"
+          },
+          {
+            "relative_path": "api/Robot/v39/apijaka.pyc",
+            "sha256": "cd9c39f32141e96e4793c559586147d2fcc20a4d4fb53558a58aeb4867798642"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "jaka controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "JAKA.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/jaka/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/jaka/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/jaka/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "K1 Right",
+          "manufacturer": "JAKA",
+          "variant": "",
+          "display": "JAKA K1 Right",
+          "path": "robots/models/JAKA-K1-Right.robot",
+          "type": "robots",
+          "payload": 3,
+          "reach": 600,
+          "axes": 7,
+          "library_assets": [
+            "77d5fc2f-fd6f-51b3-8748-a81b1e6d52fa"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/JAKA-K1-Right.robot",
+        "path": "simready_usd/JAKA-K1-Right.robot",
+        "sha256": "29e9c05c586e83460ea55f05b8855762640b9cb17057222074745e2004115424"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

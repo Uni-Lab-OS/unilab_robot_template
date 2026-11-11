@@ -1,0 +1,383 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "elephant",
+  "model": "mycobot280m5",
+  "title": "Elephant Robotics myCobot-280-M5",
+  "asset": {
+    "asset_id": "54dfe6c5-476a-5c21-86bb-cd2523d2355d",
+    "package_digest": "0be99846ace5c264dd916ef046bd9858d0a30e7a7cae287d9230f82e7a47df9a",
+    "package_path": "04_设备/elephant_robotics/mycobot-280-m5__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "54dfe6c5-476a-5c21-86bb-cd2523d2355d",
+      "package_digest": "0be99846ace5c264dd916ef046bd9858d0a30e7a7cae287d9230f82e7a47df9a",
+      "package_path": "04_设备/elephant_robotics/mycobot-280-m5__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -165.0,
+          -165.0,
+          -165.0,
+          -165.0,
+          -165.0,
+          -175.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            131.56
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            110.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            96.0,
+            -1.5707963267948966,
+            63.39
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            75.05
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            45.6
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          165.0,
+          165.0,
+          165.0,
+          165.0,
+          165.0,
+          175.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6b0572a986b23c9904f0e8dee35c1f8e7ecc6cfc307d8400a004194790cf6ebc",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/mycobot-280-m5__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:elephant:python_sdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elephant/python_sdk",
+        "repository_url": "https://github.com/elephantrobotics/pymycobot.git",
+        "code_tree_sha256": "76e714c9ae9d436584993c44ebe28205cd493443f59a211767c7ab8eb978ca01",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "50cdb5c7ff02a4acbe4de08bc3ef99e71b53584554c46b9abadc047493138fcf"
+          },
+          {
+            "path": "demo/README.md",
+            "sha256": "a00c147accda741e1aedc6c9dc985cf3629873c9080aa6b5fc34d9fb809815aa"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "6e8799d3fde1c12316c55f10d3b24afb9af6a10fb543c8054eeb2927cff0fb9f"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:elephant:mycobot_ros",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elephant/mycobot_ros",
+        "repository_url": "https://github.com/elephantrobotics/mycobot_ros.git",
+        "code_tree_sha256": "af9c405b3c91a4c01ad100dd176a61b4b06bb5c79c6b9bd7ccba901258b8dae6",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "804f52dfbc5a85b93a0ba09cbe656b30f46f0f804ffd1c7cadae83d83a1807b7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "9f6164614294f4076fa6319d83c0943ad174367da0c1ea025164663e11fc73ac"
+          },
+          {
+            "path": "mycobot_communication/LICENSE",
+            "sha256": "f97295973edce364291bfbc776145826ba1284e1c59f099e78ce5b87a1e1d7a6"
+          },
+          {
+            "path": "mycobot_description/LICENSE",
+            "sha256": "f97295973edce364291bfbc776145826ba1284e1c59f099e78ce5b87a1e1d7a6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:elephant:mycobot_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elephant/mycobot_ros2",
+        "repository_url": "https://github.com/automaticaddison/mycobot_ros2.git",
+        "code_tree_sha256": "019be18a70915403facc35a17720387347a03de78cc5f60cf414fd9e49bb43ab",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "416228fe845a17fb8d28c249c3a8f2bbe14741720a1151fb275372b2940d76f5"
+          },
+          {
+            "path": "mycobot_bringup/README.md",
+            "sha256": "806e101dae72d7bd0f5717be41788bfb775df06e5d3a534c5e97999158d5697e"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "c54744562feb96bca296dc46c8e27198b93a191212544433bbd75b0d360a844a"
+          },
+          {
+            "path": "mycobot_bringup/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_description/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_gazebo/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_interfaces/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_moveit_config/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_moveit_demos/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          },
+          {
+            "path": "mycobot_mtc_demos/LICENSE",
+            "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:elephant280",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "elephant280",
+        "controller_choices": [
+          "myCobot280 M5 TCP bridge"
+        ],
+        "sdk_version_requirement": "pymycobot 4.0.4",
+        "source_candidates": [
+          "sdk:elephant:python_sdk",
+          "sdk:elephant:mycobot_ros",
+          "sdk:elephant:mycobot_ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_joint_request"
+        ],
+        "constraints": [
+          "280 M5 requires configured TCP bridge; no automatic Pro600/Pro630 equivalence",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "elephant280-receipt.json",
+          "receipt_sha256": "51dc25992f0e4ac56dd111b5bea0dd03ec16c69b9dbab79b42e60cd0b22db231",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "myCobot-280-M5",
+          "manufacturer": "Elephant Robotics",
+          "variant": "",
+          "display": "Elephant Robotics myCobot-280-M5",
+          "path": "robots/models/Elephant-Robotics-myCobot-280-M5.robot",
+          "type": "robots",
+          "payload": 0.25,
+          "reach": 280,
+          "axes": 6,
+          "library_assets": [
+            "54dfe6c5-476a-5c21-86bb-cd2523d2355d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Elephant-Robotics-myCobot-280-M5.robot",
+        "path": "simready_usd/Elephant-Robotics-myCobot-280-M5.robot",
+        "sha256": "940ff415e37189910f3d7b31c1d0b4736ba3c929b54e4c9bd5226f8aaf6336f2"
+      }
+    ],
+    "source_brand_alias": "elephantrobotics"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

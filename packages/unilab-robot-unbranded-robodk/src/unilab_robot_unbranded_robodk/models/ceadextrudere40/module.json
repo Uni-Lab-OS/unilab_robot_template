@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "ceadextrudere40",
+  "title": "CEAD Extruder E40",
+  "asset": {
+    "asset_id": "da235dc8-a368-59b5-a4bb-97f6a3808455",
+    "package_digest": "7a92de60fd2b7affa2e9bc3a6588873f5264644128f4c531e885fd2292cf52fa",
+    "package_path": "01_零部件/未知厂家/cead_extruder_e40__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "da235dc8-a368-59b5-a4bb-97f6a3808455",
+      "package_digest": "7a92de60fd2b7affa2e9bc3a6588873f5264644128f4c531e885fd2292cf52fa",
+      "package_path": "01_零部件/未知厂家/cead_extruder_e40__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1cce12ab4940872b996d9c2877c8cedc374efa2c3550c676d6cc7beab7a7c2aa",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cead_extruder_e40__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "CEAD Extruder E40",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/CEAD-Extruder-E40.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/CEAD-Extruder-E40.tool",
+        "path": "simready_usd/CEAD-Extruder-E40.tool",
+        "sha256": "86f12056b51837c34e47e271bd53e6bfb32f5d3ed990fae6c2246664e0b2d38d"
+      }
+    ]
+  }
+}

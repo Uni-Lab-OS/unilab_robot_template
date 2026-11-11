@@ -1,0 +1,113 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "nachi",
+  "model": "sra100h01",
+  "title": "SRA100H-01",
+  "asset": {
+    "asset_id": "3bed83cc-2886-5a98-a5af-d474c216877d",
+    "package_digest": "b8f0771db175e63e483b7a321efc7bae3c8c633f810aa3a3a401436566d0d0be",
+    "package_path": "04_设备/nachi/sra100h__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3bed83cc-2886-5a98-a5af-d474c216877d",
+      "package_digest": "b8f0771db175e63e483b7a321efc7bae3c8c633f810aa3a3a401436566d0d0be",
+      "package_path": "04_设备/nachi/sra100h__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "004cdd178000fd687888e0d101fbabc8780e4f2f84578953750d2394b6750aa5",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1712909558e46230f8c0480f8dede9d95cf1ca7ca67d19e079f48d8df0ac3086",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/sra100h__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Nachi_AX_FD.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/nachi/rosweld_drivers",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "SRA100H-01",
+          "manufacturer": "Nachi",
+          "variant": "",
+          "path": "Components/Nachi/Robots/SRA100H.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "0",
+          "vcid": "1ec7a588-8cb5-49ca-8d31-a8705678f0a7",
+          "library_assets": [
+            "3bed83cc-2886-5a98-a5af-d474c216877d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SRA100H.vcmx",
+        "path": "simready_usd/SRA100H.vcmx",
+        "sha256": "004cdd178000fd687888e0d101fbabc8780e4f2f84578953750d2394b6750aa5"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

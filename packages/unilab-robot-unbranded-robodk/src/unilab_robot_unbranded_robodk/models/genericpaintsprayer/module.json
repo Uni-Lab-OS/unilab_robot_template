@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "genericpaintsprayer",
+  "title": "Generic Paint Sprayer",
+  "asset": {
+    "asset_id": "823ba7b1-6fae-5ad4-be17-e627bcbd0789",
+    "package_digest": "733e37d304d4e700b38d83544d357539db4d6852eb5c236038911d09d407b687",
+    "package_path": "01_零部件/未知厂家/paint_sprayer__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "823ba7b1-6fae-5ad4-be17-e627bcbd0789",
+      "package_digest": "733e37d304d4e700b38d83544d357539db4d6852eb5c236038911d09d407b687",
+      "package_path": "01_零部件/未知厂家/paint_sprayer__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "79bdb9eb36b551884089cffe7b274f8aa42e00f19ae32ec1bc15a813d395b924",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/paint_sprayer__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic Paint Sprayer",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-Paint-Sprayer.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-Paint-Sprayer.tool",
+        "path": "simready_usd/Generic-Paint-Sprayer.tool",
+        "sha256": "bf693b60a81c7503170ec60875c9daea59c1b433279af5eac5d7c6c915d69829"
+      }
+    ]
+  }
+}

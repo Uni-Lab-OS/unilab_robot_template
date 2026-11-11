@@ -1,0 +1,787 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "techmanrobot",
+  "models": {
+    "techmantm12": {
+      "title": "Techman TM12",
+      "asset": {
+        "asset_id": "5911943b-3247-5148-a34a-2b03a30258a2",
+        "package_digest": "267c97a6e0774a32f16cd6b737fed87d022161122443a46ecd28988a7cda5671",
+        "package_path": "04_设备/techman_robot/techman_tm12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm12/module.json",
+      "module_sha256": "04a3e331c54607faed1a2b978bdb494e43149c1b1a8b1e6cb69cd2519354096c"
+    },
+    "techmantm12s": {
+      "title": "Techman TM12S",
+      "asset": {
+        "asset_id": "089eacd3-fbe5-5358-942d-18cf6e779794",
+        "package_digest": "0abb3ef9d437a29dd9d423ebd189a8c30a8eda1d962ecb0ef492aa82e86b6719",
+        "package_path": "04_设备/techman_robot/techman_tm12s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm12s/module.json",
+      "module_sha256": "5ad3ed4b3925857f28bc934d991c3fe8eab9ad680af85bd20270b969642dd4ba"
+    },
+    "techmantm12sx": {
+      "title": "Techman TM12S-X",
+      "asset": {
+        "asset_id": "5885cb19-958c-54e1-ae2a-79c89ec9b842",
+        "package_digest": "e487cea2ab67e7e17df04604b57bbc8efb5c15f8bfd8c429cbc6a322b8b8af17",
+        "package_path": "04_设备/techman_robot/techman_tm12s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm12sx/module.json",
+      "module_sha256": "5d4c81d25b358ec1ef6aaae75b93c18810f654173a93fd26d44bcb06c548cbd5"
+    },
+    "techmantm12x": {
+      "title": "Techman TM12X",
+      "asset": {
+        "asset_id": "55b29367-5ff0-5d8c-8b18-afe99482d733",
+        "package_digest": "d34949e579af63bf1ece47781c3c611c6ac146d7e0c793f2bccc41e722c5e414",
+        "package_path": "04_设备/techman_robot/techman_tm12x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm12x/module.json",
+      "module_sha256": "389dd0a3ad7009ba84d5e12bec5f36cf28ac4a564d4348abce8f854166f1d5f9"
+    },
+    "techmantm14": {
+      "title": "Techman TM14",
+      "asset": {
+        "asset_id": "c6d83185-8a99-542f-aaac-e7347c424a46",
+        "package_digest": "c3639be80969edd0ae173fd50b2a0517e6b44f3ff0acff8cb6231b40af38c426",
+        "package_path": "04_设备/techman_robot/techman_tm14__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm14/module.json",
+      "module_sha256": "2ef646b334d69ca904e47acd75915268932b08d6fcbe827bf419d28e93f0efe2"
+    },
+    "techmantm14s": {
+      "title": "Techman TM14S",
+      "asset": {
+        "asset_id": "44c971e9-9ccd-5038-a3c7-55e633aac4e7",
+        "package_digest": "3d0a9a45e6321cdbdf6ffc5c70a598dcd2c8d233ee7144516eb4f56b8565b711",
+        "package_path": "04_设备/techman_robot/techman_tm14s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm14s/module.json",
+      "module_sha256": "c36a6ec721f10bb7e4b6a15a56cbc753d32448ce3f572d7beb62164a637c98e6"
+    },
+    "techmantm14sx": {
+      "title": "Techman TM14S-X",
+      "asset": {
+        "asset_id": "79ae4432-f91c-559c-aa9b-d64f0ebe8940",
+        "package_digest": "bf1b70ed7e69524abfae2812826956cb51b8758098fdae124756e0885a0dbcdd",
+        "package_path": "04_设备/techman_robot/techman_tm14s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm14sx/module.json",
+      "module_sha256": "d4c36e2a6af0847b940886b69af2f2cd832f7257262db5052023be13df459279"
+    },
+    "techmantm14x": {
+      "title": "Techman TM14X",
+      "asset": {
+        "asset_id": "b2d6a17c-aebb-56e6-bf60-a820aaaf52e5",
+        "package_digest": "80ce7c23eb00607c82ba4e8465297403a24e1f4c266d4c8835a6247ab2e61bfd",
+        "package_path": "04_设备/techman_robot/techman_tm14x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm14x/module.json",
+      "module_sha256": "4b23d0f90b44a333b06e9094663d94db3b10870087723eb427c5baf090601ddd"
+    },
+    "techmantm16": {
+      "title": "Techman TM16",
+      "asset": {
+        "asset_id": "1478222c-f9ff-5ebc-b058-8e56bf69a58e",
+        "package_digest": "95e2e0664b5519f924335e19bfa817893a3b818b6d2a435f8910c1f22886331a",
+        "package_path": "04_设备/techman_robot/techman_tm16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm16/module.json",
+      "module_sha256": "2d671be67c9b28feb458a1ed649ed58c34d979ffb79cc2baa766f676c42380a9"
+    },
+    "techmantm16x": {
+      "title": "Techman TM16X",
+      "asset": {
+        "asset_id": "dafea425-ea78-553d-9ab5-954c0efb699c",
+        "package_digest": "d523a4cc73de393223c2772019fc89164e613f934712d12337618a5c643d382f",
+        "package_path": "04_设备/techman_robot/techman_tm16x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm16x/module.json",
+      "module_sha256": "b90d64d47b4bb3998ec4a6d5ad9615964d4d160a27009b2cf351056e72b69c1f"
+    },
+    "techmantm20": {
+      "title": "Techman TM20",
+      "asset": {
+        "asset_id": "f3a81050-5eb4-50ff-bc85-e81a15d6743c",
+        "package_digest": "8736fc1791b093cd36759d244a03aa7c42d142dabd1fff7d2f20a43d6dab537b",
+        "package_path": "04_设备/techman_robot/techman_tm20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm20/module.json",
+      "module_sha256": "312111d608027f6066cbb6f6e12872b5331209800650df26e64040bb1fee5cad"
+    },
+    "techmantm20s": {
+      "title": "Techman TM20S",
+      "asset": {
+        "asset_id": "2e06dd01-fea0-595a-923c-564f9e2e2d18",
+        "package_digest": "27b36433a7028316969017515ca7cfedf93530968ced7437b83fefcd419b40cc",
+        "package_path": "04_设备/techman_robot/techman_tm20s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm20s/module.json",
+      "module_sha256": "d707b95c373b7b79efb8a6abdacdd14347cc7458a2f73918f811ee7cb0d0f30b"
+    },
+    "techmantm20sx": {
+      "title": "Techman TM20S-X",
+      "asset": {
+        "asset_id": "e4adf4d0-5b5a-5182-b12d-a4fb318b279c",
+        "package_digest": "96a3f55929f478745484e7877d68c96ae8d371024c247ae667068ef7d1bd61e5",
+        "package_path": "04_设备/techman_robot/techman_tm20s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm20sx/module.json",
+      "module_sha256": "a4bd2845d34faff4d443e22afddb8e86e45e1ba458ab5a2a24c44a1bc3dda4b3"
+    },
+    "techmantm20x": {
+      "title": "Techman TM20X",
+      "asset": {
+        "asset_id": "ac3a409b-a082-541e-af0d-1351feca9437",
+        "package_digest": "fd4fb917c6bca0de769b4ded5571ef829c68ce890f3936041f952e789030b71b",
+        "package_path": "04_设备/techman_robot/techman_tm20x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm20x/module.json",
+      "module_sha256": "5d0b65a583335edfd87e3039121f8fc2ffb44003232d1aaef651b62b97033e02"
+    },
+    "techmantm25s": {
+      "title": "Techman TM25S",
+      "asset": {
+        "asset_id": "01cf3b30-2f98-5f81-ad79-6f06ed3f74b4",
+        "package_digest": "62ab20368524f75675ef4260bd03f85b4b33135d4828c86b79e8d486ba85dfc5",
+        "package_path": "04_设备/techman_robot/techman_tm25s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm25s/module.json",
+      "module_sha256": "d18893088a14e6e9d19c5b06a9e53d90e4bf65e6998905507b51b06dee033402"
+    },
+    "techmantm25sx": {
+      "title": "Techman TM25S-X",
+      "asset": {
+        "asset_id": "3439f043-464a-5f7b-8c4a-47527a2049ea",
+        "package_digest": "6139db7f08c810ddcf33538170c05f25de20c448d7668dfa1f69177c88b9070d",
+        "package_path": "04_设备/techman_robot/techman_tm25s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm25sx/module.json",
+      "module_sha256": "2e48386916e0c0c62be16ba34e82f84c5819ad51f5eb087e3bc2abe04ccc084c"
+    },
+    "techmantm30s": {
+      "title": "Techman TM30S",
+      "asset": {
+        "asset_id": "103ac877-31c4-5568-9d26-23c04cadc4b2",
+        "package_digest": "5c9a933592d36253a3f6a443a66981498ab56f4c2868d163f3791b050088d417",
+        "package_path": "04_设备/techman_robot/techman_tm30s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm30s/module.json",
+      "module_sha256": "adca9abf660836391c644dc078c381d3a52dc9f54d439e156cc797863df917ae"
+    },
+    "techmantm30sc": {
+      "title": "Techman TM30SC",
+      "asset": {
+        "asset_id": "e9c2776a-b677-5a91-aef3-1a75516976af",
+        "package_digest": "3139cfd7979c9ac277afc44725c4fa5d30a94ccae5e105fda7e214c977a0c706",
+        "package_path": "04_设备/techman_robot/techman_tm30sc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm30sc/module.json",
+      "module_sha256": "0c06e9f9ab5afca47cc2e16dbab1f330ebd30ebc9e8f1591a3a433a42af13c72"
+    },
+    "techmantm30scx": {
+      "title": "Techman TM30SC-X",
+      "asset": {
+        "asset_id": "21638819-602d-5ca2-9a69-4b9f3f6be55b",
+        "package_digest": "22b84d422d18fb7b3bf8e7736ac46dc339d07533e2e86c7ddab573189f0f3d14",
+        "package_path": "04_设备/techman_robot/techman_tm30sc-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm30scx/module.json",
+      "module_sha256": "5490de695f589f29eab5a2384783c16f02fb246b2d1e8a9a3b4c0c8185cd3d9d"
+    },
+    "techmantm30sx": {
+      "title": "Techman TM30S-X",
+      "asset": {
+        "asset_id": "a705fd68-dccd-5a52-a750-17633c2e8c58",
+        "package_digest": "32af8968d95625e0feff7202bdd68313a503f4caa809ed62fe62d1989ce82c47",
+        "package_path": "04_设备/techman_robot/techman_tm30s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm30sx/module.json",
+      "module_sha256": "ce74a689fe1b868f5a5d9cb58c0222092112551100b9aa94482fee69b7ad343e"
+    },
+    "techmantm5:700": {
+      "title": "Techman TM5-700",
+      "asset": {
+        "asset_id": "2a46b061-d335-5033-a83c-349ad3611329",
+        "package_digest": "d0df56bca8ef528757f9d9db2f2abfabd267530184001d8e97feb1b768562c0d",
+        "package_path": "04_设备/techman_robot/techman_tm5-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5_700_1ddad828/module.json",
+      "module_sha256": "14b941a996faf4016c15ccc38c4a68cd7e2b60f3bbe59152dd1d75518195b1f3"
+    },
+    "techmantm5:900": {
+      "title": "Techman TM5-900",
+      "asset": {
+        "asset_id": "a8691a44-6d5b-5d3c-ab14-81fffc70e208",
+        "package_digest": "fe4f639da7ec2cb216f684fa08b60c7e42f7295b616353c0d364e6636d1d23bf",
+        "package_path": "04_设备/techman_robot/techman_tm5-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5_900_b050ddf1/module.json",
+      "module_sha256": "b2c63220d9902e9f9b78f58553a51b0655892be5b176bc4958ae8e59c7dd520e"
+    },
+    "techmantm5s": {
+      "title": "Techman TM5S",
+      "asset": {
+        "asset_id": "fba6c84c-fe47-5e82-b9ca-7a154bab6734",
+        "package_digest": "3090279c886fda9a48f7455b95291f95d8815e5f0327e1076045ec749ce95c54",
+        "package_path": "04_设备/techman_robot/techman_tm5s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5s/module.json",
+      "module_sha256": "13ef3ecce63c941bf26845d8e228a95a988754a9972f7be3d09df41308c6790c"
+    },
+    "techmantm5sx": {
+      "title": "Techman TM5S-X",
+      "asset": {
+        "asset_id": "a2f96024-f9e6-582e-9586-37655b72825b",
+        "package_digest": "d325a0521ee757e1cf935e2a29fe8b2d5910605398eab7406b48f6184ce98193",
+        "package_path": "04_设备/techman_robot/techman_tm5s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5sx/module.json",
+      "module_sha256": "f5e9f2d4d2fa4fca6b6ab0967c96e54428736f847342c1af9307150a93d64314"
+    },
+    "techmantm5x700": {
+      "title": "Techman TM5X-700",
+      "asset": {
+        "asset_id": "fd575f6e-95a6-5509-a037-6c6bf0eb79da",
+        "package_digest": "be6bbb15ffa13fcf82e969370851f9080d4256365f09539cf45351371603378a",
+        "package_path": "04_设备/techman_robot/techman_tm5x-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5x700/module.json",
+      "module_sha256": "660d43725adfdb596361788969e2a4f832c725cd8f94ae4be5edb588e8d22b8f"
+    },
+    "techmantm5x900": {
+      "title": "Techman TM5X-900",
+      "asset": {
+        "asset_id": "f4b2335d-3be5-5ce9-8858-6472e5a637e4",
+        "package_digest": "b04481b07768effac8cb0182946161c957342a4c9554d5224b37bea28483b1fb",
+        "package_path": "04_设备/techman_robot/techman_tm5x-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm5x900/module.json",
+      "module_sha256": "42cf64dff2ac369035a53ccc9f7f94d43a7e084e52f2b51b6dd7acde632922f6"
+    },
+    "techmantm6s": {
+      "title": "Techman TM6S",
+      "asset": {
+        "asset_id": "b092984a-a0a0-5788-a0eb-b6cda7902ff6",
+        "package_digest": "d89ede7e8b9e5d5003f6d1d2c43db92f6353a13ec873ed8a09580dc20a9a8527",
+        "package_path": "04_设备/techman_robot/techman_tm6s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm6s/module.json",
+      "module_sha256": "1859f92293d0db39ae10875c4167932f41fc23ad74fcfce381363b347c221f7d"
+    },
+    "techmantm6sx": {
+      "title": "Techman TM6S-X",
+      "asset": {
+        "asset_id": "d806da12-6eae-5203-a4c4-c870e423b4ba",
+        "package_digest": "c25b374438c03ed3a58de2dea03232a1fc5feafe3225310e2cbb1648c27b2989",
+        "package_path": "04_设备/techman_robot/techman_tm6s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm6sx/module.json",
+      "module_sha256": "407573a2d478758e1105950a8be36c434fd717960d2d070c2267392868a9020e"
+    },
+    "techmantm7s": {
+      "title": "Techman TM7S",
+      "asset": {
+        "asset_id": "0eecd242-672a-5615-abf2-467a85e893ed",
+        "package_digest": "cded347a2aa1087dd9d822ccba831e36d607cbd4b4cf25fd91a140d18b191cac",
+        "package_path": "04_设备/techman_robot/techman_tm7s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm7s/module.json",
+      "module_sha256": "3456cd0f9a6715ef202c07b06db88c2fc7ff75bed68afc54d693e26ae2ade516"
+    },
+    "techmantm7sx": {
+      "title": "Techman TM7S-X",
+      "asset": {
+        "asset_id": "7bd4ade5-55c6-5f02-846d-c2884e73f564",
+        "package_digest": "926b74775b15c940a133c360ac653418b8cbf3d3e27819680f4487e1ce916235",
+        "package_path": "04_设备/techman_robot/techman_tm7s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/techmantm7sx/module.json",
+      "module_sha256": "c81db63e8dfd4e7c1454e9a418fdf23c2d16642dfa28751cb385cb3c60fcc648"
+    },
+    "tm12": {
+      "title": "TM12",
+      "asset": {
+        "asset_id": "a219a377-1701-5522-bd55-7166443f95c0",
+        "package_digest": "0dfc95a7496c60b34de961198d40427ee516dd476fd002b95d3877d51d76821f",
+        "package_path": "04_设备/techman_robot/tm12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm12/module.json",
+      "module_sha256": "1500cd7ffc04ac3b1c90b5b5e52c2232a9b9c90cf26b12b5d42c464b00c7c04b"
+    },
+    "tm12s": {
+      "title": "TM12S",
+      "asset": {
+        "asset_id": "96140a66-8117-5e5a-b45a-ea120c23936f",
+        "package_digest": "7aecf37adccd6ee9e488a74000c0062f613c8275b297153d5d0e3cdd992094d5",
+        "package_path": "04_设备/techman_robot/tm12s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm12s/module.json",
+      "module_sha256": "9eb11f6cf79ea45a75f80ee4e87fa863659f3350ef95da0fb91d81a611e006ab"
+    },
+    "tm12sx": {
+      "title": "TM12S-X",
+      "asset": {
+        "asset_id": "3ae102d6-c24a-510b-91d4-967ddafcc3ea",
+        "package_digest": "d277b22e8c30aa3b551d8bd99bbc3e5fd536f0c5f235a9b5857c26e834db3dcb",
+        "package_path": "04_设备/techman_robot/tm12s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm12sx/module.json",
+      "module_sha256": "f7578649d448dcea7902623d5a65c5bbb6ccaf610e77755682fe9b916062b8b0"
+    },
+    "tm14": {
+      "title": "TM14",
+      "asset": {
+        "asset_id": "33840abc-41f2-5458-b183-cc4da4ae91d1",
+        "package_digest": "25deab5b84ed01b1153e13689bf0d69d86f055515bb16b9054b20380308bbb33",
+        "package_path": "04_设备/techman_robot/tm14__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14/module.json",
+      "module_sha256": "7a29ec3ef413402673de6cef8df382f25dd7534826e84bc024519a46ed85cc82"
+    },
+    "tm14s": {
+      "title": "TM14S",
+      "asset": {
+        "asset_id": "7f106f4c-e2f5-53f3-9723-886e57883f5f",
+        "package_digest": "c44543c07b9bcf38ea3cc062293de621541cc7804b73e1100ac35ba157144062",
+        "package_path": "04_设备/techman_robot/tm14s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14s/module.json",
+      "module_sha256": "0b4938b4c2d1b2582bcc9f59ef2ac41dfd6307041e42fa495d8a3c5dd019cf5b"
+    },
+    "tm14semi": {
+      "title": "TM14 SEMI",
+      "asset": {
+        "asset_id": "74747dd7-6d5e-5095-b9b3-c1b0ace5e6d8",
+        "package_digest": "da16a7e0a3c136381e45eb4b945bcc9063835666434effa278ec833c9cdd5f71",
+        "package_path": "04_设备/techman_robot/tm14_semi__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14semi/module.json",
+      "module_sha256": "7a509d1016dd5716cef0a4f6b536b82e8345107b3a18b9c64a0e48e38b0e2340"
+    },
+    "tm14sx": {
+      "title": "TM14S-X",
+      "asset": {
+        "asset_id": "5bd4e752-1040-5edd-b0d0-7c0253c8dad3",
+        "package_digest": "1857bfa7035a00905868802501f15aa209fe15f19358b88c499dcafc94cd3f05",
+        "package_path": "04_设备/techman_robot/tm14s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14sx/module.json",
+      "module_sha256": "05214cb68e03efba4ed443449e98833e1061715ea73703e2c4c05bde283e7a7a"
+    },
+    "tm14x": {
+      "title": "TM14X",
+      "asset": {
+        "asset_id": "76ca45b3-68cb-5a0c-9e26-c10954bcccce",
+        "package_digest": "9772ba543bdd7cb2d05ed8be9d61cc9805b21385a3c680e4e07b6bb89877cff8",
+        "package_path": "04_设备/techman_robot/tm14x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14x/module.json",
+      "module_sha256": "903d406adb8dda511a64ecc1c537f6323181012ef37841156c9c16122e8392e9"
+    },
+    "tm20": {
+      "title": "TM20",
+      "asset": {
+        "asset_id": "3038bb40-5185-589d-a367-9ca124ac5a21",
+        "package_digest": "59a73b52ece3db4f2db4894bec96ac31dd85231238d01711b025491542886f33",
+        "package_path": "04_设备/techman_robot/tm20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm20/module.json",
+      "module_sha256": "6244299793e908e3086f57086c73629cb1037cc235444d2a9a132b6f9a83c67a"
+    },
+    "tm20x": {
+      "title": "TM20X",
+      "asset": {
+        "asset_id": "a5c828cf-0796-50d0-81c3-f8890aba8c2b",
+        "package_digest": "28aeef3d06161eb96b44d897f5db3232ff1092aa3ec7e13522680dffd50f18ef",
+        "package_path": "04_设备/techman_robot/tm20x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm20x/module.json",
+      "module_sha256": "fb0db0203f95a84d8d74d86184ae5d986cbf62c3886ef13a9edddef9eecf3411"
+    },
+    "tm25s": {
+      "title": "TM25S",
+      "asset": {
+        "asset_id": "b24e10cd-ea20-5eea-92ea-16746811934b",
+        "package_digest": "83a35b5f1d2d693adcc49a2305288a6161db5e54171952b154ab338f5416e7f0",
+        "package_path": "04_设备/techman_robot/tm25s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm25s/module.json",
+      "module_sha256": "0a29cff49d95fd2d925e45d507ef1f62f93e552b02ef41cded504e73ed7dcc1d"
+    },
+    "tm25sx": {
+      "title": "TM25S-X",
+      "asset": {
+        "asset_id": "073f5634-09d1-5133-b52f-e853c57e199d",
+        "package_digest": "0f5eebb70678d39c11ff339757fae01c813bb79ed63d7c35b2d24b6343f827f8",
+        "package_path": "04_设备/techman_robot/tm25s-x__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm25sx/module.json",
+      "module_sha256": "a20c924f0f60f2da2f291e370adeea7cce67b2be8cac58be9bad44ed6b8969b5"
+    },
+    "tm30s": {
+      "title": "TM30S",
+      "asset": {
+        "asset_id": "108a140c-4519-59e1-b766-b5c6949f3ff2",
+        "package_digest": "e6eaa5010e6fa693cde10538e0fe14891d9975ce2e5e2614da709dcada649fee",
+        "package_path": "04_设备/techman_robot/tm30s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm30s/module.json",
+      "module_sha256": "b168f95ed04f480b90d373b5d0edc6d37312646605e1b83eb2816fa7f7033ffc"
+    },
+    "tm30sx": {
+      "title": "TM30S-X",
+      "asset": {
+        "asset_id": "5b64676e-ff1b-53fc-bc46-1a7a26ff98e2",
+        "package_digest": "df5fe0efef905f4726aef94dd1cc992627ac12c09ed38e5ab6aa40030d9e1dd2",
+        "package_path": "04_设备/techman_robot/tm30s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm30sx/module.json",
+      "module_sha256": "b75517ed17a02c6b2a6b417d97c10997672b0baa31fe750f57d5c4433b68a7c9"
+    },
+    "tm5:700": {
+      "title": "TM5-700",
+      "asset": {
+        "asset_id": "81d27ddc-d6ab-5a44-96e3-798074bf77c5",
+        "package_digest": "8de290de45d809d33996a82b0ac8e610eea6761db289e591acf99b557ef38a38",
+        "package_path": "04_设备/techman_robot/tm5-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5_700_3b76e4df/module.json",
+      "module_sha256": "3786229573c884b38b7371fa70509113c5bb3dd3fff02acd375b2ae8e9571dda"
+    },
+    "tm5:900": {
+      "title": "TM5-900",
+      "asset": {
+        "asset_id": "c182ceee-e5ac-5186-8884-4c853e2894f3",
+        "package_digest": "5d9140dbbb83602507e34deee79b0f918f127f01f6c10cd1b6ad2c1ccdf85b51",
+        "package_path": "04_设备/techman_robot/tm5-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5_900_5b12346a/module.json",
+      "module_sha256": "6221fb6cca010b0f6fb744c009b720780cb1053e5e292654adc43ef9b107d667"
+    },
+    "tm5s": {
+      "title": "TM5S",
+      "asset": {
+        "asset_id": "d489b82f-1731-5ff9-8672-951aa502e55e",
+        "package_digest": "4c8513d559a063f5c7b341a051e2bb3c329ae5dfb9fe65adb3e19d39e27453cc",
+        "package_path": "04_设备/techman_robot/tm5s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5s/module.json",
+      "module_sha256": "1d67dd40dcd220f99f979fe820627cd2c76a759e79f55562fdbaa0d46068c049"
+    },
+    "tm5sx": {
+      "title": "TM5S-X",
+      "asset": {
+        "asset_id": "473118a8-13d2-5693-9307-6363354879b4",
+        "package_digest": "ffe99f712b153db9863cfdc7af1be2df72f618cfb06857ef5478ce5b57716b7b",
+        "package_path": "04_设备/techman_robot/tm5s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5sx/module.json",
+      "module_sha256": "daf54fb505984de0262e2614d5ba5f606d2f98a98411ca60b8cc0d4f91c3529c"
+    },
+    "tm5x700": {
+      "title": "TM5X-700",
+      "asset": {
+        "asset_id": "2138e250-4e25-56aa-a177-956825050e55",
+        "package_digest": "065c2160ec69832fa9adaa80a45fdfd5c8209e0bd2f3d09875bf9940e2f2ce88",
+        "package_path": "04_设备/techman_robot/tm5x-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5x700/module.json",
+      "module_sha256": "4beede77d2e8e76c2f00113e1b9b9736c335e0aac59a010c44d8f1897d1f4952"
+    },
+    "tm5x900": {
+      "title": "TM5X-900",
+      "asset": {
+        "asset_id": "dad8f818-e3e0-523f-ada1-00d5bee78c6d",
+        "package_digest": "6c6d7abab91d1a7a4ecb6497234a9f2a5f92b3192ccdd2b9cdfd4a78e74d2f35",
+        "package_path": "04_设备/techman_robot/tm5x-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5x900/module.json",
+      "module_sha256": "2070ec541ef0167093955ce9dd636fccd0dd27135db23d560d33645b8cbb9519"
+    },
+    "tm7s": {
+      "title": "TM7S",
+      "asset": {
+        "asset_id": "cd0cf6ab-e930-5d83-8331-3cfb8f2dd625",
+        "package_digest": "318279a1517ca4778e85bbc2e3e30daa1586ba4d5d4d355ea5ff9018fda1bcaf",
+        "package_path": "04_设备/techman_robot/tm7s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm7s/module.json",
+      "module_sha256": "59eb3a18447f0401709004ba4f0cba7a3b1425e889bf75f0f8fa67f383685991"
+    },
+    "tm7sx": {
+      "title": "TM7S-X",
+      "asset": {
+        "asset_id": "880a2b60-1e73-5d33-85f4-8dbae6170c70",
+        "package_digest": "a2d887795a5e1b95a59f7a2fac777873c5a8dda7fa10aed15fe41b5263eed224",
+        "package_path": "04_设备/techman_robot/tm7s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm7sx/module.json",
+      "module_sha256": "0924da787eb1d0de016be73ec5a6f81a8d17eefa8a985a86ca9aaa00c26575f8"
+    }
+  },
+  "source_profiles": []
+}

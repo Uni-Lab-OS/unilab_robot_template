@@ -1,0 +1,667 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "universal_robots",
+  "model": "ur3",
+  "title": "UR3｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "eb3d9cd7-3f4c-54c2-824c-3d12205db6a3",
+    "package_digest": "32f67f7aa5239611a7e244aeec88be99026cb3a6d8c7b6ea5a2b4601b947d616",
+    "package_path": "04_设备/universal_robots/ur3__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "eb3d9cd7-3f4c-54c2-824c-3d12205db6a3",
+      "package_digest": "32f67f7aa5239611a7e244aeec88be99026cb3a6d8c7b6ea5a2b4601b947d616",
+      "package_path": "04_设备/universal_robots/ur3__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "UR3",
+              "source": "robots/models/UR3.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "UR3",
+              "source": "Components/Universal Robots/Robots/UR3.vcmx",
+              "source_family": "VC",
+              "value": 3.0
+            },
+            {
+              "model": "UR3",
+              "source": "robots/models/UR3.robot",
+              "source_family": "RoboDK",
+              "value": 3.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 3.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "UR3",
+              "source": "Components/Universal Robots/Robots/UR3.vcmx",
+              "source_family": "VC",
+              "value": 500.0
+            },
+            {
+              "model": "UR3",
+              "source": "robots/models/UR3.robot",
+              "source_family": "RoboDK",
+              "value": 500.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 500.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          -90.0,
+          -90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            151.9
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            243.65,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            213.0,
+            0.0,
+            110.4
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            83.4
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            82.4
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "2e048efd-3d09-5db2-8445-2910a7f569b1",
+              "entrypoints": {
+                "usd": "simready_usd/ur3__r001.usdc"
+              },
+              "package_digest": "8aaedd038e828a352699ff868db3d540fe44e8b0e1026ea5f5a19173612c13ad",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "867aada63ba19d9fcb610cc34cb642e649648cda87510eac920565855bf001dd",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "225cc1bd1f2bc8e3cac01e66fa88ccad617e4e7b4f968822b6ef509c3420401d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "2e048efd-3d09-5db2-8445-2910a7f569b1"
+          ],
+          "manufacturer": "Universal Robots",
+          "name": "UR3",
+          "original": {
+            "family": "VC",
+            "original_name": "UR3.vcmx",
+            "path": "simready_usd/source_assets/VC/0_ur3/UR3.vcmx",
+            "sha256": "867aada63ba19d9fcb610cc34cb642e649648cda87510eac920565855bf001dd"
+          },
+          "path": "Components/Universal Robots/Robots/UR3.vcmx",
+          "payload": "3",
+          "reach": "500",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "3a28c487-1822-454d-820b-a35be2fe6c62"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "14721f67-2532-5b58-a212-9a88ac1a909d",
+              "entrypoints": {
+                "usd": "simready_usd/ur3__款2__r001.usda"
+              },
+              "package_digest": "393c9e12920e36e109afcb5d1303717fa3c261833f79f857f425569c41016575",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    -90.0,
+                    0.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      151.9
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      243.65,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      213.0,
+                      0.0,
+                      110.4
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      83.4
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      82.4
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "acfe60c80636d335b1aca64e655d1d2cae90194c031fe7fc2abf8a81027731b5",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "UR3",
+          "family": "RoboDK",
+          "library_assets": [
+            "14721f67-2532-5b58-a212-9a88ac1a909d"
+          ],
+          "manufacturer": "Universal Robots",
+          "name": "UR3",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "UR3.robot",
+            "path": "simready_usd/UR3.robot",
+            "sha256": "a5723933918055f283457b8d7b9a90c410d598d6fd499096944283255ffb5a47"
+          },
+          "path": "robots/models/UR3.robot",
+          "payload": 3,
+          "reach": 500,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "acfe60c80636d335b1aca64e655d1d2cae90194c031fe7fc2abf8a81027731b5",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/ur3__多源合并_r002.usda"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "UR3｜多源合并",
+          "id": "merged_robot_eb3d9cd7_3f4c_54c2_824c_3d12205db6a3",
+          "metadata": {
+            "asset_id": "eb3d9cd7-3f4c-54c2-824c-3d12205db6a3",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DriverUR",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DriverUR.exe",
+        "sha256": "e2c9e720cf4bab9d5ecd9eaa7aad334985c83f035333a2f6b86f421654c48a0f",
+        "bytes": 424448,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "universal_robots controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiur",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiur.exe",
+        "sha256": "93722f172b0426927fe68eec29bb559761a437bd4f3892764a1784cc5dfa5b01",
+        "bytes": 77824,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "universal_robots controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Universal_Robots.py",
+      "Universal_Robots_3D_Printing.py",
+      "Universal_Robots_Conveyor.py",
+      "Universal_Robots_FerRobotics.py",
+      "Universal_Robots_MoveP.py",
+      "Universal_Robots_RobotiQ.py",
+      "Universal_Robots_Sync.py",
+      "Universal_Robots_URP.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/universal_robots/ur_rtde",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/ros2_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/client_library",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/universal_robots/rtde_python",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "UR3.robot",
+        "path": "simready_usd/UR3.robot",
+        "sha256": "a5723933918055f283457b8d7b9a90c410d598d6fd499096944283255ffb5a47"
+      },
+      {
+        "family": "VC",
+        "original_name": "UR3.vcmx",
+        "path": "simready_usd/source_assets/VC/0_ur3/UR3.vcmx",
+        "sha256": "867aada63ba19d9fcb610cc34cb642e649648cda87510eac920565855bf001dd"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "universalrobots",
+        "ur3"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "14721f67-2532-5b58-a212-9a88ac1a909d",
+        "original_package_digest": "393c9e12920e36e109afcb5d1303717fa3c261833f79f857f425569c41016575",
+        "source": "robots/models/UR3.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

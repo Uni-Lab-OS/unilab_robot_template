@@ -1,0 +1,121 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rokae",
+  "model": "nb25",
+  "title": "NB25",
+  "asset": {
+    "asset_id": "3506542a-5454-5219-971d-8255afd03ce9",
+    "package_digest": "4fc8ba61e42de96bbe131dacfbd074ddc19a957b0ed3bc2661fd09a060e52e21",
+    "package_path": "04_设备/rokae/nb25__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3506542a-5454-5219-971d-8255afd03ce9",
+      "package_digest": "4fc8ba61e42de96bbe131dacfbd074ddc19a957b0ed3bc2661fd09a060e52e21",
+      "package_path": "04_设备/rokae/nb25__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "723f6dd4b184a0d51051fea4528100e026e0f98842ee3544ea95ae64ac2ffc9b",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "95d1d083180f86a0e2f1062f853467d4747f23558c45fe3507359b0d9b6e8aea",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/nb25__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Rokae.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/rokae/cpp_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/rokae/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "NB25",
+          "manufacturer": "ROKAE",
+          "variant": "",
+          "path": "Components/ROKAE/Robots/NB25.vcmx",
+          "type": "Robots",
+          "payload": "35",
+          "reach": "1810.0",
+          "vcid": "f7a1c6a9-27a5-47f4-811c-5c696e1ec273",
+          "library_assets": [
+            "3506542a-5454-5219-971d-8255afd03ce9"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/NB25.vcmx",
+        "path": "simready_usd/NB25.vcmx",
+        "sha256": "723f6dd4b184a0d51051fea4528100e026e0f98842ee3544ea95ae64ac2ffc9b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

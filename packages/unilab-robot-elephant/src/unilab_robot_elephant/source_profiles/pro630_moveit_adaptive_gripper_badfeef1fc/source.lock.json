@@ -1,0 +1,234 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "pro630_moveit_adaptive_gripper_badfeef1fc",
+  "source": {
+    "url": "https://github.com/elephantrobotics/mycobot_ros.git",
+    "commit": "15503ee4f8b859a8db69791eb1c1cccd2508b5ed",
+    "path": "robots/elephant/mycobot_ros/mycobot_pro/pro630_moveit_adaptive_gripper",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "682bbe220101ddbea4f258d9ecd4f89bb24eef5004603f89971e4f3291c5db33",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/cartesian_limits.yaml",
+      "sha256": "1051b00e7aa3a6eb9cda7e4d4d6ca815ba47fd188ff748d375b06eaa6afd04e7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/chomp_planning.yaml",
+      "sha256": "ce44e95aa8bce219af4192f4399466ee72e4abf22f7d072013c86939912abe2c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fake_controllers.yaml",
+      "sha256": "f109c94ecde10f23a84cccdda5e6a0606c41d25afc777f760b80da251bc2042b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/gazebo_controllers.yaml",
+      "sha256": "ac751eb790053b473472fd85f241ed496e0dfcdbbfff7662b53f4b2e04f33364",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/gazebo_pro630_adaptive_gripper.urdf",
+      "sha256": "1b86b5c2d7e9eaedf0b5a4c6aa38739b4837e0f159e66de249e051ae9364a97f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "a3b37edb7081052988f87a83fd1b86278400e65fda4d62500fce43cf540ba515",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "02f9fae6b727919612dd4c506463c4026dc55d1b7d47881696e885fd6cdd1de8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "3b4762fb5b12d26301a52b0424be3890d2fa4ddec6ac7b99d7183c123af9ef74",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pro630_adaptive_gripper.srdf",
+      "sha256": "ce15f6bca1fe4b1070fe486fc54216977e44ac4a01bdb72cf0f1d78d84d6f0d2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ros_controllers.yaml",
+      "sha256": "724a85f7e81ffd71c1847f81be9b869666fef674fc03eea6561b43a9fd2f70f5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/sensors_3d.yaml",
+      "sha256": "383779ae35fb6b2b2071248c56cfe4f926569923fc82a136df72ce0d306ea34d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/simple_moveit_controllers.yaml",
+      "sha256": "77803d54d23940f352ba25652f0e8f91010f9af604d55b276214c59355e57f05",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/stomp_planning.yaml",
+      "sha256": "c17633cfba7f1195a83d0d9af55f07e4323713514e5482ec91afac086aefb733",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/chomp_planning_pipeline.launch.xml",
+      "sha256": "d5a11caea35d80ea3a320c96770fb48b0be54bd5ef80844105db91ae4c70dfbd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/default_warehouse_db.launch",
+      "sha256": "0f57ee7597c610333afa0efc8d59a8c1c3b393de70fe3195c7edf577a7519f1b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch",
+      "sha256": "3023aab0ef53055b8297b8f89a9ca943f8a37a142b0d93c618284d02b677eeb6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo_gazebo.launch",
+      "sha256": "bd9e6748c006ea2680c21fcc61fffd65f9173bd9155ce7c5f4d418e6f60e0808",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/fake_moveit_controller_manager.launch.xml",
+      "sha256": "71db0192153eb888191f96e58b769307eae24cfdc6014b45a223b6bf6dd1dfb6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/gazebo.launch",
+      "sha256": "bb747d7451a29e2cb2916dce00dcc3e1e3624daf9b227a6fa019d2993f836bb6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/joystick_control.launch",
+      "sha256": "1540df5f1c88fd9b5e26c22b2c994a10e69f99054887e15592fc16d08fc7d40b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch",
+      "sha256": "3546b602570389cfb2afebdf961512923db842a3585593bcf1cdd0a800a4ed31",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit.rviz",
+      "sha256": "4130502e1aa22bb71ae3b2614e2582f94ec4fadef9fc71c51a7622c56343b00f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit_rviz.launch",
+      "sha256": "0d17b40ac58c972b7bbf811681cdfb880d701a1005a27456b208b0dd44cfb3df",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/ompl-chomp_planning_pipeline.launch.xml",
+      "sha256": "75f461427d40acef76bef372644781e8d7dac02dff461c38438e1f262c4a7261",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/ompl_planning_pipeline.launch.xml",
+      "sha256": "4e588c53b214c01ff6c819dda5a5c3913497598f069f23941564cbb7d883e65e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/pilz_industrial_motion_planner_planning_pipeline.launch.xml",
+      "sha256": "ab5e44f3a96972caa5bcf7333ae917a4cb110f4a7a7a391e5c6b9e6483a3b014",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/planning_context.launch",
+      "sha256": "92582bcf2877a9e5a4af19de38d8c43d53c1992eff6517fe6b613b6ee6acbbb1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/planning_pipeline.launch.xml",
+      "sha256": "0223288ff47d936e5a0a98bd2176c895475a7f3b1287b8009d17783e9c645471",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/pro630_adaptive_gripper_moveit_sensor_manager.launch.xml",
+      "sha256": "4938eb666b36949e4a5a44c4e7ac528e05c9a85ad451d0bf4facfe8292ba7867",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/ros_control_moveit_controller_manager.launch.xml",
+      "sha256": "05319f58bba893bb433bb9539bcd04a847f8e887fa23b813b6232598bb302a37",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/ros_controllers.launch",
+      "sha256": "fe73d67061ab2e5ece5dd7dcb8c8ac00e295052919f6c67d144c4a3f8b301fff",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/run_benchmark_ompl.launch",
+      "sha256": "ca2152a5d66f95f4d25396eb16a81c111e452c1a1c5ea349ea0432366b291de3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/sensor_manager.launch.xml",
+      "sha256": "c68b21db0b81cf0e6738826c0915339f0e75b59bfaccb1b1505d43c5c1ada46b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/setup_assistant.launch",
+      "sha256": "69eb069c1f65399781194783940b448f248b2e1339fed1290882218b74133f7d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/simple_moveit_controller_manager.launch.xml",
+      "sha256": "a09fc2b62f44109c0e4dceaae725883dbf19f7762c129460f862133e25fe588c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/stomp_planning_pipeline.launch.xml",
+      "sha256": "b1c7dabd64d6f5b364c461d1602c57ea742d1c25254b2813622fda4def513874",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/trajectory_execution.launch.xml",
+      "sha256": "d4ee5ea1ccd19d082b35c60c0a6525e94f6fe09a5c1b8a77983943d0886a48fc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse.launch",
+      "sha256": "debd21878a83eda0b3ce2c6a71338dbef80f5c7e658076c1930bbc9a19d66eff",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/warehouse_settings.launch.xml",
+      "sha256": "4a4e0c44b1125def7402f08e716dd0131622e8d0380c51b418111bd053d9e345",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "7aff4176379ba4b1ee8eca46adb546951484a1a0ae2a4556ab82f98ed9b51340",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/__init__.py",
+      "sha256": "c2a4cdf1eff082fa5db26883ccfe6812e8dc98b8c9ed9c0bf591cc1652540baf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/adaptive_gripper_sync_plan.py",
+      "sha256": "c1b6785be7208b33b9c22172e250598233ab6af03d7f932ad891f8a22ed736ab",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "9f6164614294f4076fa6319d83c0943ad174367da0c1ea025164663e11fc73ac"
+    }
+  ]
+}

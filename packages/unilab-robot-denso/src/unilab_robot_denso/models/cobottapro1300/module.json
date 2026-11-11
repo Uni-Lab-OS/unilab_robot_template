@@ -1,0 +1,746 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "denso",
+  "model": "cobottapro1300",
+  "title": "Denso Cobotta PRO 1300｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "b9b792b9-a059-5b8e-8cf1-2f08ad97fb0d",
+    "package_digest": "cb21fd64fa73f62f7c4dfde8c4a8818226562b0b7451c44bddc31705e7d94600",
+    "package_path": "04_设备/denso/cobottapro1300__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "b9b792b9-a059-5b8e-8cf1-2f08ad97fb0d",
+      "package_digest": "cb21fd64fa73f62f7c4dfde8c4a8818226562b0b7451c44bddc31705e7d94600",
+      "package_path": "04_设备/denso/cobottapro1300__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "Cobotta PRO 1300",
+              "source": "robots/models/Denso-Cobotta-PRO-1300.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "Cobotta Pro 1300",
+              "source": "Components/Denso/Robots/Cobotta Pro 1300.vcmx",
+              "source_family": "VC",
+              "value": 12.0
+            },
+            {
+              "model": "Cobotta PRO 1300",
+              "source": "robots/models/Denso-Cobotta-PRO-1300.robot",
+              "source_family": "RoboDK",
+              "value": 12.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 12.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "Cobotta Pro 1300",
+              "source": "Components/Denso/Robots/Cobotta Pro 1300.vcmx",
+              "source_family": "VC",
+              "value": 1300.0
+            },
+            {
+              "model": "Cobotta PRO 1300",
+              "source": "robots/models/Denso-Cobotta-PRO-1300.robot",
+              "source_family": "RoboDK",
+              "value": 1300.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1300.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -270.0,
+          -150.0,
+          -150.0,
+          -270.0,
+          -150.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            220.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            -50.0
+          ],
+          [
+            0.0,
+            710.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            590.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            150.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            160.0
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          12.0,
+          19.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          270.0,
+          150.0,
+          150.0,
+          270.0,
+          150.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "1b6de9b7-85ff-5dcb-aa2f-647ff2695190",
+              "entrypoints": {
+                "usd": "simready_usd/cobotta_pro_1300__r001.usdc"
+              },
+              "package_digest": "9756630102e16249718bca1b89699e3577f5935bc763b38530a4ba24da0c4616",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "7660044dfe3ddd1ce5c7158b74c0166c236dfc5ff7e509f2e3f477530f17f1f9",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "a9049d51c99d56e5a1a92f4e9881d5ec5a54bb6fe247f2a216210df5395d6029",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "1b6de9b7-85ff-5dcb-aa2f-647ff2695190"
+          ],
+          "manufacturer": "Denso",
+          "name": "Cobotta Pro 1300",
+          "original": {
+            "family": "VC",
+            "original_name": "Cobotta Pro 1300.vcmx",
+            "path": "simready_usd/source_assets/VC/0_cobotta_pro_1300/Cobotta Pro 1300.vcmx",
+            "sha256": "7660044dfe3ddd1ce5c7158b74c0166c236dfc5ff7e509f2e3f477530f17f1f9"
+          },
+          "path": "Components/Denso/Robots/Cobotta Pro 1300.vcmx",
+          "payload": "12",
+          "reach": "1300.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "553a5cfe-73a2-4b29-ac98-22cd80b4351d"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "3376f9cb-f45b-5625-a07e-ef910ba3639e",
+              "entrypoints": {
+                "usd": "simready_usd/cobotta_pro_1300__款2__r001.usdc"
+              },
+              "package_digest": "769f0a1d19a5268a88fad74516eb1ebe1f940f10d4b71a9471f210f71d2532d7",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 12,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -270.0,
+                    -150.0,
+                    -150.0,
+                    -270.0,
+                    -150.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      220.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      -50.0
+                    ],
+                    [
+                      0.0,
+                      710.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      590.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      150.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      160.0
+                    ]
+                  ],
+                  "mechanism_type": 8,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    4.0,
+                    12.0,
+                    19.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    -0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    270.0,
+                    150.0,
+                    150.0,
+                    270.0,
+                    150.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "9b8e5b8ff57879d5ed52f87e0ad8e66ea6c44fa825085203a7664d729e61a87c",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Denso Cobotta PRO 1300",
+          "family": "RoboDK",
+          "library_assets": [
+            "3376f9cb-f45b-5625-a07e-ef910ba3639e"
+          ],
+          "manufacturer": "Denso",
+          "name": "Cobotta PRO 1300",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Denso-Cobotta-PRO-1300.robot",
+            "path": "simready_usd/Denso-Cobotta-PRO-1300.robot",
+            "sha256": "37239f0e28984d75f7e373cca29fdce38d0b7a6a334ad72e9e4778c1e25a7805"
+          },
+          "path": "robots/models/Denso-Cobotta-PRO-1300.robot",
+          "payload": 12,
+          "reach": 1300,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "9b8e5b8ff57879d5ed52f87e0ad8e66ea6c44fa825085203a7664d729e61a87c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/cobottapro1300__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Denso Cobotta PRO 1300｜多源合并",
+          "id": "merged_robot_b9b792b9_a059_5b8e_8cf1_2f08ad97fb0d",
+          "metadata": {
+            "asset_id": "b9b792b9-a059-5b8e-8cf1-2f08ad97fb0d",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apidenso",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apidenso.exe",
+        "sha256": "da6ba4fad2aa125465505530f229adafb4b753664d36be72b943eccdd9f5a601",
+        "bytes": 75264,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "denso controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:denso:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/denso/ros2",
+        "repository_url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+        "code_tree_sha256": "fcf506a6ff09f4d4c797de17a19962e77aa91d73ac7959bd2b39a676190b1acb",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "04688c5564e029aafccd85afb490594ca069c64e2e72501e1e5fd75b514a7d7a"
+          },
+          {
+            "path": "bcap_service/README.md",
+            "sha256": "43fd9233384085d99bbde0797ef017e287270fd7afd7c0992e945cba9d5b5b31"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Denso_RC7.py",
+      "Denso_RC8.py",
+      "Denso_RC9.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Denso-Cobotta-PRO-1300.robot",
+        "path": "simready_usd/Denso-Cobotta-PRO-1300.robot",
+        "sha256": "37239f0e28984d75f7e373cca29fdce38d0b7a6a334ad72e9e4778c1e25a7805"
+      },
+      {
+        "family": "VC",
+        "original_name": "Cobotta Pro 1300.vcmx",
+        "path": "simready_usd/source_assets/VC/0_cobotta_pro_1300/Cobotta Pro 1300.vcmx",
+        "sha256": "7660044dfe3ddd1ce5c7158b74c0166c236dfc5ff7e509f2e3f477530f17f1f9"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "denso",
+        "cobottapro1300"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "3376f9cb-f45b-5625-a07e-ef910ba3639e",
+        "original_package_digest": "769f0a1d19a5268a88fad74516eb1ebe1f940f10d4b71a9471f210f71d2532d7",
+        "source": "robots/models/Denso-Cobotta-PRO-1300.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

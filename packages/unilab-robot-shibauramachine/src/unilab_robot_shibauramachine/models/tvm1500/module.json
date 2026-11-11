@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "shibauramachine",
+  "model": "tvm1500",
+  "title": "Shibaura Machine TVM1500",
+  "asset": {
+    "asset_id": "9c980537-18af-5bdd-a74d-cce6642334ff",
+    "package_digest": "445ef7216e0db2da962dd147315b763551bcf00517a9a19107fccf637b9322fc",
+    "package_path": "04_设备/shibaura_machine/tvm1500__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "9c980537-18af-5bdd-a74d-cce6642334ff",
+      "package_digest": "445ef7216e0db2da962dd147315b763551bcf00517a9a19107fccf637b9322fc",
+      "package_path": "04_设备/shibaura_machine/tvm1500__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -80.0,
+          -60.0,
+          -190.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            400.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            750.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            750.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            120.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          170.0,
+          170.0,
+          190.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3eee7ef600c2934add693ac1d6189db9481807bf75e41aa6b470ef064ba2701e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/tvm1500__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "TVM1500",
+          "manufacturer": "Shibaura Machine",
+          "variant": "",
+          "display": "Shibaura Machine TVM1500",
+          "path": "robots/models/Shibaura-Machine-TVM1500.robot",
+          "type": "robots",
+          "payload": 5,
+          "reach": 1726,
+          "axes": 6,
+          "library_assets": [
+            "9c980537-18af-5bdd-a74d-cce6642334ff"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Shibaura-Machine-TVM1500.robot",
+        "path": "simready_usd/Shibaura-Machine-TVM1500.robot",
+        "sha256": "5f8764fb2d94078f5d42f4e0e1f52b8587e419dbb7e4afd1fb7a449246440862"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

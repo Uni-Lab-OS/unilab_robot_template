@@ -1,0 +1,421 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "onrobot",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "2fgp20": {
+      "title": "OnRobot 2FGP20 Palletizer Gripper｜多源合并",
+      "asset": {
+        "asset_id": "ca09f16e-e3df-5c4c-8bcf-d934045f2bb1",
+        "package_digest": "511b5a906d6fa859ce918a50153d5111e987f363b404773cf699f188cc738e12",
+        "package_path": "01_零部件/onrobot/2fgp20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/2fgp20/module.json",
+      "module_sha256": "9bec775c757031e25d44ae52d4802923e8f839f5809bafe9869661aeab0d78b5"
+    },
+    "eyescamera": {
+      "title": "OnRobot Eyes Camera｜多源合并",
+      "asset": {
+        "asset_id": "a406a4b8-ce62-531d-bca4-c24f97a605c4",
+        "package_digest": "f5534604e73721c048c07dfac8b9c7cbfd6a399641d40926f5392a2797d9391e",
+        "package_path": "01_零部件/onrobot/eyescamera__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/eyescamera/module.json",
+      "module_sha256": "2c679b94e2de23e7b6fb0c1d3cf7dc8316ec4c0cd49e3d9b40803c282a98d744"
+    },
+    "mg10gripper": {
+      "title": "OnRobot MG10 Magnetic Gripper｜多源合并",
+      "asset": {
+        "asset_id": "9bc637f1-6596-5bd3-ae97-988a700af5cc",
+        "package_digest": "5df2986680d3a5fb0e2db2b9c3fb2d5de1fa193549517dae37c47986f56c0dc3",
+        "package_path": "01_零部件/onrobot/mg10gripper__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mg10gripper/module.json",
+      "module_sha256": "152375c23075694f774c0c3f03c3b2b3d941c99dcd1dedc9166af465bc3da107"
+    },
+    "screwdriver": {
+      "title": "OnRobot Screwdriver｜多源合并",
+      "asset": {
+        "asset_id": "de37473c-ebcf-56c4-aa55-78a58ccdb7d6",
+        "package_digest": "61774391ab5e1f151a95edc2428a62b4502b6f223b8ab77e443b6b20e604f2e7",
+        "package_path": "01_零部件/onrobot/screwdriver__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/screwdriver/module.json",
+      "module_sha256": "2c0602477973b22b7afbb5b509be849047dae12242d5ce107e64a00c91103938"
+    },
+    "vg10gripper": {
+      "title": "OnRobot VG10 Vacuum Gripper｜多源合并",
+      "asset": {
+        "asset_id": "0038ca0b-bae8-535f-a101-dab1c6057254",
+        "package_digest": "70ad1351582c594796df9f3761bdcf68f0fdc488f09a243c15cba8019bf44fd2",
+        "package_path": "01_零部件/onrobot/vg10gripper__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/vg10gripper/module.json",
+      "module_sha256": "f3bf1494b1bc4d5d70e6b5140e980ceb2cb765f93bc2b634324cd0e1c8582900"
+    },
+    "vgc10": {
+      "title": "OnRobot VGC10 Vacuum Gripper｜多源合并",
+      "asset": {
+        "asset_id": "335a445b-1e41-5536-b515-43d7e958f9cf",
+        "package_digest": "a65cec9d4ad4972beed56e9a0e661651c8ad4a789a610c9d7f3804473227aa87",
+        "package_path": "01_零部件/onrobot/vgc10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/vgc10/module.json",
+      "module_sha256": "654234f03a4ccf8b31ec56ba38fc56406853b05ed684be8c74c18055488865c9"
+    },
+    "vgp20gripper": {
+      "title": "OnRobot VGP20 Vacuum Gripper｜多源合并",
+      "asset": {
+        "asset_id": "8358df60-b80f-5949-8b21-1256857ad027",
+        "package_digest": "a920ee1028f9123e6e0290d23b1ccfd26cd103ff6b15329c77e2579b30875ea5",
+        "package_path": "01_零部件/onrobot/vgp20gripper__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/vgp20gripper/module.json",
+      "module_sha256": "f51634994e265a6c62a32eee1e27398c795a9433a00aacd44d17bcfc2832a7a9"
+    },
+    "2fg7": {
+      "title": "OnRobot 2FG7｜多源合并",
+      "asset": {
+        "asset_id": "f7de5b00-02cd-5eab-9aae-b8b29ac85a3c",
+        "package_digest": "2bc86dd7802a1e2bdbca649e25608912cc4e17b81e479587faaf4b10bc10c8e5",
+        "package_path": "04_设备/onrobot/2fg7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/2fg7/module.json",
+      "module_sha256": "2ab310031b5c5d28c0a8ee75475e1e7f3caaed297b7cb0b431de1da2d0576f18"
+    },
+    "anglebracket": {
+      "title": "OnRobot Angle Bracket",
+      "asset": {
+        "asset_id": "2c34df2d-2a17-516d-b8b8-c47b49592b38",
+        "package_digest": "266c55c46c88680e4897d6c33e4fb68f6f77a7493db3bed49d84c13b0ba383b0",
+        "package_path": "01_零部件/onrobot/angle_bracket__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/anglebracket/module.json",
+      "module_sha256": "7165dbb2a5c7deaccc5fb522bd9657c1154ff960eb95537c26f2ee722cee2e44"
+    },
+    "dualquickchanger": {
+      "title": "Dual Quick Changer",
+      "asset": {
+        "asset_id": "ec478e6c-6901-59bb-b41e-f68440954f8c",
+        "package_digest": "95c9465975fcd25af2d9a640ec4589cee40d83b7d029cf594d0e8d58957025cb",
+        "package_path": "03_机构模块/onrobot/dual_quick_changer__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dualquickchanger/module.json",
+      "module_sha256": "084c053eb8dffc2ad06d785ef45313918e79b4ff3b31471fa4f02d24bd5c1411"
+    },
+    "dualquicktoolchanger": {
+      "title": "OnRobot Dual Quick Tool Changer",
+      "asset": {
+        "asset_id": "6d349811-eecc-5d29-aebe-1b183ee7c90b",
+        "package_digest": "e4b209d455feddbbe1fc96e5c4feaa7d02b9fa540a3e19dc9eef1d2079f98ed4",
+        "package_path": "01_零部件/onrobot/dual_quick_tool_changer__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dualquicktoolchanger/module.json",
+      "module_sha256": "60db63a1cdbba6cc63a19b7d6a10b0397e146f93d9c14d130af0deb2eb1bcd2d"
+    },
+    "eyeslightingkit": {
+      "title": "Eyes Lighting Kit",
+      "asset": {
+        "asset_id": "0f3dfbf6-7be9-57f5-a1bd-1c6552cbba9e",
+        "package_digest": "4fd3a5aebff39192c456883a18925066a353087b56680aec142f09c963691983",
+        "package_path": "03_机构模块/onrobot/eyes_lighting_kit__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/eyeslightingkit/module.json",
+      "module_sha256": "1afe4a2d823c91e92fd2c13f3d3f76c1f8d3771d445b4d75b22654b079166621"
+    },
+    "eyeslightingkitwithwallmount": {
+      "title": "Eyes Lighting Kit with Wall Mount",
+      "asset": {
+        "asset_id": "a3271e0b-8766-5d38-ab86-d925fdd2840d",
+        "package_digest": "b48451e1322e97916691f0b19852cacb8b1cbb88cc77b459dd232e95cdb2d48a",
+        "package_path": "03_机构模块/onrobot/eyes_lighting_kit_with_wall_mount__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/eyeslightingkitwithwallmount/module.json",
+      "module_sha256": "9c5cbccdc1ede9d749d14dfb5f9b08b8ef710f9871ff9acf6a5fc8c1c608ea48"
+    },
+    "geckosp1singlepadgripper": {
+      "title": "OnRobot Gecko SP1 Single Pad Gripper",
+      "asset": {
+        "asset_id": "e0cbfc62-2468-505f-b279-aaa4c3f4a1b5",
+        "package_digest": "08445c66fb09f24851af5079eb342ef66fbef744ee0992fa6032c8d23b898543",
+        "package_path": "01_零部件/onrobot/gecko_sp1_single_pad_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/geckosp1singlepadgripper/module.json",
+      "module_sha256": "a9651cc06795cd3ab3fe2b1578ee54d7d69a86f22ce34219f7cbf7f4ca16b685"
+    },
+    "geckosp3singlepadgripper": {
+      "title": "OnRobot Gecko SP3 Single Pad Gripper",
+      "asset": {
+        "asset_id": "20f38e1b-6030-5575-aa56-8f480872738f",
+        "package_digest": "cd5b78a93e4b48f51c1cfda90eb1e1c4a1ad86faac8d972210ceaba6d95e6dad",
+        "package_path": "01_零部件/onrobot/gecko_sp3_single_pad_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/geckosp3singlepadgripper/module.json",
+      "module_sha256": "51ba5a386f45f0097ec07c78bdd60d8723ea5628b9faa0ac62b348ec6b5bd585"
+    },
+    "geckosp5singlepadgripper": {
+      "title": "OnRobot Gecko SP5 Single Pad Gripper",
+      "asset": {
+        "asset_id": "3d078165-c010-5d86-bb45-ed7c33171185",
+        "package_digest": "15ed199bc08b1a9f22dc6c93ae8a0992d5432a2ba34a5da40c1d22298c96b45f",
+        "package_path": "01_零部件/onrobot/gecko_sp5_single_pad_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/geckosp5singlepadgripper/module.json",
+      "module_sha256": "ff19444d0a02749e429a704cd532d770805dc5fd174e93e22300b436fe86e5d3"
+    },
+    "hexehqc": {
+      "title": "HEX-E/H-QC",
+      "asset": {
+        "asset_id": "710ba7a0-5858-5fcb-9346-f4e2b0f7339a",
+        "package_digest": "2cba16243788f6cc15f7e4e823f14f8bdae9cc18824c4a17e357ff46e6ea36ff",
+        "package_path": "03_机构模块/onrobot/hex-e_h-qc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hexehqc/module.json",
+      "module_sha256": "d8e33555e6c39c23e98fc99a76b4b6c2c0a8c5ac4af7c2653ac3707c11506623"
+    },
+    "hexforcetorquesensor": {
+      "title": "OnRobot HEX Force/Torque Sensor",
+      "asset": {
+        "asset_id": "c191be55-407c-5cf5-a8d2-9b88b2a84a0e",
+        "package_digest": "d33b489440771f6a239210273c48d1b4d2d1d135865162549c447501ae3036ca",
+        "package_path": "01_零部件/onrobot/hex_force-torque_sensor__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hexforcetorquesensor/module.json",
+      "module_sha256": "6806fcc5dac3f6014e54418051821a3f4cd778e9d4cfdf5c2beb20e70a6cb083"
+    },
+    "hexv2": {
+      "title": "HEX v2",
+      "asset": {
+        "asset_id": "209ed6fb-1441-564f-a443-c0011d752823",
+        "package_digest": "2fbe8b58f1a260f191d3c05eb21a602cbd3f93b12f2130f822edd609daa836ef",
+        "package_path": "03_机构模块/onrobot/hex_v2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hexv2/module.json",
+      "module_sha256": "2dfc5c5d72859b75dbaff536625895ba0e1a77d4bd3367a274dd22b9e20d1833"
+    },
+    "quickchangerrobotside": {
+      "title": "Quick Changer Robot Side",
+      "asset": {
+        "asset_id": "82c10bfc-fc27-5433-94c0-f95e050344be",
+        "package_digest": "d531912807a3283d2bb56102542202ad77c5759632a9905bd5c80e09f98cdab8",
+        "package_path": "03_机构模块/onrobot/quick_changer_robot_side__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quickchangerrobotside/module.json",
+      "module_sha256": "917a53b46c1f72d56e0ee9f7800f3874636968496616dc6c20409edfbe38b65e"
+    },
+    "quickchangerrobotsideio": {
+      "title": "Quick Changer Robot Side IO",
+      "asset": {
+        "asset_id": "76e7a095-5618-5b7a-9481-2ae26354a075",
+        "package_digest": "5a8835fb5bbb3fb0299f5b12bdb6c8ea7aeda39befc81c73abcb2b4b39fb6f48",
+        "package_path": "03_机构模块/onrobot/quick_changer_robot_side_io__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quickchangerrobotsideio/module.json",
+      "module_sha256": "1f75ea9b59bb260ff34b274f953163c69580290485f509d3cfcdb054f6de68f8"
+    },
+    "quickchangertoolside": {
+      "title": "Quick Changer Tool Side",
+      "asset": {
+        "asset_id": "216017e5-d7c3-50f7-8e56-9880ab97fc9b",
+        "package_digest": "cc4efb6fba2c6550c11b27687578db855ff7175d71c98abb4e81362128fd2a0d",
+        "package_path": "03_机构模块/onrobot/quick_changer_tool_side__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quickchangertoolside/module.json",
+      "module_sha256": "69450013ba82a92fc00c2cf7eb0ed5b6d0d90342acd25e0978f7a47883f23a51"
+    },
+    "quicktoolchangerrobot": {
+      "title": "OnRobot Quick Tool Changer (Robot)",
+      "asset": {
+        "asset_id": "3f1c4817-c961-575f-b046-44a92adae6a2",
+        "package_digest": "d80f6a88c73b6a850193a4ace0d0029987eb193fe2327a7d8c31732ed195ed45",
+        "package_path": "01_零部件/onrobot/quick_tool_changer_robot___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quicktoolchangerrobot/module.json",
+      "module_sha256": "fbe78ee7011582ed762809ebd4639545f59ae543813933bda67a12836532f16f"
+    },
+    "sander": {
+      "title": "OnRobot Sander",
+      "asset": {
+        "asset_id": "79fa7968-e25f-5f66-a0da-712238dd0b09",
+        "package_digest": "ccee44b62016c3fef0232dd586512386f4430e0a0beedfa97b1577f9ab67737a",
+        "package_path": "01_零部件/onrobot/sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sander/module.json",
+      "module_sha256": "5d54ec3d16a8e8f827c66e26e81ba87d10393e9e57ff2133af57e8818e762cee"
+    },
+    "sandingtool": {
+      "title": "Sanding Tool",
+      "asset": {
+        "asset_id": "f9533467-945e-5085-9aaa-e9f217ba87b1",
+        "package_digest": "c974a5c82f83202999ab2e5eeb81bf0bbacb5974efe963f6275491a87b33c973",
+        "package_path": "03_机构模块/onrobot/sanding_tool__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sandingtool/module.json",
+      "module_sha256": "ff6bd929c84d6fcbd5617512bed01ebda58efbca5820518b49a505217c4705c5"
+    },
+    "sgasoftgripper": {
+      "title": "OnRobot SG-a Soft Gripper",
+      "asset": {
+        "asset_id": "16d8bfb0-a8b6-54e2-b1e8-dbbbacdc467f",
+        "package_digest": "3fda4bc06b0bf49a65e47c68c28ba626963a2857f43aa3568f1d355027258f4b",
+        "package_path": "01_零部件/onrobot/sg-a_soft_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sgasoftgripper/module.json",
+      "module_sha256": "62102f2899f02432b05b5a04981e9c01fb20b75f1280bfeb54f52bfe5d7eaae4"
+    },
+    "sgbsoftgripper": {
+      "title": "OnRobot SG-b Soft Gripper",
+      "asset": {
+        "asset_id": "194e9382-4a05-5e65-b75d-ea8774438c1c",
+        "package_digest": "a37f2288856298bc488604e934b12013ca6e8ec4c1f10d7e3230dd729c2acf28",
+        "package_path": "01_零部件/onrobot/sg-b_soft_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sgbsoftgripper/module.json",
+      "module_sha256": "4610acf4ac2a535c7d9bd475c30f2ff1f093631fa15ec76e2f11ba6502a9521e"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "teknomotor",
+  "model": "c31:40cdbler20spindle",
+  "title": "Teknomotor C31/40-C-DBL-ER20 Spindle",
+  "asset": {
+    "asset_id": "b2ba41bd-aab7-5a5f-a31c-c33b708e161d",
+    "package_digest": "3e128b4fd8f13c0af2c36f52a56fe4a85d39038e61a0f79b7a11d187af579c56",
+    "package_path": "01_零部件/teknomotor/c31-40-c-dbl-er20_spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "b2ba41bd-aab7-5a5f-a31c-c33b708e161d",
+      "package_digest": "3e128b4fd8f13c0af2c36f52a56fe4a85d39038e61a0f79b7a11d187af579c56",
+      "package_path": "01_零部件/teknomotor/c31-40-c-dbl-er20_spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "662a338ebaea380af951d3483573690e40bf65e14b45ff57fd39db81cd28ced7",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/c31-40-c-dbl-er20_spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "C31/40-C-DBL-ER20 Spindle",
+          "manufacturer": "Teknomotor",
+          "variant": "",
+          "display": "Teknomotor C31/40-C-DBL-ER20 Spindle",
+          "path": "tools/models/Teknomotor-C31-40-C-DBL-ER20-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "b2ba41bd-aab7-5a5f-a31c-c33b708e161d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Teknomotor-C31-40-C-DBL-ER20-Spindle.tool",
+        "path": "simready_usd/Teknomotor-C31-40-C-DBL-ER20-Spindle.tool",
+        "sha256": "f177d44a6b611dbd1ce0663a48513d446254486283071a93c1b643f4dc06f89a"
+      }
+    ]
+  }
+}

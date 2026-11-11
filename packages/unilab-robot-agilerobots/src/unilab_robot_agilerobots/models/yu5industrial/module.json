@@ -1,0 +1,107 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "agilerobots",
+  "model": "yu5industrial",
+  "title": "Yu 5 Industrial",
+  "asset": {
+    "asset_id": "454d7f12-48a7-5ba2-890f-8b5f8004c66b",
+    "package_digest": "9eed1cc41c62622439d16833bd6bfb001d4397eecf678da28317a332f73eef0e",
+    "package_path": "04_设备/agile_robots_ag/yu_5_industrial__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "454d7f12-48a7-5ba2-890f-8b5f8004c66b",
+      "package_digest": "9eed1cc41c62622439d16833bd6bfb001d4397eecf678da28317a332f73eef0e",
+      "package_path": "04_设备/agile_robots_ag/yu_5_industrial__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "a20b20b38ab24cc5b123d4bb854491c1e977a335f1eccc27e3b3ce50664826eb",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "141ea26f68942d45d810fdb3c95f92e63bee1b6d6d3a8c336a8c0425229d44ff",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/yu_5_industrial__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Yu 5 Industrial",
+          "manufacturer": "Agile Robots AG",
+          "variant": "",
+          "path": "Components/Agile Robots AG/Robots/Yu 5 Industrial.vcmx",
+          "type": "Robots",
+          "payload": "5",
+          "reach": "1000",
+          "vcid": "6c6bd2cd-2241-4d62-bcc9-e744deb6af68",
+          "library_assets": [
+            "454d7f12-48a7-5ba2-890f-8b5f8004c66b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Yu 5 Industrial.vcmx",
+        "path": "simready_usd/Yu 5 Industrial.vcmx",
+        "sha256": "a20b20b38ab24cc5b123d4bb854491c1e977a335f1eccc27e3b3ce50664826eb"
+      }
+    ],
+    "source_brand_alias": "agilerobotsag"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

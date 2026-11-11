@@ -1,0 +1,67 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "borunte",
+  "models": {
+    "brtirus0707av21": {
+      "title": "BORUNTE BRTIRUS 0707A-v21",
+      "asset": {
+        "asset_id": "ce5ae996-c657-56d1-a251-cfc5e21fdaf9",
+        "package_digest": "8eeabee1144c82038d4f0dcd23e0d5ddb445e7b7f37f92f94bb5366db882ca9c",
+        "package_path": "04_设备/borunte/brtirus_0707a-v21__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/brtirus0707av21/module.json",
+      "module_sha256": "685435fd60367e4767f33490fd525ec13fd9071e52871168262825512d98a343"
+    },
+    "brtirus18020a": {
+      "title": "BORUNTE BRTIRUS 18020A",
+      "asset": {
+        "asset_id": "e2706fdf-748d-5adc-a6ce-6e18965f13f7",
+        "package_digest": "be972e8d4d49da4dfa548500c96c8bcc0db26ce717e1cb4b402d5b284091ffbc",
+        "package_path": "04_设备/borunte/brtirus_18020a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/brtirus18020a/module.json",
+      "module_sha256": "b2899d835590df57dd8a02509e1f60d4128306481a4a9d75aead40a4b9ed684d"
+    },
+    "brtirus2030a": {
+      "title": "BORUNTE BRTIRUS2030A",
+      "asset": {
+        "asset_id": "bf6ca90b-021a-5f9b-8fbd-d7dcf438f615",
+        "package_digest": "4248ef21e8b2a73a72b33f3717259e67a7e69aedbed2065742ba04f3339ef27c",
+        "package_path": "04_设备/borunte/brtirus2030a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/brtirus2030a/module.json",
+      "module_sha256": "5dae8fae4d45aebcbd5d0a8395e0eebdb923c968c0124628bff9bc36ff5bbec6"
+    },
+    "brtirus2110a": {
+      "title": "BORUNTE BRTIRUS 2110A",
+      "asset": {
+        "asset_id": "6f65f5e0-c2ba-5035-a222-c106259ff6b7",
+        "package_digest": "8756e5a6733ba1b6f61d53b97e6d6c9c4e45298f63af5a69393aa8b50c1e6db8",
+        "package_path": "04_设备/borunte/brtirus_2110a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/brtirus2110a/module.json",
+      "module_sha256": "73dc8608409823941c0daccd6232d337273b220ec661befdbbecdfa0b363ea3a"
+    }
+  },
+  "source_profiles": []
+}

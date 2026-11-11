@@ -1,0 +1,264 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "efort",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "er150:3200": {
+      "title": "Efort ER150-3200｜多源合并",
+      "asset": {
+        "asset_id": "763cb4d8-bd16-5075-94f9-325ebb805932",
+        "package_digest": "4dc716ac9e66be5180a362b4ce2d0b01c7940df426a4af128a1c30b910d0c68e",
+        "package_path": "04_设备/efort/er150_3200__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/er150_3200_e056b6b9/module.json",
+      "module_sha256": "3f8933742e362463884387f0971059a0c47a87f68c40df5cac5d73ff64102364"
+    },
+    "arc12:1400": {
+      "title": "Efort ARC12-1400",
+      "asset": {
+        "asset_id": "1c81a338-4fb7-5d4a-814d-779a6c8b6807",
+        "package_digest": "c86ea78b67ed03a7b66a078babac29dba9afb8908d75a1d334d0f0b0eaf81613",
+        "package_path": "04_设备/efort/arc12-1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/arc12_1400_0ece98fc/module.json",
+      "module_sha256": "393c7c99042414b8ecd1fe6b99c7588c8c80b114279c9317c942df789a2a757e"
+    },
+    "arc12:2000": {
+      "title": "Efort ARC12-2000",
+      "asset": {
+        "asset_id": "cf981ea7-8c24-5dc7-b223-596a8b5b3cb3",
+        "package_digest": "2425f864a88c0982d35528c6de93d51e0e2668401b84aa2663f8c9512587371e",
+        "package_path": "04_设备/efort/arc12-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/arc12_2000_096bd3d7/module.json",
+      "module_sha256": "6a31ace3bcfa88fc3a9c694161db5dba3b20472d1525d35f47cac7a84a8a4be3"
+    },
+    "er10:1100": {
+      "title": "Efort ER10-1100",
+      "asset": {
+        "asset_id": "258ea626-b8f8-5d57-9183-ac57680adc79",
+        "package_digest": "de2c685d53666fd710c02811edca7bfa49b6ce04641981260787e1ff886a1f28",
+        "package_path": "04_设备/efort/er10-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er10_1100_27686610/module.json",
+      "module_sha256": "9e7db3a6085a07f1a2cc3c38c59f00beaea8af06e8a4a26758e64490293cd132"
+    },
+    "er10:900": {
+      "title": "Efort ER10-900",
+      "asset": {
+        "asset_id": "80dac409-b232-5550-ba54-383407a1fb0a",
+        "package_digest": "6244b37dd5966b38bcf81be0f342e8ad88abe18d9c32954b154745627c0b3fbb",
+        "package_path": "04_设备/efort/er10-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er10_900_435df699/module.json",
+      "module_sha256": "d30b361b590d2ca5ac26222adabad01d8a4f9645931406e8775cd897d4a15989"
+    },
+    "er12:2100": {
+      "title": "Efort ER12-2100",
+      "asset": {
+        "asset_id": "99ca3469-ca42-5c30-8022-0e8ad59ccf2f",
+        "package_digest": "7fcace2dbe818788dd54337f110f3a30220ba29cb89864548cfb02ee57d9d3bc",
+        "package_path": "04_设备/efort/er12-2100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er12_2100_481dc133/module.json",
+      "module_sha256": "58665b0ff31f3d308ba060979ec3b14edfd8739818a1ca09b1fac942233950ab"
+    },
+    "er12h2000": {
+      "title": "Efort ER12H-2000",
+      "asset": {
+        "asset_id": "ab9d0953-9bdd-5c14-8a68-c630aac28042",
+        "package_digest": "47bc1cb407560844cea996d752bb5dd92761e15e757e167ff29a41a1d1dab593",
+        "package_path": "04_设备/efort/er12h-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er12h2000/module.json",
+      "module_sha256": "9570722811dca37ff001c672b196740e48dcd218b2de8404dab905a2104296bf"
+    },
+    "er150:2700": {
+      "title": "Efort ER150-2700",
+      "asset": {
+        "asset_id": "d2dd84ee-0fd3-5cc8-a808-b11397b2f753",
+        "package_digest": "e7ffc77d93a9ce79efe9b5453fc0940b849a0eaba7b297230258d79440083931",
+        "package_path": "04_设备/efort/er150-2700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er150_2700_2dba4c77/module.json",
+      "module_sha256": "e92b8f47967aa2b74873087bccb4f3e158942a575834ea7bbedb21ca77bed5bf"
+    },
+    "er20": {
+      "title": "Efort ER20",
+      "asset": {
+        "asset_id": "9c46729f-3167-54ce-93dc-bdb1d0d95b8e",
+        "package_digest": "940e3085f0611c3c2fa8a2eda630497fa98b66b78ac8bb4ef1e5571acab4cc73",
+        "package_path": "04_设备/efort/er20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20/module.json",
+      "module_sha256": "06a7507ca4bf2ff90b7b4c05f8e8b66cb676ab3013061d0e45af71763ed13b4e"
+    },
+    "er20:1100": {
+      "title": "Efort ER20-1100",
+      "asset": {
+        "asset_id": "ceb64ef9-dad3-553c-8467-74e4f5d648f7",
+        "package_digest": "80f42b1bcb3a8e179acc86115eedd60a7e0021d5b7276541f96ee95def13a397",
+        "package_path": "04_设备/efort/er20-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er20_1100_60cd271f/module.json",
+      "module_sha256": "21af31e4e0774b7dd7619d07a02201cae99f6c41a7548984ce3fa9e815c57f89"
+    },
+    "er25:1800": {
+      "title": "Efort ER25-1800",
+      "asset": {
+        "asset_id": "b4850d10-cd6b-58bb-904a-d74c194d3d45",
+        "package_digest": "5c9b8b6ca9a13263bb9faaa4a5dfbe3453fbe1f7aa78daebc3c80a14bb867bdf",
+        "package_path": "04_设备/efort/er25-1800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er25_1800_3c90646d/module.json",
+      "module_sha256": "8aa83d9af6e109378f10e2c59609808720555bc3c887e8a73a1bc72c6d107243"
+    },
+    "er50:2100": {
+      "title": "Efort ER50-2100",
+      "asset": {
+        "asset_id": "7a4e6db1-5e2d-5353-b4ab-e40bb70a2ba3",
+        "package_digest": "e16e0780931195d41e542c065288523fc4c04ec9289ac42e435dd240cd794258",
+        "package_path": "04_设备/efort/er50-2100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er50_2100_7b896d95/module.json",
+      "module_sha256": "8bf6b1960f3b69bebf34ee15ffd542e85a5850b322c711340fad3cd6df352a82"
+    },
+    "er50:2700": {
+      "title": "Efort ER50-2700",
+      "asset": {
+        "asset_id": "95c04972-ad38-5b24-9dc8-37f2988c72fa",
+        "package_digest": "9914ae01af55e791ad28a8ac192eb679076358d7f1d7e8b02c5188cc22c6fae6",
+        "package_path": "04_设备/efort/er50-2700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/er50_2700_3d69610e/module.json",
+      "module_sha256": "a4be3eb8d265065ffa5c7971844b04172ba3fd9aad41044ce86edcccdf858fbb"
+    },
+    "gr6100st": {
+      "title": "GR6100ST",
+      "asset": {
+        "asset_id": "ceed3d18-e98a-5ace-9606-e570010075d3",
+        "package_digest": "161111988e58007882aa73b4518c1dafd029f1ea4a5340a5e42f0db32c2a3daa",
+        "package_path": "04_设备/efort/gr6100st__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gr6100st/module.json",
+      "module_sha256": "071059358b35690a133c27c0428a8b44fb2b70e9fba781a016c53a5cc4230fc7"
+    },
+    "gr6160": {
+      "title": "GR6160",
+      "asset": {
+        "asset_id": "8b83f100-fb93-52ea-b9e5-071e6bffbe71",
+        "package_digest": "25351739415b0ebefaa091622c253f12c6abd0f75ae8f39374fc8da741b5dc2a",
+        "package_path": "04_设备/efort/gr6160__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gr6160/module.json",
+      "module_sha256": "480a103f27f097fb6eea7829380cd05f9d315701d3644034cc5d86a151e84c3d"
+    },
+    "gr680": {
+      "title": "Efort GR680",
+      "asset": {
+        "asset_id": "d0169c72-8298-5097-acff-65b032ea9845",
+        "package_digest": "aa381bf73b8a3d6c21fa26b33f50d7671627bbc2e9f2c96065be2a3e4e738d6a",
+        "package_path": "04_设备/efort/gr680__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gr680/module.json",
+      "module_sha256": "1dbd1a882fcb24de240ad7a8f355bdae697b6ffd3eaead74bde422c459bfa40e"
+    },
+    "gr680st": {
+      "title": "GR680ST",
+      "asset": {
+        "asset_id": "cc39762a-3e94-571f-986c-9f556d2a0b3e",
+        "package_digest": "2f57372a486d3feee29b025da942f72101475ef51e4955bbd2d1ee46ac89b031",
+        "package_path": "04_设备/efort/gr680st__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gr680st/module.json",
+      "module_sha256": "a4989dd786cd7261cdb8b2a5012592607e94899f5b6148b37a30eb87ce7234a7"
+    }
+  },
+  "source_profiles": []
+}

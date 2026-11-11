@@ -1,0 +1,340 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "niryo",
+  "model": "ned2",
+  "title": "Niryo Ned2",
+  "asset": {
+    "asset_id": "e911e870-e58b-52a7-9ca9-b9ae10df4608",
+    "package_digest": "2abbef2993a420c81627cd6c3c940071a3562ac4594f7227f630f4927fe4c3d3",
+    "package_path": "04_设备/niryo/ned2__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e911e870-e58b-52a7-9ca9-b9ae10df4608",
+      "package_digest": "2abbef2993a420c81627cd6c3c940071a3562ac4594f7227f630f4927fe4c3d3",
+      "package_path": "04_设备/niryo/ned2__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 12,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.5707963267948966,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -171.3,
+          -104.85,
+          -76.77,
+          -120.0,
+          -110.0,
+          -145.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            166.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5164642271803133,
+            0.0
+          ],
+          [
+            0.0,
+            221.326,
+            -0.054279739737023644,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            32.5,
+            0.0,
+            235.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            9.25,
+            3.141592653589793,
+            48.2
+          ]
+        ],
+        "mechanism_type": 8,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          12.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          -1.0,
+          -1.0,
+          -0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          171.31,
+          34.95,
+          90.0,
+          120.0,
+          110.0,
+          145.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "bdd5a079b5f35311df9331747eb2ca2d99831180cca22d164ce6108a15ba3293",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ned2__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:NiryoDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/NiryoDriver.py",
+        "sha256": "4d285ab88031779a30c156bbc01f515589e7e8f9d13f2c61e5938728e0f6d71e",
+        "bytes": 1354,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/NiryoDriver.pyc",
+            "sha256": "5360b9b5b0b63ca510914f34fe34d2642883fa76fd76ceb20dbc0f23f405fa2e"
+          },
+          {
+            "relative_path": "api/Robot/v311/NiryoDriver.pyc",
+            "sha256": "822c7970f0cf778440965f43c12fdee80a326cbf4f04f4a28461faf00f84c373"
+          },
+          {
+            "relative_path": "api/Robot/v312/NiryoDriver.pyc",
+            "sha256": "470be65f3468d274a4179b90d18ac67362c96badbfccb56eb40eb210b10925d7"
+          },
+          {
+            "relative_path": "api/Robot/v38/NiryoDriver.pyc",
+            "sha256": "b5bd31c6279291fff6ae43a571c7fa37b077926232cc86651827e66daa4d1865"
+          },
+          {
+            "relative_path": "api/Robot/v39/NiryoDriver.pyc",
+            "sha256": "83be8bc144db8252af17dbc16e5cc0c5a4babbea7c217479118489a3542f92b3"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "niryo controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Niryo.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/niryo/python_sdk",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/niryo/ned_ros",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/niryo/ros2_bridge",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Ned2",
+          "manufacturer": "Niryo",
+          "variant": "",
+          "display": "Niryo Ned2",
+          "path": "robots/models/Niryo-Ned2.robot",
+          "type": "robots",
+          "payload": 0.3,
+          "reach": 490,
+          "axes": 6,
+          "library_assets": [
+            "e911e870-e58b-52a7-9ca9-b9ae10df4608"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Niryo-Ned2.robot",
+        "path": "simready_usd/Niryo-Ned2.robot",
+        "sha256": "6fe93a771ed59bc000e8d283b5916e8677849ecbe32cde2ff47350809d002d21"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

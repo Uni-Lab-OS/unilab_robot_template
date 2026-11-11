@@ -1,0 +1,891 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr5arc",
+  "title": "KUKA KR 5 arc｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "da8d094e-0ab7-5a45-9f04-1687fb7df802",
+    "package_digest": "49d2ba16c0db2a4606a85aa29e4f224958bc4c2ff0d525c956499a265c1ea959",
+    "package_path": "04_设备/kuka/kr5arc__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "da8d094e-0ab7-5a45-9f04-1687fb7df802",
+      "package_digest": "49d2ba16c0db2a4606a85aa29e4f224958bc4c2ff0d525c956499a265c1ea959",
+      "package_path": "04_设备/kuka/kr5arc__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR 5 arc",
+              "source": "robots/models/KUKA-KR-5-arc.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 5 arc",
+              "source": "robots/models/KUKA-KR-5-arc.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            },
+            {
+              "model": "KR 5 arc",
+              "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 5 arc.vcmx",
+              "source_family": "VC",
+              "value": 5.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 5.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 5 arc",
+              "source": "robots/models/KUKA-KR-5-arc.robot",
+              "source_family": "RoboDK",
+              "value": 1411.0
+            },
+            {
+              "model": "KR 5 arc",
+              "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 5 arc.vcmx",
+              "source_family": "VC",
+              "value": 1412.0
+            }
+          ],
+          "datum": "J4/J5 wrist-axis intersection; excludes tool/flange length",
+          "note": "OEM specification reconciled against selected source MDH dimensions; retain source metadata disagreement and geometry unchanged.",
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1412,
+          "verification": [
+            {
+              "authority": "OEM-authored original on third-party archive",
+              "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+              "reviewed_at": "2026-11-08",
+              "scope": "Model-specific catalog reconciliation and source geometry datum",
+              "title": "KUKA Low Payloads 2012, page6: KR5 arc dimensions/work envelope",
+              "url": "https://www.interempresas.net/FeriaVirtual/Catalogos_y_documentos/1996/ES_KUKA_LowPayloads_121002_Screen.pdf"
+            },
+            {
+              "authority": "OEM-authored original on third-party archive",
+              "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+              "reviewed_at": "2026-11-08",
+              "scope": "Model-specific catalog reconciliation and source geometry datum",
+              "title": "KUKA Spez KR5 arc V1 en, 2011-03-21, page15 work envelope",
+              "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/KR_5_arc_en.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 5,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -155.0,
+          -180.0,
+          -15.0,
+          -350.0,
+          -130.0,
+          -350.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            400.0
+          ],
+          [
+            -1.5707963267948966,
+            180.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            600.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            120.0,
+            0.0,
+            620.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            115.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          1.0,
+          5.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          155.0,
+          65.0,
+          158.0,
+          350.0,
+          130.0,
+          350.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "47fdeb56-87e2-5035-a6bc-ed33f624dcc3",
+              "entrypoints": {
+                "usd": "simready_usd/kr_5_arc__r001.usdc"
+              },
+              "package_digest": "c494ab7d88f27bcc51dc68280a556ba3302e026eabb36d3d133556e33d210539",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 5,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -155.0,
+                    -180.0,
+                    -15.0,
+                    -350.0,
+                    -130.0,
+                    -350.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      400.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      180.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      600.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      120.0,
+                      0.0,
+                      620.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      115.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    1.0,
+                    5.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    155.0,
+                    65.0,
+                    158.0,
+                    350.0,
+                    130.0,
+                    350.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "1be93daf198bebb47fe543de3439b8a7f9da55f95a4d2407bee42c902406e975",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "KUKA KR 5 arc",
+          "family": "RoboDK",
+          "library_assets": [
+            "47fdeb56-87e2-5035-a6bc-ed33f624dcc3"
+          ],
+          "manufacturer": "KUKA",
+          "name": "KR 5 arc",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR-5-arc.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_kuka-kr-5-arc/KUKA-KR-5-arc.robot",
+            "sha256": "5c5d49dca5e4c751a149be4899c94558f9518a40f03f74e37d09d576e3f1d8b4"
+          },
+          "path": "robots/models/KUKA-KR-5-arc.robot",
+          "payload": 5,
+          "reach": 1411,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 5 arc",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 5 arc.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_5_arc/KR 5 arc.vcmx",
+            "sha256": "b08064643cc4b0eda6de8d02b9682777f37868ef234a4a181088d2542e09b192"
+          },
+          "path": "Components/KUKA/Robots/Low Payloads/Legacy/KR 5 arc.vcmx",
+          "payload": "5",
+          "reach": "1412",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "4fd400b7-fcb3-4a21-a38e-ef9fc7a5118e"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1be93daf198bebb47fe543de3439b8a7f9da55f95a4d2407bee42c902406e975",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr5arc__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR 5 arc｜多源合并",
+          "id": "merged_robot_da8d094e_0ab7_5a45_9f04_1687fb7df802",
+          "metadata": {
+            "asset_id": "da8d094e-0ab7-5a45-9f04-1687fb7df802",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "simready_usd/KUKA-KR-5-arc.robot",
+        "path": "simready_usd/KUKA-KR-5-arc.robot",
+        "sha256": "5c5d49dca5e4c751a149be4899c94558f9518a40f03f74e37d09d576e3f1d8b4"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR-5-arc.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_kuka-kr-5-arc/KUKA-KR-5-arc.robot",
+        "sha256": "5c5d49dca5e4c751a149be4899c94558f9518a40f03f74e37d09d576e3f1d8b4"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 5 arc.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_5_arc/KR 5 arc.vcmx",
+        "sha256": "b08064643cc4b0eda6de8d02b9682777f37868ef234a4a181088d2542e09b192"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "KR 5 arc",
+                "source": "robots/models/KUKA-KR-5-arc.robot",
+                "source_family": "RoboDK",
+                "value": 1411.0
+              },
+              {
+                "model": "KR 5 arc",
+                "source": "Components/KUKA/Robots/Low Payloads/Legacy/KR 5 arc.vcmx",
+                "source_family": "VC",
+                "value": 1412.0
+              }
+            ],
+            "datum": "J4/J5 wrist-axis intersection; excludes tool/flange length",
+            "note": "OEM specification reconciled against selected source MDH dimensions; retain source metadata disagreement and geometry unchanged.",
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1412,
+            "verification": [
+              {
+                "authority": "OEM-authored original on third-party archive",
+                "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+                "reviewed_at": "2026-11-08",
+                "scope": "Model-specific catalog reconciliation and source geometry datum",
+                "title": "KUKA Low Payloads 2012, page6: KR5 arc dimensions/work envelope",
+                "url": "https://www.interempresas.net/FeriaVirtual/Catalogos_y_documentos/1996/ES_KUKA_LowPayloads_121002_Screen.pdf"
+              },
+              {
+                "authority": "OEM-authored original on third-party archive",
+                "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+                "reviewed_at": "2026-11-08",
+                "scope": "Model-specific catalog reconciliation and source geometry datum",
+                "title": "KUKA Spez KR5 arc V1 en, 2011-03-21, page15 work envelope",
+                "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/KR_5_arc_en.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1411.0,
+            1412.0
+          ]
+        }
+      ],
+      "key": [
+        "kuka",
+        "kr5arc"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original on third-party archive",
+            "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+            "reviewed_at": "2026-11-08",
+            "scope": "Model-specific catalog reconciliation and source geometry datum",
+            "title": "KUKA Low Payloads 2012, page6: KR5 arc dimensions/work envelope",
+            "url": "https://www.interempresas.net/FeriaVirtual/Catalogos_y_documentos/1996/ES_KUKA_LowPayloads_121002_Screen.pdf"
+          },
+          {
+            "authority": "OEM-authored original on third-party archive",
+            "retrieval": "web document text inspected; direct download failed and no PDF SHA claimed",
+            "reviewed_at": "2026-11-08",
+            "scope": "Model-specific catalog reconciliation and source geometry datum",
+            "title": "KUKA Spez KR5 arc V1 en, 2011-03-21, page15 work envelope",
+            "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/KR_5_arc_en.pdf"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "datum": "J4/J5 wrist-axis intersection; excludes tool/flange length",
+            "note": "OEM specification reconciled against selected source MDH dimensions; retain source metadata disagreement and geometry unchanged.",
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1412
+          }
+        },
+        "geometry_identity_check": {
+          "datum": "J4/J5 wrist-axis intersection; excludes tool/flange length",
+          "interpretation": "Geometry identity cross-check of OEM catalog datum, not measured/calibrated reach; original mesh and MDH unmodified.",
+          "radial_envelope_formula_mm": "180+600+hypot(120,620)",
+          "radial_envelope_mm": 1411.5061361538778,
+          "rounded_mm": 1412,
+          "source_mdh_mm": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              400.0
+            ],
+            [
+              -1.5707963267948966,
+              180.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              600.0,
+              -1.5707963267948966,
+              0.0
+            ],
+            [
+              -1.5707963267948966,
+              120.0,
+              0.0,
+              620.0
+            ],
+            [
+              1.5707963267948966,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              -1.5707963267948966,
+              0.0,
+              3.141592653589793,
+              115.0
+            ]
+          ],
+          "source_sha256": "5c5d49dca5e4c751a149be4899c94558f9518a40f03f74e37d09d576e3f1d8b4"
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "47fdeb56-87e2-5035-a6bc-ed33f624dcc3",
+        "original_package_digest": "c494ab7d88f27bcc51dc68280a556ba3302e026eabb36d3d133556e33d210539",
+        "source": "robots/models/KUKA-KR-5-arc.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "qc5toolchangermaster",
+  "title": "ATI QC-5 Tool Changer (Master)",
+  "asset": {
+    "asset_id": "602628b3-24df-519a-9087-a29caf3fa783",
+    "package_digest": "90ad86083db607ed767ae4076143e42bef477867e4a4acb0ba8cf11d875f2cf4",
+    "package_path": "01_零部件/ati/qc-5_tool_changer_master___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "602628b3-24df-519a-9087-a29caf3fa783",
+      "package_digest": "90ad86083db607ed767ae4076143e42bef477867e4a4acb0ba8cf11d875f2cf4",
+      "package_path": "01_零部件/ati/qc-5_tool_changer_master___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "288761215ba88149f94607d08516ca6639aa84384a44a4bee62745f8310d99a8",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qc-5_tool_changer_master___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QC-5 Tool Changer (Master)",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI QC-5 Tool Changer (Master)",
+          "path": "tools/models/ATI-QC-5-Tool-Changer-Master.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "602628b3-24df-519a-9087-a29caf3fa783"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-QC-5-Tool-Changer-Master.tool",
+        "path": "simready_usd/ATI-QC-5-Tool-Changer-Master.tool",
+        "sha256": "8e55d87f6860e6cd3f9cc8d4a82b0195976c2d53044e56228afe2c946561a773"
+      }
+    ]
+  }
+}

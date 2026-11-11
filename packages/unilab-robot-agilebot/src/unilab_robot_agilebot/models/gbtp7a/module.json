@@ -1,0 +1,274 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "agilebot",
+  "model": "gbtp7a",
+  "title": "Agilebot GBT-P7A",
+  "asset": {
+    "asset_id": "4b7e4881-9180-5b5c-bc25-51467946b492",
+    "package_digest": "9a41b30d8e7e91ae2976512753caa2d99bdc29faf507169c021a5f2a26e3d6fa",
+    "package_path": "04_设备/agilebot/gbt-p7a__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "4b7e4881-9180-5b5c-bc25-51467946b492",
+      "package_digest": "9a41b30d8e7e91ae2976512753caa2d99bdc29faf507169c021a5f2a26e3d6fa",
+      "package_path": "04_设备/agilebot/gbt-p7a__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -135.0,
+          -70.0,
+          -190.0,
+          -115.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            365.0
+          ],
+          [
+            -1.5707963267948966,
+            30.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            340.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            35.0,
+            0.0,
+            350.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            96.5
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          100.0,
+          200.0,
+          190.0,
+          115.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2105673109f1ac5a506f14cbb02d72a58bd043c64a373e93ffaf3f352ce71dff",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gbt-p7a__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:agilebot:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/agilebot/ros2",
+        "repository_url": "https://github.com/sh-agilebot/Agilebot_Robot_Ros2.git",
+        "code_tree_sha256": "08d57dc14dafb44264cbb13f51772196e6e9c24cae0974f8fcb38f28b8d54d89",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "e3dc3705be024ce20cb8874a4372885e7013397386f7138c54286ff8f7c84186"
+          },
+          {
+            "path": "readme_cn.md",
+            "sha256": "933c75f0bd9be4dd988b6fcf72905fa2cf66c2e88427b8c6f7f6197b6723b454"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:agilebot_a",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "agilebot_a",
+        "controller_choices": [
+          "Agilebot A controller / TP proxy 5609"
+        ],
+        "sdk_version_requirement": "Agilebot.Robot.SDK.A 2.0.1.0",
+        "source_candidates": [
+          "sdk:agilebot:ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_joint_request"
+        ],
+        "constraints": [
+          "GBT-P7A controller/firmware must be confirmed; loopback model response is a fixture",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "agilebot_a-receipt.json",
+          "receipt_sha256": "7b83157c9e57eccac8d2e02033038ca86a86f12ff7efd5cc1b0ff38a1e2fa242",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "GBT-P7A",
+          "manufacturer": "Agilebot",
+          "variant": "",
+          "display": "Agilebot GBT-P7A",
+          "path": "robots/models/Agilebot-GBT-P7A.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 721,
+          "axes": 6,
+          "library_assets": [
+            "4b7e4881-9180-5b5c-bc25-51467946b492"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Agilebot-GBT-P7A.robot",
+        "path": "simready_usd/Agilebot-GBT-P7A.robot",
+        "sha256": "d0fd0233ed423f2fe8284937b1be058c8405028dd6438c70a0735653af6ba78b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

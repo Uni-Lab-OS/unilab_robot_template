@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-robot-fanuc"
+version = "0.1.0"
+description = "Uni-Lab fanuc brand models and reviewed capability bindings"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["unilab_robot_fanuc"]
+
+[tool.setuptools.package-data]
+unilab_robot_fanuc = ["catalog.json", "models/**/*", "source_profiles/**/*"]

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "qc7toolchangermasterb",
+  "title": "ATI QC-7 Tool Changer (Master B)",
+  "asset": {
+    "asset_id": "589c52b1-1933-5bbe-803c-322cd275390a",
+    "package_digest": "2928089db9a036cf0513f90f9a0506a80578602000abb6884375183c318a510a",
+    "package_path": "01_零部件/ati/qc-7_tool_changer_master_b___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "589c52b1-1933-5bbe-803c-322cd275390a",
+      "package_digest": "2928089db9a036cf0513f90f9a0506a80578602000abb6884375183c318a510a",
+      "package_path": "01_零部件/ati/qc-7_tool_changer_master_b___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ded83f6126f0bee92bcc0b8caccba2493b0506737b68176cab30b91eec77adda",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qc-7_tool_changer_master_b___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QC-7 Tool Changer (Master B)",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI QC-7 Tool Changer (Master B)",
+          "path": "tools/models/ATI-QC-7-Tool-Changer-Master-B.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "589c52b1-1933-5bbe-803c-322cd275390a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-QC-7-Tool-Changer-Master-B.tool",
+        "path": "simready_usd/ATI-QC-7-Tool-Changer-Master-B.tool",
+        "sha256": "64f8697e3c8eccb9854604ad9381dd24f2cda28d7d26541b3a81c7e4c2624691"
+      }
+    ]
+  }
+}

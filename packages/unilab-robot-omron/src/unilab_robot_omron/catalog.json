@@ -1,0 +1,454 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "omron",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "i4:350l": {
+      "title": "Omron i4-350L｜多源合并",
+      "asset": {
+        "asset_id": "3508c22d-05f1-5d64-9535-bae5e393b137",
+        "package_digest": "c818224440e8b88dad506110829d54c34840711ac926d33ed43101bc4839abea",
+        "package_path": "04_设备/omron/i4_350l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i4_350l_be009816/module.json",
+      "module_sha256": "866ef1120c536a66ea0ccf5624ed2936b3609202184fbd6f267c97b02d5c9d09"
+    },
+    "i4:450l": {
+      "title": "Omron i4-450L｜多源合并",
+      "asset": {
+        "asset_id": "2d445b24-a217-50d6-899f-ecf1d6b5bf5b",
+        "package_digest": "6f71244f51685d3555023389abcd63c9e091dc70d615b9b340a8bbda016c1983",
+        "package_path": "04_设备/omron/i4_450l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i4_450l_c693146a/module.json",
+      "module_sha256": "02841901de3adb4ce0bbc656ec3524d98fc52ca821275c53293bda5fd17fa2b9"
+    },
+    "i4:650h": {
+      "title": "Omron i4-650H｜多源合并",
+      "asset": {
+        "asset_id": "ef794c2e-7c5b-54cf-b2df-56b130ce855a",
+        "package_digest": "0c1c2b02169966bc37556619e2455b2cb032fa59ab124378e59428f5ddbf8ead",
+        "package_path": "04_设备/omron/i4_650h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i4_650h_b4436801/module.json",
+      "module_sha256": "2094a02d588fab67139897044ea5076258c03871215a76e10bfc9f25f73877c0"
+    },
+    "i4:750h": {
+      "title": "Omron i4-750H｜多源合并",
+      "asset": {
+        "asset_id": "9d58b437-3cc5-5fc1-b2d9-aad41a5d609e",
+        "package_digest": "ac519fc9ff7d02c9e21d08904d48e00e4adc5cb3feeedea4515a48241d41b99c",
+        "package_path": "04_设备/omron/i4_750h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i4_750h_f7370b40/module.json",
+      "module_sha256": "d7607626fc6b79074c578ccfe0da7094e8c509fd08e638c0bcf6bfadceb21f7f"
+    },
+    "i4:850h": {
+      "title": "Omron i4-850H｜多源合并",
+      "asset": {
+        "asset_id": "9739ec95-facc-505a-a87a-93345babc962",
+        "package_digest": "75860a7805853b29e8ba18393a2d3cc223988b59db0828be06cdc9382736e6bb",
+        "package_path": "04_设备/omron/i4_850h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i4_850h_14110bf2/module.json",
+      "module_sha256": "d4033941b5bced5929882b9d501ecf42dd154a35271e9676110e6447c541c074"
+    },
+    "tm12": {
+      "title": "Omron TM12｜多源合并",
+      "asset": {
+        "asset_id": "1efb435f-79cf-58d3-964f-d647338a8ceb",
+        "package_digest": "2a34b086a37e03fb3bb426a98845e3a42231bb3dd4a3cac8b1c4b382b716c4f3",
+        "package_path": "04_设备/omron/tm12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm12/module.json",
+      "module_sha256": "8a64a8e22cfdeb8539855596d4d51fb0f945b1f1e97a0511ec9354fe24a5e6b3"
+    },
+    "tm12x": {
+      "title": "Omron TM12X｜多源合并",
+      "asset": {
+        "asset_id": "057f7e61-252a-5901-b689-24ecd325160e",
+        "package_digest": "9a22fa12b5c8b9c478712c2d5f42f94770f78e7c9b1dbf54ebc018219d2e789b",
+        "package_path": "04_设备/omron/tm12x__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm12x/module.json",
+      "module_sha256": "61f657531808c79ad862ae50cdf59b513da42b604aa372cb12ddf3604680e2a1"
+    },
+    "tm14": {
+      "title": "Omron TM14｜多源合并",
+      "asset": {
+        "asset_id": "2c782874-1486-58b0-9541-b5b15c20fe44",
+        "package_digest": "683f0bff2719349f8c0229672a081afc15e49d92be8ca7fa0e618f5bf066a003",
+        "package_path": "04_设备/omron/tm14__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm14/module.json",
+      "module_sha256": "d088729913930e3d1e088a457c3433bcfa600d6b21b4b6e57027c11fde66b0f8"
+    },
+    "tm5:700": {
+      "title": "Omron TM5-700｜多源合并",
+      "asset": {
+        "asset_id": "3ebafcab-3040-5eb0-bb80-3808e274f37e",
+        "package_digest": "fb6a7f3b4df114cf9ad14fe9bbfe1adcf78007fa85e8d3002b5d0e11b25a412e",
+        "package_path": "04_设备/omron/tm5_700__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm5_700_3b76e4df/module.json",
+      "module_sha256": "7963fb0d38909953216b17691868a72af9f651b21f30875269a0d00840dfd218"
+    },
+    "tm5:900": {
+      "title": "Omron TM5-900｜多源合并",
+      "asset": {
+        "asset_id": "2f6f9c41-0cc9-527c-8423-b17fc91cd142",
+        "package_digest": "59a85b70c9b739cfdbbad5568531b142e7fc530f2567d4e3bb00e62a20a4e5ec",
+        "package_path": "04_设备/omron/tm5_900__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm5_900_5b12346a/module.json",
+      "module_sha256": "9a6f0a8d20a47e2cebfbdbd93c5504193c4ccd24b91a4939bb971ff36c1a81c1"
+    },
+    "ecobra600": {
+      "title": "Omron eCobra 600｜多源合并",
+      "asset": {
+        "asset_id": "ad1e162d-2fe1-5f98-9918-e6437d0a19f6",
+        "package_digest": "56147f6cabeab75760337bc0bbdc4d3682bfccad784b6e7e42dbed5c34b1d968",
+        "package_path": "04_设备/omron/ecobra600__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ecobra600/module.json",
+      "module_sha256": "88bb9cb97d4380c1b9bb0b395cfafc132440a002e2ada76e4f908e7caf5ca5dc"
+    },
+    "cobra350": {
+      "title": "Cobra 350",
+      "asset": {
+        "asset_id": "dc82dadb-be3e-5475-a3b7-38f90f6090e8",
+        "package_digest": "e5b9586df56f135f41f7e04e187145eb30dad59a5385c7f0b00ef638482ea52c",
+        "package_path": "04_设备/omron/cobra_350__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cobra350/module.json",
+      "module_sha256": "4d8aeeb5639b3d39ce3f77e5c2a58e27809b24f25068ca8770632f930dc93fbf"
+    },
+    "i4:550l": {
+      "title": "Omron i4-550L",
+      "asset": {
+        "asset_id": "d68deaca-bfb6-5133-88cf-f689c0b72aff",
+        "package_digest": "eced0509950286d866c7a187c772e0902666feacdb995175768cd5db0a66e3fe",
+        "package_path": "04_设备/omron/i4-550l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/i4_550l_93e21479/module.json",
+      "module_sha256": "e465756909d4a74b68641f2f88234472ffb691289c6374a629ecf32aacba0ce8"
+    },
+    "tm12s": {
+      "title": "Omron TM12S",
+      "asset": {
+        "asset_id": "10bd48bf-b6ec-5194-b411-f19556c0ba68",
+        "package_digest": "9282ddf1bb8be90d06c220cf0e3342408b36cdbed36ad9733e696e9f29015f35",
+        "package_path": "04_设备/omron/tm12s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm12s/module.json",
+      "module_sha256": "d5be41d40a67a27367aea3562e0dfd0d6df885008628fdc01a1ff989253fbd8b"
+    },
+    "tm12sx": {
+      "title": "Omron TM12S-X",
+      "asset": {
+        "asset_id": "53735576-7f35-506e-b152-57a85298898c",
+        "package_digest": "cbdea10dd91ecec7c2c5c350322ac188d9dc3a13e1209bfb805011cd272cc2ca",
+        "package_path": "04_设备/omron/tm12s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm12sx/module.json",
+      "module_sha256": "4b1b930a520a24d13c22feccf1eeef0a0768c000675a649097e39a6f3059c8d3"
+    },
+    "tm14s": {
+      "title": "Omron TM14S",
+      "asset": {
+        "asset_id": "db72b9e6-0b8b-5d87-8626-02f7bb3746ea",
+        "package_digest": "9e984c437d668976495af09583081b114ee751a8f68e5534a36f13070f58be22",
+        "package_path": "04_设备/omron/tm14s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14s/module.json",
+      "module_sha256": "5e9644b40a081bc87a3fb1c9955763ffd2e3d57d94916c1c8ab908fd67be9f46"
+    },
+    "tm14sx": {
+      "title": "Omron TM14S-X",
+      "asset": {
+        "asset_id": "df3aa129-2f63-5db8-b7fc-a3b2e938cac7",
+        "package_digest": "ac7f49a2f4c3ddccbc145d6aa9eee7aa7946809bd03825fd3819e5436e3b1612",
+        "package_path": "04_设备/omron/tm14s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14sx/module.json",
+      "module_sha256": "372fb01238fb201dd102ca2999a43c3ab44d275355bf53fb0aeaa445421c6926"
+    },
+    "tm14x": {
+      "title": "Omron TM14X",
+      "asset": {
+        "asset_id": "8739a942-0f65-530f-9cca-f5164f43afee",
+        "package_digest": "f2b9158e6d77e6f9d1597f4b4eca5dd316802b648f97196dcc728616af9f876a",
+        "package_path": "04_设备/omron/tm14x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm14x/module.json",
+      "module_sha256": "e8876d1f42b0b7dcae5c19c8926401ffb87ca5cc40c8d1f4cb02a9fddc6aecb5"
+    },
+    "tm25s": {
+      "title": "Omron TM25S",
+      "asset": {
+        "asset_id": "c28b86e2-c816-5964-b300-5a3904ac977d",
+        "package_digest": "bc9b34e933b9e5718b037024b0653a7e5d4e73f09758a8f3ea6d5e95bfda4110",
+        "package_path": "04_设备/omron/tm25s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm25s/module.json",
+      "module_sha256": "e018733005ae51e9519e10211772168f1a0a8d59772676f4ab94274377988d58"
+    },
+    "tm25sx": {
+      "title": "Omron TM25S-X",
+      "asset": {
+        "asset_id": "b0a7727f-5cbc-5ba6-95a1-071d33357444",
+        "package_digest": "f168f92c56d6c82f9b5afce74dc0f64e2cde2064fbea586056eac5673562ba7f",
+        "package_path": "04_设备/omron/tm25s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm25sx/module.json",
+      "module_sha256": "8d1c8507fcc3f0437d428fedf5a91da1cb70bf7ca80d912b32bf239e13e0cf9c"
+    },
+    "tm30s": {
+      "title": "Omron TM30S",
+      "asset": {
+        "asset_id": "2547d2d9-afb2-5378-bbdc-a0b58dc96108",
+        "package_digest": "5fe86f90d5a339f5dabbf665f9c1a96140269ebcb1a7c2f1bcfc0139c2f936bf",
+        "package_path": "04_设备/omron/tm30s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm30s/module.json",
+      "module_sha256": "71876bd6df1d403d4f534acbd60db17c73c74e005cffc614b8e0f11b4bc01149"
+    },
+    "tm5s": {
+      "title": "Omron TM5S",
+      "asset": {
+        "asset_id": "22db979c-7565-5e21-b5b7-58950f2b1a46",
+        "package_digest": "da6e6afccc80980c2e21b6269eac45fd2ea94f7148cdf17117608256c3561d57",
+        "package_path": "04_设备/omron/tm5s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5s/module.json",
+      "module_sha256": "dd6956de38ce5c581bc6b8828930e92654fd43ec8275143bcca0e61d24a5b71a"
+    },
+    "tm5sx": {
+      "title": "Omron TM5S-X",
+      "asset": {
+        "asset_id": "58e00317-0ec1-5a87-9f4b-91747ae40d21",
+        "package_digest": "8f4078fe640090ee83df513d2f3ae46afa992b8324d739631195643f32bdab15",
+        "package_path": "04_设备/omron/tm5s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5sx/module.json",
+      "module_sha256": "c2eb6de21a4282228e24cd0d9a69ee37f25debb251b3828604552af5e96e0624"
+    },
+    "tm5x700": {
+      "title": "Omron TM5X-700",
+      "asset": {
+        "asset_id": "47ee28d4-d273-525b-a949-7151df0b6f25",
+        "package_digest": "b79b7b0735093c8766a191e15d2c261eaa585dfd55b273ed1af6e6d4bede2f06",
+        "package_path": "04_设备/omron/tm5x-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5x700/module.json",
+      "module_sha256": "d55105e6ffa0c2ec61ed853a819d69456d555cac798a64b259a5995e3d1db32e"
+    },
+    "tm5x900": {
+      "title": "Omron TM5X-900",
+      "asset": {
+        "asset_id": "c95a46f0-c2bb-59a1-aa03-51b43b158c42",
+        "package_digest": "26dc410a121af150c8ad0c81a5494fc60a99e7f0d0e73cd0b72b6f199c9ce2a9",
+        "package_path": "04_设备/omron/tm5x-900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm5x900/module.json",
+      "module_sha256": "5a4f75a3dbee733728d8ba435e73b3a4427d8c1703542c18a0b3042f869e8519"
+    },
+    "tm7s": {
+      "title": "Omron TM7S",
+      "asset": {
+        "asset_id": "542a6db7-6b08-58db-a155-a40334f6431f",
+        "package_digest": "b67220218d9088c39b338336e3eaa7c0f7cb291a899110336d7a8b9d767cba84",
+        "package_path": "04_设备/omron/tm7s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm7s/module.json",
+      "module_sha256": "2e79196bee3ef6e78b0a65ef4b22951b928313f3184cbb28ad13ddbae58fb7f3"
+    },
+    "tm7sx": {
+      "title": "Omron TM7S-X",
+      "asset": {
+        "asset_id": "da9c6aad-be19-58d7-aee1-9ec238e3bc75",
+        "package_digest": "0d9716fe9d73fb4a06c9b03c864186366294ae071d4ac3519ee3ba4ae8eeafd7",
+        "package_path": "04_设备/omron/tm7s-x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm7sx/module.json",
+      "module_sha256": "f4c73f87b10ba0611061bf8010373f0285cb26ee969174df2745e7200a9c0115"
+    },
+    "viper650": {
+      "title": "Viper 650",
+      "asset": {
+        "asset_id": "f3f5d72c-7d09-5f0c-8b69-11d558d75f1a",
+        "package_digest": "f186dd493f7a9d4e25e23a81769027ae82b9c0b85ab96f695a4307522acee9b1",
+        "package_path": "04_设备/omron/viper_650__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/viper650/module.json",
+      "module_sha256": "5643708c6f867465d336957f54fe71bc92f2d9522183478568f94098972c1ec9"
+    },
+    "viper850": {
+      "title": "Viper 850",
+      "asset": {
+        "asset_id": "55c9acca-22aa-5174-b1df-904efc735830",
+        "package_digest": "d82b84b0e833a765643e28983f5b0e9e49650cabb78584c1a25e5bafdfb7a438",
+        "package_path": "04_设备/omron/viper_850__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/viper850/module.json",
+      "module_sha256": "db48804845a70acff9a2b3711e32b2b6c2d0f1bb26e432b47fba082a1dfa9468"
+    }
+  },
+  "source_profiles": []
+}

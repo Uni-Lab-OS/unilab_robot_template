@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "teknomotor",
+  "model": "atc71clnspindle",
+  "title": "Teknomotor ATC71-C-LN Spindle",
+  "asset": {
+    "asset_id": "1162c33a-a3d7-531b-a9ba-49ba98cc0059",
+    "package_digest": "29e30d53e173dc553f0be0193ecd97bb7ed1673c01a4c803f13ac1e29bd1bd64",
+    "package_path": "01_零部件/teknomotor/atc71-c-ln_spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "1162c33a-a3d7-531b-a9ba-49ba98cc0059",
+      "package_digest": "29e30d53e173dc553f0be0193ecd97bb7ed1673c01a4c803f13ac1e29bd1bd64",
+      "package_path": "01_零部件/teknomotor/atc71-c-ln_spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4b1167a46201ff1d9e2c331d0b92262f46fd0f355f711913a19bc69f21e35bc2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/atc71-c-ln_spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ATC71-C-LN Spindle",
+          "manufacturer": "Teknomotor",
+          "variant": "",
+          "display": "Teknomotor ATC71-C-LN Spindle",
+          "path": "tools/models/Teknomotor-ATC71-C-LN-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "1162c33a-a3d7-531b-a9ba-49ba98cc0059"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Teknomotor-ATC71-C-LN-Spindle.tool",
+        "path": "simready_usd/Teknomotor-ATC71-C-LN-Spindle.tool",
+        "sha256": "09f1d0a5e9a44f3bfd0b6ba07020cd32b17cbbe60b86c4ecb42558b23a788f53"
+      }
+    ]
+  }
+}

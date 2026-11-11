@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "miprobotics",
+  "models": {
+    "junior300": {
+      "title": "MIP Junior 300",
+      "asset": {
+        "asset_id": "3116fc2c-040d-5dbe-98e2-6f4ba04a61a5",
+        "package_digest": "8ddd64ad8cf23f289259bcc0ba2315b17906ebe4d7021cc6fdbc8eff0112d882",
+        "package_path": "04_设备/mip_robotics/junior_300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/junior300/module.json",
+      "module_sha256": "81d489432f12f64f6a5c17141df833d0f6c3ff6a2fb34b3347dd443512286e16"
+    }
+  },
+  "source_profiles": []
+}

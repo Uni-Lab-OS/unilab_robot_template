@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "zimmer",
+  "model": "fwr50ftoolchangermaster",
+  "title": "Zimmer FWR50F Tool Changer (Master)",
+  "asset": {
+    "asset_id": "8b208e9e-3ede-5e3c-837e-650729f6d3e5",
+    "package_digest": "c9503e99128ec590cc45058ebd2af31e8b56474f7ed8010334ea0b11703b4117",
+    "package_path": "01_零部件/zimmer/fwr50f_tool_changer_master___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8b208e9e-3ede-5e3c-837e-650729f6d3e5",
+      "package_digest": "c9503e99128ec590cc45058ebd2af31e8b56474f7ed8010334ea0b11703b4117",
+      "package_path": "01_零部件/zimmer/fwr50f_tool_changer_master___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3a237d979a64ca20dfc43920ff867d83dafd6533c3599b12a7062e507a3915a6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fwr50f_tool_changer_master___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FWR50F Tool Changer (Master)",
+          "manufacturer": "Zimmer",
+          "variant": "",
+          "display": "Zimmer FWR50F Tool Changer (Master)",
+          "path": "tools/models/Zimmer-FWR50F-Tool-Changer-Master.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "8b208e9e-3ede-5e3c-837e-650729f6d3e5"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Zimmer-FWR50F-Tool-Changer-Master.tool",
+        "path": "simready_usd/Zimmer-FWR50F-Tool-Changer-Master.tool",
+        "sha256": "cef672dbe73c29ed05958922e4c6df335732f8ad9c8ba37da2c705ace91433fd"
+      }
+    ]
+  }
+}

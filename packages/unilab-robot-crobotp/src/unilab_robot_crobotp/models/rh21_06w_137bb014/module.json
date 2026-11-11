@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "crobotp",
+  "model": "rh21:06w",
+  "title": "CRP-RH21-06-W",
+  "asset": {
+    "asset_id": "7f133ae1-d3f8-5019-9ddc-eea8efb48b7c",
+    "package_digest": "b0068b69330eaefcae57880a6f8ad5c1ff41a79baf59964353a4df27f4c62777",
+    "package_path": "04_设备/crobotp/-rh21-06-w__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "7f133ae1-d3f8-5019-9ddc-eea8efb48b7c",
+      "package_digest": "b0068b69330eaefcae57880a6f8ad5c1ff41a79baf59964353a4df27f4c62777",
+      "package_path": "04_设备/crobotp/-rh21-06-w__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -168.0,
+          -50.0,
+          -78.0,
+          -190.0,
+          -110.0,
+          -190.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            503.0
+          ],
+          [
+            -1.5707963267948966,
+            210.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            785.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            1075.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            101.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          168.0,
+          170.0,
+          150.0,
+          190.0,
+          130.0,
+          190.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "dd3c5d8e0cd9117d65806fab3cb91639bd81602b10b4fd006137e3457279f92d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/-rh21-06-w__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "-RH21-06-W",
+          "manufacturer": "CROBOTP",
+          "variant": "",
+          "display": "CRP-RH21-06-W",
+          "path": "robots/models/CRP-RH21-06-W.robot",
+          "type": "robots",
+          "payload": 6,
+          "reach": 2093,
+          "axes": 6,
+          "library_assets": [
+            "7f133ae1-d3f8-5019-9ddc-eea8efb48b7c"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/CRP-RH21-06-W.robot",
+        "path": "simready_usd/CRP-RH21-06-W.robot",
+        "sha256": "805ae5b935f8f8652570c40f613271e352313b716694a8f66158ae1278b19a82"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

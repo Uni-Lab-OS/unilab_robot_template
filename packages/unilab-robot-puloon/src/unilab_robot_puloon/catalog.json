@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "puloon",
+  "models": {
+    "symphony10": {
+      "title": "PULOON Symphony 10",
+      "asset": {
+        "asset_id": "e7983783-5170-577d-a196-3dcbff14f7bb",
+        "package_digest": "7667b899b61c9341b74f973c3520c574be71ba3c99df222b2912309676867f09",
+        "package_path": "04_设备/puloon/symphony_10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/symphony10/module.json",
+      "module_sha256": "56cf269484e3585fb7345e8c1f66a2b927c2b3c16e23ea96f27154e34f5ceff5"
+    },
+    "symphony15": {
+      "title": "PULOON Symphony 15",
+      "asset": {
+        "asset_id": "7edea9cb-674f-5490-915c-0149c25dbbd6",
+        "package_digest": "23fb82541fa3aa53f59858a47b8f5b6e89244ea45b6673a0879e189c1cde7556",
+        "package_path": "04_设备/puloon/symphony_15__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/symphony15/module.json",
+      "module_sha256": "d7a4462e5d9943dd71a8edc12baf51f9786893c05b42974c7d08d30655570425"
+    },
+    "symphony5": {
+      "title": "PULOON Symphony 5",
+      "asset": {
+        "asset_id": "bfbc6c41-071c-599c-b1d7-2138f8777e6d",
+        "package_digest": "269f9d9d4c3f6eeb57631950e631ca2bcf1b82288e4edc8649f731cedee1d5f8",
+        "package_path": "04_设备/puloon/symphony_5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/symphony5/module.json",
+      "module_sha256": "c861b00ad4cb10fd38d20caa0254492bdd24c1e1f2ce1ac2913ab713bc1666cd"
+    }
+  },
+  "source_profiles": []
+}

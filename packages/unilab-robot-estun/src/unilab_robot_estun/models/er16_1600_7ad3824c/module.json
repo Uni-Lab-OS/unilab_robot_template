@@ -1,0 +1,338 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "estun",
+  "model": "er16:1600",
+  "title": "Estun ER16-1600",
+  "asset": {
+    "asset_id": "74e97810-2c5f-5c9c-9f87-4c29f327171f",
+    "package_digest": "e798f5acb519a0bafb3985d8be64b33786b86c3ba12f281d633f8b3bf3294ef5",
+    "package_path": "04_设备/estun/er16-1600__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "74e97810-2c5f-5c9c-9f87-4c29f327171f",
+      "package_digest": "e798f5acb519a0bafb3985d8be64b33786b86c3ba12f281d633f8b3bf3294ef5",
+      "package_path": "04_设备/estun/er16-1600__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 5,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -60.0,
+          -170.0,
+          -360.0,
+          -130.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            412.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            680.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            130.0,
+            0.0,
+            750.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            95.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          5.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          140.0,
+          80.0,
+          360.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "46525f7fc308fccdb830133f409ee696dcf0e29444440cc8fd273efbb06a1c4d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/er16-1600__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:estun:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/estun/ros2_driver",
+        "repository_url": "https://github.com/ESTUN-R-D/estun_ros2.git",
+        "code_tree_sha256": "88e640016a65f047d5555642b4c353d4e772b7688ffe59cee26620a6da678aff",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "b93c5ef970d3944bc9d48a4eff68a54a5654a172a6e80b57ce328597f7650bcb"
+          },
+          {
+            "path": "README.zh-CN.md",
+            "sha256": "9e56ccd7b0574561b67b246c916b5d632b3c3119301b0686419c1330a98b1fda"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "b7d0373f53d8d213519f23184b1fe9d1dc7fb3fe250cc5d970f6b9d32b5a112e"
+          },
+          {
+            "path": "estun_libs/LICENSE",
+            "sha256": "78e10cdb9168541cf321a46d4cb1d5f76e7d81a14b08e82b4c3e20e022be2c79"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:estun_eri",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "estun_eri",
+        "controller_choices": [
+          "ESTUN ERI"
+        ],
+        "sdk_version_requirement": "ERI SDK 1.0.0.17",
+        "source_candidates": [
+          "sdk:estun:ros2_driver"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "movj_request_requires_native_units_and_control_evidence"
+        ],
+        "constraints": [
+          "Linux SCHED_RR priority 51 blocked EPERM; exact controller/firmware and joint units remain unverified",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "blocked",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "estun-native/receipt.json",
+          "receipt_sha256": "04137f5ba9c19b32316b9d0835bd232a35249b6d12bdf2a9388e57883650b86c",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Estun_RCS2.py",
+      "Estun_RCS3.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ER16-1600",
+          "manufacturer": "Estun",
+          "variant": "",
+          "display": "Estun ER16-1600",
+          "path": "robots/models/Estun-ER16-1600.robot",
+          "type": "robots",
+          "payload": 16,
+          "reach": 1590,
+          "axes": 6,
+          "library_assets": [
+            "74e97810-2c5f-5c9c-9f87-4c29f327171f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Estun-ER16-1600.robot",
+        "path": "simready_usd/Estun-ER16-1600.robot",
+        "sha256": "8552f992d71621ef0acf9e4d918383e46a464bb3c52ae7b44bfaf217a2a4fc73"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

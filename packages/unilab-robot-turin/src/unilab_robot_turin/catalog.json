@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "turin",
+  "models": {
+    "tkb5800": {
+      "title": "Turin TKB5800",
+      "asset": {
+        "asset_id": "15dd2af0-2afd-5eb1-ab75-16912d40eeb9",
+        "package_digest": "909a40595068af47119bc591b4c013f4bc7c668d06ff262d3ff913dfe86a08f3",
+        "package_path": "04_设备/turin/tkb5800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tkb5800/module.json",
+      "module_sha256": "79c729acd00113b154aa61f25be0b5012ae9701d0a875c690915358661542843"
+    }
+  },
+  "source_profiles": []
+}

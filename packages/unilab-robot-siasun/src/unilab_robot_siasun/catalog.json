@@ -1,0 +1,238 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "siasun",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "gcr14:1400": {
+      "title": "Siasun GCR14-1400｜多源合并",
+      "asset": {
+        "asset_id": "c406be7c-a83b-56eb-8fa1-5ff80ef064a9",
+        "package_digest": "54862c35894b95af3a41d58b405ccaa866313a8ced2b8df529305b3b9790910a",
+        "package_path": "04_设备/siasun/gcr14_1400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gcr14_1400_449eb885/module.json",
+      "module_sha256": "61deff696e03f50c17a0e12100ba33bdecffdca9ec4e069eda53cef64aab8d1f"
+    },
+    "gcr20:1100": {
+      "title": "Siasun GCR20-1100｜多源合并",
+      "asset": {
+        "asset_id": "c5de3a6e-c95a-5e54-af21-4635fd2489b3",
+        "package_digest": "453321b6c3ced1f0fba99d0054a00dd36a3c338c20eaa56ae8369c156ab85e0d",
+        "package_path": "04_设备/siasun/gcr20_1100__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gcr20_1100_d8a042bc/module.json",
+      "module_sha256": "fc19f79e3006e19f1f2338187c5947a8c2564025d4bef264622e37cd49173732"
+    },
+    "gcr5:910": {
+      "title": "Siasun GCR5-910｜多源合并",
+      "asset": {
+        "asset_id": "00212aa8-c4bb-521a-aa1e-b110c90b2759",
+        "package_digest": "7a076bd7b2426fca62eafdc618eb1b3fc52bb29a8bf8f81b9b0abdc3df088a98",
+        "package_path": "04_设备/siasun/gcr5_910__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gcr5_910_46daa04a/module.json",
+      "module_sha256": "36f345f9d03c9a43e23f52bf693ca60a8319241b4b7c26c593885b16998e5a26"
+    },
+    "scr3": {
+      "title": "Siasun SCR3｜多源合并",
+      "asset": {
+        "asset_id": "e7199900-1627-54e0-b7ed-8d4ab57b0e9a",
+        "package_digest": "0a91df74947599e093c5476e7baaef1cd8bf6e7cb3965aac3e4cb6ac3fdc6bef",
+        "package_path": "04_设备/siasun/scr3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/scr3/module.json",
+      "module_sha256": "e359cbae34c1b87e8c88020c5dc40befb24aaecc3be0a7c9774421d1be41869c"
+    },
+    "scr5": {
+      "title": "Siasun SCR5｜多源合并",
+      "asset": {
+        "asset_id": "23729647-4163-5131-82ac-e3e2043fc5dd",
+        "package_digest": "39a092675abd9a06a21210bbaa75b58fb92a3adbe2137d261f4dd5488eaa7e55",
+        "package_path": "04_设备/siasun/scr5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/scr5/module.json",
+      "module_sha256": "ec05b9c6a252a4a127c15166db48976ee0fcf720a191b74a2a43d792a65ab6ff"
+    },
+    "gcr10:1300": {
+      "title": "Siasun GCR10-1300",
+      "asset": {
+        "asset_id": "7f87a0b7-e1f3-5a7c-ac97-23dd3049c535",
+        "package_digest": "ee02444ad17de06092655e75726c6f388a4b933bede0d17e04fae36167289964",
+        "package_path": "04_设备/siasun/gcr10-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr10_1300_63f967f3/module.json",
+      "module_sha256": "4e08fce67c529227e3a7a14e479d1b21434a0b1e15fa4ce21d6519a2b139765a"
+    },
+    "gcr12:1300": {
+      "title": "Siasun GCR12-1300",
+      "asset": {
+        "asset_id": "181e7380-34d4-559b-b1ad-4a9fe2a90acf",
+        "package_digest": "462029bbd3113c5514ce9d9a7759e00e045f7d00af177293f7be1e1721db1643",
+        "package_path": "04_设备/siasun/gcr12-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr12_1300_d0b88ec6/module.json",
+      "module_sha256": "360cb1b528d96986a411f627e8bc062a4fc8ebf4fb297a43951b9107af67e1ff"
+    },
+    "gcr16:960": {
+      "title": "Siasun GCR16-960",
+      "asset": {
+        "asset_id": "0372cfcc-6927-55d0-951c-d6dcb54a6d8b",
+        "package_digest": "f872d6bc5b1ff02a30bae41ccfc02b4d639102af5d5b5a1094cc3ffb94ed575d",
+        "package_path": "04_设备/siasun/gcr16-960__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr16_960_3ace519b/module.json",
+      "module_sha256": "6a6b3c3722842132e55806ce6dfcd18aeed45dbbfc4d296ac905ccf529d99eaf"
+    },
+    "gcr20:1400": {
+      "title": "Siasun GCR20-1400",
+      "asset": {
+        "asset_id": "e5d3fb01-59c1-5bdd-af0b-caeb4fae4726",
+        "package_digest": "e57bc95f4c9f81cd9d168375a76d118c78391357f8fb7587deac1b62327dad5a",
+        "package_path": "04_设备/siasun/gcr20-1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr20_1400_1a3e926d/module.json",
+      "module_sha256": "83b262c1f6a2ff4d475feefc79f75f45eb83be5ebb3847f6f509a2fb03a463e7"
+    },
+    "gcr25:1800": {
+      "title": "Siasun GCR25-1800",
+      "asset": {
+        "asset_id": "e6a8ae04-cc9b-59cc-8806-a725cafa23f3",
+        "package_digest": "00b6fb4ae03a1ef83a87e39a78c7f4aee6637f749c9f2b5b5f20c5c7af0ca829",
+        "package_path": "04_设备/siasun/gcr25-1800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr25_1800_011328a3/module.json",
+      "module_sha256": "47af501d0ca994c5d2a636d71ff2f7519cc83a07c0f1f7733a298febe0d45e6e"
+    },
+    "gcr30:1100": {
+      "title": "Siasun GCR30-1100",
+      "asset": {
+        "asset_id": "59c52122-ae45-54bd-8899-b279759fff31",
+        "package_digest": "8f4ac92d154edb890c614f18de7d1181066673fdb13d56af0d521bea0e9f5aae",
+        "package_path": "04_设备/siasun/gcr30-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr30_1100_85405a7d/module.json",
+      "module_sha256": "05d83dc7b312c8174ce14fd325151b7f768c346606dd79f4379c59e09a279334"
+    },
+    "gcr3:618": {
+      "title": "Siasun GCR3-618",
+      "asset": {
+        "asset_id": "3f8cfa51-be05-5b9a-aeb8-788cebd5ea87",
+        "package_digest": "d9a54293cb53d3e29b3f5d3cac4533372cbbbd75d39fd5910b5cbc60864baba9",
+        "package_path": "04_设备/siasun/gcr3-618__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr3_618_dfebd3dc/module.json",
+      "module_sha256": "a03b1b6b0c9d6f704b2fbdff39c0dc38df5f62c3b2a8ea906a9f0fdd981b1807"
+    },
+    "gcr7:910": {
+      "title": "Siasun GCR7-910",
+      "asset": {
+        "asset_id": "b88d3eb5-8961-5daf-9653-db7d7a845f9f",
+        "package_digest": "f77452f27a133508426ece570e8b2743f48e8217dc4219f87961f782055a1f99",
+        "package_path": "04_设备/siasun/gcr7-910__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr7_910_dc02feed/module.json",
+      "module_sha256": "38d192a8301a51ddbece7c7e69ac4c39aa579e7957bf441222cbcaad867af357"
+    },
+    "sr20a": {
+      "title": "Siasun SR20A",
+      "asset": {
+        "asset_id": "c07491ee-7455-566b-b6a9-9827a5b8103c",
+        "package_digest": "3d90d6a839a85343ff42551c5118009de01a00323625e3c1b664c29026d2b140",
+        "package_path": "04_设备/siasun/sr20a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr20a/module.json",
+      "module_sha256": "c75979971947fd00b2c11f4b86d105453d1fc825f689511824c5fdd2deaa4d1a"
+    },
+    "sr80b": {
+      "title": "Siasun SR80B",
+      "asset": {
+        "asset_id": "4d1b8ed4-2a89-5282-b531-5cf59ce7a430",
+        "package_digest": "25aebd9d35264902358001bf2654dda1b524b64e9d3cbca201faa1e33daa4135",
+        "package_path": "04_设备/siasun/sr80b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr80b/module.json",
+      "module_sha256": "af1236c14beca6219804be64792f186e558fa8b22b3336cca26d1d0db7126173"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "inovance",
+  "model": "irs311:7:90tsint",
+  "title": "INOVANCE IRS311-7-90TS-INT",
+  "asset": {
+    "asset_id": "6fa12c16-9309-57b2-8549-b2a878f08522",
+    "package_digest": "ae4fa584e952ae3cdcc21d61a49fa31d63dad3e6de2c41a24b6b54ffa8104f81",
+    "package_path": "04_设备/inovance/irs311-7-90ts-int__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6fa12c16-9309-57b2-8549-b2a878f08522",
+      "package_digest": "ae4fa584e952ae3cdcc21d61a49fa31d63dad3e6de2c41a24b6b54ffa8104f81",
+      "package_path": "04_设备/inovance/irs311-7-90ts-int__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -125.0,
+          -70.0,
+          -190.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            385.0
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            440.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            40.0,
+            0.0,
+            420.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            88.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          80.0,
+          190.0,
+          190.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "10a7b59c0d3c55da5ce504f62e9f8fadfe943f1d7d2adbc5d0cddb4f530ecc84",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/irs311-7-90ts-int__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "INOVANCE.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "IRS311-7-90TS-INT",
+          "manufacturer": "INOVANCE",
+          "variant": "",
+          "display": "INOVANCE IRS311-7-90TS-INT",
+          "path": "robots/models/INOVANCE-IRS311-7-90TS-INT.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 911,
+          "axes": 6,
+          "library_assets": [
+            "6fa12c16-9309-57b2-8549-b2a878f08522"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/INOVANCE-IRS311-7-90TS-INT.robot",
+        "path": "simready_usd/INOVANCE-IRS311-7-90TS-INT.robot",
+        "sha256": "e54f0952d0a09d0b2d986ee8dc70b990653dcd78d0316136a99ffc5daa0e8b41"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

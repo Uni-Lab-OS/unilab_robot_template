@@ -1,0 +1,54 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_lrmate200id_moveit_plugins_431b2d97f8",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "d8f42bd73584b255df87098395512538882caea1",
+    "path": "robots/fanuc/ros_industrial/moveit_cfgs/fanuc_lrmate200id_moveit_plugins",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "8e57052f3118a35019dd1ef76047b987f47f8a15281806d719348939188eb5d9",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200id7l_kinematics/CMakeLists.txt",
+      "sha256": "c1aab89cbaa81e2fc1904ae9c1d33dee74347e7c79e12a1a99f886130b6bae9c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200id7l_kinematics/fanuc_lrmate200id7l_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "afc03deba9af11df66c1e05bd7169109c74543e8ee0596f3438d3589776b4c42",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200id_kinematics/CMakeLists.txt",
+      "sha256": "6ddb51ac2694ff48e5e44303c082d67a72c138c3b61463cfa6cdcc53f28ee513",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "lrmate200id_kinematics/fanuc_lrmate200id_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "cfec3bf461364784e16396f4a5ad55f27735280b3d505f3cc607eac4dc3f301d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "de91b0489bc583641e4e8eb1f5897e8b176baae28132f000910ab5a9ddaafa07",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "2703f89405b04596815d169da5af792a0b01787409b4dedb8023e95caba649ae",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

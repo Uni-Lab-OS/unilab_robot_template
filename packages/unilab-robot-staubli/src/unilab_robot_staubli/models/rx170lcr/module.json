@@ -1,0 +1,366 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "staubli",
+  "model": "rx170lcr",
+  "title": "RX170 L CR",
+  "asset": {
+    "asset_id": "ec991267-64d6-5817-84ca-5c4426c1f750",
+    "package_digest": "9088de59c34fe1402f8633dd653f6a3afa70c46122207bc5e4b393a7e50742f7",
+    "package_path": "04_设备/staubli/rx170_l_cr__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ec991267-64d6-5817-84ca-5c4426c1f750",
+      "package_digest": "9088de59c34fe1402f8633dd653f6a3afa70c46122207bc5e4b393a7e50742f7",
+      "package_path": "04_设备/staubli/rx170_l_cr__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7650",
+            "id": "dof:7897",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -180.0,
+                180.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                180.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8181",
+            "id": "dof:8429",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -120.0,
+              120.0
+            ],
+            "parent_node_id": "node:7650",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -120.0,
+                120.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -120.0,
+                120.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:8713",
+            "id": "dof:8961",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -145.0,
+              145.0
+            ],
+            "parent_node_id": "node:8181",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -145.0,
+                145.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -145.0,
+                145.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9245",
+            "id": "dof:9493",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -270.0,
+              270.0
+            ],
+            "parent_node_id": "node:8713",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -270.0,
+                270.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -270.0,
+                270.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:9777",
+            "id": "dof:10025",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -110.0,
+              130.0
+            ],
+            "parent_node_id": "node:9245",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -110.0,
+                130.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -110.0,
+                130.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:10309",
+            "id": "dof:10557",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -270.0,
+              270.0
+            ],
+            "parent_node_id": "node:9777",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -270.0,
+                270.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -270.0,
+                270.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "4de8d299135b42b5d1d0e79908ab85fb592fe3174df0e043045b5a75912b890a",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "4de8d299135b42b5d1d0e79908ab85fb592fe3174df0e043045b5a75912b890a",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1eb4e3e0ac6fa2b7712c1db934875bd7da93155451527778365730e39da75c71",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rx170_l_cr__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apistaubli",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apistaubli.exe",
+        "sha256": "a875103302d07802b297357519782c73691d2a16af26d36a80ee04e63aa4b2d0",
+        "bytes": 451584,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "staubli controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Staubli_Adept_Vplus.py",
+      "Staubli_S6.py",
+      "Staubli_VAL3.py",
+      "Staubli_VAL3_Machining.py",
+      "Staubli_VAL3_simplified.py",
+      "Staubli_VAL3_XMOVE.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/staubli/val3_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/staubli/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "RX170 L CR",
+          "manufacturer": "Staubli",
+          "variant": "",
+          "path": "Components/Staubli/Robots/RX170 L CR.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "2000.0",
+          "vcid": "8bdc1e93-8ab4-4ead-b6d2-c848c0e91976",
+          "library_assets": [
+            "ec991267-64d6-5817-84ca-5c4426c1f750"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RX170 L CR.vcmx",
+        "path": "simready_usd/RX170 L CR.vcmx",
+        "sha256": "4de8d299135b42b5d1d0e79908ab85fb592fe3174df0e043045b5a75912b890a"
+      }
+    ],
+    "published_revision_mapping_sha256": "f64c7476d5990ce770ae3312ff8c413e1d01388eeaa871cb531d4fce346fb8ff"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "creaform",
+  "models": {
+    "metrascan": {
+      "title": "Creaform MetraSCAN",
+      "asset": {
+        "asset_id": "30d8ed08-c48c-5b38-a773-4b55834075de",
+        "package_digest": "ba59b640f0ecb00a7e23870c0af075c8014ef27cd31aef10acabd7ee6a1ef97e",
+        "package_path": "01_零部件/creaform/metrascan__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/metrascan/module.json",
+      "module_sha256": "ac4be4d0a4f249f974ca6007d8b639944fd51341b2262d9cc2a784ff6aa0b627"
+    },
+    "metrascanfieldofview": {
+      "title": "Creaform MetraSCAN Field-of-view",
+      "asset": {
+        "asset_id": "c6032e9b-4a67-53a6-bdd8-0c708fb6d3e7",
+        "package_digest": "786282dcdebbd34a5f19dc8471213b5dd688cd1884e14b06db4334b6641033ca",
+        "package_path": "01_零部件/creaform/metrascan_field-of-view__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/metrascanfieldofview/module.json",
+      "module_sha256": "bfe86c110718e76fa903fd97152df4faf82cedad0e652e77cf61b4d24edc34e8"
+    }
+  },
+  "source_profiles": []
+}

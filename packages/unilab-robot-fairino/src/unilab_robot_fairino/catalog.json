@@ -1,0 +1,162 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "fairino",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "fr10": {
+      "title": "FAIRINO FR10｜多源合并",
+      "asset": {
+        "asset_id": "6228ceec-02d3-5e5a-b9a7-2e7eb698e15b",
+        "package_digest": "b4909e5211774d25318eb6c3c00db7aa48ecf9935649eecf045f49d1fe18803d",
+        "package_path": "04_设备/fairino/fr10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr10/module.json",
+      "module_sha256": "d81f463e7be19a3ee177e385f8a5fa56ec657d819b494810d34fe2ad784dd5f0"
+    },
+    "fr16": {
+      "title": "FAIRINO FR16｜多源合并",
+      "asset": {
+        "asset_id": "9d8aa6d5-51a6-54d4-836d-b813ea75d65d",
+        "package_digest": "9ec5f2cde3357f278c5e10d88f2724ba926e96ce19462690de0c444a16b7c7b2",
+        "package_path": "04_设备/fairino/fr16__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr16/module.json",
+      "module_sha256": "f6e8aa3551f7b9e89eb7b21fb2c2f534414c6e6b7def5e0940ab167d18ef2c55"
+    },
+    "fr20": {
+      "title": "FAIRINO FR20｜多源合并",
+      "asset": {
+        "asset_id": "18e0f49e-c2d6-5ab3-b7d1-6ca25d79522a",
+        "package_digest": "1385778a17a3389c731cf5dd4b7957c78241cd8d4d3b011281221b1ba7b5fab6",
+        "package_path": "04_设备/fairino/fr20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr20/module.json",
+      "module_sha256": "781c04e6fdb88804ddfc6c1154d7d681d633aa75f7c75bab5b8b7921a5bf7bc5"
+    },
+    "fr3": {
+      "title": "FAIRINO FR3｜多源合并",
+      "asset": {
+        "asset_id": "a6b5a059-729e-5e3f-8da1-182ceff4aeec",
+        "package_digest": "deeaddce27b82c7db1874a5727659b2c924f7626427035fbe52fc7a087d8030b",
+        "package_path": "04_设备/fairino/fr3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr3/module.json",
+      "module_sha256": "99da4b061498dd1c8217528e9dd1498bda35c8989a792da48bce0a7567370424"
+    },
+    "fr30": {
+      "title": "FAIRINO FR30｜多源合并",
+      "asset": {
+        "asset_id": "defdf287-d628-5189-98c0-63a3af79f7f5",
+        "package_digest": "bf8f0efbb9367b26e75dbc408b270c39d3c2861e0dc0b8e0f0be30b2aa7decc4",
+        "package_path": "04_设备/fairino/fr30__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr30/module.json",
+      "module_sha256": "24791c47556389cc09288255b4e61c45c56ae3916db83f045c58eb869c178a16"
+    },
+    "fr5": {
+      "title": "FAIRINO FR5｜多源合并",
+      "asset": {
+        "asset_id": "4e40de77-3598-5514-acfc-2ce9d3d4fe72",
+        "package_digest": "bdcc1273d9b10f698a89b8eff8f980505bcbd4b713f890f6ccfe4e3c4778f86b",
+        "package_path": "04_设备/fairino/fr5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fr5/module.json",
+      "module_sha256": "61ccfadc75bf531cd1b4a2f748a38ff901683f0430207b9ca215b13e72420de2"
+    },
+    "fr3mt": {
+      "title": "FAIRINO FR3MT",
+      "asset": {
+        "asset_id": "d562ceba-a312-587b-be6b-026ee6fef20f",
+        "package_digest": "e4e6a2202950b14b4f4a21c13212ed1d06f97054b1c6a98714a73d5b02ed0c8f",
+        "package_path": "04_设备/fairino/fr3mt__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fr3mt/module.json",
+      "module_sha256": "77274635f3548e7f07f4c11f47fbd3714e8a749468fc3685b1d938158f1e4634"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "fairino10_v6_moveit2_config_1596272eca",
+      "manifest": "source_profiles/fairino10_v6_moveit2_config_1596272eca/source.lock.json",
+      "sha256": "fe2726d1d625124cf78f46f8d4ef743f5ed3622273f23a168bbaeddcbc2e7f68",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino16_v6_moveit2_config_4ca830d7b8",
+      "manifest": "source_profiles/fairino16_v6_moveit2_config_4ca830d7b8/source.lock.json",
+      "sha256": "2ec495f8d3ee7350e2feba2d8d1a4430e1cc9f93cdff2bd788a2871ff544a329",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino20_v6_moveit2_config_b1c19d4613",
+      "manifest": "source_profiles/fairino20_v6_moveit2_config_b1c19d4613/source.lock.json",
+      "sha256": "88002eeaebdc8f0aa250db84293d8e1ba9d7acafb43ebd42a3b9860e97a2e160",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino30_v6_moveit2_config_e450430ed7",
+      "manifest": "source_profiles/fairino30_v6_moveit2_config_e450430ed7/source.lock.json",
+      "sha256": "2ac8b65eab703d7d1cc1212acd875f81409f1973bd83a87b5d452bc161866237",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino3_v6_moveit2_config_69a74fb40a",
+      "manifest": "source_profiles/fairino3_v6_moveit2_config_69a74fb40a/source.lock.json",
+      "sha256": "5d0f201b0083dc9e20f1950e82e8174b633fd0853bb8bcc75df80f61be3f0458",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino3mt_v6_moveit2_config_fb173a75a1",
+      "manifest": "source_profiles/fairino3mt_v6_moveit2_config_fb173a75a1/source.lock.json",
+      "sha256": "9649ee1b767761fd00dfcde465c83e3d4e06ec8dffd1426e175d4c99b9737adc",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "fairino5_v6_moveit2_config_1e06250cdc",
+      "manifest": "source_profiles/fairino5_v6_moveit2_config_1e06250cdc/source.lock.json",
+      "sha256": "33850519a3cab31646cb5f40cedda48ae6babc66d2a260264ded5702e21ba6fa",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

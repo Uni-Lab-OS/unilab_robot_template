@@ -1,0 +1,39 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_fake_controller_manager_b33dd00168",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit_plugins/moveit_fake_controller_manager",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "3ba00b9e181f80b39d5178539aaf43de92820e8d3c94436aabf8c816aaa532b0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "moveit_fake_controller_manager_plugin_description.xml",
+      "sha256": "53ee37b8e7ee95342d780a5c539a92de7ca8e469b4de8e3a598f237b3f532470",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "0d1b9bdcda48b1e07fd820a83cd536fb57c70d7f6ee8291886fffc451f1f4692",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "f7970b75f991c0b7a0616a4c645d656d0cb0af305e80986668d2a0b4d8e60b08",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

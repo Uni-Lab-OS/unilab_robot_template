@@ -1,0 +1,207 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rozum",
+  "model": "rc10",
+  "title": "Rozum RC10",
+  "asset": {
+    "asset_id": "ca149747-5c4d-51e2-9496-a58345fe071d",
+    "package_digest": "f4e013900f253ddd1871094037109f1e9f3a7b692a73d51c6a713bd2f1ee2ae8",
+    "package_path": "04_设备/rozum/rc10__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ca149747-5c4d-51e2-9496-a58345fe071d",
+      "package_digest": "f4e013900f253ddd1871094037109f1e9f3a7b692a73d51c6a713bd2f1ee2ae8",
+      "package_path": "04_设备/rozum/rc10__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -167.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            168.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            -3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            610.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            550.2,
+            0.0,
+            165.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            139.8
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            139.8
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          167.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "9662fbc09b237145ee23d16ca82f34ec9d9bfddda1a3da5d545595022745c8be",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rc10__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Rozum_RC_API.py",
+      "Rozum_RC_Pulse.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RC10",
+          "manufacturer": "Rozum",
+          "variant": "",
+          "display": "Rozum RC10",
+          "path": "robots/models/Rozum-RC10.robot",
+          "type": "robots",
+          "payload": 10,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "ca149747-5c4d-51e2-9496-a58345fe071d"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Rozum-RC10.robot",
+        "path": "simready_usd/Rozum-RC10.robot",
+        "sha256": "0df2741feff2b6b908ffec278595f654042cb1d5d403ec2ca0f4f8e7de8367e5"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

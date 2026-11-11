@@ -1,0 +1,103 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "finishxmirrorfinish",
+  "title": "PushCorp FinishX - Mirror Finish",
+  "asset": {
+    "asset_id": "df400166-a48f-54a0-8e5f-fe82596648f2",
+    "package_digest": "7cd5b0f1ac6fd350e3a2b091bed98181554dc1d5a6a9005ecd87fbc3062e449c",
+    "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_mirror_finish__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "df400166-a48f-54a0-8e5f-fe82596648f2",
+      "package_digest": "7cd5b0f1ac6fd350e3a2b091bed98181554dc1d5a6a9005ecd87fbc3062e449c",
+      "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_mirror_finish__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "14bfc6b3e381fea6fcd8959dce179bca8de791838e07972995bb4009b64bca4e",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "14bfc6b3e381fea6fcd8959dce179bca8de791838e07972995bb4009b64bca4e",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6b418122a09c2969e03ab6d7e5e6e203ba08c8b5badbc05bdede38a24c101cb5",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pushcorp_finishx_-_mirror_finish__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "PushCorp FinishX - Mirror Finish",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/PushCorp FinishX - Mirror Finish.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "2c9930c5-4066-49dd-8a13-6cac626bb6b6",
+          "library_assets": [
+            "df400166-a48f-54a0-8e5f-fe82596648f2"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/PushCorp FinishX - Mirror Finish.vcmx",
+        "path": "simready_usd/PushCorp FinishX - Mirror Finish.vcmx",
+        "sha256": "14bfc6b3e381fea6fcd8959dce179bca8de791838e07972995bb4009b64bca4e"
+      }
+    ]
+  }
+}

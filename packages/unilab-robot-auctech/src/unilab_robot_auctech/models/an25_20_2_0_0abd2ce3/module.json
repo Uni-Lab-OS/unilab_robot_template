@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "auctech",
+  "model": "an25:20:2.0",
+  "title": "AUCTECH AN-25-20-2.0",
+  "asset": {
+    "asset_id": "705f8260-4724-5cb7-8063-10b2b909be00",
+    "package_digest": "cc1bd0864f28f10586feffe358eabf0e2e7a8c85b46336c3d7fafdbe59d6259d",
+    "package_path": "04_设备/auctech/an-25-20-2.0__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "705f8260-4724-5cb7-8063-10b2b909be00",
+      "package_digest": "cc1bd0864f28f10586feffe358eabf0e2e7a8c85b46336c3d7fafdbe59d6259d",
+      "package_path": "04_设备/auctech/an-25-20-2.0__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -156.0,
+          -200.0,
+          -180.0,
+          -135.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            490.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            980.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            0.0,
+            860.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            110.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          99.0,
+          75.0,
+          180.0,
+          135.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5af38935f5267ed70c23295fa8a01f6c3e0684a5950db768343edea11e051655",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/an-25-20-2.0__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AN-25-20-2.0",
+          "manufacturer": "AUCTECH",
+          "variant": "",
+          "display": "AUCTECH AN-25-20-2.0",
+          "path": "robots/models/AUCTECH-AN-25-20-2-0.robot",
+          "type": "robots",
+          "payload": 25,
+          "reach": 2013,
+          "axes": 6,
+          "library_assets": [
+            "705f8260-4724-5cb7-8063-10b2b909be00"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/AUCTECH-AN-25-20-2-0.robot",
+        "path": "simready_usd/AUCTECH-AN-25-20-2-0.robot",
+        "sha256": "36ff29a54f009d2695dcde71bcca5f547c07eb3d2d2bdc48d67e7107fb3b234c"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

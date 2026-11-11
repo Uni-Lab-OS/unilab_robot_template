@@ -1,0 +1,144 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_vc",
+  "model": "gripper2finger",
+  "title": "Gripper 2-Finger",
+  "asset": {
+    "asset_id": "2712a7ff-f287-5933-aa5f-043ab1263198",
+    "package_digest": "cd0e16e23363eb34b6345976a1bfac8e8c1a289429f28e817f3473298481baef",
+    "package_path": "03_机构模块/未指定_通用模型/gripper_2-finger__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2712a7ff-f287-5933-aa5f-043ab1263198",
+      "package_digest": "cd0e16e23363eb34b6345976a1bfac8e8c1a289429f28e817f3473298481baef",
+      "package_path": "03_机构模块/未指定_通用模型/gripper_2-finger__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:2431",
+            "id": "joint:2173",
+            "independent": true,
+            "initial_source": 30.0,
+            "input_limits_at_initial_configuration": [
+              0.0,
+              30.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+X",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                0.0,
+                0.03
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                0.0,
+                30.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:2871",
+            "id": "joint:2301",
+            "independent": false,
+            "initial_source": 30.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "-X",
+            "source_type": "TranslationalFollower",
+            "standard_axis_limits": null,
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "76ca9cff9d893f455ef7175369cfa648be98d57be5e912e2a3be174944a91005",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "b03b3d46d43ac589cf10638ef6a95ef93549fff577c67e42fcb79c18561cf7e9",
+        "physics_contract_sha256": "a5fa26637651a97dbd2f22a487a5d66b04f05ca8d4f7491dd4e5c7dcde36a3a1",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "76ca9cff9d893f455ef7175369cfa648be98d57be5e912e2a3be174944a91005",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gripper_2-finger__r002.usda"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Gripper 2-Finger",
+          "manufacturer": "Visual Components",
+          "type": "Robot Tools",
+          "path": "Components/Visual Components/Robot Tools/Gripper 2-Finger.vcmx"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Gripper 2-Finger.vcmx",
+        "path": "simready_usd/Gripper 2-Finger.vcmx",
+        "sha256": "76ca9cff9d893f455ef7175369cfa648be98d57be5e912e2a3be174944a91005"
+      }
+    ],
+    "published_revision_mapping_sha256": "37049b2d1525f6b32462f216e487f7145d315c38961e937763975609188f2c37"
+  }
+}

@@ -1,0 +1,791 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr12r1810:2",
+  "title": "KUKA KR 12 R1810-2｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "752b8b61-0f1f-5f0d-93f4-ae01aa3a6e04",
+    "package_digest": "3ac292611ac777153451f7bd69aa2c0178b0bc69f31c4bbc8bac464f213a3e99",
+    "package_path": "04_设备/kuka/kr12r1810_2__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "752b8b61-0f1f-5f0d-93f4-ae01aa3a6e04",
+      "package_digest": "3ac292611ac777153451f7bd69aa2c0178b0bc69f31c4bbc8bac464f213a3e99",
+      "package_path": "04_设备/kuka/kr12r1810_2__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR 12 R1810-2",
+              "source": "robots/models/KUKA-KR-12-R1810-2.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "count",
+          "value": 6,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact-model published specification; not geometry/dynamics certification",
+              "title": "KUKA KR12R1810-2 official Russian datasheet",
+              "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321016_ru.pdf?hash=77546ADDE1CEB5A491B2D7530B04C338&rev=eb2fdf6d28924b9cb0232db3cc156cea"
+            }
+          ]
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 12 R1810-2",
+              "source": "robots/models/KUKA-KR-12-R1810-2.robot",
+              "source_family": "RoboDK",
+              "value": 12.0
+            },
+            {
+              "model": "KR 12 R1810-2",
+              "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+              "source_family": "VC",
+              "value": 12.0
+            },
+            {
+              "model": "KR 12 R1810-2",
+              "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+              "source_family": "VC",
+              "value": 12.0
+            }
+          ],
+          "conditional_maximum": {
+            "condition": "Reduced load-centre distance and favorable supplementary load; manufacturer load-case approval required; not unconditional rated load",
+            "unit": "kg",
+            "value": 14.5
+          },
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 12,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact-model published specification; not geometry/dynamics certification",
+              "title": "KUKA KR12R1810-2 official Russian datasheet",
+              "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321016_ru.pdf?hash=77546ADDE1CEB5A491B2D7530B04C338&rev=eb2fdf6d28924b9cb0232db3cc156cea"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 12 R1810-2",
+              "source": "robots/models/KUKA-KR-12-R1810-2.robot",
+              "source_family": "RoboDK",
+              "value": 1813.0
+            },
+            {
+              "model": "KR 12 R1810-2",
+              "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+              "source_family": "VC",
+              "value": 1813.0
+            },
+            {
+              "model": "KR 12 R1810-2",
+              "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+              "source_family": "VC",
+              "value": 1810.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1813,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact-model published specification; not geometry/dynamics certification",
+              "title": "KUKA KR12R1810-2 official Russian datasheet",
+              "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321016_ru.pdf?hash=77546ADDE1CEB5A491B2D7530B04C338&rev=eb2fdf6d28924b9cb0232db3cc156cea"
+            }
+          ]
+        },
+        "robot_mass": {
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 255
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -185.0,
+          -185.0,
+          -138.0,
+          -350.0,
+          -130.0,
+          -350.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            520.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            780.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            0.0,
+            860.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            153.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          185.0,
+          65.0,
+          175.0,
+          350.0,
+          130.0,
+          350.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "741c53d6-7e43-5643-9ee5-89c056872c9e",
+              "entrypoints": {
+                "usd": "simready_usd/kr_12_r1810-2__r001.usdc"
+              },
+              "package_digest": "8f19709ecd33cebc31dc6a5a20537a25e623a4d7f747b8b718b4df78ab6a732c",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -185.0,
+                    -185.0,
+                    -138.0,
+                    -350.0,
+                    -130.0,
+                    -350.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      520.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      160.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      780.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      150.0,
+                      0.0,
+                      860.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      153.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    185.0,
+                    65.0,
+                    175.0,
+                    350.0,
+                    130.0,
+                    350.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "cb16c8b7569a0fca3be3ad8a3d9c1fcdef40410eab9a0a5a3b1cc3222762f227",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "KUKA KR 12 R1810-2",
+          "family": "RoboDK",
+          "library_assets": [
+            "741c53d6-7e43-5643-9ee5-89c056872c9e"
+          ],
+          "manufacturer": "KUKA",
+          "name": "KR 12 R1810-2",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR-12-R1810-2.robot",
+            "path": "simready_usd/KUKA-KR-12-R1810-2.robot",
+            "sha256": "090864d1dee894a2d0724eb440a06fda14dd77da6db2a6c4636e40fc84ac92ae"
+          },
+          "path": "robots/models/KUKA-KR-12-R1810-2.robot",
+          "payload": 12,
+          "reach": 1813,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 12 R1810-2",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 12 R1810-2.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_12_r1810-2/KR 12 R1810-2.vcmx",
+            "sha256": "9ded93f02e7c033c2fedc8fbcb92861f76a8e4870fb96b271922dbf6d7272089"
+          },
+          "path": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+          "payload": "12",
+          "reach": "1813",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "22639e91-b9a6-4f04-8049-e06a581a8256"
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 12 R1810-2",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 12 R1810-2.vcmx",
+            "path": "simready_usd/source_assets/VC/1_kr_12_r1810-2/KR 12 R1810-2.vcmx",
+            "sha256": "db0ca208e0402fab338d667f59dd0d80f0510cc5a329dc0dbfe29c169b4b7d13"
+          },
+          "path": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+          "payload": "12",
+          "reach": "1810",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "6ad5ff40-a755-4212-8838-6ee417d05132"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "cb16c8b7569a0fca3be3ad8a3d9c1fcdef40410eab9a0a5a3b1cc3222762f227",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr12r1810_2__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR 12 R1810-2｜多源合并",
+          "id": "merged_robot_752b8b61_0f1f_5f0d_93f4_ae01aa3a6e04",
+          "metadata": {
+            "asset_id": "752b8b61-0f1f-5f0d-93f4-ae01aa3a6e04",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR-12-R1810-2.robot",
+        "path": "simready_usd/KUKA-KR-12-R1810-2.robot",
+        "sha256": "090864d1dee894a2d0724eb440a06fda14dd77da6db2a6c4636e40fc84ac92ae"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 12 R1810-2.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_12_r1810-2/KR 12 R1810-2.vcmx",
+        "sha256": "9ded93f02e7c033c2fedc8fbcb92861f76a8e4870fb96b271922dbf6d7272089"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 12 R1810-2.vcmx",
+        "path": "simready_usd/source_assets/VC/1_kr_12_r1810-2/KR 12 R1810-2.vcmx",
+        "sha256": "db0ca208e0402fab338d667f59dd0d80f0510cc5a329dc0dbfe29c169b4b7d13"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "KR 12 R1810-2",
+                "source": "robots/models/KUKA-KR-12-R1810-2.robot",
+                "source_family": "RoboDK",
+                "value": 1813.0
+              },
+              {
+                "model": "KR 12 R1810-2",
+                "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+                "source_family": "VC",
+                "value": 1813.0
+              },
+              {
+                "model": "KR 12 R1810-2",
+                "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH-2/KR 12 R1810-2.vcmx",
+                "source_family": "VC",
+                "value": 1810.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1813,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Exact-model published specification; not geometry/dynamics certification",
+                "title": "KUKA KR12R1810-2 official Russian datasheet",
+                "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321016_ru.pdf?hash=77546ADDE1CEB5A491B2D7530B04C338&rev=eb2fdf6d28924b9cb0232db3cc156cea"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1810.0,
+            1813.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "kuka",
+        "kr12r1810:2"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Exact-model published specification; not geometry/dynamics certification",
+            "title": "KUKA KR12R1810-2 official Russian datasheet",
+            "url": "https://www.kuka.com/-/media/kuka-downloads/imported/8350ff3ca11642998dbdc81dcc2ed44c/0000321016_ru.pdf?hash=77546ADDE1CEB5A491B2D7530B04C338&rev=eb2fdf6d28924b9cb0232db3cc156cea"
+          }
+        ],
+        "fields": {
+          "axes": {
+            "status": "manufacturer_verified",
+            "unit": "count",
+            "value": 6
+          },
+          "payload": {
+            "conditional_maximum": {
+              "condition": "Reduced load-centre distance and favorable supplementary load; manufacturer load-case approval required; not unconditional rated load",
+              "unit": "kg",
+              "value": 14.5
+            },
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 12
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1813
+          },
+          "robot_mass": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 255
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "741c53d6-7e43-5643-9ee5-89c056872c9e",
+        "original_package_digest": "8f19709ecd33cebc31dc6a5a20537a25e623a4d7f747b8b718b4df78ab6a732c",
+        "source": "robots/models/KUKA-KR-12-R1810-2.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees",
+        "multiple_VC"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

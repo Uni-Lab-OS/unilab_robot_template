@@ -1,0 +1,260 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hyundai",
+  "model": "ha006l",
+  "title": "Hyundai HA006L",
+  "asset": {
+    "asset_id": "ac1facae-33bb-5681-8498-fcee6bfa9b47",
+    "package_digest": "86775bc4de5f47fa0c24f5d8013eaa2144c3fa8bc18013582f36577900e39ba0",
+    "package_path": "04_设备/hyundai_robotics/ha006l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ac1facae-33bb-5681-8498-fcee6bfa9b47",
+      "package_digest": "86775bc4de5f47fa0c24f5d8013eaa2144c3fa8bc18013582f36577900e39ba0",
+      "package_path": "04_设备/hyundai_robotics/ha006l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -446.6,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -185.0,
+          -70.0,
+          -80.0,
+          -195.0,
+          -135.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            446.6
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            770.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            140.0,
+            0.0,
+            1055.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            105.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          185.0,
+          195.0,
+          180.0,
+          195.0,
+          135.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ff39c20533e03b2a87d77fb4f30d0031a95073ae34d3ccfbf6cdd1cf31b0980a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ha006l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Hyundai.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "HA006L",
+          "manufacturer": "Hyundai Robotics",
+          "variant": "",
+          "display": "Hyundai HA006L",
+          "path": "robots/models/Hyundai-HA006L.robot",
+          "type": "robots",
+          "payload": 6,
+          "reach": 1994,
+          "axes": 6,
+          "library_assets": [
+            "ac1facae-33bb-5681-8498-fcee6bfa9b47"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Hyundai-HA006L.robot",
+        "path": "simready_usd/Hyundai-HA006L.robot",
+        "sha256": "39e6ab7abca2e1132ec53b43cb238a66c3eda334827dcf78bdb1e6e6bded3b78"
+      }
+    ],
+    "source_brand_alias": "hyundairobotics"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

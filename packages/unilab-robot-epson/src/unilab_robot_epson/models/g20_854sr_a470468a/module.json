@@ -1,0 +1,352 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "epson",
+  "model": "g20:854sr",
+  "title": "G20-854 SR",
+  "asset": {
+    "asset_id": "2e54c4b3-887c-5679-b674-acfb3bc6cf97",
+    "package_digest": "29577bfc54af3b5f80cbe83122626acdcfe1fde480ddaacbad311daff5599884",
+    "package_path": "04_设备/epson/g20-854_sr__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2e54c4b3-887c-5679-b674-acfb3bc6cf97",
+      "package_digest": "29577bfc54af3b5f80cbe83122626acdcfe1fde480ddaacbad311daff5599884",
+      "package_path": "04_设备/epson/g20-854_sr__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:8380",
+            "id": "dof:8627",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -62.0,
+              242.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -62.0,
+                242.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -62.0,
+                242.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8911",
+            "id": "dof:9158",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -152.5,
+              152.5
+            ],
+            "parent_node_id": "node:8380",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -152.5,
+                152.5
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -152.5,
+                152.5
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9442",
+            "id": "dof:9690",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -422.5,
+              0.0
+            ],
+            "parent_node_id": "node:8911",
+            "source_axis_label": "+Z",
+            "source_type": "Translational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -0.4225,
+                0.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -422.5,
+                0.0
+              ],
+              "unit": "metre"
+            },
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:10001",
+            "id": "dof:10248",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9442",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "2e3065d9253fcce32e5da49ff162454b1c110ca88b3c149691f0002f42fa6318",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "2e3065d9253fcce32e5da49ff162454b1c110ca88b3c149691f0002f42fa6318",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "451cc3ad2025b4b8df389a43962f545775a4486e9c86a6c1cb4b94a86cc570b6",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/g20-854_sr__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:EpsonDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/EpsonDriver.py",
+        "sha256": "fc186a14ba3f9293d51561e6a869634cc6907442f9e988f3b4ea9b7f553ffb7c",
+        "bytes": 1354,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/EpsonDriver.pyc",
+            "sha256": "5223587a25cb999225c82c765564503b8a3ba2c83aadbf743fa9f2ee47218f8e"
+          },
+          {
+            "relative_path": "api/Robot/v311/EpsonDriver.pyc",
+            "sha256": "055a720d9711e210fe12346b620b400ba93fcf7591e997e89f80ce8c3e642185"
+          },
+          {
+            "relative_path": "api/Robot/v312/EpsonDriver.pyc",
+            "sha256": "025f5136bc0021144e1a6ece759460a8d3841022ee0dc8ef36409af36e3a251f"
+          },
+          {
+            "relative_path": "api/Robot/v38/EpsonDriver.pyc",
+            "sha256": "47c6d6c13931138361e2d5d07ba03caebb6f4d1c5f5d44cb906aaef5a701e746"
+          },
+          {
+            "relative_path": "api/Robot/v39/EpsonDriver.pyc",
+            "sha256": "15bd500546899aa7accd0e2e119f18bf7036a5a5757b5df678dcf33ea59ff374"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "epson controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:epson:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/epson/ros2",
+        "repository_url": "https://github.com/Epson-Robots/epson-robot-ros2.git",
+        "code_tree_sha256": "18db755317b6cea2ec258f4ee734e858a1067ece5d4a0f77318b31650869c2e5",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "c3ec1db53fcd31a1c7d0a027ac662033c4d7dab646845a91799fb01a7bc16e7b"
+          },
+          {
+            "path": "readme_ja.md",
+            "sha256": "ef1278e1143479c9bc4d7584f7c976f7342738de197bb683599e97fed92ad2b7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a6d810145e1b0e74b88fdefded43bb370cc6014055a1889d2d891acd6e899264"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Epson_RC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "G20-854 SR",
+          "manufacturer": "Epson",
+          "variant": "",
+          "path": "Components/Epson/Robots/G20-854 SR.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "850.0",
+          "vcid": "11bac6a2-2e03-4133-8b17-5903ba41271c",
+          "library_assets": [
+            "2e54c4b3-887c-5679-b674-acfb3bc6cf97"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/G20-854 SR.vcmx",
+        "path": "simready_usd/G20-854 SR.vcmx",
+        "sha256": "2e3065d9253fcce32e5da49ff162454b1c110ca88b3c149691f0002f42fa6318"
+      }
+    ],
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "robotiq",
+  "model": "grippercoupling",
+  "title": "Gripper Coupling",
+  "asset": {
+    "asset_id": "4137d732-b51d-5bc8-90d0-11a10b316374",
+    "package_digest": "8f319873bb11550596a63d1724f4f5c5e8f56e0b655eaba3b8726444bd1b0dc6",
+    "package_path": "03_机构模块/robotiq/gripper_coupling__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "4137d732-b51d-5bc8-90d0-11a10b316374",
+      "package_digest": "8f319873bb11550596a63d1724f4f5c5e8f56e0b655eaba3b8726444bd1b0dc6",
+      "package_path": "03_机构模块/robotiq/gripper_coupling__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "d5d0105d68a9d5b1d61e135fedf121d5fe0097417a9f4a15114945c1c6419a23",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "d5d0105d68a9d5b1d61e135fedf121d5fe0097417a9f4a15114945c1c6419a23",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": [
+          {
+            "analysis": "conservative lexical source analysis; not complete Python control/data flow",
+            "decoded_script": "C:\\Users\\DP\\files\\asset-pipeline-runs\\vendor-full-library-20261105\\vc\\attempt-04\\jobs\\d5d0105d68a9d5b1d61e135fedf121d5fe0097417a9f4a15114945c1c6419a23\\attempt-01\\evidence\\physics\\scripts\\rsc-line-1036.py.txt",
+            "decoded_script_sha256": "fab3129a77b7f6130a80649ca300466142d8791014631397542b84549c2d4a08",
+            "effects": [
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 40,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:960",
+                  "kind": "Functionality",
+                  "line": 960,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 1036,
+                "text": "  adapter_frame.PositionMatrix = pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 41,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:960",
+                  "kind": "Functionality",
+                  "line": 960,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 1036,
+                "text": "  adapter_frame.rebuild()"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_creation_path",
+                "decoded_script_line": 44,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:960",
+                  "kind": "Functionality",
+                  "line": 960,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 1036,
+                "text": "  adapter_iface = flange_node.createBehavior(vc_beh.vcBehaviorType.ONE_TO_ONE_INTERFACE, ADAPTER_IFACE_NAME)"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 55,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:960",
+                  "kind": "Functionality",
+                  "line": 960,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 1036,
+                "text": "            adapter_prop.Value = adapter_frame"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 57,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:960",
+                  "kind": "Functionality",
+                  "line": 960,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 1036,
+                "text": "            adapter_prop.Value = prop.Value"
+              }
+            ],
+            "executed": false,
+            "owner": {
+              "id": "functionality:960",
+              "kind": "Functionality",
+              "line": 960,
+              "name": "PythonScript",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rPythonScript"
+            },
+            "source_member": "component.rsc",
+            "source_variable_line": 1036
+          }
+        ]
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:1340",
+              "kind": "Node",
+              "line": 1340,
+              "name": "TCP",
+              "node_id": "node:1340",
+              "node_path": [
+                {
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1340"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "33656e3a641d13ab946579b578d9dc169c311257b7ae039a3ecf857a7f05eeab",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "AdapterHeight": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1286,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "116f3b70a595501f9c9e41e4e164eeffe194d0f05c70e7da773e0f8ae56e31b6",
+                "source_settings": [
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 11
+              },
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1195,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1223,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "f3f4d4bd6284f2b0de463bb7b2a7a339810353315e20edf18a7bdcaa51fb8c36",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robotiq Gripper Coupling"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1209,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "30db85f3572436e866f4be6d721fd1815ff956e2356c5b3c0267e0db9c7851c1",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Gripper Coupling"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1113,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1237,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "CouplingType": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1298,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "d2de950bf83c8d4482ff5009f6569ba76aed2c992690fa4d2056842fceec7288",
+                "source_settings": [
+                  "VISIBLE",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTStepVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "50-4-M6"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1148,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "ShowCable": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1318,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "a964ec1e023e9380efbc18f2bfbe861a61dc745a446dad0cdeb2d352dd294cab",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1251,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 1099,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "Gripper Coupling",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(AdapterHeight)",
+                "line": 1346,
+                "owner": {
+                  "id": "node:1340",
+                  "kind": "Node",
+                  "line": 1340,
+                  "name": "TCP",
+                  "node_id": "node:1340",
+                  "node_path": [
+                    {
+                      "name": "Gripper Coupling",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:1340"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "52990cf52b0487786b3d3317adebb2169cb8f80af8d539dd25bebfd271902e5f",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:1340",
+              "kind": "Node",
+              "line": 1340,
+              "name": "TCP",
+              "node_id": "node:1340",
+              "node_path": [
+                {
+                  "name": "Gripper Coupling",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:1340"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "d5d0105d68a9d5b1d61e135fedf121d5fe0097417a9f4a15114945c1c6419a23"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2d399de4039d291557e8b78714ff90fc599656266c9f46d05b730dd2ca8ed583",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gripper_coupling__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/robotiq/ros2_gripper",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Gripper Coupling",
+          "manufacturer": "Robotiq",
+          "variant": "",
+          "path": "Components/Robotiq/Robot Tools/Gripper Coupling.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "7f5d69a1-9b8f-46f8-9c32-833f7f4a6229",
+          "library_assets": [
+            "4137d732-b51d-5bc8-90d0-11a10b316374"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Gripper Coupling.vcmx",
+        "path": "simready_usd/Gripper Coupling.vcmx",
+        "sha256": "d5d0105d68a9d5b1d61e135fedf121d5fe0097417a9f4a15114945c1c6419a23"
+      }
+    ]
+  }
+}

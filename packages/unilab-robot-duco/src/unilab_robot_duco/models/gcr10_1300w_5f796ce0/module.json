@@ -1,0 +1,309 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "duco",
+  "model": "gcr10:1300w",
+  "title": "GCR10-1300-W",
+  "asset": {
+    "asset_id": "8347f13b-3eaa-5669-b492-a369f2ce84a9",
+    "package_digest": "5bbb66102d5774a70748bf85e113bad17af0d3f24919439b8f50fd52b630d264",
+    "package_path": "04_设备/duco/gcr10-1300-w__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8347f13b-3eaa-5669-b492-a369f2ce84a9",
+      "package_digest": "5bbb66102d5774a70748bf85e113bad17af0d3f24919439b8f50fd52b630d264",
+      "package_path": "04_设备/duco/gcr10-1300-w__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:15379",
+            "id": "dof:15639",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:15923",
+            "id": "dof:16183",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -85.0,
+              265.0
+            ],
+            "parent_node_id": "node:15379",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -85.0,
+                265.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -85.0,
+                265.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:16467",
+            "id": "dof:16727",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -175.0,
+              175.0
+            ],
+            "parent_node_id": "node:15923",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -175.0,
+                175.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -175.0,
+                175.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:17011",
+            "id": "dof:17271",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -85.0,
+              265.0
+            ],
+            "parent_node_id": "node:16467",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -85.0,
+                265.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -85.0,
+                265.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:17555",
+            "id": "dof:17815",
+            "independent": true,
+            "initial_source": -90.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:17011",
+            "source_axis_label": "+X",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:18099",
+            "id": "dof:18359",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:17555",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "38bd1fb10b77ffe3c1d74da0f34b308cc77816f1b086086f502890f7b75d7ef9",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "38bd1fb10b77ffe3c1d74da0f34b308cc77816f1b086086f502890f7b75d7ef9",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "d01fb61a8f66ebd99218cc6156fe1c1a1363fdb2990d8326e7cecfaa5a1d8b03",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gcr10-1300-w__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "GCR10-1300-W",
+          "manufacturer": "DUCO",
+          "variant": "",
+          "path": "Components/DUCO/Robots/GCR10-1300-W.vcmx",
+          "type": "Robots",
+          "payload": "10",
+          "reach": "1300",
+          "vcid": "c949b3c1-5931-41e2-b0c1-4e056ea8837c",
+          "library_assets": [
+            "8347f13b-3eaa-5669-b492-a369f2ce84a9"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/GCR10-1300-W.vcmx",
+        "path": "simready_usd/GCR10-1300-W.vcmx",
+        "sha256": "38bd1fb10b77ffe3c1d74da0f34b308cc77816f1b086086f502890f7b75d7ef9"
+      }
+    ],
+    "published_revision_mapping_sha256": "f64c7476d5990ce770ae3312ff8c413e1d01388eeaa871cb531d4fce346fb8ff"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

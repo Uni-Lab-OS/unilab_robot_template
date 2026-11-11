@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "iimt",
+  "model": "ci20",
+  "title": "IIMT CI-20",
+  "asset": {
+    "asset_id": "8909a073-b6fc-5ff1-8b12-bb70df7552e0",
+    "package_digest": "c04c6b4d8b69f7938ba35dd4041ae7011be17b30cb1a02d9ce0fe064c93e4ff4",
+    "package_path": "04_设备/iimt/iimt_ci-20__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8909a073-b6fc-5ff1-8b12-bb70df7552e0",
+      "package_digest": "c04c6b4d8b69f7938ba35dd4041ae7011be17b30cb1a02d9ce0fe064c93e4ff4",
+      "package_path": "04_设备/iimt/iimt_ci-20__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            180.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            805.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            707.0,
+            -1.5707963267948966,
+            187.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            138.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            122.5
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5426b1beb4785ff7ef69a0914e11f1f6ecb70cd6b297caf9cedf62744d4f7925",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/iimt_ci-20__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "IIMT.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "IIMT CI-20",
+          "manufacturer": "IIMT",
+          "variant": "",
+          "display": "IIMT CI-20",
+          "path": "robots/models/IIMT-CI-20.robot",
+          "type": "robots",
+          "payload": 20,
+          "reach": 1650,
+          "axes": 6,
+          "library_assets": [
+            "8909a073-b6fc-5ff1-8b12-bb70df7552e0"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/IIMT-CI-20.robot",
+        "path": "simready_usd/IIMT-CI-20.robot",
+        "sha256": "8c939a24aa772501bb7f6970c05d52e7c279177bd90325626f18cc16e1cfa25c"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

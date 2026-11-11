@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "teknomotor",
+  "model": "qtcc4147cdbspindle",
+  "title": "Teknomotor QTC C4147-C-DB Spindle",
+  "asset": {
+    "asset_id": "01468b5d-d50d-530d-8701-9aaa13d5f70e",
+    "package_digest": "fcccb547810038c2875ff1a69006bc5958bfdd64166d03772c5787b6f6b6a7d7",
+    "package_path": "01_零部件/teknomotor/qtc_c4147-c-db_spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "01468b5d-d50d-530d-8701-9aaa13d5f70e",
+      "package_digest": "fcccb547810038c2875ff1a69006bc5958bfdd64166d03772c5787b6f6b6a7d7",
+      "package_path": "01_零部件/teknomotor/qtc_c4147-c-db_spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "57de38250fcdfb97f7410b5068b0a0659d58608e5367250211172acb07c91ac5",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qtc_c4147-c-db_spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QTC C4147-C-DB Spindle",
+          "manufacturer": "Teknomotor",
+          "variant": "",
+          "display": "Teknomotor QTC C4147-C-DB Spindle",
+          "path": "tools/models/Teknomotor-QTC-C4147-C-DB-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "01468b5d-d50d-530d-8701-9aaa13d5f70e"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Teknomotor-QTC-C4147-C-DB-Spindle.tool",
+        "path": "simready_usd/Teknomotor-QTC-C4147-C-DB-Spindle.tool",
+        "sha256": "6927006a6e981376fd69d599b540230d9e00b1f58c61fb45b03b017b68fa5ef3"
+      }
+    ]
+  }
+}

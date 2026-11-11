@@ -1,0 +1,142 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "pushcorp",
+  "models": {
+    "bt30asm02767:2": {
+      "title": "BT30 ASM02767-2",
+      "asset": {
+        "asset_id": "dcdb297c-7b0d-5e2b-b6f7-a51a4ee99dfa",
+        "package_digest": "122039442e670c0ee3959e22e565c7c1d55a51cb862b59bfbcd58e732eb53439",
+        "package_path": "03_机构模块/pushcorp/bt30_asm02767-2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bt30asm02767_2_73486c77/module.json",
+      "module_sha256": "7575604d1863d22d310e29f6f172912280dfa834f3e4aaeef1d3255202eca7e2"
+    },
+    "bt30par04343:1": {
+      "title": "BT30 PAR04343-1",
+      "asset": {
+        "asset_id": "9be907ca-2aa1-5a9f-968b-0fcd5dcf825a",
+        "package_digest": "4009ff3d0d0a73b507425a438edbad7ea64260e0c08f6dc96675a8d9e90bd5a4",
+        "package_path": "03_机构模块/pushcorp/bt30_par04343-1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bt30par04343_1_d5d04885/module.json",
+      "module_sha256": "081c5f9e5082079b0db473fdf1372fb32f190a64028809966150cb03219a0d09"
+    },
+    "finishxmirrorfinish": {
+      "title": "PushCorp FinishX - Mirror Finish",
+      "asset": {
+        "asset_id": "df400166-a48f-54a0-8e5f-fe82596648f2",
+        "package_digest": "7cd5b0f1ac6fd350e3a2b091bed98181554dc1d5a6a9005ecd87fbc3062e449c",
+        "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_mirror_finish__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/finishxmirrorfinish/module.json",
+      "module_sha256": "bc1b135b5d7f519a3ca449c1b43d141213ed206ba528ee674202d2c9d597e49b"
+    },
+    "finishxwheelfinish": {
+      "title": "PushCorp FinishX - Wheel Finish",
+      "asset": {
+        "asset_id": "a9ca1d2f-4779-545f-b0f3-4a793ca2bc1e",
+        "package_digest": "7645eca5b98fa11546e7bca345f4e7bc2b527a812411a1ee0d4485c33f7bafea",
+        "package_path": "03_机构模块/pushcorp/pushcorp_finishx_-_wheel_finish__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/finishxwheelfinish/module.json",
+      "module_sha256": "4b4624834ce4ab8a4428653b1da04e6477c616dcd2ff47703dc3512fecb6347a"
+    },
+    "grindxheavyduty": {
+      "title": "PushCorp GrindX - Heavy Duty",
+      "asset": {
+        "asset_id": "c4d2393f-bc60-5da9-be33-87ff73b8ff29",
+        "package_digest": "72749806323c20e2c1a757dbb5ae8b335c91d6f9cad7e9ae7168b66afe2af465",
+        "package_path": "03_机构模块/pushcorp/pushcorp_grindx_-_heavy_duty__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/grindxheavyduty/module.json",
+      "module_sha256": "44d80a84eea79aba73ea26480dbf5c6cebaa0596e1da1e1db64c240c679523c3"
+    },
+    "grindxlightduty": {
+      "title": "PushCorp GrindX - Light Duty",
+      "asset": {
+        "asset_id": "79ff982f-3eca-5039-a93e-8d6a373c07dc",
+        "package_digest": "5f05bc533ce5d8ebc2a26b79bbf036b65e78ea1aa9c7c44cd86e71cdbf495117",
+        "package_path": "03_机构模块/pushcorp/pushcorp_grindx_-_light_duty__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/grindxlightduty/module.json",
+      "module_sha256": "dacac9c2f6414716fb378cea6489605228a5550c16b0094ab8b5f7e9938d69d3"
+    },
+    "iso20asm03983:1": {
+      "title": "ISO20 ASM03983-1",
+      "asset": {
+        "asset_id": "debd2ad9-9e46-5df7-bf99-3152b0b4022f",
+        "package_digest": "28f86a4a1b73519bdf622a862cf4a41950875783d3022d0311f1b8e5fe3ba434",
+        "package_path": "03_机构模块/pushcorp/iso20_asm03983-1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iso20asm03983_1_242c63be/module.json",
+      "module_sha256": "fe0974c796dba53e53084361c0c6a2ef6d2e713a6873f8ded87dfebde5d29692"
+    },
+    "iso20par05788:2": {
+      "title": "ISO20 PAR05788-2",
+      "asset": {
+        "asset_id": "37bbf411-22f4-503b-bbe6-0d1f7b25c4f2",
+        "package_digest": "9b514aa84263fd7cc359aae2c1aea0e5876b6704a68bb4367b6b49f4a4c3236b",
+        "package_path": "03_机构模块/pushcorp/iso20_par05788-2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iso20par05788_2_4888942b/module.json",
+      "module_sha256": "a8e60ba0f15a07e08183d4f41c164844e8656a297eb7855ccd803d5d587af788"
+    },
+    "sandxmediumduty": {
+      "title": "PushCorp SandX - Medium Duty",
+      "asset": {
+        "asset_id": "0ab4c091-e928-5ca0-82af-224aac1f2935",
+        "package_digest": "c2441843200f584eee89596639a414ce030a7d82b02687b50728937483925bcc",
+        "package_path": "03_机构模块/pushcorp/pushcorp_sandx_-_medium_duty__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sandxmediumduty/module.json",
+      "module_sha256": "38333b1178011f3ace4272b42d389d8307453046b1430535a168f8a7a4426aea"
+    }
+  },
+  "source_profiles": []
+}

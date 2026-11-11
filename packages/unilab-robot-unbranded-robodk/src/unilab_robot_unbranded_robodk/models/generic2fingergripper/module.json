@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "generic2fingergripper",
+  "title": "Generic 2-Finger Gripper",
+  "asset": {
+    "asset_id": "78e412c0-41ec-51a5-bec5-819af9108986",
+    "package_digest": "f6d8a3f17e2399f32a00fd181dc85ce6ace5564602a4067cca6cae7740e655d6",
+    "package_path": "01_零部件/未知厂家/2-finger_gripper__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "78e412c0-41ec-51a5-bec5-819af9108986",
+      "package_digest": "f6d8a3f17e2399f32a00fd181dc85ce6ace5564602a4067cca6cae7740e655d6",
+      "package_path": "01_零部件/未知厂家/2-finger_gripper__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5e26f7a8fe1b1c92136aab49a333e8d547d370252286e51595d3b60443a808fd",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/2-finger_gripper__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic 2-Finger Gripper",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-2-Finger-Gripper.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-2-Finger-Gripper.tool",
+        "path": "simready_usd/Generic-2-Finger-Gripper.tool",
+        "sha256": "7c089eb1b5b1f1a89643ef144f8e79dbd77fcb8e1f6192bc789d53319b48cbac"
+      }
+    ]
+  }
+}

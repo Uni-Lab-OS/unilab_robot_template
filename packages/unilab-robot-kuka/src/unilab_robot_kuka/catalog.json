@@ -1,0 +1,2281 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "kuka",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "kr10r1100sixx": {
+      "title": "KUKA KR 10 R1100 sixx｜多源合并",
+      "asset": {
+        "asset_id": "c8134a30-f9f7-502d-b1e4-d235ae97fee2",
+        "package_digest": "fcbe4e39d8298f962bedeec0b77950b95735ddb6691fa0eaae821ed6eaa6bf5a",
+        "package_path": "04_设备/kuka/kr10r1100sixx__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r1100sixx/module.json",
+      "module_sha256": "f40da3375d76a6c9ef62ec63d397798357a702e579f46b24876430057ae745f2"
+    },
+    "kr10r1420": {
+      "title": "KUKA KR 10 R1420｜多源合并",
+      "asset": {
+        "asset_id": "6bb651e1-2b68-5d75-9d34-f5be32a675ed",
+        "package_digest": "b2308c5dcb1714c98a2474840c1b499312ed5551ce0396dc451bf7ea59cd15d5",
+        "package_path": "04_设备/kuka/kr10r1420__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r1420/module.json",
+      "module_sha256": "d6a985d1c03350ecdefea2152da6518a11c590c3b0efb8884a0144927bc4c11f"
+    },
+    "kr10r1440:2": {
+      "title": "KUKA KR 10 R1440-2｜多源合并",
+      "asset": {
+        "asset_id": "261d7222-d622-5a35-82fd-c654a2aba0e8",
+        "package_digest": "cad03040420049fe812680f3221825910dec9e2461208876fbc6c1ab6108efd0",
+        "package_path": "04_设备/kuka/kr10r1440_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r1440_2_0e7cfa7e/module.json",
+      "module_sha256": "8d22460acadc290307a399d7fdfd5f10652fd27c6ee83ef236d760ff3258a945"
+    },
+    "kr10r900sixx": {
+      "title": "KUKA KR 10 R900 sixx｜多源合并",
+      "asset": {
+        "asset_id": "f6fab5a2-c8a5-5176-8c46-06bfdba8b641",
+        "package_digest": "f2406ab125ce5367fb0d4704589f7f86461d8026df3672509027f1293bd6b506",
+        "package_path": "04_设备/kuka/kr10r900sixx__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r900sixx/module.json",
+      "module_sha256": "aa1e81023cd35cdf276e842c4a5c0581be8283a3c444ff747bb7ed1932e763b3"
+    },
+    "kr120r1800nano": {
+      "title": "KUKA KR 120 R1800 nano｜多源合并",
+      "asset": {
+        "asset_id": "f8f32248-1463-5d57-b270-493fa868691e",
+        "package_digest": "8057e0a2e64ab2d7311c6ad8f0cd19ab059e7999067833c43c7e1ed979d30bf1",
+        "package_path": "04_设备/kuka/kr120r1800nano__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r1800nano/module.json",
+      "module_sha256": "340bbc674efebc6acdb0851bd49471489714dbb610cc65bcbb26355d4be09824"
+    },
+    "kr12r850z340cr": {
+      "title": "KUKA KR12 R850 Z340 CR｜多源合并",
+      "asset": {
+        "asset_id": "3ac94360-8dcf-54e5-94ac-3b9099af90c7",
+        "package_digest": "128e24027da92a632af4af44274f1e66800040b8e54b331132d858fe7a4fe9e3",
+        "package_path": "04_设备/kuka/kr12r850z340cr__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr12r850z340cr/module.json",
+      "module_sha256": "549d627473921c77f8984673663adeb3dc3d8ae2171b74d210cf95dc92fab3f4"
+    },
+    "kr160r1570nano": {
+      "title": "KUKA KR 160 R1570 nano｜多源合并",
+      "asset": {
+        "asset_id": "bd595110-dad5-5a7d-a28a-414204c1e9f5",
+        "package_digest": "5d065b024666b06b3df360f08a6dc6e55e3d8b7a274228acbdc10bdd0bc6a2ee",
+        "package_path": "04_设备/kuka/kr160r1570nano__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr160r1570nano/module.json",
+      "module_sha256": "1b3d4837d753d14575360b84e03dad9d68a57b96ee91ac2dad8acdca1c6701df"
+    },
+    "kr16:2": {
+      "title": "KUKA KR 16 2｜多源合并",
+      "asset": {
+        "asset_id": "d9dbc4e1-36b1-5b3b-9803-516a75973feb",
+        "package_digest": "f5970c8e777cdf5bd95c749d3dffbf19230ba1daea4facd2d87645b879b91c3c",
+        "package_path": "04_设备/kuka/kr16_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16_2_150bc69a/module.json",
+      "module_sha256": "d7c9f4c8f525d5f9f9b7d3e6f49ddec9a72b2b58b4f8ccd04701b7f63e8271ae"
+    },
+    "kr16:2ks": {
+      "title": "KUKA KR 16 2 KS｜多源合并",
+      "asset": {
+        "asset_id": "ddb49cdd-e9f4-5a24-8007-b2475bcc5197",
+        "package_digest": "2b201a195e99670464b91fb522c7dcae966dcad5da0b3914f58fa69ab76addb9",
+        "package_path": "04_设备/kuka/kr16_2ks__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16_2ks_34425375/module.json",
+      "module_sha256": "83e3ef0e20cc3abcf427dffb23f2338a5fe1c8683b9fbabc58c7a028079975d7"
+    },
+    "kr16archw": {
+      "title": "KUKA KR 16 arc HW｜多源合并",
+      "asset": {
+        "asset_id": "0efe13d3-7861-5d23-8a41-d9c937eaa5f1",
+        "package_digest": "76d82663dd58b798ad83b8e153d41473a5baa9a55fab01c86754006585e989f3",
+        "package_path": "04_设备/kuka/kr16archw__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16archw/module.json",
+      "module_sha256": "8be6deb4255344adff7fef1f2f201d3db8f871f43f90197eb29449513a2c6c29"
+    },
+    "kr16r1610": {
+      "title": "KUKA KR 16 R1610｜多源合并",
+      "asset": {
+        "asset_id": "12afd1b3-9309-52f5-90a7-5649392ab7e9",
+        "package_digest": "5fc1678ce799617e352bda1699c1b40ce040f69cb7db4dc95c40424d912c9283",
+        "package_path": "04_设备/kuka/kr16r1610__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16r1610/module.json",
+      "module_sha256": "c13f0f57bae8c586e9d0da078e65fdbe724556705dfb863d8aa64609f7c8c158"
+    },
+    "kr16r2010": {
+      "title": "KUKA KR 16 R2010｜多源合并",
+      "asset": {
+        "asset_id": "855fedd1-1fae-51ee-a4b7-a15b7332e5a5",
+        "package_digest": "d36b9279c0e6d211c284604ffea23d8bea31e7b90ebb6398c2f8121b7464febd",
+        "package_path": "04_设备/kuka/kr16r2010__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16r2010/module.json",
+      "module_sha256": "0ad8a3ce352a0b48940951f9a7b7371a123be37d02bc269f5078dde947d520d3"
+    },
+    "kr180r2100nanofexclusive": {
+      "title": "KUKA KR 180 R2100 nano F exclusive｜多源合并",
+      "asset": {
+        "asset_id": "e667c271-ae01-53f3-8831-2c782704da56",
+        "package_digest": "a5403019b50a18d186dd5fd2bc55cf4e72fba077e62d97128544758b75f61aaa",
+        "package_path": "04_设备/kuka/kr180r2100nanofexclusive__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr180r2100nanofexclusive/module.json",
+      "module_sha256": "58ee6f1b9b8465314232981f4628a03b4ab3bd5eecda6d8f7a8f9049a2862eb2"
+    },
+    "kr20r1810": {
+      "title": "KUKA KR 20 R1810｜多源合并",
+      "asset": {
+        "asset_id": "682994cb-3450-584f-8055-46629212230a",
+        "package_digest": "de0d9b6ca0e3492b35bba8392fbeafca5fd707c4d8705073de27b126f1e96aa3",
+        "package_path": "04_设备/kuka/kr20r1810__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr20r1810/module.json",
+      "module_sha256": "db4ed627d88005aba932c2a8154b49b1a8be8f9a3914f733a7a57fad9bbc8f94"
+    },
+    "kr240r2900:2f": {
+      "title": "KUKA KR 240 R2900-2 F｜多源合并",
+      "asset": {
+        "asset_id": "9e00f9c6-e307-5fce-805a-f1b8c747214b",
+        "package_digest": "87c49bc3c41cfa06796f6159f355d8c4f64dd2756a6674fb5ef458aba98afc4f",
+        "package_path": "04_设备/kuka/kr240r2900_2f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r2900_2f_92facf67/module.json",
+      "module_sha256": "9da1db914a3a011e2c2f02e5ca1a990c7f5093a0d7123d127d63ad839813f4db"
+    },
+    "kr30:3": {
+      "title": "KUKA KR 30-3｜多源合并",
+      "asset": {
+        "asset_id": "86b4b7d5-dbcb-5244-bf55-fef57d844a32",
+        "package_digest": "b0959bf5de333663b5a8a8a49524bbfc63395babe846e1a3f40d504e2055e2cd",
+        "package_path": "04_设备/kuka/kr30_3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr30_3_959fe4fe/module.json",
+      "module_sha256": "2f952a134860c513fd73a586c05e64069fbb0133a4e18ac73b69757bb34fa0ca"
+    },
+    "kr30:4ks": {
+      "title": "KUKA KR 30 4 KS｜多源合并",
+      "asset": {
+        "asset_id": "cf21669b-0e6b-536d-bf23-2c4d1c725a0f",
+        "package_digest": "aa32fe15c912bfdc2ad5c9ddacec1d3e3db33634b3eff6ed982f11e20732e2ba",
+        "package_path": "04_设备/kuka/kr30_4ks__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr30_4ks_48cba6e6/module.json",
+      "module_sha256": "e0d28a02d6fa350c42adf1788b19d7addde6e09bdd08c60af77db3eb9ce310bb"
+    },
+    "kr30ha": {
+      "title": "KUKA KR 30 HA｜多源合并",
+      "asset": {
+        "asset_id": "b16cd252-a9cf-561a-b3a0-bda45a4a76c0",
+        "package_digest": "688a39d79eacbfc7e89ff36d32ee0418687c02c18b73f56bfe352b76c4008bee",
+        "package_path": "04_设备/kuka/kr30ha__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr30ha/module.json",
+      "module_sha256": "1528c8ed6fa1c78efaeeeabc907e4fbdb6f810d4f440f7495a279067c8e50f0b"
+    },
+    "kr3r540": {
+      "title": "KUKA KR 3 R540｜多源合并",
+      "asset": {
+        "asset_id": "2d94f6c7-9a4b-5d49-9826-5d3a6e9a459b",
+        "package_digest": "5a0bbec3ae0af01855f53666bd0d01fd7d660496bf6e96ddf92370ef04b0fad5",
+        "package_path": "04_设备/kuka/kr3r540__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr3r540/module.json",
+      "module_sha256": "b01bbd61c94487f7ed3f0c7ebd7f0b14de0033c971a6c52311802c7d50c35028"
+    },
+    "kr50r2500": {
+      "title": "KUKA KR 50 R2500｜多源合并",
+      "asset": {
+        "asset_id": "a5f20b69-e125-51fa-a2a9-be522a79eccf",
+        "package_digest": "efd8f0c592084dd99471ed5d039dfb6f86023f234e2183cb17091690dc51c0f6",
+        "package_path": "04_设备/kuka/kr50r2500__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr50r2500/module.json",
+      "module_sha256": "b9e9e424bf255a44a97359f5fd0b2013263fab33367a482592f4dceffb02dca5"
+    },
+    "kr60:3": {
+      "title": "KUKA KR 60-3｜多源合并",
+      "asset": {
+        "asset_id": "e6dfd7e4-79e8-5317-82ae-654b3507e6f2",
+        "package_digest": "7c8f468234df44417352bca2b768cd19b8c663dc5002730acf815842357ea59e",
+        "package_path": "04_设备/kuka/kr60_3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr60_3_a10a67fe/module.json",
+      "module_sha256": "6ab453500c58363689b1e46d8af0c81e0e751069418a20b57d49ddd1d437aad5"
+    },
+    "kr60:4ks": {
+      "title": "KUKA KR 60 4 KS｜多源合并",
+      "asset": {
+        "asset_id": "f4cc6b7d-241d-5c59-9a69-772fd3d83ffd",
+        "package_digest": "98af18bed8d8d04ee9381abb80b4e2270962f05df2e50e2fb403e67226dc8e20",
+        "package_path": "04_设备/kuka/kr60_4ks__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr60_4ks_21c98cda/module.json",
+      "module_sha256": "e0660e59e01e49f511c769639394f7d3042340efdd9c5c9ac41274992fdb886b"
+    },
+    "kr60l45ha": {
+      "title": "KUKA KR 60 L45 HA｜多源合并",
+      "asset": {
+        "asset_id": "d9f0729c-6134-5d07-9c58-25a68a35c4b6",
+        "package_digest": "5853557e5ae544f23ced6f82c445e0acd36fc212e2653a377d7132f3abd5c23e",
+        "package_path": "04_设备/kuka/kr60l45ha__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr60l45ha/module.json",
+      "module_sha256": "50175775f1117bd877956e77ca173f3c1e5ee4ec7a3bed055e08e35d455625ee"
+    },
+    "kr6:2": {
+      "title": "KUKA KR 6 2｜多源合并",
+      "asset": {
+        "asset_id": "91ee19c9-08dd-5819-a9f1-87a339e133c5",
+        "package_digest": "a7667fd72fa21bcc4029a6e2b05cb7b55ce2b80fb6f358e9bccdf8a2687249e0",
+        "package_path": "04_设备/kuka/kr6_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6_2_37293977/module.json",
+      "module_sha256": "bd8eda5c731a637154234f61f7755c3c4e2c7ca11154a8790628fc9046a853bb"
+    },
+    "kr6r1840:2": {
+      "title": "KUKA KR6 R1840-2｜多源合并",
+      "asset": {
+        "asset_id": "a7f15f31-e1c6-5105-88a0-1e25dfe76a41",
+        "package_digest": "324b3003686b5036edb6d557d291aeffb933f5fb3e80c0759afb939c34e9ee8f",
+        "package_path": "04_设备/kuka/kr6r1840_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r1840_2_9510e988/module.json",
+      "module_sha256": "9467a349a06930efdc641b3594497479be6edf8521cc78ec94065aa117fb78f4"
+    },
+    "kr6r2010:2archwe": {
+      "title": "KUKA KR 6 R2010-2 arc HW E｜多源合并",
+      "asset": {
+        "asset_id": "fdba0ce3-812d-5c6b-aaac-4393ce1c63ab",
+        "package_digest": "ae080bcca850a49a058caa21757c651db255543a36d55759f6f96a4f21b9103e",
+        "package_path": "04_设备/kuka/kr6r2010_2archwe__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r2010_2archwe_f564855e/module.json",
+      "module_sha256": "28c0c01ae37c1f3dfb055c5614f766d24880fdfe79466c65fce27a8cef4b6a0b"
+    },
+    "kr6r900:2": {
+      "title": "KUKA KR 6 R900-2｜多源合并",
+      "asset": {
+        "asset_id": "68d86d62-7691-5ebf-8a09-8b67abd42923",
+        "package_digest": "2ccde4f799b2acbae0383a94828fecd3a56f5d7b77bb9e0453a914ecc5858051",
+        "package_path": "04_设备/kuka/kr6r900_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r900_2_e144f218/module.json",
+      "module_sha256": "f5196a5bf2602fdf2a232287e90df62beae9a956fc2a8303b79beca333b883ba"
+    },
+    "kr8r1420archw": {
+      "title": "KUKA KR 8 R1420 arc HW｜多源合并",
+      "asset": {
+        "asset_id": "1431c8d9-6dbd-54e0-aa90-10b55ef5896b",
+        "package_digest": "860bcbd26125d358a671049e23be03d45ea90104a9900f77b4fe9a2ad6db49fb",
+        "package_path": "04_设备/kuka/kr8r1420archw__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r1420archw/module.json",
+      "module_sha256": "5246b252ee13277a4c4e2f788f27a5811985abd14842b7d5129086f3fa6dddbe"
+    },
+    "lbriiwa14r820": {
+      "title": "KUKA LBR iiwa 14 R820｜多源合并",
+      "asset": {
+        "asset_id": "952e9e50-ef33-5578-83b0-8adb83ad7277",
+        "package_digest": "87cd739f085d24ef9953dfddefe110b90d210ab0c7cf246ccf9042ec1ffca786",
+        "package_path": "04_设备/kuka/lbriiwa14r820__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lbriiwa14r820/module.json",
+      "module_sha256": "f5fdd4a5608e4d16295cc7ccf5e9e75f5fd2dd184fde78516d538c9d07b15051"
+    },
+    "lbriiwa7r800": {
+      "title": "KUKA LBR iiwa 7 R800｜多源合并",
+      "asset": {
+        "asset_id": "c32357c8-d1f2-5485-88fd-6dd85933759f",
+        "package_digest": "6929ba589c80143a8b884f7095abe60594be53ddfe973e69bee5ed497bbaaf44",
+        "package_path": "04_设备/kuka/lbriiwa7r800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lbriiwa7r800/module.json",
+      "module_sha256": "0d336d2503120af0fb0b726b69f224cde335444ba3a206b91a2baa8c1bde6719"
+    },
+    "kr480r3400:2": {
+      "title": "KUKA KR 480 R3400-2｜多源合并",
+      "asset": {
+        "asset_id": "7870faae-a281-5c54-bc6d-27e9782baaa1",
+        "package_digest": "bf761878a93bb26f14d6a71165e529d3fb95080b08e8979c600f0985400fadde",
+        "package_path": "04_设备/kuka/kr480r3400_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr480r3400_2_6f2f9e08/module.json",
+      "module_sha256": "3eaba9508ad1f3b1e00ce5636d22ed005aa476c2b0c730a5f27a8dde55b562e7"
+    },
+    "kr10r1100:2": {
+      "title": "KUKA KR 10 R1100-2｜多源合并",
+      "asset": {
+        "asset_id": "6198f124-0378-58b8-bbe3-2b2792eace67",
+        "package_digest": "8a9801f163d1fb3c69197c55341b03d2ec3cbb4792f68e02c4cba59f0a6b1642",
+        "package_path": "04_设备/kuka/kr10r1100_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r1100_2_565d7c6b/module.json",
+      "module_sha256": "88c70a6ae0622cc955d337b383396ab20fc16fe29c718c69feb290bcde997250"
+    },
+    "kr10r900:2": {
+      "title": "KUKA KR 10 R900-2｜多源合并",
+      "asset": {
+        "asset_id": "6715c13b-621d-529a-84b8-e4a19f1aa29b",
+        "package_digest": "d4a29d4df55b3c3e505ce753a7ee2ecf280f265ba26548a4fe79e341b08b1f3c",
+        "package_path": "04_设备/kuka/kr10r900_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr10r900_2_129a8533/module.json",
+      "module_sha256": "4a6fd1a4d9ffada393f44b498e0ea76d83bdf0c93b52598d25f29a65ca86322c"
+    },
+    "kr12r1810:2": {
+      "title": "KUKA KR 12 R1810-2｜多源合并",
+      "asset": {
+        "asset_id": "752b8b61-0f1f-5f0d-93f4-ae01aa3a6e04",
+        "package_digest": "3ac292611ac777153451f7bd69aa2c0178b0bc69f31c4bbc8bac464f213a3e99",
+        "package_path": "04_设备/kuka/kr12r1810_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr12r1810_2_3c3c6ad8/module.json",
+      "module_sha256": "1f0878f65c34ddfdec50a7a103622ac0c5c3b740120ecb8c92c92ab03e65388a"
+    },
+    "kr20r3100": {
+      "title": "KUKA KR 20 R3100｜多源合并",
+      "asset": {
+        "asset_id": "f30f9a66-94fc-5a20-af4d-15f6a9418e4c",
+        "package_digest": "1a481a1ec9758ff290997ed01f609aa897611584e0af3d439bb923942d4ec23b",
+        "package_path": "04_设备/kuka/kr20r3100__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr20r3100/module.json",
+      "module_sha256": "f6ea3002694617c3ec4373b9b1ffb0698ed69114b9c95484062ac9c973cf6308"
+    },
+    "kr210r2700:2": {
+      "title": "KUKA KR 210 R2700-2｜多源合并",
+      "asset": {
+        "asset_id": "87917597-ffa1-52d2-9bd3-9eff3a7d777c",
+        "package_digest": "a939ce23c0771f05278384e793ec27c2011c6fff5cebabec042578b95ec4abff",
+        "package_path": "04_设备/kuka/kr210r2700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr210r2700_2_fb70b74a/module.json",
+      "module_sha256": "45fc20a51a0f7e2e05395b3ae4384bcfc4908ad9462eeff0bc82ce9ae8ffada1"
+    },
+    "kr22r1610": {
+      "title": "KUKA KR 22 R1610｜多源合并",
+      "asset": {
+        "asset_id": "2f579e27-6d80-5d3c-87b1-36ef6198c9bf",
+        "package_digest": "00a59a185ecd09c9f0c63b9c9ea9ebc0d4fd05d4dc0e27c4e8add26ce3d50cc5",
+        "package_path": "04_设备/kuka/kr22r1610__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr22r1610/module.json",
+      "module_sha256": "b18bd00b18a6484ce76163f78e16b1db2b1c5bd2bc394b3ee1def9a217dcba07"
+    },
+    "kr30r2100": {
+      "title": "KUKA KR 30 R2100｜多源合并",
+      "asset": {
+        "asset_id": "f98868e0-c86f-5b29-9deb-c0a6e2d86527",
+        "package_digest": "f5acbdacd11498f1caf312e0e1b818df44a710b51e2972c3d80f6938393f0935",
+        "package_path": "04_设备/kuka/kr30r2100__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr30r2100/module.json",
+      "module_sha256": "a9d2b725c10c4921742e90208fa8ae7171c2a8c43d22d1431f765281c5dbc73f"
+    },
+    "kr4r600": {
+      "title": "KUKA KR 4 R600｜多源合并",
+      "asset": {
+        "asset_id": "593714a1-9c5b-520d-8c83-45a04b9d854f",
+        "package_digest": "014ba188051fb99e7db05bc71a4f2a44f2b89148dba226657bfc883f164f47dd",
+        "package_path": "04_设备/kuka/kr4r600__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr4r600/module.json",
+      "module_sha256": "bc5d8a81e362a76bc6561823c003d02b7e9227fb188259f31b13d1576cdb8c28"
+    },
+    "kr50r2100": {
+      "title": "KUKA KR 50 R2100｜多源合并",
+      "asset": {
+        "asset_id": "43c9b817-945f-5296-ac91-da343c9188b1",
+        "package_digest": "27958bce8119b998659a15df5762de631aaf0647ba83ee32d288dee2ad9b0661",
+        "package_path": "04_设备/kuka/kr50r2100__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr50r2100/module.json",
+      "module_sha256": "e9c45f995053fb10ee405289ddf430a335929bb8b0925109e6b367b5278196eb"
+    },
+    "kr6r1840:2archw": {
+      "title": "KUKA KR 6 R1840-2 Arc HW｜多源合并",
+      "asset": {
+        "asset_id": "f661a0c0-b742-5a3e-9d81-c4fba4053f98",
+        "package_digest": "764e830474d41034fa39abaddd5701a7b48f6bcd0ac577d6064e0e5ed11e753f",
+        "package_path": "04_设备/kuka/kr6r1840_2archw__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r1840_2archw_e9e74df1/module.json",
+      "module_sha256": "5901d16fb6e43933c4dc282cea09f45a8dc054a2410fa337717a494d52fb2382"
+    },
+    "kr6r700:2": {
+      "title": "KUKA KR 6 R700-2｜多源合并",
+      "asset": {
+        "asset_id": "1d78edb8-4288-55cb-aa33-8d3431a5bb96",
+        "package_digest": "5872fae914be1ea0dda43dd530c1d81f97957165ca602c59055250ebdae4fe12",
+        "package_path": "04_设备/kuka/kr6r700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r700_2_04482f9c/module.json",
+      "module_sha256": "d2b0acaeefd28dcc8bdb309569172775bb74e2ae42c16442dfeb92d8119ef268"
+    },
+    "kr70r2100": {
+      "title": "KUKA KR 70 R2100｜多源合并",
+      "asset": {
+        "asset_id": "da0d3b3e-3ef2-53c0-8a00-0c3730c255c7",
+        "package_digest": "f28409f0e6b1110ca66b94a1aff2e7da25273f8610ca6d8d20c9cfb3d1b8b460",
+        "package_path": "04_设备/kuka/kr70r2100__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr70r2100/module.json",
+      "module_sha256": "19bb089106726f6cd6f970f802e45569042e0aac51245b873b46fb16d6c19d01"
+    },
+    "kr8r2100:2archw": {
+      "title": "KUKA KR 8 R2100-2 Arc HW｜多源合并",
+      "asset": {
+        "asset_id": "ad2c4779-8f77-57ea-8616-c6e31e933c76",
+        "package_digest": "c486d72a9c6c03ead9f700aaadd2ccac87ee80c22e28933d29b94823200ca139",
+        "package_path": "04_设备/kuka/kr8r2100_2archw__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r2100_2archw_07f07619/module.json",
+      "module_sha256": "fd65b73e7317cd65bec01fc459055757d6965aa2919d1d36c054e711a125d490"
+    },
+    "kr8r1440:2archw": {
+      "title": "KUKA KR 8 R1440-2 Arc HW｜多源合并",
+      "asset": {
+        "asset_id": "a6ece99e-c5a5-5c88-b8e8-45bfcb1628b1",
+        "package_digest": "16377d919bdf164a8df540cdbf5ae0e3b77d018b951c5b79e0d402302b4d9026",
+        "package_path": "04_设备/kuka/kr8r1440_2archw__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r1440_2archw_f879d8c6/module.json",
+      "module_sha256": "ccae2d5b1fc2de24b1a5a585dc5ef7b369b6e40a02f871189136f14bca1c45fb"
+    },
+    "kr8r1440:2archwe": {
+      "title": "KUKA KR 8 R1440-2 Arc HW E｜多源合并",
+      "asset": {
+        "asset_id": "3cf21943-8b13-5125-8ff4-a46eeee563ed",
+        "package_digest": "370aa121d39284f28efcb8796ceee23df7bd785ce76b49d518aaaf4b447ce04a",
+        "package_path": "04_设备/kuka/kr8r1440_2archwe__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r1440_2archwe_9f29be81/module.json",
+      "module_sha256": "e75b9a4fa051219af5c6e7e36647fe2686badcecbbdb7c29b4a97bdd1ccd1f1f"
+    },
+    "kr8r1640:2archw": {
+      "title": "KUKA KR 8 R1640-2 Arc HW｜多源合并",
+      "asset": {
+        "asset_id": "1bc58e6b-0983-5f14-89e1-40a09854aa0a",
+        "package_digest": "ced60253f28384b99e4e6ced219cd83bdc5852872e6472905f100aacb7a56906",
+        "package_path": "04_设备/kuka/kr8r1640_2archw__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r1640_2archw_fca7b519/module.json",
+      "module_sha256": "c7d15311881d11deb876bdac920f0389188a8e47259c1a96e1b80315fd7eb42a"
+    },
+    "kr1000l750titan": {
+      "title": "KUKA KR 1000 L750 titan｜多源合并",
+      "asset": {
+        "asset_id": "d9412a5b-d333-58c4-ad7d-e0ebf27229d4",
+        "package_digest": "db30dc032ba08fca25fa11fae9c1e1b4ebddc97346130beca6baae91c51b7fd4",
+        "package_path": "04_设备/kuka/kr1000l750titan__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1000l750titan/module.json",
+      "module_sha256": "6034bfd85c943afdb53e46488c8909792871a1181ec9a51a051b11b3165d50ef"
+    },
+    "kr1000l950titanpa": {
+      "title": "KUKA KR 1000 L950 titan PA｜多源合并",
+      "asset": {
+        "asset_id": "89fe62c0-39cc-5a90-b54c-514317978501",
+        "package_digest": "6e1029f8cf41a7ac108e8e6c9a807bd1fae444af8874eb9e1628317f108bd56e",
+        "package_path": "04_设备/kuka/kr1000l950titanpa__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1000l950titanpa/module.json",
+      "module_sha256": "8456e3aceb40b0b95a27e2ace9d62d852454e1d3c022b79a7ddf757ec02fab8e"
+    },
+    "kr1000titan": {
+      "title": "KUKA KR 1000 titan｜多源合并",
+      "asset": {
+        "asset_id": "bf884c31-498e-514c-95cd-adf60095f77b",
+        "package_digest": "5a39db03820c68a66b2b82729b0a23c9a71a63fa6257397d83acd3136e77a3e2",
+        "package_path": "04_设备/kuka/kr1000titan__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr1000titan/module.json",
+      "module_sha256": "adaabe637308425b7c8c64bc45222b7b2a9e32e6e5975aac89a5fa892112b784"
+    },
+    "kr100r3500press": {
+      "title": "KUKA KR 100 R3500 press｜多源合并",
+      "asset": {
+        "asset_id": "d9e548c7-d547-5704-9f4b-11f113836410",
+        "package_digest": "503348601995c5db3a94018293b4ba2d5e9c588ddda3972903deeee7d3c6d365",
+        "package_path": "04_设备/kuka/kr100r3500press__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr100r3500press/module.json",
+      "module_sha256": "4396e0dbf5f3f875de157c8d605787f7ec83b63ad8a005edecc291754a44ed3f"
+    },
+    "kr120r2500pro": {
+      "title": "KUKA KR 120 R2500 pro｜多源合并",
+      "asset": {
+        "asset_id": "505dc06e-4003-5ce6-b72d-46358c50c11f",
+        "package_digest": "028eedab038b557ddf0ff411cd024b5d69b103fe434a751edd4d44ccabba32de",
+        "package_path": "04_设备/kuka/kr120r2500pro__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r2500pro/module.json",
+      "module_sha256": "6ce0826decd878ea8a0c0c7b43e695a2c2218dc6f1ec41de38e74e00a51d2c40"
+    },
+    "kr120r2700extraha": {
+      "title": "KUKA KR 120 R2700 extra HA｜多源合并",
+      "asset": {
+        "asset_id": "ed075978-3f06-50ca-ab41-f644b132de6f",
+        "package_digest": "81f74cc33f0df38178dfc148fbacc026bb37175740b3d7d7a9481c92c3db73db",
+        "package_path": "04_设备/kuka/kr120r2700extraha__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r2700extraha/module.json",
+      "module_sha256": "bb931b77f9e99f2618895947ac4276cf7b3c951cc7a41a4f786b626fc8b516fe"
+    },
+    "kr120r2900extra": {
+      "title": "KUKA KR 120 R2900 extra｜多源合并",
+      "asset": {
+        "asset_id": "da58b143-c67a-591e-b8e8-7543c75bbdee",
+        "package_digest": "4fce038b6cdcc3894ebbaeb39038ea8dacb10ec143db1e0d74c98e14d86bdca6",
+        "package_path": "04_设备/kuka/kr120r2900extra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r2900extra/module.json",
+      "module_sha256": "7d95272f29aba38faaf496aeeeeb5317a6628fc479826a47c94ecc65692efa50"
+    },
+    "kr120r3100:2": {
+      "title": "KUKA KR 120 R3100-2｜多源合并",
+      "asset": {
+        "asset_id": "8fdd1cab-04f0-5055-b9b4-cd54d864375b",
+        "package_digest": "531bbfa4a4a08c34d3ebef841d91bc0e4daf0a6592f33e296e043b3ed394e4a6",
+        "package_path": "04_设备/kuka/kr120r3100_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r3100_2_129f86c9/module.json",
+      "module_sha256": "dc345c733f94988b61ed5ed96c23ca666b726dda5b7799ebe8cfec162c354d41"
+    },
+    "kr120r3500press": {
+      "title": "KUKA KR 120 R3500 press｜多源合并",
+      "asset": {
+        "asset_id": "874cdd77-550d-565b-9226-139c016ae0f7",
+        "package_digest": "38262b3787215e6724de4579f7fd35019978ae00435f4913ad2e0d7155759a7e",
+        "package_path": "04_设备/kuka/kr120r3500press__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r3500press/module.json",
+      "module_sha256": "8a57e7013eecb3c453e29e46bc18b7daf9e4d9cff84b02d87946aa63bde4f4fe"
+    },
+    "kr150r2700extra": {
+      "title": "KUKA KR 150 R2700 extra｜多源合并",
+      "asset": {
+        "asset_id": "bf7cf584-be61-5d67-8f04-4509015db8b7",
+        "package_digest": "26dafe63cd3e9a12306fdb50918fb13da6cc5b79ec62361bd4ec266c45d438b2",
+        "package_path": "04_设备/kuka/kr150r2700extra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr150r2700extra/module.json",
+      "module_sha256": "071a27bd265cc322981e3f4e86b5657e15bd615f947aacf06223f5998a76f46c"
+    },
+    "kr150r3100:2": {
+      "title": "KUKA KR 150 R3100-2｜多源合并",
+      "asset": {
+        "asset_id": "49f7b39f-4a35-5efa-84ad-5f6c664add7d",
+        "package_digest": "b687e0cd49c6f3343349bf2c73d46c0d3f7c6cbe67583f401c9619993cb6e47b",
+        "package_path": "04_设备/kuka/kr150r3100_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr150r3100_2_92e916db/module.json",
+      "module_sha256": "c5237d7c16be6211cfe4d95da0d496ac3530b3a147863d18559cf7d429f12046"
+    },
+    "kr150r3100prime": {
+      "title": "KUKA KR 150 R3100 prime｜多源合并",
+      "asset": {
+        "asset_id": "9b204c6d-8a54-5bc3-a6af-c89105f7080b",
+        "package_digest": "ce0336d657981b9c04aa0a9f437ee72eeb4f3f0d7898e69fbc604c846f8b66c7",
+        "package_path": "04_设备/kuka/kr150r3100prime__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr150r3100prime/module.json",
+      "module_sha256": "c6dd79150498ac3e714eb966eda80ce2f1feb9e888c3465a6052ff8e7ece1709"
+    },
+    "kr180r2500extra": {
+      "title": "KUKA KR 180 R2500 extra｜多源合并",
+      "asset": {
+        "asset_id": "c476c7e1-f3b5-586a-adc9-c4f95a5e4206",
+        "package_digest": "7c10f37152d3db9af290c850a92b3df4a1542a81616f84b1f469a531533040df",
+        "package_path": "04_设备/kuka/kr180r2500extra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr180r2500extra/module.json",
+      "module_sha256": "7701612c15fa1f54430baa874b3bf55b9195e36eb815160c4255cb7f81d7cef8"
+    },
+    "kr180r2900prime": {
+      "title": "KUKA KR 180 R2900 prime｜多源合并",
+      "asset": {
+        "asset_id": "59ce5e19-6851-550c-9fdc-6e2a0e30b549",
+        "package_digest": "6f13cb1f80b3e9cc2c4cc2d5c428560116fc7a8f99ab175c3aab04597bdc25b7",
+        "package_path": "04_设备/kuka/kr180r2900prime__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr180r2900prime/module.json",
+      "module_sha256": "5e77d0f1973fc0f8f37f8691e8a108a93ccf45621754465a0279c0bf2aa4388f"
+    },
+    "kr180r3500:2k": {
+      "title": "KUKA KR 180 R3500-2 K｜多源合并",
+      "asset": {
+        "asset_id": "c44d7ad0-c225-589d-8e61-af0cec664146",
+        "package_digest": "11302fcf79886e17c0674ea10375c313ccd0c7718a4e5474d42b894f4dbb1732",
+        "package_path": "04_设备/kuka/kr180r3500_2k__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr180r3500_2k_5de562b4/module.json",
+      "module_sha256": "45e8a45861695851a43ac3c771e710d2a1d46836fdad0a0c06d94bca285bc9b4"
+    },
+    "kr210r2700extra": {
+      "title": "KUKA KR 210 R2700 extra｜多源合并",
+      "asset": {
+        "asset_id": "f6719f89-84c8-53e1-93e3-d3ffaa2754c2",
+        "package_digest": "e5591f39dc997ea37aad4175caddaa5392f17a8db6c783ff25b103bfeff5dc58",
+        "package_path": "04_设备/kuka/kr210r2700extra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr210r2700extra/module.json",
+      "module_sha256": "9f06b0d0ad9a6dbec97a726e6536cf59986e1a3f53bcfe777af729b0689a0f33"
+    },
+    "kr210r2700prime": {
+      "title": "KUKA KR 210 R2700 prime｜多源合并",
+      "asset": {
+        "asset_id": "2885a153-e0f4-594b-a491-c0da6bbff21e",
+        "package_digest": "5ef97dba482530d2c5f159bff6261cf1e3d3e1d7d70ad4be3c371f8891ed4692",
+        "package_path": "04_设备/kuka/kr210r2700prime__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr210r2700prime/module.json",
+      "module_sha256": "df7f829f2b05877dd9ff88768b673d8a75b1dc099a0c11b4c7cd1c5c36f4de88"
+    },
+    "kr210r3100ultra": {
+      "title": "KUKA KR 210 R3100 ultra｜多源合并",
+      "asset": {
+        "asset_id": "53929e95-a02e-58bd-807c-e3ff55130731",
+        "package_digest": "8dfd462a370205044cab45bfecb59a9ab27a26d1c855cb1e100928355f20d36a",
+        "package_path": "04_设备/kuka/kr210r3100ultra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr210r3100ultra/module.json",
+      "module_sha256": "238b9aa8681cf5da0c8d16c543493069f320df05da1d49e8147c435f0661c977"
+    },
+    "kr240:2": {
+      "title": "KUKA KR 240-2｜多源合并",
+      "asset": {
+        "asset_id": "d6001885-9b6e-59b6-89cd-088ad69a3532",
+        "package_digest": "76e96bc0dc02bff9bacd9bab325800cbd4954129d4a317f955ee10f5da49fe76",
+        "package_path": "04_设备/kuka/kr240_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240_2_1dfec384/module.json",
+      "module_sha256": "5ed9e7270f11451f6cf69b814db1145f5c3340b1dbd1814170e1dc95beee5274"
+    },
+    "kr240r2500prime": {
+      "title": "KUKA KR 240 R2500 prime｜多源合并",
+      "asset": {
+        "asset_id": "2a9319b7-193a-5865-b86a-d64e5e66dd8a",
+        "package_digest": "4d614aea685ce312132fd7c66077e3fe03ee485c45383c2df0a2efaeb160ed70",
+        "package_path": "04_设备/kuka/kr240r2500prime__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r2500prime/module.json",
+      "module_sha256": "25bc541f2345f880ef2421ddadf4a225098d9e9ac3ed00685fe193ca30f13f28"
+    },
+    "kr240r2700prime": {
+      "title": "KUKA KR 240 R2700 prime｜多源合并",
+      "asset": {
+        "asset_id": "26cc0a0b-13cb-5d1b-9b7b-d2303408a307",
+        "package_digest": "b65e45321345c51e511325ff2e33d0ef0b018ec7c44feab9331de4f023e1f0cf",
+        "package_path": "04_设备/kuka/kr240r2700prime__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r2700prime/module.json",
+      "module_sha256": "643e7a19bfd431bd9554e2842831a5b39ad01bd73ed588f21bb3ea6e5260dcb9"
+    },
+    "kr240r2900ultra": {
+      "title": "KUKA KR 240 R2900 ultra｜多源合并",
+      "asset": {
+        "asset_id": "2bf1259e-d1e4-56a7-9bce-189d41feebee",
+        "package_digest": "fe3cd81152d88d6b8508f5e6691b39ab50ec16a0f41e8efcbd40292dc83e0f89",
+        "package_path": "04_设备/kuka/kr240r2900ultra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r2900ultra/module.json",
+      "module_sha256": "327e882bc97d366cec8d3c7cc1899545dfd57d25d02bb1a5254f2cd41f6e0eeb"
+    },
+    "kr240r3330": {
+      "title": "KUKA KR 240 R3330｜多源合并",
+      "asset": {
+        "asset_id": "998834b9-d5e6-5414-ab8c-2c8d4a1172b3",
+        "package_digest": "03f31ebfc542443ab390b334e0c680f7adf22dfafbf4539b077d6130989d284c",
+        "package_path": "04_设备/kuka/kr240r3330__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r3330/module.json",
+      "module_sha256": "5174e94bdc292d7e54d7356aa055aa910f1617e60969a31401f4d49680e01a71"
+    },
+    "kr270r2700ultra": {
+      "title": "KUKA KR 270 R2700 ultra｜多源合并",
+      "asset": {
+        "asset_id": "cd266ef7-bdbe-59ab-9dc9-ee04ce988ce5",
+        "package_digest": "6cc9d1961dfd1ddcfacca2005311582c7d3b562b1b300596a66a5175cd90c864",
+        "package_path": "04_设备/kuka/kr270r2700ultra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr270r2700ultra/module.json",
+      "module_sha256": "741b1116ee2f241f04f1a02a99fa4433a03f174c48594ea358d5c75e5eca77c7"
+    },
+    "kr280r3080": {
+      "title": "KUKA KR 280 R3080｜多源合并",
+      "asset": {
+        "asset_id": "d08baa6f-27d0-5faf-9cfc-f73069a8d970",
+        "package_digest": "2d7f1d97e9fa2f415d93ae853e0e749507f650164a42adb166a1667c2eab1270",
+        "package_path": "04_设备/kuka/kr280r3080__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr280r3080/module.json",
+      "module_sha256": "dfd7593bfb0b004731e28d84e44600fa311e5c155ddbf63a69100070cba18dca"
+    },
+    "kr300r2500ultra": {
+      "title": "KUKA KR 300 R2500 ultra｜多源合并",
+      "asset": {
+        "asset_id": "cac42d82-705d-5d2b-a291-c059b9bb7ecd",
+        "package_digest": "7a1d4c804a4cdd8678e2732f45b34b04504f5de79b57255c2be01643a8d45e36",
+        "package_path": "04_设备/kuka/kr300r2500ultra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr300r2500ultra/module.json",
+      "module_sha256": "5f9233a6bf5a3b872f1a3c49111331e04ca24110318d40d3761bbebbd34223e6"
+    },
+    "kr340r3400:2": {
+      "title": "KUKA KR 340 R3400-2｜多源合并",
+      "asset": {
+        "asset_id": "032ec22e-5075-5b86-806e-113c2afe0e1c",
+        "package_digest": "837027e900652b1deb6f4a9914eb5692d34ad4a90a355f45363ea1a45e2165eb",
+        "package_path": "04_设备/kuka/kr340r3400_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr340r3400_2_1ce20da4/module.json",
+      "module_sha256": "dad3c9774191587b03ee093526cba2a53bffecb561b8eab77b6f44b057cafb55"
+    },
+    "kr360r2830": {
+      "title": "KUKA KR 360 R2830｜多源合并",
+      "asset": {
+        "asset_id": "b05a47b3-270d-5370-b462-a98e1206b1f8",
+        "package_digest": "873f3e30f290a2179ab0d88984e3735e14f92ae0256b0eeb0557249f912df22a",
+        "package_path": "04_设备/kuka/kr360r2830__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr360r2830/module.json",
+      "module_sha256": "fe3a2f0cb6e478a443a54867c4a5950c0381cf24c04ffc1a13522b31b9003432"
+    },
+    "kr420r3080": {
+      "title": "KUKA KR 420 R3080｜多源合并",
+      "asset": {
+        "asset_id": "773241f7-6628-50bd-9f44-3c5f08868217",
+        "package_digest": "4f89f362152ae5af53c4f8bfb35c4257db846b92fbb97d852666e212d40ef1c7",
+        "package_path": "04_设备/kuka/kr420r3080__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr420r3080/module.json",
+      "module_sha256": "3e3c9b99deca2746b802f21f5e4378cb003841a2acc729d41e08523bdedb5992"
+    },
+    "kr500r2800:2": {
+      "title": "KUKA KR 500 R2800-2｜多源合并",
+      "asset": {
+        "asset_id": "42a3d7e5-c43b-58b5-a9cc-8ad0ede768d8",
+        "package_digest": "536f294f0afe01cdd3c34c4b48594d34d1366542fdd9f36211fe70dbeae273be",
+        "package_path": "04_设备/kuka/kr500r2800_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr500r2800_2_6fe6b76a/module.json",
+      "module_sha256": "cad899a0b6549e6f39d24acef125d0d00c0d3a439b8ea8f39cc15b882bc4c7f6"
+    },
+    "kr500r2830": {
+      "title": "KUKA KR 500 R2830｜多源合并",
+      "asset": {
+        "asset_id": "e7426286-51ed-5c01-8cd1-19278e8997cc",
+        "package_digest": "baf9945972a8140fb2e2609466a6b118b67e136d0c8089966c652ca9ad7f8d51",
+        "package_path": "04_设备/kuka/kr500r2830__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr500r2830/module.json",
+      "module_sha256": "5336e59a278b7ed1fa1243d35dff18f35bd05974876371349c8207dce3c68ff6"
+    },
+    "kr510r3080": {
+      "title": "KUKA KR 510 R3080｜多源合并",
+      "asset": {
+        "asset_id": "4849b2e5-eb0d-585d-8815-27e330c5331a",
+        "package_digest": "97fab469d20cbaee9c05d2271a23d6920511d295037346479265fa498357e1cd",
+        "package_path": "04_设备/kuka/kr510r3080__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr510r3080/module.json",
+      "module_sha256": "14f691fe5223e7a3b03af3454e10cfbb4c54f86dd50c828905ea45c8a64dd6cb"
+    },
+    "kr560r3100:2": {
+      "title": "KUKA KR 560 R3100-2｜多源合并",
+      "asset": {
+        "asset_id": "1ad6504c-3d0e-5143-9734-2bffd45ef622",
+        "package_digest": "c13b53f3bf458ddc0268df42285a787ec1e7f56e827d3779c7d465d42a1de8b4",
+        "package_path": "04_设备/kuka/kr560r3100_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr560r3100_2_eeb2ef26/module.json",
+      "module_sha256": "049bc34e7ebaba54955c57a7d24e2deed0566728a76ba9f442c02733c979c7b5"
+    },
+    "kr600r2830": {
+      "title": "KUKA KR 600 R2830｜多源合并",
+      "asset": {
+        "asset_id": "494570cb-241c-5e63-844d-e3ca886a66b1",
+        "package_digest": "74f67c8bfc449baa90fc6ed86aec45f423b19ed4d7a0a8fe5ddd89891965a93c",
+        "package_path": "04_设备/kuka/kr600r2830__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr600r2830/module.json",
+      "module_sha256": "8b12182b1ae111888ef9b67427ace0db9e0fb29b8eabcf66c2eb7ffa0fcdcd93"
+    },
+    "kr800r2800:2": {
+      "title": "KUKA KR 800 R2800-2｜多源合并",
+      "asset": {
+        "asset_id": "4d5b994c-da3b-5369-8023-4435f6add566",
+        "package_digest": "57101b48204af32d8104214a4743d202a116fa5ef4cdd1d88019557feda90fa3",
+        "package_path": "04_设备/kuka/kr800r2800_2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr800r2800_2_b93ce9d4/module.json",
+      "module_sha256": "d0dfc1f03e8f517905005b3f3d57be85a84bee6caa0486191be5f84a6bc6a0bf"
+    },
+    "kr90r2700pro": {
+      "title": "KUKA KR 90 R2700 pro｜多源合并",
+      "asset": {
+        "asset_id": "81d4c2cd-0046-55d9-8350-51375d49c746",
+        "package_digest": "21e31e4994e64fdce032f06651fd5ffcf74fb4b1ba9ae941a36de74261f1483d",
+        "package_path": "04_设备/kuka/kr90r2700pro__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr90r2700pro/module.json",
+      "module_sha256": "85d683bd232e0c7a3a1c5148c2ddba98fc1baa29d93db768b0b786dba6736acf"
+    },
+    "kr90r2900extraha": {
+      "title": "KUKA KR 90 R2900 extra HA｜多源合并",
+      "asset": {
+        "asset_id": "8ba41206-5a07-53b9-8627-4e12a7b5fb94",
+        "package_digest": "6c876a9fb6bde653dc4c34e7cd6f1146c2c167a86a6c5801713f2549e9668295",
+        "package_path": "04_设备/kuka/kr90r2900extraha__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr90r2900extraha/module.json",
+      "module_sha256": "303acc106983ef53033585bc7e901c26578e490768a57494a53116442c402c27"
+    },
+    "kr90r3100extra": {
+      "title": "KUKA KR 90 R3100 extra｜多源合并",
+      "asset": {
+        "asset_id": "4148fbba-a7cd-5af7-a350-aaa69b114d53",
+        "package_digest": "9634cbb0c84b41be5e860626ce695e8b36420a83a8e29ef8a3b0dd926bc77123",
+        "package_path": "04_设备/kuka/kr90r3100extra__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr90r3100extra/module.json",
+      "module_sha256": "4173e91ce090b0de7c9bdccbadf998abad7e8b08c51c912024a4e3e4a75ca143"
+    },
+    "kr90r3100extraha": {
+      "title": "KUKA KR 90 R3100 extra HA｜多源合并",
+      "asset": {
+        "asset_id": "44fd0a97-c45c-5973-ad18-598552cf3f3c",
+        "package_digest": "23fb2d24470e538ee3be741172fae1c4f477ab5cc1b46ca8efed64433694c73f",
+        "package_path": "04_设备/kuka/kr90r3100extraha__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr90r3100extraha/module.json",
+      "module_sha256": "fd19ef31e10db7f979bca6112ef4ca2a2907be38820e63577b95ec75ce6f2afc"
+    },
+    "kr6r700sixx": {
+      "title": "KUKA KR 6 R700 sixx｜多源合并",
+      "asset": {
+        "asset_id": "a9cd0039-5454-5cc7-a70c-45bee860acf9",
+        "package_digest": "b89a8986192f309e7caa6976fff4ce62d0d89568437d50bd6526f7631b2cfd92",
+        "package_path": "04_设备/kuka/kr6r700sixx__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r700sixx/module.json",
+      "module_sha256": "40a2c5e30b9e53c27b8bc478dbf7ce37b7cc6fb5db29dfdc40ddb61c5aa334c8"
+    },
+    "kr6r900sixx": {
+      "title": "KUKA KR 6 R900 sixx｜多源合并",
+      "asset": {
+        "asset_id": "95b37ab7-8340-57df-bfc4-880c6b18c031",
+        "package_digest": "4ce08e6e7fe79b39e926f7e09d055176e8578301473f277c20cbddb37445d21b",
+        "package_path": "04_设备/kuka/kr6r900sixx__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified",
+        "asset_planning": "revalidation_required_after_asset_revision"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr6r900sixx/module.json",
+      "module_sha256": "b0964994c3d7d713abf0815eba563f81e19a3de981a9af9ec14d98f89107ba44"
+    },
+    "kr8r2010": {
+      "title": "KUKA KR 8 R2010｜多源合并",
+      "asset": {
+        "asset_id": "b9a83115-56e4-56e2-b284-64c00818096c",
+        "package_digest": "adb273560daf120ae4ffdfa592210639867c981e68f5085991c1af451ef0ffaf",
+        "package_path": "04_设备/kuka/kr8r2010__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr8r2010/module.json",
+      "module_sha256": "6957db98a594b51963d5cc628043a4836d4afe0196b973076a222ed77b33c008"
+    },
+    "kr120r2700:2": {
+      "title": "KUKA KR 120 R2700-2｜多源合并",
+      "asset": {
+        "asset_id": "c6df825d-2273-5446-a7d8-522b69bb9155",
+        "package_digest": "0dcdc67ac183fc5f7dd7a4b47c11f813700e80e06bb898257699b5983e00201f",
+        "package_path": "04_设备/kuka/kr120r2700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr120r2700_2_4d938a56/module.json",
+      "module_sha256": "65e2d4202f23de63c60498be226ff6651aa1633bd2d62c8e3b0989fd7afa4230"
+    },
+    "kr240r3700:2": {
+      "title": "KUKA KR 240 R3700-2｜多源合并",
+      "asset": {
+        "asset_id": "8cf9c5f0-fb23-5e75-bfd0-def27d979786",
+        "package_digest": "2cb58245bfb3d0daa553268e3a1186aaec08fce38459a005ab600c31e3a3b4bb",
+        "package_path": "04_设备/kuka/kr240r3700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr240r3700_2_c7885e6e/module.json",
+      "module_sha256": "8c89b5734746f46024ecb3b657c3390dd5a546f6a5fdaf263266fcad465bd103"
+    },
+    "kr250r2700:2": {
+      "title": "KUKA KR 250 R2700-2｜多源合并",
+      "asset": {
+        "asset_id": "42f7c19a-cc79-5a11-b0c4-a856a43ea6e0",
+        "package_digest": "bd8bfd717368de1a6b954d7872a381c81e934b5674254890574be96c38d2286b",
+        "package_path": "04_设备/kuka/kr250r2700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr250r2700_2_887ad977/module.json",
+      "module_sha256": "30dec07f786a78befd0a3f549760e7734ed4f1d60c54f080e390a25fc36b544e"
+    },
+    "kr300r2700:2": {
+      "title": "KUKA KR 300 R2700-2｜多源合并",
+      "asset": {
+        "asset_id": "47a4f72f-50f4-5d63-acf5-92d7d8354d3e",
+        "package_digest": "cb00f6f16014d181659424717f2b45909b2854592588ad42f4f482e9d59ef2ac",
+        "package_path": "04_设备/kuka/kr300r2700_2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr300r2700_2_91965217/module.json",
+      "module_sha256": "d87bdede797e1668e8deb2813ad5a4c4bc4a064313648192b79600ee4ab64a14"
+    },
+    "kr340r3330": {
+      "title": "KUKA KR 340 R3330｜多源合并",
+      "asset": {
+        "asset_id": "a9222138-25ba-5d44-9981-e96c278f4b0a",
+        "package_digest": "42b9ee221f09da23645e00238dfb69803558ef729b973005ed95e4fda5714b9d",
+        "package_path": "04_设备/kuka/kr340r3330__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr340r3330/module.json",
+      "module_sha256": "f93538c1eac7f1f1ea6036a6cf5e8ebf6eb96cc0f25d16b859786cd16ff97be1"
+    },
+    "kr60ha": {
+      "title": "KUKA KR 60 HA｜多源合并",
+      "asset": {
+        "asset_id": "4846ce60-c6d8-5639-a905-dacd904ddb96",
+        "package_digest": "b329bd2ccb4127e6e2d2769ff7f15146c50080592171621a3382c62971523c39",
+        "package_path": "04_设备/kuka/kr60ha__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr60ha/module.json",
+      "module_sha256": "96c4cd01e315113b3097be2486262901604dd3870dec561d69116b70497068f9"
+    },
+    "kr16l6:2ks": {
+      "title": "KUKA KR 16 L6 2 KS｜多源合并",
+      "asset": {
+        "asset_id": "5883a096-a432-523a-81d1-83864a4e5b46",
+        "package_digest": "a001ba4d00b858f69131e35602d53928304fc5130bd5a375d6f6a91eee18de8e",
+        "package_path": "04_设备/kuka/kr16l6_2ks__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr16l6_2ks_6c0ca0fc/module.json",
+      "module_sha256": "8119d09b7c9e2bb08c64a9f1134a63ca8f46683a7d6fac503356e44392acdf88"
+    },
+    "kr5arc": {
+      "title": "KUKA KR 5 arc｜多源合并",
+      "asset": {
+        "asset_id": "da8d094e-0ab7-5a45-9f04-1687fb7df802",
+        "package_digest": "49d2ba16c0db2a4606a85aa29e4f224958bc4c2ff0d525c956499a265c1ea959",
+        "package_path": "04_设备/kuka/kr5arc__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kr5arc/module.json",
+      "module_sha256": "0f8a5d4905d194902ebd99b65e49a9e2a0745d06423c4b8a73943a3d239a193e"
+    },
+    "iisy11r1300": {
+      "title": "KUKA iisy 11 R1300",
+      "asset": {
+        "asset_id": "bf2e7e4c-38ef-59ff-8958-5b30e942bc0d",
+        "package_digest": "4ea7975f54153d21794eb4f35b0bf16731b76678cd0f9831686986ac8cab2e9c",
+        "package_path": "04_设备/kuka/iisy_11_r1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iisy11r1300/module.json",
+      "module_sha256": "b6592ece2e5c67373e2dd59c68a0e266b40117d3a858cdb513ff54d7c0c50df4"
+    },
+    "iisy15r930": {
+      "title": "KUKA iisy 15 R930",
+      "asset": {
+        "asset_id": "3345286e-4ef0-5d49-81c2-fdaf2e801d28",
+        "package_digest": "cb53494e4c4be9a02cfd94304b92134f60c72d2e07b3793165ef39c0769587e4",
+        "package_path": "04_设备/kuka/iisy_15_r930__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iisy15r930/module.json",
+      "module_sha256": "e868d5327275905f8473eca331efa33cf023caa4d664062ef4d89ad9769b219c"
+    },
+    "iisy3r760": {
+      "title": "KUKA iisy 3 R760",
+      "asset": {
+        "asset_id": "2402aa43-5d84-5ee5-bcdc-7694914358e0",
+        "package_digest": "31b0a903d0c5b8f5b87953f55582b7e0c585c47de7147cfbd55d71aaa1b7f0ba",
+        "package_path": "04_设备/kuka/iisy_3_r760__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iisy3r760/module.json",
+      "module_sha256": "42cdcde7b5b327deaac85425fa74907597a60124cb4228f980380ca7d20721fe"
+    },
+    "iontecultrakr120r2700": {
+      "title": "KUKA IONTEC ultra KR 120 R2700",
+      "asset": {
+        "asset_id": "a1a8db10-7564-5a9e-9e39-0e527f751423",
+        "package_digest": "4eecda6c9a89dc66f729bc1fac8a74df64f17a9131805f752c982bb074bf953a",
+        "package_path": "04_设备/kuka/iontec_ultra_kr_120_r2700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/iontecultrakr120r2700/module.json",
+      "module_sha256": "ec7ab6ba9ff481e900860884be0a9519e737c1de719d94f3460c30f41b2ec872"
+    },
+    "kr10r1100:2airskin": {
+      "title": "KR 10 R1100-2 AIRSKIN",
+      "asset": {
+        "asset_id": "badcb843-7a59-51ca-807a-2515db448f0a",
+        "package_digest": "7a334e2f3d2318a524b5a7d10a1bbbab4c3c47f5f8e4d7a5ee507c4cd91bf5bb",
+        "package_path": "04_设备/kuka/kr_10_r1100-2_airskin__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10r1100_2airskin_3ef355f1/module.json",
+      "module_sha256": "0d65568534380bf0f2234cb6169c73ddff8e3fa729a3e268b81ff59ade17f385"
+    },
+    "kr10r1100:2airskinsf10": {
+      "title": "KR 10 R1100-2 AIRSKIN SF10",
+      "asset": {
+        "asset_id": "4064accd-ee68-5669-b294-fdb5c11061c3",
+        "package_digest": "59bd03512f683b4d9d6e6a6e9609700b1d5bb10c85a049f6a1f9af68a01d6d7f",
+        "package_path": "04_设备/kuka/kr_10_r1100-2_airskin_sf10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10r1100_2airskinsf10_442170a9/module.json",
+      "module_sha256": "ccf41c14c7ba9e50bc2ed33b30593cc8e25390d55f61ca007b0e6d355cc84dde"
+    },
+    "kr10r900:2airskin": {
+      "title": "KR 10 R900-2 AIRSKIN",
+      "asset": {
+        "asset_id": "7b262f08-87ce-5423-ab7d-d579260ca8b3",
+        "package_digest": "c7b4c1172cddc19f3d6bc25cb04a8adb2dfd6bfa14c2bd1030afac84d97fd70d",
+        "package_path": "04_设备/kuka/kr_10_r900-2_airskin__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10r900_2airskin_4cf6fe8e/module.json",
+      "module_sha256": "a4098c5812e19b7f49040c4110a1dc77caf8125ed122b6d3cef7c91280e60028"
+    },
+    "kr10r900:2airskinsf10": {
+      "title": "KR 10 R900-2 AIRSKIN SF10",
+      "asset": {
+        "asset_id": "cff101f5-b5a1-5d3b-9370-2a0ffa215938",
+        "package_digest": "09ce6dcc737b1c2e0094f3314ad5d9d4e8ac13a512fab62695af0c824ec4b10b",
+        "package_path": "04_设备/kuka/kr_10_r900-2_airskin_sf10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10r900_2airskinsf10_41f749bf/module.json",
+      "module_sha256": "4de5e31e6ddee566ee63bfbf07496b76e8ce8df007deffb0feb6b117a90028c8"
+    },
+    "kr10scarar600z300": {
+      "title": "KUKA KR10 scara R600 Z300",
+      "asset": {
+        "asset_id": "fa2fb4c3-ee6c-5130-8a32-a134ea2e169c",
+        "package_digest": "42094bbd92d8b6b548d592d764b5bacd547fd77974b92f93cead4ae796f90ea7",
+        "package_path": "04_设备/kuka/kr10_scara_r600_z300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10scarar600z300/module.json",
+      "module_sha256": "afebcb93a540f4495c8ae9aecbab699ec984577b651992b0962a51e4f377bc84"
+    },
+    "kr10scarar600z400": {
+      "title": "KUKA KR10 scara R600 Z400",
+      "asset": {
+        "asset_id": "0fad4d5c-5dd3-56db-9879-1fa002d3906b",
+        "package_digest": "3ccaa7092659d3e43379cc83c5b00f647ad9608823fe971d4dc292a08d535bdd",
+        "package_path": "04_设备/kuka/kr10_scara_r600_z400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10scarar600z400/module.json",
+      "module_sha256": "d54e624a1673835405bc4b8288d06cf86a7092b1d86662fdb3bb09e4aeb7c147"
+    },
+    "kr10scarar850z300": {
+      "title": "KUKA KR10 scara R850 Z300",
+      "asset": {
+        "asset_id": "09e4e0e9-36d5-5d3d-b8bd-cad3f3ad08f6",
+        "package_digest": "f94bbf0db6da5016a5e94c21965caec1cf40ac76f35c2f1fa08e99971c4d8134",
+        "package_path": "04_设备/kuka/kr10_scara_r850_z300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10scarar850z300/module.json",
+      "module_sha256": "31f63ed77b9dd0c016a3520739d4a162a5f2874fe54baca8b0050d8d82dda83d"
+    },
+    "kr10scarar850z400": {
+      "title": "KUKA KR10 scara R850 Z400",
+      "asset": {
+        "asset_id": "3d8458f4-8085-5f63-aa8a-168569657b47",
+        "package_digest": "2eef62f7647f1edac91c630afdfd151b1da581a80245d3ee09c963145f09e85a",
+        "package_path": "04_设备/kuka/kr10_scara_r850_z400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr10scarar850z400/module.json",
+      "module_sha256": "9910012ffbf0d67b507033932035fc2f1ebc7b1983516ce47c4d4ce0f76fb6af"
+    },
+    "kr150l120:2": {
+      "title": "KUKA KR 150 L120/2",
+      "asset": {
+        "asset_id": "46de3770-6cae-525c-ad07-232058f22b71",
+        "package_digest": "885f8e75f26a14d44a9617be3ab4e4563e70e2efe3f8963c1084ed8230421097",
+        "package_path": "04_设备/kuka/kr_150_l120-2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr150l120_2_8d25b290/module.json",
+      "module_sha256": "ed37a8f19a2c53d6dfc2b64adb55a61940d55e3e6e63cb6f510721bb7827f9ab"
+    },
+    "kr16:3": {
+      "title": "KUKA KR 16 3",
+      "asset": {
+        "asset_id": "241b833e-0031-5e03-a756-e16366fb07d3",
+        "package_digest": "dafe8bafe0a48dc34f814d48c143796e9d9bad7d0e17322cb9b799060e819019",
+        "package_path": "04_设备/kuka/kr_16_3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr16_3_39588563/module.json",
+      "module_sha256": "36aeab8d6bde9bd69a013f4c8e68a8ea7193f549357520ac587e2582c2f48d4d"
+    },
+    "kr16av300": {
+      "title": "KUKA KR 16 AV300",
+      "asset": {
+        "asset_id": "142f8836-d17e-5017-80b0-16bbbef8a24c",
+        "package_digest": "4961488cfe50804f7c974b7e6d1e0139caa4be946d7a101dbebdcad878e432da",
+        "package_path": "04_设备/kuka/kr_16_av300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr16av300/module.json",
+      "module_sha256": "8a7838566a54e66f92f9b4b677e3f81b3a162cf56f43c06a2248cdae9756a13c"
+    },
+    "kr16l6": {
+      "title": "KUKA KR 16 L6",
+      "asset": {
+        "asset_id": "b88d4ce5-8491-5691-b006-81c2c9ff2e8f",
+        "package_digest": "3be6a86e7b917ea885b50f733d1c2f1bbbb2a665e98c4a58770a113640fdf3cd",
+        "package_path": "04_设备/kuka/kr_16_l6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr16l6/module.json",
+      "module_sha256": "965ffe13bbf688beb229515ce88ac314badfb88aaf1249806788f3ec61666d39"
+    },
+    "kr16l8archw": {
+      "title": "KUKA KR 16 L8 arc HW",
+      "asset": {
+        "asset_id": "93cd0197-9d73-5fdd-acff-10472c5092af",
+        "package_digest": "4f548c7d5cddd20e19aec9cffd001215c286b9a6193b8f9cf16f3f7f759856bc",
+        "package_path": "04_设备/kuka/kr_16_l8_arc_hw__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr16l8archw/module.json",
+      "module_sha256": "8be166954a156d0e4d7daebeb09c0b15c57bbac3433101d56c62bb9216ee07a8"
+    },
+    "kr200:2": {
+      "title": "KUKA KR 200-2",
+      "asset": {
+        "asset_id": "e67b34e8-3f2d-55a5-a227-eafccc9a3f7e",
+        "package_digest": "cc9e48ef510096b5a24acc3b42fea3237e12d9af1334da8589d1bded5815955f",
+        "package_path": "04_设备/kuka/kr_200-2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr200_2_8e08a27a/module.json",
+      "module_sha256": "86c7269905e68f54ae617aca50043449cc35365859299a7a2c1e83119d1a13cf"
+    },
+    "kr210l180:2": {
+      "title": "KUKA KR 210 L180-2",
+      "asset": {
+        "asset_id": "591542eb-2be2-5648-8fbe-a648616fe92a",
+        "package_digest": "9b754b4ef52829764b9bd1e31e92c8e8b2b0b5667bbd2d8b35dabc90cf186a15",
+        "package_path": "04_设备/kuka/kr_210_l180-2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr210l180_2_3f2f3df0/module.json",
+      "module_sha256": "1f1d0740619a17d9ee11b6742f2cbfdd03a7c68e4685a9618f2bfc370f530802"
+    },
+    "kr3": {
+      "title": "KUKA KR 3",
+      "asset": {
+        "asset_id": "130a4a5a-24ca-5f36-b0e4-9c0fb2c82c6a",
+        "package_digest": "fc276da661a9ec1327d4072c1d33ad5e8fe4cf886b272632157e04252a7cb324",
+        "package_path": "04_设备/kuka/kr_3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr3/module.json",
+      "module_sha256": "68c885ac7af2360867bf06b277cf1a2934f1a0debb7f3587bf1bdee10da2c680"
+    },
+    "kr30l16": {
+      "title": "KUKA KR 30 L16",
+      "asset": {
+        "asset_id": "f50a3098-f167-596d-8995-0532979e282a",
+        "package_digest": "570f26091e7417fae9fcb9920275e51d35cb9c92515deedc9da2412a83ed7720",
+        "package_path": "04_设备/kuka/kr_30_l16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr30l16/module.json",
+      "module_sha256": "24d2f8c8622ce53e2ebbc99bc6d8edd8a95dedbae5b80b2bd9dcd58bd6a70045"
+    },
+    "kr50r2100:2d01": {
+      "title": "KR 50 R2100-2 D01",
+      "asset": {
+        "asset_id": "3df57756-eae8-57eb-9a77-bba7b169d48d",
+        "package_digest": "fc1c5ceb5d6a6df390f9fe297554549bfe4e621b911ca02bde9980ebd7554f2c",
+        "package_path": "04_设备/kuka/kr_50_r2100-2_d01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr50r2100_2d01_87e44dc2/module.json",
+      "module_sha256": "30e065d55f23129d0d606af81bbf218c44107e4ae203903b564f8e9adbacf90e"
+    },
+    "kr5archw": {
+      "title": "KUKA KR 5 arc HW",
+      "asset": {
+        "asset_id": "0c7b892b-f3f9-5217-856c-4698e2e87b9e",
+        "package_digest": "607c9ddb5fe7c2323c775e154b7ae2b63be264af671a0a57e1e2f1d9c38e8400",
+        "package_path": "04_设备/kuka/kr_5_arc_hw__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5archw/module.json",
+      "module_sha256": "b200c87dab112012393dd6e01f38bcdf7f44f9d28e22d3dade547e9c33ea86be"
+    },
+    "kr5scarar350z200": {
+      "title": "KUKA KR5 scara R350 Z200",
+      "asset": {
+        "asset_id": "49ef2483-9512-5f91-bae9-056280d577fa",
+        "package_digest": "e93de94ddfad73a38c81d1dc99e5f4e3f06c466c6f5a3b6eba7d2682c185b1fc",
+        "package_path": "04_设备/kuka/kr5_scara_r350_z200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5scarar350z200/module.json",
+      "module_sha256": "1dbb2b16f5c1085d574c3da21b7e1b3c804072d5b5c3c1a0be9f9b1d82773b5a"
+    },
+    "kr5scarar350z320": {
+      "title": "KUKA KR5 scara R350 Z320",
+      "asset": {
+        "asset_id": "917a86e6-4672-504e-b20e-d7bce4006cbd",
+        "package_digest": "1949b4f33d2dacb9c595351d5fd7cad6d2d6a050b183eb4310010ef7b886d37d",
+        "package_path": "04_设备/kuka/kr5_scara_r350_z320__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5scarar350z320/module.json",
+      "module_sha256": "2c02b838240e28a5ef6993a872f5b60ca46a9c7a2ce72bb30bd72923beb82241"
+    },
+    "kr5scarar550z200": {
+      "title": "KUKA KR5 scara R550 Z200",
+      "asset": {
+        "asset_id": "075940d8-aab4-54bc-9b10-f92baae7997e",
+        "package_digest": "acd83995dfb9baf73cf653fdbbb19252e188e74ec90f494b5489d0ba2eaff865",
+        "package_path": "04_设备/kuka/kr5_scara_r550_z200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5scarar550z200/module.json",
+      "module_sha256": "bb2d91657138c3d5542041b66873ffd90a37f2c85a1ac65ec912e3ea47df2473"
+    },
+    "kr5scarar550z320": {
+      "title": "KUKA KR5 scara R550 Z320",
+      "asset": {
+        "asset_id": "3c716867-5c8c-587e-975e-35dded888446",
+        "package_digest": "4a6c7bc22a6390a02eb102c8456bba81bd87228a42b5d77ce6d8c6857675d3a3",
+        "package_path": "04_设备/kuka/kr5_scara_r550_z320__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5scarar550z320/module.json",
+      "module_sha256": "b3bac05e0725219fd5761aef757afb5c947233c82ea05d4e1310ca6a38fe0f3f"
+    },
+    "kr5sixxr650": {
+      "title": "KUKA KR 5 sixx R650",
+      "asset": {
+        "asset_id": "ba19d31b-3d85-58c5-904a-4c847962a9b2",
+        "package_digest": "c25314e41eda729063d08533c4357b3234006a8f456a195474af37116971fe78",
+        "package_path": "04_设备/kuka/kr_5_sixx_r650__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5sixxr650/module.json",
+      "module_sha256": "fa9fa996547b732a79026630490541e3b78579964c26bff0ea901b6d8c03be69"
+    },
+    "kr5sixxr850": {
+      "title": "KUKA KR 5 sixx R850",
+      "asset": {
+        "asset_id": "18d00756-7bfc-5456-a24c-36cd684238b0",
+        "package_digest": "1f079c8b3abd9729235edfdc9c516261592d3ae975cb28edbfe7a16e01f49057",
+        "package_path": "04_设备/kuka/kr_5_sixx_r850__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr5sixxr850/module.json",
+      "module_sha256": "32dbc47c3f314f8bb71e61df8cbaec26e0830421a5d1207ecb9f2c2b568a089b"
+    },
+    "kr60l16ks": {
+      "title": "KUKA KR 60 L16 KS",
+      "asset": {
+        "asset_id": "b2fef9eb-c171-539f-aea1-fe04196986ce",
+        "package_digest": "7de7e485323efbadff3db4ad221361132e42ced029dfd3ba15f0d3de8a0e158a",
+        "package_path": "04_设备/kuka/kr_60_l16_ks__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr60l16ks/module.json",
+      "module_sha256": "03bdd97c12a439a9c6a67fa768ce64dc56819bfb0fa69b1856ff556c67ca9975"
+    },
+    "kr60l30ha": {
+      "title": "KUKA KR 60 L30 HA",
+      "asset": {
+        "asset_id": "d4da16d2-2e34-57d2-bb22-4e7fe18aa131",
+        "package_digest": "35927e9ec5fd987984c35572726ed00a3f3cdcc2136c532e57fb93c60c7ade6b",
+        "package_path": "04_设备/kuka/kr_60_l30_ha__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr60l30ha/module.json",
+      "module_sha256": "602dd06d3af0ef5f41c730f0eb4b1c5b6d72ebd4e11b4687ed2144a8ac244638"
+    },
+    "kr6:2ks": {
+      "title": "KUKA KR 6 2 KS",
+      "asset": {
+        "asset_id": "2d748fab-51a6-585e-86bf-a31896dd998b",
+        "package_digest": "ed31a5d5c21b220fd749811f68b7e55c1c89c7b1e31a4ec91e5bd58a8742b726",
+        "package_path": "04_设备/kuka/kr_6_2_ks__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6_2ks_13277a52/module.json",
+      "module_sha256": "f092631fd6cd3a43d820f410e723471273e1edea3bef92f79ffde58ebfbf0ce5"
+    },
+    "kr6arc": {
+      "title": "KUKA KR 6 arc",
+      "asset": {
+        "asset_id": "c279df8c-7723-5e8a-bae7-a793da3ba957",
+        "package_digest": "99310efd9f8d2c1649646573b10093974e6d522a843da7e76b767c0224591a43",
+        "package_path": "04_设备/kuka/kr_6_arc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6arc/module.json",
+      "module_sha256": "083ac536fbb2d3028b8b3ad443ed3d43ad25bef107fe2c417bddcbce984c75e3"
+    },
+    "kr6r1820cybertech": {
+      "title": "KUKA KR 6 R1820 Cybertech",
+      "asset": {
+        "asset_id": "56cdd98e-8126-5da2-bdb3-6173435a33c4",
+        "package_digest": "edef46f6868775c9753cf00bccf89d42825ee553d63c535f0816499a4a38891a",
+        "package_path": "04_设备/kuka/kr_6_r1820_cybertech__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6r1820cybertech/module.json",
+      "module_sha256": "3f8794b8ec19bed6022ee31a7a86bdeec3205aa82142369ae85f5b5918edcefd"
+    },
+    "kr6r700z200": {
+      "title": "KUKA KR 6 R700 Z200",
+      "asset": {
+        "asset_id": "0c8c3e62-358f-5d7b-baf6-a9f549884ca5",
+        "package_digest": "a5defb38c869b90ae1a37f795f6a1f495fd7c3e572fd0e1d1cf0022a24f23247",
+        "package_path": "04_设备/kuka/kr_6_r700_z200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6r700z200/module.json",
+      "module_sha256": "2478cb86fb448fd9623a1ace8a5b70a5220586abf22af0ccd84828d26537db34"
+    },
+    "kr6r900": {
+      "title": "KUKA KR 6 R900",
+      "asset": {
+        "asset_id": "e535bf95-3bee-5cb8-93bd-e72a41459b35",
+        "package_digest": "3c34e8b9d708949e15aa31b6a1fd9ef8dde423fe1617da71d21aa3bc3ba5e839",
+        "package_path": "04_设备/kuka/kr_6_r900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6r900/module.json",
+      "module_sha256": "774c84dabdaa4bac51c430937b2232af39817b3e0893ee71eece79e3097766b3"
+    },
+    "kr6r900:2airskin": {
+      "title": "KR 6 R900-2 AIRSKIN",
+      "asset": {
+        "asset_id": "7174e459-4265-5be8-993e-49f1f87388ef",
+        "package_digest": "36cdc970b6445bcdcf9ae2b27bdb71c55cb5a0a4c042c7ea98b0ea02a75ffbff",
+        "package_path": "04_设备/kuka/kr_6_r900-2_airskin__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6r900_2airskin_e9dfaaf9/module.json",
+      "module_sha256": "5782fe4afb29f6724eaf7782ecc25ddaab014616c2905598472196d744aa208f"
+    },
+    "kr6r900:2airskinsf10": {
+      "title": "KR 6 R900-2 AIRSKIN SF10",
+      "asset": {
+        "asset_id": "33379a4f-ea16-5f37-afc2-8ac7c9a3b096",
+        "package_digest": "740f08618731978e84bf2886a67fba945844284c603f1fef0331bc2dae28899b",
+        "package_path": "04_设备/kuka/kr_6_r900-2_airskin_sf10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr6r900_2airskinsf10_81df22cc/module.json",
+      "module_sha256": "0df87fbae0c860a218a356c1e212f68868df2af5a8b397ba894d683be586a910"
+    },
+    "kr8r1620hp": {
+      "title": "KUKA KR 8 R1620 HP",
+      "asset": {
+        "asset_id": "729adb2a-c027-505e-a2d6-de859a4cb8b2",
+        "package_digest": "8ff92e569b2c42a2f82631190da7b8d93212f4c92b2d486b01922386ca7ce5ab",
+        "package_path": "04_设备/kuka/kr_8_r1620_hp__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr8r1620hp/module.json",
+      "module_sha256": "210a538d830eda42b0873fe851dc82f785dc5c85d8f6df4e7552907b2866526f"
+    },
+    "lbriiwa7r800mf": {
+      "title": "KUKA LBR iiwa 7 R800 MF",
+      "asset": {
+        "asset_id": "37fb6609-0bae-561f-a25b-38ba3dad0722",
+        "package_digest": "cabf1da17c8e61054fbe405c13504f403684b5222f6e9f82a15d638e42d49f60",
+        "package_path": "04_设备/kuka/lbr_iiwa_7_r800_mf__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/lbriiwa7r800mf/module.json",
+      "module_sha256": "208639feab8c8ccb8c250ed010c50457be3511db26f981531e499db392a90bd8"
+    },
+    "youbot": {
+      "title": "KUKA youBot",
+      "asset": {
+        "asset_id": "d8f8b4e6-df6b-59e7-850f-47fb615752bb",
+        "package_digest": "164dc1bac81dd8ba041e3e967b2b23fc564be19822c5aa2e18a0e06c822d3a47",
+        "package_path": "04_设备/kuka/youbot__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/youbot/module.json",
+      "module_sha256": "b115b3dee6804fb264f58b99e8e38d6bae3a50f65eabb034bfb999e05de46abb"
+    },
+    "kr120r3200pa": {
+      "title": "KUKA KR 120 R3200 PA｜多源合并",
+      "asset": {
+        "asset_id": "a3b32907-0ad0-5648-927c-ee9f12e9fd0d",
+        "package_digest": "d28567f0f591d2526f38b35a17d86a6c342c1cbcece208f188cd91556dd29ab7",
+        "package_path": "04_设备/kuka/kr120r3200pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr120r3200pa/module.json",
+      "module_sha256": "3b75640e9b1cd9ba1350ba913fd748591dabb7d4e10579ac1123e04560ef93cf"
+    },
+    "kr140r3200:2pa": {
+      "title": "KUKA KR 140 R3200-2 PA｜多源合并",
+      "asset": {
+        "asset_id": "87f272be-7d3d-5d74-9dbe-b5e4a4e14d3e",
+        "package_digest": "04977baae4e47594ba943d641956b5e9d962321c29efdbfdb18339166262e54f",
+        "package_path": "04_设备/kuka/kr140r3200_2pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr140r3200_2pa_ccb1164e/module.json",
+      "module_sha256": "780fb71524e50e1eb806fb3bb42c7f375e6e6bf4aa962ba1423b261967cab9e0"
+    },
+    "kr180r3200:2pa": {
+      "title": "KUKA KR 180 R3200-2 PA｜多源合并",
+      "asset": {
+        "asset_id": "f04b6c1a-9f8e-5f7b-9b01-7e8210d122aa",
+        "package_digest": "b042c4f8d3be163d1a6717f1722cf051ce1fd720a44ca65bc0634b9ed4e69216",
+        "package_path": "04_设备/kuka/kr180r3200_2pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr180r3200_2pa_81adfbe0/module.json",
+      "module_sha256": "74e576a624b61c8b68328b8d2e87454c992218c4814cdf7f813d225608aea016"
+    },
+    "kr180r3200pa": {
+      "title": "KUKA KR 180 R3200 PA｜多源合并",
+      "asset": {
+        "asset_id": "929bbf7d-7171-5a00-8d6c-72d5e8e5d267",
+        "package_digest": "30ca70a2825690653812f6dee3982c55eb8202712ba067a786faea6a970d907b",
+        "package_path": "04_设备/kuka/kr180r3200pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr180r3200pa/module.json",
+      "module_sha256": "849773b05eab70aafaaafb1b625783246936b91f0b9e95402da10c38d7227a81"
+    },
+    "kr240r3200pa": {
+      "title": "KUKA KR 240 R3200 PA｜多源合并",
+      "asset": {
+        "asset_id": "0c74ba6a-e035-51b4-b021-7c0093c2ecdd",
+        "package_digest": "46f4721703dbd97ebbcca0f0ae4a19f83ac77b38e544b9a7e44493e24d2ba9fb",
+        "package_path": "04_设备/kuka/kr240r3200pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr240r3200pa/module.json",
+      "module_sha256": "3f264a5b6a4738a3e7d995edac96eef7dff66352e09bdeb61b2a40edfc9074c9"
+    },
+    "kr40pa": {
+      "title": "KUKA KR 40 PA｜多源合并",
+      "asset": {
+        "asset_id": "58be2327-9f5f-51cb-b19f-e27677c84a52",
+        "package_digest": "01b4ad806dd17095a2e986917ed4e9b94bfd2df43a9d3c6ed34745c6eb72493b",
+        "package_path": "04_设备/kuka/kr40pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr40pa/module.json",
+      "module_sha256": "d4b445ad1a3251dfd019a9848ebd758592d238a4a208b59cbc0e89c57bbc6ee4"
+    },
+    "kr700pa": {
+      "title": "KUKA KR 700 PA｜多源合并",
+      "asset": {
+        "asset_id": "3caf79f9-3fc8-5ac3-802a-c24a1058f311",
+        "package_digest": "3e02d5393aee7c21ad7b670c67105a745a460c5f453fd86a989a715f30805c18",
+        "package_path": "04_设备/kuka/kr700pa__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kr700pa/module.json",
+      "module_sha256": "15799a5abe2b311c7ea1cd5b3acf26699567fb6b43c34751a36310c44c425092"
+    }
+  },
+  "source_profiles": []
+}

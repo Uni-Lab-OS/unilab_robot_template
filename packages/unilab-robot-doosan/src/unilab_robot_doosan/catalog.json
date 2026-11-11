@@ -1,0 +1,349 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "doosan",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "a0509": {
+      "title": "Doosan Robotics A0509｜多源合并",
+      "asset": {
+        "asset_id": "b9a04e30-a0e2-5dde-927a-b1b68bf5c2fa",
+        "package_digest": "c953722b17143a0f64475c76ca7d5cc64e0483d2785483dd0c476305af6f1c8b",
+        "package_path": "04_设备/doosan_robotics/a0509__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/a0509/module.json",
+      "module_sha256": "096294d626a96354090ce93478380b0432142a0eaf4a32a0fc534830dfc10f2d"
+    },
+    "a0912": {
+      "title": "Doosan Robotics A0912｜多源合并",
+      "asset": {
+        "asset_id": "8abe47b0-eddb-52e9-b11c-16f01f46eb54",
+        "package_digest": "6078d1e73a365cf5bdf84c840e8f55301f268ba5a98ca92dffc636e3b8224faf",
+        "package_path": "04_设备/doosan_robotics/a0912__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/a0912/module.json",
+      "module_sha256": "a54c76b61578dcd8885946522f43a2a4439ad549c615a1b56a3380c5f7aa450e"
+    },
+    "e0509": {
+      "title": "Doosan Robotics E0509｜多源合并",
+      "asset": {
+        "asset_id": "caf2f538-b555-57af-8c19-37ea2b9448c5",
+        "package_digest": "671910cc2fb799f39129e75da2b3872cb59d73eec6b26c46fc868f4a76281ed9",
+        "package_path": "04_设备/doosan_robotics/e0509__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/e0509/module.json",
+      "module_sha256": "1d1e597e84f6f1b29555063d5bb15b4f3e24808bb67e9c2a89b97c307bf7befb"
+    },
+    "h2017": {
+      "title": "Doosan Robotics H2017｜多源合并",
+      "asset": {
+        "asset_id": "521a38c5-38c4-5f3f-87c3-9221d37270a5",
+        "package_digest": "cc7216430b84c72571edf09428296f86dd5b22ac55dff5f94a76cdc218f09045",
+        "package_path": "04_设备/doosan_robotics/h2017__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/h2017/module.json",
+      "module_sha256": "c5951b67b4d9b58dbb184ede3f42a4d4db89ca8f922e8a64d16936a89c9b151f"
+    },
+    "h2515": {
+      "title": "Doosan Robotics H2515｜多源合并",
+      "asset": {
+        "asset_id": "0437ba87-167a-5c33-a280-b8be396deea1",
+        "package_digest": "edb0db2c2fb2fbaf7d845e36d7ddba11fa6a20da762f6de5e58dc972298f033b",
+        "package_path": "04_设备/doosan_robotics/h2515__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/h2515/module.json",
+      "module_sha256": "f3d2e47c44fae4851643f50bc8924e593b8f0d03e647eec481a10453756dff3b"
+    },
+    "m0609": {
+      "title": "Doosan Robotics M0609｜多源合并",
+      "asset": {
+        "asset_id": "dd591c9b-57c2-5e15-9f20-247e9c8e13db",
+        "package_digest": "03460063f2debe74cea7d89c566276942e5f09bcf7e5d14a131884857268c97d",
+        "package_path": "04_设备/doosan_robotics/m0609__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m0609/module.json",
+      "module_sha256": "6bb669ebb311fc773f555cc9cc805b34f78b775d1f71145c0063090e99fedc3b"
+    },
+    "m0617": {
+      "title": "Doosan Robotics M0617｜多源合并",
+      "asset": {
+        "asset_id": "f188130a-0dce-54e5-88c5-2446f2d2affa",
+        "package_digest": "aa4f79f7578da8d033a01ac091800df35bfeb03a98155c46b47849dde39ec807",
+        "package_path": "04_设备/doosan_robotics/m0617__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m0617/module.json",
+      "module_sha256": "9850a907c3500ac1ae36b2ae0b953d2e9ba069a63355042fb89ad034f520c044"
+    },
+    "m1013": {
+      "title": "Doosan Robotics M1013｜多源合并",
+      "asset": {
+        "asset_id": "8b53d6fa-e09d-5437-85e9-197b64c26a79",
+        "package_digest": "b9187d5898953007a11e1d0bc087bfcf3354e1c05210e7572e6bd9b4ac944096",
+        "package_path": "04_设备/doosan_robotics/m1013__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m1013/module.json",
+      "module_sha256": "55e3403751cf6304046dc8f4d9e27d329faa8ee12920688b1e02f724900d36c2"
+    },
+    "m1509": {
+      "title": "Doosan Robotics M1509｜多源合并",
+      "asset": {
+        "asset_id": "d62edb92-9448-5a1d-bffd-9328b9f8a7bd",
+        "package_digest": "83c7657d665feffce8df42679279b4b92b89b7e5a159ff8495a64b38892459f5",
+        "package_path": "04_设备/doosan_robotics/m1509__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/m1509/module.json",
+      "module_sha256": "d538fa2aae42edde15601f3cb22f805dd8817aa075cbefe2e745b55d41197e60"
+    },
+    "p3020": {
+      "title": "Doosan Robotics P3020｜多源合并",
+      "asset": {
+        "asset_id": "bf499732-0184-547a-ab4d-937e153f4dcb",
+        "package_digest": "89027f188cf7e8c4bb8763b79ac9bbe9906986f0a98a790459c48d42ae531dc1",
+        "package_path": "04_设备/doosan_robotics/p3020__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/p3020/module.json",
+      "module_sha256": "02c5977c7141df38c6134e9e76842ffde6c719bae5ed371a22ec509692c1947c"
+    },
+    "a0509white": {
+      "title": "Doosan Robotics A0509 White",
+      "asset": {
+        "asset_id": "0061aba2-b2b8-52a6-9906-6bd651c12964",
+        "package_digest": "755ae21b6c04438f965244196f6414486785c96a9f9feb9e6bf105f4c5447980",
+        "package_path": "04_设备/doosan_robotics/a0509_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/a0509white/module.json",
+      "module_sha256": "521f17bdb4d54f45b1d8091369f6d478cf5eeafef832513c63c5f845b7661ff6"
+    },
+    "a0912white": {
+      "title": "Doosan Robotics A0912 White",
+      "asset": {
+        "asset_id": "26a54b11-db7c-56da-a548-357625327198",
+        "package_digest": "71d5e2f412bb64762db5eec62f8950bc76e7fd1824d2dcb58db672f928aa5fbc",
+        "package_path": "04_设备/doosan_robotics/a0912_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/a0912white/module.json",
+      "module_sha256": "2984125fedfb6b55428b39964593014faaf6286de5c8d4533ce71553e4d7448b"
+    },
+    "h2017white": {
+      "title": "Doosan Robotics H2017 White",
+      "asset": {
+        "asset_id": "a7417a5f-4190-5cb1-9933-75187913b723",
+        "package_digest": "2b144b79a1b03a71bf8a4fe7702cf7d7244ceaa8bd9f55d3a391cbf7e386aafe",
+        "package_path": "04_设备/doosan_robotics/h2017_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/h2017white/module.json",
+      "module_sha256": "932d16a59f9164a69b0711ff95545b7b58ea9142b9677d9ddac65da6a58b5478"
+    },
+    "h2515white": {
+      "title": "Doosan Robotics H2515 White",
+      "asset": {
+        "asset_id": "e380a839-9411-5e78-b742-67735a95a7b7",
+        "package_digest": "9c0736d50cee1bfab464dc2f93d07c7a5ce1b2902d0840cd1835f228b2fa5c12",
+        "package_path": "04_设备/doosan_robotics/h2515_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/h2515white/module.json",
+      "module_sha256": "165bc60749acff6866867aac03cd00b6681380f912a2c2092815a537448bb57e"
+    },
+    "m0609white": {
+      "title": "Doosan Robotics M0609 White",
+      "asset": {
+        "asset_id": "7b8c6675-77d0-5f1c-9937-d47c4b488b78",
+        "package_digest": "f9f0f137d45921c3549dea02e3f9e16355383483ed760aced8746a16e3d287f6",
+        "package_path": "04_设备/doosan_robotics/m0609_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m0609white/module.json",
+      "module_sha256": "a8c3aa224a683ac95e94f208cde7eef30d61ba93ed74b583afe754cdbf937103"
+    },
+    "m0617white": {
+      "title": "Doosan Robotics M0617 White",
+      "asset": {
+        "asset_id": "5d23cdd1-6134-5661-8e16-73c7e7c4c789",
+        "package_digest": "6bc4a11bb9fd709ab93b688245aa626406750ad03a904f5382e79e895783b703",
+        "package_path": "04_设备/doosan_robotics/m0617_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m0617white/module.json",
+      "module_sha256": "30e38b3c3aad9999100c964d4b940a5ce4161ea2623cb3072e8423f07978fcca"
+    },
+    "m1013white": {
+      "title": "Doosan Robotics M1013 White",
+      "asset": {
+        "asset_id": "6ee59b43-9625-5200-a52c-f7423ebf17fc",
+        "package_digest": "7e841e30468ea07caaabe0a85d6076bc347ed0534a159b2f2db1d89477b7dcba",
+        "package_path": "04_设备/doosan_robotics/m1013_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m1013white/module.json",
+      "module_sha256": "7aea6a5ad8238e89cbd35925e73d6718b93e2ffb285c9186c8f65cf99acd440e"
+    },
+    "m1509white": {
+      "title": "Doosan Robotics M1509 White",
+      "asset": {
+        "asset_id": "59ae4065-7c9e-5fff-804c-241d6df14976",
+        "package_digest": "89ec79baaeb48a42316dd117ef29e7894bed3bbd107510920067ad24e59df3db",
+        "package_path": "04_设备/doosan_robotics/m1509_white__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/m1509white/module.json",
+      "module_sha256": "a0db62370fc4433a77d0dcbdde7a844a6dda48c32182c7e98ea3bb5f0508e9e6"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "dsr_moveit_config_a0509_3152b0dfaf",
+      "manifest": "source_profiles/dsr_moveit_config_a0509_3152b0dfaf/source.lock.json",
+      "sha256": "cc11fd978ccc53e9db09ec4ba61d0aa158eb819cdcdde63ced1a7f86d561a24a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_a0912_e009d7d87a",
+      "manifest": "source_profiles/dsr_moveit_config_a0912_e009d7d87a/source.lock.json",
+      "sha256": "9c2b3c7b514c738d7ef645dbde761c77b457ef3f98405b02a5c60ee73f6a9bdb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_e0509_db8c33ade1",
+      "manifest": "source_profiles/dsr_moveit_config_e0509_db8c33ade1/source.lock.json",
+      "sha256": "46c266b068f91ab78229ba26f9ce9cbe22629d22d20823bcdf1f6a0428fd3ccb",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_h2017_0cf01892c3",
+      "manifest": "source_profiles/dsr_moveit_config_h2017_0cf01892c3/source.lock.json",
+      "sha256": "9997eea4d0257ce982b6fa79876a98d0df6e5ad1695eb2eb61966999fde4d784",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_h2515_86b3dd7d38",
+      "manifest": "source_profiles/dsr_moveit_config_h2515_86b3dd7d38/source.lock.json",
+      "sha256": "e302e25a41dd055c1a9a9075197ec1c1d98bef1f001e41602ad245b23e03193b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_m0609_af420ca4e3",
+      "manifest": "source_profiles/dsr_moveit_config_m0609_af420ca4e3/source.lock.json",
+      "sha256": "153c5508c05b92ad4f1dfcc04baac148fa7fb7ac6cba3da267daeddd1b606736",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_m0617_b322c84d8c",
+      "manifest": "source_profiles/dsr_moveit_config_m0617_b322c84d8c/source.lock.json",
+      "sha256": "e5a31f47c1ba35523016421f18189d87bbf519eb7011a7fd23de74b2dad43a91",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_m1013_6a6d7d7c3c",
+      "manifest": "source_profiles/dsr_moveit_config_m1013_6a6d7d7c3c/source.lock.json",
+      "sha256": "4285f21fe9e22475f7b715c42bc05d37dba5f12ea4cb5d89675f87fd08742707",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_m1509_4b037b5d71",
+      "manifest": "source_profiles/dsr_moveit_config_m1509_4b037b5d71/source.lock.json",
+      "sha256": "9eb613850e983b045b4569f04c9634d387e1f6c7b6878fbcb70115534969cb09",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "dsr_moveit_config_p3020_f77d598db9",
+      "manifest": "source_profiles/dsr_moveit_config_p3020_f77d598db9/source.lock.json",
+      "sha256": "87df81548064b6a010364f4d22110ff827018500069d535e959ffaeb7e064b11",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

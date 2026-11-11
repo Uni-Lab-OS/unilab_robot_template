@@ -1,0 +1,313 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "elite",
+  "model": "cs620v1.2",
+  "title": "CS620_v1.2",
+  "asset": {
+    "asset_id": "26d6adf1-7fb5-5166-b8a6-148d9c330c59",
+    "package_digest": "a0e29eb1b32c887cf82f2f116ff8a4b380ba56503b09ab9c4759080f18de3dd7",
+    "package_path": "04_设备/elite_robots/cs620_v1.2__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "26d6adf1-7fb5-5166-b8a6-148d9c330c59",
+      "package_digest": "a0e29eb1b32c887cf82f2f116ff8a4b380ba56503b09ab9c4759080f18de3dd7",
+      "package_path": "04_设备/elite_robots/cs620_v1.2__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "a63510326b0e76aa5e35b4511874c410312307f92aaf47dba0d94959c95e9a1d",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "8cb195945270e3f097c078e7a37e05738b80e9135ef7306d6665656cccd52bab",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cs620_v1.2__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:EliteRobotsDriverCS",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/EliteRobotsDriverCS.py",
+        "sha256": "4c00865177dbc7660c14c2db7b3e76c5d5ad27c0f1b126fd2cdfac346b38e7d7",
+        "bytes": 1378,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/EliteRobotsDriverCS.pyc",
+            "sha256": "808efa3e9bd75188abc9d37a6f75c23c49fd45aeeb24670fb30e1d462dce6110"
+          },
+          {
+            "relative_path": "api/Robot/v311/EliteRobotsDriverCS.pyc",
+            "sha256": "5ea413a6dc447f3d1629d95729d9c14d20e36114c15c1a4e67cdf1b1cc0332cb"
+          },
+          {
+            "relative_path": "api/Robot/v312/EliteRobotsDriverCS.pyc",
+            "sha256": "916122cf927fa3acc0dd8ec0c2008c03996784ab959467a9872b9c9c4c05b6f6"
+          },
+          {
+            "relative_path": "api/Robot/v38/EliteRobotsDriverCS.pyc",
+            "sha256": "9a0e0d0d0f7d399f2378513e2576b45e4b9606e600c3dd96eccdafb2a8d3be6e"
+          },
+          {
+            "relative_path": "api/Robot/v39/EliteRobotsDriverCS.pyc",
+            "sha256": "a18e8844cf77eceab9ed1fc9e28dc29cda2f3f573c4061ae547aa4fc8e895dd0"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Elite CS"
+        ],
+        "constraints": [
+          "EC and CS protocols are separate",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:elite:cs_sdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elite/cs_sdk",
+        "repository_url": "https://github.com/Elite-Robots/Elite_Robots_CS_SDK.git",
+        "code_tree_sha256": "9a27ea388ddecab5de26a4d2d402f9ea64218ca4602312693dbeaf5978a85862",
+        "source_evidence": [
+          {
+            "path": "README.cn.md",
+            "sha256": "1d10fd75cb219470eb7fd30515d17a17d1b1f47be5544ab825ab48adb0f6d132"
+          },
+          {
+            "path": "README.md",
+            "sha256": "a33bf485230fd4c00d8b86fc84d82666e15c51337837cb7ac10f6da22c3dc096"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "e69ce4ccd8073a6c1c2cd868928947ed3ee19753c2c5a3dc934dda3f91757001"
+          }
+        ],
+        "constraints": [
+          "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:elite:python_sdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elite/python_sdk",
+        "repository_url": "https://github.com/Elite-Robots/Elite_Robots_CS_SDK_Python.git",
+        "code_tree_sha256": "002dc8d50f04e9815d51e064588d460cdb7a40b28f734ca1f46c183f21415387",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "0a7c71abc3d6423da7d4e775ab5597f0686ff8f3d506b41900b3d711c0f72a52"
+          },
+          {
+            "path": "README_CN.md",
+            "sha256": "1f6c77f384c8ebf5190963977556d599c32ef616aec867b432b045099c3879cf"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "2588539e8b86c344b273e95332c43982bae43f03e06430d6d7fc7f11eef4c1e3"
+          }
+        ],
+        "constraints": [
+          "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:elite:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/elite/ros2_driver",
+        "repository_url": "https://github.com/Elite-Robots/Elite_Robots_CS_ROS2_Driver.git",
+        "code_tree_sha256": "81ca74e9840bbbea08b4cb95be45a1d837127b85210e2f632d711c3f9852c363",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d613703f834cc679c2e7df4bb63d8a92819727c0e58c290dd46eec8a787745d3"
+          },
+          {
+            "path": "README_CN.md",
+            "sha256": "96ceb7c1955d41c8d455859ed29436fdd8cb72c34cc023b632c919a02b0b6512"
+          },
+          {
+            "path": "eli_common_interface/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_cs_controllers/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_cs_robot_description/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_cs_robot_driver/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_cs_robot_moveit_config/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_cs_robot_simulation_gz/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          },
+          {
+            "path": "eli_dashboard_interface/LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Elite_Robots_CS.py",
+      "Elite_Robots_CS_Script.py",
+      "Elite_Robots_EC_movE.py",
+      "Elite_Robots_EC_V3.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "EliteRobotsDriverEC.py",
+        "reason": "EC and CS protocols are separate"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "CS620_v1.2",
+          "manufacturer": "Elite Robots",
+          "variant": "",
+          "path": "Components/Elite Robots/Robots/CS620_v1.2.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "1800",
+          "vcid": "db05fa41-5947-4e41-9f37-bda991cf0524",
+          "library_assets": [
+            "26d6adf1-7fb5-5166-b8a6-148d9c330c59"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/CS620_v1.2.vcmx",
+        "path": "simready_usd/CS620_v1.2.vcmx",
+        "sha256": "a63510326b0e76aa5e35b4511874c410312307f92aaf47dba0d94959c95e9a1d"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "leantec",
+  "models": {
+    "la1206:10r": {
+      "title": "Leantec LA1206-10-R",
+      "asset": {
+        "asset_id": "a4c25761-6629-587d-8607-e5132fb17fa3",
+        "package_digest": "397d65e5f211bf111115a314074fb682a4e4aab87e40e1962f959533b090bfdf",
+        "package_path": "04_设备/leantec/la1206-10-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1206_10r_6ba02cea/module.json",
+      "module_sha256": "c1863a38c4d946705d217c0a89e41d50804499cfbcf73180a0806121215188ed"
+    },
+    "la1460:13k": {
+      "title": "Leantec LA1460-13-K",
+      "asset": {
+        "asset_id": "1cbc86b8-02ae-5926-a999-208f73384294",
+        "package_digest": "d2039edb65c2dcb0b5d7d10ad020a0af733da5e5aaf0d8db0a8c506ad33fd1d1",
+        "package_path": "04_设备/leantec/la1460-13-k__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1460_13k_6ced0bee/module.json",
+      "module_sha256": "f7fb724da9c427d2fc5a72edff9432fb46a8b15d6d30d928113b47e4c92a0fef"
+    },
+    "la1468:10c": {
+      "title": "Leantec LA1468-10-C",
+      "asset": {
+        "asset_id": "d3b6a023-534b-5645-86d9-ecf446c87fd9",
+        "package_digest": "5bde565aec173f3db66315d4491b0de748c64c967e41c4df85e6627c7da7b967",
+        "package_path": "04_设备/leantec/la1468-10-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1468_10c_676ca2bf/module.json",
+      "module_sha256": "17dca706eae51fa0d0da2979a199a48a6210cfc0f6c4208f975267b9f889cc4f"
+    },
+    "la1598:10c": {
+      "title": "Leantec LA1598-10-C",
+      "asset": {
+        "asset_id": "c6aa3e55-f21d-56a3-a9bb-b07cade29476",
+        "package_digest": "3475d9123e2dd0135441741f665cfa3c186247ccf88c8453d9e83c8b4b6e508e",
+        "package_path": "04_设备/leantec/la1598-10-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1598_10c_e04f57f9/module.json",
+      "module_sha256": "6683a44e78be186b8027f76ac64b4cdba1834fb0be504210d91266d4c9b4d141"
+    },
+    "la1717:20c": {
+      "title": "Leantec LA1717-20-C",
+      "asset": {
+        "asset_id": "dbead482-e6f0-5d72-a0cb-c4e8f7276e0f",
+        "package_digest": "e349b94099893b74a654ac26196315020fa07ccd2064fa81e46e7d46d2dd556d",
+        "package_path": "04_设备/leantec/la1717-20-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1717_20c_1a2f6f86/module.json",
+      "module_sha256": "f25474bf19e24239f52edfb7ff4fc8b028af437071d13ba830cc0b453e85f06c"
+    },
+    "la1725:20k": {
+      "title": "Leantec LA1725-20-K",
+      "asset": {
+        "asset_id": "0e8032ea-87c5-5479-96bb-37311e249fa0",
+        "package_digest": "ff4a1482c5cec78182261dfca20240d5a56dc125b276d9839603c6d700654ac7",
+        "package_path": "04_设备/leantec/la1725-20-k__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1725_20k_66473d00/module.json",
+      "module_sha256": "00efd15bc3dd682c2c69cb58f6df14bfc2826f0032452a9eca874e44523550df"
+    },
+    "la1758:5c": {
+      "title": "Leantec LA1758-5-C",
+      "asset": {
+        "asset_id": "54251892-91f0-53ce-a3f6-827a5cf4a395",
+        "package_digest": "b2257e690e2f5bb61bdd894197fe64ef9f6ad4b9b427c8958922db63182cf580",
+        "package_path": "04_设备/leantec/la1758-5-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la1758_5c_bc325217/module.json",
+      "module_sha256": "83636632792c45ee52e448a38b49135c0620d73b51a1a831fd73c5d992316ab5"
+    },
+    "la2000:8c": {
+      "title": "Leantec LA2000-8-C",
+      "asset": {
+        "asset_id": "99dc1fdb-5df8-5db6-8767-24f5adbe3c55",
+        "package_digest": "0821ab505ed8720060d2939505b4a55329e189bc0aae74e9a5c0c666fbee8d74",
+        "package_path": "04_设备/leantec/la2000-8-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la2000_8c_60bfdf92/module.json",
+      "module_sha256": "944fa4d1552943fe45523f86ff532017b5f798da60038058bba86301d32a32b9"
+    },
+    "la2100:60c": {
+      "title": "Leantec LA2100-60-C",
+      "asset": {
+        "asset_id": "b5d0e104-b134-5086-8f8b-f0c5fcc4a74b",
+        "package_digest": "45969a32795502fcdbed47da15134a627489254b102533ad1b3ee840e4d732a9",
+        "package_path": "04_设备/leantec/la2100-60-c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la2100_60c_599778b3/module.json",
+      "module_sha256": "d671cb79b86b6646a29e6d7d45c95ae1ae751cf3981f0e8c1848416ff8939305"
+    },
+    "la596:4hr": {
+      "title": "Leantec LA596-4H-R",
+      "asset": {
+        "asset_id": "dc3917ad-1566-5e92-b586-80e1da608383",
+        "package_digest": "b058d25402d3b06f0ebcd683c4b208807d3d2a0654352573f46c38b4e83f5401",
+        "package_path": "04_设备/leantec/la596-4h-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la596_4hr_de36e1bb/module.json",
+      "module_sha256": "62f79a203f57d97b85bc9f1db715cfba1a56bba9a80620638a9300505ee8bf01"
+    },
+    "la596:4r": {
+      "title": "Leantec LA596-4-R",
+      "asset": {
+        "asset_id": "cf36d10f-18fb-5ad9-9a3d-ff2b108a648f",
+        "package_digest": "6efc8763a70d0a625601abe94f61312ac762ca752a3fc18b0dfc1c0a641db837",
+        "package_path": "04_设备/leantec/la596-4-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la596_4r_25b0045f/module.json",
+      "module_sha256": "a43a6eb2c806f53dc61c5c9499a9792f74cc107293942e89e9a2b972983d97d8"
+    },
+    "la707:7hr": {
+      "title": "Leantec LA707-7H-R",
+      "asset": {
+        "asset_id": "d7244545-ee18-559d-806e-2aad2e434920",
+        "package_digest": "d65d722c1e180f73fda8791efb5c83e11b8607e09273a676c410e11dc9c6c8a1",
+        "package_path": "04_设备/leantec/la707-7h-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la707_7hr_590a4b8b/module.json",
+      "module_sha256": "7e33f652c6850e6202d0f5a69ce4024570c4c4d087845c060f4b8d8241b0a052"
+    },
+    "la707:7r": {
+      "title": "Leantec LA707-7-R",
+      "asset": {
+        "asset_id": "5ed57325-4c89-5e84-a158-8884315b19e7",
+        "package_digest": "52425b7c94a945f5ccc7c14f2a3a4347f503aa1cb5c44e9ef802fd3612f8444e",
+        "package_path": "04_设备/leantec/la707-7-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la707_7r_79e9ece9/module.json",
+      "module_sha256": "9b0a827e1f2c071b3f27c7a8c6591870444197c3fccb3ffe351895e63e448258"
+    },
+    "la906:7hr": {
+      "title": "Leantec LA906-7H-R",
+      "asset": {
+        "asset_id": "0b6898c3-e4ba-589f-b738-4e51e83b9414",
+        "package_digest": "baf7ebb3c1340ff5681b03fc37c2789eecb1701b93e59b6559269efa5a2144d1",
+        "package_path": "04_设备/leantec/la906-7h-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la906_7hr_f6ffdf3f/module.json",
+      "module_sha256": "3248254ba67e5f3a70688093abd82d7ac24afe168f366bd632b37f6f0d803f93"
+    },
+    "la906:7r": {
+      "title": "Leantec LA906-7-R",
+      "asset": {
+        "asset_id": "6c44e670-61bd-5222-bcc1-b17e14af98f8",
+        "package_digest": "326c91f95e4ca67bb492bf851d86cb029eaa69b03fe28b10b045ba7498708369",
+        "package_path": "04_设备/leantec/la906-7-r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la906_7r_2982577d/module.json",
+      "module_sha256": "a25b99ea4f8f3187c7a76d19d64a98ba6c8eb6119d807974d2b944b7356ba167"
+    },
+    "la917:6y": {
+      "title": "Leantec LA917-6-Y",
+      "asset": {
+        "asset_id": "bc3373c3-7a4e-5d62-ace3-f8a1734c2c42",
+        "package_digest": "82b8bf0e57a92a87c9cc5be0cb1b6f1350bd0861283445ec9ccb71d07543debd",
+        "package_path": "04_设备/leantec/la917-6-y__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/la917_6y_56ad98fb/module.json",
+      "module_sha256": "054f03a0fdbdc1e809d2d6d2f3e6f0f3e2d1755128a12bc34426477dd2ca2f57"
+    },
+    "ls400:3y": {
+      "title": "Leantec LS400-3-Y",
+      "asset": {
+        "asset_id": "60dc0881-424a-5d01-9ff9-1f7d62329c84",
+        "package_digest": "165ff037b36d6d7d6c4312773bf3056bd68f431ae0caeda5d41b9f8d48c863c3",
+        "package_path": "04_设备/leantec/ls400-3-y__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls400_3y_8c03d85b/module.json",
+      "module_sha256": "b4741590814066df99a072e53be7632255f4903f439e10cbe9db849b8d27eff0"
+    },
+    "ls600:6y": {
+      "title": "Leantec LS600-6-Y",
+      "asset": {
+        "asset_id": "b1b0385d-d095-5746-807b-785ce90ffdd2",
+        "package_digest": "51d3daf3a8e3a6c5a2640a4460c312e27a4d01c7e7f5044264cba9bfff27dd96",
+        "package_path": "04_设备/leantec/ls600-6-y__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls600_6y_5c91715c/module.json",
+      "module_sha256": "dc733540b76b4158df124ce061c167f6a86a2e338164184ba7feeac5f99d4bb9"
+    },
+    "ls900:10y": {
+      "title": "Leantec LS900-10-Y",
+      "asset": {
+        "asset_id": "b45399ed-9857-5107-93e0-25369df93a82",
+        "package_digest": "e954f2032de88d0ff89feb9d656f3e5b84a445b029cfc497a0be73d921e92be9",
+        "package_path": "04_设备/leantec/ls900-10-y__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ls900_10y_8a5f2953/module.json",
+      "module_sha256": "2bbd79bf18c25159351092775464dc295a57520da3faeb41933ee14f674b7eab"
+    }
+  },
+  "source_profiles": []
+}

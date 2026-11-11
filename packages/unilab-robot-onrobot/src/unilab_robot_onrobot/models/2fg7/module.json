@@ -1,0 +1,2149 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "2fg7",
+  "title": "OnRobot 2FG7｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "f7de5b00-02cd-5eab-9aae-b8b29ac85a3c",
+    "package_digest": "2bc86dd7802a1e2bdbca649e25608912cc4e17b81e479587faaf4b10bc10c8e5",
+    "package_path": "04_设备/onrobot/2fg7__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f7de5b00-02cd-5eab-9aae-b8b29ac85a3c",
+      "package_digest": "2bc86dd7802a1e2bdbca649e25608912cc4e17b81e479587faaf4b10bc10c8e5",
+      "package_path": "04_设备/onrobot/2fg7__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robot Tools",
+      "tools"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "Evaluate serialized conditional input bounds for each target; Follower is dependent, not an independent input",
+        "dynamics": "disabled USD connectivity mappings; no vendor solver or actuator qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id map; degrees for rotations, millimetres for translations",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:19173",
+            "id": "dof:20593",
+            "independent": true,
+            "initial_source": 17.5,
+            "input_limits_at_initial_configuration": [
+              0.0,
+              35.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "-X",
+            "source_type": "Translational",
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:20905",
+            "id": "dof:22326",
+            "independent": false,
+            "initial_source": 17.5,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:2",
+            "source_axis_label": "+X",
+            "source_type": "TranslationalFollower",
+            "type": "prismatic",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "2FG7 Gripper",
+              "source": "tools/models/OnRobot-2FG7-Gripper.robot",
+              "source_family": "RoboDK",
+              "value": 1.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 1.0
+        },
+        "payload": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "kg"
+        },
+        "reach": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "mm"
+        }
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": [
+          {
+            "analysis": "conservative lexical source analysis; not complete Python control/data flow",
+            "decoded_script": "C:\\Users\\DP\\files\\asset-pipeline-work\\robot-repair-35-20261108\\release-converters\\onrobot-2fg7\\VC-0\\evidence\\physics\\scripts\\rsc-line-18328.py.txt",
+            "decoded_script_sha256": "8aa8316e56319634cafa34df48cf27a4080d8e1429a514472064db4f7d690860",
+            "effects": [
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 243,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "ModifyInterface",
+                "owner": {
+                  "id": "functionality:18252",
+                  "kind": "Functionality",
+                  "line": 18252,
+                  "name": "GripperLogic",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 18328,
+                "text": "  if control_prop.Value == CONTROL_OPTIONS[1]:"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 263,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "ControlChanged",
+                "owner": {
+                  "id": "functionality:18252",
+                  "kind": "Functionality",
+                  "line": 18252,
+                  "name": "GripperLogic",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 18328,
+                "text": "    if arg.Value == CONTROL_OPTIONS[0]:"
+              }
+            ],
+            "executed": false,
+            "owner": {
+              "id": "functionality:18252",
+              "kind": "Functionality",
+              "line": 18252,
+              "name": "GripperLogic",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rPythonScript"
+            },
+            "source_member": "component.rsc",
+            "source_variable_line": 18328
+          }
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 1,
+          "converted_parameters": [],
+          "display": "OnRobot 2FG7 Gripper",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "OnRobot",
+          "name": "2FG7 Gripper",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "OnRobot-2FG7-Gripper.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_onrobot-2fg7-gripper/OnRobot-2FG7-Gripper.robot",
+            "sha256": "87748062c43dd59c14c0b2fd3b56d5c7b0b820d067c7dffcffc3bfe40528ec4c"
+          },
+          "path": "tools/models/OnRobot-2FG7-Gripper.robot",
+          "payload": null,
+          "reach": null,
+          "type": "tools",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "OnRobot",
+          "name": "2FG7",
+          "original": {
+            "family": "VC",
+            "original_name": "2FG7.vcmx",
+            "path": "simready_usd/source_assets/VC/0_2fg7/2FG7.vcmx",
+            "sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10"
+          },
+          "path": "Components/OnRobot/Robot Tools/2FG7.vcmx",
+          "payload": "0",
+          "reach": "0",
+          "type": "Robot Tools",
+          "variant": "",
+          "vcid": "23b7b5bc-389b-415a-a318-7a112fbf9163"
+        }
+      ],
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "direct_text": "\n  Properties\n  {\n                                  \n     \n                 \n                \n              \n              \n       \n               \n                             \n                          \n               \n                               \n       \n     \n                                  \n     \n                         \n              \n              \n              \n       \n               \n                             \n                          \n                           \n               \n                               \n       \n                         \n                 \n     \n                                       \n     \n               \n              \n              \n              \n       \n               \n                             \n                          \n                           \n                          \n               \n                               \n       \n           \n           \n     \n                                            \n     \n                     \n           \n       \n                      \n       \n              \n              \n       \n               \n                             \n                          \n                           \n               \n       \n     \n                                            \n     \n                     \n           \n       \n                       \n       \n              \n              \n       \n               \n                             \n                          \n                           \n               \n       \n     \n                                           \n     \n                       \n                              \n              \n              \n       \n               \n                             \n               \n       \n     \n                                   \n     \n                     \n             \n              \n              \n       \n               \n                             \n                          \n                           \n               \n                               \n       \n              \n       \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n       \n     \n                                            \n     \n                            \n           \n       \n                            \n       \n              \n              \n       \n               \n                             \n                          \n                           \n               \n       \n     \n                                            \n     \n                         \n           \n       \n                        \n       \n              \n              \n       \n               \n                             \n                          \n                           \n       \n     \n                                            \n     \n                         \n           \n       \n                        \n       \n              \n              \n       \n               \n                             \n                          \n                           \n       \n     \n                                  \n     \n                     \n               \n              \n              \n       \n               \n                             \n                          \n                           \n                               \n       \n                                       \n       \n              \n         \n                              \n           \n                \n             \n                                    \n                          \n                                     \n                      \n             \n                               \n                      \n           \n                            \n           \n                \n             \n                         \n                            \n                      \n                      \n             \n           \n         \n       \n                 \n     \n                                  \n     \n                            \n               \n              \n              \n       \n               \n                             \n                          \n                           \n                               \n       \n                             \n                 \n     \n                                  \n     \n                            \n               \n              \n              \n       \n               \n                             \n                          \n                           \n                               \n       \n                             \n                 \n     \n                                  \n     \n                    \n             \n              \n              \n       \n               \n                             \n                          \n                           \n                               \n       \n                     \n                 \n     \n                                  \n     \n                       \n             \n              \n              \n       \n               \n                             \n                          \n                           \n                               \n       \n                     \n                 \n     \n  }\n",
+            "fields": {
+              "AxisType": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "+X",
+                    "value": 0
+                  },
+                  {
+                    "label": "-X",
+                    "value": 4
+                  },
+                  {
+                    "label": "+Y",
+                    "value": 1
+                  },
+                  {
+                    "label": "-Y",
+                    "value": 5
+                  },
+                  {
+                    "label": "+Z",
+                    "value": 2
+                  },
+                  {
+                    "label": "-Z",
+                    "value": 6
+                  }
+                ],
+                "enum_label": "-X",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20692,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "2b87063714438229bf624010f1c3f8d66d5b7d310090ea887ff8d55112aa1ce0",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 4
+              },
+              "Controller": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20680,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "f9daaca631ab8f1f70be0c60757656fab8aee920e67a68465d9349436298a971",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTPointerVariable<Behaviour>",
+                "unit_status": "not_declared",
+                "value": "Servo Controller"
+              },
+              "InitialValue": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20611,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "f717898f49d894c9642773bd7bc76a6200eb96670a3f8a2f3649e4f51a68f37c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 35
+              },
+              "J1": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20628,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "e676d49594411b0a32e4e843b76fae5b775528fc581f697eb3ae4bc78f582de3",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_SIM_UPDATE",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTLimitVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": 35
+              },
+              "LagTime": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20870,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Time",
+                "raw_block_sha256": "241a0d24a88b31e0dcf6261aa9065dcdb10985037c1289fabb1a05bd300ba2ff",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              },
+              "MaxAcceleration": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20838,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Acceleration",
+                "raw_block_sha256": "88b669c149dac2c16a512a01cafa96f7a7b58c2b99304caab5dcf9914cf60f08",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 800
+              },
+              "MaxDeceleration": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20854,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Acceleration",
+                "raw_block_sha256": "638be043b111481d22e2550bf80db9dea94698161d8a7703e7f34421861007e6",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 800
+              },
+              "MaxLimit": {
+                "archive_member": "component.rsc",
+                "classification": "derived_whitelist_expression",
+                "dependencies": [],
+                "derived_value_source_units": 35,
+                "evaluation_scope": "serialized configuration only; embedded scripts not evaluated",
+                "evidence_class": "deterministic_from_file",
+                "expression": "35",
+                "line": 20663,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "cb227fe9ba566c666a3172b9b7e4878e44030d18f0577e1e2fbbea826220898b",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              },
+              "MaxSpeed": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20795,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Speed",
+                "raw_block_sha256": "51af5ee10e707086540451e58aa74a12967e8ff93b92318eabb0345527c09aef",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 200
+              },
+              "MinLimit": {
+                "archive_member": "component.rsc",
+                "classification": "derived_whitelist_expression",
+                "dependencies": [],
+                "derived_value_source_units": 0,
+                "evaluation_scope": "serialized configuration only; embedded scripts not evaluated",
+                "evidence_class": "deterministic_from_file",
+                "expression": "0",
+                "line": 20646,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "144c1d235c7ca8543bfbe04b8bc4614f43382c096dfbcb6d40175e841bfc26f7",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              },
+              "Name": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20597,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "057f37d2bdede5a62acc8674dfc73ef7194179be012b09256b6102235dbfe67c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "J1"
+              },
+              "SettleTime": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 20886,
+                "magnitude": 1,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "quantity": "Time",
+                "raw_block_sha256": "f4580bcfb7710b1f8366f16b1cb7b4744d3c268bbaef198b773d04f392f8c21a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              },
+              "SoftMaxLimit": {
+                "archive_member": "component.rsc",
+                "classification": "derived_whitelist_expression",
+                "dependencies": [],
+                "derived_value_source_units": 0.0,
+                "evaluation_scope": "serialized configuration only; embedded scripts not evaluated",
+                "evidence_class": "deterministic_from_file",
+                "expression": "0.0",
+                "line": 20779,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "741a9a79003bbb3764e351dde97764ccd678d2a60a9d0a21ec8706ec58cccba5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              },
+              "SoftMinLimit": {
+                "archive_member": "component.rsc",
+                "classification": "derived_whitelist_expression",
+                "dependencies": [],
+                "derived_value_source_units": 0.0,
+                "evaluation_scope": "serialized configuration only; embedded scripts not evaluated",
+                "evidence_class": "deterministic_from_file",
+                "expression": "0.0",
+                "line": 20763,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "raw_block_sha256": "46d1fa8af3f98a6733cdc5f5d78c7e63de476a2ccb593fc0a72fe16f7295a271",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              },
+              "ValueExpression": {
+                "archive_member": "component.rsc",
+                "classification": "decoder_gap",
+                "dependencies": [],
+                "evaluation_error": "Unresolved source parameter VALUE",
+                "evidence_class": "direct_serialized",
+                "expression": "VALUE/2",
+                "line": 20746,
+                "owner": {
+                  "id": "dof:20593",
+                  "kind": "Dof",
+                  "line": 20593,
+                  "name": "J1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "Translational"
+                },
+                "potential_resolution": "deterministic_from_file_when_expression_semantics_implemented",
+                "raw_block_sha256": "505e2f696578d134bb2c5f888b27efdeddbfd1fad5a28eeb6ad7091aab45614d",
+                "resolution_status": "semantics_unresolved",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "dof:20593",
+              "kind": "Dof",
+              "line": 20593,
+              "name": "J1",
+              "node_id": "node:19173",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "Link_1",
+                  "node_id": "node:19173"
+                }
+              ],
+              "type": "Translational"
+            },
+            "scope": "source kinematic/driver declaration; not automatically a PhysX joint"
+          },
+          {
+            "direct_text": "\n  Properties\n  {\n                                  \n     \n                 \n                \n              \n              \n       \n               \n                             \n                          \n               \n                               \n       \n     \n                                     \n     \n                   \n                \n              \n              \n       \n               \n                             \n                          \n                           \n               \n       \n     \n                             \n     \n               \n             \n              \n              \n       \n                             \n                          \n                           \n               \n       \n     \n                                   \n     \n                     \n             \n              \n              \n       \n               \n                             \n                          \n                           \n               \n                               \n       \n              \n       \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n            \n         \n                 \n                   \n                          \n         \n       \n     \n                                            \n     \n                            \n           \n       \n                            \n       \n              \n              \n       \n               \n                             \n                          \n                           \n               \n       \n     \n  }\n",
+            "fields": {
+              "AxisType": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "+X",
+                    "value": 0
+                  },
+                  {
+                    "label": "-X",
+                    "value": 4
+                  },
+                  {
+                    "label": "+Y",
+                    "value": 1
+                  },
+                  {
+                    "label": "-Y",
+                    "value": 5
+                  },
+                  {
+                    "label": "+Z",
+                    "value": 2
+                  },
+                  {
+                    "label": "-Z",
+                    "value": 6
+                  }
+                ],
+                "enum_label": "+X",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 22371,
+                "owner": {
+                  "id": "dof:22326",
+                  "kind": "Dof",
+                  "line": 22326,
+                  "name": "J2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "TranslationalFollower"
+                },
+                "raw_block_sha256": "61fa79ceef0840352ca6f213cc469f07c9889265b8ea250847e4b73f7f344e47",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Driver": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 22344,
+                "owner": {
+                  "id": "dof:22326",
+                  "kind": "Dof",
+                  "line": 22326,
+                  "name": "J2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "TranslationalFollower"
+                },
+                "raw_block_sha256": "34abe2439257ba0ed1333f809fdd80aefa0937398788d76824e14ae648c2f3d7",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTPointerVariable<Dof>",
+                "unit_status": "not_declared",
+                "value": "J1"
+              },
+              "J1": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 22358,
+                "owner": {
+                  "id": "dof:22326",
+                  "kind": "Dof",
+                  "line": 22326,
+                  "name": "J2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "TranslationalFollower"
+                },
+                "raw_block_sha256": "306b92d6b674671e29727d9a9ace56c8c7bfef183478f3b9fba12fb7d542b00f",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rProxyVariable",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Name": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 22330,
+                "owner": {
+                  "id": "dof:22326",
+                  "kind": "Dof",
+                  "line": 22326,
+                  "name": "J2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "TranslationalFollower"
+                },
+                "raw_block_sha256": "dba5c99f8ab14ece4a36726c01bc410e919e0c06aef5d148f523d5e5f45df6de",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "J2"
+              },
+              "ValueExpression": {
+                "archive_member": "component.rsc",
+                "classification": "decoder_gap",
+                "dependencies": [],
+                "evaluation_error": "Unresolved source parameter VALUE",
+                "evidence_class": "direct_serialized",
+                "expression": "VALUE/2",
+                "line": 22425,
+                "owner": {
+                  "id": "dof:22326",
+                  "kind": "Dof",
+                  "line": 22326,
+                  "name": "J2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "TranslationalFollower"
+                },
+                "potential_resolution": "deterministic_from_file_when_expression_semantics_implemented",
+                "raw_block_sha256": "505e2f696578d134bb2c5f888b27efdeddbfd1fad5a28eeb6ad7091aab45614d",
+                "resolution_status": "semantics_unresolved",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rDouble>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "dof:22326",
+              "kind": "Dof",
+              "line": 22326,
+              "name": "J2",
+              "node_id": "node:20905",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "Link_2",
+                  "node_id": "node:20905"
+                }
+              ],
+              "type": "TranslationalFollower"
+            },
+            "scope": "source kinematic/driver declaration; not automatically a PhysX joint"
+          }
+        ],
+        "rsc_sha256": "cebb600b7bff69602a5696dff5625afef6d281fb8709a5c1ca228867540cc2ea",
+        "scoped_physical_fields": [
+          {
+            "fields": {
+              "CenterOfGravity": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 17886,
+                "owner": {
+                  "id": "baseframe:17777",
+                  "kind": "BaseFrame",
+                  "line": 17777,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "c22584cf6c8677ba060eb3fc0d0ecee2bde06b57d4ff47627531bfd9a628bdd4",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Inertia": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 17898,
+                "owner": {
+                  "id": "baseframe:17777",
+                  "kind": "BaseFrame",
+                  "line": 17777,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "raw_block_sha256": "f890cba2389d1cd746142accbffcf7b867f61f0cf18adeed15b89e43260e904c",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rVector>",
+                "unit_status": "not_declared",
+                "value": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              "Mass": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 17872,
+                "magnitude": 1000,
+                "owner": {
+                  "id": "baseframe:17777",
+                  "kind": "BaseFrame",
+                  "line": 17777,
+                  "name": "TCP",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimBaseFrame"
+                },
+                "quantity": "Mass",
+                "raw_block_sha256": "a0a1b74d585eec15d086f37a5dd52b04c18e709465603475e6283e155f5a7370",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              }
+            },
+            "owner": {
+              "id": "baseframe:17777",
+              "kind": "BaseFrame",
+              "line": 17777,
+              "name": "TCP",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimBaseFrame"
+            },
+            "scope": "payload_frame_not_body"
+          }
+        ],
+        "source_parameters": [
+          {
+            "fields": {
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18910,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18938,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "4e0fff893c335287301d7f1c6f40a4d4d54d319fbbd9e5058662ae0679e2c537",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "OnRobot 2FG7"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18924,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "e62db024c7974133b4ca644fbf64efab21db3546275871477282e40b8ddf080f",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "2FG7"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "BackfaceOn",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18828,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0e94217ff246041fe649b5e29663a18757cc7e9d708f6a1bbf64b104eb5e703c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 2
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18952,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "Control::AutoConnectIOs": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19016,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "74c909872177559423d0afb558a2dd0319ccf7e80b549a49a6c728cc352fa199",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "Control::ControlMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19053,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "8b4dbaf9f3152e6c5fc6ad0893a765733ae8a50b6dcc78670cb88807ea230ba4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTStepVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "IO"
+              },
+              "Control::IN_J1_Action_Port": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19127,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "a2a38fb89e7b5eda91a3f49a6a3b86ef2520cfe707aabba5f669b0d85abae137",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 100
+              },
+              "Control::IN_J1_Close_Port": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19140,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "09fb13638a929717e233f94c590bffc7e3e01b1de57c30ac462a21963adb629e",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 102
+              },
+              "Control::IN_J1_Open_Port": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19029,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "026658c9f947aa700d3111741536057fb172d3fc8a6ab487bc2aa21c26c925bd",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING"
+                ],
+                "type": "rTVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 101
+              },
+              "Control::OUT_J1_ClosedState_Port": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19041,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "995f09252bc7d8ded72252cb2891cacaf37c361e80f978426eaaa4c8649ca721",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING"
+                ],
+                "type": "rTVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 102
+              },
+              "Control::OUT_J1_OpenState_Port": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19153,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2f0453db5111d8762ee7f17702a075c02b2d21737e8902b16426542d35c8af85",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 101
+              },
+              "FingersInwards": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19001,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "5c7d6bf6010432e109ab9f2a7267e5ec91f9301d610b8ecb71640786963d8fb2",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "ON_EDIT_REBUILD",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "J1_ClosedValue": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19095,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "bf1c6051976bf54420dd95c7d2a9443294bb8183d43063c5148359d0ed053a1c",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              },
+              "J1_MotionTime": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19111,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Time",
+                "raw_block_sha256": "cfa5b8f9ebc209a367c62fdb01f1a3bd95abc2a66961f5141ca83d9b743eb863",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 0
+              },
+              "J1_OpenValue": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 19079,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "56474fc99f3f76c927252ec6ee23eea3f82d8349209ea6201bb5b177a9810ce8",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 35
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18863,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18966,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 18814,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "2FG7",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "2FG7",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tx(-13.75).Ty(-5.006525).Tz(116.599998)",
+                "line": 19179,
+                "owner": {
+                  "id": "node:19173",
+                  "kind": "Node",
+                  "line": 19173,
+                  "name": "Link_1",
+                  "node_id": "node:19173",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_1",
+                      "node_id": "node:19173"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "7666bd08b30beddeeb832a28422752796043f98459b57703d7cd5aec8d8e9789",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:19173",
+              "kind": "Node",
+              "line": 19173,
+              "name": "Link_1",
+              "node_id": "node:19173",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "Link_1",
+                  "node_id": "node:19173"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tx(13.75).Ty(-5.741000).Tz(116.599998)",
+                "line": 20911,
+                "owner": {
+                  "id": "node:20905",
+                  "kind": "Node",
+                  "line": 20905,
+                  "name": "Link_2",
+                  "node_id": "node:20905",
+                  "node_path": [
+                    {
+                      "name": "2FG7",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "Link_2",
+                      "node_id": "node:20905"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "a291fd6f617cc13907ba94d8cc3b302b35e21f66234865250469f5c553ab8a83",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:20905",
+              "kind": "Node",
+              "line": 20905,
+              "name": "Link_2",
+              "node_id": "node:20905",
+              "node_path": [
+                {
+                  "name": "2FG7",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "Link_2",
+                  "node_id": "node:20905"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10"
+      }
+    },
+    "configuration": "selected-vc",
+    "entrypoints": {
+      "usd": "simready_usd/2fg7__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot_tool": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot_tool"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "OnRobot 2FG7｜多源合并",
+          "id": "merged_robot_tool_f7de5b00_02cd_5eab_9aae_b8b29ac85a3c",
+          "metadata": {
+            "asset_id": "f7de5b00-02cd-5eab-9aae-b8b29ac85a3c",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "vc_joint_pipeline.py",
+      "vc_offline_joint_program.py",
+      "vc_offline_expression.py",
+      "vc_offline_dof.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "kinematic_replay": "vc_joint_pipeline.apply(stage, coordinates_by_source_id_or_name, root)",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos",
+      "numpy",
+      "pxr"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "2FG7.vcmx",
+        "path": "simready_usd/sources/2FG7.vcmx",
+        "sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "OnRobot-2FG7-Gripper.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_onrobot-2fg7-gripper/OnRobot-2FG7-Gripper.robot",
+        "sha256": "87748062c43dd59c14c0b2fd3b56d5c7b0b820d067c7dffcffc3bfe40528ec4c"
+      },
+      {
+        "family": "VC",
+        "original_name": "2FG7.vcmx",
+        "path": "simready_usd/source_assets/VC/0_2fg7/2FG7.vcmx",
+        "sha256": "9117c8cd58817fe8913afbb11d7f33ab39ba92464606a374b1233ccfa3061f10"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "key": [
+        "onrobot",
+        "2fg7"
+      ],
+      "label": "RoboDK+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "VC",
+        "original_asset_id": "422c60a5-fee8-56d0-b187-0a0ab0fc7f57",
+        "original_package_digest": "648fb7985ac9c3dd4008ad74702a5facb4c0747aed7655e232ab69d43c70dd89",
+        "source": "Components/OnRobot/Robot Tools/2FG7.vcmx"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_zero_unverified",
+        "reach_zero_unverified"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "tool"
+  ]
+}

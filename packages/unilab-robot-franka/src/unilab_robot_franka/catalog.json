@@ -1,0 +1,30 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "franka",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "emikapanda": {
+      "title": "Franka Emika Panda",
+      "asset": {
+        "asset_id": "ece158c6-4adc-5a9a-b889-0b25d47a57f4",
+        "package_digest": "aed7ee6fb76a04d2ad66a219b0764fe22ae627bdeea4b4d8f4efb3b7707e2187",
+        "package_path": "04_设备/franka/emika_panda__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/emikapanda/module.json",
+      "module_sha256": "961404654ca741e90405313c799d8d7403877fe20ddba85c2dabce3e570cc1b8"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "franka_fr3_moveit_config_97b833b8d9",
+      "manifest": "source_profiles/franka_fr3_moveit_config_97b833b8d9/source.lock.json",
+      "sha256": "573b330602c221e71270266fc11b8076b0f744923809f59e82d3817aa80a3c7a",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

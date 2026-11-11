@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "cloos",
+  "model": "qiroxqrc350",
+  "title": "CLOOS QIROX QRC-350",
+  "asset": {
+    "asset_id": "6224d3c1-8760-549d-aafc-3c3f5e0638bd",
+    "package_digest": "ca62b22fd389a91583dddcc84527f1dc92c1748ec673a15fc3318e18815c198d",
+    "package_path": "04_设备/cloos/qirox_qrc-350__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6224d3c1-8760-549d-aafc-3c3f5e0638bd",
+      "package_digest": "ca62b22fd389a91583dddcc84527f1dc92c1748ec673a15fc3318e18815c198d",
+      "package_path": "04_设备/cloos/qirox_qrc-350__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -180.0,
+          -210.0,
+          -179.0,
+          -135.0,
+          -300.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            394.0
+          ],
+          [
+            -1.5707963267948966,
+            250.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            632.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            196.0,
+            0.0,
+            807.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            115.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          35.0,
+          80.0,
+          179.0,
+          135.0,
+          300.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6ba5305774e744e6c5afa52f544d6e68f499b6c64867427ce51604853028d56e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qirox_qrc-350__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "CLOOS.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QIROX QRC-350",
+          "manufacturer": "CLOOS",
+          "variant": "",
+          "display": "CLOOS QIROX QRC-350",
+          "path": "robots/models/CLOOS-QIROX-QRC-350.robot",
+          "type": "robots",
+          "payload": 15,
+          "reach": 1711,
+          "axes": 6,
+          "library_assets": [
+            "6224d3c1-8760-549d-aafc-3c3f5e0638bd"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/CLOOS-QIROX-QRC-350.robot",
+        "path": "simready_usd/CLOOS-QIROX-QRC-350.robot",
+        "sha256": "275521cac56975b124c1e0a6d2993378465244fe9283866ae64ff7d1100d323b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "creaform",
+  "model": "metrascan",
+  "title": "Creaform MetraSCAN",
+  "asset": {
+    "asset_id": "30d8ed08-c48c-5b38-a773-4b55834075de",
+    "package_digest": "ba59b640f0ecb00a7e23870c0af075c8014ef27cd31aef10acabd7ee6a1ef97e",
+    "package_path": "01_零部件/creaform/metrascan__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "30d8ed08-c48c-5b38-a773-4b55834075de",
+      "package_digest": "ba59b640f0ecb00a7e23870c0af075c8014ef27cd31aef10acabd7ee6a1ef97e",
+      "package_path": "01_零部件/creaform/metrascan__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a20d2b745340fbdfaf71f73cf082af90a04e3fc1b4ced522bff90ad7e9930c73",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/metrascan__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MetraSCAN",
+          "manufacturer": "Creaform",
+          "variant": "",
+          "display": "Creaform MetraSCAN",
+          "path": "tools/models/Creaform-MetraSCAN.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "30d8ed08-c48c-5b38-a773-4b55834075de"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Creaform-MetraSCAN.tool",
+        "path": "simready_usd/Creaform-MetraSCAN.tool",
+        "sha256": "2ebba7d250227b9d0d769c1ef9dd1bc3dbfd9d3efa52e796e2dbd94516cb06ec"
+      }
+    ]
+  }
+}

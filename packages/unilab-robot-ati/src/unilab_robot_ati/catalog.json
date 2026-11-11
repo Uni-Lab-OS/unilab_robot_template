@@ -1,0 +1,262 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "ati",
+  "models": {
+    "9150cdb8:11:000deburringtoolspring": {
+      "title": "ATI 9150-CDB-8-11-000 Deburring Tool (Spring)",
+      "asset": {
+        "asset_id": "9dc739e3-6bc9-5dae-84d1-25d7d083ad7e",
+        "package_digest": "4de33e1b6de6beaf634d2dcbb401f36544a02eead9d8112ba3f2eb4fac3a035e",
+        "package_path": "01_零部件/ati/9150-cdb-8-11-000_deburring_tool_spring___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/9150cdb8_11_000deburringtoolspring_9875d86b/module.json",
+      "module_sha256": "5db96768548b2f462558f2f09c4af091a0e219e4d0807a629101e843b1fba7d6"
+    },
+    "9150cdb8:11atcdeburringtoolpneumatic": {
+      "title": "ATI 9150-CDB-8-11-ATC Deburring Tool (Pneumatic)",
+      "asset": {
+        "asset_id": "3feed0e5-b3b9-57cc-8eac-6a196044f9fe",
+        "package_digest": "54e5086dec3f9645759c37a6fc3ed6a40d33e735d193c14955c87625bc5421fd",
+        "package_path": "01_零部件/ati/9150-cdb-8-11-atc_deburring_tool_pneumatic___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/9150cdb8_11atcdeburringtoolpneumatic_ce6e414d/module.json",
+      "module_sha256": "d12f09de13eeaa421c4c2dad0412c0447291d51ae7c7558f3c93ff45ba5bfdda"
+    },
+    "9150rc300": {
+      "title": "ATI 9150-RC-300",
+      "asset": {
+        "asset_id": "e31cafd4-f487-54b8-93a4-9403b1fc670e",
+        "package_digest": "503bcec977d743cece5cc608f2ea4143ac4a99f2b2815b3510a9a4ae95672ae4",
+        "package_path": "01_零部件/ati/9150-rc-300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/9150rc300/module.json",
+      "module_sha256": "7e708c1c29e7cb56364305dd6f83ddc043837b16d5ee5aba535226fa60086e39"
+    },
+    "aov10sander": {
+      "title": "ATI AOV-10 Sander",
+      "asset": {
+        "asset_id": "a7c293b0-f075-55fa-a7b4-7f0bcf259090",
+        "package_digest": "7491a140661b0995b63bca6323283eed9ed0de4db8e197c41fb3cacbe2e3276f",
+        "package_path": "01_零部件/ati/aov-10_sander__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/aov10sander/module.json",
+      "module_sha256": "94dd326614698bd38f133e00ec0f102ff11070ded49e006e2c415c9e7e3e343d"
+    },
+    "cgv900grinder": {
+      "title": "ATI CGV-900 Grinder",
+      "asset": {
+        "asset_id": "c548714f-9733-55a3-acb7-47a6a0cc5c24",
+        "package_digest": "144ba11f4cf69003b7e37a69fc1ad31b33d288056840fc4d6ed54360ee508c09",
+        "package_path": "01_零部件/ati/cgv-900_grinder__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/cgv900grinder/module.json",
+      "module_sha256": "9e24e4415128916c124e03aa921417699d66f4018940ff3271a0cc83b1d32b3d"
+    },
+    "qc11toolchangermaster": {
+      "title": "ATI QC-11 快换主盘",
+      "asset": {
+        "asset_id": "7d30c75b-6f79-5dde-8112-877d551f9b00",
+        "package_digest": "7faeab127a1e0df9ba0521e31d4e5beb2dd5e29961a6bd869b8970958ec3cfb3",
+        "package_path": "01_零部件/ati/qc-11_tool_changer_master___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc11toolchangermaster/module.json",
+      "module_sha256": "2d7217d4ba5881308e7f78bc6c74693e1f13c779b1b3f8a8e39ae744197001e5"
+    },
+    "qc11toolchangermastereuro": {
+      "title": "ATI QC-11 Tool Changer (Master Euro)",
+      "asset": {
+        "asset_id": "7c44ab29-12a7-5d49-9e41-f7c089aad130",
+        "package_digest": "81f8122bbab07572c989cd9a84f1ca8cb1e34931e3aa50c712594015a389be09",
+        "package_path": "01_零部件/ati/qc-11_tool_changer_master_euro___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc11toolchangermastereuro/module.json",
+      "module_sha256": "46627726a800b0d28681c0a5db5ebc800ce9f4d28002da7f9a1ce93bfd53a155"
+    },
+    "qc11toolchangertool": {
+      "title": "ATI QC-11 Tool Changer (Tool)",
+      "asset": {
+        "asset_id": "4b431d91-fd06-5445-90f2-88c7607c7827",
+        "package_digest": "30fea2b897d0f7f91a61722cd693b33087dcf3cb5f39af4dc3ae902e4f98d3bd",
+        "package_path": "01_零部件/ati/qc-11_tool_changer_tool___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc11toolchangertool/module.json",
+      "module_sha256": "f957e85848deecb0b24f6f5c32b2631960858afde76535c054af33cab31cbcad"
+    },
+    "qc11toolchangertooleuro": {
+      "title": "ATI QC-11 Tool Changer (Tool Euro)",
+      "asset": {
+        "asset_id": "f4115c79-78eb-5e25-9c62-856cdfb9f73b",
+        "package_digest": "f4ec87eef42104cf095dc4cb297c7bfaad515343192f9f6f960d081f7021c7f0",
+        "package_path": "01_零部件/ati/qc-11_tool_changer_tool_euro___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc11toolchangertooleuro/module.json",
+      "module_sha256": "fa1891fd0a33890c475657b6760a323368047aa27b8c4c7a16fdbce6eddbd0d1"
+    },
+    "qc22toolchangertool": {
+      "title": "ATI QC-22 Tool Changer (Tool)",
+      "asset": {
+        "asset_id": "689bc258-242b-5a17-9f1c-87623863a5ea",
+        "package_digest": "2d57e6b6105a4fd4cb2f990a2c29d57e9fc0b6d14a42a7c722d11b6e232051f9",
+        "package_path": "01_零部件/ati/qc-22_tool_changer_tool___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc22toolchangertool/module.json",
+      "module_sha256": "8b79be355327f3a327c467efdca50d8c7a61d18e672f4526193a7573a424e62c"
+    },
+    "qc5toolchangermaster": {
+      "title": "ATI QC-5 Tool Changer (Master)",
+      "asset": {
+        "asset_id": "602628b3-24df-519a-9087-a29caf3fa783",
+        "package_digest": "90ad86083db607ed767ae4076143e42bef477867e4a4acb0ba8cf11d875f2cf4",
+        "package_path": "01_零部件/ati/qc-5_tool_changer_master___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc5toolchangermaster/module.json",
+      "module_sha256": "57235e389b8e1d0ac644ec177a42ff52f4667b9a1f225841534f749af829df00"
+    },
+    "qc5toolchangertool": {
+      "title": "ATI QC-5 Tool Changer (Tool)",
+      "asset": {
+        "asset_id": "42b21005-6449-5397-96e4-767952ef3fd6",
+        "package_digest": "ce88ef5731cbc01853080b919c90424ffe029c1d160b1231932ecd453a4a0cac",
+        "package_path": "01_零部件/ati/qc-5_tool_changer_tool___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc5toolchangertool/module.json",
+      "module_sha256": "c6b285bb39e0a8c93e4038f90d2a6c60954d8fe858b72e2168bd15acbf0e69dd"
+    },
+    "qc7toolchangermaster": {
+      "title": "ATI QC-7 Tool Changer (Master)",
+      "asset": {
+        "asset_id": "6cdeba03-a9f0-5c1d-baa0-b82c8d1415d6",
+        "package_digest": "bc2f42adfb7c3d266032f093c6cf058ebfba9e7d8a58ae95cc74bb34f00cc870",
+        "package_path": "01_零部件/ati/qc-7_tool_changer_master___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc7toolchangermaster/module.json",
+      "module_sha256": "99d508cce94e5589586e1b18cf9ab1bd4dc3ff452b57404b59a97d7b1ef14d4f"
+    },
+    "qc7toolchangermasterb": {
+      "title": "ATI QC-7 Tool Changer (Master B)",
+      "asset": {
+        "asset_id": "589c52b1-1933-5bbe-803c-322cd275390a",
+        "package_digest": "2928089db9a036cf0513f90f9a0506a80578602000abb6884375183c318a510a",
+        "package_path": "01_零部件/ati/qc-7_tool_changer_master_b___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc7toolchangermasterb/module.json",
+      "module_sha256": "70d9153e3cece7b7f9a4be4b88208e30ad19b03f8359a030f135b1672b2938f5"
+    },
+    "qc7toolchangertool": {
+      "title": "ATI QC-7 Tool Changer (Tool)",
+      "asset": {
+        "asset_id": "8607ecf3-5f69-572b-be66-cf6538b80a0f",
+        "package_digest": "a441548784da07cd0f73524f8a49b0ef85ee5c897190d3f97350cc1eae8f5191",
+        "package_path": "01_零部件/ati/qc-7_tool_changer_tool___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc7toolchangertool/module.json",
+      "module_sha256": "3d11633f392e533a745d57b7ca94c560b13b5e34053367c08d1ffb6725c7fe2c"
+    },
+    "qc7toolchangertoolb": {
+      "title": "ATI QC-7 Tool Changer (Tool B)",
+      "asset": {
+        "asset_id": "c2447eb0-9998-5d7b-b054-3ea3205f5207",
+        "package_digest": "cd7ce0ab856674f07756863c99850b2a5a4ab8d0fab2c32e231d668d3a9c4480",
+        "package_path": "01_零部件/ati/qc-7_tool_changer_tool_b___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/qc7toolchangertoolb/module.json",
+      "module_sha256": "45bf909d894c94141189556d63556c4fa363ff1e4925838839dbed8584c0b79f"
+    },
+    "rce230deburringtoolelectric": {
+      "title": "ATI RCE-230 Deburring Tool (Electric)",
+      "asset": {
+        "asset_id": "71c49189-89dc-5415-b08a-303482e3fd55",
+        "package_digest": "99347207309d8cb7276b29ee7e2161b168b08be291299304166b0b805b5a1cac",
+        "package_path": "01_零部件/ati/rce-230_deburring_tool_electric___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rce230deburringtoolelectric/module.json",
+      "module_sha256": "dac1feb54490889debfca9895d520e01542d2a56faabec458efa1119f29a5b76"
+    }
+  },
+  "source_profiles": []
+}

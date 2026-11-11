@@ -1,0 +1,739 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "epson",
+  "model": "g6:653s",
+  "title": "Epson G6-653S｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "a095d27e-872b-53d5-8096-2fa9dffbcaf5",
+    "package_digest": "5adfb8ca9ef4b5cee0b75b9ede8108961a6cc5ec7ed5b5539466924afa2d0e91",
+    "package_path": "04_设备/epson/g6_653s__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a095d27e-872b-53d5-8096-2fa9dffbcaf5",
+      "package_digest": "5adfb8ca9ef4b5cee0b75b9ede8108961a6cc5ec7ed5b5539466924afa2d0e91",
+      "package_path": "04_设备/epson/g6_653s__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "G6-653S",
+              "source": "robots/models/Epson-G6-653S.robot",
+              "source_family": "RoboDK",
+              "value": 4.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 4.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "G6-653 S",
+              "source": "Components/Epson/Robots/G6-653 S.vcmx",
+              "source_family": "VC",
+              "value": 6.0
+            },
+            {
+              "model": "G6-653S",
+              "source": "robots/models/Epson-G6-653S.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 6.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "G6-653S",
+              "source": "robots/models/Epson-G6-653S.robot",
+              "source_family": "RoboDK",
+              "value": 650.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "mm",
+          "value": 650.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          3.141592653589793,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "mm",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "prismatic",
+          "revolute"
+        ],
+        "lower": [
+          -62.0,
+          -147.0,
+          -329.0,
+          -359.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            400.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            250.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.141592653589793,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          5.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          421.0,
+          147.0,
+          0.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "3b1ed30f-3f27-59b2-89d2-a8f9e587ae6f",
+              "entrypoints": {
+                "usd": "simready_usd/g6-653_s__r001.usdc"
+              },
+              "package_digest": "bc3c1e979b5ef5bfed5bae6b7f2fa62d33aab552b180e26bc4b2896e7eec295c",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "94624082e016555f756767c7bc520a91a4e480d60f1a7a1bb0037f355c0626b9",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "a7fa7df66423f3a6218700448d38d0ae13bcc7541942e0ac01c9d97d5a9b2b42",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "3b1ed30f-3f27-59b2-89d2-a8f9e587ae6f"
+          ],
+          "manufacturer": "Epson",
+          "name": "G6-653 S",
+          "original": {
+            "family": "VC",
+            "original_name": "G6-653 S.vcmx",
+            "path": "simready_usd/source_assets/VC/0_g6-653_s/G6-653 S.vcmx",
+            "sha256": "94624082e016555f756767c7bc520a91a4e480d60f1a7a1bb0037f355c0626b9"
+          },
+          "path": "Components/Epson/Robots/G6-653 S.vcmx",
+          "payload": "6",
+          "reach": null,
+          "type": "Robots",
+          "variant": "",
+          "vcid": "90a7f872-90d4-4dda-9117-4d5df8950d68"
+        },
+        {
+          "axes": 4,
+          "converted_parameters": [
+            {
+              "asset_id": "e2792e0c-e869-5f44-9d4a-418b82c1c9a1",
+              "entrypoints": {
+                "usd": "simready_usd/g6-653s__r001.usdc"
+              },
+              "package_digest": "8e1ffccbe401c4af4ec466adfb04ef92035c9dab7a03f24bd30a6879a513f737",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.5707963267948966
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "generic_axis_directions": 64,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    3.141592653589793,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "mm",
+                    "degree"
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "prismatic",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -62.0,
+                    -147.0,
+                    -329.0,
+                    -359.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      400.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      250.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      3.141592653589793,
+                      0.0,
+                      0.0,
+                      0.0
+                    ]
+                  ],
+                  "mechanism_type": 2,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+                    "generic_direction_mapping": "0x1405dbe20",
+                    "generic_fallback": "0x1405dafb0",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    5.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+                  "upper": [
+                    421.0,
+                    147.0,
+                    0.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "ea9de12e1c3b7cf14c3e4cf2d018cf9a2abd897f7afcfaa32a3b85002b624639",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 5
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Epson G6-653S",
+          "family": "RoboDK",
+          "library_assets": [
+            "e2792e0c-e869-5f44-9d4a-418b82c1c9a1"
+          ],
+          "manufacturer": "Epson",
+          "name": "G6-653S",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Epson-G6-653S.robot",
+            "path": "simready_usd/Epson-G6-653S.robot",
+            "sha256": "06c15858cdaf4315d2234a5c50228972a9360f933a55c4197c153db86e578371"
+          },
+          "path": "robots/models/Epson-G6-653S.robot",
+          "payload": 6,
+          "reach": 650,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ea9de12e1c3b7cf14c3e4cf2d018cf9a2abd897f7afcfaa32a3b85002b624639",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/g6_653s__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Epson G6-653S｜多源合并",
+          "id": "merged_robot_a095d27e_872b_53d5_8096_2fa9dffbcaf5",
+          "metadata": {
+            "asset_id": "a095d27e-872b-53d5-8096-2fa9dffbcaf5",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:EpsonDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/EpsonDriver.py",
+        "sha256": "fc186a14ba3f9293d51561e6a869634cc6907442f9e988f3b4ea9b7f553ffb7c",
+        "bytes": 1354,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/EpsonDriver.pyc",
+            "sha256": "5223587a25cb999225c82c765564503b8a3ba2c83aadbf743fa9f2ee47218f8e"
+          },
+          {
+            "relative_path": "api/Robot/v311/EpsonDriver.pyc",
+            "sha256": "055a720d9711e210fe12346b620b400ba93fcf7591e997e89f80ce8c3e642185"
+          },
+          {
+            "relative_path": "api/Robot/v312/EpsonDriver.pyc",
+            "sha256": "025f5136bc0021144e1a6ece759460a8d3841022ee0dc8ef36409af36e3a251f"
+          },
+          {
+            "relative_path": "api/Robot/v38/EpsonDriver.pyc",
+            "sha256": "47c6d6c13931138361e2d5d07ba03caebb6f4d1c5f5d44cb906aaef5a701e746"
+          },
+          {
+            "relative_path": "api/Robot/v39/EpsonDriver.pyc",
+            "sha256": "15bd500546899aa7accd0e2e119f18bf7036a5a5757b5df678dcf33ea59ff374"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "epson controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:epson:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/epson/ros2",
+        "repository_url": "https://github.com/Epson-Robots/epson-robot-ros2.git",
+        "code_tree_sha256": "18db755317b6cea2ec258f4ee734e858a1067ece5d4a0f77318b31650869c2e5",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "c3ec1db53fcd31a1c7d0a027ac662033c4d7dab646845a91799fb01a7bc16e7b"
+          },
+          {
+            "path": "readme_ja.md",
+            "sha256": "ef1278e1143479c9bc4d7584f7c976f7342738de197bb683599e97fed92ad2b7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a6d810145e1b0e74b88fdefded43bb370cc6014055a1889d2d891acd6e899264"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Epson_RC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Epson-G6-653S.robot",
+        "path": "simready_usd/Epson-G6-653S.robot",
+        "sha256": "06c15858cdaf4315d2234a5c50228972a9360f933a55c4197c153db86e578371"
+      },
+      {
+        "family": "VC",
+        "original_name": "G6-653 S.vcmx",
+        "path": "simready_usd/source_assets/VC/0_g6-653_s/G6-653 S.vcmx",
+        "sha256": "94624082e016555f756767c7bc520a91a4e480d60f1a7a1bb0037f355c0626b9"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "epson",
+        "g6:653s"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "e2792e0c-e869-5f44-9d4a-418b82c1c9a1",
+        "original_package_digest": "8e1ffccbe401c4af4ec466adfb04ef92035c9dab7a03f24bd30a6879a513f737",
+        "source": "robots/models/Epson-G6-653S.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

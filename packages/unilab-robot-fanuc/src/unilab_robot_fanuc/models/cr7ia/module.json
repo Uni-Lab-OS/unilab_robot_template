@@ -1,0 +1,831 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "cr7ia",
+  "title": "Fanuc CR-7iA｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "ab7e1a13-5a41-57dc-a240-a8a995ddc0ff",
+    "package_digest": "49ac795b41e224b81021fa79015c883c0194ce0ffea6a5e87950d86fbff0f228",
+    "package_path": "04_设备/fanuc/cr7ia__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ab7e1a13-5a41-57dc-a240-a8a995ddc0ff",
+      "package_digest": "49ac795b41e224b81021fa79015c883c0194ce0ffea6a5e87950d86fbff0f228",
+      "package_path": "04_设备/fanuc/cr7ia__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7819",
+            "id": "dof:8342",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -170.0,
+              170.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -170.0,
+                170.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -170.0,
+                170.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8626",
+            "id": "dof:8874",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -66.0,
+              100.0
+            ],
+            "parent_node_id": "node:7819",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -66.0,
+                100.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -66.0,
+                100.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9158",
+            "id": "dof:9407",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -46.0,
+              179.0
+            ],
+            "parent_node_id": "node:8626",
+            "source_axis_label": "-Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9691",
+            "id": "dof:10217",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -190.0,
+              190.0
+            ],
+            "parent_node_id": "node:9158",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -190.0,
+                190.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -190.0,
+                190.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:10501",
+            "id": "dof:10750",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -120.0,
+              120.0
+            ],
+            "parent_node_id": "node:9691",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -120.0,
+                120.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -120.0,
+                120.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:11034",
+            "id": "dof:11283",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:10501",
+            "source_axis_label": "-Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                -1.0,
+                -0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "7964d2b5e0a73eda617b881542971084f1ed4d50c448d1fd353a2f0c37f9985d",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "0d2014a72a0bd0d0cd5c8dd275155b69a826091dcff0724c3c25e7ee77c76ffc",
+        "physics_contract_sha256": "f83af310c40477b72e8ade4845de77eac44a2afcbd887453eb3e0843db20e237",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "7964d2b5e0a73eda617b881542971084f1ed4d50c448d1fd353a2f0c37f9985d",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "count"
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "CR-7iA",
+              "source": "Components/Fanuc/Robots/CR-7iA.vcmx",
+              "source_family": "VC",
+              "value": 7.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "kg",
+          "value": 7.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "CR-7iA",
+              "source": "Components/Fanuc/Robots/CR-7iA.vcmx",
+              "source_family": "VC",
+              "value": 717.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "mm",
+          "value": 717.0
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "cc02480b-0925-52a9-b9c2-74784dcdc7f0",
+              "entrypoints": {
+                "usd": "simready_usd/cr-7ia__r001.usda"
+              },
+              "package_digest": "f9618e111cc2da91c3adfb365fa557e7650a26b3d6447547f32b704727af2b31",
+              "parameters": {
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "a66176620521d8dbf2df9735342a8532c467e5a1497b1c74a6b1fe834ebb679a",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "cc02480b-0925-52a9-b9c2-74784dcdc7f0"
+          ],
+          "manufacturer": "Fanuc",
+          "name": "CR-7iA",
+          "original": {
+            "family": "VC",
+            "original_name": "CR-7iA.vcmx",
+            "path": "simready_usd/CR-7iA.vcmx",
+            "sha256": "7964d2b5e0a73eda617b881542971084f1ed4d50c448d1fd353a2f0c37f9985d"
+          },
+          "path": "Components/Fanuc/Robots/CR-7iA.vcmx",
+          "payload": "7",
+          "reach": "717",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "413d75e3-b6c9-4419-9835-b9aa7ce43912"
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "cr7ia",
+          "original": {
+            "family": "UniLab",
+            "original_name": "cr7ia_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_cr7ia_macro/cr7ia_macro.xacro",
+            "sha256": "c4ddee5f120fa8d22f339fe1377eef0ea3e67e933435f2168a914e09c89ea27c"
+          },
+          "path": "fanuc/ros_industrial/fanuc_cr7ia_support/urdf/cr7ia_macro.xacro",
+          "raw_name": "cr7ia_macro.xacro",
+          "robot_description": {
+            "commit": "d8f42bd73584b255df87098395512538882caea1",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.457\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"-2.9671\" upper=\"2.9671\" velocity=\"7.8539\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.05 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"-1.1519\" upper=\"1.7453\" velocity=\"6.6322\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.2621\" upper=\"4.2586\" velocity=\"9.0757\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.035\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-3.3161\" upper=\"3.3161\" velocity=\"9.5993\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.335 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.0944\" upper=\"2.0944\" velocity=\"9.5120\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.080 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2832\" upper=\"6.2832\" velocity=\"17.4532\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.457\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial/fanuc_cr7ia_support/urdf/cr7ia_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "fanuc",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "cr7ia",
+          "original": {
+            "family": "UniLab",
+            "original_name": "cr7ia_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_cr7ia_macro/cr7ia_macro.xacro",
+            "sha256": "c4ddee5f120fa8d22f339fe1377eef0ea3e67e933435f2168a914e09c89ea27c"
+          },
+          "path": "fanuc/ros_industrial_melodic_source/fanuc_cr7ia_support/urdf/cr7ia_macro.xacro",
+          "raw_name": "cr7ia_macro.xacro",
+          "robot_description": {
+            "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0.457\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit effort=\"0\" lower=\"-2.9671\" upper=\"2.9671\" velocity=\"7.8539\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.05 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit effort=\"0\" lower=\"-1.1519\" upper=\"1.7453\" velocity=\"6.6322\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.330\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.2621\" upper=\"4.2586\" velocity=\"9.0757\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0 0 0.035\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-3.3161\" upper=\"3.3161\" velocity=\"9.5993\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.335 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 -1 0\" />\n      <limit effort=\"0\" lower=\"-2.0944\" upper=\"2.0944\" velocity=\"9.5120\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.080 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"-1 0 0\" />\n      <limit effort=\"0\" lower=\"-6.2832\" upper=\"6.2832\" velocity=\"17.4532\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0.457\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}joint_6-flange\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"${pi} ${-pi/2.0} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_cr7ia_support/urdf/cr7ia_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "fanuc/ros_industrial_melodic_source/fanuc_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/fanuc.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-vc",
+    "entrypoints": {
+      "usd": "simready_usd/cr7ia__多源合并_r003.usda"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc CR-7iA｜多源合并",
+          "id": "merged_robot_ab7e1a13_5a41_57dc_a240_a8a995ddc0ff",
+          "metadata": {
+            "asset_id": "ab7e1a13-5a41-57dc-a240-a8a995ddc0ff",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "VC",
+        "original_name": "CR-7iA.vcmx",
+        "path": "simready_usd/CR-7iA.vcmx",
+        "sha256": "7964d2b5e0a73eda617b881542971084f1ed4d50c448d1fd353a2f0c37f9985d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "cr7ia_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_cr7ia_macro/cr7ia_macro.xacro",
+        "sha256": "c4ddee5f120fa8d22f339fe1377eef0ea3e67e933435f2168a914e09c89ea27c"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_6.stl",
+        "sha256": "2b40324f535205115a999e11b8750cea9d41362dde8db90e624ce45b7f295705"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_5.stl",
+        "sha256": "cf60d5954688201436ecda69a447c941a44f485b7138f4ab685a45093d42f220"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_4.stl",
+        "sha256": "d27f934c7fd63d35a4304047beed51fc00ecc24bd713d0f43a2655216a66bff6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_3.stl",
+        "sha256": "2b9a4bbc9df8df687a78f86d4a286f170ca07de02438ba49e0c454e054292a33"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_2.stl",
+        "sha256": "775fddc296b736e40eeaf72a0bc570d0619b89eb19fe4a2535865cecc767db98"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/link_1.stl",
+        "sha256": "d1058db7ebdcf83d75e789a3f942ce81483b4f118c4f6fb778932000efc2f2a8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/meshes/cr7ia/collision/base_link.stl",
+        "sha256": "d70e8327baff91a0e36daa0a32273822866f0f47a3fb1cd04b5c2e90928c3847"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_materials.xacro",
+        "sha256": "37c196b37f7d745aac5e10863cc09528d91480c88469f666ef5234028744118a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_resources/urdf/common_colours.xacro",
+        "sha256": "112ef7cdc9156e08af2c2d386a758345c9209aae479e19d7e891358568f21384"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_cr7ia.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/config/joint_names_cr7ial.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial/fanuc_cr7ia_support/package.xml",
+        "sha256": "4169eb14e7c35ad527327d8f965cbde215420b5a7e0d7c5d66516a154394cb2e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/fanuc/ros_industrial_melodic_source/fanuc_cr7ia_support/package.xml",
+        "sha256": "6a92b10558b0ecb01c8b97c7f6c48f28e9d4fc4493cf7ab6f8d73a27c140ca1e"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "fanuc",
+        "cr7ia"
+      ],
+      "label": "VC+UniLab｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "d8f42bd73584b255df87098395512538882caea1",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_cr7ia_macro/cr7ia_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "786fb173a2facf4fdcaa1124fcc8af8c6ecb8b3e",
+          "repository": "https://github.com/ros-industrial/fanuc.git",
+          "source": "simready_usd/source_assets/UniLab/0_cr7ia_macro/cr7ia_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "VC",
+        "original_asset_id": "cc02480b-0925-52a9-b9c2-74784dcdc7f0",
+        "original_package_digest": "f9618e111cc2da91c3adfb365fa557e7650a26b3d6447547f32b704727af2b31",
+        "source": "Components/Fanuc/Robots/CR-7iA.vcmx"
+      },
+      "source_families": [
+        "VC",
+        "UniLab"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

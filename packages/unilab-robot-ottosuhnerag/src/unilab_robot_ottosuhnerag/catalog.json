@@ -1,0 +1,37 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "ottosuhnerag",
+  "models": {
+    "anglegrinderws": {
+      "title": "Angle Grinder WS",
+      "asset": {
+        "asset_id": "01aaa69f-b7a2-54a4-a1b9-f37c0633ddf9",
+        "package_digest": "31f254cc86cc028d33829a35543a7414ac19663317fbe9960a1ee7c23bf5cd52",
+        "package_path": "03_机构模块/otto_suhner_ag/angle_grinder_ws__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/anglegrinderws/module.json",
+      "module_sha256": "8a969a314ef13cecaca4b0e2009bf30020c2e893d43fabc68759fd360abaa838"
+    },
+    "orbitalanglegrinderows": {
+      "title": "Orbital Angle Grinder OWS",
+      "asset": {
+        "asset_id": "d70232b3-a954-5427-ad4d-85acc6099477",
+        "package_digest": "d82d3c487ca0d61348aa2eda7846e9411e492e2bd22c5ad6b059ee4c5eaeae18",
+        "package_path": "03_机构模块/otto_suhner_ag/orbital_angle_grinder_ows__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/orbitalanglegrinderows/module.json",
+      "module_sha256": "5d288f37a5c9815bc034d015105be72fdf8701fbe28bd92b2b03f86c51cb19b4"
+    }
+  },
+  "source_profiles": []
+}

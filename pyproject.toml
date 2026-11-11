@@ -24,9 +24,8 @@ testpaths = ["tests"]
 addopts = "-q"
 pythonpath = [
   "packages/unilab-robot-contracts/src",
-  "packages/unilab-arm-cr7/src",
-  "packages/unilab-arm-rokae-cr12/src",
-  "packages/unilab-arm-cr5/src",
+  "packages/unilab-robot-dobot/src",
+  "packages/unilab-robot-rokae/src",
   "packages/unilab-end-effector-sim/src",
   "packages/unilab-rail-linear/src",
   "packages/unilab-rail-mounted-arm/src",

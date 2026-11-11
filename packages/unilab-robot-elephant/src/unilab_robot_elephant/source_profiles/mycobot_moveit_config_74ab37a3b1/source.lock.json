@@ -1,0 +1,119 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "mycobot_moveit_config_74ab37a3b1",
+  "source": {
+    "url": "https://github.com/automaticaddison/mycobot_ros2.git",
+    "commit": "a75c80dfbf60952b79093e026fa5a978fbe02e01",
+    "path": "robots/elephant/mycobot_ros2/mycobot_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "9013c4702b2b760429183dfc7ec2e9d358e6c0ac870d10c5d943b3493efd367b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/initial_positions.yaml",
+      "sha256": "1af2b9758acc2dde4a3f6a3036e6674ac5e5be9cbde3be768c592eac14e3b481",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/joint_limits.yaml",
+      "sha256": "75f6a8219f051b1ca679fd3fb48f23d11398337d1584d264c704759d0a6e0a41",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/kinematics.yaml",
+      "sha256": "5b9b58750cfa783890b5f874de1655d8b7b9c5b5feb1e5460f24383dbadff26f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/moveit_controllers.yaml",
+      "sha256": "7252aa0df40924d9d19d9ea50555c2cf6808a6f28e36a8f5ac5b8fb65e26e398",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/mycobot_280.srdf",
+      "sha256": "71a082d67d91028554a2551142238c1ba8a1ccd2db31033c9de1a1633578d269",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/pilz_cartesian_limits.yaml",
+      "sha256": "db59011b86f2dbfed5b42cce4371023e325f98faac92ca65bfc9e3965a3aee67",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/ros2_controllers.yaml",
+      "sha256": "2336039fed8e8979f27f9f0d0786655f500b9335e70d5e40247f4e93621da391",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/mycobot_280/ros2_controllers_template.yaml",
+      "sha256": "ca4679b89b78035d0fbbf0475d592aecb27f7ee406e701dfdb3fb95c3c54e051",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "3dad56876132f3412606696188c8afe7368a98a1e4effc38ced2fda63703e483",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_industrial_motion_planner_planning.yaml",
+      "sha256": "aa3c33aca6a04dd5e44a3727f7b3d02fc80271c8e962923423995bcc1865177e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/stomp_planning.yaml",
+      "sha256": "f5b03cb0e23a4c4275aa3daf765163770e3287e3bb903db850ba24ae2f559d38",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "include/README.md",
+      "sha256": "325dc75e7b981686a2a309727e8e8843f0e6bfd80657cba141bab0643cec344f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/load_ros2_controllers.launch.py",
+      "sha256": "332d398cf7251eb05dcdc373fa5a00c068c7a35c7b0711df7f24dd311d478808",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch.py",
+      "sha256": "9f7160d346fe44ed4dc332995fbaa47f1f081344682a652df06b5adb01286741",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "fa00c85d2f7f57d98e622cfcaaab1bfe6bfb4261239d03007fc561cea87894d7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "485abf750a4efb7aadbc50b4a1010e18df0c94b236fcd452b8a0a7b69cb92193",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "ce9bae5b6ee63f77f81dc2f1021a501dee724eaaf1fbf7e2a09217de3ba51569",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/move_group.rviz",
+      "sha256": "20077c423e0e65c61c0a196cf2967b7ee69dee60cf1b89fa26e4ed333a811776",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "src/README.md",
+      "sha256": "325dc75e7b981686a2a309727e8e8843f0e6bfd80657cba141bab0643cec344f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "c54744562feb96bca296dc46c8e27198b93a191212544433bbd75b0d360a844a"
+    }
+  ]
+}

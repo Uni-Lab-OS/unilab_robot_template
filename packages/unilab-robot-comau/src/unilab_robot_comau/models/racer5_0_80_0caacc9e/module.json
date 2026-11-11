@@ -1,0 +1,723 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "comau",
+  "model": "racer5:0.80",
+  "title": "Comau Racer 5-0.80｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "d44923a2-fb86-5d19-ab64-6886bcf02bb7",
+    "package_digest": "8d6b147eb9db1087415745a06012eddd8bce56b9b2a536dbe8bf3163af51ce19",
+    "package_path": "04_设备/comau/racer5_0.80__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d44923a2-fb86-5d19-ab64-6886bcf02bb7",
+      "package_digest": "8d6b147eb9db1087415745a06012eddd8bce56b9b2a536dbe8bf3163af51ce19",
+      "package_path": "04_设备/comau/racer5_0.80__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "Racer 5-0.80",
+              "source": "robots/models/Comau-Racer-5-0-80.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "Racer 5-0.80",
+              "source": "robots/models/Comau-Racer-5-0-80.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            },
+            {
+              "model": "Racer 5-0.80",
+              "source": "Components/Comau/Robots/Racer 5-0_80.vcmx",
+              "source_family": "VC",
+              "value": 5.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 5.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "Racer 5-0.80",
+              "source": "robots/models/Comau-Racer-5-0-80.robot",
+              "source_family": "RoboDK",
+              "value": 809.17
+            },
+            {
+              "model": "Racer 5-0.80",
+              "source": "Components/Comau/Robots/Racer 5-0_80.vcmx",
+              "source_family": "VC",
+              "value": 809.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 809,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Comau Racer5-0.80 maximum horizontal reach",
+              "url": "https://www.comau.com/fr/competencies/products-solutions/robot-team/racer-5-0-80/"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -170.0,
+          -95.0,
+          -155.0,
+          -210.0,
+          -125.0,
+          -720.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            365.0
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            370.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            0.0,
+            385.94
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          135.0,
+          90.0,
+          210.0,
+          125.0,
+          720.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "23488dc5-b979-59db-9005-059139ae4850",
+              "entrypoints": {
+                "usd": "simready_usd/racer_5-0.80__r001.usdc"
+              },
+              "package_digest": "29c04c0162386eca2ebd91446016d665dd515a95bb06f7575b97e66cc86f0cc8",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    -90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -95.0,
+                    -155.0,
+                    -210.0,
+                    -125.0,
+                    -720.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      365.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      50.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      370.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      50.0,
+                      0.0,
+                      385.94
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      80.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    135.0,
+                    90.0,
+                    210.0,
+                    125.0,
+                    720.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "030238101d987e1299b6feefc432c27eaab18e80ce55534330fd9c3caa11cdbd",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Comau Racer 5-0.80",
+          "family": "RoboDK",
+          "library_assets": [
+            "23488dc5-b979-59db-9005-059139ae4850"
+          ],
+          "manufacturer": "Comau",
+          "name": "Racer 5-0.80",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Comau-Racer-5-0-80.robot",
+            "path": "simready_usd/Comau-Racer-5-0-80.robot",
+            "sha256": "580b2c1b6200f5702d046a4ef68fd859d917f710c7383bc8fbe03423c03a42ad"
+          },
+          "path": "robots/models/Comau-Racer-5-0-80.robot",
+          "payload": 5,
+          "reach": 809.17,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "17fa13a3-9aca-5718-a15a-568d7958baeb",
+              "entrypoints": {
+                "usd": "simready_usd/racer_5-0_80__r001.usdc"
+              },
+              "package_digest": "c77a13cfd353b52f5fdd34f661780ebc6733404b59350be4dfd70c84efcba699",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "4b2f2248ea62a84387e06be120ce2a714a72e286f22b6fef176c8ade629a5aa9",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "459f22743fbeb154b07f01b6a2cb3f57fceefc53b03577e829ff7a83f48b148b",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "17fa13a3-9aca-5718-a15a-568d7958baeb"
+          ],
+          "manufacturer": "Comau",
+          "name": "Racer 5-0.80",
+          "original": {
+            "family": "VC",
+            "original_name": "Racer 5-0_80.vcmx",
+            "path": "simready_usd/source_assets/VC/0_racer_5-0_80/Racer 5-0_80.vcmx",
+            "sha256": "4b2f2248ea62a84387e06be120ce2a714a72e286f22b6fef176c8ade629a5aa9"
+          },
+          "path": "Components/Comau/Robots/Racer 5-0_80.vcmx",
+          "payload": "5",
+          "reach": "809.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "489745be-0f10-4d73-bca1-60dafaca1a1d"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "030238101d987e1299b6feefc432c27eaab18e80ce55534330fd9c3caa11cdbd",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/racer5_0.80__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Comau Racer 5-0.80｜多源合并",
+          "id": "merged_robot_d44923a2_fb86_5d19_ab64_6886bcf02bb7",
+          "metadata": {
+            "asset_id": "d44923a2-fb86-5d19-ab64-6886bcf02bb7",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apicomau",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apicomau.py",
+        "sha256": "7f15b271518894616acb00df1c36a6273317a5ef8a6b49ffc71c217ec19f5f09",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apicomau.pyc",
+            "sha256": "6eea6cb8135c90b04b02fb12bbaf8839c8d8f1b6bff99d20f9edac04647fd650"
+          },
+          {
+            "relative_path": "api/Robot/v311/apicomau.pyc",
+            "sha256": "601809649beab56fa580755d0a57b85012e19feaa480a6de80907cded26bed2f"
+          },
+          {
+            "relative_path": "api/Robot/v312/apicomau.pyc",
+            "sha256": "22cf40673d24acdc1c6eb95edc598d6c21a61246af3ca28337de0cafde4a7d05"
+          },
+          {
+            "relative_path": "api/Robot/v38/apicomau.pyc",
+            "sha256": "ac17ef033b7edfa2cd8878b2e1b8623d00f88b805dc36dc9fe829e296645b73f"
+          },
+          {
+            "relative_path": "api/Robot/v39/apicomau.pyc",
+            "sha256": "f04fe40eadb1b5e2fba3bf4167013e03c4557cb458fa1ffafbba3643e0de8747"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "comau controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:comau:crcopen_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/comau/crcopen_ros2",
+        "repository_url": "https://github.com/ukaea/CRCOpenROS2Driver.git",
+        "code_tree_sha256": "a23250b33cd023e104c0e2c98910b63b9588a6901779f4d05daeb43c0332a145",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "9884ae4817bf21bf65c9de4e60a235807b5295ff1d215e9d900c368601aff706"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "036d6afa876fbf6c81287b3321e0e6ae1ed6b22afddb18a39d8c3545717cb23c"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Comau_C5G.py",
+      "Comau_C5G_Joints.py",
+      "Comau_Nodal.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Comau-Racer-5-0-80.robot",
+        "path": "simready_usd/Comau-Racer-5-0-80.robot",
+        "sha256": "580b2c1b6200f5702d046a4ef68fd859d917f710c7383bc8fbe03423c03a42ad"
+      },
+      {
+        "family": "VC",
+        "original_name": "Racer 5-0_80.vcmx",
+        "path": "simready_usd/source_assets/VC/0_racer_5-0_80/Racer 5-0_80.vcmx",
+        "sha256": "4b2f2248ea62a84387e06be120ce2a714a72e286f22b6fef176c8ade629a5aa9"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "Racer 5-0.80",
+                "source": "robots/models/Comau-Racer-5-0-80.robot",
+                "source_family": "RoboDK",
+                "value": 809.17
+              },
+              {
+                "model": "Racer 5-0.80",
+                "source": "Components/Comau/Robots/Racer 5-0_80.vcmx",
+                "source_family": "VC",
+                "value": 809.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 809,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Exact model catalog fields; geometry and controller version not certified",
+                "title": "Comau Racer5-0.80 maximum horizontal reach",
+                "url": "https://www.comau.com/fr/competencies/products-solutions/robot-team/racer-5-0-80/"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            809.0,
+            809.17
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "comau",
+        "racer5:0.80"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Exact model catalog fields; geometry and controller version not certified",
+            "title": "Comau Racer5-0.80 maximum horizontal reach",
+            "url": "https://www.comau.com/fr/competencies/products-solutions/robot-team/racer-5-0-80/"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 809
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "23488dc5-b979-59db-9005-059139ae4850",
+        "original_package_digest": "29c04c0162386eca2ebd91446016d665dd515a95bb06f7575b97e66cc86f0cc8",
+        "source": "robots/models/Comau-Racer-5-0-80.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

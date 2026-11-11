@@ -1,0 +1,67 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "iai",
+  "models": {
+    "ixa4nhn12040:5lt2": {
+      "title": "IXA-4NHN12040-5L-T2",
+      "asset": {
+        "asset_id": "dbfefcc8-0a03-5335-b183-4bd2d0cc8388",
+        "package_digest": "2d29269b643655bdc42773b1086c6302effbd37973a03975d44333d5824a7e51",
+        "package_path": "04_设备/iai/ixa-4nhn12040-5l-t2__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ixa4nhn12040_5lt2_302da425/module.json",
+      "module_sha256": "c5b442c7612c10ca014c8f26f20b15b5fccc5ce442f8b91b9d122cce0ab9d8e6"
+    },
+    "ixa4nnn3015": {
+      "title": "IAI IXA 4NNN3015",
+      "asset": {
+        "asset_id": "8ce85698-ee29-539d-945b-40b83cc0959c",
+        "package_digest": "0130767f57137f180f006abcc59984fffd558f47d744b2f8a2846f13bd50d436",
+        "package_path": "04_设备/iai/ixa_4nnn3015__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ixa4nnn3015/module.json",
+      "module_sha256": "bcfb4b860546f12957ddf24f99623944ad5ffbf6e82e961854c5a9a4f0912009"
+    },
+    "ixa4nnn4518": {
+      "title": "IAI IXA 4NNN4518",
+      "asset": {
+        "asset_id": "3c0e8238-42e5-5c8c-b664-854cb745ba9f",
+        "package_digest": "a9f95f76af4e263b36fa32de73bb43113fd83ee41a92598d889b067524db62f1",
+        "package_path": "04_设备/iai/ixa_4nnn4518__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ixa4nnn4518/module.json",
+      "module_sha256": "882509b90c130c2a88889f27af41fcaa05514a9ca695bb6056c2f76032001548"
+    },
+    "ixa4nnn6018": {
+      "title": "IAI IXA 4NNN6018",
+      "asset": {
+        "asset_id": "ddb86be3-c659-52e5-9626-49ea04471b4d",
+        "package_digest": "69e95a010931a389f7f2cafa85af761f001570ac9feb8bcc25a0d13b0c00cf39",
+        "package_path": "04_设备/iai/ixa_4nnn6018__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ixa4nnn6018/module.json",
+      "module_sha256": "7f135e89d6c698992f266022772e87cafb40d2048c019b2f71b555c2f6777f0d"
+    }
+  },
+  "source_profiles": []
+}

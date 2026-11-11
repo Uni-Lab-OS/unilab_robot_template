@@ -1,0 +1,380 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kinova",
+  "model": "gen3",
+  "title": "Kinova Gen3",
+  "asset": {
+    "asset_id": "e36af767-ac6c-5956-80f6-662c08bd4693",
+    "package_digest": "6ba257ea656b50d78bdbcfa4052d4cf2eda407471d5b1be33f549bcde13b7e08",
+    "package_path": "04_设备/kinova/gen3__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e36af767-ac6c-5956-80f6-662c08bd4693",
+      "package_digest": "6ba257ea656b50d78bdbcfa4052d4cf2eda407471d5b1be33f549bcde13b7e08",
+      "package_path": "04_设备/kinova/gen3__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -360.0,
+          -128.9,
+          -360.0,
+          -147.8,
+          -360.0,
+          -120.3,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            284.8
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            -11.75
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            420.75
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            -12.75
+          ],
+          [
+            1.5707963267948966,
+            -0.35,
+            0.0,
+            314.35
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            170.35
+          ]
+        ],
+        "mechanism_type": 3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          4.0,
+          7.0,
+          500.0,
+          0.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          360.0,
+          128.9,
+          360.0,
+          147.8,
+          360.0,
+          120.3,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6b98e181083752160a3da26b423ce25e94f925429cbe3ba3c3960fdae1db9d8d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gen3__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apikinova",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikinova.py",
+        "sha256": "6d2e107c3d6357bad7ff6e5b10ca16612539c46753ed25175e38fc429e3cb13d",
+        "bytes": 1348,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apikinova.pyc",
+            "sha256": "e8bc12b3a76e5bd24628f0d11b60315cc19f9faeffe74e49cace3f576dd3ea4e"
+          },
+          {
+            "relative_path": "api/Robot/v311/apikinova.pyc",
+            "sha256": "e025bfe475be8f51f9780303bdbd0fb6c38b6c36897f354601b98bb08aa1d792"
+          },
+          {
+            "relative_path": "api/Robot/v312/apikinova.pyc",
+            "sha256": "ad926634436899d1f570895de84c69e1d9ee5a9285aeb0092ad47c627672f253"
+          },
+          {
+            "relative_path": "api/Robot/v38/apikinova.pyc",
+            "sha256": "6c667bbeeeb18e7e8920bc7413bbb468bb685add2bf078939cdc9db145b166c9"
+          },
+          {
+            "relative_path": "api/Robot/v39/apikinova.pyc",
+            "sha256": "f07033922a97284e88466aa1e5cb02413e8aadf0dc07835f66f1a52e17a90798"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "kinova controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Kinova.py",
+      "Kinova_Link6.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kinova/ros2_kortex",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kinova/ros_kortex",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kinova/ros2_kortex_main_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Gen3",
+          "manufacturer": "Kinova",
+          "variant": "",
+          "display": "Kinova Gen3",
+          "path": "robots/models/Kinova-Gen3.robot",
+          "type": "robots",
+          "payload": 14,
+          "reach": 735.1,
+          "axes": 7,
+          "library_assets": [
+            "e36af767-ac6c-5956-80f6-662c08bd4693"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Kinova-Gen3.robot",
+        "path": "simready_usd/Kinova-Gen3.robot",
+        "sha256": "9eb78ce7ee3a9a5c5b329d3a7bb14fbda45885a49662ddb28cfd487a49a80cb4"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

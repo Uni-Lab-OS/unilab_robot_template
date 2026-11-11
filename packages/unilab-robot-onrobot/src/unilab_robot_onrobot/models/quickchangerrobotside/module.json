@@ -1,0 +1,708 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "quickchangerrobotside",
+  "title": "Quick Changer Robot Side",
+  "asset": {
+    "asset_id": "82c10bfc-fc27-5433-94c0-f95e050344be",
+    "package_digest": "d531912807a3283d2bb56102542202ad77c5759632a9905bd5c80e09f98cdab8",
+    "package_path": "03_机构模块/onrobot/quick_changer_robot_side__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "82c10bfc-fc27-5433-94c0-f95e050344be",
+      "package_digest": "d531912807a3283d2bb56102542202ad77c5759632a9905bd5c80e09f98cdab8",
+      "package_path": "03_机构模块/onrobot/quick_changer_robot_side__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "8abf3e22393e612dc2a9a3ae3f94394af8fdf44f3d4619edc048321ec995b8ac",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "8abf3e22393e612dc2a9a3ae3f94394af8fdf44f3d4619edc048321ec995b8ac",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "source_behavior": {
+        "archive_member": "component.rsc",
+        "execution": "not_os_executable",
+        "scripts": [
+          {
+            "analysis": "conservative lexical source analysis; not complete Python control/data flow",
+            "decoded_script": "C:\\Users\\DP\\files\\asset-pipeline-runs\\vendor-full-library-20261105\\vc\\attempt-04\\jobs\\8abf3e22393e612dc2a9a3ae3f94394af8fdf44f3d4619edc048321ec995b8ac\\attempt-01\\evidence\\physics\\scripts\\rsc-line-2479.py.txt",
+            "decoded_script_sha256": "a9b8446384f073d4309415fccc7588e81eba9d423db26f99f9ab6779df8ece26",
+            "effects": [
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 40,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:2403",
+                  "kind": "Functionality",
+                  "line": 2403,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 2479,
+                "text": "  adapter_frame.PositionMatrix = pos"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_property_or_behavior_reference",
+                "decoded_script_line": 41,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:2403",
+                  "kind": "Functionality",
+                  "line": 2403,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 2479,
+                "text": "  adapter_frame.rebuild()"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_creation_path",
+                "decoded_script_line": 44,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:2403",
+                  "kind": "Functionality",
+                  "line": 2403,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 2479,
+                "text": "  adapter_iface = flange_node.createBehavior(vc_beh.vcBehaviorType.ONE_TO_ONE_INTERFACE, ADAPTER_IFACE_NAME)"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 55,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:2403",
+                  "kind": "Functionality",
+                  "line": 2403,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 2479,
+                "text": "            adapter_prop.Value = adapter_frame"
+              },
+              {
+                "archive_member": "component.rsc",
+                "classification": "script_assignment_path",
+                "decoded_script_line": 57,
+                "evaluation_dependency": "requires_dependency_analysis; not automatically an external scenario",
+                "evidence_class": "direct_serialized",
+                "execution": "not_executed",
+                "function": "on_connect",
+                "owner": {
+                  "id": "functionality:2403",
+                  "kind": "Functionality",
+                  "line": 2403,
+                  "name": "PythonScript",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rPythonScript"
+                },
+                "rsc_variable_line": 2479,
+                "text": "            adapter_prop.Value = prop.Value"
+              }
+            ],
+            "executed": false,
+            "owner": {
+              "id": "functionality:2403",
+              "kind": "Functionality",
+              "line": 2403,
+              "name": "PythonScript",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rPythonScript"
+            },
+            "source_member": "component.rsc",
+            "source_variable_line": 2479
+          }
+        ]
+      },
+      "source_physics": {
+        "archive_member": "component.rsc",
+        "colliders": [],
+        "controllers": [],
+        "entities": [],
+        "joints_and_drivers": [
+          {
+            "classification": "parsed_fixed_node_declaration",
+            "declaration": "Dof \"Fixed\"",
+            "fields": {},
+            "owner": {
+              "id": "node:2747",
+              "kind": "Node",
+              "line": 2747,
+              "name": "TCP",
+              "node_id": "node:2747",
+              "node_path": [
+                {
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:2747"
+                }
+              ],
+              "type": "rSimLink"
+            },
+            "scope": "source fixed node relation; no separately instantiated physics joint claimed"
+          }
+        ],
+        "rsc_sha256": "2d054621049c597fd8cabf1a717fce3060e3b7c6435b261056644d0be50734cd",
+        "scoped_physical_fields": [],
+        "source_parameters": [
+          {
+            "fields": {
+              "AdapterHeight": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2728,
+                "magnitude": 1,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "quantity": "Distance",
+                "raw_block_sha256": "04c3b1f0216b25c07195b4e0140abb0250ff6875a508800365fcee4739a2b26c",
+                "source_settings": [
+                  "TRANSLATE_USING_GETTEXT"
+                ],
+                "type": "rTVariable<rDouble>",
+                "unit_status": "source_quantity_and_magnitude_only",
+                "value": 13.6
+              },
+              "BOM": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2637,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "236fe47dbbfe4dccec62cfad7f7510b85e38ac2899b306b3e541e98512f698b5",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "BOMdescription": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2665,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "ef05729cd92d7725d40ecd44627ba9287db18b7168f3dfc1f0b7f76d2e503c1a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "OnRobot Quick Changer Robot Side"
+              },
+              "BOMname": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2651,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "08fae54dfbe2ab2fff78990e532ba73002144d69f0dcd3f3a674ea0121863940",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Quick Changer Robot Side"
+              },
+              "BackfaceMode": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "FeatureBackfaceMode",
+                    "value": 0
+                  },
+                  {
+                    "label": "BackfaceOff",
+                    "value": 1
+                  },
+                  {
+                    "label": "BackfaceOn",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "FeatureBackfaceMode",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2555,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "03fe506ae848712a7c098369e632345a92a190e5e01808e2132c5d98b9f2a02a",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Category": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2679,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "2d961859afbd4d0826ce87e4d7eb7cfb2204444b530ba0fd80c920198512f8ec",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rString>",
+                "unit_status": "not_declared",
+                "value": "Robot Tools"
+              },
+              "PDFExportLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "No export",
+                    "value": 0
+                  },
+                  {
+                    "label": "Complete",
+                    "value": 1
+                  },
+                  {
+                    "label": "Geometry bound",
+                    "value": 2
+                  },
+                  {
+                    "label": "Node bound",
+                    "value": 3
+                  },
+                  {
+                    "label": "Component bound",
+                    "value": 4
+                  }
+                ],
+                "enum_label": "Complete",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2590,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "0f1b2e4ebf8490053544363e21ce7280df51ae2892b093ccc85b28e1829d2bb4",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 1
+              },
+              "SimulationLevel": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "enum": [
+                  {
+                    "label": "Detailed",
+                    "value": 0
+                  },
+                  {
+                    "label": "Balanced",
+                    "value": 1
+                  },
+                  {
+                    "label": "Fast",
+                    "value": 2
+                  }
+                ],
+                "enum_label": "Detailed",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2693,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "9a581808e5ffb28f8741257ca5ea156a776f8a878ec463a4ad8611b57ae16167",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTEnumVariable<rInt>",
+                "unit_status": "not_declared",
+                "value": 0
+              },
+              "Visible": {
+                "archive_member": "component.rsc",
+                "classification": "parsed_serialized_value",
+                "evidence_class": "direct_serialized",
+                "expression": null,
+                "line": 2541,
+                "owner": {
+                  "id": "node:2",
+                  "kind": "Node",
+                  "line": 2,
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    }
+                  ],
+                  "type": "rSimResource"
+                },
+                "raw_block_sha256": "140e04aba44674db1dc7cff9dc47d50742b630db115edddd6be23fbd03490f43",
+                "source_settings": [
+                  "VISIBLE",
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "EDITABLE_SIMULATING",
+                  "MANAGED"
+                ],
+                "type": "rTVariable<rBool>",
+                "unit_status": "not_declared",
+                "value": 1
+              }
+            },
+            "owner": {
+              "id": "node:2",
+              "kind": "Node",
+              "line": 2,
+              "name": "Quick Changer Robot Side",
+              "node_id": "node:2",
+              "node_path": [
+                {
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2"
+                }
+              ],
+              "type": "rSimResource"
+            }
+          },
+          {
+            "fields": {
+              "Offset": {
+                "archive_member": "component.rsc",
+                "classification": "unevaluated_source_expression",
+                "evidence_class": "direct_serialized",
+                "expression": "Tz(AdapterHeight)",
+                "line": 2753,
+                "owner": {
+                  "id": "node:2747",
+                  "kind": "Node",
+                  "line": 2747,
+                  "name": "TCP",
+                  "node_id": "node:2747",
+                  "node_path": [
+                    {
+                      "name": "Quick Changer Robot Side",
+                      "node_id": "node:2"
+                    },
+                    {
+                      "name": "TCP",
+                      "node_id": "node:2747"
+                    }
+                  ],
+                  "type": "rSimLink"
+                },
+                "raw_block_sha256": "52990cf52b0487786b3d3317adebb2169cb8f80af8d539dd25bebfd271902e5f",
+                "source_settings": [
+                  "EDITABLE_DISCONNECTED",
+                  "EDITABLE_CONNECTED",
+                  "MANAGED"
+                ],
+                "type": "rTExpressionVariable<rMatrix>",
+                "unit_status": "not_declared",
+                "value": null
+              }
+            },
+            "owner": {
+              "id": "node:2747",
+              "kind": "Node",
+              "line": 2747,
+              "name": "TCP",
+              "node_id": "node:2747",
+              "node_path": [
+                {
+                  "name": "Quick Changer Robot Side",
+                  "node_id": "node:2"
+                },
+                {
+                  "name": "TCP",
+                  "node_id": "node:2747"
+                }
+              ],
+              "type": "rSimLink"
+            }
+          }
+        ],
+        "source_sha256": "8abf3e22393e612dc2a9a3ae3f94394af8fdf44f3d4619edc048321ec995b8ac"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "753e85c83caea675455ee09cf48456ac65a7a6e488565d3c3f854691e3a28e09",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/quick_changer_robot_side__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Quick Changer Robot Side",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "path": "Components/OnRobot/Robot Tools/Quick Changer Robot Side.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "1d59dfd3-7b5b-446b-a9d4-307e062a9533",
+          "library_assets": [
+            "82c10bfc-fc27-5433-94c0-f95e050344be"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Quick Changer Robot Side.vcmx",
+        "path": "simready_usd/Quick Changer Robot Side.vcmx",
+        "sha256": "8abf3e22393e612dc2a9a3ae3f94394af8fdf44f3d4619edc048321ec995b8ac"
+      }
+    ]
+  }
+}

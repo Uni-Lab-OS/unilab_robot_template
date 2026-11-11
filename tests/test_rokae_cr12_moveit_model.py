@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import math
+import os
 import shutil
 import xml.etree.ElementTree as ET
 
@@ -130,7 +131,15 @@ def test_nonfinite_fixed_mount_is_rejected(yaw):
 def test_changed_asset_fails_before_model_creation(tmp_path,monkeypatch,relative):
     copied=tmp_path/"models"
     shutil.copytree(source_assets._MODEL_ROOT,copied)
-    p=copied/relative;p.write_bytes(p.read_bytes()+b"changed")
+    if relative.startswith('meshes/'):
+        lock=json.loads((copied/'asset-files.json').read_bytes())
+        local=tmp_path/'asset-library';package=local/lock['asset']['package_path']
+        shutil.copytree(Path(os.environ['UNILAB_ASSET_LIBRARY'])/lock['asset']['package_path'],package)
+        entry=next(r for r in lock['files'] if r['original']==relative)
+        p=package/entry['asset_path']
+        monkeypatch.setenv('UNILAB_ASSET_LIBRARY',str(local))
+    else:p=copied/relative
+    p.write_bytes(p.read_bytes()+b"changed")
     monkeypatch.setattr(source_assets,"_MODEL_ROOT",copied)
     with pytest.raises(ValueError):build_moveit_model(device_id="arm")
 

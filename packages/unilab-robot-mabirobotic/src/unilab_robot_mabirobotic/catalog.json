@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "mabirobotic",
+  "models": {
+    "max100:2.25p": {
+      "title": "MABI Robotic MAX-100-2.25-P",
+      "asset": {
+        "asset_id": "c0ebf5b6-19e4-5b3a-b955-1f37302e5efd",
+        "package_digest": "aa57c5f7622654e631a9f730c6f2f64db3549d51f2d9b789ee4d4ba1d5c614cf",
+        "package_path": "04_设备/mabi_robotic/max-100-2.25-p__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/max100_2_25p_2092c7d2/module.json",
+      "module_sha256": "18d69c0e28e5db1c74e9bec804b7bae075eb30646755eed8926839e3425bbacf"
+    },
+    "max150:2.0p": {
+      "title": "MABI Robotic MAX-150-2.0-P",
+      "asset": {
+        "asset_id": "a3e1ba4e-861b-5d80-80db-d3944bb0986e",
+        "package_digest": "406160de26ceb8b9b4ae79c1c5e00b8b4dc0a35070367f21b210b9df9670446f",
+        "package_path": "04_设备/mabi_robotic/max-150-2.0-p__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/max150_2_0p_774ce879/module.json",
+      "module_sha256": "6a404b7dec3ff3d4414c1d9776e97aa5579a03d5ac1696bd8f4d39a0ae2efddc"
+    },
+    "max200:2.5p": {
+      "title": "MABI Robotic MAX-200-2.5-P",
+      "asset": {
+        "asset_id": "c55c2c41-e168-54f3-b307-8e60fc92cb38",
+        "package_digest": "cf75d0b0c347b578d6338ffa7091a230d2a20013e5bc0762ee1e08ac2412bdb2",
+        "package_path": "04_设备/mabi_robotic/max200_2.5p__多源合并_r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/max200_2_5p_b0a62d82/module.json",
+      "module_sha256": "9db7d653274b5ae96dafc3ced70c8e26f6dd66584c8067f56708dc85891094a2"
+    }
+  },
+  "source_profiles": []
+}

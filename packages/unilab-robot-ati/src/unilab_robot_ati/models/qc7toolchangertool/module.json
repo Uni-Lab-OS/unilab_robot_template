@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "qc7toolchangertool",
+  "title": "ATI QC-7 Tool Changer (Tool)",
+  "asset": {
+    "asset_id": "8607ecf3-5f69-572b-be66-cf6538b80a0f",
+    "package_digest": "a441548784da07cd0f73524f8a49b0ef85ee5c897190d3f97350cc1eae8f5191",
+    "package_path": "01_零部件/ati/qc-7_tool_changer_tool___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8607ecf3-5f69-572b-be66-cf6538b80a0f",
+      "package_digest": "a441548784da07cd0f73524f8a49b0ef85ee5c897190d3f97350cc1eae8f5191",
+      "package_path": "01_零部件/ati/qc-7_tool_changer_tool___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c34227f6571f1b59390bd75e720418673f628c40b2871c9b61cbfe833d27b0a1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qc-7_tool_changer_tool___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QC-7 Tool Changer (Tool)",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI QC-7 Tool Changer (Tool)",
+          "path": "tools/models/ATI-QC-7-Tool-Changer-Tool.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "8607ecf3-5f69-572b-be66-cf6538b80a0f"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-QC-7-Tool-Changer-Tool.tool",
+        "path": "simready_usd/ATI-QC-7-Tool-Changer-Tool.tool",
+        "sha256": "57f2bca12bc0c1a096c23a4b2d5eb770c61c8498443e9569103bb95ff16f61f1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "moveit_699a7d45c8",
+  "source": {
+    "url": "https://github.com/agilexrobotics/Piper_ros.git",
+    "commit": "ac41fcbcdda598f01b51cf6175ed9a24d0dacadc",
+    "path": "robots/agilex/piper_ros/src/piper_moveit/moveit-1.1.11/moveit",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "e455bfa5d762f860c050100e59b4aaf2538a6525c5598bf3ef54e53448581d8c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "94d9635ee46a4c081eeb49321657807acd07ff195a485b5344c6f07f6e771b6f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/create_maintainer_table.py",
+      "sha256": "79d182cdb4c4dda3b48a52343120fd7eb6c49806995c1e14f5c77c20f39638c7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/create_readme_table.py",
+      "sha256": "d4e41847f514f15c51f187edd9e159379622a02ddc89bc9bcbeb7587c5d6b928",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/README.md",
+      "sha256": "3d2356f7d3d6677afad19d46fa95e2cf5db429d2759466668d167222c79cf054",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "0b1398c67022cc2620ed1451c28b44e09baf53e97b88f4dc8c7a11a80cefa356"
+    }
+  ]
+}

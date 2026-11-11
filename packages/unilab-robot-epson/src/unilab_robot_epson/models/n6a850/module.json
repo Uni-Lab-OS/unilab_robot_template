@@ -1,0 +1,362 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "epson",
+  "model": "n6a850",
+  "title": "Epson N6-A850",
+  "asset": {
+    "asset_id": "06da17f9-e2f1-5833-a5ab-87734652cd77",
+    "package_digest": "f41e50f60960b7edd66c972c287ddc267feea22cca7d91d64668217eb62494ee",
+    "package_path": "04_设备/epson/n6-a850__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "06da17f9-e2f1-5833-a5ab-87734652cd77",
+      "package_digest": "f41e50f60960b7edd66c972c287ddc267feea22cca7d91d64668217eb62494ee",
+      "package_path": "04_设备/epson/n6-a850__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -180.0,
+          -180.0,
+          -200.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            802.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            350.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            510.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            100.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          1.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          180.0,
+          180.0,
+          200.0,
+          125.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a7ea9a1957f236674b6153c4dd3e323b2f71acde2950a7a980201914cf45421a",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/n6-a850__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:EpsonDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/EpsonDriver.py",
+        "sha256": "fc186a14ba3f9293d51561e6a869634cc6907442f9e988f3b4ea9b7f553ffb7c",
+        "bytes": 1354,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/EpsonDriver.pyc",
+            "sha256": "5223587a25cb999225c82c765564503b8a3ba2c83aadbf743fa9f2ee47218f8e"
+          },
+          {
+            "relative_path": "api/Robot/v311/EpsonDriver.pyc",
+            "sha256": "055a720d9711e210fe12346b620b400ba93fcf7591e997e89f80ce8c3e642185"
+          },
+          {
+            "relative_path": "api/Robot/v312/EpsonDriver.pyc",
+            "sha256": "025f5136bc0021144e1a6ece759460a8d3841022ee0dc8ef36409af36e3a251f"
+          },
+          {
+            "relative_path": "api/Robot/v38/EpsonDriver.pyc",
+            "sha256": "47c6d6c13931138361e2d5d07ba03caebb6f4d1c5f5d44cb906aaef5a701e746"
+          },
+          {
+            "relative_path": "api/Robot/v39/EpsonDriver.pyc",
+            "sha256": "15bd500546899aa7accd0e2e119f18bf7036a5a5757b5df678dcf33ea59ff374"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "epson controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:epson:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/epson/ros2",
+        "repository_url": "https://github.com/Epson-Robots/epson-robot-ros2.git",
+        "code_tree_sha256": "18db755317b6cea2ec258f4ee734e858a1067ece5d4a0f77318b31650869c2e5",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "c3ec1db53fcd31a1c7d0a027ac662033c4d7dab646845a91799fb01a7bc16e7b"
+          },
+          {
+            "path": "readme_ja.md",
+            "sha256": "ef1278e1143479c9bc4d7584f7c976f7342738de197bb683599e97fed92ad2b7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a6d810145e1b0e74b88fdefded43bb370cc6014055a1889d2d891acd6e899264"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Epson_RC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "N6-A850",
+          "manufacturer": "Epson",
+          "variant": "",
+          "display": "Epson N6-A850",
+          "path": "robots/models/Epson-N6-A850.robot",
+          "type": "robots",
+          "payload": 6,
+          "reach": 850,
+          "axes": 6,
+          "library_assets": [
+            "06da17f9-e2f1-5833-a5ab-87734652cd77"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Epson-N6-A850.robot",
+        "path": "simready_usd/Epson-N6-A850.robot",
+        "sha256": "1997b6fa9f6cb9a824742aff480ee8a4a234d5b8d38274dcdba8b09bdf6c50e6"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

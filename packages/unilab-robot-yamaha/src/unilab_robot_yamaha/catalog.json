@@ -1,0 +1,67 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "yamaha",
+  "models": {
+    "yco1300": {
+      "title": "Yamaha YCO1300",
+      "asset": {
+        "asset_id": "c3f83aaf-56fe-5255-9f66-31ed7e7b58b2",
+        "package_digest": "31a97a9bee073d68e3ae7c60cb1c1736fc5bd25a1d203543da8153d85e874969",
+        "package_path": "04_设备/yamaha/yco1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yco1300/module.json",
+      "module_sha256": "8280658cdc429ba1396289bdd6ecddb3cec236cc128a260f03cfe24b8a519d26"
+    },
+    "yk400xrs150": {
+      "title": "Yamaha YK400XR-S-150",
+      "asset": {
+        "asset_id": "3162a922-a84d-5b56-ae30-1505e3b3575d",
+        "package_digest": "9ce0c86adb4fbd48f2ef74eb7f4579bb7f73444760b9e8164756daf44f160136",
+        "package_path": "04_设备/yamaha/yk400xr-s-150__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yk400xrs150/module.json",
+      "module_sha256": "c6ec99ebf5c12fa2cb7480ca869892585707708a53df702d66d7d6facbb76df4"
+    },
+    "yk700xgp200": {
+      "title": "Yamaha YK700XGP-200",
+      "asset": {
+        "asset_id": "bbe9a861-04f4-52ae-8ca1-adf38ba96cfa",
+        "package_digest": "c019f326ca1c81ed46bb09739839eb32fc131abd8875e5fbf34ef3af15a955e9",
+        "package_path": "04_设备/yamaha/yk700xgp-200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yk700xgp200/module.json",
+      "module_sha256": "64f62384efec88d9c13ef7b7200fdc2ae1090d7d199d278ab048aaa8dfaaf433"
+    },
+    "yk800xgp200": {
+      "title": "Yamaha YK800XGP-200",
+      "asset": {
+        "asset_id": "924fd7f1-6847-56f8-ae39-071383164f7d",
+        "package_digest": "da0dc9748c56e487327090be45b8bc23f838fe67b58c079a49d3d9ecff4fae2a",
+        "package_path": "04_设备/yamaha/yk800xgp-200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yk800xgp200/module.json",
+      "module_sha256": "5a6b6e383675fda075f6040a11eac17544600c45daf888ba56c71c03d93b2fc8"
+    }
+  },
+  "source_profiles": []
+}

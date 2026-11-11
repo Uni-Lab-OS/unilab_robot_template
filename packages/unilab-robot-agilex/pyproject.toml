@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unilab-robot-agilex"
+version = "0.1.0"
+description = "Uni-Lab agilex brand models and reviewed capability bindings"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0", "unilab-robot-contracts>=0.1,<0.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["unilab_robot_agilex"]
+
+[tool.setuptools.package-data]
+unilab_robot_agilex = ["catalog.json", "models/**/*", "source_profiles/**/*"]

@@ -1,0 +1,595 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "brooks",
+  "model": "preciseflexc10:1420",
+  "title": "Brooks PreciseFlex c10-1420｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "0125372b-3411-5f1c-b3ae-384c97dd419f",
+    "package_digest": "99fc02df3263cf07285f77842df8f2629b7577b31d8ec1e0837ed9913b825ce5",
+    "package_path": "04_设备/brooks/preciseflexc10_1420__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "0125372b-3411-5f1c-b3ae-384c97dd419f",
+      "package_digest": "99fc02df3263cf07285f77842df8f2629b7577b31d8ec1e0837ed9913b825ce5",
+      "package_path": "04_设备/brooks/preciseflexc10_1420__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "PreciseFlex c10-1420",
+              "source": "robots/models/Brooks-PreciseFlex-c10-1420.robot",
+              "source_family": "RoboDK",
+              "value": 4.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 4.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "PreciseFlex c10 1420",
+              "source": "Components/Brooks/Robots/PreciseFlex c10 1420.vcmx",
+              "source_family": "VC",
+              "value": 10.0
+            },
+            {
+              "model": "PreciseFlex c10-1420",
+              "source": "robots/models/Brooks-PreciseFlex-c10-1420.robot",
+              "source_family": "RoboDK",
+              "value": 10.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 10.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "PreciseFlex c10 1420",
+              "source": "Components/Brooks/Robots/PreciseFlex c10 1420.vcmx",
+              "source_family": "VC",
+              "value": 1789.0
+            },
+            {
+              "model": "PreciseFlex c10-1420",
+              "source": "robots/models/Brooks-PreciseFlex-c10-1420.robot",
+              "source_family": "RoboDK",
+              "value": 1789.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 1789.0
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.5707963267948966,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          11.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "mm",
+          "degree",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "prismatic",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -168.0,
+          0.0,
+          11.0,
+          -298.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            550.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.141592653589793,
+            350.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          168.0,
+          1420.0,
+          349.0,
+          298.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Brooks",
+          "name": "PreciseFlex c10 1420",
+          "original": {
+            "family": "VC",
+            "original_name": "PreciseFlex c10 1420.vcmx",
+            "path": "simready_usd/source_assets/VC/0_preciseflex_c10_1420/PreciseFlex c10 1420.vcmx",
+            "sha256": "c91e242622876a6f70205df0ba4ad5eda1d77b6aa69f850577f54bfd40ce2998"
+          },
+          "path": "Components/Brooks/Robots/PreciseFlex c10 1420.vcmx",
+          "payload": "10",
+          "reach": "1789.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "b86b7f20-2e1e-4124-b1f1-732aae6d3186"
+        },
+        {
+          "axes": 4,
+          "converted_parameters": [
+            {
+              "asset_id": "e2a042ce-6481-53a1-959c-ff9942ec17de",
+              "entrypoints": {
+                "usd": "simready_usd/preciseflex_c10-1420__r001.usdc"
+              },
+              "package_digest": "4b1499250920da20368e0d92e36bfebeac87c5730f715e236452aa402ee13568",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "generic_axis_directions": 64,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.5707963267948966,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    11.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "mm",
+                    "degree",
+                    "degree"
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "prismatic",
+                    "revolute",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -168.0,
+                    0.0,
+                    11.0,
+                    -298.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      550.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      3.141592653589793,
+                      350.0,
+                      0.0,
+                      0.0
+                    ]
+                  ],
+                  "mechanism_type": 2,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+                    "generic_direction_mapping": "0x1405dbe20",
+                    "generic_fallback": "0x1405dafb0",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    2.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+                  "upper": [
+                    168.0,
+                    1420.0,
+                    349.0,
+                    298.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "1ea96564b593f323bace6e38c1f2d9a83a52fb17b764a7b8531b35840196ddaf",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 4,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 5
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Brooks PreciseFlex c10-1420",
+          "family": "RoboDK",
+          "library_assets": [
+            "e2a042ce-6481-53a1-959c-ff9942ec17de"
+          ],
+          "manufacturer": "Brooks",
+          "name": "PreciseFlex c10-1420",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Brooks-PreciseFlex-c10-1420.robot",
+            "path": "simready_usd/Brooks-PreciseFlex-c10-1420.robot",
+            "sha256": "30fcf406463abb0e33f1f30fb2bd4e62606d061f1a44cd36a22807ad3eb8fc20"
+          },
+          "path": "robots/models/Brooks-PreciseFlex-c10-1420.robot",
+          "payload": 10,
+          "reach": 1789,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "1ea96564b593f323bace6e38c1f2d9a83a52fb17b764a7b8531b35840196ddaf",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/preciseflexc10_1420__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Brooks PreciseFlex c10-1420｜多源合并",
+          "id": "merged_robot_0125372b_3411_5f1c_b3ae_384c97dd419f",
+          "metadata": {
+            "asset_id": "0125372b-3411-5f1c-b3ae-384c97dd419f",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Brooks-PreciseFlex-c10-1420.robot",
+        "path": "simready_usd/Brooks-PreciseFlex-c10-1420.robot",
+        "sha256": "30fcf406463abb0e33f1f30fb2bd4e62606d061f1a44cd36a22807ad3eb8fc20"
+      },
+      {
+        "family": "VC",
+        "original_name": "PreciseFlex c10 1420.vcmx",
+        "path": "simready_usd/source_assets/VC/0_preciseflex_c10_1420/PreciseFlex c10 1420.vcmx",
+        "sha256": "c91e242622876a6f70205df0ba4ad5eda1d77b6aa69f850577f54bfd40ce2998"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "brooks",
+        "preciseflexc10:1420"
+      ],
+      "label": "VC+RoboDK｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "e2a042ce-6481-53a1-959c-ff9942ec17de",
+        "original_package_digest": "4b1499250920da20368e0d92e36bfebeac87c5730f715e236452aa402ee13568",
+        "source": "robots/models/Brooks-PreciseFlex-c10-1420.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

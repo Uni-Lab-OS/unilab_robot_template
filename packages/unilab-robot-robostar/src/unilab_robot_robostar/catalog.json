@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "robostar",
+  "models": {
+    "ra004": {
+      "title": "Robostar RA004",
+      "asset": {
+        "asset_id": "e101e3ca-c542-5a9c-8d20-59b940cc0092",
+        "package_digest": "ebee709ab73066f98b4a45f845624ec526dfac2b3c286b592ed77e908bc5e822",
+        "package_path": "04_设备/robostar/ra004__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra004/module.json",
+      "module_sha256": "dd81ee69a063a43e184bb7db7b4dc2a94bb186972e8620ddd1157bfd9252a916"
+    },
+    "ra007": {
+      "title": "Robostar RA007",
+      "asset": {
+        "asset_id": "9e1c5741-cc65-573f-b8f5-7bbef2e26c5e",
+        "package_digest": "e2a48971279bdd7a16e252576200f33480727f2a610daf5ebae7feb1041b306a",
+        "package_path": "04_设备/robostar/ra007__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra007/module.json",
+      "module_sha256": "99ff1b5b9c80983e3fc8ebe38f37b2693009ea0520a002c4fc9e9413956c2df7"
+    },
+    "ra012": {
+      "title": "Robostar RA012",
+      "asset": {
+        "asset_id": "af9d2a10-cb6e-546f-82d1-2e16e1068e1c",
+        "package_digest": "83b5657b1b1f1bc15403100431f677a03a34ea534a7ff00e493fac1a4aa22c77",
+        "package_path": "04_设备/robostar/ra012__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra012/module.json",
+      "module_sha256": "829875c44b31cb8610c547877a267071d980221f529ff1017d674d78db98c4d2"
+    }
+  },
+  "source_profiles": []
+}

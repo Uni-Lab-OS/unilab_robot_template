@@ -1,0 +1,765 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "s430iw",
+  "title": "Fanuc S-430iW｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "5e8fcd52-58bb-52d3-b849-71acabbe896d",
+    "package_digest": "d81d376356a470a7cb7d125ae6bf4208d4504721e60f26bf458143f72df3b48b",
+    "package_path": "04_设备/fanuc/s430iw__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "5e8fcd52-58bb-52d3-b849-71acabbe896d",
+      "package_digest": "d81d376356a470a7cb7d125ae6bf4208d4504721e60f26bf458143f72df3b48b",
+      "package_path": "04_设备/fanuc/s430iw__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "S-430iW",
+              "source": "robots/models/Fanuc-S-430iW.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "S-430iW",
+              "source": "robots/models/Fanuc-S-430iW.robot",
+              "source_family": "RoboDK",
+              "value": 135.0
+            },
+            {
+              "model": "S-430iW",
+              "source": "Components/Fanuc/Robots/S-430iW.vcmx",
+              "source_family": "VC",
+              "value": 165.0
+            }
+          ],
+          "datum": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+          "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 165,
+          "verification": [
+            {
+              "authority": "OEM-authored original on third-party archive",
+              "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+              "reviewed_at": "2026-11-08",
+              "scope": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+              "title": "FANUC Robotics S-430i original brochure, page 4",
+              "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/Datasheet-S-430i_Serie.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "S-430iW",
+              "source": "robots/models/Fanuc-S-430iW.robot",
+              "source_family": "RoboDK",
+              "value": 2643.0
+            },
+            {
+              "model": "S-430iW",
+              "source": "Components/Fanuc/Robots/S-430iW.vcmx",
+              "source_family": "VC",
+              "value": 2643.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2643.0
+        }
+      },
+      "robot_parameters": {
+        "auxiliary_linkage": {
+          "anchor_links": [
+            1,
+            2
+          ],
+          "anchors_m": [
+            [
+              -0.375,
+              0,
+              -0.017604000000000043
+            ],
+            [
+              0.0,
+              -0.215,
+              0
+            ]
+          ],
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "kind": "robodk_two_anchor_slide",
+          "native_function": "0x1405b0c10:0x1405b12e0..0x1405b17f4",
+          "orientation_column": 1,
+          "orientation_link": 1,
+          "output_links": [
+            7,
+            8
+          ],
+          "scope": "source graphical closed linkage pose dependency; not physical constraint or actuator model"
+        },
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -740.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_constraint": {
+          "binary_sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "formula": "usd_joint_degrees = matrix @ source_controller_degrees; signed axes encoded in joint frames",
+          "kind": "invertible_linear_coordinate_map",
+          "limits_scope": "USD limits are per-axis enclosure only. Coupled domain requires inverse(matrix) @ usd_coordinates within original source limits; dynamics remains disabled",
+          "native_function": "0x14055e6a0",
+          "source_lower": [
+            -180.0,
+            -54.0,
+            -215.0,
+            -360.0,
+            -125.0,
+            -360.0
+          ],
+          "source_upper": [
+            180.0,
+            80.0,
+            272.0,
+            360.0,
+            125.0,
+            360.0
+          ]
+        },
+        "controller_coordinate_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "controller_to_mdh_mode": 2,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -180.0,
+          -54.0,
+          -215.0,
+          -360.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            740.0
+          ],
+          [
+            -1.5707963267948966,
+            305.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            1075.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            250.0,
+            0.0,
+            1275.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            240.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          4.0,
+          2.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          80.0,
+          272.0,
+          360.0,
+          125.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [],
+          "display": "Fanuc S-430iW",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "S-430iW",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-S-430iW.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_fanuc-s-430iw/Fanuc-S-430iW.robot",
+            "sha256": "0a44b9db7a54889654472b7f39c13a419d3e154625bcec0596350e771208d07d"
+          },
+          "path": "robots/models/Fanuc-S-430iW.robot",
+          "payload": 135,
+          "reach": 2643,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "S-430iW",
+          "original": {
+            "family": "VC",
+            "original_name": "S-430iW.vcmx",
+            "path": "simready_usd/source_assets/VC/0_s-430iw/S-430iW.vcmx",
+            "sha256": "5d8a4f40b1af2f000d9d2708d4acd1a456d6f6368e87c9a63b8edd3910f41d4d"
+          },
+          "path": "Components/Fanuc/Robots/S-430iW.vcmx",
+          "payload": "165",
+          "reach": "2643",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "a8423419-b434-40e4-9ee2-406ee47083b7"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/s430iw__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc S-430iW｜多源合并",
+          "id": "merged_robot_5e8fcd52_58bb_52d3_b849_71acabbe896d",
+          "metadata": {
+            "asset_id": "5e8fcd52-58bb-52d3-b849-71acabbe896d",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "Fanuc-S-430iW.robot",
+        "path": "simready_usd/source/Fanuc-S-430iW.robot",
+        "sha256": "0a44b9db7a54889654472b7f39c13a419d3e154625bcec0596350e771208d07d"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-S-430iW.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_fanuc-s-430iw/Fanuc-S-430iW.robot",
+        "sha256": "0a44b9db7a54889654472b7f39c13a419d3e154625bcec0596350e771208d07d"
+      },
+      {
+        "family": "VC",
+        "original_name": "S-430iW.vcmx",
+        "path": "simready_usd/source_assets/VC/0_s-430iw/S-430iW.vcmx",
+        "sha256": "5d8a4f40b1af2f000d9d2708d4acd1a456d6f6368e87c9a63b8edd3910f41d4d"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "S-430iW",
+                "source": "robots/models/Fanuc-S-430iW.robot",
+                "source_family": "RoboDK",
+                "value": 135.0
+              },
+              {
+                "model": "S-430iW",
+                "source": "Components/Fanuc/Robots/S-430iW.vcmx",
+                "source_family": "VC",
+                "value": 165.0
+              }
+            ],
+            "datum": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+            "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 165,
+            "verification": [
+              {
+                "authority": "OEM-authored original on third-party archive",
+                "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+                "reviewed_at": "2026-11-08",
+                "scope": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+                "title": "FANUC Robotics S-430i original brochure, page 4",
+                "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/Datasheet-S-430i_Serie.pdf"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            135.0,
+            165.0
+          ]
+        }
+      ],
+      "key": [
+        "fanuc",
+        "s430iw"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original on third-party archive",
+            "retrieval": "web document text inspected; no PDF hash claimed unless downloaded",
+            "reviewed_at": "2026-11-08",
+            "scope": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+            "title": "FANUC Robotics S-430i original brochure, page 4",
+            "url": "https://www.irsrobotics.com/wp-content/uploads/2023/04/Datasheet-S-430i_Serie.pdf"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "datum": "S-430iW wrist payload; not S-430iF or S-430iW/200",
+            "note": "Catalog specification only; original claims and selected geometry retained; no link mass/inertia inferred.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 165
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "b9761e07-3efe-5dd6-a220-a811ff27c10c",
+        "original_package_digest": "03e5484267e15d8cc50a211d9682344256c0ee097124ccd1a3da428c02efcb98",
+        "source": "robots/models/Fanuc-S-430iW.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

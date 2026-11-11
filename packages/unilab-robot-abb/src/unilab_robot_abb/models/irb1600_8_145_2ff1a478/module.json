@@ -1,0 +1,814 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "abb",
+  "model": "irb1600:8:145",
+  "title": "ABB IRB 1600-8/145｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "10393b32-e34d-5ecd-8775-457c5184621c",
+    "package_digest": "ae879a79c43ea38a0a432699afeae2b2f76b9ffce9c8038b51c62295814abf06",
+    "package_path": "04_设备/abb/irb1600_8_145__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "10393b32-e34d-5ecd-8775-457c5184621c",
+      "package_digest": "ae879a79c43ea38a0a432699afeae2b2f76b9ffce9c8038b51c62295814abf06",
+      "package_path": "04_设备/abb/irb1600_8_145__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7746",
+            "id": "dof:8544",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -180.0,
+                180.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -180.0,
+                180.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8828",
+            "id": "dof:9077",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -90.0,
+              150.0
+            ],
+            "parent_node_id": "node:7746",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -90.0,
+                150.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -90.0,
+                150.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9361",
+            "id": "dof:9610",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -245.0,
+              65.0
+            ],
+            "parent_node_id": "node:8828",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -245.0,
+                65.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -245.0,
+                65.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9894",
+            "id": "dof:10365",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -200.0,
+              200.0
+            ],
+            "parent_node_id": "node:9361",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -200.0,
+                200.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -200.0,
+                200.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:10649",
+            "id": "dof:10898",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -115.0,
+              115.0
+            ],
+            "parent_node_id": "node:9894",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -115.0,
+                115.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -115.0,
+                115.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:11182",
+            "id": "dof:11431",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -400.0,
+              400.0
+            ],
+            "parent_node_id": "node:10649",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -400.0,
+                400.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -400.0,
+                400.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "8f14430d48ebc113ac103b4b6035da213ba9b1f6c8869217ddc5ebbf53e380e5",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "6df92bc4079ca68cde64edd0c4a235f4a286a0c1de588edc891d49a335ada93f",
+        "physics_contract_sha256": "c9544dfb85c0f6d171feddacef2f46a80aa30fef4a4e9062204e7fe78ef85072",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "8f14430d48ebc113ac103b4b6035da213ba9b1f6c8869217ddc5ebbf53e380e5",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [],
+          "status": "unknown",
+          "unit": "count"
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "IRB 1600-8/145",
+              "source": "Components/ABB/Robots/IRB 1600-8_145.vcmx",
+              "source_family": "VC",
+              "value": 8.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "kg",
+          "value": 8.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "IRB 1600-8/145",
+              "source": "Components/ABB/Robots/IRB 1600-8_145.vcmx",
+              "source_family": "VC",
+              "value": 1450.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "mm",
+          "value": 1450.0
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "20015bce-ff35-57c4-8d82-e5b6f71bd211",
+              "entrypoints": {
+                "usd": "simready_usd/irb_1600-8_145__r001.usdc"
+              },
+              "package_digest": "36a49e9763ccbeb7e1dbf09a5576553588bf1383b8e6c3696ac0d2e916704aae",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "8f14430d48ebc113ac103b4b6035da213ba9b1f6c8869217ddc5ebbf53e380e5",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "160340454ee4144282ff0e11626b01073645d36b766efaca8f0146e9eebf90c6",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "20015bce-ff35-57c4-8d82-e5b6f71bd211"
+          ],
+          "manufacturer": "ABB",
+          "name": "IRB 1600-8/145",
+          "original": {
+            "family": "VC",
+            "original_name": "IRB 1600-8_145.vcmx",
+            "path": "simready_usd/IRB 1600-8_145.vcmx",
+            "sha256": "8f14430d48ebc113ac103b4b6035da213ba9b1f6c8869217ddc5ebbf53e380e5"
+          },
+          "path": "Components/ABB/Robots/IRB 1600-8_145.vcmx",
+          "payload": "8",
+          "reach": "1450",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "46d46c0c-7157-4c68-bf10-a484831525ae"
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "abb",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "irb1600_8_145",
+          "original": {
+            "family": "UniLab",
+            "original_name": "irb1600_8_145_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_irb1600_8_145_macro/irb1600_8_145_macro.xacro",
+            "sha256": "0fc823db204e0a6a01e0b92aff03d7e5f88520c52f9d2f26efd4ed454556b66e"
+          },
+          "path": "abb/ros_industrial/abb_irb1600_support/urdf/irb1600_8_145_macro.xacro",
+          "raw_name": "irb1600_8_145_macro.xacro",
+          "robot_description": {
+            "commit": "45f4769d826cf3ac62a65495f2db67b78b0c81df",
+            "declarations": [
+              {
+                "inertials": [],
+                "joints": [
+                  "<joint name=\"${prefix}joint_1\" type=\"revolute\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      <axis xyz=\"0 0 1\" />\n      <limit lower=\"-${pi}\" upper=\"${pi}\" effort=\"0\" velocity=\"${pi}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_2\" type=\"revolute\">\n      <origin xyz=\"0.15 0 0.4865\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-${pi/2}\" upper=\"2.0944\" effort=\"0\" velocity=\"${pi}\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_3\" type=\"revolute\">\n      <origin xyz=\"0 0 0.700\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-4.27601\" upper=\"1.1344\" effort=\"0\" velocity=\"3.4906\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_4\" type=\"revolute\">\n      <origin xyz=\"0.300 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      <axis xyz=\"1 0 0\" />\n      <limit lower=\"-3.4906\" upper=\"3.4906\" effort=\"0\" velocity=\"6.9813\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_5\" type=\"revolute\">\n      <origin xyz=\"0.300 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      <axis xyz=\"0 1 0\" />\n      <limit lower=\"-2.0071\" upper=\"2.0071\" effort=\"0\" velocity=\"6.9813\" />\n    </joint>\n    ",
+                  "<joint name=\"${prefix}joint_6\" type=\"revolute\">\n      <origin xyz=\"0.065 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      <axis xyz=\"1 0 0\" />\n      <limit lower=\"-6.9813\" upper=\"6.9813\" effort=\"0\" velocity=\"8.0285\" />\n    </joint>\n    \n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint type=\"fixed\" name=\"${prefix}joint_6-flange\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 ${radians(90)} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "abb/ros_industrial/abb_irb1600_support/urdf/irb1600_8_145_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros_industrial/abb_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros_industrial/abb_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/abb.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-vc",
+    "entrypoints": {
+      "usd": "simready_usd/irb1600_8_145__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "ABB IRB 1600-8/145｜多源合并",
+          "id": "merged_robot_10393b32_e34d_5ecd_8775_457c5184621c",
+          "metadata": {
+            "asset_id": "10393b32-e34d-5ecd-8775-457c5184621c",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ABBDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ABBDriver.exe",
+        "sha256": "2822b76d242d1a5fe6c84d05cfbb8902dbc8e22e9145356fd0685c9943ad9891",
+        "bytes": 59392,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiabb",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiabb.exe",
+        "sha256": "bf67f4b01a4012d2d80e96cceec1dc6790b8e9572fb5dcd3f9262b84376fe4aa",
+        "bytes": 40960,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:libegm",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/libegm",
+        "repository_url": "https://github.com/ros-industrial/abb_libegm.git",
+        "code_tree_sha256": "05ae772f6b060a4851e32c2808d09118917653ef6de48eb28b9958e4688383a3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "faf76f7dc89d5465fe3be9bc5bfd91aeef2ad885092c406c27cadf47dbd9ebe2"
+          },
+          {
+            "path": "proto/README.md",
+            "sha256": "62ba67ae9bc07e42cda6ba6b9daa6eb10e5700924acd80a07c36f6cab223d7a7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:librws",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/librws",
+        "repository_url": "https://github.com/ros-industrial/abb_librws.git",
+        "code_tree_sha256": "73bb9876797ddd09ca17ab1bcd4cda66e35a2e8f48767247005a608201fb94df",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d90025fae893d0591aa64e72fb3f381c5b2215431558116b701ca48d952a1d7b"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/ros2",
+        "repository_url": "https://github.com/PickNikRobotics/abb_ros2.git",
+        "code_tree_sha256": "615b7308b930f0e4a2134caef7ac704212b289bdebe3d0e69727f640aa109f63",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "5c7b360ab136ec66474ed2ac9ebd32717d4135047026f80c414482e43a306d16"
+          },
+          {
+            "path": "docs/README.md",
+            "sha256": "33bd595a1fbe5c3d7d3a3c1da3d3bae09f9db13bf1a450d04c6514096f46d713"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "ABB_RAPID_IRC5.py",
+      "ABB_RAPID_IRC5_Robtargets.py",
+      "ABB_RAPID_OmniCore.py",
+      "ABB_RAPID_S4C.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "VC",
+        "original_name": "IRB 1600-8_145.vcmx",
+        "path": "simready_usd/IRB 1600-8_145.vcmx",
+        "sha256": "8f14430d48ebc113ac103b4b6035da213ba9b1f6c8869217ddc5ebbf53e380e5"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "irb1600_8_145_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_irb1600_8_145_macro/irb1600_8_145_macro.xacro",
+        "sha256": "0fc823db204e0a6a01e0b92aff03d7e5f88520c52f9d2f26efd4ed454556b66e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/link_6.stl",
+        "sha256": "bcd9bd6d7fdae99563edbef423d1ae9a04f1d13ecc6b6eea681cc783abd2f752"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/link_5.stl",
+        "sha256": "556ef14b66cd2e545a93be1884383a21f187e8b5eec83c289c22380945eda0a3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/link_4.stl",
+        "sha256": "db1787e59f716f50c490b5a38853a5198802c99a42ceaab44a532f5bbb710f92"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/link_3.stl",
+        "sha256": "894f3297cbcf2c7e2cc39dd5176e4b127a7e4df09d4098af6acf8223de3f7710"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/visual/link_3.stl",
+        "sha256": "6a6a4e5b56825ffd97e04f36c5a58671637aa5d67bf7ff1ec9e8362661e2faf1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600_x_145/collision/link_2.stl",
+        "sha256": "fe35cfa1e4b092ff17bda8a5dce3a89b462c866f12fe119a36a3b08c4900adab"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600_x_145/visual/link_2.stl",
+        "sha256": "286c493a3e888093b7512c5e3cfaa9f2b8053f740baf16a7dc234476cf1147d1"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/link_1.stl",
+        "sha256": "5375be03344012ece71ecd71b9902a2182127df5bc9f04ad4788025efdc42ec9"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/visual/link_1.stl",
+        "sha256": "57c2169c683722d4032d964a2ada05da05f4e8f415ab24ca3bc1e6895e80404a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/meshes/irb1600/collision/base_link.stl",
+        "sha256": "a77b3aa83a74d148b78f976444015ef7d40f1f9efbf76398da60864a219526c7"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_resources/urdf/common_materials.xacro",
+        "sha256": "5fc7a65c205759ceab85bb583bf220a6e66cae59258ba48985d9bfc4e0b515cd"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_resources/urdf/common_colours.xacro",
+        "sha256": "d6619bbc75c83301bd9594f0224ae927478fa01ae8e9d8e91764d6a837775c1d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_irb1600_10_145.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/config/opw_parameters_irb1600_8_145.yaml",
+        "sha256": "de1aa48f24ef2b623694fa8cb16ef91598edfda870343becc6c507ebcbd8a1ca"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "opw_parameters_irb1600_6_120.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/config/opw_parameters_irb1600_6_120.yaml",
+        "sha256": "69f0e73d6c0b724a93beb47e6156ffe8c5c11ac551a96ba9e89c7e3f7fa9644c"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_irb1600_10_145.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/config/joint_names_irb1600_8_145.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1600_support/package.xml",
+        "sha256": "f7a4b310fbb81471f690da6a3df6386cdae03c6f05bb731ab16590e0ba2b83eb"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "abb",
+        "irb1600:8:145"
+      ],
+      "label": "VC+UniLab｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "45f4769d826cf3ac62a65495f2db67b78b0c81df",
+          "repository": "https://github.com/ros-industrial/abb.git",
+          "source": "simready_usd/source_assets/UniLab/0_irb1600_8_145_macro/irb1600_8_145_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "VC",
+        "original_asset_id": "20015bce-ff35-57c4-8d82-e5b6f71bd211",
+        "original_package_digest": "36a49e9763ccbeb7e1dbf09a5576553588bf1383b8e6c3696ac0d2e916704aae",
+        "source": "Components/ABB/Robots/IRB 1600-8_145.vcmx"
+      },
+      "source_families": [
+        "VC",
+        "UniLab"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

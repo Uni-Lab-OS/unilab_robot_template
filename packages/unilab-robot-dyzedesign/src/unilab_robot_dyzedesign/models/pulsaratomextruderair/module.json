@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "dyzedesign",
+  "model": "pulsaratomextruderair",
+  "title": "DYZE Pulsar Atom Extruder Air",
+  "asset": {
+    "asset_id": "9c652f46-4e6a-5545-8a25-67a501e52589",
+    "package_digest": "bad657cdcf619ddc49326881759e1a8339a39f06bed5b4a73f55a6771bd749a1",
+    "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_air__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "9c652f46-4e6a-5545-8a25-67a501e52589",
+      "package_digest": "bad657cdcf619ddc49326881759e1a8339a39f06bed5b4a73f55a6771bd749a1",
+      "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_air__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2ff77da43eb84668cfdd828a5d8a146f5b7d2bc130b1a73c37aa10e80301daaa",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pulsar_atom_extruder_air__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Pulsar Atom Extruder Air",
+          "manufacturer": "DYZE DESIGN",
+          "variant": "",
+          "display": "DYZE Pulsar Atom Extruder Air",
+          "path": "tools/models/DYZE-Pulsar-Atom-Extruder-Air.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "9c652f46-4e6a-5545-8a25-67a501e52589"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/DYZE-Pulsar-Atom-Extruder-Air.tool",
+        "path": "simready_usd/DYZE-Pulsar-Atom-Extruder-Air.tool",
+        "sha256": "d5c121ec0863330fbd8e127d4d3bb78db8b65aeb48fedd1908bc79b254faff13"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "zivid",
+  "model": "onarmmountoa111",
+  "title": "Zivid On-Arm Mount OA111",
+  "asset": {
+    "asset_id": "947c14de-e851-5935-afd4-4f3d868b8b97",
+    "package_digest": "98548fd01045361ee2d78a9b8602bb89740a520f4a26b49fb7839c41e3aa795b",
+    "package_path": "01_零部件/zivid/on-arm_mount_oa111__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "947c14de-e851-5935-afd4-4f3d868b8b97",
+      "package_digest": "98548fd01045361ee2d78a9b8602bb89740a520f4a26b49fb7839c41e3aa795b",
+      "package_path": "01_零部件/zivid/on-arm_mount_oa111__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "c5f876963112891c9a4382e25c81b1f9bfbe57a89ce630e5b9bcc12fde1fddb9",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/on-arm_mount_oa111__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "On-Arm Mount OA111",
+          "manufacturer": "Zivid",
+          "variant": "",
+          "display": "Zivid On-Arm Mount OA111",
+          "path": "tools/models/Zivid-On-Arm-Mount-OA111.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "947c14de-e851-5935-afd4-4f3d868b8b97"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Zivid-On-Arm-Mount-OA111.tool",
+        "path": "simready_usd/Zivid-On-Arm-Mount-OA111.tool",
+        "sha256": "ca8b409839a1f519c11618c940996191663158a706df22ca21252b2a143bba61"
+      }
+    ]
+  }
+}

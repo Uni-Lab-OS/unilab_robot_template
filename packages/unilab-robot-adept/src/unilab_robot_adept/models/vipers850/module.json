@@ -1,0 +1,207 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "adept",
+  "model": "vipers850",
+  "title": "Adept Viper s850",
+  "asset": {
+    "asset_id": "8ce149ac-fa14-5e0d-9a26-d007872415c9",
+    "package_digest": "31a4dadd2c3e38750595261aec488cc670ba131c7ef8e0d86e892564d56fabe1",
+    "package_path": "04_设备/adept/viper_s850__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "8ce149ac-fa14-5e0d-9a26-d007872415c9",
+      "package_digest": "31a4dadd2c3e38750595261aec488cc670ba131c7ef8e0d86e892564d56fabe1",
+      "package_path": "04_设备/adept/viper_s850__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          -90.0,
+          180.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -190.0,
+          -29.0,
+          -190.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            335.0
+          ],
+          [
+            -1.5707963267948966,
+            75.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            365.0,
+            -3.141592653589793,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            90.0,
+            0.0,
+            405.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          45.0,
+          259.0,
+          190.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "cf6792099229476feee1a4c80c523c9970530d3f3f03b589f9baa62b73ff23a1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/viper_s850__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Adept_Staubli_Vplus_custom.py",
+      "Adept_Vplus.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Viper s850",
+          "manufacturer": "Adept",
+          "variant": "",
+          "display": "Adept Viper s850",
+          "path": "robots/models/Adept-Viper-s850.robot",
+          "type": "robots",
+          "payload": 5,
+          "reach": 855,
+          "axes": 6,
+          "library_assets": [
+            "8ce149ac-fa14-5e0d-9a26-d007872415c9"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Adept-Viper-s850.robot",
+        "path": "simready_usd/Adept-Viper-s850.robot",
+        "sha256": "ef78a0a772c4a4b467031ec7929a4f2f1b6aa6ce9a9dc6b321c0e66e358646f7"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

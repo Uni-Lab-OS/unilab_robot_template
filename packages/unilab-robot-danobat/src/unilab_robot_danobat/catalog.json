@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "danobat",
+  "models": {
+    "dmtr200:2900": {
+      "title": "DMTR-200-2900",
+      "asset": {
+        "asset_id": "8c8900ec-e12f-5625-8eb5-a7e6e0363cd7",
+        "package_digest": "41d3a0b0afbb0e674a94e9d8eb397ae6d0e9082f0e63fe04f815a5b0555379b4",
+        "package_path": "04_设备/danobat/dmtr-200-2900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dmtr200_2900_03e9f8a3/module.json",
+      "module_sha256": "f4a5cd33de231bba4b935fcc158e2803f825cb46f687e84d1da687b193002c9b"
+    },
+    "dmtr220:2600": {
+      "title": "DMTR-220-2600",
+      "asset": {
+        "asset_id": "166f8162-b4bc-5e3a-8a47-1cf52ecedf39",
+        "package_digest": "01f3b8a820d6183a1ab8219a37d0eb5aca0f0dcbdd106bec3246abb08d85ccd6",
+        "package_path": "04_设备/danobat/dmtr-220-2600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dmtr220_2600_b237c30c/module.json",
+      "module_sha256": "7bd0eedaad415b0c2a81bbb0b09895ad076a20801032718d09732fba20570ed3"
+    },
+    "dmtr400:3600": {
+      "title": "DMTR-400-3600",
+      "asset": {
+        "asset_id": "64511a88-f42a-5ae9-b501-62dd1d7b85bc",
+        "package_digest": "b80d1f3e062c9d3a59f3c865e21385a8e9b5b526f8047988d4b4f5281e496d90",
+        "package_path": "04_设备/danobat/dmtr-400-3600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dmtr400_3600_118c6d6f/module.json",
+      "module_sha256": "afc734fb81268bfb290909614070e165c9d416184a7f6df3bc42741edd416c5f"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "panasonic",
+  "model": "tm1600",
+  "title": "TM-1600",
+  "asset": {
+    "asset_id": "2a2aede9-c11a-5183-ad0d-a254079508d0",
+    "package_digest": "46d72936a7320d05575625f5b20ab99b9a127cf156a7ffea11635cc66526c2c0",
+    "package_path": "04_设备/panasonic/tm-1600__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2a2aede9-c11a-5183-ad0d-a254079508d0",
+      "package_digest": "46d72936a7320d05575625f5b20ab99b9a127cf156a7ffea11635cc66526c2c0",
+      "package_path": "04_设备/panasonic/tm-1600__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "e25a8c04517b39e6f029bca05e96753579e20f965b85ebc4cb92f636fb2a0df7",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3f23aa22ca9e6f6f12cc98e33cc4119537e9da54aee2f51ce5a2e491524147a3",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/tm-1600__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Panasonic_G3_CSR.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "TM-1600",
+          "manufacturer": "Panasonic",
+          "variant": "",
+          "path": "Components/Panasonic/Robots/TM-1600.vcmx",
+          "type": "Robots",
+          "payload": "4",
+          "reach": "1639",
+          "vcid": "4cfbb0e7-73d9-4c56-b755-1ae58c6873eb",
+          "library_assets": [
+            "2a2aede9-c11a-5183-ad0d-a254079508d0"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/TM-1600.vcmx",
+        "path": "simready_usd/TM-1600.vcmx",
+        "sha256": "e25a8c04517b39e6f029bca05e96753579e20f965b85ebc4cb92f636fb2a0df7"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

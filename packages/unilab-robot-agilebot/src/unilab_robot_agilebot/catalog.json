@@ -1,0 +1,48 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "agilebot",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "gbtp7a": {
+      "title": "Agilebot GBT-P7A",
+      "asset": {
+        "asset_id": "4b7e4881-9180-5b5c-bc25-51467946b492",
+        "package_digest": "9a41b30d8e7e91ae2976512753caa2d99bdc29faf507169c021a5f2a26e3d6fa",
+        "package_path": "04_设备/agilebot/gbt-p7a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gbtp7a/module.json",
+      "module_sha256": "1a58bec91b2905eb0356a0b8e90025e1d83b8acf1fedcb13bd468e62291cad7d"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "c12a_moveit_config_5a0bf2c343",
+      "manifest": "source_profiles/c12a_moveit_config_5a0bf2c343/source.lock.json",
+      "sha256": "191dab180a859e7c97f5704af3c77c889011c87c9482533f1b76546f4845e15a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "c16a_moveit_config_59cc7006ff",
+      "manifest": "source_profiles/c16a_moveit_config_59cc7006ff/source.lock.json",
+      "sha256": "f04f8233f229afef9b625a2e87c1de75126b853207e39e4ae61d39fdeafcbf70",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "c5a_moveit_config_356bb99874",
+      "manifest": "source_profiles/c5a_moveit_config_356bb99874/source.lock.json",
+      "sha256": "75bdced3886b9fb68ed62a7824fc280537f1d7e9766fc1d87028154936a201ed",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "c7a_moveit_config_06ee095a92",
+      "manifest": "source_profiles/c7a_moveit_config_06ee095a92/source.lock.json",
+      "sha256": "38242077ac332a2dbeb7c829f8c1b9c493513f250b028628e7a6a58815a3a140",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

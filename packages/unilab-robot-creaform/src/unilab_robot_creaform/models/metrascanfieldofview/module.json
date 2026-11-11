@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "creaform",
+  "model": "metrascanfieldofview",
+  "title": "Creaform MetraSCAN Field-of-view",
+  "asset": {
+    "asset_id": "c6032e9b-4a67-53a6-bdd8-0c708fb6d3e7",
+    "package_digest": "786282dcdebbd34a5f19dc8471213b5dd688cd1884e14b06db4334b6641033ca",
+    "package_path": "01_零部件/creaform/metrascan_field-of-view__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "c6032e9b-4a67-53a6-bdd8-0c708fb6d3e7",
+      "package_digest": "786282dcdebbd34a5f19dc8471213b5dd688cd1884e14b06db4334b6641033ca",
+      "package_path": "01_零部件/creaform/metrascan_field-of-view__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a64c35b65b090edff0aaf99ac47289db12b980a90a99d9bf2936cb70fda17639",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/metrascan_field-of-view__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MetraSCAN Field-of-view",
+          "manufacturer": "Creaform",
+          "variant": "",
+          "display": "Creaform MetraSCAN Field-of-view",
+          "path": "tools/models/Creaform-MetraSCAN-Field-of-view.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "c6032e9b-4a67-53a6-bdd8-0c708fb6d3e7"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Creaform-MetraSCAN-Field-of-view.tool",
+        "path": "simready_usd/Creaform-MetraSCAN-Field-of-view.tool",
+        "sha256": "be3d5c476065f86b67ef758531be1b87e5bfac9d0bcd893068499ff77d520018"
+      }
+    ]
+  }
+}

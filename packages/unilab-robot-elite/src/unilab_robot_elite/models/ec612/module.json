@@ -1,0 +1,725 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "elite",
+  "model": "ec612",
+  "title": "Elite Robots EC612｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "86f949c2-c74d-5604-b321-5c27905b439d",
+    "package_digest": "521167bcc8881cca774caf0ce37f568f2d5bc51f0f894fbe1c6921a3fb42744d",
+    "package_path": "04_设备/elite_robots/ec612__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "86f949c2-c74d-5604-b321-5c27905b439d",
+      "package_digest": "521167bcc8881cca774caf0ce37f568f2d5bc51f0f894fbe1c6921a3fb42744d",
+      "package_path": "04_设备/elite_robots/ec612__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "EC612",
+              "source": "robots/models/Elite-Robots-EC612.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "EC612",
+              "source": "robots/models/Elite-Robots-EC612.robot",
+              "source_family": "RoboDK",
+              "value": 12.0
+            },
+            {
+              "model": "EC612",
+              "source": "Components/Elite Robots/Robots/EC612.vcmx",
+              "source_family": "VC",
+              "value": 12.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 12,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Elite Robots EC series manufacturer product matrix",
+              "url": "https://www.eliterobots.com/cobots"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "EC612",
+              "source": "robots/models/Elite-Robots-EC612.robot",
+              "source_family": "RoboDK",
+              "value": 1200.0
+            },
+            {
+              "model": "EC612",
+              "source": "Components/Elite Robots/Robots/EC612.vcmx",
+              "source_family": "VC",
+              "value": 1304.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1304,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Elite Robots EC series manufacturer product matrix",
+              "url": "https://www.eliterobots.com/cobots"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          -90.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            3.141592653589793,
+            185.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            615.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            572.0,
+            0.0,
+            174.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            116.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            103.0
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "37cfb8f8-6e85-513a-8080-5711d26ba9b5",
+              "entrypoints": {
+                "usd": "simready_usd/ec612__款2__r001.usdc"
+              },
+              "package_digest": "e01e8aa0183c463d66385d210f5e1fc6c5eb858d7de6d45120080eadf926f3d9",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    90.0,
+                    -90.0,
+                    90.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      3.141592653589793,
+                      185.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      615.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      572.0,
+                      0.0,
+                      174.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      116.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      103.0
+                    ]
+                  ],
+                  "mechanism_type": 6,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "d58f7cf8d3f59c1a04ad84661b6759e98f8e9c67919210b8b5f95f13f16fb1c1",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Elite Robots EC612",
+          "family": "RoboDK",
+          "library_assets": [
+            "37cfb8f8-6e85-513a-8080-5711d26ba9b5"
+          ],
+          "manufacturer": "Elite Robots",
+          "name": "EC612",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Elite-Robots-EC612.robot",
+            "path": "simready_usd/Elite-Robots-EC612.robot",
+            "sha256": "c4c882ef67a4ad3943e418504455b669e5d4fa16cde675247927575939e82866"
+          },
+          "path": "robots/models/Elite-Robots-EC612.robot",
+          "payload": 12,
+          "reach": 1200,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "681bafc7-2752-5600-a1d9-b4b8a26106b6",
+              "entrypoints": {
+                "usd": "simready_usd/ec612__r001.usdc"
+              },
+              "package_digest": "91895638a82af4cf8857532e9caf7121360b8e82739cb9cc862e07c79d324a2a",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "468bff8265fef70fc585f1a4e589ccd98157a7d08b274d3d2f181b08e923af57",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "c4bdbc8844d093ed52d5a8f02f639057826afab21dab77a9617fd4bd4ab590ce",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "681bafc7-2752-5600-a1d9-b4b8a26106b6"
+          ],
+          "manufacturer": "Elite Robots",
+          "name": "EC612",
+          "original": {
+            "family": "VC",
+            "original_name": "EC612.vcmx",
+            "path": "simready_usd/source_assets/VC/0_ec612/EC612.vcmx",
+            "sha256": "468bff8265fef70fc585f1a4e589ccd98157a7d08b274d3d2f181b08e923af57"
+          },
+          "path": "Components/Elite Robots/Robots/EC612.vcmx",
+          "payload": "12",
+          "reach": "1304",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "ce9659c4-bcfd-4001-b1f3-57b69fd3832c"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "d58f7cf8d3f59c1a04ad84661b6759e98f8e9c67919210b8b5f95f13f16fb1c1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/ec612__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Elite Robots EC612｜多源合并",
+          "id": "merged_robot_86f949c2_c74d_5604_b321_5c27905b439d",
+          "metadata": {
+            "asset_id": "86f949c2-c74d-5604-b321-5c27905b439d",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:EliteRobotsDriverEC",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/EliteRobotsDriverEC.py",
+        "sha256": "c3d931d7f2f9a56703640ed958867748f7ae233b380fe71698199be4243675e4",
+        "bytes": 1378,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/EliteRobotsDriverEC.pyc",
+            "sha256": "7a7204f62ca5d01cfa2186250a6a61532b4787e50d864444bdd97e64c5106075"
+          },
+          {
+            "relative_path": "api/Robot/v311/EliteRobotsDriverEC.pyc",
+            "sha256": "4fefe6c339c126f3e119191f088b883fe98703bc4835d680ece37c69db04bba8"
+          },
+          {
+            "relative_path": "api/Robot/v312/EliteRobotsDriverEC.pyc",
+            "sha256": "518fa168af7338527f4bc5daab5a80d55d07f1ee4f1c962b10ed3414d0575c56"
+          },
+          {
+            "relative_path": "api/Robot/v38/EliteRobotsDriverEC.pyc",
+            "sha256": "42a79aac12b933b139cfa60429e2924b2cf1e5b67faef4bc7f1952c2aa6176f3"
+          },
+          {
+            "relative_path": "api/Robot/v39/EliteRobotsDriverEC.pyc",
+            "sha256": "30c3efd38f205e4eefa119e0bc77ba576d324a382589479978c726c9537db9fd"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Elite EC"
+        ],
+        "constraints": [
+          "EC and CS protocols are separate",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Elite_Robots_CS.py",
+      "Elite_Robots_CS_Script.py",
+      "Elite_Robots_EC_movE.py",
+      "Elite_Robots_EC_V3.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "EliteRobotsDriverCS.py",
+        "reason": "EC and CS protocols are separate"
+      },
+      {
+        "source": "robots/elite/cs_sdk",
+        "reason": "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC"
+      },
+      {
+        "source": "robots/elite/python_sdk",
+        "reason": "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC"
+      },
+      {
+        "source": "robots/elite/ros2_driver",
+        "reason": "CS only; controller 2.13.x >=2.13.4 or 2.14.x >=2.14.2; not EC"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Elite-Robots-EC612.robot",
+        "path": "simready_usd/Elite-Robots-EC612.robot",
+        "sha256": "c4c882ef67a4ad3943e418504455b669e5d4fa16cde675247927575939e82866"
+      },
+      {
+        "family": "VC",
+        "original_name": "EC612.vcmx",
+        "path": "simready_usd/source_assets/VC/0_ec612/EC612.vcmx",
+        "sha256": "468bff8265fef70fc585f1a4e589ccd98157a7d08b274d3d2f181b08e923af57"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "EC612",
+                "source": "robots/models/Elite-Robots-EC612.robot",
+                "source_family": "RoboDK",
+                "value": 1200.0
+              },
+              {
+                "model": "EC612",
+                "source": "Components/Elite Robots/Robots/EC612.vcmx",
+                "source_family": "VC",
+                "value": 1304.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1304,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Exact model catalog fields; geometry and controller version not certified",
+                "title": "Elite Robots EC series manufacturer product matrix",
+                "url": "https://www.eliterobots.com/cobots"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1200.0,
+            1304.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "elite",
+        "ec612"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Exact model catalog fields; geometry and controller version not certified",
+            "title": "Elite Robots EC series manufacturer product matrix",
+            "url": "https://www.eliterobots.com/cobots"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 12
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1304
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "37cfb8f8-6e85-513a-8080-5711d26ba9b5",
+        "original_package_digest": "e01e8aa0183c463d66385d210f5e1fc6c5eb858d7de6d45120080eadf926f3d9",
+        "source": "robots/models/Elite-Robots-EC612.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,819 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "staubli",
+  "model": "rx170hp",
+  "title": "Staubli RX170HP｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "613bc57e-ccfe-525c-a249-cd97392fdb74",
+    "package_digest": "d3f553469967aff0aef0fac27c0d5fcda3ce61894dce88f1e2449a96d052b970",
+    "package_path": "04_设备/staubli/rx170hp__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "613bc57e-ccfe-525c-a249-cd97392fdb74",
+      "package_digest": "d3f553469967aff0aef0fac27c0d5fcda3ce61894dce88f1e2449a96d052b970",
+      "package_path": "04_设备/staubli/rx170hp__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "RX170HP",
+              "source": "robots/models/Staubli-RX170HP.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "RX170HP",
+              "source": "robots/models/Staubli-RX170HP.robot",
+              "source_family": "RoboDK",
+              "value": 60.0
+            },
+            {
+              "model": "RX170 HP",
+              "source": "Components/Staubli/Robots/RX170 HP.vcmx",
+              "source_family": "VC",
+              "value": 60.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 60.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "RX170HP",
+              "source": "robots/models/Staubli-RX170HP.robot",
+              "source_family": "RoboDK",
+              "value": 1700.0
+            },
+            {
+              "model": "RX170 HP",
+              "source": "Components/Staubli/Robots/RX170 HP.vcmx",
+              "source_family": "VC",
+              "value": 1835.0
+            }
+          ],
+          "datum": "between axes 1 and 6",
+          "note": "Exact RX170HP. Source 1700 is not exact manufacturer datum; preserved as original claim. No geometry recalibration.",
+          "other_datum": {
+            "datum": "maximum between axes 1 and 5",
+            "unit": "mm",
+            "value": 1701.4
+          },
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1835,
+          "verification": [
+            {
+              "authority": "OEM-authored original brochure on third-party archive",
+              "page": 2,
+              "retrieval": "Web PDF text read; direct PDF download returned 403; no file digest claimed",
+              "reviewed_at": "2026-11-08",
+              "scope": "Reach between axes 1 and 6; separate axes 1 to 5 datum",
+              "title": "Staubli RX170 series D181.545.04 October 2007",
+              "url": "https://robotforum.ru/assets/files/Staubli/Leaflet_RX170_102007_GB_-_D18154504.pdf"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -750.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 0,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -120.0,
+          -145.0,
+          -270.0,
+          -110.0,
+          -270.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            750.0
+          ],
+          [
+            -1.5707963267948966,
+            100.0,
+            -1.5707963267948966,
+            70.0
+          ],
+          [
+            0.0,
+            850.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            750.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            135.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          0.0,
+          500.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          120.0,
+          145.0,
+          270.0,
+          130.0,
+          270.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "99648fde-79c9-51c6-b69a-5bb05c91943f",
+              "entrypoints": {
+                "usd": "simready_usd/rx170hp__r001.usdc"
+              },
+              "package_digest": "3d2e83a616698e5ed480f26403c258b155504275e7367f51f43aa1a45414a30d",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    -750.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 0,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "mode12_axis2_axis3_coupling": [
+                      71,
+                      72,
+                      73
+                    ],
+                    "mode7_joint_directions": 64,
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -180.0,
+                    -120.0,
+                    -145.0,
+                    -270.0,
+                    -110.0,
+                    -270.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      750.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      100.0,
+                      -1.5707963267948966,
+                      70.0
+                    ],
+                    [
+                      0.0,
+                      850.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      750.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      135.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    0.0,
+                    0.0,
+                    500.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    180.0,
+                    120.0,
+                    145.0,
+                    270.0,
+                    130.0,
+                    270.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "e0c813fb8f400a49295908318ec41cc7f1b3f7c4f97656989f3be0e34706208e",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Staubli RX170HP",
+          "family": "RoboDK",
+          "library_assets": [
+            "99648fde-79c9-51c6-b69a-5bb05c91943f"
+          ],
+          "manufacturer": "Staubli",
+          "name": "RX170HP",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Staubli-RX170HP.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_staubli-rx170hp/Staubli-RX170HP.robot",
+            "sha256": "20a34e823f641d20d6d4c3bc08458a1b72a7df464a7ca85066366cb6dfd977ff"
+          },
+          "path": "robots/models/Staubli-RX170HP.robot",
+          "payload": 60,
+          "reach": 1700,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "d8bfec8a-3e0d-55fb-a19e-50c0248c4cd0",
+              "entrypoints": {
+                "usd": "simready_usd/rx170_hp__r001.usdc"
+              },
+              "package_digest": "ae363ba8e2cff369809349381514f5199ee7a747a70625e184dffdb859004428",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "c0b54392efd8897959d78b77877ce1553314657a1d29bdaf45c15e01b9ccf024",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "994c183d18a0f7d9132910b3ddb01fba894f2f537fb349dc5db4ffcaccc5fa13",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "d8bfec8a-3e0d-55fb-a19e-50c0248c4cd0"
+          ],
+          "manufacturer": "Staubli",
+          "name": "RX170 HP",
+          "original": {
+            "family": "VC",
+            "original_name": "RX170 HP.vcmx",
+            "path": "simready_usd/source_assets/VC/0_rx170_hp/RX170 HP.vcmx",
+            "sha256": "c0b54392efd8897959d78b77877ce1553314657a1d29bdaf45c15e01b9ccf024"
+          },
+          "path": "Components/Staubli/Robots/RX170 HP.vcmx",
+          "payload": "60",
+          "reach": "1835.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "02d1340a-24ab-4807-bd58-6f05dabd817d"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "e0c813fb8f400a49295908318ec41cc7f1b3f7c4f97656989f3be0e34706208e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/rx170hp__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Staubli RX170HP｜多源合并",
+          "id": "merged_robot_613bc57e_ccfe_525c_a249_cd97392fdb74",
+          "metadata": {
+            "asset_id": "613bc57e-ccfe-525c-a249-cd97392fdb74",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apistaubli",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apistaubli.exe",
+        "sha256": "a875103302d07802b297357519782c73691d2a16af26d36a80ee04e63aa4b2d0",
+        "bytes": 451584,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "staubli controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Staubli_Adept_Vplus.py",
+      "Staubli_S6.py",
+      "Staubli_VAL3.py",
+      "Staubli_VAL3_Machining.py",
+      "Staubli_VAL3_simplified.py",
+      "Staubli_VAL3_XMOVE.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/staubli/val3_driver",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/staubli/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "simready_usd/Staubli-RX170HP.robot",
+        "path": "simready_usd/Staubli-RX170HP.robot",
+        "sha256": "20a34e823f641d20d6d4c3bc08458a1b72a7df464a7ca85066366cb6dfd977ff"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Staubli-RX170HP.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_staubli-rx170hp/Staubli-RX170HP.robot",
+        "sha256": "20a34e823f641d20d6d4c3bc08458a1b72a7df464a7ca85066366cb6dfd977ff"
+      },
+      {
+        "family": "VC",
+        "original_name": "RX170 HP.vcmx",
+        "path": "simready_usd/source_assets/VC/0_rx170_hp/RX170 HP.vcmx",
+        "sha256": "c0b54392efd8897959d78b77877ce1553314657a1d29bdaf45c15e01b9ccf024"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "RX170HP",
+                "source": "robots/models/Staubli-RX170HP.robot",
+                "source_family": "RoboDK",
+                "value": 1700.0
+              },
+              {
+                "model": "RX170 HP",
+                "source": "Components/Staubli/Robots/RX170 HP.vcmx",
+                "source_family": "VC",
+                "value": 1835.0
+              }
+            ],
+            "datum": "between axes 1 and 6",
+            "note": "Exact RX170HP. Source 1700 is not exact manufacturer datum; preserved as original claim. No geometry recalibration.",
+            "other_datum": {
+              "datum": "maximum between axes 1 and 5",
+              "unit": "mm",
+              "value": 1701.4
+            },
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1835,
+            "verification": [
+              {
+                "authority": "OEM-authored original brochure on third-party archive",
+                "page": 2,
+                "retrieval": "Web PDF text read; direct PDF download returned 403; no file digest claimed",
+                "reviewed_at": "2026-11-08",
+                "scope": "Reach between axes 1 and 6; separate axes 1 to 5 datum",
+                "title": "Staubli RX170 series D181.545.04 October 2007",
+                "url": "https://robotforum.ru/assets/files/Staubli/Leaflet_RX170_102007_GB_-_D18154504.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1700.0,
+            1835.0
+          ]
+        }
+      ],
+      "key": [
+        "staubli",
+        "rx170hp"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "OEM-authored original brochure on third-party archive",
+            "page": 2,
+            "retrieval": "Web PDF text read; direct PDF download returned 403; no file digest claimed",
+            "reviewed_at": "2026-11-08",
+            "scope": "Reach between axes 1 and 6; separate axes 1 to 5 datum",
+            "title": "Staubli RX170 series D181.545.04 October 2007",
+            "url": "https://robotforum.ru/assets/files/Staubli/Leaflet_RX170_102007_GB_-_D18154504.pdf"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "datum": "between axes 1 and 6",
+            "note": "Exact RX170HP. Source 1700 is not exact manufacturer datum; preserved as original claim. No geometry recalibration.",
+            "other_datum": {
+              "datum": "maximum between axes 1 and 5",
+              "unit": "mm",
+              "value": 1701.4
+            },
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1835
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "99648fde-79c9-51c6-b69a-5bb05c91943f",
+        "original_package_digest": "3d2e83a616698e5ed480f26403c258b155504275e7367f51f43aa1a45414a30d",
+        "source": "robots/models/Staubli-RX170HP.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

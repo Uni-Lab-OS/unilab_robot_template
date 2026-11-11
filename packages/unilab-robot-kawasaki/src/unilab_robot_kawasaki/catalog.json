@@ -1,0 +1,940 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "kawasaki",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ba006l": {
+      "title": "Kawasaki BA006L｜多源合并",
+      "asset": {
+        "asset_id": "b3776faa-69c4-569d-8e42-e992c3be12c0",
+        "package_digest": "9e498c4794b22f898791ee1040320d3d881f7683be6b6453f3668439c246d7d9",
+        "package_path": "04_设备/kawasaki/ba006l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ba006l/module.json",
+      "module_sha256": "1975fd45406be023f1d96e8716d01f9a854c1140ae51de67888d61ed642d1b6d"
+    },
+    "ba013l": {
+      "title": "Kawasaki BA013L｜多源合并",
+      "asset": {
+        "asset_id": "cf679e5d-0480-5967-8517-ac80e3b57801",
+        "package_digest": "18611e2b343c085161b735ac0e0889ade7a038ba9b3e4ea184e38866b299bb39",
+        "package_path": "04_设备/kawasaki/ba013l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ba013l/module.json",
+      "module_sha256": "98ea6d9cf2b5753db71ed54494101d3096817384377f66276ad3d9def4d0e285"
+    },
+    "bx100n": {
+      "title": "Kawasaki BX100N｜多源合并",
+      "asset": {
+        "asset_id": "9c1a4bfc-6d68-5fbe-bc97-f111625fe833",
+        "package_digest": "5a7f07a55fedc3ad42d01238897696f3f852bbeab4f2a9501fe3e3b3effae7d6",
+        "package_path": "04_设备/kawasaki/bx100n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx100n/module.json",
+      "module_sha256": "f33859c8e3c796ee2d0857cfee6daa9710207d11848007d30932bd991ae8d79a"
+    },
+    "bx100s": {
+      "title": "Kawasaki BX100S｜多源合并",
+      "asset": {
+        "asset_id": "fcbb899f-cc94-5a21-89ad-dfbb343a6153",
+        "package_digest": "6f935dbe907751dbc1bfb85f7b272fda241b5fab6a05d8f409b5c04e2d94212c",
+        "package_path": "04_设备/kawasaki/bx100s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx100s/module.json",
+      "module_sha256": "621799a3442632f158bf2f269fd90297e7a5af4765a4be7583c4fb7103e9dc8d"
+    },
+    "cx210l": {
+      "title": "Kawasaki CX210L｜多源合并",
+      "asset": {
+        "asset_id": "fa685063-e48f-5b2b-8665-74d8eb36c93e",
+        "package_digest": "6e8480e621b0d636a9254147ecb15395c74d79dd049c28a3d2a73a1bd43f7036",
+        "package_path": "04_设备/kawasaki/cx210l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cx210l/module.json",
+      "module_sha256": "bf15b70e7b7fbf707bd3d0467fc1ec2a884c103bd1a0c7da215b742bc634568f"
+    },
+    "fs10e": {
+      "title": "Kawasaki FS10E｜多源合并",
+      "asset": {
+        "asset_id": "cbf045e1-c8dd-521d-bf0f-eaa5f1fed5e7",
+        "package_digest": "f3a237b241a1b4456fd2b2946258a037156618fed6d8900f19a0aae335e30ef6",
+        "package_path": "04_设备/kawasaki/fs10e__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fs10e/module.json",
+      "module_sha256": "085fd93a9f79c3d1e1223d9c3d515530b9c284e22868cd10f0d4a86fe7aae066"
+    },
+    "fs20n": {
+      "title": "Kawasaki FS20N｜多源合并",
+      "asset": {
+        "asset_id": "918f5101-2671-59fe-a553-e2eaf7ed7455",
+        "package_digest": "7e2b07007a7f5f5ee3276e38ad2c1ab626bad507f4f9b39a200de327e2f33952",
+        "package_path": "04_设备/kawasaki/fs20n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fs20n/module.json",
+      "module_sha256": "ab5355a204cc84595f2bafdeb4ba0c4e4f30fdcbd3b8ddcb7676c67b51ab3f01"
+    },
+    "fs30l": {
+      "title": "Kawasaki FS30L｜多源合并",
+      "asset": {
+        "asset_id": "5ad8c142-f74a-59b0-831e-fd3308b773a7",
+        "package_digest": "73a377e2622afd2f64c3666c3d154f6a40e00f6786bebaa6bb2a80b244faf592",
+        "package_path": "04_设备/kawasaki/fs30l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fs30l/module.json",
+      "module_sha256": "b5623a898b7c6fea56f696c9b82c9ebc6583eb0e8f5c13275e6f7b7fb5e6e415"
+    },
+    "fs30n": {
+      "title": "Kawasaki FS30N｜多源合并",
+      "asset": {
+        "asset_id": "2ab130a1-ab93-57d7-84fb-c6b79b847dab",
+        "package_digest": "fc96712a842cb88c1b345ccc37534be981fe32533abb1ab7ce74a49ced8240c1",
+        "package_path": "04_设备/kawasaki/fs30n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fs30n/module.json",
+      "module_sha256": "69d1e3c0e7b9414d13edbb8fcafae159322b1f6fa4d73b11d8dc1d2bd4ba3537"
+    },
+    "fs45n": {
+      "title": "Kawasaki FS45N｜多源合并",
+      "asset": {
+        "asset_id": "e6b299a2-3bcf-5e53-ad43-c642a1aa2660",
+        "package_digest": "a6f7d55b5853819f57d246aeb0d42638419d927764e43223d3d5b039eceb9773",
+        "package_path": "04_设备/kawasaki/fs45n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fs45n/module.json",
+      "module_sha256": "56add73444187986465cbae3c81534ad305bf158f6458aa67f704d3a99d8c61e"
+    },
+    "kf263": {
+      "title": "Kawasaki KF263｜多源合并",
+      "asset": {
+        "asset_id": "ce17263f-565d-5f9d-8acc-a8c8148f900c",
+        "package_digest": "86b3fdc0586dc6def3f758ec96b97d4240ba8e00445dde74106c4707da49b69f",
+        "package_path": "04_设备/kawasaki/kf263__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/kf263/module.json",
+      "module_sha256": "6b60f1730c8805da0fbced012421e26a4a7b3091f886762eab7dfff611287a35"
+    },
+    "mc006v": {
+      "title": "Kawasaki MC006V｜多源合并",
+      "asset": {
+        "asset_id": "3de7a2c0-34c9-5324-8f57-141ff4f4a024",
+        "package_digest": "d9909482bd9372f13c3c63a5b3201c122a2106d3fa0aebf99ead00e1c3963584",
+        "package_path": "04_设备/kawasaki/mc006v__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mc006v/module.json",
+      "module_sha256": "a853121c6e2178060e9f571da76a797f0b98dad56e9031b3609029c055f0632a"
+    },
+    "rs005l": {
+      "title": "Kawasaki RS005L｜多源合并",
+      "asset": {
+        "asset_id": "342a6106-1acd-5924-9447-90b6e831a97b",
+        "package_digest": "02dafa8939d3ea0b311eeaaece9017d9c8a34045ab93136fe77b19f28a10e453",
+        "package_path": "04_设备/kawasaki/rs005l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rs005l/module.json",
+      "module_sha256": "5eb6202bd76d8b6608821ac06fc5634db8214986d77ab2c6da6d68fbd0798b46"
+    },
+    "rs006l": {
+      "title": "Kawasaki RS006L｜多源合并",
+      "asset": {
+        "asset_id": "6e33a101-43a5-5c33-ae2f-2fcb2a0dba37",
+        "package_digest": "9b6643811297f01d27741561eaaf2b73c83f76cf76507eef25ddcaea8c773261",
+        "package_path": "04_设备/kawasaki/rs006l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rs006l/module.json",
+      "module_sha256": "c8d47c61373e53df19457f5a75af4e5e15729d1282bc4e88c11250bbaa63374d"
+    },
+    "rs010l": {
+      "title": "Kawasaki RS010L｜多源合并",
+      "asset": {
+        "asset_id": "232ce5f3-ab23-56e3-9dfa-3b4a48faccea",
+        "package_digest": "704d10c63d564cf463a3381d15a7a599300ac8ddd9fb77fbeecebed4ebed9fd4",
+        "package_path": "04_设备/kawasaki/rs010l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rs010l/module.json",
+      "module_sha256": "f1e9d4cb25c8e21150718a7210a0159d1e451ea3fa3c321171dc5853e2af56ab"
+    },
+    "rs015x": {
+      "title": "Kawasaki RS015X｜多源合并",
+      "asset": {
+        "asset_id": "d79581f8-8ef3-5aa0-80d4-9b71e418f244",
+        "package_digest": "ad58187dc74ff6dfaf3c512c858e51a234f17f13a3994365211a52cd034a4d70",
+        "package_path": "04_设备/kawasaki/rs015x__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rs015x/module.json",
+      "module_sha256": "5c4c55b108836ae5c4842715da29c1370830476a1d1a72875dcd3cece4149564"
+    },
+    "rs025n": {
+      "title": "Kawasaki RS025N｜多源合并",
+      "asset": {
+        "asset_id": "d57ddcb2-b3f6-5b94-8860-975eeaad1beb",
+        "package_digest": "175fd3a359e61813c24b08356bbd8304acd4ff7e1b605216e665d297853cfcd7",
+        "package_path": "04_设备/kawasaki/rs025n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rs025n/module.json",
+      "module_sha256": "076f8145d52f1b364b5fd52ba8b8e1925b0f233d87f5562cea6f7f57be41e094"
+    },
+    "bt200l": {
+      "title": "Kawasaki BT200L｜多源合并",
+      "asset": {
+        "asset_id": "94adb318-6c10-56a3-b607-3045ca9b502e",
+        "package_digest": "93be089f3acd0c72acccbb19be304d7c1af07f1e827560b46be190740408886c",
+        "package_path": "04_设备/kawasaki/bt200l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bt200l/module.json",
+      "module_sha256": "9cad127d7b3db83412f24b1ced8a28ac86a0bdc32e391c1f7bbe5f24570c90a1"
+    },
+    "bx100l": {
+      "title": "Kawasaki BX100L｜多源合并",
+      "asset": {
+        "asset_id": "61381dc2-e5cc-5441-9f86-963abc19202a",
+        "package_digest": "8c9d95db086cf0a9da8913a67126a1ed96f34a1dd6e29fbbd3039cb33cf2d300",
+        "package_path": "04_设备/kawasaki/bx100l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx100l/module.json",
+      "module_sha256": "1452a4e17fba73306db435515b9584deeec77fd843b50f17a4843448263a455f"
+    },
+    "bx130x": {
+      "title": "Kawasaki BX130X｜多源合并",
+      "asset": {
+        "asset_id": "12410e30-e535-541a-84c2-643d81a9dcb0",
+        "package_digest": "73e2ab07e24fcb9d2b7eb63b323ad0f73bcc8cec1e622aa967915ed79424b123",
+        "package_path": "04_设备/kawasaki/bx130x__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx130x/module.json",
+      "module_sha256": "07dcd0511e5239fd855ebbf098dec09a1cda32c3e51610a1ba7d42a613611d61"
+    },
+    "bx165l": {
+      "title": "Kawasaki BX165L｜多源合并",
+      "asset": {
+        "asset_id": "2eb4afb1-47fd-5c7f-add5-3e86ec1e560b",
+        "package_digest": "6f6ccf354994f3eff5bac81f14e30d0b0183313d825e9121c172118cac47e479",
+        "package_path": "04_设备/kawasaki/bx165l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx165l/module.json",
+      "module_sha256": "7e33766a729d17403afea00802c96a1bd0beb7e47e82ebb67453dd2c3e33122a"
+    },
+    "bx200l": {
+      "title": "Kawasaki BX200L｜多源合并",
+      "asset": {
+        "asset_id": "9ad10cf3-c562-57c3-b249-b050b0a567b5",
+        "package_digest": "ca329b9a2794733dc9663fbf0edd4d6cf7c3fbc6ed3cff85209ea227fb8fda8c",
+        "package_path": "04_设备/kawasaki/bx200l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx200l/module.json",
+      "module_sha256": "d1f634d627e56c24b3c0e9e0d00cf1d6f3b993b6cfa581f95b5cfd80084c847f"
+    },
+    "bxp110l": {
+      "title": "Kawasaki BXP110L｜多源合并",
+      "asset": {
+        "asset_id": "84e79f2a-647c-5720-8452-7bb34032fb25",
+        "package_digest": "927bb055923359cbbb2d5c86899834798ee727b29b16ad5dfd56142daaa8be0b",
+        "package_path": "04_设备/kawasaki/bxp110l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bxp110l/module.json",
+      "module_sha256": "65e361a919e1a39df5bec5589facd0a5f56d38e13f8bc1c79419ac8389d23fa4"
+    },
+    "bxp135x": {
+      "title": "Kawasaki BXP135X｜多源合并",
+      "asset": {
+        "asset_id": "b5d7d500-a67f-5ef7-9d5a-c7c5beedb8b2",
+        "package_digest": "d473baf2da628e10ccebf1f5545a3b97389372339259066913264b06eb5ed44e",
+        "package_path": "04_设备/kawasaki/bxp135x__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bxp135x/module.json",
+      "module_sha256": "c99d8cc1edea5fc78386c9822a689f428d2609fa4892eed0e190018ce64b5453"
+    },
+    "bxp165n": {
+      "title": "Kawasaki BXP165N｜多源合并",
+      "asset": {
+        "asset_id": "68c3fd44-9ee1-566e-ba83-d189c9e7859d",
+        "package_digest": "361f96f079ed35d6856d4a5d4299e5c7c8a234e7bba8a0989df41fca3edcde86",
+        "package_path": "04_设备/kawasaki/bxp165n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bxp165n/module.json",
+      "module_sha256": "477974a2a1176be94a0c57d784f9ac5ba19e285b5e212425d317a07d458c1655"
+    },
+    "cx165l": {
+      "title": "Kawasaki CX165L｜多源合并",
+      "asset": {
+        "asset_id": "c83d73b1-4430-590b-9b96-70acb52b11a9",
+        "package_digest": "2bf581a81eb32496aa676f83afdedeeaff907a1d4e5bd179e382b922c8a3a112",
+        "package_path": "04_设备/kawasaki/cx165l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/cx165l/module.json",
+      "module_sha256": "a66317dfd42af5b96e829e753b91cf9cbc5d16c91041cd2bbcc3031d5b289c32"
+    },
+    "mx350l": {
+      "title": "Kawasaki MX350L｜多源合并",
+      "asset": {
+        "asset_id": "c26cb908-6177-506b-8439-2faedd564206",
+        "package_digest": "96728975109672fa4f774f5afdf57a7c26f5640eb79c8f466316f24dd49280a1",
+        "package_path": "04_设备/kawasaki/mx350l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mx350l/module.json",
+      "module_sha256": "4b80525d9528103405905ebfc34f135393eb35e0c73dad4a304dd6d0d17c6817"
+    },
+    "mx420l": {
+      "title": "Kawasaki MX420L｜多源合并",
+      "asset": {
+        "asset_id": "e5d249c4-3019-5f51-b5e2-2d1d40c63deb",
+        "package_digest": "f508979bd4683e4e1666263020acb5f950c3950046e475e89ded4be6954d6d60",
+        "package_path": "04_设备/kawasaki/mx420l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mx420l/module.json",
+      "module_sha256": "8d2d0cb2f64f4b9d7e0c68046bea7576351a0b885e6abbc41c6915755ca3bf49"
+    },
+    "mx500n": {
+      "title": "Kawasaki MX500N｜多源合并",
+      "asset": {
+        "asset_id": "ca26b6ec-608c-51cc-bd40-e163956c638c",
+        "package_digest": "69b68c6b64594c9035c11520cb5971e075f2c36b1875f64405c5d74c7254083b",
+        "package_path": "04_设备/kawasaki/mx500n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mx500n/module.json",
+      "module_sha256": "0c7557513aa89f2d3fa4d7ad8974c87906365ca2586b440b9c056c9911befbdd"
+    },
+    "mx700n": {
+      "title": "Kawasaki MX700N｜多源合并",
+      "asset": {
+        "asset_id": "19d7a7f7-5c9c-5fcf-a304-b733fdf61f2e",
+        "package_digest": "de13390abfb6dad6e6e5db3e4e9877dac1ed368bf09cb70665cb64e4050f3353",
+        "package_path": "04_设备/kawasaki/mx700n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mx700n/module.json",
+      "module_sha256": "5672c218afe7d36b29d68584e644bba34d770ed32ad91d1361fd377d4fa89393"
+    },
+    "mxp410x": {
+      "title": "Kawasaki MXP410X｜多源合并",
+      "asset": {
+        "asset_id": "38d22f77-63b3-5488-868e-75a19bb7421b",
+        "package_digest": "c7d3fedbf059a2042c4feec27ea0743d872b057008fdbc422b04d47000011546",
+        "package_path": "04_设备/kawasaki/mxp410x__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mxp410x/module.json",
+      "module_sha256": "019ea97bc7d86361394867cb24972c1d4d11bee1ffbea8f03614dd49bf3a1c46"
+    },
+    "bx300l": {
+      "title": "Kawasaki BX300L｜多源合并",
+      "asset": {
+        "asset_id": "b621899a-4415-5169-a2a1-3deb2015b4ce",
+        "package_digest": "0914a36e4ba8c3c7d0d5aa48a7b14d976e47b9f5eba314097f295863856e680e",
+        "package_path": "04_设备/kawasaki/bx300l__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/bx300l/module.json",
+      "module_sha256": "6df315959337a17c4c499c3399e0ba0428da575f0b668ee23d6e5a8be279799f"
+    },
+    "duaro1a": {
+      "title": "Kawasaki duAro 1-A",
+      "asset": {
+        "asset_id": "f3ad7079-f070-5176-b552-0442af58f557",
+        "package_digest": "59dda9da1fb9277864e775df87b2f9684c2fd50ff6f546ddaa692f897119a948",
+        "package_path": "04_设备/kawasaki/duaro_1-a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/duaro1a/module.json",
+      "module_sha256": "90427441d86d9f1a77f4f1d0b6ef69cb74d9133952cd5a36399c4fbabb3a68d9"
+    },
+    "duaro1b": {
+      "title": "Kawasaki duAro 1-B",
+      "asset": {
+        "asset_id": "7c781675-40e4-59ca-a27a-064ec5729daf",
+        "package_digest": "6008026ef7184062230a2537937bb050011aded66bc7a03be1827cf04c923fdb",
+        "package_path": "04_设备/kawasaki/duaro_1-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/duaro1b/module.json",
+      "module_sha256": "993f3d6609bf22fdd751f8a6df41ad51e050a41999387b801a35f54b2a1f7252"
+    },
+    "fs03n": {
+      "title": "Kawasaki FS03N",
+      "asset": {
+        "asset_id": "68c4bff9-b723-5da9-84cd-31617edc5f8b",
+        "package_digest": "b88b70ffbd2e2a6dc7f921b8274010c9762643b6ec034626c1da64af4d0b5cb7",
+        "package_path": "04_设备/kawasaki/fs03n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fs03n/module.json",
+      "module_sha256": "fc28f8561de1d3fc4d9979c5975afa2eec32dac54b4c3bdaffa15f3ec758222f"
+    },
+    "fs06l": {
+      "title": "Kawasaki FS06L",
+      "asset": {
+        "asset_id": "be88cb0c-1b18-5ba4-857a-f07cb80d3ac9",
+        "package_digest": "67c7aca618bc64412179dcd6aa7b688a6ee95369c5319330c5fb8c458415f2a1",
+        "package_path": "04_设备/kawasaki/fs06l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fs06l/module.json",
+      "module_sha256": "efe76812c6ce8c7c7da964b55a144d76bbdb313e7319681cea11d9cb07d51cef"
+    },
+    "fs10l": {
+      "title": "Kawasaki FS10L",
+      "asset": {
+        "asset_id": "9e1bb133-bb46-5601-b3c7-53fa92969852",
+        "package_digest": "c2327aebc82c0af80a8a727811b2faa4e4568ea9bc6c8af7770d613b4a69fd8f",
+        "package_path": "04_设备/kawasaki/fs10l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fs10l/module.json",
+      "module_sha256": "edac9a05ef924365067d8d18b65de3e178c3b36cacf24457bfa6b4d8ff0d76a0"
+    },
+    "fs10x": {
+      "title": "Kawasaki FS10X",
+      "asset": {
+        "asset_id": "d8ddd7b9-d9cc-5c03-8960-2e4ee0873dd3",
+        "package_digest": "177b5421a2e8a9649febc3f4184235867b13862a8c2929422d0d210e7e19dac2",
+        "package_path": "04_设备/kawasaki/fs10x__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fs10x/module.json",
+      "module_sha256": "60cd9b8fba5ac37f3d9b7f2a36eb79da641fbf9a4c40c1ba46db82e05ae46376"
+    },
+    "fs20c": {
+      "title": "Kawasaki FS20C",
+      "asset": {
+        "asset_id": "dfbc2d9e-de99-514f-b44f-e3a49861c326",
+        "package_digest": "ad9d5ed932cad2334256241d5f087345523bcf9eee61f4a605473b06685812f0",
+        "package_path": "04_设备/kawasaki/fs20c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fs20c/module.json",
+      "module_sha256": "3e6cdf017251ef76bf889f354a2076397857114d5f67178eab09c62d9ea52204"
+    },
+    "kj264j": {
+      "title": "Kawasaki KJ264J",
+      "asset": {
+        "asset_id": "b7397ca9-5b75-5f0a-abf4-037b6b29ead2",
+        "package_digest": "901b254716d858124ca9801c052ff23a7401e28ef21be5000cb9a96f45e91b07",
+        "package_path": "04_设备/kawasaki/kj264j__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/kj264j/module.json",
+      "module_sha256": "0fc355855cf65ec89bdd17f7df61a8b437bd9181f875a5dcd63d9183a057edfa"
+    },
+    "mc04n": {
+      "title": "Kawasaki MC04N",
+      "asset": {
+        "asset_id": "65a0ecc7-33ef-5cfb-9e3f-33161ec81dc6",
+        "package_digest": "4991ab334b1b55f2260e200137bc6fed9172c5d4dbf64e8df100b7da40b93030",
+        "package_path": "04_设备/kawasaki/mc04n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mc04n/module.json",
+      "module_sha256": "09d20cbe544cd8816d80cf1424b4572b8233426e71238678237560bef3b7d622"
+    },
+    "ra010l": {
+      "title": "RA010L",
+      "asset": {
+        "asset_id": "b5c31a68-f7b7-5fbf-938e-49e185ac002f",
+        "package_digest": "0158d2927e7e9fcf62a1c0a896e4c6e449074246e1e8f6c6fdb36f21db11ef47",
+        "package_path": "04_设备/kawasaki/ra010l__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ra010l/module.json",
+      "module_sha256": "2f41ea80956b57784b00289bdfdca40ad7e9cbbcdfac797242d84f8dcdc39dd0"
+    },
+    "rd80n": {
+      "title": "Kawasaki RD80N",
+      "asset": {
+        "asset_id": "687e42b2-09ac-5cdf-9ff9-2acd88e13e7a",
+        "package_digest": "7be14ce5c5a09160ca7c274da0a19469220b89be23f858af397105bb5dcb9411",
+        "package_path": "04_设备/kawasaki/rd80n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rd80n/module.json",
+      "module_sha256": "4f1c451ca2726b28d5add7ea5569325d46e0d81970dc7d73e447ee231b2edc22"
+    },
+    "rs007l": {
+      "title": "Kawasaki RS007L",
+      "asset": {
+        "asset_id": "07b46461-99cb-5c5c-b926-d831c41bdf44",
+        "package_digest": "803ce861dd64555b24c254a95c79faffc9d1df0a6078e1b72c9e3c2b13b869a9",
+        "package_path": "04_设备/kawasaki/rs007l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs007l/module.json",
+      "module_sha256": "c5225775dbe6405e0a93cec21a712b59ac2e40899883a93fc96a0e062876b508"
+    },
+    "rs007lac01": {
+      "title": "RS007L-AC01",
+      "asset": {
+        "asset_id": "88786dc0-1292-5a00-9f53-729f3e424361",
+        "package_digest": "deeb179853acd7007f6fce008cebed4f83f85788554b5489847da759b9d35df3",
+        "package_path": "04_设备/kawasaki/rs007l-ac01__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs007lac01/module.json",
+      "module_sha256": "a5a963dbedf61cd4be735a68b4ed8229df34d8b9d2615649e5a9dee6dc889aae"
+    },
+    "rs007n": {
+      "title": "Kawasaki RS007N",
+      "asset": {
+        "asset_id": "278c335a-3124-5904-8041-6b2c5c14c522",
+        "package_digest": "3505714a40c65bb789fd4abe66c72ec4e7e4c9ced275d8dbede3c8da0b0aef4c",
+        "package_path": "04_设备/kawasaki/rs007n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs007n/module.json",
+      "module_sha256": "fd194bd77a8af2e217f89154a1cd244f971b71eccf199c72ee16f5bb7717dd64"
+    },
+    "rs007nac01": {
+      "title": "RS007N-AC01",
+      "asset": {
+        "asset_id": "1684d0cb-1b1b-5577-a824-ca26f19d0358",
+        "package_digest": "e40c5a72a66e5ae73c2bd2913877d19045d2735727bbeae052c0d44f34d03e67",
+        "package_path": "04_设备/kawasaki/rs007n-ac01__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs007nac01/module.json",
+      "module_sha256": "348010a006324ef4f3ae854f59e79371739e7a2c5fd1433d92889a173ab21941"
+    },
+    "rs013n": {
+      "title": "RS013N",
+      "asset": {
+        "asset_id": "0883e007-bb46-51fa-8f63-e8cbd43862b0",
+        "package_digest": "746c7835706291d7337efa016dff3dba67a945bec4b9e1a3ad3b038c404a981f",
+        "package_path": "04_设备/kawasaki/rs013n__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs013n/module.json",
+      "module_sha256": "d7f8d840e0fc1fcec59cb4bcade47f9dc24257b35ce3ce128fb1f7f9d4c02746"
+    },
+    "rs013na": {
+      "title": "Kawasaki RS013N-A",
+      "asset": {
+        "asset_id": "1189e391-0c81-52ee-9522-1e20c4f70f86",
+        "package_digest": "be348cdc56f357438e8962a442055419248e5ef2020547aa3e944c5e829c8201",
+        "package_path": "04_设备/kawasaki/rs013n-a__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs013na/module.json",
+      "module_sha256": "fbef28052a0fc383864cdd778b89e01b8a8cce8003a83a3ce3b702d24e101501"
+    },
+    "rs03n": {
+      "title": "Kawasaki RS03N",
+      "asset": {
+        "asset_id": "f695012f-bb22-55e2-b517-e784b66520e5",
+        "package_digest": "d0c5a4d1e8e96196c60e6d462424fe7fc7cbf90d89034ae58a0ad66be496d981",
+        "package_path": "04_设备/kawasaki/rs03n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs03n/module.json",
+      "module_sha256": "3980b393d53dc42657808c1ff914488006306b487ba3081aa9d8cbcb071290bf"
+    },
+    "rs05n": {
+      "title": "Kawasaki RS05N",
+      "asset": {
+        "asset_id": "501a8c48-ccbe-53be-bdee-95aa0d46b88c",
+        "package_digest": "94431acdf53561f9f894c0b8549c8f220aba7ec0e35a414060c2ba68a8a533ec",
+        "package_path": "04_设备/kawasaki/rs05n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs05n/module.json",
+      "module_sha256": "41357768a9d9d5b5a87c7230ac417b59093a525e74670fb55a291f134e19ff41"
+    },
+    "rs10": {
+      "title": "Kawasaki RS10",
+      "asset": {
+        "asset_id": "e08f35b0-acae-533b-9242-9b5fd6fa8f72",
+        "package_digest": "9a892d23ca5153e63a96a95de71bbf4ccb43b3704226c4491c97bd63bf096fa4",
+        "package_path": "04_设备/kawasaki/rs10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs10/module.json",
+      "module_sha256": "3b64f33cab547e9efbb54292acbaf3adbc10722806d9d03e64eec4f358fe76f3"
+    },
+    "rs20n": {
+      "title": "Kawasaki RS20N",
+      "asset": {
+        "asset_id": "785cb94f-b9c4-55ec-92ff-58b3437c5404",
+        "package_digest": "2764ea465c4584b164bfe973f446e84b2d448c81ca87f98da08b541ef65f9d22",
+        "package_path": "04_设备/kawasaki/rs20n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs20n/module.json",
+      "module_sha256": "cf33d1dc0c6f7dbd30e7a5536c54762ba666312c84a3291409ae5610c237e9b9"
+    },
+    "rs50n": {
+      "title": "Kawasaki RS50N",
+      "asset": {
+        "asset_id": "4d4acb22-7a57-5905-95db-d8f9b2256944",
+        "package_digest": "b82f9ea45f61d201a85e87f219e9f16b96ac1f0711dc59dd1d34769662832213",
+        "package_path": "04_设备/kawasaki/rs50n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs50n/module.json",
+      "module_sha256": "ca9debc7e22d1a3f5c43f460f0aa605283df1b9e29cad49443304ab9862587ff"
+    },
+    "rs80n": {
+      "title": "Kawasaki RS80N",
+      "asset": {
+        "asset_id": "394dd6f0-a2b5-5054-b616-0efa15e4d440",
+        "package_digest": "3a964579ba9eca56b1219194ee421635a06fe11c8b28ba01d0f875ca68d12b36",
+        "package_path": "04_设备/kawasaki/rs80n__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rs80n/module.json",
+      "module_sha256": "cad6e7075c89d49788277f4eb6f80d4d0adddd4bca874cb2d2ad5b42d789f7d6"
+    },
+    "zx130l": {
+      "title": "Kawasaki ZX130L｜多源合并",
+      "asset": {
+        "asset_id": "211eccc2-ef2e-576d-9d48-284279742063",
+        "package_digest": "3c7c8b36857d0a6dce690c2c6b189c23c7cf25de3d0ba5affc469baf502e308f",
+        "package_path": "04_设备/kawasaki/zx130l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zx130l/module.json",
+      "module_sha256": "f6b9cdb072572e6f45bf618eeaa1e6b35d71056a2b9d112d88f6708f87db1b18"
+    },
+    "zx165u": {
+      "title": "Kawasaki ZX165U｜多源合并",
+      "asset": {
+        "asset_id": "58b7bf29-3b08-5a95-beab-fea7fe0dffcc",
+        "package_digest": "5b56679304452bdfadd13362f96f497fcb285ed864ae36c4e6d68fe3630f4619",
+        "package_path": "04_设备/kawasaki/zx165u__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zx165u/module.json",
+      "module_sha256": "aa701f6d1de5311454a60c3b4a6b80b442842191381a6b46515a07973571d4b2"
+    },
+    "zx300s": {
+      "title": "Kawasaki ZX300S｜多源合并",
+      "asset": {
+        "asset_id": "86c75227-89e7-5fa1-9e98-21c7f4f78e72",
+        "package_digest": "44d32f0c3f9bc786693a575a66734e62dcd3053052269395db92a8ca63085ed6",
+        "package_path": "04_设备/kawasaki/zx300s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/zx300s/module.json",
+      "module_sha256": "d2656bf94acb6a85928debe175a020d8303c266ab3ef3fc402af31ded4036355"
+    },
+    "yf002n": {
+      "title": "Kawasaki YF002N｜多源合并",
+      "asset": {
+        "asset_id": "98267ae6-6eea-5659-88a9-236308bfb1ba",
+        "package_digest": "d2e3079b9055355f4d97048f7142c294b55b376700fe8bad41ddebba33039076",
+        "package_path": "04_设备/kawasaki/yf002n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yf002n/module.json",
+      "module_sha256": "2ba929f53dad8768ef6c8ae238cd0f721e8b861d1987777b1c34f5dd34f022be"
+    },
+    "yf003n": {
+      "title": "Kawasaki YF003N｜多源合并",
+      "asset": {
+        "asset_id": "21bee32e-f7ea-5459-a905-20ad6719ba13",
+        "package_digest": "6b6c94270453ba3d6eb1c5871306dcec83fb9a8f17100b31939bbc4b4c18d9fc",
+        "package_path": "04_设备/kawasaki/yf003n__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/yf003n/module.json",
+      "module_sha256": "69326c3468acc7ecc52e4e5f523f41cef61d70b4bee9f40b0c714b5f6ed9ce3a"
+    }
+  },
+  "source_profiles": []
+}

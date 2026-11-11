@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "orangeapps",
+  "models": {
+    "toolcoord": {
+      "title": "Tool_Coord",
+      "asset": {
+        "asset_id": "c2f8922b-594d-5a69-99f0-379c7374aa1b",
+        "package_digest": "1ce7589450cab3384de0ea0e2cfea70ee2d87a9dbafbba7541aa08648b8d8413",
+        "package_path": "03_机构模块/orangeapps/tool_coord__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/toolcoord/module.json",
+      "module_sha256": "bcf2a7465305a9f558d8d8861f6ee447c8791221486415362f43a17d011941a9"
+    },
+    "toolgripper": {
+      "title": "Tool_Gripper",
+      "asset": {
+        "asset_id": "64db692f-a221-50cb-b188-243edf1c1706",
+        "package_digest": "0ff238024bfcb42e7194f03cced46e4ed75f80a24f9ed97d0502b7f2b8236961",
+        "package_path": "03_机构模块/orangeapps/tool_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/toolgripper/module.json",
+      "module_sha256": "08b1f8ffcf0fd89f3b835dc1a2e29329f94a64282f5258adbc3f2c4255e72155"
+    },
+    "toolring": {
+      "title": "Tool_Ring",
+      "asset": {
+        "asset_id": "c2033693-8307-5f2f-99c9-fa88565e3873",
+        "package_digest": "b91e35a412fd61daefa2fe9ded5207342b912a1a1f090c31430799d5b9391fdf",
+        "package_path": "03_机构模块/orangeapps/tool_ring__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/toolring/module.json",
+      "module_sha256": "922963f8862f1c0f2b105ae0075b5d5978a4cb38d417926e28c0f612fc74c5ca"
+    }
+  },
+  "source_profiles": []
+}

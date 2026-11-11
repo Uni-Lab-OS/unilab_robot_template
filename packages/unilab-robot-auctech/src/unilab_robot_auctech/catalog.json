@@ -1,0 +1,727 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "auctech",
+  "models": {
+    "acr12": {
+      "title": "AUCTECH ACR-12",
+      "asset": {
+        "asset_id": "959c787a-c235-58db-9016-aeef0dc82c97",
+        "package_digest": "4a38d0ae7a1da9ad0b78358bb3d514d4e154db695442ab9d98648f937b4d29da",
+        "package_path": "04_设备/auctech/acr-12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acr12/module.json",
+      "module_sha256": "c7c5a3e5b5af94ddf7679ad3e64f4f629593fdcd2b94d5eca445919889586cf0"
+    },
+    "acr18": {
+      "title": "AUCTECH ACR-18",
+      "asset": {
+        "asset_id": "ccdea8a3-2e78-51e4-bfea-40bd1a7c141f",
+        "package_digest": "0f78478fdf44abab3d30d625716e3b7ae67995c119f8e15cf3ef4f25978c6187",
+        "package_path": "04_设备/auctech/acr-18__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acr18/module.json",
+      "module_sha256": "dce9b67fe240cc572c58dafe8f5dcdd96a0296f902e48f84fdde7f92aeeff4cc"
+    },
+    "acr20": {
+      "title": "AUCTECH ACR-20",
+      "asset": {
+        "asset_id": "8444e482-3440-5773-a450-ab3d3ce766bf",
+        "package_digest": "6cde5a2eb034bbd71b630b55118d261b8d80deb001d945536df3d2dfff48912e",
+        "package_path": "04_设备/auctech/acr-20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acr20/module.json",
+      "module_sha256": "93d0a563e269269b197be47c0334208c802ba7df1f2ba8e4cda9bfb659d9545a"
+    },
+    "acr7": {
+      "title": "AUCTECH ACR-7",
+      "asset": {
+        "asset_id": "ea399d6e-b7af-524d-95c5-85d44ff7f918",
+        "package_digest": "c4e9759089802699f3469644811432d3a4da721bbb31991a0669e78655482df3",
+        "package_path": "04_设备/auctech/acr-7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/acr7/module.json",
+      "module_sha256": "c6ec5513044837aa07294a6ca1b4edfec7df6c398b73d69425ce038388e92426"
+    },
+    "an12:10:1.6:1": {
+      "title": "AUCTECH AN-12-10-1.6-1",
+      "asset": {
+        "asset_id": "9407ae75-79d3-5897-843b-7fec4e455e87",
+        "package_digest": "a407afaff767069f7b63168dba0b5d025b6998e8509fbb09bac47c7f43539031",
+        "package_path": "04_设备/auctech/an-12-10-1.6-1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an12_10_1_6_1_02723abe/module.json",
+      "module_sha256": "ab9b0f02b47ba475b323bd9b96841db34b44d0dab78a4b7a287cd0489812c479"
+    },
+    "an12:12:1.4": {
+      "title": "AUCTECH AN-12-12-1.4",
+      "asset": {
+        "asset_id": "a70064d8-23ac-5793-a962-d89bbc504dc2",
+        "package_digest": "24f48648b7518295ed66be6aba3cf2faa3769f3584d2e8e1346bc02ad756d7e7",
+        "package_path": "04_设备/auctech/an-12-12-1.4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an12_12_1_4_184cc2e0/module.json",
+      "module_sha256": "5fedf0722dac0aa500d6d03a6177e546da737bb72f41e4632b7a554264e9e378"
+    },
+    "an12:16:0.95:3": {
+      "title": "AUCTECH AN-12-16-0.95-3",
+      "asset": {
+        "asset_id": "630b9a7e-6443-5951-a61d-bbf089cfe597",
+        "package_digest": "bd5f064bc0ff28425e08c1292d7fdcf5976127cbb39fd676594a1bbbf335347f",
+        "package_path": "04_设备/auctech/an-12-16-0.95-3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an12_16_0_95_3_36290497/module.json",
+      "module_sha256": "04e02a6ef91d9e8ece63736ecc187f261cb1e1b1deb19ab245fa26e1605c83db"
+    },
+    "an12:16:0.95:4": {
+      "title": "AUCTECH AN-12-16-0.95-4",
+      "asset": {
+        "asset_id": "2b0c7011-54c5-578e-bc9e-17dc2a3bc277",
+        "package_digest": "ea7758cd5858183188391ab41b56e3905f196854dc5a60b928716e42b20e48e3",
+        "package_path": "04_设备/auctech/an-12-16-0.95-4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an12_16_0_95_4_c8e2138b/module.json",
+      "module_sha256": "28392dfcb4b9436b56c75754eac290f38ebe1e2de6661a269e5636fa2648cfa8"
+    },
+    "an12:16:1.1": {
+      "title": "AUCTECH AN-12-16-1.1",
+      "asset": {
+        "asset_id": "7280a28d-7c62-5290-8136-b6621b3adee1",
+        "package_digest": "0c86bf4f5eae86ab8668a88c1258dd4c371c181d2b0626c7e6aefad465a80ba3",
+        "package_path": "04_设备/auctech/an-12-16-1.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an12_16_1_1_e8e0a82f/module.json",
+      "module_sha256": "a0ce89f6b424d5247d37a10c66d0d47dcd61646e44bf9799e27acc314ea8592e"
+    },
+    "an220:150:3.2": {
+      "title": "AUCTECH AN-220-150-3.2",
+      "asset": {
+        "asset_id": "30bf9612-6e4c-5d54-a517-c334b7b8e258",
+        "package_digest": "3dbca5244b58fefe3e5ef66215bed77e2161e0180cef872d7d639161f39237c6",
+        "package_path": "04_设备/auctech/an-220-150-3.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an220_150_3_2_fde3c44f/module.json",
+      "module_sha256": "48691ab07142744915192d5af8e4bfefe1d25956e83aeaf2aba15449c40e22d2"
+    },
+    "an220:170:2.7": {
+      "title": "AUCTECH AN-220-170-2.7",
+      "asset": {
+        "asset_id": "51f852e2-e7a1-51ac-922a-5d18479e74af",
+        "package_digest": "16cf2990a6ce49f774aa3aa13c69595b33f9bc10601098d2f5ae739fc92c13f9",
+        "package_path": "04_设备/auctech/an-220-170-2.7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an220_170_2_7_d276cfd1/module.json",
+      "module_sha256": "a6f63a7a8faf154a8849f3bd5c655a8bb0ddf94b78c2f2fd9b7d3d31f4f63f98"
+    },
+    "an220:220:2.7": {
+      "title": "AUCTECH AN-220-220-2.7",
+      "asset": {
+        "asset_id": "0d39bc40-9d56-545e-91d5-915114f2ab66",
+        "package_digest": "e33c990a52a312f96490c74424f6255c74525e5141e47fb08fc66c732bf05931",
+        "package_path": "04_设备/auctech/an-220-220-2.7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an220_220_2_7_87b36e44/module.json",
+      "module_sha256": "eba942e9788305a494b2cf77f5ece569a9ac00ac5da3e8b9d8d0aa9fa7a8e0bf"
+    },
+    "an25:12:2.1": {
+      "title": "AUCTECH AN-25-12-2.1",
+      "asset": {
+        "asset_id": "eea8bfb2-4f8b-5c3f-989f-e71d694bdf64",
+        "package_digest": "a97369571b08e3131a802a1e5ad5e4f49ef211226d7801b4825468eaf4a28b50",
+        "package_path": "04_设备/auctech/an-25-12-2.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an25_12_2_1_4e7b986f/module.json",
+      "module_sha256": "b84ac5ee1f41019f73b7a9499f6f4982364e0ceb360f8314663ee17170ba029d"
+    },
+    "an25:20:2.0": {
+      "title": "AUCTECH AN-25-20-2.0",
+      "asset": {
+        "asset_id": "705f8260-4724-5cb7-8063-10b2b909be00",
+        "package_digest": "cc1bd0864f28f10586feffe358eabf0e2e7a8c85b46336c3d7fafdbe59d6259d",
+        "package_path": "04_设备/auctech/an-25-20-2.0__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an25_20_2_0_0abd2ce3/module.json",
+      "module_sha256": "196bdd144ed3bcf54123d410a4468d52d06453bd3f860fdbec67dfc57aa13825"
+    },
+    "an25:25:1.8": {
+      "title": "AUCTECH AN-25-25-1.8",
+      "asset": {
+        "asset_id": "152f63e7-359e-590d-bd36-1bc662ce393b",
+        "package_digest": "d404e9895c46d684765ec8305ffd35621102e5b40582db066a1b1226469fb958",
+        "package_path": "04_设备/auctech/an-25-25-1.8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an25_25_1_8_7c34dbfa/module.json",
+      "module_sha256": "e1f19e4e9920d5c3d0e742dc23ec866f8ccffdde6e4b1b86edc1dcb6475ee92f"
+    },
+    "an25:30:1.6": {
+      "title": "AUCTECH AN-25-30-1.6",
+      "asset": {
+        "asset_id": "921e7754-dfac-5814-9c8e-1adfe68166fc",
+        "package_digest": "b4c9527f1a63512de77de24cb08c81a9bea321c7c195657b37e03c8f610150ae",
+        "package_path": "04_设备/auctech/an-25-30-1.6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an25_30_1_6_37cab196/module.json",
+      "module_sha256": "794b27fcce325702527cd89566ed72aeab1f113d67b0fc0af56d62bae5b4f262"
+    },
+    "an25:35:1.8": {
+      "title": "AUCTECH AN-25-35-1.8",
+      "asset": {
+        "asset_id": "3398e555-6c56-57b4-ad3a-4cd07f7432c6",
+        "package_digest": "d261ba4be0a0fd958be85897dce55b84e04041d6b839e4561111226db0e94944",
+        "package_path": "04_设备/auctech/an-25-35-1.8__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an25_35_1_8_3fd2fbf9/module.json",
+      "module_sha256": "62ae1656fc2ca9cbe8d198f81259bdd3dcf4276a9a2632c50457de8fa4be8957"
+    },
+    "an80:50:2.6": {
+      "title": "AUCTECH AN-80-50-2.6",
+      "asset": {
+        "asset_id": "e2fc9e9d-aaed-5de1-be71-f9b2b24a874a",
+        "package_digest": "4ea7fc697d5e7e96ed43c428df2f10851ab5fbfc3c6dbf53a1d3a5ae4dcaca52",
+        "package_path": "04_设备/auctech/an-80-50-2.6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an80_50_2_6_06f75f76/module.json",
+      "module_sha256": "30450c34c55152f0766b0e86b45f79dc1dc5d9c58bbe38475e88514e057ccbda"
+    },
+    "an80:80:2.2": {
+      "title": "AUCTECH AN-80-80-2.2",
+      "asset": {
+        "asset_id": "eacc5793-70a2-55c9-9a96-18802869d786",
+        "package_digest": "d4842d1c769188f6f1a2da81fef9f9d4cfa7cf33d7f0c77681595ec69405e450",
+        "package_path": "04_设备/auctech/an-80-80-2.2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/an80_80_2_2_492d2bb7/module.json",
+      "module_sha256": "61eb98b73bd1093b90cefa1aad827348e9e126a4de219c598ed7d3c8d7c2ffc7"
+    },
+    "ax10r1206": {
+      "title": "AUCTECH AX-10-R1206",
+      "asset": {
+        "asset_id": "a66eec00-3f7c-57ff-90a1-9feb8b6c04b6",
+        "package_digest": "b5b9e6263e322a197457b9a1c513025a6a5913d66c8a4ef17653a86ed6389de4",
+        "package_path": "04_设备/auctech/ax-10-r1206__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ax10r1206/module.json",
+      "module_sha256": "9809a4f3b89c3adab7906f1b8a0c55d11968a1362d01516fd483b6971317229c"
+    },
+    "ax12r906:3": {
+      "title": "AUCTECH AX-12-R906-3",
+      "asset": {
+        "asset_id": "7a82e406-2817-573a-b392-736bd35ec2b5",
+        "package_digest": "74a76b7a90d181c2e6ae54fb641c487156a10f51f602deef4265f40ef05231df",
+        "package_path": "04_设备/auctech/ax-12-r906-3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ax12r906_3_c99f3cef/module.json",
+      "module_sha256": "b3f90e8452415c6774309dd8b445e3c9e6bad961a1d5fc045b929eb80dcc4986"
+    },
+    "ax12r906:4": {
+      "title": "AUCTECH AX-12-R906-4",
+      "asset": {
+        "asset_id": "3d8ac4c3-d3f4-5e51-992b-18630c8880b7",
+        "package_digest": "4756c65dab5ed77e495f70f18c11005b13226da23fa1ff4b654abd0d47a10181",
+        "package_path": "04_设备/auctech/ax-12-r906-4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ax12r906_4_e2ad1f5a/module.json",
+      "module_sha256": "1ef9a0829ae2102e2f37f9af0bd3bfddc3299aeefb697f1467b3aa33ff17c19f"
+    },
+    "ax7": {
+      "title": "AUCTECH AX-7",
+      "asset": {
+        "asset_id": "8f7831c7-ac8f-5828-bb90-8e86df58028a",
+        "package_digest": "b7a5c565b82e537131b9a9d2e7202d0cd47e3dd71c77e9f5b03bf168a2799f70",
+        "package_path": "04_设备/auctech/ax-7__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ax7/module.json",
+      "module_sha256": "d6b54e6fc7ab2d6ac5b5468c14ad6cd447cf4a8d5315b5b1a2245418f1156f97"
+    },
+    "ax7l": {
+      "title": "AUCTECH AX-7L",
+      "asset": {
+        "asset_id": "8a490aeb-3e2c-5f9a-994e-5e4299cd1a58",
+        "package_digest": "a5f7833025851120725ae9ffcdcd062069ccef3bb3521e29e7adefa6b8e41716",
+        "package_path": "04_设备/auctech/ax-7l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ax7l/module.json",
+      "module_sha256": "a24681a2025195e70df7e34c150ccf0e207b1ff4efa6df9c8405675c7df0e063"
+    },
+    "bm150:3200": {
+      "title": "AUCTECH BM-150-3200",
+      "asset": {
+        "asset_id": "51aa4430-fe14-543e-a6d6-22ef133580f5",
+        "package_digest": "3ec2dd60d7b24394a9c13d8f98c3bbefe30827f27657c57514f5900195978c7f",
+        "package_path": "04_设备/auctech/bm-150-3200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bm150_3200_61ef1111/module.json",
+      "module_sha256": "386112e494bac478d10c84391c5391678252e283c3b959f61f26015eaf2f590b"
+    },
+    "bm180:3200": {
+      "title": "AUCTECH BM-180-3200",
+      "asset": {
+        "asset_id": "d0120643-d84f-543e-b892-2c5e7f46d9ab",
+        "package_digest": "a9dfe3df8f96321594a37053f665ec76c56f49025c4e2d1e2ab6b7f134ad0fd7",
+        "package_path": "04_设备/auctech/bm-180-3200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bm180_3200_e19c4f2e/module.json",
+      "module_sha256": "3cf4a4fff608275ed4e64ede46d1501560efc4c9ba27a9d2f78936b1d262ea66"
+    },
+    "bm210:2650": {
+      "title": "AUCTECH BM-210-2650",
+      "asset": {
+        "asset_id": "b0598334-c16c-5659-8ab0-ba11f77243a6",
+        "package_digest": "d3f8c5254a6de2ea33d316cbf5f6c6396aee33718b05cfcf15e8fa8430738c64",
+        "package_path": "04_设备/auctech/bm-210-2650__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bm210_2650_92955dca/module.json",
+      "module_sha256": "54734b4d9b383a253e882a14d5b1a1e5671c635da3f0d6ed6cf04b213278a5fa"
+    },
+    "bm280:2650": {
+      "title": "AUCTECH BM-280-2650",
+      "asset": {
+        "asset_id": "128e5f87-b6bd-553f-89d8-43dbe74155d8",
+        "package_digest": "603a5740b1c0882d7d0b10060e5d960beeeb1b556867c978745d1cb3b78bd48c",
+        "package_path": "04_设备/auctech/bm-280-2650__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bm280_2650_eae92932/module.json",
+      "module_sha256": "e0a5708df1def12fac28a9cfe42071c076fc9e814bf47420f300220eb93aa06f"
+    },
+    "bm35:1870": {
+      "title": "AUCTECH BM-35-1870",
+      "asset": {
+        "asset_id": "94be25c4-ba3d-5a7d-bdc7-4327d1426b29",
+        "package_digest": "f1f22d669e946ec699960e03c0361e7fe4101f4b9ead2fc76b0a331e091df6e7",
+        "package_path": "04_设备/auctech/bm-35-1870__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/bm35_1870_38e1cfc8/module.json",
+      "module_sha256": "ce3b1ee5131f9c5ce0426ea3dea591af2880cd7cf97d57476cc45abb4a7efab1"
+    },
+    "br06sc500": {
+      "title": "AUCTECH BR-06SC-500",
+      "asset": {
+        "asset_id": "dcba4a92-b3f5-5553-bc50-e00818eb6b19",
+        "package_digest": "0a1e8e4674cb27fc77b34c1abe685f1412a8325a3486b7144021b1dd5ac107a8",
+        "package_path": "04_设备/auctech/br-06sc-500__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br06sc500/module.json",
+      "module_sha256": "401d0b60722402bcd237f7ebea5c6dd9a2283d11db062d3308cb76b5e9a0799a"
+    },
+    "br06sc600": {
+      "title": "AUCTECH BR-06SC-600",
+      "asset": {
+        "asset_id": "b5755f3b-024a-5a61-92dd-d393a5765b2b",
+        "package_digest": "dcd6b9e0676aef4d9ff3a69aaea40b3c7adbc5badc4fa68ce4280180d8b94a74",
+        "package_path": "04_设备/auctech/br-06sc-600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br06sc600/module.json",
+      "module_sha256": "197996e97661a92a22301e1218a20cf957612c8c8fecc16a5bd39447e13952ac"
+    },
+    "br06sc700": {
+      "title": "AUCTECH BR-06SC-700",
+      "asset": {
+        "asset_id": "8cbce076-f41a-5abc-a0a6-e9a7d6ff7bd4",
+        "package_digest": "9fa80dc69f90262f5539f9a5eb70e07c61c3bc57047fc2259344bc15e0afe922",
+        "package_path": "04_设备/auctech/br-06sc-700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br06sc700/module.json",
+      "module_sha256": "c617fc224f27a59826f999a228dab764775f60970dfd97b5f6130e294cf45ee9"
+    },
+    "br07s930": {
+      "title": "AUCTECH BR-07S-930",
+      "asset": {
+        "asset_id": "a004e534-fa1e-54d4-b058-d6f44cefde05",
+        "package_digest": "fad2b62297dcaa428868c99ad4e2f4f8e2552ab8bae86bd2709ab0856a1ff3c4",
+        "package_path": "04_设备/auctech/br-07s-930__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br07s930/module.json",
+      "module_sha256": "22475d5a0e4ca109ceb55647918e6a024ba2b2ff83df4d8954fc659e3546488e"
+    },
+    "br10:1440": {
+      "title": "AUCTECH BR-10-1440",
+      "asset": {
+        "asset_id": "adeb3fff-cc46-5a5b-bfab-f9d62e30d89e",
+        "package_digest": "da9f8f031c3b193dc6a312c01116dc0cd9abea807e973ee11abfaeab130df9bf",
+        "package_path": "04_设备/auctech/br-10-1440__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br10_1440_6fd639fe/module.json",
+      "module_sha256": "269685c1027f10db878c36a8edde241ef297aba86de39f43cecb9e4f963491f3"
+    },
+    "br10l2050": {
+      "title": "AUCTECH BR-10L-2050",
+      "asset": {
+        "asset_id": "5b24b529-7f96-5653-aa12-0d328593a930",
+        "package_digest": "4a34821573386753a5fb3b66d1f41e7771818a66f5848885a70634c166d59479",
+        "package_path": "04_设备/auctech/br-10l-2050__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br10l2050/module.json",
+      "module_sha256": "34cef69faceba61eafa4848f31f0a9cfbb9b6ee2b295a6db399955e3f1217006"
+    },
+    "br25e1840": {
+      "title": "AUCTECH BR-25E-1840",
+      "asset": {
+        "asset_id": "65f9e3fd-4b57-59e5-a264-0b59904f5706",
+        "package_digest": "310683665806d52b236eaf8434258eef4f1776ba62e2be83c9772bb883c41bf7",
+        "package_path": "04_设备/auctech/br-25e-1840__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br25e1840/module.json",
+      "module_sha256": "d40b601bf0fc11b36bc2486ec0511097905983abb8db95dcc6b85e406ba5aa40"
+    },
+    "br45:1870": {
+      "title": "AUCTECH BR-45-1870",
+      "asset": {
+        "asset_id": "b343a865-f183-5159-b622-d3636b997fd1",
+        "package_digest": "be42f2683d11f7ed1fd41987cfa9dce6215f564bdc0f100a2805175c324b6e22",
+        "package_path": "04_设备/auctech/br-45-1870__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br45_1870_31ef08ee/module.json",
+      "module_sha256": "a35775d27b98d22da5485f38d12f6f440876e2ba83f5f158975dba3d84edf890"
+    },
+    "br80e2250": {
+      "title": "AUCTECH BR-80E-2250",
+      "asset": {
+        "asset_id": "bea0ac1b-11c8-5da0-92a4-a3a81d25eedd",
+        "package_digest": "f08871206013e163c8c3797ef99aeb311db506248c226ff8cca4ece5d53e2115",
+        "package_path": "04_设备/auctech/br-80e-2250__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/br80e2250/module.json",
+      "module_sha256": "064470decd5eae5187083b1b75faf8187c8f04f23bd543bead0592ee47701631"
+    },
+    "x10:1300": {
+      "title": "AUCTECH X10-1300",
+      "asset": {
+        "asset_id": "669533fc-a3a2-55c4-a959-8bf54889f3d8",
+        "package_digest": "d2d5d7c0834a50fe338c2399d03c2a4312c8c0240f98bff8bf8ac904a7b5b7e1",
+        "package_path": "04_设备/auctech/x10-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x10_1300_7a4523d9/module.json",
+      "module_sha256": "4517df129576f7f423376a5857be668becae385b541d1f1bf0e043098f828e61"
+    },
+    "x12:1300": {
+      "title": "AUCTECH X12-1300",
+      "asset": {
+        "asset_id": "605bcb8d-49e9-533e-8df7-7c4755f8c8fc",
+        "package_digest": "6d57abf69305297c72b9982b1a3cd195a7d0175c955fc8c3cd5256b8b1dcbf70",
+        "package_path": "04_设备/auctech/x12-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x12_1300_69ab1688/module.json",
+      "module_sha256": "6f78bfe08fdf790b774c98f9d0b5a3fb937ed0cf5cdcc379d87ea31222c3c438"
+    },
+    "x16:2000": {
+      "title": "AUCTECH X16-2000",
+      "asset": {
+        "asset_id": "d0b0f970-3435-53a9-b6ef-f817b74a401d",
+        "package_digest": "73167745bd3ea618a29ea7a92a462f07f1a3d181d568597e86b65e13ba1f7347",
+        "package_path": "04_设备/auctech/x16-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x16_2000_f74a02e9/module.json",
+      "module_sha256": "68915a80ecda4f52e6e472ea828751ad64952bcc645973bb90254c19ac5400f6"
+    },
+    "x16:960": {
+      "title": "AUCTECH X16-960",
+      "asset": {
+        "asset_id": "e1574941-69a6-5566-9b5a-d8ac919d3022",
+        "package_digest": "88dbec2ee4f52c869287aa179efc8e9d692bfdcc1c947b9b6964c67e9aa0c08d",
+        "package_path": "04_设备/auctech/x16-960__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x16_960_3a0c1db8/module.json",
+      "module_sha256": "f4bcdff0351725effb9299ac77a05beec9f7dc2c97ec82577fdb233b01502746"
+    },
+    "x20:1400": {
+      "title": "AUCTECH X20-1400",
+      "asset": {
+        "asset_id": "d0454448-5b79-5d33-8d83-01955c9ee8cf",
+        "package_digest": "6a55dcccc63d544bb24461fff5f9371e5f9188ba4127ebebf6a2545b40ebecde",
+        "package_path": "04_设备/auctech/x20-1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x20_1400_a97b8d2f/module.json",
+      "module_sha256": "dc65b639071063e51b90ad3f981317484b36201b2e4f351f3af8add0cd7b08b7"
+    },
+    "x25:1800": {
+      "title": "AUCTECH X25-1800",
+      "asset": {
+        "asset_id": "aef2cf60-770a-5ada-ac26-2368b71f69c3",
+        "package_digest": "e4cf08525a5ba0e0da2ba9574945984db485332e02e184e72328f66a92cfdfcf",
+        "package_path": "04_设备/auctech/x25-1800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x25_1800_9dd0cb11/module.json",
+      "module_sha256": "33d60a3f379a165ec4484eee918c07847f34955729180d204c748557892a7488"
+    },
+    "x30:1100": {
+      "title": "AUCTECH X30-1100",
+      "asset": {
+        "asset_id": "74d1ce04-8880-5e2e-b094-9bd0285ae4ba",
+        "package_digest": "f10830fd9aae403d7e4486e80c4bf8114698f485822a401d1068ec220baa50f2",
+        "package_path": "04_设备/auctech/x30-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x30_1100_d6051950/module.json",
+      "module_sha256": "68465f4209549f6671b0525f593084c78c142b55f8f92bdef88033b706c19d14"
+    },
+    "x3:618": {
+      "title": "AUCTECH X3-618",
+      "asset": {
+        "asset_id": "a4d07c0b-c6a3-5319-a47d-4d2a067dc87e",
+        "package_digest": "f1fedaa470e94d8b0db830ae399bece0e1038ebfdc10426850b4a9499476b056",
+        "package_path": "04_设备/auctech/x3-618__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x3_618_f15500c8/module.json",
+      "module_sha256": "8cda7dc492975d608b9b7d15b854ab0d043f816de9c552490837eafaf1a1d426"
+    },
+    "x5:910": {
+      "title": "AUCTECH X5-910",
+      "asset": {
+        "asset_id": "9ecba46e-3816-54df-9bc8-234b91038eae",
+        "package_digest": "958ae5cbc4ae6beda7d3755898af6faf6611995ea074cbc862a7b0f6d73bf2f8",
+        "package_path": "04_设备/auctech/x5-910__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x5_910_c0871eba/module.json",
+      "module_sha256": "edc55166792d419e74223bd0e893fc22c4f30fbf1bc451b55c957e9c256c57c9"
+    },
+    "x7:910": {
+      "title": "AUCTECH X7-910",
+      "asset": {
+        "asset_id": "5e043043-25c6-52ab-9a0d-3c8119ceef47",
+        "package_digest": "55c833674e325b0d8ef6009cfb11c71f06f989fb4f2454960f18c05e79fee25a",
+        "package_path": "04_设备/auctech/x7-910__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/x7_910_59cfc551/module.json",
+      "module_sha256": "a1fb4d61d1d3e275ec119158ebc9ccdfd3ff298b01465089dc7bc2064af4cc2b"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "peitian",
+  "models": {
+    "air10:1210": {
+      "title": "Peitian AIR10-1210",
+      "asset": {
+        "asset_id": "1d98794b-eac0-5b8f-99e3-595f4cc085d4",
+        "package_digest": "bce4f0393585d22a49210dabf6dc791f02715dcd06cbbc217bbba142a2575f21",
+        "package_path": "04_设备/peitian/air10-1210__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/air10_1210_c70a8cc5/module.json",
+      "module_sha256": "6ea3c0f01f5b123d4b6c129345a61116d5b128fa4bc04e0ffd917a8a6a82931e"
+    }
+  },
+  "source_profiles": []
+}

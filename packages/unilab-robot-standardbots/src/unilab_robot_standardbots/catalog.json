@@ -1,0 +1,40 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "standardbots",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "core": {
+      "title": "Standard Bots Core｜多源合并",
+      "asset": {
+        "asset_id": "682f8351-efb3-5e46-b631-34a6a2252199",
+        "package_digest": "072a8c00e18eb4eefe8c16e851c64c2f50c17ef71bf08fb5110d0d40f67cb0fe",
+        "package_path": "04_设备/standard_bots/core__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/core/module.json",
+      "module_sha256": "07fc901b6dade81cf754acad77db8afbb1cdf5632accf9011d29c52a8e50ade8"
+    },
+    "thor": {
+      "title": "Standard Bots Thor｜多源合并",
+      "asset": {
+        "asset_id": "7ed04d69-af15-54eb-97c4-58a89aa27bca",
+        "package_digest": "de662b56519cd509e5061a8b2f9ef46d5270e6f83ac1bf4b3aba369d69315c8a",
+        "package_path": "04_设备/standard_bots/thor__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/thor/module.json",
+      "module_sha256": "814e8015bac57666603fe61b6e52625525186f6b0c86fbf10212a073670eb8b4"
+    }
+  },
+  "source_profiles": []
+}

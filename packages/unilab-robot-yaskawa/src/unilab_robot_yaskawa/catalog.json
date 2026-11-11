@@ -1,0 +1,1608 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "yaskawa",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ar1440": {
+      "title": "Yaskawa Motoman AR1440｜多源合并",
+      "asset": {
+        "asset_id": "fbd2258d-9d01-5d75-be60-e2fcfee1fdef",
+        "package_digest": "1f84cada76b842ff04cf2c6db536d4a076076e8f675ca7e7860a6a17b066a222",
+        "package_path": "04_设备/yaskawa_motoman/ar1440__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ar1440/module.json",
+      "module_sha256": "9d990a67d33d6a2f5bfe184c372016572ceb45d4c512b0ae4cf777ddbe73e4cc"
+    },
+    "ar2010": {
+      "title": "Yaskawa Motoman AR2010｜多源合并",
+      "asset": {
+        "asset_id": "34253bdf-f002-5df2-b46b-b6d029320e80",
+        "package_digest": "46ee7baeb4ab590df176915bdd39aafebb3526fe2a8e69e34807d5a44e2d71fa",
+        "package_path": "04_设备/yaskawa_motoman/ar2010__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ar2010/module.json",
+      "module_sha256": "16889f4c325d9a74a85f6917f906ff4f5471dd419b32fbb768b1a1adc4fdc0ce"
+    },
+    "csda10f": {
+      "title": "Yaskawa Motoman CSDA10F｜多源合并",
+      "asset": {
+        "asset_id": "86e0211b-ae87-545a-a9ca-64b8a9266e9a",
+        "package_digest": "caa2287dc5c2d3c6957e84ea3f11be84192749d5e5f266de42b72f7fd2c46970",
+        "package_path": "04_设备/yaskawa_motoman/csda10f__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/csda10f/module.json",
+      "module_sha256": "7814260d912b33005f8dd13b0705d57c8a0c49bd04b70aa7d86e6f665e44d112"
+    },
+    "es200d": {
+      "title": "Yaskawa Motoman ES200D｜多源合并",
+      "asset": {
+        "asset_id": "3d3b9935-e06b-5b33-a93a-090f184ea6ec",
+        "package_digest": "5a61dd11c8b21761c5851a14ba63c13d7478a2b8997309352bcf62bceb218cd5",
+        "package_path": "04_设备/yaskawa_motoman/es200d__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es200d/module.json",
+      "module_sha256": "6e412045c1fd45adc9cac73e962d25e3227564160b67479a25d770061a1a2cb6"
+    },
+    "gp10": {
+      "title": "Yaskawa Motoman GP10｜多源合并",
+      "asset": {
+        "asset_id": "ac8a2cbf-7c48-59b0-ad21-8600b8df4ec1",
+        "package_digest": "057475e27e6a30dc811961d4eccaaf126c01cbeda6c1ef80145401f5e798ad8a",
+        "package_path": "04_设备/yaskawa_motoman/gp10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp10/module.json",
+      "module_sha256": "2731e77e69f3e99ce9ac87004b80077e2f003b97636b080db5fafd1fbdff89c2"
+    },
+    "gp110": {
+      "title": "Yaskawa Motoman GP110｜多源合并",
+      "asset": {
+        "asset_id": "7f576777-64e5-5d8a-b566-43031c6c2448",
+        "package_digest": "5c8ba5dcbfacb2efc2184c58395d1c1538b84ea92cd3bc1c1c4a0e25cfeb998a",
+        "package_path": "04_设备/yaskawa_motoman/gp110__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp110/module.json",
+      "module_sha256": "25a79c9296a100bc58acde5182aacd0b02c30b982b84a18a016028bf5e597887"
+    },
+    "gp12": {
+      "title": "Yaskawa Motoman GP12｜多源合并",
+      "asset": {
+        "asset_id": "42ba3661-0c29-5451-9089-6e8fcd5e3058",
+        "package_digest": "34b15d6cdff4ab6b6d638f676f81d452d28e6bf7e6aecb42a21f0d61c169a6bd",
+        "package_path": "04_设备/yaskawa_motoman/gp12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp12/module.json",
+      "module_sha256": "ff0ce5dea38ead2986f160f009dab2e6d88fec3cfff4bfc6407b18c4be198c19"
+    },
+    "gp25": {
+      "title": "Yaskawa Motoman GP25｜多源合并",
+      "asset": {
+        "asset_id": "6c76a942-b3f5-5894-ab8d-14f164b93d8f",
+        "package_digest": "79c1ce7d74046a74e809940f9842a9e2b90fcca9a739719b49a3ef997b479f86",
+        "package_path": "04_设备/yaskawa_motoman/gp25__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp25/module.json",
+      "module_sha256": "b6ae86eae2aa1eaa495ad5b0e09bef3652efdf904f3654bdaf45e15927f5dea5"
+    },
+    "gp35l": {
+      "title": "Yaskawa Motoman GP35L｜多源合并",
+      "asset": {
+        "asset_id": "8bb794ab-c438-5357-a0a0-f702ba1bdf61",
+        "package_digest": "29c106500a94da15dd4bd7b64a83ad9ccafe73147215a89e881914a137511fc6",
+        "package_path": "04_设备/yaskawa_motoman/gp35l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp35l/module.json",
+      "module_sha256": "1fab4b7a4c7b29d826105cc72e587ea084f4604b86403ea7904d0b318f718499"
+    },
+    "gp4": {
+      "title": "Yaskawa Motoman GP4｜多源合并",
+      "asset": {
+        "asset_id": "6f919445-4d6f-5086-a16b-c20e19591884",
+        "package_digest": "495b9b1e44097260ece9ffc408951bd35681bda555c34e609e75fbf8b9a92708",
+        "package_path": "04_设备/yaskawa_motoman/gp4__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp4/module.json",
+      "module_sha256": "20a7e38a59a6292db0c5e2264b86c21e3c5f9f210e305809c11fb2233a998ec1"
+    },
+    "gp50": {
+      "title": "Yaskawa Motoman GP50｜多源合并",
+      "asset": {
+        "asset_id": "73a3d04c-de72-52a7-bba6-3c351a4ef314",
+        "package_digest": "51e6eed1a342d34f61310928a4748935370f478e4c6aaba82827cf3638c87d3c",
+        "package_path": "04_设备/yaskawa_motoman/gp50__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp50/module.json",
+      "module_sha256": "86e90f5623cf318879a6a2e11033ea07c516b42c3096a9f845ca5bc8c33d2484"
+    },
+    "gp7": {
+      "title": "Yaskawa Motoman GP7｜多源合并",
+      "asset": {
+        "asset_id": "f650cd38-7b33-5eb4-b692-c6d1f4ac0c5d",
+        "package_digest": "d0a5501bf54777013d25649c93e523af965e18199a092ba99c79b9e96a261af3",
+        "package_path": "04_设备/yaskawa_motoman/gp7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp7/module.json",
+      "module_sha256": "bc699cd98c69f87e99fc1ccf219bd02a706ca470494388446cd9d87c11cee834"
+    },
+    "gp70l": {
+      "title": "Yaskawa Motoman GP70L｜多源合并",
+      "asset": {
+        "asset_id": "6c705d16-20b7-55b4-a74d-483207d60eac",
+        "package_digest": "4fb526bab5eb16279c53de7699e68b70c1b4df4d159cecf441397308b7ab4248",
+        "package_path": "04_设备/yaskawa_motoman/gp70l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp70l/module.json",
+      "module_sha256": "5202eb36cc837f6dc243787b16505c410b0cd51e36aed111e19bc9daf05f33e1"
+    },
+    "gp8": {
+      "title": "Yaskawa Motoman GP8｜多源合并",
+      "asset": {
+        "asset_id": "48116228-a406-5bec-89a9-3c2406d821b3",
+        "package_digest": "72b87c85493b3b95f264bf2138d8c32d1862cbeaa3a4dcf4911b43cf71d4e704",
+        "package_path": "04_设备/yaskawa_motoman/gp8__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp8/module.json",
+      "module_sha256": "32a4c6f68e61ff02a657171e2d4fc2475362d1b421f0a4cda28da32e7b956f48"
+    },
+    "gp88": {
+      "title": "Yaskawa Motoman GP88｜多源合并",
+      "asset": {
+        "asset_id": "305580b7-cee9-5757-bb90-a92dcc476eb1",
+        "package_digest": "50dc8a0b3ac01de45696d42652c595aa6068da55a1606db199ea3dbc1e89cb17",
+        "package_path": "04_设备/yaskawa_motoman/gp88__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp88/module.json",
+      "module_sha256": "2d746936e7b5f2620c592c51b648f36297cbffd96e89ac7fef868775211b6a71"
+    },
+    "hc10": {
+      "title": "Yaskawa Motoman HC10｜多源合并",
+      "asset": {
+        "asset_id": "79de7470-600c-5fb1-9815-34beedee7f0e",
+        "package_digest": "b59b240ca3908dda69fbfbbdddccd755424acd1b01d3d805b920ce7be506f050",
+        "package_path": "04_设备/yaskawa_motoman/hc10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hc10/module.json",
+      "module_sha256": "1b95ed254542a35168694bf954c65224c73b4f4734b3a1a3e6d1231aa051ec27"
+    },
+    "hc10dtp": {
+      "title": "Yaskawa Motoman HC10DTP｜多源合并",
+      "asset": {
+        "asset_id": "542b74cb-0ae4-57f8-8dff-8fe980a20f6a",
+        "package_digest": "ad6483866e989f33bca4c5c11fb8257f19b2c4d47cf2cd6a40b748daeccbfffd",
+        "package_path": "04_设备/yaskawa_motoman/hc10dtp__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hc10dtp/module.json",
+      "module_sha256": "dc7954568d2d8f251c4afd0f18a23815db24d29caa4fb94a50cf53ab259582bc"
+    },
+    "hc20dtp": {
+      "title": "Yaskawa Motoman HC20DTP｜多源合并",
+      "asset": {
+        "asset_id": "48c5d21d-40f1-5581-925b-3e41f3475450",
+        "package_digest": "0b84b39d0245d2ebc4a92dd7c56eab04dc397886bb6b61606191808bd20ddd1f",
+        "package_path": "04_设备/yaskawa_motoman/hc20dtp__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hc20dtp/module.json",
+      "module_sha256": "973fd05e9cf024f48bdb6256a714deac6126b9cb8f3d34a8a40b041dcee2a138"
+    },
+    "hp20d": {
+      "title": "Yaskawa Motoman HP20D｜多源合并",
+      "asset": {
+        "asset_id": "fad213ce-6d15-51d8-b33a-f3804373e9d6",
+        "package_digest": "05adc7172c3fa9f0683c8275c95db89548e176a71b2529bb2472ee31cae7a350",
+        "package_path": "04_设备/yaskawa_motoman/hp20d__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hp20d/module.json",
+      "module_sha256": "eececf3e765c490dab3ea944bf8ee2f79fbeebfed3f94d5ecc78e4222e1da91d"
+    },
+    "hp20d6": {
+      "title": "Yaskawa Motoman HP20D-6｜多源合并",
+      "asset": {
+        "asset_id": "99f7bab5-b968-536d-8e6b-96db6aa3d1e9",
+        "package_digest": "1e1503c2b6ad8d3672449e46f4bb2f79c7645cda77a1c82a18b6863450e1acb1",
+        "package_path": "04_设备/yaskawa_motoman/hp20d6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hp20d6/module.json",
+      "module_sha256": "5a8475b1c78b9a76c8eeafe34b4ecbafd3ffa7a244dc142cc13adffe726ef5da"
+    },
+    "hp20rd": {
+      "title": "Yaskawa Motoman HP20RD｜多源合并",
+      "asset": {
+        "asset_id": "6df20cdc-201a-5d50-8833-ced94b3a43a9",
+        "package_digest": "31c642b0ff5a5fb7440cb4edf911a9ae54506aa0dea2c67c8773a477976d5fdc",
+        "package_path": "04_设备/yaskawa_motoman/hp20rd__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hp20rd/module.json",
+      "module_sha256": "55a1535532a593a3d10816b0c85f83ed45b5e268c3f2860b5abb4a7f583ab379"
+    },
+    "ma1400": {
+      "title": "Yaskawa Motoman MA1400｜多源合并",
+      "asset": {
+        "asset_id": "bea8cf47-84ff-57c8-a048-9c9daf0ff52b",
+        "package_digest": "ca45465fae5b4ec575286c4dc2f076a0c4bb295605557f72b52cb0a5e65c0a18",
+        "package_path": "04_设备/yaskawa_motoman/ma1400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma1400/module.json",
+      "module_sha256": "92ea00c491f5407c35e9e21c90d0faa816cb2182085ed963ca32c90623b25ae0"
+    },
+    "ma1440": {
+      "title": "Yaskawa Motoman MA1440｜多源合并",
+      "asset": {
+        "asset_id": "583dd583-36e3-5db3-b9c8-1656f3cda7b4",
+        "package_digest": "0e7fedd2245e189982656d685df0647a762f48cd74b7b180fe5aa24653e0eb4c",
+        "package_path": "04_设备/yaskawa_motoman/ma1440__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma1440/module.json",
+      "module_sha256": "1b92a5fc6fb3adcbf250b90f5c8787477754d18b5618bd0bca866c39a5528bad"
+    },
+    "ma1800": {
+      "title": "Yaskawa Motoman MA1800｜多源合并",
+      "asset": {
+        "asset_id": "6edc220b-5f85-5e53-8533-2e161cddb9a6",
+        "package_digest": "79fb6bc7d888cc87e8dbea6eebd156531d4e2a7183069724c9e0ce8ccc6b4a3d",
+        "package_path": "04_设备/yaskawa_motoman/ma1800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma1800/module.json",
+      "module_sha256": "10fe234347368bc47b85391ca4e5888f2168f6a2ce4ef62dcb209e6f224d9799"
+    },
+    "ma1900": {
+      "title": "Yaskawa Motoman MA1900｜多源合并",
+      "asset": {
+        "asset_id": "27d0190b-3dac-5600-a13f-d44df09124e6",
+        "package_digest": "e039b3a63f15391c29fcbc1b0ca677d579704d837dc104a3ffb399753f0692c5",
+        "package_path": "04_设备/yaskawa_motoman/ma1900__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma1900/module.json",
+      "module_sha256": "804e3149eead25fb5c54fab4104de25baaaf5ac91d8f2cdd49e21c9486ea2aaa"
+    },
+    "ma3100": {
+      "title": "Yaskawa Motoman MA3100｜多源合并",
+      "asset": {
+        "asset_id": "9c4ccf43-41f3-50b0-8b5c-750b62bc2fc2",
+        "package_digest": "2b6d6ff172e412af2f56289c9b277b0aa47de438765c34d817e06840651daf6d",
+        "package_path": "04_设备/yaskawa_motoman/ma3100__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma3100/module.json",
+      "module_sha256": "6efc5e97659d6a75398ff7011f05f8470a00f6a9d0fc8240eda4c9c70629c152"
+    },
+    "mh180": {
+      "title": "Yaskawa Motoman MH180｜多源合并",
+      "asset": {
+        "asset_id": "d47dcfe6-f143-559d-929c-26e36323c3fb",
+        "package_digest": "b3b469a615ccaadee94908a94e99ab0bd7d2820e71dfb20ee47b8131d25bdb1d",
+        "package_path": "04_设备/yaskawa_motoman/mh180__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh180/module.json",
+      "module_sha256": "d2b9f0cd4b88417131b4ac9ccb8d16985bfce86930d0e2c54ff4eb42d5a27171"
+    },
+    "mh24": {
+      "title": "Yaskawa Motoman MH24｜多源合并",
+      "asset": {
+        "asset_id": "4aae7c17-f686-5b5e-8cc7-86e48674ef3d",
+        "package_digest": "dc1b267af5fe9daa0b99d4b0ee00ab78130b433898f00cfb57b8f2b7d267a444",
+        "package_path": "04_设备/yaskawa_motoman/mh24__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh24/module.json",
+      "module_sha256": "5598ee538b66835cd7523a1547b40e92fcb02354be69d83f9757ae447888b298"
+    },
+    "mh5": {
+      "title": "Yaskawa Motoman MH5｜多源合并",
+      "asset": {
+        "asset_id": "151f3b7c-25a6-5b3d-abbf-aa64b1917c64",
+        "package_digest": "e1a088ad4bcd29fb5fe6872cbfaa9113f8a2c4d66ce7cd746d01d0b4f8a59947",
+        "package_path": "04_设备/yaskawa_motoman/mh5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh5/module.json",
+      "module_sha256": "bb64b8622b28f5fca9d1b7df8d7b06b57deeac5a73c3fd716dd090ba14279b86"
+    },
+    "mh50": {
+      "title": "Yaskawa Motoman MH50｜多源合并",
+      "asset": {
+        "asset_id": "a77d63e4-4dd6-5696-b63d-1e8725689efd",
+        "package_digest": "2fa427315a04227039bfdb8ec396753894af6ecd5f8513f7ba3c03a056fd6283",
+        "package_path": "04_设备/yaskawa_motoman/mh50__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh50/module.json",
+      "module_sha256": "0478f9c787d427aefc56a6e31cd61ff6f053574f58b8dab8ac0e170c6de45cbc"
+    },
+    "mh50:20": {
+      "title": "Yaskawa Motoman MH50-20｜多源合并",
+      "asset": {
+        "asset_id": "79ca6e2c-db56-5207-9c03-f3c37a9dca45",
+        "package_digest": "69c420f48d76f28780ff62c5b5d09cfdbc864dd3b6b7da32ae792a9051441f7c",
+        "package_path": "04_设备/yaskawa_motoman/mh50_20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh50_20_32417609/module.json",
+      "module_sha256": "f10a96eba3a577349f94acf7aa39b3034b9e00de2f9b03b4099f0fed2398e9b2"
+    },
+    "mh50:35": {
+      "title": "Yaskawa Motoman MH50-35｜多源合并",
+      "asset": {
+        "asset_id": "cbc38fe2-d252-5973-b9cb-c4bf4724a402",
+        "package_digest": "083b15a622274b3064fb6d6a4c7ba10fd4fe96b2c4e803552506276a45930c07",
+        "package_path": "04_设备/yaskawa_motoman/mh50_35__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh50_35_8f405b11/module.json",
+      "module_sha256": "40e5e7ecd5b8fe18e2d409b0c3177debdcae575c6638efd1597d01e632969ead"
+    },
+    "mh5s": {
+      "title": "Yaskawa Motoman MH5S｜多源合并",
+      "asset": {
+        "asset_id": "b6c9da96-881e-565b-969e-2dc386c3b984",
+        "package_digest": "2c1f21ebd133803e41c99118dd673eaf2d0fb02f0910230114a0239cd3ef5ec7",
+        "package_path": "04_设备/yaskawa_motoman/mh5s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh5s/module.json",
+      "module_sha256": "0564aaed79ced67c1780daa4e6096fadbb7f45a087a83700ea0c43c666b282a6"
+    },
+    "mh6": {
+      "title": "Yaskawa Motoman MH6｜多源合并",
+      "asset": {
+        "asset_id": "ac12671c-0601-5e9d-9d6f-4c0bfffa6f7d",
+        "package_digest": "d4fe2969a0cea23215ed9d64fe54260bbc65d4214d6af9bac4c70eec9494b24f",
+        "package_path": "04_设备/yaskawa_motoman/mh6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh6/module.json",
+      "module_sha256": "6a3e2e1659d52e0d8358a1d71d96d1901b7f3bccb7cb8283ed7aba897ca6c09e"
+    },
+    "mh6s": {
+      "title": "Yaskawa Motoman MH6S｜多源合并",
+      "asset": {
+        "asset_id": "1203ca11-3a44-5ac5-9da3-2b9302d4e2d6",
+        "package_digest": "7b6305125dee946cac096d74d4c9775a3dd68a772a06fec16d9b7b318d90d0df",
+        "package_path": "04_设备/yaskawa_motoman/mh6s__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh6s/module.json",
+      "module_sha256": "98fc6a8912639f54b585fc0ee8b44cf7046c43fad6fc5864299f3c3db30ba6de"
+    },
+    "mh6s10": {
+      "title": "Yaskawa Motoman MH6S-10｜多源合并",
+      "asset": {
+        "asset_id": "c410a495-c661-5403-9578-6ec63b8dd543",
+        "package_digest": "2ef1279a78d1146810dfa37edc5aca7e6165835e02a897b98ff177178ae9e18e",
+        "package_path": "04_设备/yaskawa_motoman/mh6s10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh6s10/module.json",
+      "module_sha256": "d7258aa9167e3eaf7a81db2e9e980eedac2c28ef199dffbb7e80c1c86376d442"
+    },
+    "motomini": {
+      "title": "Yaskawa Motoman MotoMini｜多源合并",
+      "asset": {
+        "asset_id": "184bfca6-a57f-5187-bd99-1bdd29d9fbb5",
+        "package_digest": "582fe0f316ac7c4f99cc0c667650826ca525498c39ebbea27e1dd80ed8b30c20",
+        "package_path": "04_设备/yaskawa_motoman/motomini__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/motomini/module.json",
+      "module_sha256": "a8452c7685b2c0f4824f272d3981b89fd21e65c3bc5238c08c3d5510661474be"
+    },
+    "mpk2": {
+      "title": "Yaskawa Motoman MPK2｜多源合并",
+      "asset": {
+        "asset_id": "13d2c6ab-6481-52fd-8927-9ec90a44b7e5",
+        "package_digest": "8ef3bb9e6e4ce2d8cc4d17c2709a057e6eaa49ff994b6412037833660de129bb",
+        "package_path": "04_设备/yaskawa_motoman/mpk2__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpk2/module.json",
+      "module_sha256": "b54367197c796d85688ab056b6a40ace1ffaf56ce916bc2a608f1d89265b8587"
+    },
+    "mpx1150": {
+      "title": "Yaskawa Motoman MPX1150｜多源合并",
+      "asset": {
+        "asset_id": "7000cba0-73ad-59fe-9b3b-ab311a2456f5",
+        "package_digest": "61568b5ab58ed4ef2e5933d0947a35d21740c4f4d1e676c11d50713c98fad2ce",
+        "package_path": "04_设备/yaskawa_motoman/mpx1150__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpx1150/module.json",
+      "module_sha256": "4cbe2c0ff177b8c5ad09cbfdcc36555079e17bf49ce3cdfc8521a56914f77683"
+    },
+    "mpx1950": {
+      "title": "Yaskawa Motoman MPX1950｜多源合并",
+      "asset": {
+        "asset_id": "7eececeb-acbc-54b9-9643-e4b18e596a9e",
+        "package_digest": "c183830977b3fe6ae72bf29ca69ee4c62f5fcb4ae77ac411e6d26e06bada6414",
+        "package_path": "04_设备/yaskawa_motoman/mpx1950__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpx1950/module.json",
+      "module_sha256": "b60652928ae1d4483a76d03b18e2012cff3b5237f787d05a23820d34de889db7"
+    },
+    "mpx2600": {
+      "title": "Yaskawa Motoman MPX2600｜多源合并",
+      "asset": {
+        "asset_id": "c8f914f1-be8c-53c4-b85a-d49a6a3249b2",
+        "package_digest": "d906eca2d2054530913f332aeae33f31ffdf08d510e3dca0e1c15198ca296afe",
+        "package_path": "04_设备/yaskawa_motoman/mpx2600__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpx2600/module.json",
+      "module_sha256": "1623474a06404dc15c848c4a6c94f7ee0f50abea2bf0c3305d58e498dbe91c3b"
+    },
+    "mpx3500": {
+      "title": "Yaskawa Motoman MPX3500｜多源合并",
+      "asset": {
+        "asset_id": "a0dee339-edcd-58b0-ae1b-0116016b2365",
+        "package_digest": "7c627f6ae9e5800ea2da5c0b5d487ea2fdedadc9137130b917650bc3b896e2e9",
+        "package_path": "04_设备/yaskawa_motoman/mpx3500__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpx3500/module.json",
+      "module_sha256": "df0228752d121ea88217d1734936306edb2c8ed4a707ddb45c7326b590387b64"
+    },
+    "ms120": {
+      "title": "Yaskawa Motoman MS120｜多源合并",
+      "asset": {
+        "asset_id": "edb59f5c-4c0a-5110-91d6-4f0ec7c9f677",
+        "package_digest": "17fc1d50f0d76a0f2e46aa6a38c75c5566fbabd349dbe86629bbbea52a06a096",
+        "package_path": "04_设备/yaskawa_motoman/ms120__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ms120/module.json",
+      "module_sha256": "861012bd78ea0b7267a443249d67bb98f311dde1fbbdbe43274c3bf4944a3469"
+    },
+    "up20": {
+      "title": "Yaskawa Motoman UP20｜多源合并",
+      "asset": {
+        "asset_id": "2add1795-5fc2-5298-9053-a2cef1660d64",
+        "package_digest": "0459253fdc5adeb49165540b30f02396c94669bd94eda4953de4a614f87593ed",
+        "package_path": "04_设备/yaskawa_motoman/up20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/up20/module.json",
+      "module_sha256": "354fcd2f2f85ffed66d8aa0f904d7164101f12683c9f9298b094450082f71f2e"
+    },
+    "up6": {
+      "title": "Yaskawa Motoman UP6｜多源合并",
+      "asset": {
+        "asset_id": "ea43aed8-f278-585d-82fd-99f8e6066267",
+        "package_digest": "31d5f85efae30dc2f0019dbd99821b353df9fa183e8df47f485c5fb015025019",
+        "package_path": "04_设备/yaskawa_motoman/up6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/up6/module.json",
+      "module_sha256": "cc65e809285f9aa2e68210a174b3909561c6840991828b59c0250f8076f9eec0"
+    },
+    "gp20": {
+      "title": "Yaskawa Motoman GP20｜多源合并",
+      "asset": {
+        "asset_id": "9ea51506-e966-5c2d-b04c-ac52b8ef2953",
+        "package_digest": "96e4e1e551de6791795c9b697ab34e833b12cfd69fda338c8ca60b1966ad045f",
+        "package_path": "04_设备/yaskawa_motoman/gp20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp20/module.json",
+      "module_sha256": "13c41d3b49a8c860ae1633bfbd0acefa73a82a09cb0192024020bcf4e9dc4fa6"
+    },
+    "gp20hl": {
+      "title": "Yaskawa Motoman GP20HL｜多源合并",
+      "asset": {
+        "asset_id": "a33643fb-7a4f-5071-b6ec-785e6111ffef",
+        "package_digest": "25e977740917b7047e61c9b205675c948221498806aa9411ad997cccdefc419c",
+        "package_path": "04_设备/yaskawa_motoman/gp20hl__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp20hl/module.json",
+      "module_sha256": "3d246c1c0f68208186078040c1e0e41dbfeb208150d734687032026391cbf174"
+    },
+    "mpl80": {
+      "title": "Yaskawa Motoman MPL80｜多源合并",
+      "asset": {
+        "asset_id": "3435db9b-9e43-56ae-82a0-f641f57fc167",
+        "package_digest": "005dea1ba888bf6f6bf31f0f2f23849220c20dc2227fc6890808249dd698a742",
+        "package_path": "04_设备/yaskawa_motoman/mpl80__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mpl80/module.json",
+      "module_sha256": "861008f8d3f4479e457b18eda1554263811efffc0d768e13e7d9d1be3cb117ce"
+    },
+    "ar3120": {
+      "title": "Yaskawa Motoman AR3120｜多源合并",
+      "asset": {
+        "asset_id": "fc7790a8-fd96-5e5c-b4b6-60c149b9d9e3",
+        "package_digest": "6ffa191aed9225ebfd5f91e02148a43e7cf85b914b60705ba5d66e3f43909da3",
+        "package_path": "04_设备/yaskawa_motoman/ar3120__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ar3120/module.json",
+      "module_sha256": "c5cf2b460c0ff4354bd949add8fa15b0a6384b477dcbb0dfd2c6b5c116b08295"
+    },
+    "ga50": {
+      "title": "Yaskawa Motoman GA50｜多源合并",
+      "asset": {
+        "asset_id": "9bba5540-0db3-52c7-ae58-45f691a08eb2",
+        "package_digest": "28f8c5cef2c1a64ca0b5324a9b908fa79d89687c8f468a3ceeea644d42cdef98",
+        "package_path": "04_设备/yaskawa_motoman/ga50__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ga50/module.json",
+      "module_sha256": "d3d543139db1761a15f6a3af41733a5355bbbc937c212e2591eb8fa93570ee7a"
+    },
+    "gp25:12": {
+      "title": "Yaskawa Motoman GP25-12｜多源合并",
+      "asset": {
+        "asset_id": "7887befa-91d2-564d-8bcc-f4cf1a49a584",
+        "package_digest": "0320923e4bb4a97f3790ab663ca455639e6090d026b18af4724cb49d6d94ce0b",
+        "package_path": "04_设备/yaskawa_motoman/gp25_12__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp25_12_bd8a3af7/module.json",
+      "module_sha256": "5b3c2d7bc01b4a1b4d10fd43da2e78f28cf763a23809bbc794b91bbcd72ffb9a"
+    },
+    "ma2010": {
+      "title": "Yaskawa Motoman MA2010｜多源合并",
+      "asset": {
+        "asset_id": "15e6eee5-1c47-5640-8605-c5a7ab474191",
+        "package_digest": "92c9090cc3390ba15305254bc520b06b95290e32e756d9214d69a396891ef0ab",
+        "package_path": "04_设备/yaskawa_motoman/ma2010__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ma2010/module.json",
+      "module_sha256": "540cd31259f82d9748c605b16533c5f51c30d632d34fcfd8b0f7bcb30054ef43"
+    },
+    "up50n": {
+      "title": "Yaskawa Motoman UP50N｜多源合并",
+      "asset": {
+        "asset_id": "bb8b6ffc-8045-5499-bc91-fec78e290a0b",
+        "package_digest": "e00abeef5993b1239ceeb8a0bf1144ba6ba960568e373262ea4b9160847674fb",
+        "package_path": "04_设备/yaskawa_motoman/up50n__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/up50n/module.json",
+      "module_sha256": "8ac280954273c3a502a2dfe466057ea07a13b20e4a2eaf352cae9b0f3c971d0e"
+    },
+    "es165d": {
+      "title": "Yaskawa Motoman ES165D｜多源合并",
+      "asset": {
+        "asset_id": "f6a94a29-adae-5cbd-9598-69decbe080e5",
+        "package_digest": "ae57e817f34395097e5e6c74803780618ee012ace82fe2c2fbdef79f95bb229b",
+        "package_path": "04_设备/yaskawa_motoman/es165d__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es165d/module.json",
+      "module_sha256": "63922e66adbb61d221c6a71f8a79d6d9989a9e3fd97cc3683bae63329c33c013"
+    },
+    "es165d100": {
+      "title": "Yaskawa Motoman ES165D-100｜多源合并",
+      "asset": {
+        "asset_id": "d6d5a5d4-15cb-5b51-b2fa-a6405df7221e",
+        "package_digest": "75f918664b2831cb536443cfc918bd9be48993cf2aad178a258f506bfde173a5",
+        "package_path": "04_设备/yaskawa_motoman/es165d100__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es165d100/module.json",
+      "module_sha256": "2eaf4ebaba294eed61864fa768b379ac22218dd5010079d136c241138b8d2706"
+    },
+    "es165rd": {
+      "title": "Yaskawa Motoman ES165RD｜多源合并",
+      "asset": {
+        "asset_id": "4b8f42c6-a9bf-530c-8ddc-a886793b4d41",
+        "package_digest": "5be7ac89cce5de0576f2238a7896c5ab94bf9f04d0029a2e6d75476432bd8140",
+        "package_path": "04_设备/yaskawa_motoman/es165rd__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es165rd/module.json",
+      "module_sha256": "b516521db906e25c22a27dd07e6ff729700209ddf9cf6e477803af3216bb384a"
+    },
+    "gp165r": {
+      "title": "Yaskawa Motoman GP165R｜多源合并",
+      "asset": {
+        "asset_id": "3661c7d2-a710-5a53-b2fb-a897a54fdb7e",
+        "package_digest": "31ab142a877bb802551c7210536284d81378068fb1796f83f4ec583b66168b6b",
+        "package_path": "04_设备/yaskawa_motoman/gp165r__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp165r/module.json",
+      "module_sha256": "1e6837dc88cd793ef7c5d734b7ded457672f0eac4df04d95264676324cf31802"
+    },
+    "gp180": {
+      "title": "Yaskawa Motoman GP180｜多源合并",
+      "asset": {
+        "asset_id": "db99f9b6-ffc3-5788-ab5b-83a994e9a84d",
+        "package_digest": "7d804c11a44d8863efe29ddcc45289bb0669c735865ffd4313b83c9e0c6f9892",
+        "package_path": "04_设备/yaskawa_motoman/gp180__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp180/module.json",
+      "module_sha256": "e5e54a081f33cf664a545ba0809fc8f7c43674021d04d493c1be2003a759931d"
+    },
+    "gp180:120": {
+      "title": "Yaskawa Motoman GP180-120｜多源合并",
+      "asset": {
+        "asset_id": "5f107ba1-ecc8-5189-803d-b05dd20f0bab",
+        "package_digest": "c85aec9ab76eaa0a14f720a60528754df588b62aa67fdde377b780ecee0b93f7",
+        "package_path": "04_设备/yaskawa_motoman/gp180_120__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp180_120_9f370c3c/module.json",
+      "module_sha256": "5af90bae0ebae7bd5447044a9192c7c45bf03da6b2b6ad49b153c23a07f0ede8"
+    },
+    "gp200r": {
+      "title": "Yaskawa Motoman GP200R｜多源合并",
+      "asset": {
+        "asset_id": "838516a8-80b6-5632-9eb3-9c01d558d260",
+        "package_digest": "31ff669a6459bce9e5956009997e1456218460dde23b4a2716df6b593c0206e5",
+        "package_path": "04_设备/yaskawa_motoman/gp200r__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp200r/module.json",
+      "module_sha256": "1ccfd37f0e00257eb590de21159bb280894455afa13d06b8fc43fd9b136d81c9"
+    },
+    "gp225": {
+      "title": "Yaskawa Motoman GP225｜多源合并",
+      "asset": {
+        "asset_id": "e896fb2d-214a-57db-a0ee-3642776332d9",
+        "package_digest": "4d396bf0bb8846e4e8910e95c7e8ebfe0715a637aee777b18165e943723150b4",
+        "package_path": "04_设备/yaskawa_motoman/gp225__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp225/module.json",
+      "module_sha256": "aabf23b3d062c64930495943bda1cc0d3fc1204959948758912f0757e89182b2"
+    },
+    "gp250": {
+      "title": "Yaskawa Motoman GP250｜多源合并",
+      "asset": {
+        "asset_id": "6930eff4-5d36-57d3-838e-0ea9064e8d02",
+        "package_digest": "1bfaf9d69f788a7fa7bbafe4bf0510132c62de7838bd7c31ab86ca233635b3db",
+        "package_path": "04_设备/yaskawa_motoman/gp250__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp250/module.json",
+      "module_sha256": "95eac007002bfb900640ad2a9a6b98b2264f39d5f6eabe0d5f3d2494b93c1491"
+    },
+    "mh180:120": {
+      "title": "Yaskawa Motoman MH180-120｜多源合并",
+      "asset": {
+        "asset_id": "ebeffb72-0a8f-5e1d-a2b0-67833dcadc1c",
+        "package_digest": "02bc56efc180f91d4ab6e1090999d50a0f27626b9e1e26ce9c5f4a0b652d7207",
+        "package_path": "04_设备/yaskawa_motoman/mh180_120__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh180_120_eeeff98f/module.json",
+      "module_sha256": "eda200ee5e43830f3afbe5e9d76ea0520cc5dec6722b6ae985f1f49b8f758dfd"
+    },
+    "mh200": {
+      "title": "Yaskawa Motoman MH200｜多源合并",
+      "asset": {
+        "asset_id": "a315b4a2-15dd-5173-97df-b00c65e724f4",
+        "package_digest": "26b97fcb380a3ab0bb316cafa1f2a11f1d8c1b6b62e404eb4fcce9aa390f866d",
+        "package_path": "04_设备/yaskawa_motoman/mh200__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh200/module.json",
+      "module_sha256": "5e3252c01ba9685f7949889e9b37bfc27b3ae248b9906548661d9c084c3c76dc"
+    },
+    "sia20d": {
+      "title": "Yaskawa Motoman SIA20D｜多源合并",
+      "asset": {
+        "asset_id": "d0ff6a11-bd75-5944-a7dc-6dedb5248765",
+        "package_digest": "7bad4995dbec5af15b7d5557406b1f06161b91968b1c7a8cc2e2a5bffbacd4bb",
+        "package_path": "04_设备/yaskawa_motoman/sia20d__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sia20d/module.json",
+      "module_sha256": "71f3d2f03404ad3cceaa741d32b86e969d065424d33e28ab468b1b55a55f979a"
+    },
+    "hc20sdtp": {
+      "title": "Yaskawa Motoman HC20SDTP｜多源合并",
+      "asset": {
+        "asset_id": "7e99debe-35ea-5793-b245-f0aa17418b1a",
+        "package_digest": "1b956829bfdaf1cfce3e30c0d4f721da0f85c60171e1e95ff59db426863f2e8a",
+        "package_path": "04_设备/yaskawa_motoman/hc20sdtp__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hc20sdtp/module.json",
+      "module_sha256": "4c8611088e357981e3b98139c1ad12060126d9bc615d2f206cbad5488aee9b68"
+    },
+    "gp280l": {
+      "title": "Yaskawa Motoman GP280L｜多源合并",
+      "asset": {
+        "asset_id": "83ca65a7-4843-5e6f-8d4d-4ef218178ff1",
+        "package_digest": "f7cbb37809fbcb02c508075bbcf871570317b9ca848afb543a2f574616aff1a2",
+        "package_path": "04_设备/yaskawa_motoman/gp280l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/gp280l/module.json",
+      "module_sha256": "0d1786aff47631bd6885dbdd161276fab17b04400ebf979a738c948be66ad37d"
+    },
+    "mh600": {
+      "title": "Yaskawa Motoman MH600｜多源合并",
+      "asset": {
+        "asset_id": "dafffd44-dde3-5f13-9968-2b3f185d385e",
+        "package_digest": "97d265330a6a613b76bde369af24312c9f197e16144040c7e2e75b474d60f873",
+        "package_path": "04_设备/yaskawa_motoman/mh600__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh600/module.json",
+      "module_sha256": "f2aa4063a0a16b1f0d314fb356d1aff606483a1215fe763674875465d0553929"
+    },
+    "nex10": {
+      "title": "Yaskawa Motoman NEX10｜多源合并",
+      "asset": {
+        "asset_id": "a0b7c03d-e165-5348-96c1-08074d06c196",
+        "package_digest": "043935fdfb256a0acd820450eb81135eb4aafc17d96fe8c5337629000baf0c5d",
+        "package_path": "04_设备/yaskawa_motoman/nex10__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/nex10/module.json",
+      "module_sha256": "c114086eaa2d8823a84f61ad498a431e58fcc023a51044735b4ffb76f6db5d95"
+    },
+    "mh12": {
+      "title": "Yaskawa MH12｜多源合并",
+      "asset": {
+        "asset_id": "80370609-e700-5500-8261-6098b4b675b2",
+        "package_digest": "561b0d1f892c6e0fd9f91b75274d3640ebc25f9e387627bfdc264b2515be3885",
+        "package_path": "04_设备/yaskawa/mh12__多源合并_r004"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mh12/module.json",
+      "module_sha256": "3d1cc12ae0bd6d6010b3448eedc44a6b48d1302fa488b57f1df60415f1794e49"
+    },
+    "dx1350d": {
+      "title": "Yaskawa Motoman DX1350D",
+      "asset": {
+        "asset_id": "22852ea4-04ab-5c61-8a4e-4d3c5bc7cc73",
+        "package_digest": "3af064172b4ea5f1d400d862ad675d05afb9e9dbec430946d517993a8127012e",
+        "package_path": "04_设备/yaskawa_motoman/dx1350d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dx1350d/module.json",
+      "module_sha256": "b6c8bebf137e87e72eaeacbff1053ad9e872a17257d84229ec18db93edc990a0"
+    },
+    "ea1400": {
+      "title": "Yaskawa Motoman EA1400",
+      "asset": {
+        "asset_id": "b04c072b-a0fa-5b56-8a9f-35ca163c1c51",
+        "package_digest": "aadd8dbfd07f82a428db7aa85cec6b1b488f7522e5cce811998c0920804e80cc",
+        "package_path": "04_设备/yaskawa_motoman/ea1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ea1400/module.json",
+      "module_sha256": "1460c5b834c8b6ec5b2f8f088601297c7258bc7624432a5237ab284b2ba0eaf2"
+    },
+    "ea1900n": {
+      "title": "EA1900N",
+      "asset": {
+        "asset_id": "32c18ede-4219-5de2-9010-3a51db34d949",
+        "package_digest": "afede7d26e2747583769c6cd6d8056eeea5e5f18a4baa8cfb77506be14bd3a17",
+        "package_path": "04_设备/yaskawa/ea1900n__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ea1900n/module.json",
+      "module_sha256": "1459ea01e0895150aa24bc477b4e4cf193c6205b65369228276b4f6aa41f3095"
+    },
+    "eh80": {
+      "title": "Yaskawa Motoman EH80",
+      "asset": {
+        "asset_id": "c281c00d-87d6-5fd5-bfed-f6a4e3c486a7",
+        "package_digest": "41aa510faa0f5b4756cef679adc8a77c1e599a36c9fcb8e735e70b7423e65488",
+        "package_path": "04_设备/yaskawa_motoman/eh80__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/eh80/module.json",
+      "module_sha256": "5d31f5c88de619b2c8ddf1f38deab444e71ccf452305454c6ea1108800c64750"
+    },
+    "epx2050": {
+      "title": "Yaskawa Motoman EPX2050",
+      "asset": {
+        "asset_id": "e8fc750f-5eb1-5dae-b264-9e11d5b88765",
+        "package_digest": "fdcf83f713b192324429877ee9bd578cf4b4544ca9f644b7246fd1081f2251a2",
+        "package_path": "04_设备/yaskawa_motoman/epx2050__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/epx2050/module.json",
+      "module_sha256": "756859a4b63be7675cfe7a9e12552165fa0669bc1fb77afcd0d782b1b1ff381f"
+    },
+    "epx2800r": {
+      "title": "Yaskawa Motoman EPX2800R",
+      "asset": {
+        "asset_id": "d6834b07-487d-536a-8f68-6cfefe189312",
+        "package_digest": "cbbd7d1b181dc3dd0c2fec61dca45379e1d65d3164cf18d1712b68de43cb9f67",
+        "package_path": "04_设备/yaskawa_motoman/epx2800r__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/epx2800r/module.json",
+      "module_sha256": "621cb51fc666d698a567267217b8232eb67a51ccb43b81f1823f7ad54079e0d0"
+    },
+    "hc10sdtp": {
+      "title": "Yaskawa Motoman HC10SDTP",
+      "asset": {
+        "asset_id": "e25fe366-b43c-5160-ad9f-a04a72f01fe4",
+        "package_digest": "f3fe10368790fb26f82e7788f74b2fab3332b0eba2a4d4fa6986e0114dfbb904",
+        "package_path": "04_设备/yaskawa_motoman/hc10sdtp__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hc10sdtp/module.json",
+      "module_sha256": "64e016a0ba0a2ef36a5aa1857e314bcf51d13f3cbc812e1fe446960e460b743f"
+    },
+    "hc35": {
+      "title": "HC35",
+      "asset": {
+        "asset_id": "09420dc2-beb8-58bc-8c4f-fb595d0bd0ad",
+        "package_digest": "239a85d42087f6f72f1b3bf8483a465b8fd7eaee11b9b61316bd4a1e64d2e8ad",
+        "package_path": "04_设备/yaskawa/hc35__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hc35/module.json",
+      "module_sha256": "5c772a8c1deebd318b2b8975648fcecca88a1c9c47c6a8691ebf5ae57d2a321d"
+    },
+    "hp20rn": {
+      "title": "HP20RN",
+      "asset": {
+        "asset_id": "9f754ddd-c71d-56c4-b535-33c6852754e5",
+        "package_digest": "a9a83280904c7cd229898df68a53a4db065e00ba20b6c4c6e30aed330b4186b7",
+        "package_path": "04_设备/yaskawa/hp20rn__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hp20rn/module.json",
+      "module_sha256": "feb2882a93ae9b0029028aa8d61c48c29b196c02aa00b7960d2d8b06b1ef5923"
+    },
+    "hp3l": {
+      "title": "Yaskawa Motoman HP3L",
+      "asset": {
+        "asset_id": "22c90964-aaf6-5a93-a82f-63dfa9c89681",
+        "package_digest": "29f4b17d9e1580d8864962932ca41a8d83bc101aa7f3876b499c5bf5e6d6a0ce",
+        "package_path": "04_设备/yaskawa_motoman/hp3l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hp3l/module.json",
+      "module_sha256": "c33769b461da5bcbf6d5fb02002ac35062426ab03851aa6830cb13d7d1f0169c"
+    },
+    "hp6": {
+      "title": "Yaskawa Motoman HP6",
+      "asset": {
+        "asset_id": "82cbba0a-d794-5049-999e-873352d0ccd3",
+        "package_digest": "81889d4da058843c4ba649d075b6574dfabd91c54455ba4179d2ee9b5fe3e893",
+        "package_path": "04_设备/yaskawa_motoman/hp6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hp6/module.json",
+      "module_sha256": "79958fb9a6b81641b0f304d489a20894c38b3093269b02cc02d2fd288d816d3e"
+    },
+    "mh110": {
+      "title": "MH110",
+      "asset": {
+        "asset_id": "92b808fc-d89c-5b5d-bc5e-560db43a3189",
+        "package_digest": "4ef94ff2c718f17cddf2e8eab4c06c5d62f950d4b12097cc3c02fe6a5eef459f",
+        "package_path": "04_设备/yaskawa/mh110__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mh110/module.json",
+      "module_sha256": "23024faf57aeec47f7e0878222b023e73f9e4f5e687bc83d68e2eefc3715aaec"
+    },
+    "mh3f": {
+      "title": "Yaskawa Motoman MH3F",
+      "asset": {
+        "asset_id": "29c11d62-0c3c-5c8b-afef-67e7541c3b86",
+        "package_digest": "186c4ce75e606e3e1d590964e7f96525ba7e2a058d46581c5e17487d251625cf",
+        "package_path": "04_设备/yaskawa_motoman/mh3f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mh3f/module.json",
+      "module_sha256": "9939e11c114e3ebc999363f0e2ebf40031bb85f4d90ae29c1bd39aa899174d14"
+    },
+    "mh5f": {
+      "title": "Yaskawa Motoman MH5F",
+      "asset": {
+        "asset_id": "b372c9c2-a2ee-5e07-bd3c-de1743cacc24",
+        "package_digest": "c1c8886438eb8b12a49efd86977679304890f05d9286b24b4af9da71b0735027",
+        "package_path": "04_设备/yaskawa_motoman/mh5f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mh5f/module.json",
+      "module_sha256": "26a17b9f60855ac547db329a8bb2b17494612b43d68d33aa5896ec3ce8340bf1"
+    },
+    "mh5lf": {
+      "title": "Yaskawa Motoman MH5LF",
+      "asset": {
+        "asset_id": "e725450e-71a2-56dc-bad1-e6d0a3a1ece3",
+        "package_digest": "cdd92afd757013ac66295f652e2c4cd44727f1bfd23ea1d04c3d6ec2a0c17d76",
+        "package_path": "04_设备/yaskawa_motoman/mh5lf__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mh5lf/module.json",
+      "module_sha256": "600df01ec1f24b9949cbc69dc1e077c5e65280ca849c0d2710aa504a99bb3a52"
+    },
+    "mh80": {
+      "title": "Yaskawa Motoman MH80",
+      "asset": {
+        "asset_id": "c0f29aa3-ff32-56d0-9b55-33e7d4d0d1c1",
+        "package_digest": "dc2c42216a7e8cb0ef573ff8dbfa6349f638f0d0aa0e7ad68693e87c60768708",
+        "package_path": "04_设备/yaskawa_motoman/mh80__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mh80/module.json",
+      "module_sha256": "4d4c1eaac2cf0eec0966c9e48a74cd420e14c0b3bc1e8ec72c6a2abccef19603"
+    },
+    "ms80wii": {
+      "title": "Yaskawa Motoman MS80W II",
+      "asset": {
+        "asset_id": "d9bfd0a9-bec3-576e-aa2d-b3469490ed8a",
+        "package_digest": "5c58e8b7e10c3a6d9a78773269b94bb41de66a3036efc2d5e54f6f58e8ec25d8",
+        "package_path": "04_设备/yaskawa_motoman/ms80w_ii__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ms80wii/module.json",
+      "module_sha256": "74f9df0ba408bb3512d59f26bbe1e93a877ad1a8219b6cebcd948232f6083354"
+    },
+    "mys1000": {
+      "title": "Yaskawa Motoman MYS1000",
+      "asset": {
+        "asset_id": "6515ec89-3d25-56f5-80d1-af1cc06372a7",
+        "package_digest": "357d055e0f100f1b1940509de75ffbb96377f7c1ba9f77672a932058330c6f0a",
+        "package_path": "04_设备/yaskawa_motoman/mys1000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mys1000/module.json",
+      "module_sha256": "869e3b09b9de800f10006b06e466ac5c599f1f13ccce5babe0c2d62a076e7179"
+    },
+    "mys650l": {
+      "title": "Yaskawa Motoman MYS650L",
+      "asset": {
+        "asset_id": "fe03c29b-6182-5960-b42d-321747600d0c",
+        "package_digest": "e206b395f483a44a8b627aec3311380e92cf67867b661abd7e3958351ed73e66",
+        "package_path": "04_设备/yaskawa_motoman/mys650l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mys650l/module.json",
+      "module_sha256": "455600c74dfb3e41e70e817cd36fb4b8f5fa609ac10c471921d9216e0b45da48"
+    },
+    "mys850l": {
+      "title": "Yaskawa Motoman MYS850L",
+      "asset": {
+        "asset_id": "9f07af29-4bf8-5637-8f92-458ddee14b9b",
+        "package_digest": "5b027402147e5339187d2eb6c063a32d44a75dd65302e86b0d9e95e6c048e488",
+        "package_path": "04_设备/yaskawa_motoman/mys850l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mys850l/module.json",
+      "module_sha256": "6d519a4d77814065322a001d633fa78ea2bbda7d2b6e5f6fe1a6dacf4ce24ad3"
+    },
+    "nex20": {
+      "title": "NEX20",
+      "asset": {
+        "asset_id": "0d902dc2-0cfc-589c-b236-b96af87661eb",
+        "package_digest": "2d448281b1eea32514bad616a51d759ae378b4ba77619da3f293e11cb4f6cdb2",
+        "package_path": "04_设备/yaskawa/nex20__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nex20/module.json",
+      "module_sha256": "adef541683a4bf7d63debdfc9e0636ecf939accf53ba66e0275740c5129011b3"
+    },
+    "nex35": {
+      "title": "NEX35",
+      "asset": {
+        "asset_id": "3f8e96bf-f385-58b0-b402-76cebb1155c2",
+        "package_digest": "ea00414a9d4a0371fe794454e82b4df22e1ce8832f8c843ba9fc476411ceb78e",
+        "package_path": "04_设备/yaskawa/nex35__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nex35/module.json",
+      "module_sha256": "a11046ca08711491b814dde0ae0eb73d583339306f77b8cab32bd1865e24249d"
+    },
+    "nex4": {
+      "title": "NEX4",
+      "asset": {
+        "asset_id": "e7e12e49-7486-5cf3-9127-2e76d52248a0",
+        "package_digest": "78d43ecc7a6518036d4c226d65611842c115b84860ede52667b907beafdf2323",
+        "package_path": "04_设备/yaskawa/nex4__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nex4/module.json",
+      "module_sha256": "63114f8f4394c75d4b89fff1078cca3f37cb333e9d6f7a9122a7e0d68a26b9d4"
+    },
+    "nex7": {
+      "title": "NEX7",
+      "asset": {
+        "asset_id": "cf7062a8-0506-546b-8a9a-2c1e75b5ccbe",
+        "package_digest": "6cca214a1f485dde692e0bb00d1ec01ed2820b5393e372dcecc0cc37a3512f28",
+        "package_path": "04_设备/yaskawa/nex7__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nex7/module.json",
+      "module_sha256": "5cd355656fa1825734830261304af2378635f98ed99a951ad48d4612b463495b"
+    },
+    "nhc12": {
+      "title": "NHC12",
+      "asset": {
+        "asset_id": "31df101e-fe86-5e12-aa28-0bb808f40e7d",
+        "package_digest": "61d7fade58ef018dc34f17f0fb78092be46c550fd1fd6fbdbc88cfa129178a94",
+        "package_path": "04_设备/yaskawa/nhc12__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nhc12/module.json",
+      "module_sha256": "f1ec746f6254ad9d2415e9ce89f25b9d7e20fe5baea4a0046c01f57f3758da46"
+    },
+    "sia10d": {
+      "title": "Yaskawa Motoman SIA10D",
+      "asset": {
+        "asset_id": "a902df04-8142-5732-b43c-e26a3e9e8a96",
+        "package_digest": "e8c8ed1392c3ee182c6cbce6f63aad9dd7590e629d6bed59bd66a7197c46f9d3",
+        "package_path": "04_设备/yaskawa_motoman/sia10d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sia10d/module.json",
+      "module_sha256": "be5641ae4a212ff34c8d5f72d5c586af38b92bcd5b3bb6a50b7a5cb47031ddf3"
+    },
+    "sia50d": {
+      "title": "Yaskawa Motoman SIA50D",
+      "asset": {
+        "asset_id": "fd1e9deb-9808-5ad4-a931-630b33cea4ee",
+        "package_digest": "85750c2bef9fe8cc9ded2d8b4734c8a19987768bb3a3f9b19c5bf3f6d288506b",
+        "package_path": "04_设备/yaskawa_motoman/sia50d__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sia50d/module.json",
+      "module_sha256": "ab19fa2cdd0e3aaedac9c62b0b0752455116ffc27cfe30e09deb7b4967d580fb"
+    },
+    "sv3": {
+      "title": "Yaskawa Motoman SV3",
+      "asset": {
+        "asset_id": "8e3a31c9-da03-5271-87bc-a30b1bba6b9d",
+        "package_digest": "06c8fb0cec279cf5f12876dc6e27497846ac3cb459a4ddd312821404f3e48e11",
+        "package_path": "04_设备/yaskawa_motoman/sv3__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sv3/module.json",
+      "module_sha256": "fef9562ecb507a82caa52b9e5d1bee5b64a81af91e3def2098a58f6475f7fa06"
+    },
+    "up20m": {
+      "title": "Yaskawa Motoman UP20M",
+      "asset": {
+        "asset_id": "4b574111-9b13-5d4b-9809-231d228e2e85",
+        "package_digest": "769defe02dfe41d9d7744ad83a772fa7361925ab45a1505a91cb855496d3134a",
+        "package_path": "04_设备/yaskawa_motoman/up20m__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/up20m/module.json",
+      "module_sha256": "773d53251e059c9da92b9b98f5a11900d5bf3eee01c8e8ea09f910b84876c6cd"
+    },
+    "mpl300": {
+      "title": "Yaskawa MPL300｜多源合并",
+      "asset": {
+        "asset_id": "41f48bbd-b95a-5496-b705-66c37ccd6561",
+        "package_digest": "79d985fb6257b2b632793395595c1b67b6098ea9afc9f3de34db72409dba6eab",
+        "package_path": "04_设备/yaskawa/mpl300__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mpl300/module.json",
+      "module_sha256": "a29cada294b3bb0ce8f3dd916eeb7a55c9821577c6cd60a9a1cbb543adaad297"
+    },
+    "mpl800": {
+      "title": "Yaskawa MPL800｜多源合并",
+      "asset": {
+        "asset_id": "7497ed5d-2b4d-5f00-853a-fe97683d93a6",
+        "package_digest": "d8a248142e27eb60d9faedc778f1d58251ced85571999c13ef854d9ba0dbc81e",
+        "package_path": "04_设备/yaskawa/mpl800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mpl800/module.json",
+      "module_sha256": "085bb5865a80f9adf9043893bf06269dc692fcddedcd399ceb4971f0dcff5d63"
+    },
+    "pl190": {
+      "title": "Yaskawa PL190｜多源合并",
+      "asset": {
+        "asset_id": "d2e965bd-3a98-591b-a80d-3a4e2d534c64",
+        "package_digest": "bbac61b3e878d1502717194ffe43de55f42b1dea13af3ac2f78238df34447687",
+        "package_path": "04_设备/yaskawa/pl190__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pl190/module.json",
+      "module_sha256": "38e705d041eac81b5f69850b6d4fd918926628a966fbc51a169293feac130772"
+    }
+  },
+  "source_profiles": []
+}

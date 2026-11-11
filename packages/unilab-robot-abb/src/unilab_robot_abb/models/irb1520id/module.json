@@ -1,0 +1,868 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "abb",
+  "model": "irb1520id",
+  "title": "ABB IRB 1520ID｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "e862acfb-8c05-5956-b84b-4bbab3e4999b",
+    "package_digest": "6f66d2fff6a670b5da85b08b2d00c35ae870c45eb0aaa7f893081e52b86aff86",
+    "package_path": "04_设备/abb/irb1520id__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "e862acfb-8c05-5956-b84b-4bbab3e4999b",
+      "package_digest": "6f66d2fff6a670b5da85b08b2d00c35ae870c45eb0aaa7f893081e52b86aff86",
+      "package_path": "04_设备/abb/irb1520id__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "IRB 1520ID",
+              "source": "robots/models/ABB-IRB-1520ID.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "IRB 1520ID",
+              "source": "Components/ABB/Robots/IRB 1520ID.vcmx",
+              "source_family": "VC",
+              "value": 4.0
+            },
+            {
+              "model": "IRB 1520ID",
+              "source": "robots/models/ABB-IRB-1520ID.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 4,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "payload, reach, robot mass",
+              "title": "ABB IRB1520ID ROB0214EN E",
+              "url": "https://library.e.abb.com/public/f17789c40d55103348257c760032995f/ROB0214EN_E_LR.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "IRB 1520ID",
+              "source": "Components/ABB/Robots/IRB 1520ID.vcmx",
+              "source_family": "VC",
+              "value": 1500.0
+            },
+            {
+              "model": "IRB 1520ID",
+              "source": "robots/models/ABB-IRB-1520ID.robot",
+              "source_family": "RoboDK",
+              "value": 1450.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1500,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "payload, reach, robot mass",
+              "title": "ABB IRB1520ID ROB0214EN E",
+              "url": "https://library.e.abb.com/public/f17789c40d55103348257c760032995f/ROB0214EN_E_LR.pdf"
+            }
+          ]
+        },
+        "robot_mass": {
+          "scope": "Whole robot; not USD link inertia",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 170
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -90.0,
+          -100.0,
+          -155.0,
+          -135.0,
+          -200.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            453.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            590.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            200.0,
+            0.0,
+            723.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            200.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          150.0,
+          80.0,
+          155.0,
+          135.0,
+          200.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "c4c30bee-29ef-5dae-b041-ff58a3c26e38",
+              "entrypoints": {
+                "usd": "simready_usd/irb_1520id__款2__r001.usdc"
+              },
+              "package_digest": "2baead2ae0971b1741465d6e07e39282e265c29e7496bb1889452710429da4cf",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "40abd6a4f43e6d20fd7497b377138dc1da9a1df0c21237585c70eaa50783d438",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "c36c0a8a04aacb80e59739d385c4a5afe5be3f5d430edc28ac1f5fc9ac6357c0",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "c4c30bee-29ef-5dae-b041-ff58a3c26e38"
+          ],
+          "manufacturer": "ABB",
+          "name": "IRB 1520ID",
+          "original": {
+            "family": "VC",
+            "original_name": "IRB 1520ID.vcmx",
+            "path": "simready_usd/source_assets/VC/0_irb_1520id/IRB 1520ID.vcmx",
+            "sha256": "40abd6a4f43e6d20fd7497b377138dc1da9a1df0c21237585c70eaa50783d438"
+          },
+          "path": "Components/ABB/Robots/IRB 1520ID.vcmx",
+          "payload": "4",
+          "reach": "1500",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "2b63cb3d-9730-45b5-9f2b-b1f1e8dfe544"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "89b9e982-fa5d-57a7-8dd3-bfbd5221f39e",
+              "entrypoints": {
+                "usd": "simready_usd/irb_1520id__r001.usdc"
+              },
+              "package_digest": "f10961fd08919c6dd8a93980e54a8c515b3a93439e49e1f736db5e8630e92453",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -90.0,
+                    -100.0,
+                    -155.0,
+                    -135.0,
+                    -200.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      453.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      160.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      590.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      200.0,
+                      0.0,
+                      723.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      200.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    150.0,
+                    80.0,
+                    155.0,
+                    135.0,
+                    200.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "746d8a0a1695ea8f95717809f9a9fb35244e05befe0b774c05078aa66be4eb61",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "ABB IRB 1520ID",
+          "family": "RoboDK",
+          "library_assets": [
+            "89b9e982-fa5d-57a7-8dd3-bfbd5221f39e"
+          ],
+          "manufacturer": "ABB",
+          "name": "IRB 1520ID",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "ABB-IRB-1520ID.robot",
+            "path": "simready_usd/ABB-IRB-1520ID.robot",
+            "sha256": "d0a76e485cb8355e99dd50d3045495f9ed4e87e76be20295a784b35522f79c5a"
+          },
+          "path": "robots/models/ABB-IRB-1520ID.robot",
+          "payload": 5,
+          "reach": 1450,
+          "type": "robots",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "746d8a0a1695ea8f95717809f9a9fb35244e05befe0b774c05078aa66be4eb61",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/irb1520id__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "ABB IRB 1520ID｜多源合并",
+          "id": "merged_robot_e862acfb_8c05_5956_b84b_4bbab3e4999b",
+          "metadata": {
+            "asset_id": "e862acfb-8c05-5956-b84b-4bbab3e4999b",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ABBDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ABBDriver.exe",
+        "sha256": "2822b76d242d1a5fe6c84d05cfbb8902dbc8e22e9145356fd0685c9943ad9891",
+        "bytes": 59392,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apiabb",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiabb.exe",
+        "sha256": "bf67f4b01a4012d2d80e96cceec1dc6790b8e9572fb5dcd3f9262b84376fe4aa",
+        "bytes": 40960,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:libegm",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/libegm",
+        "repository_url": "https://github.com/ros-industrial/abb_libegm.git",
+        "code_tree_sha256": "05ae772f6b060a4851e32c2808d09118917653ef6de48eb28b9958e4688383a3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "faf76f7dc89d5465fe3be9bc5bfd91aeef2ad885092c406c27cadf47dbd9ebe2"
+          },
+          {
+            "path": "proto/README.md",
+            "sha256": "62ba67ae9bc07e42cda6ba6b9daa6eb10e5700924acd80a07c36f6cab223d7a7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:librws",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/librws",
+        "repository_url": "https://github.com/ros-industrial/abb_librws.git",
+        "code_tree_sha256": "73bb9876797ddd09ca17ab1bcd4cda66e35a2e8f48767247005a608201fb94df",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d90025fae893d0591aa64e72fb3f381c5b2215431558116b701ca48d952a1d7b"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/ros2",
+        "repository_url": "https://github.com/PickNikRobotics/abb_ros2.git",
+        "code_tree_sha256": "615b7308b930f0e4a2134caef7ac704212b289bdebe3d0e69727f640aa109f63",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "5c7b360ab136ec66474ed2ac9ebd32717d4135047026f80c414482e43a306d16"
+          },
+          {
+            "path": "docs/README.md",
+            "sha256": "33bd595a1fbe5c3d7d3a3c1da3d3bae09f9db13bf1a450d04c6514096f46d713"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "ABB_RAPID_IRC5.py",
+      "ABB_RAPID_IRC5_Robtargets.py",
+      "ABB_RAPID_OmniCore.py",
+      "ABB_RAPID_S4C.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "ABB-IRB-1520ID.robot",
+        "path": "simready_usd/ABB-IRB-1520ID.robot",
+        "sha256": "d0a76e485cb8355e99dd50d3045495f9ed4e87e76be20295a784b35522f79c5a"
+      },
+      {
+        "family": "VC",
+        "original_name": "IRB 1520ID.vcmx",
+        "path": "simready_usd/source_assets/VC/0_irb_1520id/IRB 1520ID.vcmx",
+        "sha256": "40abd6a4f43e6d20fd7497b377138dc1da9a1df0c21237585c70eaa50783d438"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "IRB 1520ID",
+                "source": "Components/ABB/Robots/IRB 1520ID.vcmx",
+                "source_family": "VC",
+                "value": 4.0
+              },
+              {
+                "model": "IRB 1520ID",
+                "source": "robots/models/ABB-IRB-1520ID.robot",
+                "source_family": "RoboDK",
+                "value": 5.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 4,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "payload, reach, robot mass",
+                "title": "ABB IRB1520ID ROB0214EN E",
+                "url": "https://library.e.abb.com/public/f17789c40d55103348257c760032995f/ROB0214EN_E_LR.pdf"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            4.0,
+            5.0
+          ]
+        },
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "IRB 1520ID",
+                "source": "Components/ABB/Robots/IRB 1520ID.vcmx",
+                "source_family": "VC",
+                "value": 1500.0
+              },
+              {
+                "model": "IRB 1520ID",
+                "source": "robots/models/ABB-IRB-1520ID.robot",
+                "source_family": "RoboDK",
+                "value": 1450.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1500,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "payload, reach, robot mass",
+                "title": "ABB IRB1520ID ROB0214EN E",
+                "url": "https://library.e.abb.com/public/f17789c40d55103348257c760032995f/ROB0214EN_E_LR.pdf"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1450.0,
+            1500.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "abb",
+        "irb1520id"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "payload, reach, robot mass",
+            "title": "ABB IRB1520ID ROB0214EN E",
+            "url": "https://library.e.abb.com/public/f17789c40d55103348257c760032995f/ROB0214EN_E_LR.pdf"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "status": "manufacturer_verified",
+            "value": 4
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "value": 1500
+          },
+          "robot_mass": {
+            "scope": "Whole robot; not USD link inertia",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 170
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "89b9e982-fa5d-57a7-8dd3-bfbd5221f39e",
+        "original_package_digest": "f10961fd08919c6dd8a93980e54a8c515b3a93439e49e1f736db5e8630e92453",
+        "source": "robots/models/ABB-IRB-1520ID.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "payload_disagrees",
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

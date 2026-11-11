@@ -1,0 +1,360 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "dobot",
+  "model": "cr12a",
+  "title": "Dobot CR12A",
+  "asset": {
+    "asset_id": "31a7054f-e61f-525a-8681-7318963379f1",
+    "package_digest": "f7b089fed4f56e6f4a71ae398638eb758f86f3cc0f5352625fa8c5e37dc1d3ce",
+    "package_path": "04_设备/dobot/cr12a__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "31a7054f-e61f-525a-8681-7318963379f1",
+      "package_digest": "f7b089fed4f56e6f4a71ae398638eb758f86f3cc0f5352625fa8c5e37dc1d3ce",
+      "package_path": "04_设备/dobot/cr12a__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          90.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -160.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            176.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            557.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            518.0,
+            -1.5707963267948966,
+            191.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            125.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            111.4
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          160.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ebd685750d18c705f24f45b903f042443b6e4d48b333da10338b8909ca11c2aa",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cr12a__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DobotV4Driver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DobotV4Driver.py",
+        "sha256": "9e5186196a4561f48fd5aab4c59f94d5231254b2d566927f623c7ec31ab0bd53",
+        "bytes": 1360,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/DobotV4Driver.pyc",
+            "sha256": "6babfa66094678bbb7dde130c571ed654750d4a14fb904618af33030d7fa77c6"
+          },
+          {
+            "relative_path": "api/Robot/v311/DobotV4Driver.pyc",
+            "sha256": "404df679cf611033ac84864665a8dc67ad879de1122dc56cc89b23c670e59deb"
+          },
+          {
+            "relative_path": "api/Robot/v312/DobotV4Driver.pyc",
+            "sha256": "fde1ebb06f1e246ece020855328ec51c12176b9403c2495df455e35d455fc877"
+          },
+          {
+            "relative_path": "api/Robot/v38/DobotV4Driver.pyc",
+            "sha256": "0e8a47a4433e4c9f4bcac9bf86dd1ec12187ee8bff0505ab667791efbfa5fcf2"
+          },
+          {
+            "relative_path": "api/Robot/v39/DobotV4Driver.pyc",
+            "sha256": "ea27be3ac773a842e4c6eb3ab57caaf6ba46f103bb707ea52b205757a37d35fa"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Dobot V4"
+        ],
+        "constraints": [
+          "CRA/Magician E6 V4 family; do not apply to CR V3",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Dobot.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:dobot:python_v4",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/dobot/python_v4",
+        "repository_url": "https://github.com/Dobot-Arm/TCP-IP-Python-V4.git",
+        "code_tree_sha256": "ec2ec97cb58723cfa8ff9c27e5d248c586e0d89066243bb3e871bf22440c27d3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "77889395b1e7f6a6b88d1ba1fc863319849a6a0084329217117c1880c9525bab"
+          },
+          {
+            "path": "README.zh.md",
+            "sha256": "2382fbbd785c45950f51e83179ca445968653139db369080670a72af5142936e"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "1f11e8247c5ef61f89352c934e79ebd9b375bbd8947b79c42201c69d99d0073e"
+          }
+        ],
+        "constraints": [
+          "V4 CRA/E6 family; CR5 V3 is not covered by this SDK",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:dobot:ros2_v4",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/dobot/ros2_v4",
+        "repository_url": "https://github.com/Dobot-Arm/DOBOT_6Axis_ROS2_V4.git",
+        "code_tree_sha256": "b096cbb80ab7bfdc3ecc858d2309e89ef71a4493c5c212ad1d6a65eed961878f",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "9a42c1312d7b4af12ace493ca1b10f52e5af891174b3a6cc69d07b755c2f049b"
+          },
+          {
+            "path": "README_ZH.md",
+            "sha256": "5def49fb86953a5a1a7d97b7ead30cba920ed5b0dc7a0488ea12e24884e2e761"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "1f11e8247c5ef61f89352c934e79ebd9b375bbd8947b79c42201c69d99d0073e"
+          }
+        ],
+        "constraints": [
+          "V4 CRA/E6 family; CR5 V3 is not covered by this SDK",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Dobot_Magician.py",
+      "Dobot_MG400.py",
+      "Dobot_V3.py",
+      "Dobot_V4.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "DobotV3Driver.py",
+        "reason": "CR/Nova V3 family; controller generation must be confirmed"
+      },
+      {
+        "source": "DobotMG400Driver.py",
+        "reason": "MG400/M1 Pro only"
+      },
+      {
+        "source": "DobotDriver.exe",
+        "reason": "Magician controller only"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "CR12A",
+          "manufacturer": "Dobot",
+          "variant": "",
+          "display": "Dobot CR12A",
+          "path": "robots/models/Dobot-CR12A.robot",
+          "type": "robots",
+          "payload": 12,
+          "reach": 1200,
+          "axes": 6,
+          "library_assets": [
+            "31a7054f-e61f-525a-8681-7318963379f1"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Dobot-CR12A.robot",
+        "path": "simready_usd/Dobot-CR12A.robot",
+        "sha256": "7ca55a86c5497663dcfdb5739766bfd8ce59941394e9bef39acc0940e83b96de"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

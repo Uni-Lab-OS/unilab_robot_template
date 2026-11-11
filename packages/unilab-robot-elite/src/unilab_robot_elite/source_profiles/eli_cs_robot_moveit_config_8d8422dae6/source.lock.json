@@ -1,0 +1,110 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "eli_cs_robot_moveit_config_8d8422dae6",
+  "source": {
+    "url": "https://github.com/Elite-Robots/Elite_Robots_CS_ROS2_Driver.git",
+    "commit": "3e9e8ca8c9a56b5a5965d15ba4ddd751addd7c33",
+    "path": "robots/elite/ros2_driver/eli_cs_robot_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "Changelog.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "abb5b36b4a5761769d077054343f820d1fe990eae4b4d1f5457cd55c8090638e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/controllers.yaml",
+      "sha256": "b86321c959c55857677629bc74aaa77e18410d304984c8837bc88dc4f557d01d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/controllers_5f.yaml",
+      "sha256": "cbcb43bf12c21f2b2d31bf9959ec419df2967fac0edd3c1133059190cc0effcf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/cs_servo.yaml",
+      "sha256": "523195d45da31db566b89aad897e913f02af364e8f46d770071ffbd47811cf86",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "88745e39e4eee9f78c95f8fe2692020666e55ba7117901b2e2481f3f2f3b777c",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits_5f.yaml",
+      "sha256": "cf17c445b42b51098b77be5a86ce774bc2de4b8631cbbd32b552326787b0652a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "fb8ff30578ec0e2629da5cc784848b774b24acde76386a31e4febe65058bf7d1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "58e096e0a82e2a3d3af2be8b046608f623bb12450c99b598942fe3b1b82e830f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "eli_cs_robot_moveit_config/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "eli_cs_robot_moveit_config/launch_common.py",
+      "sha256": "dbf355488b2c1981d8fa367ba1c1440df68dffa3c3a8593c10f4ec6c3c417ddf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/cs_moveit.launch.py",
+      "sha256": "eaa3b084530e81ca4b7640b8488dca754e55de5228a6739396e7541905f18a9d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "c1c4890ff60d6a5f8998bf22af93c97f77abf0f90740b74f8f2dc8d8b0788e01",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/view_robot.rviz",
+      "sha256": "c49e81759647bac8fb238b99a7bb073abdb375824bde5fbebc770d689236bae3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/cs.srdf.xacro",
+      "sha256": "7e5a2c3480dc6c63103df40d9ddff918b890f924f485104b78223e4512745ba5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/cs_5f.srdf.xacro",
+      "sha256": "5f63abf72755977a1f71283d706ddc4defe3448c48865cb0684a4e45ff0992ab",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/cs_macro.srdf.xacro",
+      "sha256": "166947ba401ea7bbf999be6a80d6040d856558a58695b6776f3ab45817ffd281",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/cs_macro_5f.srdf.xacro",
+      "sha256": "3b981edaf7c1daf5d7fa1305939fbc44c3a37d4f3c36f0f4bb5413399182be54",
+      "git_lfs_pointer": false
+    }
+  ]
+}

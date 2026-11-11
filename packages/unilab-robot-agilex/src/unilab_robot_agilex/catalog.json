@@ -1,0 +1,104 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "agilex",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {},
+  "source_profiles": [
+    {
+      "id": "moveit_699a7d45c8",
+      "manifest": "source_profiles/moveit_699a7d45c8/source.lock.json",
+      "sha256": "61cd187ffd815610a22bfa9d45372b4c1105ec37157f5e661ff461173adcf388",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_commander_b1dd65b38d",
+      "manifest": "source_profiles/moveit_commander_b1dd65b38d/source.lock.json",
+      "sha256": "9f807a12bc3120ebd766a99d607c341fca472c512f20ea54a694eb1cfc344da7",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_core_58e9d71e4a",
+      "manifest": "source_profiles/moveit_core_58e9d71e4a/source.lock.json",
+      "sha256": "52fdac54cbe319afa3ad33574006fad0574be252333b43519e0d814cccac493a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_kinematics_fba5b7bc89",
+      "manifest": "source_profiles/moveit_kinematics_fba5b7bc89/source.lock.json",
+      "sha256": "d7e871c64c3ededc0244ef41959746f6fa9c7c7c55503d0986d37d3a98354792",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_planners_cbf57730dc",
+      "manifest": "source_profiles/moveit_planners_cbf57730dc/source.lock.json",
+      "sha256": "94175e183f2849e1c01da5fd1995fc7ce980c027c42275c65589872f467ef985",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_fake_controller_manager_b33dd00168",
+      "manifest": "source_profiles/moveit_fake_controller_manager_b33dd00168/source.lock.json",
+      "sha256": "95f4add46cf59a4f0c67c999aa684303ebf45b2bc4c69a0d099c8f8165182d2a",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_plugins_5fdc8d3bf6",
+      "manifest": "source_profiles/moveit_plugins_5fdc8d3bf6/source.lock.json",
+      "sha256": "411abfb2a494c45fd22f969ec60678a91f8a6a89d8129589c8c901c708e10271",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_ros_control_interface_77f1bb405d",
+      "manifest": "source_profiles/moveit_ros_control_interface_77f1bb405d/source.lock.json",
+      "sha256": "36d5fb909bb096a55abdc564d206120d29e309028e1f35a44708060a2ef2c163",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_simple_controller_manager_055041f9dd",
+      "manifest": "source_profiles/moveit_simple_controller_manager_055041f9dd/source.lock.json",
+      "sha256": "05d62a95b9416b9d54fecc3d6f435785104577a64c0d39de6d01be1970272918",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_ros_7adc4b734c",
+      "manifest": "source_profiles/moveit_ros_7adc4b734c/source.lock.json",
+      "sha256": "ec868ed1d992ea7d93b21685c722eb3c982fb3b51c769e23774cb33ba485d4a5",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_servo_25ed7caa90",
+      "manifest": "source_profiles/moveit_servo_25ed7caa90/source.lock.json",
+      "sha256": "97d67c369d23a1602947d57481b74dcb2d4779d158228304c37b506173a0762c",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_runtime_04de424503",
+      "manifest": "source_profiles/moveit_runtime_04de424503/source.lock.json",
+      "sha256": "f5f7d66762c3a5da11187455c1cbebca73cee9763b547687b5c75267c0de699e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_setup_assistant_d0229d66cf",
+      "manifest": "source_profiles/moveit_setup_assistant_d0229d66cf/source.lock.json",
+      "sha256": "5e1d531cce2e15455d808316b0e5fe8d565e55dc0fee7bd3d7553f56c8a70aba",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "moveit_ctrl_98aebe1cb4",
+      "manifest": "source_profiles/moveit_ctrl_98aebe1cb4/source.lock.json",
+      "sha256": "84297c9c0ee476b45b265b60bb8d76cb307f1ef15602b046c5389598f9b09c0c",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "piper_no_gripper_moveit_9c30c70cea",
+      "manifest": "source_profiles/piper_no_gripper_moveit_9c30c70cea/source.lock.json",
+      "sha256": "01ab8b1acd856e6932d5e8dbb3218f38bd1718364449a337bdc1fd880c86d44e",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "piper_with_gripper_moveit_492bdbe02b",
+      "manifest": "source_profiles/piper_with_gripper_moveit_492bdbe02b/source.lock.json",
+      "sha256": "60c9e5199e8122162cc1fd6d14f5d70ef12ead8e0a64a93393e3979fdd40f1a9",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

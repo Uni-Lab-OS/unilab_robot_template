@@ -1,0 +1,1069 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "abb",
+  "model": "irb1200:5:0.9",
+  "title": "ABB IRB 1200-5/0.9｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+    "package_digest": "37513471132676a1d43f8f7517e28873a95b4f1086d010772a52a6ea590bbf6c",
+    "package_path": "04_设备/abb/irb1200_5_0.9__多源合并_r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified",
+    "asset_planning": "revalidation_required_after_asset_revision"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+      "package_digest": "37513471132676a1d43f8f7517e28873a95b4f1086d010772a52a6ea590bbf6c",
+      "package_path": "04_设备/abb/irb1200_5_0.9__多源合并_r002"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots",
+      "xml_geometry"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "IRB 1200-5/0.9",
+              "source": "robots/models/ABB-IRB-1200-5-0-9.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "IRB 1200-5/0.9",
+              "source": "Components/ABB/Robots/IRB 1200-5_0_9.vcmx",
+              "source_family": "VC",
+              "value": 5.0
+            },
+            {
+              "model": "IRB 1200-5/0.9",
+              "source": "robots/models/ABB-IRB-1200-5-0-9.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 5.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "IRB 1200-5/0.9",
+              "source": "Components/ABB/Robots/IRB 1200-5_0_9.vcmx",
+              "source_family": "VC",
+              "value": 901.0
+            },
+            {
+              "model": "IRB 1200-5/0.9",
+              "source": "robots/models/ABB-IRB-1200-5-0-9.robot",
+              "source_family": "RoboDK",
+              "value": 901.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 901.0
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -100.0,
+          -200.0,
+          -270.0,
+          -130.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            399.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            448.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            42.0,
+            0.0,
+            451.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            82.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          130.0,
+          70.0,
+          270.0,
+          130.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "ABB",
+          "name": "IRB 1200-5/0.9",
+          "original": {
+            "family": "VC",
+            "original_name": "IRB 1200-5_0_9.vcmx",
+            "path": "simready_usd/source_assets/VC/0_irb_1200-5_0_9/IRB 1200-5_0_9.vcmx",
+            "sha256": "4332ca797fc860005613eb1cbcbe8a52fe634c99e320c5a530a4d8fd39cc90a9"
+          },
+          "path": "Components/ABB/Robots/IRB 1200-5_0_9.vcmx",
+          "payload": "5",
+          "reach": "901.0",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "239f13f4-16cc-460e-9578-583c256c348f"
+        },
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "c1703760-007e-5e38-9d46-3a36a749cd13",
+              "entrypoints": {
+                "usd": "simready_usd/irb_1200-5-0.9__r001.usdc"
+              },
+              "package_digest": "c7311f6dac65ce2ac5f42cef5c554a43eedb8dbb19b24fd70bb91c278c389f86",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -100.0,
+                    -200.0,
+                    -270.0,
+                    -130.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      399.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      448.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      42.0,
+                      0.0,
+                      451.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      82.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    130.0,
+                    70.0,
+                    270.0,
+                    130.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "7ec60afd04a0c8d13a3624fef5d443af30800eb75bcef881117aef1f7146e71c",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "ABB IRB 1200-5/0.9",
+          "family": "RoboDK",
+          "library_assets": [
+            "c1703760-007e-5e38-9d46-3a36a749cd13"
+          ],
+          "manufacturer": "ABB",
+          "name": "IRB 1200-5/0.9",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "ABB-IRB-1200-5-0-9.robot",
+            "path": "simready_usd/ABB-IRB-1200-5-0-9.robot",
+            "sha256": "5f96f113c11cebeabae330c860e5e4c881a24810375ec4251401eaa5de3f56a6"
+          },
+          "path": "robots/models/ABB-IRB-1200-5-0-9.robot",
+          "payload": 5,
+          "reach": 901,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "abb",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "IRB 1200-5/0.9",
+          "original": {
+            "family": "UniLab",
+            "original_name": "irb1200_5_90_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/0_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+            "sha256": "0bb2c36b9baf68c532ef27212ea321d6274d306b2e121ca2bab49da2b3046264"
+          },
+          "path": "abb/ros2/robot_specific_config/abb_irb1200_support/urdf/irb1200_5_90_macro.xacro",
+          "raw_name": "irb1200_5_90_macro.xacro",
+          "robot_description": {
+            "commit": "05cbabe774ef026b1cd36fe6b253b55f55e16340",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "${prefix}base_link",
+                    "xml": "<inertial>\n        <mass value=\"13.7742\" />\n        <origin xyz=\"-0.028986 0.000596 0.11273\" />\n        <inertia ixx=\"0.101998\" ixy=\"0.000495482\" ixz=\"0.000311158\" iyy=\"0.13969\" iyz=\"-0.000245375\" izz=\"0.130433\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_1",
+                    "xml": "<inertial>\n        <mass value=\"11.8419\" />\n        <origin xyz=\"0.000877 -0.000631 -0.062883\" />\n        <inertia ixx=\"0.11194\" ixy=\"-4.54988e-05\" ixz=\"0.000280961\" iyy=\"0.0915159\" iyz=\"-0.000109905\" izz=\"0.0876456\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_2",
+                    "xml": "<inertial>\n        <mass value=\"17.5394\" />\n        <origin xyz=\"-0.000928 -0.000497 0.250051\" />\n        <inertia ixx=\"0.493558\" ixy=\"1.32136e-05\" ixz=\"0.000209024\" iyy=\"0.462939\" iyz=\"-0.00179901\" izz=\"0.0894214\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_3",
+                    "xml": "<inertial>\n        <mass value=\"7.46365\" />\n        <origin xyz=\"0.099588 0.001143 0.032333\" />\n        <inertia ixx=\"0.0252424\" ixy=\"0.000142737\" ixz=\"-0.00565542\" iyy=\"0.0906438\" iyz=\"0.000142213\" izz=\"0.0825079\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_4",
+                    "xml": "<inertial>\n        <mass value=\"2.74436\" />\n        <origin xyz=\"0.381678 0.001261 0.005168\" />\n        <inertia ixx=\"0.00573099\" ixy=\"-0.000131119\" ixz=\"0.000380232\" iyy=\"0.0118352\" iyz=\"-2.26565e-05\" izz=\"0.0114428\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_5",
+                    "xml": "<inertial>\n        <mass value=\"0.62953\" />\n        <origin xyz=\"0.011197 -0.001056 0.000109\" />\n        <inertia ixx=\"0.000502815\" ixy=\"-1.03173e-05\" ixz=\"-8.74347e-08\" iyy=\"0.00108856\" iyz=\"2.07657e-07\" izz=\"0.000918873\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_6",
+                    "xml": "<inertial>\n        <mass value=\"0.137\" />\n        <origin xyz=\"-0.00706 -0.00017 -1.32E-06\" rpy=\"0 0 0\" />\n        <inertia ixx=\"0.001\" ixy=\"0\" ixz=\"0\" iyy=\"0.001\" iyz=\"0\" izz=\"0.001\" />\n      </inertial>\n      \n      \n      "
+                  }
+                ],
+                "joints": [
+                  "<joint type=\"revolute\" name=\"${prefix}joint_1\">\n      <origin xyz=\"0 0 0.3991\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 0 1\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      \n      <limit effort=\"1000\" lower=\"-2.967\" upper=\"2.967\" velocity=\"5.027\" />\n      <dynamics damping=\"50.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_2\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      \n      <limit effort=\"1000\" lower=\"-1.745\" upper=\"2.269\" velocity=\"4.189\" />\n      <dynamics damping=\"50.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_3\">\n      <origin xyz=\"0 0 0.448\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      \n      <limit effort=\"1000\" lower=\"-3.491\" upper=\"1.222\" velocity=\"5.236\" />\n      <dynamics damping=\"10.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_4\">\n      <origin xyz=\"0 0 0.042\" rpy=\"0 0 0\" />\n      <axis xyz=\"1 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      \n      <limit effort=\"1000\" lower=\"-4.712\" upper=\"4.712\" velocity=\"6.981\" />\n      <dynamics damping=\"5.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_5\">\n      <origin xyz=\"0.451 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      \n      <limit effort=\"1000\" lower=\"-2.269\" upper=\"2.269\" velocity=\"7.069\" />\n      <dynamics damping=\"2.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_6\">\n      <origin xyz=\"0.082 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"1 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      \n      <limit effort=\"1000\" lower=\"-6.283\" upper=\"6.283\" velocity=\"10.472\" />\n      <dynamics damping=\"1.0\" friction=\"1.0\" />\n    </joint>\n    \n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint type=\"fixed\" name=\"${prefix}joint_6-flange\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 ${radians(90)} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "abb/ros2/robot_specific_config/abb_irb1200_support/urdf/irb1200_5_90_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros2/abb_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros2/abb_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/PickNikRobotics/abb_ros2.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "UniLab",
+          "manufacturer": "abb",
+          "mesh_refs": 14,
+          "movable_declared": 6,
+          "name": "IRB 1200-5/0.9",
+          "original": {
+            "family": "UniLab",
+            "original_name": "irb1200_5_90_macro.xacro",
+            "path": "simready_usd/source_assets/UniLab/1_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+            "sha256": "bc46ff9839958bee372818832c7abafb77184aeed3e727815136e0a4538e22b6"
+          },
+          "path": "abb/ros_industrial/abb_irb1200_support/urdf/irb1200_5_90_macro.xacro",
+          "raw_name": "irb1200_5_90_macro.xacro",
+          "robot_description": {
+            "commit": "45f4769d826cf3ac62a65495f2db67b78b0c81df",
+            "declarations": [
+              {
+                "inertials": [
+                  {
+                    "link": "${prefix}base_link",
+                    "xml": "<inertial>\n        <mass value=\"13.7742\" />\n        <origin xyz=\"-0.028986 0.000596 0.11273\" />\n        <inertia ixx=\"0.101998\" ixy=\"0.000495482\" ixz=\"0.000311158\" iyy=\"0.13969\" iyz=\"-0.000245375\" izz=\"0.130433\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_1",
+                    "xml": "<inertial>\n        <mass value=\"11.8419\" />\n        <origin xyz=\"0.000877 -0.000631 -0.062883\" />\n        <inertia ixx=\"0.11194\" ixy=\"-4.54988e-05\" ixz=\"0.000280961\" iyy=\"0.0915159\" iyz=\"-0.000109905\" izz=\"0.0876456\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_2",
+                    "xml": "<inertial>\n        <mass value=\"17.5394\" />\n        <origin xyz=\"-0.000928 -0.000497 0.250051\" />\n        <inertia ixx=\"0.493558\" ixy=\"1.32136e-05\" ixz=\"0.000209024\" iyy=\"0.462939\" iyz=\"-0.00179901\" izz=\"0.0894214\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_3",
+                    "xml": "<inertial>\n        <mass value=\"7.46365\" />\n        <origin xyz=\"0.099588 0.001143 0.032333\" />\n        <inertia ixx=\"0.0252424\" ixy=\"0.000142737\" ixz=\"-0.00565542\" iyy=\"0.0906438\" iyz=\"0.000142213\" izz=\"0.0825079\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_4",
+                    "xml": "<inertial>\n        <mass value=\"2.74436\" />\n        <origin xyz=\"0.381678 0.001261 0.005168\" />\n        <inertia ixx=\"0.00573099\" ixy=\"-0.000131119\" ixz=\"0.000380232\" iyy=\"0.0118352\" iyz=\"-2.26565e-05\" izz=\"0.0114428\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_5",
+                    "xml": "<inertial>\n        <mass value=\"0.62953\" />\n        <origin xyz=\"0.011197 -0.001056 0.000109\" />\n        <inertia ixx=\"0.000502815\" ixy=\"-1.03173e-05\" ixz=\"-8.74347e-08\" iyy=\"0.00108856\" iyz=\"2.07657e-07\" izz=\"0.000918873\" />\n      </inertial>\n      "
+                  },
+                  {
+                    "link": "${prefix}link_6",
+                    "xml": "<inertial>\n        <mass value=\"0.137\" />\n        <origin xyz=\"-0.00706 -0.00017 -1.32E-06\" rpy=\"0 0 0\" />\n        <inertia ixx=\"0.001\" ixy=\"0\" ixz=\"0\" iyy=\"0.001\" iyz=\"0\" izz=\"0.001\" />\n      </inertial>\n      \n      \n      "
+                  }
+                ],
+                "joints": [
+                  "<joint type=\"revolute\" name=\"${prefix}joint_1\">\n      <origin xyz=\"0 0 0.3991\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 0 1\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}link_1\" />\n      \n      <limit effort=\"1000\" lower=\"-2.967\" upper=\"2.967\" velocity=\"5.027\" />\n      <dynamics damping=\"50.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_2\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_1\" />\n      <child link=\"${prefix}link_2\" />\n      \n      <limit effort=\"1000\" lower=\"-1.745\" upper=\"2.269\" velocity=\"4.189\" />\n      <dynamics damping=\"50.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_3\">\n      <origin xyz=\"0 0 0.448\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_2\" />\n      <child link=\"${prefix}link_3\" />\n      \n      <limit effort=\"1000\" lower=\"-3.491\" upper=\"1.222\" velocity=\"5.236\" />\n      <dynamics damping=\"10.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_4\">\n      <origin xyz=\"0 0 0.042\" rpy=\"0 0 0\" />\n      <axis xyz=\"1 0 0\" />\n      <parent link=\"${prefix}link_3\" />\n      <child link=\"${prefix}link_4\" />\n      \n      <limit effort=\"1000\" lower=\"-4.712\" upper=\"4.712\" velocity=\"6.981\" />\n      <dynamics damping=\"5.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_5\">\n      <origin xyz=\"0.451 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"0 1 0\" />\n      <parent link=\"${prefix}link_4\" />\n      <child link=\"${prefix}link_5\" />\n      \n      <limit effort=\"1000\" lower=\"-2.269\" upper=\"2.269\" velocity=\"7.069\" />\n      <dynamics damping=\"2.0\" friction=\"1.0\" />\n    </joint>\n    ",
+                  "<joint type=\"revolute\" name=\"${prefix}joint_6\">\n      <origin xyz=\"0.082 0 0\" rpy=\"0 0 0\" />\n      <axis xyz=\"1 0 0\" />\n      <parent link=\"${prefix}link_5\" />\n      <child link=\"${prefix}link_6\" />\n      \n      <limit effort=\"1000\" lower=\"-6.283\" upper=\"6.283\" velocity=\"10.472\" />\n      <dynamics damping=\"1.0\" friction=\"1.0\" />\n    </joint>\n    \n\n    \n    ",
+                  "<joint name=\"${prefix}base_link-base\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}base_link\" />\n      <child link=\"${prefix}base\" />\n    </joint>\n\n    \n    ",
+                  "<joint type=\"fixed\" name=\"${prefix}joint_6-flange\">\n      <origin xyz=\"0 0 0\" rpy=\"0 0 0\" />\n      <parent link=\"${prefix}link_6\" />\n      <child link=\"${prefix}flange\" />\n    </joint>\n\n    \n    ",
+                  "<joint name=\"${prefix}link_6-tool0\" type=\"fixed\">\n      <origin xyz=\"0 0 0\" rpy=\"0 ${radians(90)} 0\" />\n      <parent link=\"${prefix}flange\" />\n      <child link=\"${prefix}tool0\" />\n    </joint>\n  "
+                ],
+                "path": "abb/ros_industrial/abb_irb1200_support/urdf/irb1200_5_90_macro.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros_industrial/abb_resources/urdf/common_materials.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              },
+              {
+                "inertials": [],
+                "joints": [],
+                "path": "abb/ros_industrial/abb_resources/urdf/common_colours.xacro",
+                "transmissions_and_control": [],
+                "units": "URDF SI; expressions are not evaluated"
+              }
+            ],
+            "dependency_gaps": [],
+            "repository": "https://github.com/ros-industrial/abb.git"
+          },
+          "type": "xml_geometry",
+          "variant": ""
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "7ec60afd04a0c8d13a3624fef5d443af30800eb75bcef881117aef1f7146e71c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/irb1200_5_0.9__多源合并_r002.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "ABB IRB 1200-5/0.9｜多源合并",
+          "id": "merged_robot_aa3a4f67_5e11_5e58_a06f_84120fbaa64a",
+          "metadata": {
+            "asset_id": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ABBDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ABBDriver.exe",
+        "sha256": "2822b76d242d1a5fe6c84d05cfbb8902dbc8e22e9145356fd0685c9943ad9891",
+        "bytes": 59392,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "blocked",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run",
+          "vendor_process": "exercised"
+        },
+        "offline_evidence": {
+          "receipt": "ABBDriver.exe-adapter-receipt.json",
+          "receipt_sha256": "eae84314a99f2779424ca55de925d82d26626ea1775eae8bd82da7f61061a7f0",
+          "adapter_sha256": "a692f2cb6893a72cee10de1bc5007317d37c0048a86fa62feca95d1d351f66b3",
+          "scope": "Actual vendor executable/compiled Python driver against controlled loopback protocol peer, not controller simulation",
+          "status": "blocked",
+          "remaining": "DriverTimeout: Driver deadline exceeded; command outcome unknown",
+          "hardware_verified": false
+        }
+      },
+      {
+        "id": "robodk:apiabb",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apiabb.exe",
+        "sha256": "bf67f4b01a4012d2d80e96cceec1dc6790b8e9572fb5dcd3f9262b84376fe4aa",
+        "bytes": 40960,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "ABB IRC5/RAPID socket"
+        ],
+        "constraints": [
+          "PC Interface socket option plus matching RDK_DriverSocket.mod; controller generation/firmware unverified",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-ABB.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:libegm",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/libegm",
+        "repository_url": "https://github.com/ros-industrial/abb_libegm.git",
+        "code_tree_sha256": "05ae772f6b060a4851e32c2808d09118917653ef6de48eb28b9958e4688383a3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "faf76f7dc89d5465fe3be9bc5bfd91aeef2ad885092c406c27cadf47dbd9ebe2"
+          },
+          {
+            "path": "proto/README.md",
+            "sha256": "62ba67ae9bc07e42cda6ba6b9daa6eb10e5700924acd80a07c36f6cab223d7a7"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:librws",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/librws",
+        "repository_url": "https://github.com/ros-industrial/abb_librws.git",
+        "code_tree_sha256": "73bb9876797ddd09ca17ab1bcd4cda66e35a2e8f48767247005a608201fb94df",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "d90025fae893d0591aa64e72fb3f381c5b2215431558116b701ca48d952a1d7b"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "0e14ab88fa9efd67f8977391b398241b9a984ddc5fe302f71c6ad79166513aef"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:abb:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/abb/ros2",
+        "repository_url": "https://github.com/PickNikRobotics/abb_ros2.git",
+        "code_tree_sha256": "615b7308b930f0e4a2134caef7ac704212b289bdebe3d0e69727f640aa109f63",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "5c7b360ab136ec66474ed2ac9ebd32717d4135047026f80c414482e43a306d16"
+          },
+          {
+            "path": "docs/README.md",
+            "sha256": "33bd595a1fbe5c3d7d3a3c1da3d3bae09f9db13bf1a450d04c6514096f46d713"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "ABB_RAPID_IRC5.py",
+      "ABB_RAPID_IRC5_Robtargets.py",
+      "ABB_RAPID_OmniCore.py",
+      "ABB_RAPID_S4C.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider",
+    "asset_adapter_status": "revalidation_required_after_asset_revision"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "ABB-IRB-1200-5-0-9.robot",
+        "path": "simready_usd/ABB-IRB-1200-5-0-9.robot",
+        "sha256": "5f96f113c11cebeabae330c860e5e4c881a24810375ec4251401eaa5de3f56a6"
+      },
+      {
+        "family": "VC",
+        "original_name": "IRB 1200-5_0_9.vcmx",
+        "path": "simready_usd/source_assets/VC/0_irb_1200-5_0_9/IRB 1200-5_0_9.vcmx",
+        "sha256": "4332ca797fc860005613eb1cbcbe8a52fe634c99e320c5a530a4d8fd39cc90a9"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "irb1200_5_90_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/0_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+        "sha256": "0bb2c36b9baf68c532ef27212ea321d6274d306b2e121ca2bab49da2b3046264"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_6.dae",
+        "sha256": "36274b892ce9136c178c00da853d099c230f9787a208fbc0431e7e55b74edddd"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_6.stl",
+        "sha256": "2862c8dc2ba91815a7a6c4aaf2b861b6920292e25dce666d49e29212677ba213"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_5.dae",
+        "sha256": "f83fa3f0b2f0c263ddeaa4d73797c8687c2290ab6108bb361b4c090b18fc0bd2"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_5.stl",
+        "sha256": "80662d2f6998f38573436f0b6f2871ab5374dee603e85ddceec8e2de90e7968f"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_4.dae",
+        "sha256": "c118c6f24d9c3fb877293a2e1d3b69c3099d87f49420987a8fcf26beb8673758"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_4.stl",
+        "sha256": "c863465ca0d5c31aad4416f703604151ec9d632d44b62a92da8376b62dc44f9e"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_3.dae",
+        "sha256": "4897fc9a07fc7b2993395f23297aaaaad817bc1a24510615347cb540bbc038f8"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_3.stl",
+        "sha256": "e64b83b5d5251b9d1c32065a1e2e81950a5343b9971e2daeceefd6ce98dcc56a"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_2.dae",
+        "sha256": "039844fe3c287af3acea490cba381b8b82a3914060fec6c9b81d9ccd20b492eb"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_2.stl",
+        "sha256": "f41662edd09517cf9bf070ec95f6e2d99af6705f1e6900b53fb8e4a32ee0e4de"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/link_1.dae",
+        "sha256": "00c91ae0aa4b1560f374b915bdc9f4a0714b1ab1a6b91749b92d7c5c20e66aaf"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/link_1.stl",
+        "sha256": "a4f7d692a8d40366bcc3441a28f30f1764d992791834cfab7ec2bb98b3e40ad4"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/visual/base_link.dae",
+        "sha256": "d682caecc4cc0e3aceacf5024f7296c5cbe3a2364145b9e094c04c71176e25e0"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.stl",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/meshes/irb1200_5_90/collision/base_link.stl",
+        "sha256": "64cbe8107da061ac3ee4b8805586c3a53428e385fd4a4ff6fef8329e64e3a33b"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_materials.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/abb_resources/urdf/common_materials.xacro",
+        "sha256": "5fc7a65c205759ceab85bb583bf220a6e66cae59258ba48985d9bfc4e0b515cd"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "common_colours.xacro",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/abb_resources/urdf/common_colours.xacro",
+        "sha256": "d6619bbc75c83301bd9594f0224ae927478fa01ae8e9d8e91764d6a837775c1d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "irb1200_5_90_macro.xacro",
+        "path": "simready_usd/source_assets/UniLab/1_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+        "sha256": "bc46ff9839958bee372818832c7abafb77184aeed3e727815136e0a4538e22b6"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_6.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_6.dae",
+        "sha256": "0a5dda5a778eec32540a52bb65e05600edfa10126c026628bfd306270b278996"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_5.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_5.dae",
+        "sha256": "aab85b1e4694c02a3dbd3a52d82ac906c45daab8772b5d0d011d3bf9394af201"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_4.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_4.dae",
+        "sha256": "3b41011d2d2a17978bf731c4b0e02ae37d0da254ac6c17ce8dbeccd17ae2e4b2"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_3.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_3.dae",
+        "sha256": "415903354f3b4be80e96e14fbabac32318e64450df2a1be35eb1d4de74573286"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_2.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_2.dae",
+        "sha256": "1c91754b55859260ec0645cb1df815b67f608afca8ced46be3151fd2002b8815"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "link_1.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/link_1.dae",
+        "sha256": "7905aa62df89867733d41fb31670efb3147b1aed56057ddf037565831c7c78e3"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "base_link.dae",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/meshes/irb1200_5_90/visual/base_link.dae",
+        "sha256": "a0dfbf58a564328e22d53bb1bdd581ed77c92d35465db249331dfaa214b9644d"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros2/robot_specific_config/abb_irb1200_support/package.xml",
+        "sha256": "e7023f618fb8e02eb8de9e9afd3700bfbb08d307bb5e1d962d9a10887e0ab870"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "joint_names_irb1200_5_90.yaml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/config/joint_names_irb1200_7_70.yaml",
+        "sha256": "4c4af592f742bb5a326c4bc56b446bc9156f40b8187c1ae1b6200b93098c4f71"
+      },
+      {
+        "family": "UniLab",
+        "original_name": "package.xml",
+        "path": "simready_usd/source_assets/UniLab/tree/abb/ros_industrial/abb_irb1200_support/package.xml",
+        "sha256": "ad2ab18872ea0d3e648f6aa1c7e96e134e30f32edf2bd671e68cde25c05bee8f"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "abb",
+        "irb1200:5:0.9"
+      ],
+      "label": "VC+RoboDK+UniLab｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [
+        {
+          "commit": "05cbabe774ef026b1cd36fe6b253b55f55e16340",
+          "repository": "https://github.com/PickNikRobotics/abb_ros2.git",
+          "source": "simready_usd/source_assets/UniLab/0_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        },
+        {
+          "commit": "45f4769d826cf3ac62a65495f2db67b78b0c81df",
+          "repository": "https://github.com/ros-industrial/abb.git",
+          "source": "simready_usd/source_assets/UniLab/1_irb1200_5_90_macro/irb1200_5_90_macro.xacro",
+          "status": "source_read_dependencies_checked",
+          "verification_scope": "Original files, literal dependency closure and declared joint/inertial/control fields; not numerical agreement with USD"
+        }
+      ],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "c1703760-007e-5e38-9d46-3a36a749cd13",
+        "original_package_digest": "c7311f6dac65ce2ac5f42cef5c554a43eedb8dbb19b24fd70bb91c278c389f86",
+        "source": "robots/models/ABB-IRB-1200-5-0-9.robot"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK",
+        "UniLab"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

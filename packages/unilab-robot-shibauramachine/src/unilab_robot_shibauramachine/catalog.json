@@ -1,0 +1,268 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "shibauramachine",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "thl400": {
+      "title": "Shibaura Machine THL400｜多源合并",
+      "asset": {
+        "asset_id": "04867afc-4f25-52ec-8100-552482124937",
+        "package_digest": "9ef6ddfc63aa4051b15b4c47c13fa1a112865d52646de0b675cd167d19447c58",
+        "package_path": "04_设备/shibaura_machine/thl400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/thl400/module.json",
+      "module_sha256": "14f50a5ae81060a5cead836451baa1cfebfc3082c78a2b2c2b18079c456f93b2"
+    },
+    "thl600": {
+      "title": "Shibaura Machine THL600｜多源合并",
+      "asset": {
+        "asset_id": "6f0328b3-797b-55ad-bf52-5683fb89c0f1",
+        "package_digest": "d1cade2921439ea47a9855d9c87db389aeab08e89c5b3d4d4da1457bf7da0114",
+        "package_path": "04_设备/shibaura_machine/thl600__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/thl600/module.json",
+      "module_sha256": "5c44b067b86444d9bbea817beea4626d3d195c4b31ffc4016b69968526586c22"
+    },
+    "thl700": {
+      "title": "Shibaura Machine THL700｜多源合并",
+      "asset": {
+        "asset_id": "d4bbf157-e047-56aa-a3a3-f6c2dd75dcab",
+        "package_digest": "af6664a0ba857189bd5acd1853f74ec7da9d4b8a34a7932aed4a92519643f34b",
+        "package_path": "04_设备/shibaura_machine/thl700__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/thl700/module.json",
+      "module_sha256": "659a96e8479c2e1be9bdccf63c0be8845ffa1d16a60ff3d0d5954dd12aff05ed"
+    },
+    "thl800": {
+      "title": "Shibaura Machine THL800｜多源合并",
+      "asset": {
+        "asset_id": "04c57920-d479-5c52-90ba-4aac5992c691",
+        "package_digest": "a85edcd89896baae5c91ab00af8dd40a0115a3482c5354e824a8eeef4eb57a32",
+        "package_path": "04_设备/shibaura_machine/thl800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/thl800/module.json",
+      "module_sha256": "0ece6278cb00f9c00da373303ae8ba88ce62f24116ae50a1e3afb7abf0f8c327"
+    },
+    "tv800": {
+      "title": "Shibaura Machine TV800｜多源合并",
+      "asset": {
+        "asset_id": "c4939696-4ca1-56ed-b25c-ca21da090c97",
+        "package_digest": "30e7e9b8a15ece9842c5252c6061c427b3d3b4a9c86a280740a0062dae7bfb75",
+        "package_path": "04_设备/shibaura_machine/tv800__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tv800/module.json",
+      "module_sha256": "0d09fc3cef415a296e896659b73b5d7d4c5a31cce5cc2403844352eab8118fe0"
+    },
+    "the1000": {
+      "title": "Shibaura Machine THE1000",
+      "asset": {
+        "asset_id": "e20b2792-193e-5990-8969-42381fc45b64",
+        "package_digest": "d7e1f31df8d8282bf40dc686f2172d07ec177625d57a53e6dba0188a4251d925",
+        "package_path": "04_设备/shibaura_machine/the1000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the1000/module.json",
+      "module_sha256": "12bb69e08fb8aed6361cf78eaf3a58f79843c92b03c05f8e15a34aa7992beb4b"
+    },
+    "the400": {
+      "title": "Shibaura Machine THE400",
+      "asset": {
+        "asset_id": "8a98e00c-6716-58c3-82af-4f68d28ec972",
+        "package_digest": "d396d0155980daffde3aad6378d7025b67d2ee986dc38534586e6702dc05572d",
+        "package_path": "04_设备/shibaura_machine/the400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the400/module.json",
+      "module_sha256": "888d8bf56539cb6513459cb11405eaf6002772d81a82f70b82704eeccaec64aa"
+    },
+    "the400t": {
+      "title": "Shibaura Machine THE400T",
+      "asset": {
+        "asset_id": "1e311538-7144-519d-a89f-4b7e54f5c552",
+        "package_digest": "398be0676be04f6af71851e92d7dc89658638b87b0f18dc2377a5dfc9e37ff3f",
+        "package_path": "04_设备/shibaura_machine/the400t__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the400t/module.json",
+      "module_sha256": "bc24bbbf00c49ec41dccc6dab94929a6d5fd77ea43440f3d185a1b18a7481c69"
+    },
+    "the600": {
+      "title": "Shibaura Machine THE600",
+      "asset": {
+        "asset_id": "60aa6fe5-06ad-5fd1-96c6-f191f1342fd3",
+        "package_digest": "5f717465e6880247110970bf4e55bd18413d4fa004f0432cd27de0c27ec76935",
+        "package_path": "04_设备/shibaura_machine/the600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the600/module.json",
+      "module_sha256": "c01fcb70d52b6c8a63718e683d993821b9b2e8cdf2d9be2ba6de5eaaaa779b1b"
+    },
+    "the600t": {
+      "title": "Shibaura Machine THE600T",
+      "asset": {
+        "asset_id": "8916ee32-5af0-509b-8307-87a851e4e769",
+        "package_digest": "2358e601b3b1c552a8e9e2d55ea1e1b538e71537275d79485c9f3bdba1c8834c",
+        "package_path": "04_设备/shibaura_machine/the600t__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the600t/module.json",
+      "module_sha256": "3a12d31cd0bd4599a1bd8cb5f22e0c8a23495bfbf6961ff7dfa2374b4a1b9d21"
+    },
+    "the800": {
+      "title": "Shibaura Machine THE800",
+      "asset": {
+        "asset_id": "9e2a2114-f0d9-59db-ac7b-aab596f6dc84",
+        "package_digest": "92671da44ea925cf12710534807e73133874e0da8925cbaa95148368503acb5d",
+        "package_path": "04_设备/shibaura_machine/the800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/the800/module.json",
+      "module_sha256": "986407e60a0ed8c37bf6e31e5332b887e689bac9125142199a32659b7c6f0f28"
+    },
+    "thl1200": {
+      "title": "Shibaura Machine THL 1200",
+      "asset": {
+        "asset_id": "b55b5ae0-9f1c-5c5c-9f8c-ed3d30b9aa87",
+        "package_digest": "d9c28464a29af89d1bf73c6be3131b6de4d723b76d61febe3930b84b99b70578",
+        "package_path": "04_设备/shibaura_machine/thl_1200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/thl1200/module.json",
+      "module_sha256": "5418e8bf1da2ef50457d08eeece3fb3cd07fa4446da43fe19d5b39a787df3c91"
+    },
+    "thl700ceiling": {
+      "title": "Shibaura Machine THL700 Ceiling",
+      "asset": {
+        "asset_id": "a9635021-a166-5214-a0f0-2fdd9bfb2257",
+        "package_digest": "21132c34d2f85abf2a32b632208924b59146a742d894e5d46fc37c0b0e5e03d8",
+        "package_path": "04_设备/shibaura_machine/thl700_ceiling__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/thl700ceiling/module.json",
+      "module_sha256": "3a4cf5acee0289827634030771be6883c093fb95ab7517e2ecfe4de2374e2e9a"
+    },
+    "thl800ceiling": {
+      "title": "Shibaura Machine THL800 Ceiling",
+      "asset": {
+        "asset_id": "529e4cb9-8caa-574d-99ec-89c4941d191b",
+        "package_digest": "bd5362f8a432dff2c67716c02679f0a6af302dc8d4bd2cf5d9b99a157b9aa19e",
+        "package_path": "04_设备/shibaura_machine/thl800_ceiling__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/thl800ceiling/module.json",
+      "module_sha256": "13a10e823fe355bcf36648049a4c83fc65091a77129b1413a4a5a59f959ae844"
+    },
+    "tvm1200": {
+      "title": "Shibaura Machine TVM1200",
+      "asset": {
+        "asset_id": "0e0ca62c-f0e8-527a-a271-6057987b6975",
+        "package_digest": "8f3fe388a64d314a02c5bd363d6c1c0188cbe0718ce13e099541c61ae84a66c8",
+        "package_path": "04_设备/shibaura_machine/tvm1200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tvm1200/module.json",
+      "module_sha256": "32da4e94d92197288e539fabf10c80e1132501049f15b2511f6f4de2ee7cf9cf"
+    },
+    "tvm1500": {
+      "title": "Shibaura Machine TVM1500",
+      "asset": {
+        "asset_id": "9c980537-18af-5bdd-a74d-cce6642334ff",
+        "package_digest": "445ef7216e0db2da962dd147315b763551bcf00517a9a19107fccf637b9322fc",
+        "package_path": "04_设备/shibaura_machine/tvm1500__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tvm1500/module.json",
+      "module_sha256": "e38385126deab30506638d23bfe70534011409db834c89dd082302f766ea7cbc"
+    },
+    "tvm900": {
+      "title": "Shibaura Machine TVM900",
+      "asset": {
+        "asset_id": "cbbbcefc-2a6d-5db8-9ccf-ea51828b1b1b",
+        "package_digest": "b50b025ae17b6274337ab2e542ef3350fceb63b6866f9fbe6e7c79f6cd82eaba",
+        "package_path": "04_设备/shibaura_machine/tvm900__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tvm900/module.json",
+      "module_sha256": "eb416068787755054ea032eaa348e746cf3fd6d22a33791382de05aba4707245"
+    }
+  },
+  "source_profiles": []
+}

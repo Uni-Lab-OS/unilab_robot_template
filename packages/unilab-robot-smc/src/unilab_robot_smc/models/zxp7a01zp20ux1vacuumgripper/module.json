@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "smc",
+  "model": "zxp7a01zp20ux1vacuumgripper",
+  "title": "SMC ZXP7A01-ZP20U-X1 Vacuum Gripper",
+  "asset": {
+    "asset_id": "2bd8d9a6-d609-5fea-bb6b-36fa445681f2",
+    "package_digest": "6ddde5dabb8a66fc75d3a44e20ad0fe0ecee4eee941222d1c86f734ed634dd25",
+    "package_path": "01_零部件/smc/zxp7a01-zp20u-x1_vacuum_gripper__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2bd8d9a6-d609-5fea-bb6b-36fa445681f2",
+      "package_digest": "6ddde5dabb8a66fc75d3a44e20ad0fe0ecee4eee941222d1c86f734ed634dd25",
+      "package_path": "01_零部件/smc/zxp7a01-zp20u-x1_vacuum_gripper__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "b815351ee951fa4740c6ad2b2dd73a0d181e40fbd5fa12b12d19bda977128f31",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/zxp7a01-zp20u-x1_vacuum_gripper__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ZXP7A01-ZP20U-X1 Vacuum Gripper",
+          "manufacturer": "SMC",
+          "variant": "",
+          "display": "SMC ZXP7A01-ZP20U-X1 Vacuum Gripper",
+          "path": "tools/models/SMC-ZXP7A01-ZP20U-X1-Vacuum-Gripper.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "2bd8d9a6-d609-5fea-bb6b-36fa445681f2"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/SMC-ZXP7A01-ZP20U-X1-Vacuum-Gripper.tool",
+        "path": "simready_usd/SMC-ZXP7A01-ZP20U-X1-Vacuum-Gripper.tool",
+        "sha256": "46e50e991a37b096070f5bb3b9214b484fe6d395d514223aac761863481f6704"
+      }
+    ]
+  }
+}

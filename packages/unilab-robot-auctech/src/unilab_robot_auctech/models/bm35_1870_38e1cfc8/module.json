@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "auctech",
+  "model": "bm35:1870",
+  "title": "AUCTECH BM-35-1870",
+  "asset": {
+    "asset_id": "94be25c4-ba3d-5a7d-bdc7-4327d1426b29",
+    "package_digest": "f1f22d669e946ec699960e03c0361e7fe4101f4b9ead2fc76b0a331e091df6e7",
+    "package_path": "04_设备/auctech/bm-35-1870__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "94be25c4-ba3d-5a7d-bdc7-4327d1426b29",
+      "package_digest": "f1f22d669e946ec699960e03c0361e7fe4101f4b9ead2fc76b0a331e091df6e7",
+      "package_path": "04_设备/auctech/bm-35-1870__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -160.0,
+          -80.0,
+          -200.0,
+          -135.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            490.0
+          ],
+          [
+            -1.5707963267948966,
+            160.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            780.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            170.0,
+            0.0,
+            917.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            130.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          98.0,
+          200.0,
+          200.0,
+          135.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5f58424ee1a214ecce8efebd87b6dbf3fadf885f0f72fb28c219e6084c177b26",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/bm-35-1870__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "BM-35-1870",
+          "manufacturer": "AUCTECH",
+          "variant": "",
+          "display": "AUCTECH BM-35-1870",
+          "path": "robots/models/AUCTECH-BM-35-1870.robot",
+          "type": "robots",
+          "payload": 35,
+          "reach": 1870,
+          "axes": 6,
+          "library_assets": [
+            "94be25c4-ba3d-5a7d-bdc7-4327d1426b29"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/AUCTECH-BM-35-1870.robot",
+        "path": "simready_usd/AUCTECH-BM-35-1870.robot",
+        "sha256": "c9b03e5f023eb5a2c31dad4248f0f4485f70849cbbe75d3d4ef9d77fbad9dd4d"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

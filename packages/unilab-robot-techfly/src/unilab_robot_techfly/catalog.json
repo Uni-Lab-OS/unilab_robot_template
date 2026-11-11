@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "techfly",
+  "models": {
+    "sr10:3800": {
+      "title": "Techfly SR10-3800",
+      "asset": {
+        "asset_id": "0bd6f2af-beec-5899-adcb-94fe4b2a7209",
+        "package_digest": "dacde621ce1cae375cffca2e83aaf9d0baa003be6f775a44aa6e9359f2a729a6",
+        "package_path": "04_设备/techfly/sr10-3800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr10_3800_c843e0ff/module.json",
+      "module_sha256": "5f50533fe8c9f3ba8e0704efa28e6ed26a051c80e177c8562c936b0960d046ed"
+    },
+    "sr12:2000": {
+      "title": "Techfly SR12-2000",
+      "asset": {
+        "asset_id": "a5bb988a-be99-5dcb-9139-5c4ffdd4d160",
+        "package_digest": "cace86183622e6e8debfe495b098763a8eb39558c8d55d63fa82851cbb93a727",
+        "package_path": "04_设备/techfly/sr12-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr12_2000_22b43d91/module.json",
+      "module_sha256": "b0538807bef3312bd579c83817840839ecd6bfa6cda254b2287078bb81492d71"
+    },
+    "sr12:3200": {
+      "title": "Techfly SR12-3200",
+      "asset": {
+        "asset_id": "ef9810e9-77c6-5353-b93d-c4b954b9033b",
+        "package_digest": "6f3ab0255a14c1485520dea647f4328ea2478b921f390e60640f17d8462b0a83",
+        "package_path": "04_设备/techfly/sr12-3200__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr12_3200_92ccb10e/module.json",
+      "module_sha256": "0dbd7a8f87bd13f15c5a432d47aeec851548ea576047dea4a679a9e20992f8dc"
+    },
+    "sr5:1600": {
+      "title": "Techfly SR5-1600",
+      "asset": {
+        "asset_id": "59752d64-dde4-5810-844b-c0dbe54bd68f",
+        "package_digest": "491e8abfce6eba7132cbc5e62e65ae5f8ca36a38b26b7a2ffb7e753c62aebb0e",
+        "package_path": "04_设备/techfly/sr5-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr5_1600_db4dd06d/module.json",
+      "module_sha256": "043b8c8b978050333bf8036c0ce70a17f30610d4dc7a4b7261235067d1f5c9ab"
+    },
+    "sr8:2600": {
+      "title": "Techfly SR8-2600",
+      "asset": {
+        "asset_id": "d27c2401-5e52-5436-b4f5-3763c0a1e9f1",
+        "package_digest": "a0ad13c02c5c704237ff1dd75be909e0391aa305ab52eb407ce90025011b6789",
+        "package_path": "04_设备/techfly/sr8-2600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr8_2600_91b45dfc/module.json",
+      "module_sha256": "fc6448958e4773deef796d0c39757dee0208e97c6849b04d9e305dc796de8105"
+    }
+  },
+  "source_profiles": []
+}

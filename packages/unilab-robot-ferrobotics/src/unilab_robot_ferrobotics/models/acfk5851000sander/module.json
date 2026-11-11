@@ -1,0 +1,202 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ferrobotics",
+  "model": "acfk5851000sander",
+  "title": "FerRobotics ACF K-5851000-Sander",
+  "asset": {
+    "asset_id": "ae838522-a28d-549a-a2c7-4e0e07bb7ab8",
+    "package_digest": "4aac634234ca94fb5aec7ad8e94e776498e58d0c757a19b03395025c75130f94",
+    "package_path": "04_设备/ferrobotics/acf_k-5851000-sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ae838522-a28d-549a-a2c7-4e0e07bb7ab8",
+      "package_digest": "4aac634234ca94fb5aec7ad8e94e776498e58d0c757a19b03395025c75130f94",
+      "package_path": "04_设备/ferrobotics/acf_k-5851000-sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          -0.002,
+          5.5,
+          309.807
+        ],
+        "flange_xyz_rx_ry_rz": [
+          -0.002,
+          5.5,
+          309.807,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0
+        ],
+        "joint_directions": [
+          1.0
+        ],
+        "joint_input_units": [
+          "mm"
+        ],
+        "joint_types": [
+          "prismatic"
+        ],
+        "lower": [
+          0.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 0,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          35.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "da8d9ef196cb92cfa4e03a7fea92e9f6f5efc0600ca9728dc31b28a5504f425b",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 1,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 2
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/acf_k-5851000-sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 1,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ACF K-5851000-Sander",
+          "manufacturer": "FerRobotics",
+          "variant": "",
+          "display": "FerRobotics ACF K-5851000-Sander",
+          "path": "tools/models/FerRobotics-ACF-K-5851000-Sander.robot",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 1,
+          "library_assets": [
+            "ae838522-a28d-549a-a2c7-4e0e07bb7ab8"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/FerRobotics-ACF-K-5851000-Sander.robot",
+        "path": "simready_usd/FerRobotics-ACF-K-5851000-Sander.robot",
+        "sha256": "256555efd92c19619e9828f147bf1c16ea6771a9c7061be62c4368e389f63682"
+      }
+    ]
+  }
+}

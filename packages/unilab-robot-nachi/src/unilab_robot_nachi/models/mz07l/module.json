@@ -1,0 +1,211 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "nachi",
+  "model": "mz07l",
+  "title": "Nachi MZ07L",
+  "asset": {
+    "asset_id": "17b78b10-6586-5272-91f5-997169f130f8",
+    "package_digest": "365cd8642912d449a5e7cb268d13000fca389c5f8c71165747d5bb2342cb17e8",
+    "package_path": "04_设备/nachi/mz07l__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "17b78b10-6586-5272-91f5-997169f130f8",
+      "package_digest": "365cd8642912d449a5e7cb268d13000fca389c5f8c71165747d5bb2342cb17e8",
+      "package_path": "04_设备/nachi/mz07l__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -45.0,
+          -139.0,
+          -190.0,
+          -120.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            345.0
+          ],
+          [
+            -1.5707963267948966,
+            50.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            420.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            45.0,
+            0.0,
+            440.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            73.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          170.0,
+          270.0,
+          190.0,
+          120.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a4da77ceaf9af7fbd312a3371969b4d17d6079c6695ce8f7475290b963592171",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/mz07l__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Nachi_AX_FD.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/nachi/rosweld_drivers",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MZ07L",
+          "manufacturer": "Nachi",
+          "variant": "",
+          "display": "Nachi MZ07L",
+          "path": "robots/models/Nachi-MZ07L.robot",
+          "type": "robots",
+          "payload": 7,
+          "reach": 912,
+          "axes": 6,
+          "library_assets": [
+            "17b78b10-6586-5272-91f5-997169f130f8"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Nachi-MZ07L.robot",
+        "path": "simready_usd/Nachi-MZ07L.robot",
+        "sha256": "481610c5f00c07b51690d2016bf1531f45b61508165bea223e7ca2c5e4770cf8"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "techmanrobot",
+  "model": "tm20",
+  "title": "TM20",
+  "asset": {
+    "asset_id": "3038bb40-5185-589d-a367-9ca124ac5a21",
+    "package_digest": "59a73b52ece3db4f2db4894bec96ac31dd85231238d01711b025491542886f33",
+    "package_path": "04_设备/techman_robot/tm20__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3038bb40-5185-589d-a367-9ca124ac5a21",
+      "package_digest": "59a73b52ece3db4f2db4894bec96ac31dd85231238d01711b025491542886f33",
+      "package_path": "04_设备/techman_robot/tm20__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "3e6645b0bb15564d56ae84673b07e69846f5e42c4fe21a99573a4ee902d44ebe",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "5cd6c4eb9347e8f1490a1326bb0f28b63d98507eaa7f4a7ed4c8b6e7019b5c59",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/tm20__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:TMDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/TMDriver.py",
+        "sha256": "e1178b95602f2d4861a133dc2bc54f3094c0c0a461779be07995619206c5cdbf",
+        "bytes": 1345,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/TMDriver.pyc",
+            "sha256": "b8b0069f0d0dff6b9395583c376fafee45dba8ebe944f13d9699e9c93d859f99"
+          },
+          {
+            "relative_path": "api/Robot/v311/TMDriver.pyc",
+            "sha256": "286451cfb86d2bb9dc5f3184662b6d243a7016212ef0ac5bc4b66c742b79f360"
+          },
+          {
+            "relative_path": "api/Robot/v312/TMDriver.pyc",
+            "sha256": "15bc207ecc0b1a9860df661001733d2eb084ef38d8df66a35c2725a4f218dca5"
+          },
+          {
+            "relative_path": "api/Robot/v38/TMDriver.pyc",
+            "sha256": "4d78d4d9e8714e62fd8f225a20b0edc056f47ad2c7f2be3895f988ad5757305a"
+          },
+          {
+            "relative_path": "api/Robot/v39/TMDriver.pyc",
+            "sha256": "1081905541299c8ba61c8de9d74e9ca457e0213b818a056b5972b45a0eb68de5"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "Techman TM"
+        ],
+        "constraints": [
+          "TM driver does not establish support for Omron Adept or LD mobile robots",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Techman.py",
+      "Techman_FerRobotics.py",
+      "Techman_PathNode.py",
+      "Techman_Remote.py",
+      "Techman_TMscript.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/techman/ros2_legacy",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/techman/ros2_s_series",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "TM20",
+          "manufacturer": "Techman Robot",
+          "variant": "",
+          "path": "Components/Techman Robot/Robots/TM20.vcmx",
+          "type": "Robots",
+          "payload": "20",
+          "reach": "1300",
+          "vcid": "4d564dac-4d7d-46dd-b5c2-d9d4810a4530",
+          "library_assets": [
+            "3038bb40-5185-589d-a367-9ca124ac5a21"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/TM20.vcmx",
+        "path": "simready_usd/TM20.vcmx",
+        "sha256": "3e6645b0bb15564d56ae84673b07e69846f5e42c4fe21a99573a4ee902d44ebe"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ferrobotics",
+  "model": "acfk1536000:30rsander",
+  "title": "FerRobotics ACF K-1536000-30-R-Sander",
+  "asset": {
+    "asset_id": "1191b87c-fb8c-5f80-bd1a-87dc983f9ea5",
+    "package_digest": "4288f424818ce420455847e26affa62cf37a7958dd4f970c36a732c3d83cc669",
+    "package_path": "04_设备/ferrobotics/acf_k-1536000-30-r-sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "1191b87c-fb8c-5f80-bd1a-87dc983f9ea5",
+      "package_digest": "4288f424818ce420455847e26affa62cf37a7958dd4f970c36a732c3d83cc669",
+      "package_path": "04_设备/ferrobotics/acf_k-1536000-30-r-sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          -225.345,
+          -101.202,
+          378.562
+        ],
+        "flange_xyz_rx_ry_rz": [
+          -225.345,
+          -101.202,
+          378.562,
+          -0.0,
+          0.0,
+          -3.141592653589793
+        ],
+        "flange_z_radians": -3.141592653589793,
+        "home": [
+          0.0
+        ],
+        "joint_directions": [
+          1.0
+        ],
+        "joint_input_units": [
+          "mm"
+        ],
+        "joint_types": [
+          "prismatic"
+        ],
+        "lower": [
+          0.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 0,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          35.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "53a791e35e59037012ef8729da50a1f34d2c67008f80e15060a55af62ab104dd",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 1,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 2
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/acf_k-1536000-30-r-sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 1,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "ACF K-1536000-30-R-Sander",
+          "manufacturer": "FerRobotics",
+          "variant": "",
+          "display": "FerRobotics ACF K-1536000-30-R-Sander",
+          "path": "tools/models/FerRobotics-ACF-K-1536000-30-R-Sander.robot",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 1,
+          "library_assets": [
+            "1191b87c-fb8c-5f80-bd1a-87dc983f9ea5"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/FerRobotics-ACF-K-1536000-30-R-Sander.robot",
+        "path": "simready_usd/FerRobotics-ACF-K-1536000-30-R-Sander.robot",
+        "sha256": "7374dea676698dfbd23b10ef12b17593c014bb420f82262a861e5b2b2464f658"
+      }
+    ]
+  }
+}

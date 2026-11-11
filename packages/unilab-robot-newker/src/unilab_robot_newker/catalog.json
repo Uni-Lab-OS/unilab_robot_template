@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "newker",
+  "models": {
+    "new2006b": {
+      "title": "NEWKer NEW2006B",
+      "asset": {
+        "asset_id": "5cff0abb-e246-5241-b661-93bdf6b6dc40",
+        "package_digest": "a0e770f4813489b838297c3ee104b067d5e7a940014f43e6b54b4306757e43c3",
+        "package_path": "04_设备/newker/new2006b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/new2006b/module.json",
+      "module_sha256": "cac0cfcd4f1c8b77e73857bbf0c24f0d02f76a5b4a4706be36f3382bbaa44f5f"
+    }
+  },
+  "source_profiles": []
+}

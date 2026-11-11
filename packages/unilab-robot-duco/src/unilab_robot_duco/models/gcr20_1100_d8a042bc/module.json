@@ -1,0 +1,204 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "duco",
+  "model": "gcr20:1100",
+  "title": "DUCO GCR20-1100",
+  "asset": {
+    "asset_id": "5135cfaf-62b7-5324-901d-7a570cbd0930",
+    "package_digest": "ddf9a21d0e2589f0e51fae5238f111f18caa3b27f15680ca72632aef53c621e9",
+    "package_path": "04_设备/duco/gcr20-1100__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "5135cfaf-62b7-5324-901d-7a570cbd0930",
+      "package_digest": "ddf9a21d0e2589f0e51fae5238f111f18caa3b27f15680ca72632aef53c621e9",
+      "package_path": "04_设备/duco/gcr20-1100__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0,
+          -180.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            3.141592653589793,
+            160.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            500.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            462.5,
+            -1.5707963267948966,
+            146.5
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            137.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            116.7
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          180.0,
+          180.0,
+          180.0,
+          180.0,
+          180.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "95e68c86db4b580c88dbb600bf3def37948c7174ee387b74c343e2f25f2887b0",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gcr20-1100__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "GCR20-1100",
+          "manufacturer": "DUCO",
+          "variant": "",
+          "display": "DUCO GCR20-1100",
+          "path": "robots/models/DUCO-GCR20-1100.robot",
+          "type": "robots",
+          "payload": 20,
+          "reach": 1100,
+          "axes": 6,
+          "library_assets": [
+            "5135cfaf-62b7-5324-901d-7a570cbd0930"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/DUCO-GCR20-1100.robot",
+        "path": "simready_usd/DUCO-GCR20-1100.robot",
+        "sha256": "10e9180767896710aecb9a9cd665fd2d0d3834aa699f2d45e1da9e46fbac972b"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

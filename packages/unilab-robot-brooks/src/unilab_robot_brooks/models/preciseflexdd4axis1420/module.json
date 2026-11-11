@@ -1,0 +1,244 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "brooks",
+  "model": "preciseflexdd4axis1420",
+  "title": "Brooks PreciseFlex DD 4-axis 1420",
+  "asset": {
+    "asset_id": "f66fa3a0-644d-574b-bb91-d7256aedf5cf",
+    "package_digest": "e4b423ca052046ff2b9bc8e577fdb9cc16e16f58d1ad5670c228c089df347168",
+    "package_path": "04_设备/brooks/preciseflex_dd_4-axis_1420__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "f66fa3a0-644d-574b-bb91-d7256aedf5cf",
+      "package_digest": "e4b423ca052046ff2b9bc8e577fdb9cc16e16f58d1ad5670c228c089df347168",
+      "package_path": "04_设备/brooks/preciseflex_dd_4-axis_1420__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.5707963267948966,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          20.0,
+          15.0,
+          45.0,
+          45.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "mm",
+          "degree",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "prismatic",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -169.0,
+          0.0,
+          11.0,
+          -298.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            550.0,
+            0.0,
+            0.0
+          ],
+          [
+            3.141592653589793,
+            350.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          169.0,
+          1420.0,
+          349.0,
+          298.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "4dc076500c6c51d4b7480d5d6015fe89c3154d37e1611221a7c30c13264fdaa0",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/preciseflex_dd_4-axis_1420__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "PreciseFlex DD 4-axis 1420",
+          "manufacturer": "Brooks",
+          "variant": "",
+          "display": "Brooks PreciseFlex DD 4-axis 1420",
+          "path": "robots/models/Brooks-PreciseFlex-DD-4-axis-1420.robot",
+          "type": "robots",
+          "payload": 8,
+          "reach": 1793,
+          "axes": 4,
+          "library_assets": [
+            "f66fa3a0-644d-574b-bb91-d7256aedf5cf"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Brooks-PreciseFlex-DD-4-axis-1420.robot",
+        "path": "simready_usd/Brooks-PreciseFlex-DD-4-axis-1420.robot",
+        "sha256": "5118b42454a4e3ffb27d9d7733939635caf4ab82b40af585e134064e16f7f2cd"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

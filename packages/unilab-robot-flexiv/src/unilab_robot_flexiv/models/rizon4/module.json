@@ -1,0 +1,885 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "flexiv",
+  "model": "rizon4",
+  "title": "Flexiv Rizon 4｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "a4ca5650-4acb-5696-b9ab-7bb0ada64a90",
+    "package_digest": "2e20c487d54003ad91b4b28347b00cc69d64fd65e4610dbf303c4a1efba4a9cb",
+    "package_path": "04_设备/flexiv/rizon4__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a4ca5650-4acb-5696-b9ab-7bb0ada64a90",
+      "package_digest": "2e20c487d54003ad91b4b28347b00cc69d64fd65e4610dbf303c4a1efba4a9cb",
+      "package_path": "04_设备/flexiv/rizon4__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "Rizon 4",
+              "source": "robots/models/Flexiv-Rizon-4.robot",
+              "source_family": "RoboDK",
+              "value": 7.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "count",
+          "value": 7,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Flexiv Rizon product matrix, base Rizon4 without optional F/T sensor",
+              "url": "https://www.flexiv.com/product/rizon"
+            }
+          ]
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "Rizon 4",
+              "source": "robots/models/Flexiv-Rizon-4.robot",
+              "source_family": "RoboDK",
+              "value": 4.0
+            },
+            {
+              "model": "Rizon 4",
+              "source": "Components/Flexiv/Robots/Rizon 4.vcmx",
+              "source_family": "VC",
+              "value": 4.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 4,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Flexiv Rizon product matrix, base Rizon4 without optional F/T sensor",
+              "url": "https://www.flexiv.com/product/rizon"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "Rizon 4",
+              "source": "robots/models/Flexiv-Rizon-4.robot",
+              "source_family": "RoboDK",
+              "value": 780.0
+            },
+            {
+              "model": "Rizon 4",
+              "source": "Components/Flexiv/Robots/Rizon 4.vcmx",
+              "source_family": "VC",
+              "value": 876.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 876,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Exact model catalog fields; geometry and controller version not certified",
+              "title": "Flexiv Rizon product matrix, base Rizon4 without optional F/T sensor",
+              "url": "https://www.flexiv.com/product/rizon"
+            }
+          ]
+        },
+        "robot_mass": {
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 20
+        }
+      },
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -160.0,
+          -130.0,
+          -170.0,
+          -107.0,
+          -170.0,
+          -80.0,
+          -170.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            365.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            -65.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            395.5
+          ],
+          [
+            -1.5707963267948966,
+            20.0,
+            0.0,
+            55.0
+          ],
+          [
+            1.5707963267948966,
+            -20.0,
+            0.0,
+            385.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            103.0
+          ],
+          [
+            -1.5707963267948966,
+            -110.0,
+            0.0,
+            96.0
+          ]
+        ],
+        "mechanism_type": 0,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          160.0,
+          130.0,
+          170.0,
+          154.0,
+          170.0,
+          260.0,
+          170.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 7,
+          "converted_parameters": [
+            {
+              "asset_id": "c695f5ff-e09e-54e1-8a0a-f7f9d7951872",
+              "entrypoints": {
+                "usd": "simready_usd/rizon_4__r001.usdc"
+              },
+              "package_digest": "00a9307f897c67ed1ab2674cc6270c27e626e836df135c0aa1cf1447f8929445",
+              "parameters": {
+                "robot_parameters": {
+                  "base_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "controller_to_mdh_mode": 7,
+                  "field_indices": {
+                    "base": 180,
+                    "controller_mapping_mode": 61,
+                    "flange": 560,
+                    "generic_axis_directions": 64,
+                    "home": 680,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300,
+                      320
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_xyz_rx_ry_rz": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 0.0,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "joint_input_units": [
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree",
+                    "degree"
+                  ],
+                  "joint_types": [
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute",
+                    "revolute"
+                  ],
+                  "lower": [
+                    -160.0,
+                    -130.0,
+                    -170.0,
+                    -107.0,
+                    -170.0,
+                    -80.0,
+                    -170.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      365.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      0.0,
+                      -65.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      395.5
+                    ],
+                    [
+                      -1.5707963267948966,
+                      20.0,
+                      0.0,
+                      55.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      -20.0,
+                      0.0,
+                      385.5
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      -1.5707963267948966,
+                      103.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      -110.0,
+                      0.0,
+                      96.0
+                    ]
+                  ],
+                  "mechanism_type": 0,
+                  "native_static_provenance": {
+                    "artifact": "RoboDK.exe",
+                    "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+                    "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+                    "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+                    "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+                    "generic_direction_mapping": "0x1405dbe20",
+                    "generic_fallback": "0x1405dafb0",
+                    "joint_input_mapping": "0x14055e6a0",
+                    "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+                    "link_pose_dispatch": "0x1406033f0",
+                    "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+                    "type1_and_type8_core": "0x1405b0c10",
+                    "type6_core": "0x140622ed0",
+                    "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+                    "xyz_rx_ry_rz": "0x1406455a0"
+                  },
+                  "raw_controller_mapping_fields": [
+                    0.0,
+                    7.0,
+                    500.0,
+                    0.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "raw_joint_direction_field": [
+                    1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+                  "upper": [
+                    160.0,
+                    130.0,
+                    170.0,
+                    154.0,
+                    170.0,
+                    260.0,
+                    170.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "3e38033e25a4d4774f163b433a18023770995ba9431809c7e068acc25ca8579d",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 7,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 8
+                  }
+                }
+              }
+            }
+          ],
+          "display": "Flexiv Rizon 4",
+          "family": "RoboDK",
+          "library_assets": [
+            "c695f5ff-e09e-54e1-8a0a-f7f9d7951872"
+          ],
+          "manufacturer": "Flexiv",
+          "name": "Rizon 4",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Flexiv-Rizon-4.robot",
+            "path": "simready_usd/Flexiv-Rizon-4.robot",
+            "sha256": "1900835c6c75c3ad3fb08df48b15764012a7b63b8797b4ba1f3cc93f1e3cf413"
+          },
+          "path": "robots/models/Flexiv-Rizon-4.robot",
+          "payload": 4,
+          "reach": 780,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Flexiv",
+          "name": "Rizon 4",
+          "original": {
+            "family": "VC",
+            "original_name": "Rizon 4.vcmx",
+            "path": "simready_usd/source_assets/VC/0_rizon_4/Rizon 4.vcmx",
+            "sha256": "93363986480611efc0d47d560073012428aa0825f452b1ae351e3bfcb8e64574"
+          },
+          "path": "Components/Flexiv/Robots/Rizon 4.vcmx",
+          "payload": "4",
+          "reach": "876",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "01f92cad-393b-432d-b90f-bc1cd7b77e49"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "3e38033e25a4d4774f163b433a18023770995ba9431809c7e068acc25ca8579d",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/rizon4__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Flexiv Rizon 4｜多源合并",
+          "id": "merged_robot_a4ca5650_4acb_5696_b9ab_7bb0ada64a90",
+          "metadata": {
+            "asset_id": "a4ca5650-4acb-5696-b9ab-7bb0ada64a90",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:flexiv:rdk",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/flexiv/rdk",
+        "repository_url": "https://github.com/flexivrobotics/flexiv_rdk.git",
+        "code_tree_sha256": "2414e600c1eb928c6b18a847f505df0ba4c260faa28cae24fbf98c0901f754d4",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "113562a2c234dccfbf332037bd5361b04372ea50cc34640f6688f83c9d4e8f5d"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "4d6af64f8a508d6de1bb20c65eb56bc63ea3ef78bf6c258111671770117dc9fe"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:flexiv:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/flexiv/ros2",
+        "repository_url": "https://github.com/flexivrobotics/flexiv_ros2.git",
+        "code_tree_sha256": "badd32f794a81ff92ee04a1dd859d7fd115bdb1eb20b017408e83795b52adc88",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "46b5c975a08cf48e3d8d7088f8d273ee846d0f209c3ff332f74f35c9b23802ce"
+          },
+          {
+            "path": "flexiv_bringup/README.md",
+            "sha256": "2a0eb841438b6df70a4934ad099cbdf53f5535952d1551c73d2f747d3212f67c"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:flexiv_rdk_1_9",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "flexiv_rdk_1_9",
+        "controller_choices": [
+          "Flexiv RDK server 1.9-compatible firmware"
+        ],
+        "sdk_version_requirement": "flexivrdk 1.9.4.1",
+        "source_candidates": [
+          "sdk:flexiv:rdk",
+          "sdk:flexiv:ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_position_request"
+        ],
+        "constraints": [
+          "RDK2.1 rejects Rizon4s; 1.9.4 actual constructor executed but no licensed robot RDK server; read/motion unvalidated",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "source_rotary_declared_deployment_mapping_required",
+          "offline_adapter": "blocked",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "flexiv-native/receipt.json",
+          "receipt_sha256": "fcb4bd22eded01960c039adc37262408645b2e653544fe9d7fe21960b3e6852c",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Flexiv.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "Flexiv-Rizon-4.robot",
+        "path": "simready_usd/Flexiv-Rizon-4.robot",
+        "sha256": "1900835c6c75c3ad3fb08df48b15764012a7b63b8797b4ba1f3cc93f1e3cf413"
+      },
+      {
+        "family": "VC",
+        "original_name": "Rizon 4.vcmx",
+        "path": "simready_usd/source_assets/VC/0_rizon_4/Rizon 4.vcmx",
+        "sha256": "93363986480611efc0d47d560073012428aa0825f452b1ae351e3bfcb8e64574"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "Rizon 4",
+                "source": "robots/models/Flexiv-Rizon-4.robot",
+                "source_family": "RoboDK",
+                "value": 780.0
+              },
+              {
+                "model": "Rizon 4",
+                "source": "Components/Flexiv/Robots/Rizon 4.vcmx",
+                "source_family": "VC",
+                "value": 876.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 876,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Exact model catalog fields; geometry and controller version not certified",
+                "title": "Flexiv Rizon product matrix, base Rizon4 without optional F/T sensor",
+                "url": "https://www.flexiv.com/product/rizon"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            780.0,
+            876.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "flexiv",
+        "rizon4"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Exact model catalog fields; geometry and controller version not certified",
+            "title": "Flexiv Rizon product matrix, base Rizon4 without optional F/T sensor",
+            "url": "https://www.flexiv.com/product/rizon"
+          }
+        ],
+        "fields": {
+          "axes": {
+            "status": "manufacturer_verified",
+            "unit": "count",
+            "value": 7
+          },
+          "payload": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 4
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 876
+          },
+          "robot_mass": {
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 20
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "c695f5ff-e09e-54e1-8a0a-f7f9d7951872",
+        "original_package_digest": "00a9307f897c67ed1ab2674cc6270c27e626e836df135c0aa1cf1447f8929445",
+        "source": "robots/models/Flexiv-Rizon-4.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

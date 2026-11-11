@@ -1,0 +1,719 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "comau",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "racer3": {
+      "title": "Comau Racer 3｜多源合并",
+      "asset": {
+        "asset_id": "8f21944c-3bdf-5ae4-a228-3cbf68595510",
+        "package_digest": "c4fa936a31d6b27d3dbec84e477580aba8af82a37e4fe2c4efda0c905419f561",
+        "package_path": "04_设备/comau/racer3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/racer3/module.json",
+      "module_sha256": "67c2fd43ef6b67c1d88ace7e3a59c027a836b9eb6834c04b8ba3a5edfb42c9ba"
+    },
+    "racer5:0.80cobot": {
+      "title": "Comau Racer 5-0.80 COBOT｜多源合并",
+      "asset": {
+        "asset_id": "bff57f16-780e-53db-bcae-55b7b41bb5e2",
+        "package_digest": "bbac1ec48aaf6ab51061fa29628ec6c01143b7621a8128c0327f9d5627694c3f",
+        "package_path": "04_设备/comau/racer5_0.80cobot__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/racer5_0_80cobot_10cab351/module.json",
+      "module_sha256": "516e78037d9d1c72972ab1321633e22f6e738a3e1d10eb7c6d5f5db893d613d5"
+    },
+    "racer7:1.4": {
+      "title": "Comau Racer 7-1.4｜多源合并",
+      "asset": {
+        "asset_id": "34dd29b0-c56b-5495-bbd2-f2b030933a2a",
+        "package_digest": "cef2e43c1c464dabc0a7cbdc624f386afa1c2718b5a487402df4c95e419580de",
+        "package_path": "04_设备/comau/racer7_1.4__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/racer7_1_4_79e101cf/module.json",
+      "module_sha256": "ea80e3d7320908eca5a155f36a698cf4adcd73669e723457018b6d713b6ac8f7"
+    },
+    "rebels6:0.45": {
+      "title": "Comau Rebel S6-0.45｜多源合并",
+      "asset": {
+        "asset_id": "03a464e5-8782-589b-9f92-cce234ebb36e",
+        "package_digest": "c4eef7234c59cfeab10c3b8f801e0a90b656f895a39b9567273dd8ac9ebae107",
+        "package_path": "04_设备/comau/rebels6_0.45__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rebels6_0_45_efc837c7/module.json",
+      "module_sha256": "13dd1a65e52b6955a6dfadc8b0bf5d9fe2103e24ffee5ebe16c0ecf12dbe9c78"
+    },
+    "rebels6:0.60": {
+      "title": "Comau Rebel S6-0.60｜多源合并",
+      "asset": {
+        "asset_id": "527c54b4-13a7-5d2d-aa91-610b3b49550f",
+        "package_digest": "125f753d6d4d6d623de2b074e9d638a5a31e850544e3ef7163ac469f50f5bb07",
+        "package_path": "04_设备/comau/rebels6_0.60__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rebels6_0_60_c70c8d53/module.json",
+      "module_sha256": "c53ccf785e361b2e92f3a4b5ad8b324f0a7db821c8de2410a9cae61660404ea2"
+    },
+    "rebels6:0.75": {
+      "title": "Comau Rebel S6-0.75｜多源合并",
+      "asset": {
+        "asset_id": "2737d907-0854-53c1-bb7a-14cf3b5f575b",
+        "package_digest": "8a84d32ed3074eae474d32eda2acf0e078a31390ab42293f185fcc3e8db8cfcf",
+        "package_path": "04_设备/comau/rebels6_0.75__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rebels6_0_75_38b6eaa1/module.json",
+      "module_sha256": "c03f72e4330336088709b9c030d345032954efd6a0f8c8000ee7c6ef343f1181"
+    },
+    "smart5nj130:2.0": {
+      "title": "Comau Smart5 NJ 130-2.0｜多源合并",
+      "asset": {
+        "asset_id": "a76719d0-63ff-5c7c-808d-0c5ddb9be079",
+        "package_digest": "81a433c6e2f67d1836ca49eb47454ff69e4041ae33918ff3d1a2eeebd3dc95cf",
+        "package_path": "04_设备/comau/smart5nj130_2.0__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj130_2_0_87c4ab87/module.json",
+      "module_sha256": "7475eb4aebbea51d12866118750514f4df58bb6aaf0f97673fc528cf6e0da67b"
+    },
+    "smart5nj16:3.1": {
+      "title": "Comau Smart5 NJ 16-3.1｜多源合并",
+      "asset": {
+        "asset_id": "1bc8aee5-0ab2-5947-bb8e-1ec14ec238db",
+        "package_digest": "c649f6e3deb53df53542ddd39c74fa135483a69b0b534883de75bf91491e5594",
+        "package_path": "04_设备/comau/smart5nj16_3.1__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj16_3_1_9a87d8ce/module.json",
+      "module_sha256": "9f5a767a97157f22fa41cb6893840b8f77ea82ecbf5845a5e47744f631854f8f"
+    },
+    "smart5nj40:2.5": {
+      "title": "Comau Smart5 NJ 40-2.5｜多源合并",
+      "asset": {
+        "asset_id": "5b34dbba-0712-5183-803d-bebc4a489c90",
+        "package_digest": "b389e0c749b6cf8c7453be9be102d8bf11a9d8bc03da1c92f724e5b47348d5a9",
+        "package_path": "04_设备/comau/smart5nj40_2.5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj40_2_5_b360dee9/module.json",
+      "module_sha256": "0c8cf14446a56d82c8376627c044e186ddd35dc548358352745d90739f8c54f5"
+    },
+    "smart5nj60:2.2": {
+      "title": "Comau Smart5 NJ 60-2.2｜多源合并",
+      "asset": {
+        "asset_id": "0099ba61-5d07-5dda-ad57-70a12f810ab6",
+        "package_digest": "7ac2fb2c0e5ff6000228e5a4a3ca9228e43dcb699fb3c07eb2e946ca49da80cb",
+        "package_path": "04_设备/comau/smart5nj60_2.2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj60_2_2_65a514de/module.json",
+      "module_sha256": "c2d813de1dbe8e2417e93b892ecb24e683fdcc5959441571bb1022c1c619b540"
+    },
+    "aura170:2.8": {
+      "title": "Comau Aura 170-2.8｜多源合并",
+      "asset": {
+        "asset_id": "b8b90cc9-89dd-567c-b104-061eee730cf5",
+        "package_digest": "5aebfc229d6e2ae82fb9cdfb28af09071898dcfb3006a9a6a5f9433f6fd2ca4f",
+        "package_path": "04_设备/comau/aura170_2.8__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/aura170_2_8_a5927339/module.json",
+      "module_sha256": "0063b4abe8ecb67b3ba788412fd4f651ade60fe841977fa84a26b2b023f2319f"
+    },
+    "racer5:0.80": {
+      "title": "Comau Racer 5-0.80｜多源合并",
+      "asset": {
+        "asset_id": "d44923a2-fb86-5d19-ab64-6886bcf02bb7",
+        "package_digest": "8d6b147eb9db1087415745a06012eddd8bce56b9b2a536dbe8bf3163af51ce19",
+        "package_path": "04_设备/comau/racer5_0.80__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/racer5_0_80_0caacc9e/module.json",
+      "module_sha256": "cf9966451a4883aaef7e2542c60428aca07e6d5096392bc147450294ad266340"
+    },
+    "smart5nj110:3.0": {
+      "title": "Comau Smart5 NJ 110-3.0｜多源合并",
+      "asset": {
+        "asset_id": "f073c5f7-7fab-51f8-8e6e-19ed2c6b0ee6",
+        "package_digest": "b71f9fca057b220fed97e00f4c9a4fc7a634d8186a3c33482774b0ca5eebb9c7",
+        "package_path": "04_设备/comau/smart5nj110_3.0__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj110_3_0_bdd47792/module.json",
+      "module_sha256": "85ce8ec19a50b54caea55dd1f0fcecb7d2517b6a9dc26bb8e5fbf5461ed3285a"
+    },
+    "smart5nj130:2.6": {
+      "title": "Comau Smart5 NJ 130-2.6｜多源合并",
+      "asset": {
+        "asset_id": "88c07985-7a1c-58c3-9294-9d903c5449b0",
+        "package_digest": "7e73b3442762999bdcceb44dc95854479e898403698a9a82fe02ea6a029fbea9",
+        "package_path": "04_设备/comau/smart5nj130_2.6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj130_2_6_a80b4e5d/module.json",
+      "module_sha256": "2ee029e9c7d0049f0e979cf0eb420278ba7c7b76d604ec483e4e7b6ecd7ebe76"
+    },
+    "smart5nj165:3.0": {
+      "title": "Comau Smart5 NJ 165-3.0｜多源合并",
+      "asset": {
+        "asset_id": "dc707a14-6af5-59d6-a919-6ba8fb21ed08",
+        "package_digest": "99c5054d968143d231aacc327d54e8b9a5b73505e77259b94a7d792469786b96",
+        "package_path": "04_设备/comau/smart5nj165_3.0__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj165_3_0_7bee40b5/module.json",
+      "module_sha256": "b87b13511db687bb5c6e3341a8bb42faa8d6fa9dff419f72a3e90a0db9bc2a1a"
+    },
+    "smart5nj4:175:2.2": {
+      "title": "Comau Smart5 NJ4 175-2.2｜多源合并",
+      "asset": {
+        "asset_id": "61aea79e-f180-5554-bed1-89d941c11051",
+        "package_digest": "71749083f86db3ddd4dae50b20d54d177a12c0ef57e348382a3eb4e01b43dfcc",
+        "package_path": "04_设备/comau/smart5nj4_175_2.2__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj4_175_2_2_b71518ae/module.json",
+      "module_sha256": "eaa834d305051bee33b323aed9f1d5fb51e6c34e8db020eb52836aa05a9fa264"
+    },
+    "smart5nj210:3.1sh": {
+      "title": "Comau SMART-5 NJ 210-3.1 SH｜多源合并",
+      "asset": {
+        "asset_id": "0690911f-79f2-58dc-8139-0d221852c607",
+        "package_digest": "f1cfbeaaa748ff318d2c59aee5af17742e1b83c332b8a6cf4cd833f8ab16076b",
+        "package_path": "04_设备/comau/smart5nj210_3.1sh__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj210_3_1sh_0fdd5143/module.json",
+      "module_sha256": "b8c9918d5f9ca42761d24de0f74efcaea3ce8285b95c85d45bdf9cbf1a71bf82"
+    },
+    "nj370:3.0": {
+      "title": "Comau NJ 370-3.0｜多源合并",
+      "asset": {
+        "asset_id": "e1041c9c-499a-5531-bc9b-1b0aea741e1a",
+        "package_digest": "ddfd81e50d2f8b3a84f9acdece819f490b35f0406f60fa9b2396407102413744",
+        "package_path": "04_设备/comau/nj370_3.0__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/nj370_3_0_c0c2fa74/module.json",
+      "module_sha256": "be1c90a2eb170eaaaa4f71f9f0b3617c4a2aacf38e4f60f976422d0bb19dc5a9"
+    },
+    "nj650:2.7": {
+      "title": "Comau NJ 650-2.7｜多源合并",
+      "asset": {
+        "asset_id": "a108b94d-c3b0-5f6c-9603-5cfaf984c01b",
+        "package_digest": "86b053981c77d6f549df17bb5f5932ebee9d90ab046056c74ea7437e509de606",
+        "package_path": "04_设备/comau/nj650_2.7__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/nj650_2_7_335bae86/module.json",
+      "module_sha256": "532c835161370b987fb0a1469e1bf08cb777453ad9f6a2218ed882e675b5ad39"
+    },
+    "smart5pal470:3.1": {
+      "title": "Comau SMART-5 PAL 470-3.1｜多源合并",
+      "asset": {
+        "asset_id": "0d84c54f-9043-5d17-81fd-9a86d1527ff5",
+        "package_digest": "0410778c9ad9ec1052120b32e44a684d95b1f593396195b72b2c0d313e36b2b9",
+        "package_path": "04_设备/comau/smart5pal470_3.1__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5pal470_3_1_e63c2437/module.json",
+      "module_sha256": "f6f5bc75873ef20146e6eeda66915f254945cfbbb5c9a3c317fabc29c403301f"
+    },
+    "smart5nj4:220:2.7": {
+      "title": "Comau Smart5 NJ4 220-2.7｜多源合并",
+      "asset": {
+        "asset_id": "c74a25fa-3e05-5837-9d2a-bcf6641e986f",
+        "package_digest": "d7b3a110dd2d389812f48cdb58458b4aec75c76ac1613195994a645727d6e8dd",
+        "package_path": "04_设备/comau/smart5nj4_220_2.7__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/smart5nj4_220_2_7_0f1fefa7/module.json",
+      "module_sha256": "98a93f375a45abe2eb6da75336d840b633ecbbb18448cebcdf66b82f8d5a0dc1"
+    },
+    "e.do": {
+      "title": "Comau e.DO",
+      "asset": {
+        "asset_id": "88afce32-5139-5fa4-9fe7-b449e35578d3",
+        "package_digest": "5b841daaf4f49efc5c53abb9d2f76833e7969b7f6aa4532106a5e15ac11ab2a3",
+        "package_path": "04_设备/comau/e.do__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e_do_4ebe7907/module.json",
+      "module_sha256": "46f6b11e12b572b57d0bdd0eec2218488dd51d6a162260057dba60321aa964de"
+    },
+    "e.doalternateversion": {
+      "title": "Comau e.DO alternate version",
+      "asset": {
+        "asset_id": "f39a655e-d718-5ed5-98f8-03c448a92fde",
+        "package_digest": "710a35de690c4722871025d0c2c530463fe19c29ec3c339ec4b73d7297945d10",
+        "package_path": "04_设备/comau/e.do_alternate_version__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e_doalternateversion_88139b53/module.json",
+      "module_sha256": "7aedb3f060426d8e2b818feb001d01fedf300c958572bcabbce89b1e5a73ef14"
+    },
+    "myco10:1.00": {
+      "title": "Comau MyCo-10-1.00",
+      "asset": {
+        "asset_id": "106e70dd-1000-58cd-9687-8dd929aa390d",
+        "package_digest": "3d8636f6d4c2211e4c43a00e4b6390b7080181edf4c51284927212493328526c",
+        "package_path": "04_设备/comau/myco-10-1.00__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco10_1_00_41fc7548/module.json",
+      "module_sha256": "8d6876851cf41cba8310d0c9477e52d47d1be6d2e06c54bff1d6cfd28332d18a"
+    },
+    "myco15:1.30": {
+      "title": "Comau MyCo-15-1.30",
+      "asset": {
+        "asset_id": "d0a6af8a-8490-5731-8567-d68b5847893b",
+        "package_digest": "d58f70f9d79d47e2c31ba28057e38d6adddbc7823708c68d68a485c0bdb76562",
+        "package_path": "04_设备/comau/myco-15-1.30__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco15_1_30_6b19d81c/module.json",
+      "module_sha256": "d521d0f322b40d26729dba184e9d582a284bc37c9294a7f4561556e4b1b31e36"
+    },
+    "myco3.5:0.95": {
+      "title": "Comau MyCo-3.5-0.95",
+      "asset": {
+        "asset_id": "7fa899f9-d9fd-5215-b3f1-e5285fb66bda",
+        "package_digest": "1b30a5aeb7a77f7304547c45ec4c1adba7b34acbcab192569e7f2a16057a2f8e",
+        "package_path": "04_设备/comau/myco-3.5-0.95__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco3_5_0_95_fc8c41aa/module.json",
+      "module_sha256": "e73ae49068ca37e051b3542cffa66b561914a3ed01867e4c75bd552de19b1657"
+    },
+    "myco3:0.59": {
+      "title": "Comau MyCo-3-0.59",
+      "asset": {
+        "asset_id": "c414ff14-ca2f-53f7-91ea-499a3c92cb02",
+        "package_digest": "73c262ee384e301b17a8a1c260b679b1e4f013deefcfc7d52dad59af9ae73fef",
+        "package_path": "04_设备/comau/myco-3-0.59__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco3_0_59_ad76e827/module.json",
+      "module_sha256": "995109cf07daa8e5ebb79e696e90f8ff5c94d1a47521993df922c2636c2f04e9"
+    },
+    "myco5:0.80": {
+      "title": "Comau MyCo-5-0.80",
+      "asset": {
+        "asset_id": "781654e8-6a70-582b-9162-60ff22b4e854",
+        "package_digest": "5abd1bf53ac7cf52f0170f22dc66164cd076737d599207e591ab4272ccddf3da",
+        "package_path": "04_设备/comau/myco-5-0.80__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco5_0_80_6a4858c7/module.json",
+      "module_sha256": "5ae34490879c632246460fa37c5d999eb2187a57df6fad03e646fc9f388bbb07"
+    },
+    "myco8:1.30": {
+      "title": "Comau MyCo-8-1.30",
+      "asset": {
+        "asset_id": "89bcac2b-5b89-5f3a-842c-b6abf06e6f41",
+        "package_digest": "9ff8a31277ac7880611481a7945e7ca07cdd94d24937cd803d0c17c467f236da",
+        "package_path": "04_设备/comau/myco-8-1.30__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/myco8_1_30_75aa7608/module.json",
+      "module_sha256": "3bb2fd4b4e4dbefb7a554eec43ca50c4f9fe4534b7d8dca0c2af3c79bf3acbc2"
+    },
+    "ns12:1.85": {
+      "title": "Comau NS 12-1.85",
+      "asset": {
+        "asset_id": "1396f9b2-edb1-5ae7-b440-7f7ab17c852b",
+        "package_digest": "02b027bcb7d468e73e203cfdd9455b062e2e7c77a1cb169be7b5e3900b09c4f5",
+        "package_path": "04_设备/comau/ns_12-1.85__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ns12_1_85_d39675a0/module.json",
+      "module_sha256": "58881f6523b8dddf8fc4c9f51d331c8fc4dd4c334b4c99639564ce100c687f52"
+    },
+    "ns16:1.65": {
+      "title": "Comau NS 16-1.65",
+      "asset": {
+        "asset_id": "552e913c-6910-5059-a28e-a9107ecbbee2",
+        "package_digest": "2c392927ed011dbce118c81144072e0ac2b71a1ae41a35abe87e6e7ebfb04b11",
+        "package_path": "04_设备/comau/ns_16-1.65__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ns16_1_65_0b520ad7/module.json",
+      "module_sha256": "aded5b5b2ef0fa117fa37a407ddb41914dab26845f91f73f84c3770ae1bf3cc1"
+    },
+    "racer5": {
+      "title": "Racer 5",
+      "asset": {
+        "asset_id": "b36b37dd-bca9-59c7-b110-caa837979225",
+        "package_digest": "35745d1f9704320edcd70e86a7654a3f2484a5c889d3f24e616478c1c5792e7f",
+        "package_path": "04_设备/comau/racer_5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/racer5/module.json",
+      "module_sha256": "ed7db499b45d4fd4df677be6caa8d660ce5fe257d917ef4cf8d1dba47f6bd9bf"
+    },
+    "racer5:0.63": {
+      "title": "Comau Racer 5-0.63",
+      "asset": {
+        "asset_id": "00ecfe5f-63a5-5a48-bda1-04bf5328b257",
+        "package_digest": "3d19a6c3581c7e318379600eafd80565d371cbb12ca9b8157b222635550ea913",
+        "package_path": "04_设备/comau/racer_5-0.63__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/racer5_0_63_e04fabf3/module.json",
+      "module_sha256": "d4c93b371a07524fcb1451dc1b42ad8daba046deeef2d3c2e56114440996c1ec"
+    },
+    "racer7:0.99": {
+      "title": "Racer 7-0.99",
+      "asset": {
+        "asset_id": "ef32f003-881f-5c9e-a950-fa37718ee307",
+        "package_digest": "0dfa4497a6e049a16a292486c69564abae038fcf2e1d84ca5823d421c1381024",
+        "package_path": "04_设备/comau/racer_7-0_99__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/racer7_0_99_2101dfb1/module.json",
+      "module_sha256": "912eae32fe18eeefbf58e6496b93203e7f8e13e99476c9358e27edc5ea868665"
+    },
+    "racer999": {
+      "title": "Racer 999",
+      "asset": {
+        "asset_id": "a2d9bef0-16af-5121-b293-701125768b22",
+        "package_digest": "937be4dbd1843e05fa4fa431327eed5e07f25ae6c53969f6e43afb9120e79e31",
+        "package_path": "04_设备/comau/racer_999__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/racer999/module.json",
+      "module_sha256": "6c00903b42589b3f7bf799d692640133ba0c93db6058fbefe83ae4542b15413a"
+    },
+    "s13": {
+      "title": "Comau S-13",
+      "asset": {
+        "asset_id": "deb59381-761b-56f4-9678-6cc268dd834d",
+        "package_digest": "d9ef3b246df5a02fef5cdaa2cad63db3483306a2e6dcc5effe9620c0460c9b77",
+        "package_path": "04_设备/comau/s-13__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s13/module.json",
+      "module_sha256": "ec31e560fa58aa18179f70ae6215a24a0f45fc8c602e62f0846c342601b80252"
+    },
+    "s18": {
+      "title": "Comau S-18",
+      "asset": {
+        "asset_id": "2fe3f290-775e-5af3-996c-cfe00a0c6832",
+        "package_digest": "1b36b6ddd739a95b2aab7de3ee6fd6b5c7e2def392208595e5e3f6124471c8af",
+        "package_path": "04_设备/comau/s-18__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s18/module.json",
+      "module_sha256": "020442b5fc11d19793d9c98a3c3cc5a71810cff86ce0a19d021ce7f8f936d69e"
+    },
+    "smart5nj60:2.2offset": {
+      "title": "SMART-5 NJ-60-2.2_off-set",
+      "asset": {
+        "asset_id": "e9b536cd-7179-5d6c-a93f-6a3c7b903ea8",
+        "package_digest": "6ad44936e9951b685bfa43541781dbae6c86dcea27867e81a4ca4780d09bc18b",
+        "package_path": "04_设备/comau/smart-5_nj-60-2_2_off-set__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smart5nj60_2_2offset_2de018aa/module.json",
+      "module_sha256": "d4c7d8e088a121e8faa35bbfeabda03695daf46b2545ee727162690a526a5f38"
+    },
+    "smart5nj60:2.2offsetbending": {
+      "title": "Comau Smart5 NJ 60-2.2 Off-set Bending",
+      "asset": {
+        "asset_id": "dd350fba-8843-5e7f-a4ae-f48cfc6869ca",
+        "package_digest": "8374e82954f4259d0a3df627ebf4601c6888e832e877626596c476271ff22ee2",
+        "package_path": "04_设备/comau/smart5_nj_60-2.2_off-set_bending__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smart5nj60_2_2offsetbending_2e9304b0/module.json",
+      "module_sha256": "8b945736f27dfe3ba179a7e8583b1711d741feb2d7f49cee6d997d775fe8c3a0"
+    },
+    "smart5ns12:1.85handfoundry": {
+      "title": "SMART-5 NS-12-1.85 Hand_Foundry",
+      "asset": {
+        "asset_id": "deb3cc2b-971c-50c7-a1aa-a039e24b84fa",
+        "package_digest": "e8b7b50edb03217eb19634eb084ed0ab358c6156414be3cd06a44cbee90a9efb",
+        "package_path": "04_设备/comau/smart-5_ns-12-1_85_hand_foundry__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smart5ns12_1_85handfoundry_87be7f42/module.json",
+      "module_sha256": "0706e402c346542ec70073a3ce8eaf5d79294612b8b0716bc03956f1666dd82c"
+    },
+    "smart5ns16:1.65arc": {
+      "title": "SMART-5 NS-16-1.65 Arc",
+      "asset": {
+        "asset_id": "67cfe604-a9f3-54ea-bf3d-bea8829363b2",
+        "package_digest": "159eaf5bfc05c1624f2eaab79ebf8ac4615496101cf66bef8d0518830a77ba5b",
+        "package_path": "04_设备/comau/smart-5_ns-16-1_65_arc__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smart5ns16_1_65arc_0c2c1acc/module.json",
+      "module_sha256": "c344486aedb2e99771bdb8af4ca636d16858ef43b7b686d23769a9a9d5597523"
+    },
+    "smart5ns16:1.65handfoundry": {
+      "title": "SMART-5 NS-16-1.65 Hand_Foundry",
+      "asset": {
+        "asset_id": "5a65a7b4-0bc5-5056-998b-c10fe1db9366",
+        "package_digest": "b033646eadea52d46209cc5ee2177af8f21d11f06658bff78e5f99a70d414005",
+        "package_path": "04_设备/comau/smart-5_ns-16-1_65_hand_foundry__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smart5ns16_1_65handfoundry_9e8c3e77/module.json",
+      "module_sha256": "2857ae2d6a71c4b52034ff68f9f6f0682d90e5bbd7b8255dc3fcb6d9e680d790"
+    },
+    "smartnj40:2.5": {
+      "title": "Comau Smart NJ 40-2.5",
+      "asset": {
+        "asset_id": "950e99d1-f809-5954-b538-061bf2b1e420",
+        "package_digest": "23faf71ee35650744cd831b0d0d25039304a7ab5651aac0ceb633c4d61d0262d",
+        "package_path": "04_设备/comau/smart_nj_40-2.5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smartnj40_2_5_32e8df6f/module.json",
+      "module_sha256": "2b74c298da71aed017a2ea159a7cddade5c30f41b5d2dba9ff9b94ec0c2e0e2b"
+    },
+    "smartnm16:3.1": {
+      "title": "Comau Smart NM 16-3.1",
+      "asset": {
+        "asset_id": "84cfa051-9e38-5768-8485-1b200375ee50",
+        "package_digest": "8b75ce75ff961486f4d44537e0604ac66478622fe7471983c30dffe6dad8a79c",
+        "package_path": "04_设备/comau/smart_nm_16-3.1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smartnm16_3_1_cf04f399/module.json",
+      "module_sha256": "318bfca71ed22ec83b93bd4156583a2b3ec663c6c389e54a42fbe8ce74f0df4d"
+    },
+    "smartnm45:2.0": {
+      "title": "Comau Smart NM 45-2.0",
+      "asset": {
+        "asset_id": "bee7d670-d11c-564a-b276-da3a5476ee7d",
+        "package_digest": "9396e92429a240d6f9175d30852ecf84fa04ce0bc69fbd4b918a52d2502df90f",
+        "package_path": "04_设备/comau/smart_nm_45-2.0__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smartnm45_2_0_aba8551a/module.json",
+      "module_sha256": "970b854d693b1d263b328ea6da5e907714841a634bf78f339efa9bc40f48f571"
+    },
+    "smartsix6:1.4": {
+      "title": "Comau Smart SiX 6-1.4",
+      "asset": {
+        "asset_id": "db81df90-aff9-57e5-a839-a11a69ef2b58",
+        "package_digest": "83f80b57d78dd21fbe74a3351aafbaf87e2aed91408a8cf61632a22f84e91620",
+        "package_path": "04_设备/comau/smart_six_6-1.4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/smartsix6_1_4_88faa8fd/module.json",
+      "module_sha256": "dbcf1e8218f87076995652b63fcbed42f1f63c3c09e6b8743f49db5dcfd9220f"
+    }
+  },
+  "source_profiles": []
+}

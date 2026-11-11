@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "teknomotor",
+  "model": "qtcc5160d2dbsspindle",
+  "title": "Teknomotor QTC-C5160-D-2DBS Spindle",
+  "asset": {
+    "asset_id": "2ad15f92-1061-5a47-8025-9a62608ac5d6",
+    "package_digest": "31894375d2d336c5112a1b0e4767d09428ba0febd976df62bf5a65ed922113d6",
+    "package_path": "01_零部件/teknomotor/qtc-c5160-d-2dbs_spindle__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "2ad15f92-1061-5a47-8025-9a62608ac5d6",
+      "package_digest": "31894375d2d336c5112a1b0e4767d09428ba0febd976df62bf5a65ed922113d6",
+      "package_path": "01_零部件/teknomotor/qtc-c5160-d-2dbs_spindle__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f083fa323becf1f76fa297dba483b8580e4c3971ce486a254bef67314a2c4e1c",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qtc-c5160-d-2dbs_spindle__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QTC-C5160-D-2DBS Spindle",
+          "manufacturer": "Teknomotor",
+          "variant": "",
+          "display": "Teknomotor QTC-C5160-D-2DBS Spindle",
+          "path": "tools/models/Teknomotor-QTC-C5160-D-2DBS-Spindle.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "2ad15f92-1061-5a47-8025-9a62608ac5d6"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Teknomotor-QTC-C5160-D-2DBS-Spindle.tool",
+        "path": "simready_usd/Teknomotor-QTC-C5160-D-2DBS-Spindle.tool",
+        "sha256": "244c740ec5bf7f22a768558af65a20dd82a45182b742c96f63cd586e3b35b6aa"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "genericweldinggunoverarm",
+  "title": "Generic Welding Gun (Over-arm)",
+  "asset": {
+    "asset_id": "68add5ee-93dd-545a-8a06-9de69c1d25cd",
+    "package_digest": "474ffbf66dcc6132934787ab793fa26df9871fd9a4b04e8675dc5fa927f1120f",
+    "package_path": "01_零部件/未知厂家/welding_gun_over-arm___r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "68add5ee-93dd-545a-8a06-9de69c1d25cd",
+      "package_digest": "474ffbf66dcc6132934787ab793fa26df9871fd9a4b04e8675dc5fa927f1120f",
+      "package_path": "01_零部件/未知厂家/welding_gun_over-arm___r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2ace2a6b08fd96814c34b9c18156863e3cac9c3de6fbf69d84cd72995fa1f2b2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/welding_gun_over-arm___r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic Welding Gun (Over-arm)",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-Welding-Gun-Over-arm.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-Welding-Gun-Over-arm.tool",
+        "path": "simready_usd/Generic-Welding-Gun-Over-arm.tool",
+        "sha256": "2e21c4d47fbbae944ec1964e292adfb6a57ccaaf70fa360f46c53f1cd1b9af61"
+      }
+    ]
+  }
+}

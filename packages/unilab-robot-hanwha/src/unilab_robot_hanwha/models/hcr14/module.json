@@ -1,0 +1,272 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hanwha",
+  "model": "hcr14",
+  "title": "Hanwha HCR-14",
+  "asset": {
+    "asset_id": "16893fa1-a7d7-518f-abc9-4c3033e027ef",
+    "package_digest": "f0f6198be0bf7eb8d3221f6960b341147c1dbcd2464f80062a77eecd0dc94356",
+    "package_path": "04_设备/hanwha/hcr-14__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "16893fa1-a7d7-518f-abc9-4c3033e027ef",
+      "package_digest": "f0f6198be0bf7eb8d3221f6960b341147c1dbcd2464f80062a77eecd0dc94356",
+      "package_path": "04_设备/hanwha/hcr-14__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          -90.0,
+          -90.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            207.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            -3.141592653589793,
+            0.0
+          ],
+          [
+            0.0,
+            730.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            538.8,
+            0.0,
+            184.7
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            151.2
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            141.2
+          ]
+        ],
+        "mechanism_type": 6,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "6116417e341b6f5422cad59d9a323997e324e26757bd543103c335dd7ba867f2",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/hcr-14__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:HanwhaDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/HanwhaDriver.py",
+        "sha256": "2d7ff43c504b66a2e3e146bcbb9a131958dd783b2f172d0f4f98c84b5343551b",
+        "bytes": 1357,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/HanwhaDriver.pyc",
+            "sha256": "b33569ca000c0de1270c2606158689a72145adc1b77ef3bbd8cfd3acf96eafd6"
+          },
+          {
+            "relative_path": "api/Robot/v311/HanwhaDriver.pyc",
+            "sha256": "53cba9cb4c92d2cd3d21ca7972ec2d558b12dcad5d57d90766edc933d5081876"
+          },
+          {
+            "relative_path": "api/Robot/v312/HanwhaDriver.pyc",
+            "sha256": "e9906f651e67ddc94a2f1f7078b791c466cc22e4dda712e7b5b5421f4947da41"
+          },
+          {
+            "relative_path": "api/Robot/v38/HanwhaDriver.pyc",
+            "sha256": "a346dac14f6cdb5154c497cc3e2f275d0ef5df89e5a70e3f8da790e56e242aa9"
+          },
+          {
+            "relative_path": "api/Robot/v39/HanwhaDriver.pyc",
+            "sha256": "86d2da752bdc269591d73b4041e32ce741d1e7162541d2929c4119c40d816f80"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "hanwha controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "HCR-14",
+          "manufacturer": "Hanwha",
+          "variant": "",
+          "display": "Hanwha HCR-14",
+          "path": "robots/models/Hanwha-HCR-14.robot",
+          "type": "robots",
+          "payload": 14,
+          "reach": 1420,
+          "axes": 6,
+          "library_assets": [
+            "16893fa1-a7d7-518f-abc9-4c3033e027ef"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Hanwha-HCR-14.robot",
+        "path": "simready_usd/Hanwha-HCR-14.robot",
+        "sha256": "d485116ff34de3376f1fbca2edb0eb4e162b590680fed9f7b3bf4589ba675574"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

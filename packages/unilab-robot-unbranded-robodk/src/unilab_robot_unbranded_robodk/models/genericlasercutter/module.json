@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "genericlasercutter",
+  "title": "Generic Laser Cutter",
+  "asset": {
+    "asset_id": "ffcd0d2e-106d-54c4-a510-4dd6b456f451",
+    "package_digest": "ad8b47bacb02ed61f6123f980e80f0d88450f6e161b8dbcfa1028e073dce35ee",
+    "package_path": "01_零部件/未知厂家/laser_cutter__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "ffcd0d2e-106d-54c4-a510-4dd6b456f451",
+      "package_digest": "ad8b47bacb02ed61f6123f980e80f0d88450f6e161b8dbcfa1028e073dce35ee",
+      "package_path": "01_零部件/未知厂家/laser_cutter__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "e2b9c674131fbab71e00cbacbf50484cda0e217b0f0622cc13e78ac94506aa2e",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/laser_cutter__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic Laser Cutter",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-Laser-Cutter.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-Laser-Cutter.tool",
+        "path": "simready_usd/Generic-Laser-Cutter.tool",
+        "sha256": "5fc09e6f8cd591173cd19790a31f243f106d0845a8d9bbd28a54c72a9e503f46"
+      }
+    ]
+  }
+}

@@ -1,0 +1,744 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kuka",
+  "model": "kr8r1640:2archw",
+  "title": "KUKA KR 8 R1640-2 Arc HW｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "1bc58e6b-0983-5f14-89e1-40a09854aa0a",
+    "package_digest": "ced60253f28384b99e4e6ced219cd83bdc5852872e6472905f100aacb7a56906",
+    "package_path": "04_设备/kuka/kr8r1640_2archw__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "1bc58e6b-0983-5f14-89e1-40a09854aa0a",
+      "package_digest": "ced60253f28384b99e4e6ced219cd83bdc5852872e6472905f100aacb7a56906",
+      "package_path": "04_设备/kuka/kr8r1640_2archw__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "KR 8 R1640-2 Arc HW",
+              "source": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "KR 8 R1640-2 Arc HW",
+              "source": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot",
+              "source_family": "RoboDK",
+              "value": 8.0
+            },
+            {
+              "model": "KR 8 R1640-2 arc HW",
+              "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+              "source_family": "VC",
+              "value": 8.0
+            },
+            {
+              "model": "KR 8 R1640-2 arc HW",
+              "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+              "source_family": "VC",
+              "value": 8.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 8.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "KR 8 R1640-2 Arc HW",
+              "source": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot",
+              "source_family": "RoboDK",
+              "value": 1641.0
+            },
+            {
+              "model": "KR 8 R1640-2 arc HW",
+              "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+              "source_family": "VC",
+              "value": 1640.0
+            },
+            {
+              "model": "KR 8 R1640-2 arc HW",
+              "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+              "source_family": "VC",
+              "value": 1640.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 1641,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "HW and HW E remain separate; manufacturer maximum reach only",
+              "title": "KUKA KR CYBERTECH nano ARC exact variant technical data",
+              "url": "https://www.kuka.com/ko-kr/%EC%A0%9C%ED%92%88/%EB%A1%9C%EB%B4%87-%EC%8B%9C%EC%8A%A4%ED%85%9C/%EC%82%B0%EC%97%85%EC%9A%A9-%EB%A1%9C%EB%B4%87/kr-cybertech-nano-arc"
+            }
+          ]
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          -90.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "lower": [
+          -170.0,
+          -185.0,
+          -119.0,
+          -165.0,
+          -115.0,
+          -350.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            425.0
+          ],
+          [
+            -1.5707963267948966,
+            170.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            810.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            210.0,
+            0.0,
+            627.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          65.0,
+          181.0,
+          165.0,
+          140.0,
+          350.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "6ff26f43-2435-5b28-a6c0-efa25f71137e",
+              "entrypoints": {
+                "usd": "simready_usd/kr_8_r1640-2_arc_hw__r001.usdc"
+              },
+              "package_digest": "d0dcba6bff806488f7f3222884587eb2356c5f95c67a6b7d0933c4733d916825",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": -0.0,
+                  "home": [
+                    0.0,
+                    -90.0,
+                    90.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -185.0,
+                    -119.0,
+                    -165.0,
+                    -115.0,
+                    -350.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      425.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      170.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      810.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      210.0,
+                      0.0,
+                      627.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      80.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    65.0,
+                    181.0,
+                    165.0,
+                    140.0,
+                    350.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "767062f556069e07775de27cc797ee9dd27b0f007074c5a28f18685ef42544bf",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "KUKA KR 8 R1640-2 Arc HW",
+          "family": "RoboDK",
+          "library_assets": [
+            "6ff26f43-2435-5b28-a6c0-efa25f71137e"
+          ],
+          "manufacturer": "KUKA",
+          "name": "KR 8 R1640-2 Arc HW",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "KUKA-KR-8-R1640-2-Arc-HW.robot",
+            "path": "simready_usd/KUKA-KR-8-R1640-2-Arc-HW.robot",
+            "sha256": "71373158aa1eb5113cbfc8d4200ff4d660f5813b0a6e5a38d2a8994a25ebd825"
+          },
+          "path": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot",
+          "payload": 8,
+          "reach": 1641,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 8 R1640-2 arc HW",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 8 R1640-2 arc HW.vcmx",
+            "path": "simready_usd/source_assets/VC/0_kr_8_r1640-2_arc_hw/KR 8 R1640-2 arc HW.vcmx",
+            "sha256": "26b80c4fe4c42fe2540da21a5c1269a974acd914763be4e453ea97b3bd004dce"
+          },
+          "path": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+          "payload": "8",
+          "reach": "1640",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "9b87fe57-af86-471e-b1f9-1637d10c618b"
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "KUKA",
+          "name": "KR 8 R1640-2 arc HW",
+          "original": {
+            "family": "VC",
+            "original_name": "KR 8 R1640-2 arc HW.vcmx",
+            "path": "simready_usd/source_assets/VC/1_kr_8_r1640-2_arc_hw/KR 8 R1640-2 arc HW.vcmx",
+            "sha256": "955989e294dae25ed479b61aa3015310b800f3f6ec7ef7c2c4670666e09c47e1"
+          },
+          "path": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+          "payload": "8",
+          "reach": "1640",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "2a97ec7f-8cde-4f58-92d0-ce398acefb47"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "767062f556069e07775de27cc797ee9dd27b0f007074c5a28f18685ef42544bf",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/kr8r1640_2archw__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "KUKA KR 8 R1640-2 Arc HW｜多源合并",
+          "id": "merged_robot_1bc58e6b_0983_5f14_89e1_40a09854aa0a",
+          "metadata": {
+            "asset_id": "1bc58e6b-0983-5f14-89e1-40a09854aa0a",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:kukabridge",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/kukabridge.exe",
+        "sha256": "af30548be0695cba6c4881d107da1190bd93d464811fba4f4e528b4963ce9e8c",
+        "bytes": 243200,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apikuka",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikuka.exe",
+        "sha256": "7a795c9966a8487629799b8c65062c6fe63f8d3ec3549bbaf54c2cc6e997f4a2",
+        "bytes": 65536,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "KUKA KRC2",
+          "KUKA KRC4"
+        ],
+        "constraints": [
+          "KRC/IIWA controller families are distinct; install matching controller-side bridge",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-KUKA.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "KUKA_app4PostPro.py",
+      "KUKA_CNC.py",
+      "KUKA_custom.py",
+      "KUKA_EntertainTech.py",
+      "KUKA_IIWA.py",
+      "KUKA_IIWA_Spline.py",
+      "KUKA_KRC1_DAT.py",
+      "KUKA_KRC2.py",
+      "KUKA_KRC2_CamRob.py",
+      "KUKA_KRC2_CamRob_AvgSpeed.py",
+      "KUKA_KRC2_CamRob_SingleFile.py",
+      "KUKA_KRC2_Config.py",
+      "KUKA_KRC2_DAT.py",
+      "KUKA_KRC2_DAT_Arc.py",
+      "KUKA_KRC2_DAT_Arc_A20.py",
+      "KUKA_KRC4.py",
+      "KUKA_KRC4_Config.py",
+      "KUKA_KRC4_DAT.py",
+      "KUKA_KRC4_RSI.py",
+      "KUKA_KRC4_Slow.py",
+      "KUKA_KRC4_Spline.py",
+      "KUKA_KRC5.py",
+      "KUKA_KRC_ARCTECH.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "apikukaiiwa.py",
+        "reason": "KRC/IIWA controller families are distinct; install matching controller-side bridge"
+      },
+      {
+        "source": "robots/kuka/ros2_drivers",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kuka/lbr_fri_ros2_rolling_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "RoboDK",
+        "original_name": "KUKA-KR-8-R1640-2-Arc-HW.robot",
+        "path": "simready_usd/KUKA-KR-8-R1640-2-Arc-HW.robot",
+        "sha256": "71373158aa1eb5113cbfc8d4200ff4d660f5813b0a6e5a38d2a8994a25ebd825"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 8 R1640-2 arc HW.vcmx",
+        "path": "simready_usd/source_assets/VC/0_kr_8_r1640-2_arc_hw/KR 8 R1640-2 arc HW.vcmx",
+        "sha256": "26b80c4fe4c42fe2540da21a5c1269a974acd914763be4e453ea97b3bd004dce"
+      },
+      {
+        "family": "VC",
+        "original_name": "KR 8 R1640-2 arc HW.vcmx",
+        "path": "simready_usd/source_assets/VC/1_kr_8_r1640-2_arc_hw/KR 8 R1640-2 arc HW.vcmx",
+        "sha256": "955989e294dae25ed479b61aa3015310b800f3f6ec7ef7c2c4670666e09c47e1"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "KR 8 R1640-2 Arc HW",
+                "source": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot",
+                "source_family": "RoboDK",
+                "value": 1641.0
+              },
+              {
+                "model": "KR 8 R1640-2 arc HW",
+                "source": "Components/KUKA/Deprecated/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+                "source_family": "VC",
+                "value": 1640.0
+              },
+              {
+                "model": "KR 8 R1640-2 arc HW",
+                "source": "Components/KUKA/Robots/Low Payloads/KR CYBERTECH nano-2 ARC/KR 8 R1640-2 arc HW.vcmx",
+                "source_family": "VC",
+                "value": 1640.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1641,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "HW and HW E remain separate; manufacturer maximum reach only",
+                "title": "KUKA KR CYBERTECH nano ARC exact variant technical data",
+                "url": "https://www.kuka.com/ko-kr/%EC%A0%9C%ED%92%88/%EB%A1%9C%EB%B4%87-%EC%8B%9C%EC%8A%A4%ED%85%9C/%EC%82%B0%EC%97%85%EC%9A%A9-%EB%A1%9C%EB%B4%87/kr-cybertech-nano-arc"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1640.0,
+            1641.0
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "kuka",
+        "kr8r1640:2archw"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "HW and HW E remain separate; manufacturer maximum reach only",
+            "title": "KUKA KR CYBERTECH nano ARC exact variant technical data",
+            "url": "https://www.kuka.com/ko-kr/%EC%A0%9C%ED%92%88/%EB%A1%9C%EB%B4%87-%EC%8B%9C%EC%8A%A4%ED%85%9C/%EC%82%B0%EC%97%85%EC%9A%A9-%EB%A1%9C%EB%B4%87/kr-cybertech-nano-arc"
+          }
+        ],
+        "fields": {
+          "reach": {
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 1641
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "6ff26f43-2435-5b28-a6c0-efa25f71137e",
+        "original_package_digest": "d0dcba6bff806488f7f3222884587eb2356c5f95c67a6b7d0933c4733d916825",
+        "source": "robots/models/KUKA-KR-8-R1640-2-Arc-HW.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "multiple_VC"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

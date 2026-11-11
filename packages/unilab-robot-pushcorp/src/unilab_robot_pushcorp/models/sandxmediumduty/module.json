@@ -1,0 +1,103 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "pushcorp",
+  "model": "sandxmediumduty",
+  "title": "PushCorp SandX - Medium Duty",
+  "asset": {
+    "asset_id": "0ab4c091-e928-5ca0-82af-224aac1f2935",
+    "package_digest": "c2441843200f584eee89596639a414ce030a7d82b02687b50728937483925bcc",
+    "package_path": "03_机构模块/pushcorp/pushcorp_sandx_-_medium_duty__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "0ab4c091-e928-5ca0-82af-224aac1f2935",
+      "package_digest": "c2441843200f584eee89596639a414ce030a7d82b02687b50728937483925bcc",
+      "package_path": "03_机构模块/pushcorp/pushcorp_sandx_-_medium_duty__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "kinematics": {
+        "gaps": [],
+        "joints": [],
+        "schema": "vc-offline-kinematics/1",
+        "scope": "serialized kinematic declarations and derived poses; not native PhysX joints, OEM control or dynamics; not hardware validation",
+        "source_sha256": "64a5a59041d17ffd7713aa899e5746de3f64cdebea7620a8c677af72a47233a2",
+        "status": "not_applicable"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "64a5a59041d17ffd7713aa899e5746de3f64cdebea7620a8c677af72a47233a2",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "63e4ac92354b190612c18ddffb59307ed4f6a905d0e88707b18ce7f76f6f0013",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/pushcorp_sandx_-_medium_duty__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "PushCorp SandX - Medium Duty",
+          "manufacturer": "PushCorp",
+          "variant": "",
+          "path": "Components/PushCorp/Robot Tools/PushCorp SandX - Medium Duty.vcmx",
+          "type": "Robot Tools",
+          "payload": "0",
+          "reach": "0",
+          "vcid": "381b460d-c112-4c8e-b2c3-b3d97635b3b3",
+          "library_assets": [
+            "0ab4c091-e928-5ca0-82af-224aac1f2935"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/PushCorp SandX - Medium Duty.vcmx",
+        "path": "simready_usd/PushCorp SandX - Medium Duty.vcmx",
+        "sha256": "64a5a59041d17ffd7713aa899e5746de3f64cdebea7620a8c677af72a47233a2"
+      }
+    ]
+  }
+}

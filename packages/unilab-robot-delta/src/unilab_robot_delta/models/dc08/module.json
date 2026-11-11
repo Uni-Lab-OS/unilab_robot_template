@@ -1,0 +1,205 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "delta",
+  "model": "dc08",
+  "title": "Delta Electronics DC08",
+  "asset": {
+    "asset_id": "30e29cf4-2b6f-5e4e-b847-1ff022072fe1",
+    "package_digest": "0e487836c91406daf1e7c86641fb90dd973619bbfbb74f8b578f7531fb016411",
+    "package_path": "04_设备/delta_electronics/dc08__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "30e29cf4-2b6f-5e4e-b847-1ff022072fe1",
+      "package_digest": "0e487836c91406daf1e7c86641fb90dd973619bbfbb74f8b578f7531fb016411",
+      "package_path": "04_设备/delta_electronics/dc08__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -180.0,
+          -120.0,
+          -150.0,
+          -180.0,
+          -180.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            193.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            600.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            700.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            115.5
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          180.0,
+          120.0,
+          150.0,
+          180.0,
+          180.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "27ee91340b52bdea6facd73192d4461434430cdb375d7f3abe92868ed17b2e34",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/dc08__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "DC08",
+          "manufacturer": "Delta Electronics",
+          "variant": "",
+          "display": "Delta Electronics DC08",
+          "path": "robots/models/Delta-Electronics-DC08.robot",
+          "type": "robots",
+          "payload": 8,
+          "reach": 1300,
+          "axes": 6,
+          "library_assets": [
+            "30e29cf4-2b6f-5e4e-b847-1ff022072fe1"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Delta-Electronics-DC08.robot",
+        "path": "simready_usd/Delta-Electronics-DC08.robot",
+        "sha256": "242f85a02491b128aa6dd58e467399228d50fd2bce947387bd7f2ade4d4eb362"
+      }
+    ],
+    "source_brand_alias": "deltaelectronics"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -34,7 +34,9 @@ def test_cr5_moveit_model_is_six_axis_and_headless() -> None:
     )
     assert "arm_base_joint" not in bundle.urdf
     assert "rail" not in bundle.urdf.lower()
-    assert "rviz" not in bundle.urdf.lower()
+    assert not bundle.rviz_required
+    # Provenance mesh URI may contain upstream dobot_rviz; it is not a process.
+    assert all("rviz" not in n.get("name", "").lower() for n in urdf.findall("joint"))
     assert srdf.find("group").attrib["name"] == "robot_a_cr5_arm"
     assert tuple(bundle.kinematics) == ("robot_a_cr5_arm",)
     assert bundle.rviz_required is False

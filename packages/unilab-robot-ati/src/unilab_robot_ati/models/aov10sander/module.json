@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "ati",
+  "model": "aov10sander",
+  "title": "ATI AOV-10 Sander",
+  "asset": {
+    "asset_id": "a7c293b0-f075-55fa-a7b4-7f0bcf259090",
+    "package_digest": "7491a140661b0995b63bca6323283eed9ed0de4db8e197c41fb3cacbe2e3276f",
+    "package_path": "01_零部件/ati/aov-10_sander__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "a7c293b0-f075-55fa-a7b4-7f0bcf259090",
+      "package_digest": "7491a140661b0995b63bca6323283eed9ed0de4db8e197c41fb3cacbe2e3276f",
+      "package_path": "01_零部件/ati/aov-10_sander__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "0e2fe3f1aa3f84f54cbb0bbaabde7fc5e72c2a56badc367ac5490c9d583892fc",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/aov-10_sander__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "AOV-10 Sander",
+          "manufacturer": "ATI",
+          "variant": "",
+          "display": "ATI AOV-10 Sander",
+          "path": "tools/models/ATI-AOV-10-Sander.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "a7c293b0-f075-55fa-a7b4-7f0bcf259090"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ATI-AOV-10-Sander.tool",
+        "path": "simready_usd/ATI-AOV-10-Sander.tool",
+        "sha256": "688cea56c2c50eaa028585f3677c538a961297b347aa00d765eb0e06f40e061d"
+      }
+    ]
+  }
+}

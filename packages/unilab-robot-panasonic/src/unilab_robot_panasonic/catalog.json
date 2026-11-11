@@ -1,0 +1,117 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "panasonic",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ta1400": {
+      "title": "Panasonic TA-1400｜多源合并",
+      "asset": {
+        "asset_id": "2a7915f4-ec9b-5be1-a879-73b87ccf8c5d",
+        "package_digest": "cdacb1fb7cafebcad89767e523c7f04d4bb603eb5ae4bb56846b489c5d874dc5",
+        "package_path": "04_设备/panasonic/ta1400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ta1400/module.json",
+      "module_sha256": "3c3e795cae4b1fbcd5490fee9145aea90cfb37e007f5c456e6934dd1e1ad850b"
+    },
+    "tm1400": {
+      "title": "Panasonic TM-1400｜多源合并",
+      "asset": {
+        "asset_id": "f3a594c9-1a05-5e99-9526-7dabc846df3e",
+        "package_digest": "b4d3bcbb50a63e586b5c2c2004d7f376ca8da7630320512d73c74891440f1046",
+        "package_path": "04_设备/panasonic/tm1400__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm1400/module.json",
+      "module_sha256": "552b8c9dd5464d57c52490c039e142cc3d02dd2f89829932b520f0cfecc2c289"
+    },
+    "tm1800": {
+      "title": "Panasonic TM-1800｜多源合并",
+      "asset": {
+        "asset_id": "c7b7b2fa-4cc7-575e-b112-9f0b1c0dd56c",
+        "package_digest": "9f61037c4c9af609062e267392bfbacf817ad08948975b71af5b3e1e9731ef49",
+        "package_path": "04_设备/panasonic/tm1800__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm1800/module.json",
+      "module_sha256": "a5eb253555e848e68502b03b72d3d46807c6b01084dbe82e37dcc8fb080ec3d9"
+    },
+    "tm2000": {
+      "title": "Panasonic TM-2000｜多源合并",
+      "asset": {
+        "asset_id": "87f361b3-839b-5324-8dd0-a3d5e710f991",
+        "package_digest": "a9bca5ae321990f902d756a9ec3265287928879c182f6d36978b93cddd6b2b58",
+        "package_path": "04_设备/panasonic/tm2000__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/tm2000/module.json",
+      "module_sha256": "77a8547fd82b750f64ff3712668656b403c2ee446c8aae09dd6fb6fd5d3244b9"
+    },
+    "ta1000": {
+      "title": "Panasonic TA-1000",
+      "asset": {
+        "asset_id": "59cddc96-164f-5701-b9d5-8fcdd0cc8728",
+        "package_digest": "3251cdf437d16172807c75e1cd47ca11835ef7525686d7e6fbb9d46f9caaab3a",
+        "package_path": "04_设备/panasonic/ta-1000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ta1000/module.json",
+      "module_sha256": "e0b23cce7f8269f3f55db060d4a8abed5a71ed5d1cf7c638d6ee7b742653826a"
+    },
+    "ta1600": {
+      "title": "Panasonic TA-1600",
+      "asset": {
+        "asset_id": "a2c58a03-f19f-53bd-9571-e6bb74a6f802",
+        "package_digest": "c939301d90e0f6d47c8f96f422e1c698811fd4b22aab424b835eb47237308d48",
+        "package_path": "04_设备/panasonic/ta-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ta1600/module.json",
+      "module_sha256": "b98d5847961148c07b1f298025aab91e53b879cd128195e9cc0fb495ad1f4824"
+    },
+    "tm1600": {
+      "title": "TM-1600",
+      "asset": {
+        "asset_id": "2a2aede9-c11a-5183-ad0d-a254079508d0",
+        "package_digest": "46d72936a7320d05575625f5b20ab99b9a127cf156a7ffea11635cc66526c2c0",
+        "package_path": "04_设备/panasonic/tm-1600__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/tm1600/module.json",
+      "module_sha256": "a88938da0d477985a129750721427903ba24ea312690e7fb9684e525bbf75a68"
+    }
+  },
+  "source_profiles": []
+}

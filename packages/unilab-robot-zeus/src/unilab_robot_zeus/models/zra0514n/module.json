@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "zeus",
+  "model": "zra0514n",
+  "title": "ZRA0514N",
+  "asset": {
+    "asset_id": "9ffd7dbd-b790-5146-b527-f1cd0233d7ab",
+    "package_digest": "6427fd6fb36ddb4b136227e1a60f50cffe668eed161938a312858de173666169",
+    "package_path": "04_设备/zeus/zra0514n__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "9ffd7dbd-b790-5146-b527-f1cd0233d7ab",
+      "package_digest": "6427fd6fb36ddb4b136227e1a60f50cffe668eed161938a312858de173666169",
+      "package_path": "04_设备/zeus/zra0514n__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "e750d84ded2da0e4f87cf6e7d3243ac11586c2243c66b98f1acaf0c9d0538a64",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "23d13dfa2677767575ffdc766d25c195962a55f504451eb676e8144fd64ac1f9",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/zra0514n__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ZRA0514N",
+          "manufacturer": "Zeus",
+          "variant": "",
+          "path": "Components/Zeus/Robots/ZRA0514N.vcmx",
+          "type": "Robots",
+          "payload": "5",
+          "reach": "860",
+          "vcid": "56464454-39d5-4e3e-96d9-dde75502969b",
+          "library_assets": [
+            "9ffd7dbd-b790-5146-b527-f1cd0233d7ab"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ZRA0514N.vcmx",
+        "path": "simready_usd/ZRA0514N.vcmx",
+        "sha256": "e750d84ded2da0e4f87cf6e7d3243ac11586c2243c66b98f1acaf0c9d0538a64"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

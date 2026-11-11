@@ -1,0 +1,677 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "inovance",
+  "model": "irr11:90sint",
+  "title": "INOVANCE IR-R11-90S-INT｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "dc39e1d0-eb8c-5a8c-98e2-49da9be083d2",
+    "package_digest": "74b8f825c30bd386d6d4833b448f36e965eac1236f989bb2bf84e28f418ca389",
+    "package_path": "04_设备/inovance/irr11_90sint__多源合并_r004"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "dc39e1d0-eb8c-5a8c-98e2-49da9be083d2",
+      "package_digest": "74b8f825c30bd386d6d4833b448f36e965eac1236f989bb2bf84e28f418ca389",
+      "package_path": "04_设备/inovance/irr11_90sint__多源合并_r004"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "IR-R11-90S-INT",
+              "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+              "source_family": "RoboDK",
+              "value": 6.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 6.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "IR-R11-90S-INT",
+              "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+              "source_family": "RoboDK",
+              "value": 11.3
+            },
+            {
+              "model": "IR-R11-90S-INT",
+              "source": "Components/INOVANCE/Robots/IR-R11-90S-INT.vcmx",
+              "source_family": "VC",
+              "value": 11.0
+            }
+          ],
+          "note": "Exact IR-R11-90S-INT maximum load; do not substitute IR-R11-90S5 nominal model coding or infer link mass.",
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 11.3,
+          "verification": [
+            {
+              "authority": "manufacturer original document or official product table",
+              "page": 10,
+              "reviewed_at": "2026-11-08",
+              "scope": "payload",
+              "sha256": "347d156e02f2385b95c36531c2ba85ec3eb472850c8c042f926e9036720c5411",
+              "title": "Inovance Robot Selection Guide 19120306-CY A03 2025-11-20",
+              "url": "https://portal-file.inovance.com/owfile/ProdDoc/CY/19120306-CY/A03/19120306-CY_A03_Inovance%20Robot%20Selection%20Guide_EN%2020251120_Web.pdf"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "IR-R11-90S-INT",
+              "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+              "source_family": "RoboDK",
+              "value": 901.9
+            },
+            {
+              "model": "IR-R11-90S-INT",
+              "source": "Components/INOVANCE/Robots/IR-R11-90S-INT.vcmx",
+              "source_family": "VC",
+              "value": 901.9000000000001
+            }
+          ],
+          "comparison": {
+            "absolute_tolerance": 1e-12,
+            "relative_tolerance": 1e-12,
+            "scope": "Floating representation only; not engineering rounding or manufacturer verification"
+          },
+          "status": "source_agreement_numeric_precision",
+          "unit": "mm",
+          "value": 901.9
+        }
+      },
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 3.141592653589793,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -170.0,
+          -135.0,
+          -66.0,
+          -190.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            400.0
+          ],
+          [
+            -1.5707963267948966,
+            25.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            455.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            38.9,
+            0.0,
+            420.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            80.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          -1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          170.0,
+          100.0,
+          210.0,
+          190.0,
+          125.0,
+          360.0
+        ]
+      },
+      "source_models": [
+        {
+          "axes": 6,
+          "converted_parameters": [
+            {
+              "asset_id": "70e3ab5c-cd81-585f-b474-8ddd1678a08b",
+              "entrypoints": {
+                "usd": "simready_usd/ir-r11-90s-int__r001.usdc"
+              },
+              "package_digest": "8811611ae651deb27023bf369e022df2be0eb99b40da44ebff5bf05e0c86bddf",
+              "parameters": {
+                "robot_parameters": {
+                  "field_indices": {
+                    "flange": 560,
+                    "home": 680,
+                    "joint_directions": 64,
+                    "lower": 600,
+                    "mdh_rows": [
+                      200,
+                      220,
+                      240,
+                      260,
+                      280,
+                      300
+                    ],
+                    "upper": 620
+                  },
+                  "flange_translation_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "flange_z_radians": 3.141592653589793,
+                  "home": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "joint_directions": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "lower": [
+                    -170.0,
+                    -135.0,
+                    -66.0,
+                    -190.0,
+                    -125.0,
+                    -360.0
+                  ],
+                  "mdh": [
+                    [
+                      0.0,
+                      0.0,
+                      0.0,
+                      400.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      25.0,
+                      -1.5707963267948966,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      455.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      38.9,
+                      0.0,
+                      420.0
+                    ],
+                    [
+                      1.5707963267948966,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      -1.5707963267948966,
+                      0.0,
+                      3.141592653589793,
+                      80.0
+                    ]
+                  ],
+                  "mechanism_type": 1,
+                  "raw_joint_direction_field": [
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    -1.0,
+                    1.0
+                  ],
+                  "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+                  "upper": [
+                    170.0,
+                    100.0,
+                    210.0,
+                    190.0,
+                    125.0,
+                    360.0
+                  ]
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:rigidBodyEnabled",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "77855cec1cf73a3739352cb5016c167c2a5297f95f0fc2fb6f25a5588c49ae27",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 7
+                  }
+                }
+              }
+            }
+          ],
+          "display": "INOVANCE IR-R11-90S-INT",
+          "family": "RoboDK",
+          "library_assets": [
+            "70e3ab5c-cd81-585f-b474-8ddd1678a08b"
+          ],
+          "manufacturer": "INOVANCE",
+          "name": "IR-R11-90S-INT",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "INOVANCE-IR-R11-90S-INT.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_inovance-ir-r11-90s-int/INOVANCE-IR-R11-90S-INT.robot",
+            "sha256": "85210aee92328a3e64c6e965199db9efe01c4eb0ada8e1c3285143631d11cdb3"
+          },
+          "path": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+          "payload": 11.3,
+          "reach": 901.9,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "add198a1-d5cb-59cd-b2b7-f3e4d6d26f1a",
+              "entrypoints": {
+                "usd": "simready_usd/ir-r11-90s-int__款2__r001.usdc"
+              },
+              "package_digest": "d27df944d5dd62eb56283a804df19255226c89f6f9751e48ca6fd6f7fdb47ad5",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "7cedbefd086e9a48bf66b4804beeb519770b22965c62ffe003ba4f329806504a",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "6f109d140b88622a7ee024ac1422c69856fb2c3e8811dc74a18b54ffb56fa5b8",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 6,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "add198a1-d5cb-59cd-b2b7-f3e4d6d26f1a"
+          ],
+          "manufacturer": "INOVANCE",
+          "name": "IR-R11-90S-INT",
+          "original": {
+            "family": "VC",
+            "original_name": "IR-R11-90S-INT.vcmx",
+            "path": "simready_usd/source_assets/VC/0_ir-r11-90s-int/IR-R11-90S-INT.vcmx",
+            "sha256": "7cedbefd086e9a48bf66b4804beeb519770b22965c62ffe003ba4f329806504a"
+          },
+          "path": "Components/INOVANCE/Robots/IR-R11-90S-INT.vcmx",
+          "payload": "11",
+          "reach": "901.9000000000001",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "30d646ac-e874-4782-89bf-8036a3ff48e5"
+        }
+      ],
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "77855cec1cf73a3739352cb5016c167c2a5297f95f0fc2fb6f25a5588c49ae27",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/irr11_90sint__多源合并_r004.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "INOVANCE IR-R11-90S-INT｜多源合并",
+          "id": "merged_robot_dc39e1d0_eb8c_5a8c_98e2_49da9be083d2",
+          "metadata": {
+            "asset_id": "dc39e1d0-eb8c-5a8c-98e2-49da9be083d2",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "INOVANCE.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "simready_usd/INOVANCE-IR-R11-90S-INT.robot",
+        "path": "simready_usd/INOVANCE-IR-R11-90S-INT.robot",
+        "sha256": "85210aee92328a3e64c6e965199db9efe01c4eb0ada8e1c3285143631d11cdb3"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "INOVANCE-IR-R11-90S-INT.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_inovance-ir-r11-90s-int/INOVANCE-IR-R11-90S-INT.robot",
+        "sha256": "85210aee92328a3e64c6e965199db9efe01c4eb0ada8e1c3285143631d11cdb3"
+      },
+      {
+        "family": "VC",
+        "original_name": "IR-R11-90S-INT.vcmx",
+        "path": "simready_usd/source_assets/VC/0_ir-r11-90s-int/IR-R11-90S-INT.vcmx",
+        "sha256": "7cedbefd086e9a48bf66b4804beeb519770b22965c62ffe003ba4f329806504a"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "IR-R11-90S-INT",
+                "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+                "source_family": "RoboDK",
+                "value": 11.3
+              },
+              {
+                "model": "IR-R11-90S-INT",
+                "source": "Components/INOVANCE/Robots/IR-R11-90S-INT.vcmx",
+                "source_family": "VC",
+                "value": 11.0
+              }
+            ],
+            "note": "Exact IR-R11-90S-INT maximum load; do not substitute IR-R11-90S5 nominal model coding or infer link mass.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 11.3,
+            "verification": [
+              {
+                "authority": "manufacturer original document or official product table",
+                "page": 10,
+                "reviewed_at": "2026-11-08",
+                "scope": "payload",
+                "sha256": "347d156e02f2385b95c36531c2ba85ec3eb472850c8c042f926e9036720c5411",
+                "title": "Inovance Robot Selection Guide 19120306-CY A03 2025-11-20",
+                "url": "https://portal-file.inovance.com/owfile/ProdDoc/CY/19120306-CY/A03/19120306-CY_A03_Inovance%20Robot%20Selection%20Guide_EN%2020251120_Web.pdf"
+              }
+            ]
+          },
+          "field": "payload",
+          "resolution": "manufacturer_verified",
+          "values": [
+            11.0,
+            11.3
+          ]
+        },
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "IR-R11-90S-INT",
+                "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot",
+                "source_family": "RoboDK",
+                "value": 901.9
+              },
+              {
+                "model": "IR-R11-90S-INT",
+                "source": "Components/INOVANCE/Robots/IR-R11-90S-INT.vcmx",
+                "source_family": "VC",
+                "value": 901.9000000000001
+              }
+            ],
+            "comparison": {
+              "absolute_tolerance": 1e-12,
+              "relative_tolerance": 1e-12,
+              "scope": "Floating representation only; not engineering rounding or manufacturer verification"
+            },
+            "status": "source_agreement_numeric_precision",
+            "unit": "mm",
+            "value": 901.9
+          },
+          "field": "reach",
+          "resolution": "source_agreement_numeric_precision",
+          "values": [
+            901.9,
+            901.9000000000001
+          ]
+        }
+      ],
+      "key": [
+        "inovance",
+        "irr11:90sint"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "authority": "manufacturer original document or official product table",
+            "page": 10,
+            "reviewed_at": "2026-11-08",
+            "scope": "payload",
+            "sha256": "347d156e02f2385b95c36531c2ba85ec3eb472850c8c042f926e9036720c5411",
+            "title": "Inovance Robot Selection Guide 19120306-CY A03 2025-11-20",
+            "url": "https://portal-file.inovance.com/owfile/ProdDoc/CY/19120306-CY/A03/19120306-CY_A03_Inovance%20Robot%20Selection%20Guide_EN%2020251120_Web.pdf"
+          }
+        ],
+        "fields": {
+          "payload": {
+            "note": "Exact IR-R11-90S-INT maximum load; do not substitute IR-R11-90S5 nominal model coding or infer link mass.",
+            "status": "manufacturer_verified",
+            "unit": "kg",
+            "value": 11.3
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "70e3ab5c-cd81-585f-b474-8ddd1678a08b",
+        "original_package_digest": "8811611ae651deb27023bf369e022df2be0eb99b40da44ebff5bf05e0c86bddf",
+        "source": "robots/models/INOVANCE-IR-R11-90S-INT.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [
+        "payload_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "active_revision_mapping_sha256": "c3384fe137d0d19ff91112452b0f2680efa147f01787a420d202b8d4eea146f2"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

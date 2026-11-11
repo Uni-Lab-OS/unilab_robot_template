@@ -1,0 +1,69 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "abb_irb1200_5_90_moveit_config_70239feb9a",
+  "source": {
+    "url": "https://github.com/PickNikRobotics/abb_ros2.git",
+    "commit": "05cbabe774ef026b1cd36fe6b253b55f55e16340",
+    "path": "robots/abb/ros2/robot_specific_config/abb_irb1200_5_90_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "24791ad17822b62599bac2d968accf8fbffaaceeb51d208b9dc965f283e8a5bc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/abb_irb1200_5_90.srdf.xacro",
+      "sha256": "1c5438bfffa6ae885b8119470ee7da0b104e1fa31ec29f89e95b9126b5025cb1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/abb_irb1200_5_90_macro.srdf.xacro",
+      "sha256": "40bf405647608f391256fd8d0690c8f2fab36753e79d72dc871106de6345662b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "f07f4cba7bda05272a21c7ab87450925ab519e69ad6bf5344aed225019bc8d1e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "8915c4ed7f0570de742c073bb317ff9aeaffe9351f91b71cb318c603aa5713fc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "504f4fd6f81b04705372360d7a169c545e9f81d37798d944ec6ab699edf09eb0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "51002f345cd99bd58915724d2236844d87cdb48046d4ac2fed7e84f756be36c2",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "c9d6f265a07f0dfa85d1cda3243bd79f117992f495a2b4cf843b5b1b48b6c57d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "71a07ff44ab29856ab925312da7c3fe69e2e025d76e955f2c3993821ad89ad89",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "d6c07070d05243b7da4d961c71750f7570f543ee4a80b4bc660e50259b0378f7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    }
+  ]
+}

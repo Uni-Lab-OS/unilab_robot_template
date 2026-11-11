@@ -1,0 +1,49 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "denso_robot_moveit_demo_8be33a60c6",
+  "source": {
+    "url": "https://github.com/DENSORobot/denso_robot_ros2.git",
+    "commit": "2805694999b0375861e632426b5abc484d9a9936",
+    "path": "robots/denso/ros2/denso_robot_moveit_demo",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "aef0472794a9d96ed0d8f17ee3b598f0e46c510cc5e85810b3747dc1a7d15857",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/denso_robot_moveit_demo.yaml",
+      "sha256": "70982c3d738b9721454f2201ea7af62b5e5873d49cb80967ecb45b35d4b4b344",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/denso_robot_moveit_demo.launch.py",
+      "sha256": "29ebebba4eb1749d8c292faee62c2d556054bb2485436dc4d7334099a29994cf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/denso_robot_moveit_pickandplace.launch.py",
+      "sha256": "ea43720d8a6624ed14dd625bba440a16e77a1fe8a6df12b92bcb52b18eb9144e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/denso_robot_moveit_pickandplace_scara.launch.py",
+      "sha256": "d7ebacd39eabb38b6a543289a733423019999f65fa6034317af4dd935695bfc3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "40b2095a9a787b96f035b144481e1dec3f9f46216d34ccc5f377b77f5bc4e619",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "ec32e34ce48a18cd5a7e5df8cfd2fb1a0e480562e9f95e530abde1b47e576ee7"
+    }
+  ]
+}

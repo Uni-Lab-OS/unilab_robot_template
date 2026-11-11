@@ -1,0 +1,172 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "huayanhans",
+  "models": {
+    "e03": {
+      "title": "Huayan E03",
+      "asset": {
+        "asset_id": "48f2d78c-9561-5106-8d9c-56be10c6f703",
+        "package_digest": "bdc3ac2330fab1c49d33cf61048c9c6a348a302f3835f909264336785f4491a8",
+        "package_path": "04_设备/huayan_han_s/e03__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e03/module.json",
+      "module_sha256": "81776befd53db3f0e18089ae2354583d19e8f1a6e16f07e33a84352377a0f5b7"
+    },
+    "e05": {
+      "title": "Huayan E05",
+      "asset": {
+        "asset_id": "720da40e-94dd-5ec9-b5a5-7805744a4f50",
+        "package_digest": "87a43b2a051a04c6838d8063b449f49e13d7288738583b417169a1da7fb35269",
+        "package_path": "04_设备/huayan_han_s/e05__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e05/module.json",
+      "module_sha256": "9c00936e8da39d9e19a876268c520162777b77bd1ffb7cbdf48ab91a3026f093"
+    },
+    "e05c": {
+      "title": "Huayan E05C",
+      "asset": {
+        "asset_id": "7f78d812-b841-5fff-8b5a-7dc137c9e372",
+        "package_digest": "dd4b63adf987733fd031d489b8e21d74c9a1626b8c32f7a8ce06b1025f3469eb",
+        "package_path": "04_设备/huayan_han_s/e05c__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e05c/module.json",
+      "module_sha256": "2e8b5f961b14d5e14f451f4f9eb67afd4a75038fa8835f8f66ca52da462b5176"
+    },
+    "e05l": {
+      "title": "Huayan E05-L",
+      "asset": {
+        "asset_id": "18753a5f-aeab-57c1-b90e-4e20e62ee8ae",
+        "package_digest": "7c8f6d5df5d3de941fe916105698ec762c72cc54d044fc3ff985ff56df3004b1",
+        "package_path": "04_设备/huayan_han_s/e05-l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e05l/module.json",
+      "module_sha256": "16712c4bd4b5b81f4c2fb4904a4ee9defa278be1616002087c81f4df66a7facc"
+    },
+    "e10": {
+      "title": "Huayan E10",
+      "asset": {
+        "asset_id": "ba2b384b-9a2d-5742-a909-010d1b07f8c5",
+        "package_digest": "80372e3a1299c54223ad8299cac0386764299487ea077d3f64096b71d019beb0",
+        "package_path": "04_设备/huayan_han_s/e10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e10/module.json",
+      "module_sha256": "7941e7a1f519f8eb3e5fe183210de5228bada3aa42e7fcbff196dd28fadcfbbb"
+    },
+    "e10l": {
+      "title": "Huayan E10-L",
+      "asset": {
+        "asset_id": "db8eef56-d9de-5f06-aa8a-ec9b0cf7b7ca",
+        "package_digest": "2ab223a386c816361a7f45dfe8b8d1f89d5f83cf4d55ded2bab9b3ce355c466f",
+        "package_path": "04_设备/huayan_han_s/e10-l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e10l/module.json",
+      "module_sha256": "b37e5f3f5b0e5ef5f373ad8a2537fb2506f5f7f46fc3da414efcaa4d8f22db77"
+    },
+    "e12": {
+      "title": "Huayan E12",
+      "asset": {
+        "asset_id": "b76b471c-6ca0-55e0-b030-559e3bfc37d7",
+        "package_digest": "7e8aee3c8f907ff132628667f82c05cf2871ad655a0351601ab7dd5d004da118",
+        "package_path": "04_设备/huayan_han_s/e12__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e12/module.json",
+      "module_sha256": "48df32299c2b117f4df2c09c1524be9fef763974e60567e873fe6750470aa54a"
+    },
+    "e15": {
+      "title": "Huayan E15",
+      "asset": {
+        "asset_id": "ea39f0b3-e766-53ed-b956-3714142ea05f",
+        "package_digest": "7d79839350c1a63c7bc876090038a6d086d0cd84dcc80e812e0f6e10c130c72e",
+        "package_path": "04_设备/huayan_han_s/e15__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/e15/module.json",
+      "module_sha256": "dda632726315629e56e7d631c9543091aa52094236cf168e92372f0fdb5a9a93"
+    },
+    "s20:1700": {
+      "title": "Huayan S20 1700",
+      "asset": {
+        "asset_id": "768b1f9b-94e4-5b29-afe4-59653ffc88d1",
+        "package_digest": "42851fdfe186537eb395925896734fbe8d6724eeb297c9cc4bc0ff6c53da6f85",
+        "package_path": "04_设备/huayan_han_s/s20_1700__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s20_1700_7679f2fc/module.json",
+      "module_sha256": "c9c1f3be5adc5f43bc57a1e264679cbbd6e0628a52f4f3c6c5b15d390d3e3dbe"
+    },
+    "s30:1800": {
+      "title": "Huayan S30 1800",
+      "asset": {
+        "asset_id": "aafbdc30-94f3-52a6-a180-3ca59d8b7eb7",
+        "package_digest": "fbec4162dae884eb8952267cf0472b3968f783f429ceac5c1fbf43c9ecfcf768",
+        "package_path": "04_设备/huayan_han_s/s30_1800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s30_1800_68f45938/module.json",
+      "module_sha256": "b3439427dd47dde2a90e2c9cc60fb80085be84bb7854e34ed34991ea5f9bf64f"
+    },
+    "s50:2000": {
+      "title": "Huayan S50 2000",
+      "asset": {
+        "asset_id": "6f0959b9-b63b-5e6d-9229-8e5f2f790851",
+        "package_digest": "ef8a7efee696116f3a8e6670fe86876f5f24f71211b768fed799e03465431667",
+        "package_path": "04_设备/huayan_han_s/s50_2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/s50_2000_a68dbc8a/module.json",
+      "module_sha256": "a98b0acab870487c91cedf885734616f166e233df0aeca297ed924f49289c84d"
+    }
+  },
+  "source_profiles": []
+}

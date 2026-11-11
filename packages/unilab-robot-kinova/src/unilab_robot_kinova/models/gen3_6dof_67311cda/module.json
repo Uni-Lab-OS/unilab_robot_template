@@ -1,0 +1,288 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kinova",
+  "model": "gen3:6dof",
+  "title": "Kinova Gen3 6DOF",
+  "asset": {
+    "asset_id": "318d0dc9-2e4b-5445-9e57-b300fd6284c6",
+    "package_digest": "bb64989ba9d562883c32afb152d0557f9765570d53180ea68f309d28bca823fc",
+    "package_path": "04_设备/kinova/gen3_6dof__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "318d0dc9-2e4b-5445-9e57-b300fd6284c6",
+      "package_digest": "bb64989ba9d562883c32afb152d0557f9765570d53180ea68f309d28bca823fc",
+      "package_path": "04_设备/kinova/gen3_6dof__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": 0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "lower": [
+          -360.0,
+          -128.9,
+          -147.8,
+          -360.0,
+          -120.3,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            284.8
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            1.0
+          ],
+          [
+            0.0,
+            410.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            314.3
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            167.4
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          128.9,
+          147.8,
+          360.0,
+          120.3,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a8c33e9f2cbc06d6251fd3ed85f50a4c814ab44b7725021ca663aa20dfe95ad4",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/gen3_6dof__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apikinova",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apikinova.py",
+        "sha256": "6d2e107c3d6357bad7ff6e5b10ca16612539c46753ed25175e38fc429e3cb13d",
+        "bytes": 1348,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apikinova.pyc",
+            "sha256": "e8bc12b3a76e5bd24628f0d11b60315cc19f9faeffe74e49cace3f576dd3ea4e"
+          },
+          {
+            "relative_path": "api/Robot/v311/apikinova.pyc",
+            "sha256": "e025bfe475be8f51f9780303bdbd0fb6c38b6c36897f354601b98bb08aa1d792"
+          },
+          {
+            "relative_path": "api/Robot/v312/apikinova.pyc",
+            "sha256": "ad926634436899d1f570895de84c69e1d9ee5a9285aeb0092ad47c627672f253"
+          },
+          {
+            "relative_path": "api/Robot/v38/apikinova.pyc",
+            "sha256": "6c667bbeeeb18e7e8920bc7413bbb468bb685add2bf078939cdc9db145b166c9"
+          },
+          {
+            "relative_path": "api/Robot/v39/apikinova.pyc",
+            "sha256": "f07033922a97284e88466aa1e5cb02413e8aadf0dc07835f66f1a52e17a90798"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "kinova controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Kinova.py",
+      "Kinova_Link6.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kinova/ros2_kortex",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kinova/ros_kortex",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kinova/ros2_kortex_main_source",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Gen3 6DOF",
+          "manufacturer": "Kinova",
+          "variant": "",
+          "display": "Kinova Gen3 6DOF",
+          "path": "robots/models/Kinova-Gen3-6DOF.robot",
+          "type": "robots",
+          "payload": 4,
+          "reach": 735.1,
+          "axes": 6,
+          "library_assets": [
+            "318d0dc9-2e4b-5445-9e57-b300fd6284c6"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Kinova-Gen3-6DOF.robot",
+        "path": "simready_usd/Kinova-Gen3-6DOF.robot",
+        "sha256": "f4e09beb0d72120dc1fae034936f50050a4aac5afc199146e80f054d72301ec7"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

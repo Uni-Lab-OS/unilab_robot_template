@@ -1,0 +1,68 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "franka_fr3_moveit_config_97b833b8d9",
+  "source": {
+    "url": "https://github.com/frankarobotics/franka_ros2.git",
+    "commit": "9faaaaf6ad4e4cc177cb93716547cc8ab20c5bd2",
+    "path": "robots/franka/franka_ros2/franka_fr3_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "0194dbe2349818d553b019ecb8b65653f91ea18075f4ba231dddda8fc152da38",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fr3_controllers.yaml",
+      "sha256": "4830e3dae0fab166b6090fe0d1898d351f31eaa94794568b8514777b4e7950cf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/fr3_ros_controllers.yaml",
+      "sha256": "eab93641f1326dcaf6eb54d9490f37d461a4bb9d11c9e4008d525e22fe37e67a",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "53587e29165957b45f62f097cfa608e1d438e2ee9ee08292b31e97feda7c1779",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "d500984e620a1641985f570b457cb446ebdb979720a11763da5915714b31846b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/move_group.launch.py",
+      "sha256": "36e5711a4779e49de1b121ce8a2d6fc94b5507ad60c34bf3738440262b936a71",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit.launch.py",
+      "sha256": "318b3d0279dfad96dff455d849ac5a36f07616c66ee505201a4c81b63404bd98",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "3c13cb83e69e4f41c17cf4c80b8e9016f52af1f31f7e1e78ac5cbf4f3119a75d",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "02d73d5b055151c7eb144bf0952a3e01f448520e8e21d7c5509b993ae48af912",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc"
+    },
+    {
+      "path": "upstream_notices/NOTICE",
+      "sha256": "3714a1b2eb5fdc96ac951f41c959a12dfe77bed3e816580f2ba9cc2e5fbf0960"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "fanuc_m430ia_moveit_plugins_280018d620",
+  "source": {
+    "url": "https://github.com/ros-industrial/fanuc.git",
+    "commit": "d8f42bd73584b255df87098395512538882caea1",
+    "path": "robots/fanuc/ros_industrial/moveit_cfgs/fanuc_m430ia_moveit_plugins",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "927ac65f87a1c76e392ac5ddbced634aa6d0c77cd0737cfa37d914dae83e36b8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "m430ia2f_kinematics/CMakeLists.txt",
+      "sha256": "8c9fd505ee1998cfd53afb9a1d54596e87e2923ac7c6b7c451eaf9512ab2d4b0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "m430ia2f_kinematics/fanuc_m430ia2f_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "4eb38f795e31e5154e40119e77fcf29cd5ebb318c5b78ecf7abdbff1fb8e1fd0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "m430ia2p_kinematics/CMakeLists.txt",
+      "sha256": "ed84f59627d3153e8bb6f9a246a0e05178e5b5fcba1cdd7b448d94681e814bb7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "m430ia2p_kinematics/fanuc_m430ia2p_manipulator_moveit_ikfast_plugin_description.xml",
+      "sha256": "f1d7119591deff7a94b9cbe93534ce97969fe10a6529e063058c23209a4d83cf",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "8dd8c5e009d9d19b0a27467082042220f88864ccbb39a1296db205c9801025af",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "readme.md",
+      "sha256": "975093cc6f942b8f1821021da4e0dd55e84ef5ec1a9fc630cc7fe286eb90f3d8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+    }
+  ]
+}

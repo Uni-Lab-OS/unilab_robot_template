@@ -1,0 +1,206 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "qjar",
+  "model": "qjr6:3",
+  "title": "QJAR QJR6-3",
+  "asset": {
+    "asset_id": "d5ff2ad0-9171-5849-9e74-1def1817c380",
+    "package_digest": "e0155493a19cb8c6062e133594a128aaccef2ad9ee6326962553387aeb0628ee",
+    "package_path": "04_设备/qjar/qjr6-3__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "d5ff2ad0-9171-5849-9e74-1def1817c380",
+      "package_digest": "e0155493a19cb8c6062e133594a128aaccef2ad9ee6326962553387aeb0628ee",
+      "package_path": "04_设备/qjar/qjr6-3__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -172.0,
+          -100.0,
+          -92.0,
+          -170.0,
+          -125.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            538.0
+          ],
+          [
+            -1.5707963267948966,
+            149.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            730.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            140.0,
+            0.0,
+            1113.5
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            108.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          172.0,
+          166.0,
+          83.0,
+          170.0,
+          125.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "73e240de520f008e6bffa06bb2f917c88196300536153ffd2adb57f556ff7c27",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/qjr6-3__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "QJAR.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "QJR6-3",
+          "manufacturer": "QJAR",
+          "variant": "",
+          "display": "QJAR QJR6-3",
+          "path": "robots/models/QJAR-QJR6-3.robot",
+          "type": "robots",
+          "payload": 6,
+          "reach": 2001,
+          "axes": 6,
+          "library_assets": [
+            "d5ff2ad0-9171-5849-9e74-1def1817c380"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/QJAR-QJR6-3.robot",
+        "path": "simready_usd/QJAR-QJR6-3.robot",
+        "sha256": "4412f06ecb398a6b3f2d9149cbf9d94483f8b01e330d24a5898f2996d1945cd4"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "otc",
+  "model": "fd84weldinggun",
+  "title": "OTC Daihen FD-84 Welding Gun",
+  "asset": {
+    "asset_id": "510a64fa-5345-5928-998b-522f1f2f9e45",
+    "package_digest": "bd4abd8a593c372c042ef5cff2e49dd1a2ae5e64061bcf113d125db1b6d46c1c",
+    "package_path": "01_零部件/otc_daihen/fd-84_welding_gun__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "510a64fa-5345-5928-998b-522f1f2f9e45",
+      "package_digest": "bd4abd8a593c372c042ef5cff2e49dd1a2ae5e64061bcf113d125db1b6d46c1c",
+      "package_path": "01_零部件/otc_daihen/fd-84_welding_gun__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "f27a5efc4b1030c633d1ab827cfa8fd2ade96644f1bdfacb07328e8643fc2fa1",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/fd-84_welding_gun__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "OTC.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "FD-84 Welding Gun",
+          "manufacturer": "OTC Daihen",
+          "variant": "",
+          "display": "OTC Daihen FD-84 Welding Gun",
+          "path": "tools/models/OTC-Daihen-FD-84-Welding-Gun.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "510a64fa-5345-5928-998b-522f1f2f9e45"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/OTC-Daihen-FD-84-Welding-Gun.tool",
+        "path": "simready_usd/OTC-Daihen-FD-84-Welding-Gun.tool",
+        "sha256": "a03da81c24f460614cae3938a4b37c75ee8708695ab6abc7840b91419f5bc23f"
+      }
+    ]
+  }
+}

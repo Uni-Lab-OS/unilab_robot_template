@@ -1,0 +1,159 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "reis",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "rv10:6": {
+      "title": "Reis RV10-6｜多源合并",
+      "asset": {
+        "asset_id": "d99da8ff-f537-5fb5-b6ff-5d49cdccee81",
+        "package_digest": "7b57ec4327c71cca1d5131dfdbef195ab0e84b30bcd64d9df321ded5712cf96b",
+        "package_path": "04_设备/reis/rv10_6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/rv10_6_0ded4606/module.json",
+      "module_sha256": "f7d755ffb110ff8a763c495074bae6fba4645d371dc09d100f2176f8a3909c4d"
+    },
+    "rv130:60": {
+      "title": "Reis RV130-60",
+      "asset": {
+        "asset_id": "08f70a97-be5a-5223-83ba-ac6b63806c85",
+        "package_digest": "577597b54936ad846c83d098deb4035197de1fdcf289fda31193e080c2700ce8",
+        "package_path": "04_设备/reis/rv130-60__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv130_60_d09740c9/module.json",
+      "module_sha256": "647722bc2bc5854459692eda1348c46a0789dab1179cb93c0a64eef797136c9d"
+    },
+    "rv16l": {
+      "title": "RV16L",
+      "asset": {
+        "asset_id": "f19cad48-08bc-5f94-b572-72ebc8b33436",
+        "package_digest": "a0e42f16113728581db27307ee3e3723b08b525fb08d8f24a46f4fa3b3338414",
+        "package_path": "04_设备/reis/rv16l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv16l/module.json",
+      "module_sha256": "1fe5c48fa67e7387a6d2c6f5f8679976960f46ab998359b31e9a047c57dcdec4"
+    },
+    "rv20:6": {
+      "title": "RV20-6",
+      "asset": {
+        "asset_id": "3785fcc8-f9d2-5644-a573-08a71ccf211a",
+        "package_digest": "c5fcd25007624ede14a5eec6f4a0601399b70d0765c805075040c50a1e0db60f",
+        "package_path": "04_设备/reis/rv20-6__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv20_6_34c4a205/module.json",
+      "module_sha256": "cfb1c505b1006b650fd9f8cbc4e2c600e13b08a594b4905db1b6d69bde83424a"
+    },
+    "rv30:16": {
+      "title": "RV30-16",
+      "asset": {
+        "asset_id": "7da1d795-58ca-54c5-8c53-f89a8e520851",
+        "package_digest": "484662267697f2b54900ed02b110e75d7d51deeaff64fe9bf69640fd8d9159ad",
+        "package_path": "04_设备/reis/rv30-16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv30_16_a7270ce5/module.json",
+      "module_sha256": "b0611ec626841f1b562962c5747e50c913b901432ecf18fcac3fdbfec5672b13"
+    },
+    "rv40": {
+      "title": "RV40",
+      "asset": {
+        "asset_id": "dde365db-0a83-593e-b858-294f6e1af93e",
+        "package_digest": "fbaf33751d186463a852aef3e348c864122647781f3680737bf933fdb80363a4",
+        "package_path": "04_设备/reis/rv40__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv40/module.json",
+      "module_sha256": "bc210da30201455e64d397f017f4829bc6266aafcfe4ed10736dc6cd3f0036cc"
+    },
+    "rv40s": {
+      "title": "RV40S",
+      "asset": {
+        "asset_id": "74038bf5-3793-5237-822f-703a44bb332e",
+        "package_digest": "01782b62332b5322020f05adaceff38870b17b6e60318373d03b1503ef2cc118",
+        "package_path": "04_设备/reis/rv40s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv40s/module.json",
+      "module_sha256": "abd75c0d32e44322e2a4258f4aaccef90f0ab55962e6d7a484da482d79fe4ad2"
+    },
+    "rv60": {
+      "title": "RV60",
+      "asset": {
+        "asset_id": "e1a1a0fb-40af-5536-bd85-ba645a89e23d",
+        "package_digest": "8a86f1ddf8a132b1539f94ab18726d1e2355593af665c129c51d7727f852b0d4",
+        "package_path": "04_设备/reis/rv60__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv60/module.json",
+      "module_sha256": "e44bb28a4169ae43c0d9a062266aba38bec641afc7e9928fbedc50e035500596"
+    },
+    "rv60:16": {
+      "title": "RV60-16",
+      "asset": {
+        "asset_id": "f3c15e3c-98f7-5aff-a31c-84b0833f94df",
+        "package_digest": "f033c5679be1d61353feebd5c2eaf6c25079a544a496c35f38944b26403178ab",
+        "package_path": "04_设备/reis/rv60-16__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv60_16_5a259d65/module.json",
+      "module_sha256": "2e8d0c89a5ab76f856f80062364c8de6b62cbe6928c70040c22b4cd183ae0a4a"
+    },
+    "rv6l": {
+      "title": "RV6L",
+      "asset": {
+        "asset_id": "34c14467-ebd1-594a-afde-183cfd0fa9bd",
+        "package_digest": "1494d0d7f6e4ccd61abee10f60745f2d9e06ec630b92880728aa9ab1e455af53",
+        "package_path": "04_设备/reis/rv6l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rv6l/module.json",
+      "module_sha256": "a6b62322b14fce9b737fda7a06791d21bde94e7d808546bb6e483fa9fcdfc8b4"
+    }
+  },
+  "source_profiles": []
+}

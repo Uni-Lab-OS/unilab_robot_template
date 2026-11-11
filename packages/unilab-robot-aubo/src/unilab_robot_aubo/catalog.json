@@ -1,0 +1,324 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "aubo",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "es3": {
+      "title": "AUBO-ES3｜多源合并",
+      "asset": {
+        "asset_id": "82a63701-3d39-5d97-bbc2-41088d648da3",
+        "package_digest": "b54770e78ca5633f44cb6d08bd9bd09a1a519157c24ceaf8fd78b3f5efc25271",
+        "package_path": "04_设备/aubo/es3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es3/module.json",
+      "module_sha256": "75dae32c3d2cf169c303f7fc80b0c25037c152c2dda70da35359457de1ff1dec"
+    },
+    "es5": {
+      "title": "AUBO-ES5｜多源合并",
+      "asset": {
+        "asset_id": "0988c49b-ed57-5369-8a5e-c03f2e4d54d1",
+        "package_digest": "015a1ba53720ad6a36d3eda2aba7e1acb573eb2c641edf5a4b7cc7ce22d78706",
+        "package_path": "04_设备/aubo/es5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/es5/module.json",
+      "module_sha256": "658236fb1c0618d0bc09a8e4a386e56dfa218bb9ce93b153d161cfff1632ccc0"
+    },
+    "i10": {
+      "title": "AUBO-i10｜多源合并",
+      "asset": {
+        "asset_id": "bda2ec0e-c2dd-5976-953a-222799008fdc",
+        "package_digest": "6278ea4ec8e1a5dcdf90eded757a447f088f34ecd1f2b8fe8f5c47ef0c97948c",
+        "package_path": "04_设备/aubo/i10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i10/module.json",
+      "module_sha256": "bff88f5a7d6183dc209d5040ee319ffadb59bf0ef2112c00947ff0b1c444de9d"
+    },
+    "i10h": {
+      "title": "AUBO-i10H｜多源合并",
+      "asset": {
+        "asset_id": "b85dcaf0-c05b-5ae4-8aba-81de9c180604",
+        "package_digest": "c9efe89f7a9c214ebb68c0b9d68a6f51b4defd7729ee30f58be9dda3bcf63a54",
+        "package_path": "04_设备/aubo/i10h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i10h/module.json",
+      "module_sha256": "4f89b783b826b095a7c0e9f5771a308982b7e1d79355ba5d86a9513e554572e2"
+    },
+    "i12": {
+      "title": "AUBO-i12｜多源合并",
+      "asset": {
+        "asset_id": "7a62d855-c06e-5c32-bc93-e46985c22248",
+        "package_digest": "99ce74deafb418d3ae28bc7573372a889205fbe86ba2c4f38ba274d41c8a2f5e",
+        "package_path": "04_设备/aubo/i12__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i12/module.json",
+      "module_sha256": "64e95ee9bb0476bd62a0ba3e5b467d91fba0338da48e0f0cf396a5aca464dd84"
+    },
+    "i16": {
+      "title": "AUBO-i16｜多源合并",
+      "asset": {
+        "asset_id": "38e2280e-50d8-5925-8885-fd36d27ef2ed",
+        "package_digest": "3e76cd0d907abd497d00ff2bc2b8a26303c5d60bfc3cbb3ec974a15eca125a49",
+        "package_path": "04_设备/aubo/i16__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i16/module.json",
+      "module_sha256": "ed8b2fda85e4c66507853d709b834db977ea94516b8f90fda445db3f24c68776"
+    },
+    "i20": {
+      "title": "AUBO-i20｜多源合并",
+      "asset": {
+        "asset_id": "af950155-de99-594f-85e4-e8c33b9971b4",
+        "package_digest": "5064d8b6407c2b74ded9a41f356006f87e19f8ee1c65c0b1f560e6ba3397af8c",
+        "package_path": "04_设备/aubo/i20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i20/module.json",
+      "module_sha256": "bb911877b09690648896ec2046648f2fefa00971895973a87d00a40351df31a7"
+    },
+    "i3": {
+      "title": "AUBO-i3｜多源合并",
+      "asset": {
+        "asset_id": "ae747d4d-2702-5b6e-a3df-fa2310d3fea2",
+        "package_digest": "21540f074429dcb4b5c80697ade4ac3ff064bf3d59ec8a1dd43ddfa136c2e281",
+        "package_path": "04_设备/aubo/i3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i3/module.json",
+      "module_sha256": "cffef27920dd92d50750c37f6923166d419bc2be6b5a6ff9eeb81cbec649f2b2"
+    },
+    "i5": {
+      "title": "AUBO-i5｜多源合并",
+      "asset": {
+        "asset_id": "4d905b20-3c1c-5a9a-95ca-9d7db607bf5a",
+        "package_digest": "66e692a6cf4c0b8c9d55edac541b2d308865ebc175ee965e75c5e85b72826614",
+        "package_path": "04_设备/aubo/i5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i5/module.json",
+      "module_sha256": "da0aae862ceb350f342b469d5923b3cdeb604010c489d953a5a0958dc0278a83"
+    },
+    "i5h": {
+      "title": "AUBO-i5H｜多源合并",
+      "asset": {
+        "asset_id": "767346ff-65df-58b8-b4ef-fad9fb020e76",
+        "package_digest": "096f35393b66f2fa2d9d5c51e880eb6fdfb8d46006b3ca4847ba7fb1ce320d38",
+        "package_path": "04_设备/aubo/i5h__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i5h/module.json",
+      "module_sha256": "4335c7d7669e02e11675c4e01e9c088a49ee2779011ac72d816bb29ffce13d88"
+    },
+    "i7": {
+      "title": "AUBO-i7｜多源合并",
+      "asset": {
+        "asset_id": "93c6903a-fc6a-531b-a226-050c42c7eb9a",
+        "package_digest": "8bc974b77c4d39f190a438687938c4d6b7b9a941ed2c0f20ffa45f57852de6df",
+        "package_path": "04_设备/aubo/i7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/i7/module.json",
+      "module_sha256": "04e3e65a66ba76b8f789130c034393f34c6d069a9b5ef1799f7b0e7ddf10d72d"
+    },
+    "is10": {
+      "title": "AUBO-iS10｜多源合并",
+      "asset": {
+        "asset_id": "b0e45266-76e2-526e-ad4a-fc50a60532ff",
+        "package_digest": "926d2ce3cc5853afdfaa997b97463defd00cb2fee5a7e99f920028371ea47186",
+        "package_path": "04_设备/aubo/is10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/is10/module.json",
+      "module_sha256": "b3533a79f0a17b7e9b94d5c367b8fdfcae1263c9c7362faab87248495b200950"
+    },
+    "is20": {
+      "title": "AUBO-iS20｜多源合并",
+      "asset": {
+        "asset_id": "c7f07eb6-e0f2-5afd-9bfc-35bacd313466",
+        "package_digest": "0222843633ace9456fb6d91203616eaca561525a8c09e111de669f458da44995",
+        "package_path": "04_设备/aubo/is20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/is20/module.json",
+      "module_sha256": "1bdd2c0f8b4c34dc7adedbe4a8fa3ba065f38da7c4b313d598afcd06a617e381"
+    },
+    "is25": {
+      "title": "AUBO-iS25｜多源合并",
+      "asset": {
+        "asset_id": "dddfa762-1c25-5401-8760-20ab08955a94",
+        "package_digest": "649fbd8b3bc69e6380ed011f85b9682e2791311da51eabb99f86e9b2998967a4",
+        "package_path": "04_设备/aubo/is25__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/is25/module.json",
+      "module_sha256": "d3718c997687dca1e69aff301635779cefb31fc60c3d80a9dfa20a6fda3d5820"
+    },
+    "is35": {
+      "title": "AUBO-iS35｜多源合并",
+      "asset": {
+        "asset_id": "25519ea3-19b5-54bd-93af-aab8c8337528",
+        "package_digest": "3aae81a808c11860ab87ff83b25b5544ded14a9c0ef3b4d4264e217ed7d01667",
+        "package_path": "04_设备/aubo/is35__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/is35/module.json",
+      "module_sha256": "a8c4dae5e3fd407e0a830f0ddfc4e66b903b2ae27e7c60ae2d81cce31063c415"
+    },
+    "is7": {
+      "title": "AUBO-iS7｜多源合并",
+      "asset": {
+        "asset_id": "afaf1731-6bba-56ce-a24f-4deb5feb3e40",
+        "package_digest": "4a7ce3ab30aa880f03016f0437b13a9b232788c235b59018b8f56b5cacaea708",
+        "package_path": "04_设备/aubo/is7__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/is7/module.json",
+      "module_sha256": "d3a35093647f1a79b35858e5246712611b2b93b051cf68efe7f1bf1ef87a5843"
+    },
+    "s3": {
+      "title": "AUBO-S3｜多源合并",
+      "asset": {
+        "asset_id": "2d490490-634c-5bf8-90f2-fc0f671ede4d",
+        "package_digest": "489e4142fd030170893f3e1e22531bf97403ab4d58b1c71a4bc51111cf9966af",
+        "package_path": "04_设备/aubo/s3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/s3/module.json",
+      "module_sha256": "1219afacd628f2bed333d7d29021a4b64c6e1857a0c0be83a8cf2da27e3b0299"
+    },
+    "s5": {
+      "title": "AUBO-S5｜多源合并",
+      "asset": {
+        "asset_id": "03bfbb43-a42f-5be5-ab10-9c5244debacb",
+        "package_digest": "6a9086123a5ad7ecd09e314b635372e6674df4e611de5b381aea9e3718480d20",
+        "package_path": "04_设备/aubo/s5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/s5/module.json",
+      "module_sha256": "43471f9d21aa80a0bcc355575af3d3ee1fb13910c0c203e7ab9fb45556cff282"
+    },
+    "is20l": {
+      "title": "AUBO-iS20L",
+      "asset": {
+        "asset_id": "b91eae05-a0ad-5644-addb-4833ab3888b4",
+        "package_digest": "cef9d8325b2af1527cbff53d10f9097d7c828effc45e3ac42e39b2fb884b60d2",
+        "package_path": "04_设备/aubo/aubo-is20l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/is20l/module.json",
+      "module_sha256": "3e28544c7161d0193360514a22214dba5031b90f1dab904c007d0b4dc5374373"
+    }
+  },
+  "source_profiles": [
+    {
+      "id": "aubo_moveit_config_2e7c74bc17",
+      "manifest": "source_profiles/aubo_moveit_config_2e7c74bc17/source.lock.json",
+      "sha256": "00740d187060f18413f25b88ea421d2ead68402c80bab2d4257da30616e8313b",
+      "status": "source_preserved_not_runtime_enabled"
+    },
+    {
+      "id": "aubo_moveit_config_3b085a3e30",
+      "manifest": "source_profiles/aubo_moveit_config_3b085a3e30/source.lock.json",
+      "sha256": "43c76fd739a32a421c75d4c5544ca6622f54bec118e427a412493ca2b075ead5",
+      "status": "source_preserved_not_runtime_enabled"
+    }
+  ]
+}

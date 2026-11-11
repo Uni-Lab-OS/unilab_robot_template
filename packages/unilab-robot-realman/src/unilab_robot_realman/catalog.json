@@ -1,0 +1,127 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "realman",
+  "models": {
+    "eco65:6f": {
+      "title": "RealMan ECO65-6F",
+      "asset": {
+        "asset_id": "ce0ca4c1-f419-52b8-a32c-eb261ea7c4c2",
+        "package_digest": "24b5df058ee229d8f50edc3f1d81ca38b55dff89e14e74f57cb704f5fdf4d6a1",
+        "package_path": "04_设备/realman/eco65-6f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/eco65_6f_216545ef/module.json",
+      "module_sha256": "c8ec83e4dbe2db9abec48a7f9c797b430a8a0a15e39d19e774bb6e1327f6128c"
+    },
+    "eco65b": {
+      "title": "RealMan ECO65-B",
+      "asset": {
+        "asset_id": "10d00c18-55da-56b2-80ff-501955814de4",
+        "package_digest": "b9a8f3e5aecb7c173e4e2dca9454590a547368ca19597b04a8cf856f6e7c34b9",
+        "package_path": "04_设备/realman/eco65-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/eco65b/module.json",
+      "module_sha256": "9effdd5a6da83f8f1cbb62c93e08b32eac8efee99978214218202ad5010d60d9"
+    },
+    "gen72b": {
+      "title": "RealMan GEN72-B",
+      "asset": {
+        "asset_id": "c84c86a3-cace-53bf-aac3-bd75c5c15184",
+        "package_digest": "1b185305d7a97be9273a81294eb524b9b420cd2130e0af34d6810334a454da5b",
+        "package_path": "04_设备/realman/gen72-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gen72b/module.json",
+      "module_sha256": "8dbd7a9a564a93c60a0c0da848a63e14a911c98c1feb82504c31d1387931cb96"
+    },
+    "rm65:6f": {
+      "title": "RealMan RM65-6F",
+      "asset": {
+        "asset_id": "1de3107c-fd80-575e-9f53-23656e9d5b7c",
+        "package_digest": "c35fbc15a158c5d1c8c7c6a18a8b3e36ce92085c1ad78926fa2bfee18daf036b",
+        "package_path": "04_设备/realman/rm65-6f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rm65_6f_8bb98167/module.json",
+      "module_sha256": "f4d4ea40369455d71ec37ac33dee461a3e122ee83b29fb56b8c46f8998080888"
+    },
+    "rm65b": {
+      "title": "RealMan RM65-B",
+      "asset": {
+        "asset_id": "54dad98d-30d0-5059-bfa1-b4ae18f61c5f",
+        "package_digest": "7a384032cf9f70f142a35de1599e9b8cdb0a0b3347939fad5e36ebb706085ffc",
+        "package_path": "04_设备/realman/rm65-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rm65b/module.json",
+      "module_sha256": "f752a97c56ec52add99012b56d02e9586987628718d2466d8acedd3b46f89da7"
+    },
+    "rm75:6f": {
+      "title": "RealMan RM75-6F",
+      "asset": {
+        "asset_id": "15683abd-8ff4-5ba5-a8e7-011a94cd0e11",
+        "package_digest": "e008182d1bb88d023d75906ebf5abeb8371b0413a9aa95fe2805ad5a98614d89",
+        "package_path": "04_设备/realman/rm75-6f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rm75_6f_5a03ee52/module.json",
+      "module_sha256": "bf1715046111b7ec9c7d40b7bb4c7082552828924f0c0251031fb9156b61d007"
+    },
+    "rml63:6f": {
+      "title": "RealMan RML63-6F",
+      "asset": {
+        "asset_id": "aa9ae5e4-d6b7-59d6-9bd1-bbfc9fb87db7",
+        "package_digest": "aa579731a319276e971997967710e96c738f53f6a24f3ce3ccc77cdb56a834cd",
+        "package_path": "04_设备/realman/rml63-6f__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rml63_6f_6fb8b118/module.json",
+      "module_sha256": "ebc4d0504242102626ed91085c8f4675b3614bee498f0766623f83f626eea6ac"
+    },
+    "rml63b": {
+      "title": "RealMan RML63-B",
+      "asset": {
+        "asset_id": "614d72de-8636-5fa8-8a0f-5a19525355d8",
+        "package_digest": "22f28a3eefc5ed644d6b594b5718ccfefc9469b2dbed7ebf5a6b1ae42cb81ad4",
+        "package_path": "04_设备/realman/rml63-b__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rml63b/module.json",
+      "module_sha256": "b511d8a07a4c1f135d2332055e65dd06b2b8f422cc2a8fcd10610302d27033c3"
+    }
+  },
+  "source_profiles": []
+}

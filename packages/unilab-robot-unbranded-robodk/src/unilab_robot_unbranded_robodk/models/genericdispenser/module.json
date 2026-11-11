@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "genericdispenser",
+  "title": "Generic Dispenser",
+  "asset": {
+    "asset_id": "b2ff9282-a97d-5510-81d2-b1b483e923dd",
+    "package_digest": "3764416ae290c3eec432beaf2a73fec7be57d6a96ba25be0285fac96be1f429c",
+    "package_path": "01_零部件/未知厂家/dispenser__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "b2ff9282-a97d-5510-81d2-b1b483e923dd",
+      "package_digest": "3764416ae290c3eec432beaf2a73fec7be57d6a96ba25be0285fac96be1f429c",
+      "package_path": "01_零部件/未知厂家/dispenser__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "ff30ec151ac3a459b8483f97f0134b74a723339bd63d5bdc0fc702c046752e36",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/dispenser__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Generic Dispenser",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/Generic-Dispenser.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Generic-Dispenser.tool",
+        "path": "simready_usd/Generic-Dispenser.tool",
+        "sha256": "97f4ebd1833b35cd36576039fe5a1c504ddbe438bc4575fe6c16e9770344ea54"
+      }
+    ]
+  }
+}

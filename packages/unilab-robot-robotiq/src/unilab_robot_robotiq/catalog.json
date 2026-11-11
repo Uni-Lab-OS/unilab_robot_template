@@ -1,0 +1,132 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "robotiq",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "2f140": {
+      "title": "RobotiQ 2F-140 Gripper (Closed)｜多源合并",
+      "asset": {
+        "asset_id": "328d2f1d-514f-53ba-90a1-fa182319f2aa",
+        "package_digest": "4631b47b706d134b6e5c86f735ac9b56f98c2684da1d70a44cfb6dc8c80809e5",
+        "package_path": "01_零部件/robotiq/2f140__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/2f140/module.json",
+      "module_sha256": "a47067e8304192d74e40a41ce51d62ec1a9f3ab2bd575fdd2e4e50bbe7b82117"
+    },
+    "2f85": {
+      "title": "RobotiQ 2F-85 Gripper (Closed)｜多源合并",
+      "asset": {
+        "asset_id": "41c213a7-5f8b-565e-b96b-258261085659",
+        "package_digest": "38def73b975facfc333e72d41a5289c137aad74bf045a588b5d09a4313827847",
+        "package_path": "01_零部件/robotiq/2f85__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/2f85/module.json",
+      "module_sha256": "e9fd7c40f46c8fa691d2833072f28c7b58bf710d3eacc46d08ec6737e9e4c6e0"
+    },
+    "epickvacuumgripper": {
+      "title": "RobotiQ EPick Vacuum Gripper (1 Cup)｜多源合并",
+      "asset": {
+        "asset_id": "dbd0c9e0-b080-5da3-9228-1ef25c502889",
+        "package_digest": "d2737cbd6ada92c724a400f2e4787c66ae1e341288219714ae875f5315c4ec5a",
+        "package_path": "01_零部件/robotiq/epickvacuumgripper__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/epickvacuumgripper/module.json",
+      "module_sha256": "5afa6d199b18a114240e121c9d176576df8357cf7f3233238c8f74d690adc9fa"
+    },
+    "hande": {
+      "title": "RobotiQ Hand-E Gripper｜多源合并",
+      "asset": {
+        "asset_id": "d284572e-da53-5cde-93a1-e65394febdfb",
+        "package_digest": "5858133ea5e7f98cbc4a8f70a75cd09f43b3cb299c5b9d48f795e719717afce9",
+        "package_path": "03_机构模块/robotiq/hande__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/hande/module.json",
+      "module_sha256": "1a918c64f3348c0cfad6e4f85173fed3d87b2e318065c653df594b08bb317915"
+    },
+    "dualgripperadapterplate": {
+      "title": "Dual Gripper Adapter Plate",
+      "asset": {
+        "asset_id": "ad3299b0-3571-5689-ac55-c04652da1c31",
+        "package_digest": "8affcbc4f727531181dfa7757691f63eb4d6d66b056661ebace85a579a047a47",
+        "package_path": "03_机构模块/robotiq/dual_gripper_adapter_plate__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/dualgripperadapterplate/module.json",
+      "module_sha256": "3302998cbfed0b57d10025e9bf3cb3c39b5681e517973bfff3d4691836c59849"
+    },
+    "grippercoupling": {
+      "title": "Gripper Coupling",
+      "asset": {
+        "asset_id": "4137d732-b51d-5bc8-90d0-11a10b316374",
+        "package_digest": "8f319873bb11550596a63d1724f4f5c5e8f56e0b655eaba3b8726444bd1b0dc6",
+        "package_path": "03_机构模块/robotiq/gripper_coupling__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/grippercoupling/module.json",
+      "module_sha256": "485d28c164853c7b7aa4f36a9f65965f1f4de3270cd6a301d1f4afc6748c1a4f"
+    },
+    "powerpickvacuumgripper": {
+      "title": "PowerPick Vacuum Gripper",
+      "asset": {
+        "asset_id": "5820ce21-8193-591f-85b9-4883dd4987b5",
+        "package_digest": "e66f786bd17c41c611f272f93a625b286be26f282e8882e3a6f33f55dbd203bb",
+        "package_path": "03_机构模块/robotiq/powerpick_vacuum_gripper__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/powerpickvacuumgripper/module.json",
+      "module_sha256": "e58afb911316d52b67dd007d670974f336b71288ae3714a42b58ff55513687a0"
+    },
+    "sandingkit": {
+      "title": "RobotiQ Sanding Kit",
+      "asset": {
+        "asset_id": "688863ef-6292-553b-abe9-7c49c2255e45",
+        "package_digest": "d5c93f51e54ca16c767e938b5b9f053b7114ed756cf5fbe4f986ce2e2ac1d71a",
+        "package_path": "01_零部件/robotiq/sanding_kit__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sandingkit/module.json",
+      "module_sha256": "c7267de27629ca3dccf1046a579a40683cd412d7325dcc83690e226e9a241ebb"
+    }
+  },
+  "source_profiles": []
+}

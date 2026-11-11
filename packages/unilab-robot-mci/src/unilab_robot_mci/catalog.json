@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "mci",
+  "models": {
+    "sr4:6:550": {
+      "title": "MCI SR4-6-550",
+      "asset": {
+        "asset_id": "ada661e3-d211-510a-a405-b4223120cebd",
+        "package_digest": "ed56252c13ce59749b81268a31ea46fc439ef397abe9199eddec587443509075",
+        "package_path": "04_设备/mci/sr4-6-550__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sr4_6_550_1e0f336d/module.json",
+      "module_sha256": "98729aac1063ead17f2287296f9b87b308703f043e483e45f52e9c88b298c1e3"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,230 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "neura",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "lara10": {
+      "title": "Neura LARA 10｜多源合并",
+      "asset": {
+        "asset_id": "9300d8f8-b022-5b21-bebc-50a93f3c9c22",
+        "package_digest": "72994172cb406270f07cdb2ff516e95ea5d0ae2d2cbcf30af24a6f4ef6c51148",
+        "package_path": "04_设备/neura/lara10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara10/module.json",
+      "module_sha256": "9bfb7119f980dc1638d47fd8e52735d2e2ffc47fe160d1a1cb5ed85832ca0021"
+    },
+    "lara15": {
+      "title": "Neura LARA 15｜多源合并",
+      "asset": {
+        "asset_id": "d9c2477e-efab-52cc-83b4-e5c6c8635a3e",
+        "package_digest": "f1eac5bb37b7e1e75c41d3becc44ac7264aad770803bbc502c428f42356f5696",
+        "package_path": "04_设备/neura/lara15__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara15/module.json",
+      "module_sha256": "2a597307e0bf806a3c039fce5e518c9833490ad04a91a37cffffeb27f94bc3e5"
+    },
+    "lara20": {
+      "title": "Neura LARA 20｜多源合并",
+      "asset": {
+        "asset_id": "ca68cb95-35e8-52e6-b524-a1e5cbf29d07",
+        "package_digest": "f0e839626952acd14844ac79f0654c50882ef0aff8f35411c235f732a1cc0606",
+        "package_path": "04_设备/neura/lara20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara20/module.json",
+      "module_sha256": "4ea40ad133153a773a5513bb22a7aded4d55dfcc262096c3a27aebab3fa41788"
+    },
+    "lara25": {
+      "title": "Neura LARA 25｜多源合并",
+      "asset": {
+        "asset_id": "3e786707-81d6-5322-8222-5e77d42274f9",
+        "package_digest": "9c876e348fe1ea984bc7cace519ae4d29c337962a3bf176b3600f2bbb7ebc599",
+        "package_path": "04_设备/neura/lara25__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara25/module.json",
+      "module_sha256": "2c999378ca3d2a7a1ac7ea85dcd65f161d9e0e97bbfe824b6abf5d3d34122064"
+    },
+    "lara3": {
+      "title": "Neura LARA 3｜多源合并",
+      "asset": {
+        "asset_id": "5733704d-7162-537b-8a6b-602abd6a9185",
+        "package_digest": "5ec18b5e26ae267106aba348b9c4b88954aef997e5368d8195fc35dd66059bf5",
+        "package_path": "04_设备/neura/lara3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara3/module.json",
+      "module_sha256": "24f9885853d48321ecc950726d12ef58f45b68da79f6eec3934a7fa4281e1770"
+    },
+    "lara30": {
+      "title": "Neura LARA 30｜多源合并",
+      "asset": {
+        "asset_id": "e7b08084-b0d0-5288-beb7-32e90b4dd847",
+        "package_digest": "7dd794f1ec490874b77259a92a53ae64f8035e48fdf6c8ddd7aa46e907d03017",
+        "package_path": "04_设备/neura/lara30__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara30/module.json",
+      "module_sha256": "95c577cd099d700745922e86b6e58391c43d465b5b8ab6c3f29e7c16549e3397"
+    },
+    "lara30l": {
+      "title": "Neura LARA 30L｜多源合并",
+      "asset": {
+        "asset_id": "f9bca99b-db12-533a-89e1-1c411fae1e8b",
+        "package_digest": "94022e50733938f30f902f6094dba29fcc0be27c7d4cb8d28a4314fa045676d8",
+        "package_path": "04_设备/neura/lara30l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara30l/module.json",
+      "module_sha256": "b6250ea0402722bfbc9d281cde9320998a376d8e5afbb14c5924f8babe3d1cc6"
+    },
+    "lara5": {
+      "title": "Neura LARA 5｜多源合并",
+      "asset": {
+        "asset_id": "5b5e56e9-c9cb-552f-8079-8f0ef32a8032",
+        "package_digest": "ff01b66617f719f16ad77bc03e6425190e8f7a0fd9263616e988511a71df06ff",
+        "package_path": "04_设备/neura/lara5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara5/module.json",
+      "module_sha256": "2814c84104912b48cecb5a93e40b2306d770defc046c2eec0b09e2a84469f863"
+    },
+    "lara8": {
+      "title": "Neura LARA 8｜多源合并",
+      "asset": {
+        "asset_id": "bfb3efda-eaf0-5084-8f46-5b3b33de691c",
+        "package_digest": "3f888eedbc8b32421c4a2cd2c8fec9aac58dbe67045e3a406dd419e29e20fef7",
+        "package_path": "04_设备/neura/lara8__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/lara8/module.json",
+      "module_sha256": "ef4df70e967f4b183038250325d80cc48a87d5d67a2df8760a2516e5b66c8b80"
+    },
+    "mairal": {
+      "title": "Neura MAiRA L｜多源合并",
+      "asset": {
+        "asset_id": "543e3acd-f465-5558-8cb8-1e62304dafa3",
+        "package_digest": "bba9b17ee4fe3e23d9fe514cedbc8414df85ff5641b49cf71a4fbb3ed46a8586",
+        "package_path": "04_设备/neura/mairal__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mairal/module.json",
+      "module_sha256": "97f1a40790fce2a5bca90a17a17de34d9d1011f0d38f72e93c1cdaba74ec06f9"
+    },
+    "mairam": {
+      "title": "Neura MAiRA M｜多源合并",
+      "asset": {
+        "asset_id": "5074c9af-cede-5113-8788-9abda14f11bd",
+        "package_digest": "7f3b325d3e0489a60b602777a6bcdb467a9d35e6bdbd3c4565ed525c74f30f99",
+        "package_path": "04_设备/neura/mairam__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mairam/module.json",
+      "module_sha256": "4806640042e0ed61ec7973630882509db3bab596ab8e88ed181abfb386d752ba"
+    },
+    "mairas": {
+      "title": "Neura MAiRA S｜多源合并",
+      "asset": {
+        "asset_id": "fb528fbf-b6a5-5dd0-9e75-18cd0792c491",
+        "package_digest": "f50f7537ce9145465abc5a7faa4d2c5d8396afc6ecb0bdd644117e5b9c9b7607",
+        "package_path": "04_设备/neura/mairas__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mairas/module.json",
+      "module_sha256": "2a9cd9870de0212ee0f11adaf2fd7ce5faecce467001500aca8f5fd6bca8fd7d"
+    },
+    "mairaprom": {
+      "title": "Neura MAiRA Pro M",
+      "asset": {
+        "asset_id": "14361403-3e21-54d4-bfd9-aed0db3ab41e",
+        "package_digest": "0e990869122a25ec5ea89741471aa33e7fbecac0f82950f006a0b6de8428a638",
+        "package_path": "04_设备/neura/maira_pro_m__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mairaprom/module.json",
+      "module_sha256": "72e9a34d6139dc7603faf34193617eae21600c374a39bffe3aac2dfab47f54ec"
+    },
+    "mairapros": {
+      "title": "Neura MAiRA Pro S",
+      "asset": {
+        "asset_id": "07cc61e7-56dd-5f7e-9524-cbf0839dce08",
+        "package_digest": "f94e3d92ef92f13c3abb9cce9f85ca91f08096125e362e1bd5c1b087a8a235b6",
+        "package_path": "04_设备/neura/maira_pro_s__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mairapros/module.json",
+      "module_sha256": "d676ebe75e00283def6b73b019ac1754537c64294b4137258d4843c3181f499a"
+    }
+  },
+  "source_profiles": []
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "yuanda",
+  "model": "yunik",
+  "title": "Yunik",
+  "asset": {
+    "asset_id": "3e5455c8-559b-5fdf-ad7b-ffc0052f311b",
+    "package_digest": "5933676a547e77584352eaf2344a59c672a285d7b57aea22d509506032986d9f",
+    "package_path": "04_设备/yuanda/yunik__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "3e5455c8-559b-5fdf-ad7b-ffc0052f311b",
+      "package_digest": "5933676a547e77584352eaf2344a59c672a285d7b57aea22d509506032986d9f",
+      "package_path": "04_设备/yuanda/yunik__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "2a709eca8522b0bd3e6661a8865df9597c076063f5bfcbf6e088b2546e0194a9",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "573b1f1bfae7f772486829e6691f3b2577cf2b5f1401253f4b7dd62c899a6665",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/yunik__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "Yunik",
+          "manufacturer": "Yuanda",
+          "variant": "",
+          "path": "Components/Yuanda/Robots/Yunik.vcmx",
+          "type": "Robots",
+          "payload": "7",
+          "reach": "850.0",
+          "vcid": "ab5eaa4c-d44a-48e3-a793-59f12ad19abc",
+          "library_assets": [
+            "3e5455c8-559b-5fdf-ad7b-ffc0052f311b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Yunik.vcmx",
+        "path": "simready_usd/Yunik.vcmx",
+        "sha256": "2a709eca8522b0bd3e6661a8865df9597c076063f5bfcbf6e088b2546e0194a9"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

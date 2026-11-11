@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "aimrobotics",
+  "models": {
+    "fd310dispenser": {
+      "title": "Aim Robotics FD 310 Dispenser",
+      "asset": {
+        "asset_id": "cfedc485-f6d1-5d8c-9b2e-cf8c6a581dc9",
+        "package_digest": "0ca569228c85290361da04502a6ebc9408290d3551d53beb8bc90abacd5fbb2a",
+        "package_path": "01_零部件/aim_robotics/fd_310_dispenser__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fd310dispenser/module.json",
+      "module_sha256": "37297552666682ca4d97ab3e6e874dd3de2ec9976aa0c42c9987c65b9a23a882"
+    },
+    "fd400dispenser": {
+      "title": "Aim Robotics FD 400 Dispenser",
+      "asset": {
+        "asset_id": "34ea388b-e617-5ccd-808c-5dde4429aec8",
+        "package_digest": "eed6d7c598ff38fcec71db54b748fbc70da1209c58a3703a8d811fc7bba0288b",
+        "package_path": "01_零部件/aim_robotics/fd_400_dispenser__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fd400dispenser/module.json",
+      "module_sha256": "3024a11c80f541c9cef59a48471a244f50ead2db1447da5c56cc60d8eab3e232"
+    },
+    "fdhighvdispenser": {
+      "title": "Aim Robotics FD High-V Dispenser",
+      "asset": {
+        "asset_id": "529c4c63-7d26-51b1-af9b-acf4bb4539bf",
+        "package_digest": "d59def37938f555ffe3c7b1dfe2831122e23d5a78a0467a677defd4c2cfd8525",
+        "package_path": "01_零部件/aim_robotics/fd_high-v_dispenser__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fdhighvdispenser/module.json",
+      "module_sha256": "e628c83cdc488f125fd8741ef1fdbf26e288ad38abd5eb309de7c52e16d882c8"
+    },
+    "sd30:55dispenser": {
+      "title": "Aim Robotics SD 30/55 Dispenser",
+      "asset": {
+        "asset_id": "a72a4cfd-3a86-5408-85ff-40f276d60980",
+        "package_digest": "031d941ca6075cd3958d13915a17dc33c0a723aa00ee0b466f381f1ba5340860",
+        "package_path": "01_零部件/aim_robotics/sd_30-55_dispenser__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sd30_55dispenser_9df075bf/module.json",
+      "module_sha256": "0b7405097eb4205d24c25f6d2bdbbc308273be899699cff0bcf96f6c9ee5ee3b"
+    },
+    "sd30:55dispenser5mm": {
+      "title": "Aim Robotics SD 30/55 Dispenser (5mm)",
+      "asset": {
+        "asset_id": "91fad209-b8b2-5c4c-81ae-7997af496c94",
+        "package_digest": "83950ad4af84051682a867e8b60b52f08fa9505b92d6d85d813df9ca355ae541",
+        "package_path": "01_零部件/aim_robotics/sd_30-55_dispenser_5mm___r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sd30_55dispenser5mm_45759a8f/module.json",
+      "module_sha256": "36821dd8f836c034b75cfd572a5a3e590d74ff5ae9c01edac8091b65b3e3129d"
+    }
+  },
+  "source_profiles": []
+}

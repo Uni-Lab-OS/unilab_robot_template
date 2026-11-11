@@ -1,0 +1,539 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "nachi",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "mc10l01": {
+      "title": "Nachi MC10L-01｜多源合并",
+      "asset": {
+        "asset_id": "a21c38a3-56a3-59d0-9ff6-f4a7cb71c5a6",
+        "package_digest": "5a90c6a930985da6f3a8c4e46bca9a4f5961e9778f5b2897ac30efbd8c9efac2",
+        "package_path": "04_设备/nachi/mc10l01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mc10l01/module.json",
+      "module_sha256": "663ade2e80ab8614ff1296100470b3ad8799caa1e1661ef7d4307e0c9d10622c"
+    },
+    "mz01:01": {
+      "title": "Nachi MZ01-01｜多源合并",
+      "asset": {
+        "asset_id": "d6474d0b-5cfe-5ac0-ac27-c0f186fd89be",
+        "package_digest": "28cb48dd9248c9d92b068efae6792b62e22f831b31dfbefe1b675924a8792f31",
+        "package_path": "04_设备/nachi/mz01_01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mz01_01_7acd1c70/module.json",
+      "module_sha256": "7aae6ea38d64c1551f2f68b31d30e6748178bbdbe13025a4da2e9f751114fa3e"
+    },
+    "mz04:01": {
+      "title": "Nachi MZ04-01｜多源合并",
+      "asset": {
+        "asset_id": "9760b98e-dcae-5a95-8663-8a43fe50949e",
+        "package_digest": "baff3f74468b877f56bcaaa0c9bcaaaf964688ca514dbca3f82c23efeac76ce7",
+        "package_path": "04_设备/nachi/mz04_01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mz04_01_6b447709/module.json",
+      "module_sha256": "3a52bfd97bd00e144b51a2d2913f1a69541e170628486094a2f6fa9e48c3e3d0"
+    },
+    "mz10lf01": {
+      "title": "Nachi MZ10LF-01｜多源合并",
+      "asset": {
+        "asset_id": "fbba9d34-9638-5dbe-b08e-befecf648ad0",
+        "package_digest": "0e1b0393404ef16326edb607b9bc17c2dc1266ba734be59b1635eec9b9201ed5",
+        "package_path": "04_设备/nachi/mz10lf01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mz10lf01/module.json",
+      "module_sha256": "096de17ea0260a496fbd79de186898ea6e0b18b7892ac1c50078c7db032e0a22"
+    },
+    "mz12:01": {
+      "title": "Nachi MZ12-01｜多源合并",
+      "asset": {
+        "asset_id": "afd10788-414e-5609-b579-03906067c63b",
+        "package_digest": "2b863851f0f0bba5c69136cdce46ddf2609ff536585290bc22e7807a0ae20ab9",
+        "package_path": "04_设备/nachi/mz12_01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/mz12_01_1b93bb4f/module.json",
+      "module_sha256": "a1c263a8f494b335ce4b6b5402fa89437d93ea70cbe2cce14d309142632f8499"
+    },
+    "sra100b01": {
+      "title": "Nachi SRA100B-01｜多源合并",
+      "asset": {
+        "asset_id": "d510b834-7f39-586d-b134-2342022ccdab",
+        "package_digest": "3e027660c47b1093679d5d685400987260787f10f678892b9f9114f098c5b0fd",
+        "package_path": "04_设备/nachi/sra100b01__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/sra100b01/module.json",
+      "module_sha256": "1f05c38ead34eeb621e3fe8c18444318542d9e2430937bb78efb423cc4e61162"
+    },
+    "es06:4534": {
+      "title": "ES06-4534",
+      "asset": {
+        "asset_id": "b5876488-4fe9-5a7c-8045-5ac5c62a8098",
+        "package_digest": "77bdd98d36cdd2aba04f537dd85f6f29bc438d338ac9bc315d15d91a02c2635e",
+        "package_path": "04_设备/nachi/es06-4534__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/es06_4534_264e6151/module.json",
+      "module_sha256": "b260bd4b7bc867afd381c7f2886c0f8d4a1793f1d6d6e1ed77588a3fbdee58fd"
+    },
+    "es06:5520": {
+      "title": "ES06-5520",
+      "asset": {
+        "asset_id": "fcd659ce-a8a7-5615-be51-5481fcf29e94",
+        "package_digest": "708a8f4f060be6acec876036161fc5fbfcd037b040bcc539839b9ccf967a44aa",
+        "package_path": "04_设备/nachi/es06-5520__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/es06_5520_172211db/module.json",
+      "module_sha256": "091222925b0bcb0c06080ffb8178856cda4e252c61ae47606c200dd53d142f4d"
+    },
+    "es06:5534": {
+      "title": "ES06-5534",
+      "asset": {
+        "asset_id": "c6822801-f138-5151-8c9b-27cd211584dd",
+        "package_digest": "cb249d7745de944efc616dd940b4048c28867344eebdc0879a49e7ec4d09dcfb",
+        "package_path": "04_设备/nachi/es06-5534__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/es06_5534_68397dc2/module.json",
+      "module_sha256": "bbcb1a74ffd99f9f0b4bb08a4278f9b8a6f13e3cc57907aec86b5d522c45e593"
+    },
+    "es12:7045:01": {
+      "title": "ES12-7045-01",
+      "asset": {
+        "asset_id": "c89efb9d-13e5-53ed-88e8-2865837faaf6",
+        "package_digest": "3f82b0fefa615f01345e241a47dc76b3b1260a94066fe95a817554c6595d7e10",
+        "package_path": "04_设备/nachi/es12-7045-01__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/es12_7045_01_d4e3c4bf/module.json",
+      "module_sha256": "5b0fb4afc46261a281ccce8fceb9e4f7625fd891dfb8459bdb55d6f95afb2ade"
+    },
+    "es12:8545:01": {
+      "title": "ES12-8545-01",
+      "asset": {
+        "asset_id": "42a87208-b327-5afa-b34c-2d3f2cc2e054",
+        "package_digest": "f2cc454cbc3b88143a2730825561e6bb28a3f8e2360c84dba3438b4316fc37ce",
+        "package_path": "04_设备/nachi/es12-8545-01__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/es12_8545_01_cce1fd80/module.json",
+      "module_sha256": "aaad27a379eb52cc31c767e29c7918c1692fe19326f1cd0dfb22520c0c96837c"
+    },
+    "ez03:5525": {
+      "title": "EZ03-5525",
+      "asset": {
+        "asset_id": "57b89268-ef33-5ae1-8e0e-c68107cf8622",
+        "package_digest": "1512c9c082a9c23de2d42e5720ae04ce9297cc4f3f4187d826164088e0edc821",
+        "package_path": "04_设备/nachi/ez03-5525__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ez03_5525_0456c3fc/module.json",
+      "module_sha256": "5df58267465644597900e49b1ec5b98f85791fb1a0784b4d7dfab8c73610f90e"
+    },
+    "ez03v4:02:4525": {
+      "title": "Nachi EZ03V4-02-4525",
+      "asset": {
+        "asset_id": "e071965b-f7b8-586d-970b-6bd3660e0797",
+        "package_digest": "7049ccfc2d3d1110208fd16026655921f28be9847f84b323d81c0473aa04eb7b",
+        "package_path": "04_设备/nachi/ez03v4-02-4525__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ez03v4_02_4525_9fa7b508/module.json",
+      "module_sha256": "84a87a0e1153d2801b8dfd9d0a79a077427c75b300c2d9070c9f4e2d863a55b2"
+    },
+    "ez03v4:04:4525": {
+      "title": "EZ03V4-04-4525",
+      "asset": {
+        "asset_id": "99d78337-7531-53bf-9dc3-fd0f7fd22ab7",
+        "package_digest": "9746f4f7134dc24e4f7f75215105e57ed0f6b6dde5492d20bb1a446f05d2e505",
+        "package_path": "04_设备/nachi/ez03v4-4525__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ez03v4_04_4525_312154ae/module.json",
+      "module_sha256": "68893feca81822ea4ba0fd4cee2e2678abe3e0d3dc6cb92c5c226a3a149c67fb"
+    },
+    "mc20": {
+      "title": "Nachi MC20",
+      "asset": {
+        "asset_id": "4abbca83-e898-5e47-9359-2837928ff899",
+        "package_digest": "a0c10ebbd8f60ca7b987f8eb8a86067cfa429d2830d8ea7fb617fd97d4c65882",
+        "package_path": "04_设备/nachi/mc20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mc20/module.json",
+      "module_sha256": "0c45380fe69db117b8dc3781ad54484a6673f1d38b59b6407c7f8b6e727fcf3f"
+    },
+    "mc50": {
+      "title": "Nachi MC50",
+      "asset": {
+        "asset_id": "a629d7d9-debc-54e9-b2bf-2749cdece563",
+        "package_digest": "96317ed2fca9182f846a5c469e025ee68c5f8bf9838f2de6383e6a9c15e024b4",
+        "package_path": "04_设备/nachi/mc50__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mc50/module.json",
+      "module_sha256": "8bc721ca61a8c8f84bbd48f77ad7267ec904c76a0bde3c60d89b71a2d6901d15"
+    },
+    "mz03el": {
+      "title": "Nachi MZ03EL",
+      "asset": {
+        "asset_id": "7e07312c-373c-5f85-bae5-63d0e4d9a667",
+        "package_digest": "8dc0fe0269df386214fe3c4cf840665091899324db304843a3c58b0773ef2caa",
+        "package_path": "04_设备/nachi/mz03el__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz03el/module.json",
+      "module_sha256": "5efb0f354e564e9e96769c69fd53375dd12e1f28600d5fede641efc392304f88"
+    },
+    "mz04e01": {
+      "title": "Nachi MZ04E-01",
+      "asset": {
+        "asset_id": "5a978957-c13b-5554-817b-91adfac0ece5",
+        "package_digest": "3f626cdb290ea506a78dfe564a2c6b2d233385fc0c52bb3151a4745cd921fcac",
+        "package_path": "04_设备/nachi/mz04e-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz04e01/module.json",
+      "module_sha256": "662fb629c00412fffe64b80ec83267d8f5506756fd38bce8b1402eedc4b2bd7d"
+    },
+    "mz07": {
+      "title": "Nachi MZ07",
+      "asset": {
+        "asset_id": "9a29229c-3198-5a69-86e3-310eae33b70a",
+        "package_digest": "85c46e0a6bacd679cd699c43a77001e0e0b5cf0409c64957be08040ace7592f1",
+        "package_path": "04_设备/nachi/mz07__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz07/module.json",
+      "module_sha256": "591ce18d59e9e4270a530f2fb4b42d1168c8d472eb503d263a819b1fae1fbbb8"
+    },
+    "mz07l": {
+      "title": "Nachi MZ07L",
+      "asset": {
+        "asset_id": "17b78b10-6586-5272-91f5-997169f130f8",
+        "package_digest": "365cd8642912d449a5e7cb268d13000fca389c5f8c71165747d5bb2342cb17e8",
+        "package_path": "04_设备/nachi/mz07l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz07l/module.json",
+      "module_sha256": "54a1c0031d851a40e48a9dfa9b921f047ea036038cbe69d70d2687c85ecaea65"
+    },
+    "mz10": {
+      "title": "Nachi MZ10",
+      "asset": {
+        "asset_id": "301a2f52-55fe-5639-9651-df863abf6e6e",
+        "package_digest": "b3ea8f2f6b2efff9275247cf79906b6b5789c65005532300f88985ffc644cc68",
+        "package_path": "04_设备/nachi/mz10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz10/module.json",
+      "module_sha256": "6eadcf96caed0b713587d9b8988b501657aca14168038d52aef6c61caa1730f5"
+    },
+    "mz25": {
+      "title": "Nachi MZ25",
+      "asset": {
+        "asset_id": "9073c93e-8ba2-5dd2-b201-cb8814f74d32",
+        "package_digest": "f8a7f0231575fdd096eea9bd3189becbe5d6a25348e4b24fa272a7b63b3a7136",
+        "package_path": "04_设备/nachi/mz25__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz25/module.json",
+      "module_sha256": "30d157e78965791d42cc64428321a72b1d53603eda1a1e29f55f27e64a28a748"
+    },
+    "mz35f01": {
+      "title": "MZ35F-01",
+      "asset": {
+        "asset_id": "dbad4e00-2787-5e7e-a5a8-79d8c0d33970",
+        "package_digest": "e9487344ea81dc3fa3dbbcf29c6dfed68d825bc3f2201f3c519a3ecdb23464ee",
+        "package_path": "04_设备/nachi/mz35f-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz35f01/module.json",
+      "module_sha256": "f8cbc9d4fb84e29bee113d39906ac43a17a1a524614945eda4b4f958b43d2b60"
+    },
+    "mz35s01": {
+      "title": "MZ35S-01",
+      "asset": {
+        "asset_id": "536a80c7-4aa9-5c99-b6d4-eebca36f4a1a",
+        "package_digest": "170bf582e3a04478fdd3e1213d89c1f38dc7d4f2209e619565934554e5a1d8f6",
+        "package_path": "04_设备/nachi/mz35s-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz35s01/module.json",
+      "module_sha256": "e4a734ef031647d4e22382f5cd9814a2587596a5802c0477d4dd0809f5eb25b2"
+    },
+    "mz50f01": {
+      "title": "MZ50F-01",
+      "asset": {
+        "asset_id": "535f7a70-7d45-5ef2-8c94-04dea954fa2b",
+        "package_digest": "1cf124472ffc2da4ef718b2283fad5924573681d8cfdb2da459cb332523779e3",
+        "package_path": "04_设备/nachi/mz50f-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz50f01/module.json",
+      "module_sha256": "38b668b5856faf775edbeb3699dd11db25c83dcc428253a79e131f2cecd0ac34"
+    },
+    "mz50lf01": {
+      "title": "MZ50LF-01",
+      "asset": {
+        "asset_id": "b753ef8f-af5b-5360-8d50-ea6314b0db24",
+        "package_digest": "f33978e0e05a79778951b074355f4841e8bf2976a42e73b14d11c38bc94f58eb",
+        "package_path": "04_设备/nachi/mz50lf-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz50lf01/module.json",
+      "module_sha256": "0ce294a42e02c7c1605270d0ff3b9ce37d76bbbe3ca925ba89f182fe36642e97"
+    },
+    "mz70f01": {
+      "title": "MZ70F-01",
+      "asset": {
+        "asset_id": "7d94804f-d7d3-5af1-9506-0d739f0e00cc",
+        "package_digest": "ed803268ff5187b2bc08f28338b123159ed99cb61bccf4b23d95860017bae2b2",
+        "package_path": "04_设备/nachi/mz70f-01__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mz70f01/module.json",
+      "module_sha256": "c76a5a39b1e13645970117c159701572f950ca4fe39cf2ea487e2587e621ea67"
+    },
+    "nv06": {
+      "title": "NV06",
+      "asset": {
+        "asset_id": "41cf60a0-d931-577b-b661-b6ff991f395e",
+        "package_digest": "67ceb66ff063f5958f6245f67f4be2858a06650d64e731f74716b6c46fff2a85",
+        "package_path": "04_设备/nachi/nv06__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nv06/module.json",
+      "module_sha256": "94793eadca680716db299bf02eec2dad86528b09ad6e925ee40aa842c662b2cb"
+    },
+    "nv06l": {
+      "title": "NV06L",
+      "asset": {
+        "asset_id": "452fc7ec-5cb5-5bce-8b97-bcb4615238fb",
+        "package_digest": "a11ab8bbfdb52bca29bb40cfccd7b521a3eb45a0a22a1b811ac8121075bf95d0",
+        "package_path": "04_设备/nachi/nv06l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nv06l/module.json",
+      "module_sha256": "4c1f3e1d7df10fc095cc6598c4331e052fad7d6a2e55f027af961a8e6e94c2c4"
+    },
+    "sra100h01": {
+      "title": "SRA100H-01",
+      "asset": {
+        "asset_id": "3bed83cc-2886-5a98-a5af-d474c216877d",
+        "package_digest": "b8f0771db175e63e483b7a321efc7bae3c8c633f810aa3a3a401436566d0d0be",
+        "package_path": "04_设备/nachi/sra100h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra100h01/module.json",
+      "module_sha256": "5d2b9c5852d690e2733758f8e724f8aa2451f7ed3488fde49c3274ddd1a7a844"
+    },
+    "sra120el": {
+      "title": "Nachi SRA120EL",
+      "asset": {
+        "asset_id": "4787496e-5c5c-53ab-a7be-312227e577ba",
+        "package_digest": "8f3b9e59edc30297ae2eca7928f96b708a828977d7b20f73d5831e24e17ec25c",
+        "package_path": "04_设备/nachi/sra120el__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra120el/module.json",
+      "module_sha256": "7ff3d72a228336fd8ca8333e5cbaeaf9e41e40bc8a4de15b2a906035bc5be922"
+    },
+    "sra166": {
+      "title": "Nachi SRA166",
+      "asset": {
+        "asset_id": "2e6fc455-51f4-565c-9f82-33b1ded8d6a8",
+        "package_digest": "7a2380036048aa2e7287091f882b7f95c9f6e0698797aed978048b2616353c6b",
+        "package_path": "04_设备/nachi/sra166__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra166/module.json",
+      "module_sha256": "cb39df32181aca959b94d387dbeec5b8ca1b33460021fcb819871ea1a686d65a"
+    },
+    "sra210": {
+      "title": "Nachi SRA210",
+      "asset": {
+        "asset_id": "42d72477-0341-58c0-9751-9048460cec27",
+        "package_digest": "dc269c5e082e994768a213f7c544f5b864a3a851b09fb778ff1e558b39624367",
+        "package_path": "04_设备/nachi/sra210__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra210/module.json",
+      "module_sha256": "dd4a894134efb0d4d5aeb45f391b7f3d79661edf2f08f50799d0c335463eb813"
+    },
+    "sra240": {
+      "title": "Nachi SRA240",
+      "asset": {
+        "asset_id": "d8ebf34d-6a34-54e5-b073-c095d9f1011b",
+        "package_digest": "baa7edba89683a33eb2959dece72b4ea1ff4b1336ec82a0c0b22b6e98139ca6c",
+        "package_path": "04_设备/nachi/sra240__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra240/module.json",
+      "module_sha256": "9976e480e7ebdd1afaf052b7497fed801b4d0effdc0bae50376a5f4e0c7b3ddd"
+    },
+    "sra250": {
+      "title": "Nachi SRA250",
+      "asset": {
+        "asset_id": "bff5830a-8581-5e83-bfdd-cd237e0bbed1",
+        "package_digest": "4648ed2fafd3d1449016b277d8125480fefce8b8543301aa9a7ddd0f65c4acbe",
+        "package_path": "04_设备/nachi/sra250__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/sra250/module.json",
+      "module_sha256": "e4b640fff89babce2d0e5e51fdb08124ac2ed4a143750847ffb5e8416134a272"
+    }
+  },
+  "source_profiles": []
+}

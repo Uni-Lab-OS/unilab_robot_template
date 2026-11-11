@@ -1,0 +1,99 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "annin_ar4_moveit_config_56014f8dbe",
+  "source": {
+    "url": "https://github.com/Annin-Robotics/ar4_ros_driver.git",
+    "commit": "6a3ebb11cedab12cd1d29b41d63aa270a008ab8b",
+    "path": "robots/annin/ar4_ros2/annin_ar4_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "16cd855ac85a2172a5ca9048f0de412129fd5557b4eb003066069b28133cb8da",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/controllers.yaml",
+      "sha256": "8dcf83ff67e1e4eede7a602ae8788473bc750dd7ef2037f1170db755e98a1020",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "167020e56cf2c7a35f27b2d91f2e3f7814716cca4fa190db1b30e9fc55778f6b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "e10c12da2f0e823349f8c023c4209fc951c7968615990b9920be00ede98023e7",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_servo.yaml",
+      "sha256": "3d49aae338edcaaddf949bede9179f5e123dda8708fec91f365450395376e3d5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "e4a769e47d08ce1c3b08eaabd0340523563d8dc5037122158db478873529aec8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_planning.yaml",
+      "sha256": "8c9a0ae8615cde682aa96f9f8529b6b916f023d8b5ef913b5808352d94f50bdd",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/demo.launch.py",
+      "sha256": "93768566056c0048afe2a8f21225295eae1bf5e8b880943c26b496e11d69a9d0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/moveit.launch.py",
+      "sha256": "08605cc6b23b87a9afc25c4dfc6b0abb1ae9e6583219039fdeebdc3bd55b76a1",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "e9b5784db6feb9f167e0069835436dd724f92f4105d1aeacf375840fa95c8be4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "93a2852aeb80bde43cff340fd09e69ebf59c9a773b919e6ddc6f339a84648ede",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit_with_camera.rviz",
+      "sha256": "fe56db1e4c670123ae3e02f59ecd91653f965c1d5d25fad52b6c6c314c3bdef0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/ar.srdf.xacro",
+      "sha256": "0dd33825ceb214cd6ca55e5b022268bc3a178b638f2fd0e4d51f84c58d983e74",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/ar_gripper_macro.srdf.xacro",
+      "sha256": "f0ef2f37453cccb4f24076c5de0e8302f46cf275af691422f15e0a9521bb8539",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/ar_macro.srdf.xacro",
+      "sha256": "b0a3de7a58f4891d13a4f20a833df23697c7219a377c9421d9190e9ea3ccd17f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "urdf/fake_ar.urdf.xacro",
+      "sha256": "802423c83d7da94baf7e4f34d08dc388ac01bef5b1f400bb5fcb63354d01785f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "e11d0451c4143b00c96f4a3b477091dfad328209e8c717bad714d5b0b4536c73"
+    }
+  ]
+}

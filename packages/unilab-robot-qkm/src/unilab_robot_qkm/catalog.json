@@ -1,0 +1,22 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "qkm",
+  "models": {
+    "hs1540:054s": {
+      "title": "HS-1540-054S",
+      "asset": {
+        "asset_id": "59fd2a3d-5829-5ad5-8ca8-28ef37f45485",
+        "package_digest": "d4a44b483eb80b522ce42e3e3a139f953a74ebe9f4452c6029932f6919ddba3d",
+        "package_path": "04_设备/qkm/hs-1540-054s__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/hs1540_054s_5fd67cc8/module.json",
+      "module_sha256": "ca4200b1107d46db5b623bdf9900d75b19086c08d1befd4448b93a9be14ec118"
+    }
+  },
+  "source_profiles": []
+}

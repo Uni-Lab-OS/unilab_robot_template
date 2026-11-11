@@ -1,0 +1,385 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "igus",
+  "model": "rebelcobot6dof",
+  "title": "ReBeL Cobot 6 DOF",
+  "asset": {
+    "asset_id": "6cd349cc-9519-5d1e-9312-a7342d5a8ecd",
+    "package_digest": "0bb30cd1a780215385053a622023d0bb106792d2a5358314a4bbecfb6edf1758",
+    "package_path": "04_设备/igus/rebel_cobot_6_dof__r002"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6cd349cc-9519-5d1e-9312-a7342d5a8ecd",
+      "package_digest": "0bb30cd1a780215385053a622023d0bb106792d2a5358314a4bbecfb6edf1758",
+      "package_path": "04_设备/igus/rebel_cobot_6_dof__r002"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:16775",
+            "id": "dof:17520",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -179.0,
+              179.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -179.0,
+                179.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -179.0,
+                179.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:17804",
+            "id": "dof:19385",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -80.0,
+              140.0
+            ],
+            "parent_node_id": "node:16775",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -80.0,
+                140.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -80.0,
+                140.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:19669",
+            "id": "dof:20362",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -90.0,
+              140.0
+            ],
+            "parent_node_id": "node:17804",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -90.0,
+                140.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -90.0,
+                140.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:20646",
+            "id": "dof:22227",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -179.0,
+              179.0
+            ],
+            "parent_node_id": "node:19669",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -179.0,
+                179.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -179.0,
+                179.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:22511",
+            "id": "dof:23204",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -95.0,
+              95.0
+            ],
+            "parent_node_id": "node:20646",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -95.0,
+                95.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -95.0,
+                95.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:23488",
+            "id": "dof:23737",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -179.0,
+              179.0
+            ],
+            "parent_node_id": "node:22511",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -179.0,
+                179.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -179.0,
+                179.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "78ff528d900dc09fbe2f9b7dc6ee35af6fa9f9d56bf2282006da47e8821bc09d",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "78ff528d900dc09fbe2f9b7dc6ee35af6fa9f9d56bf2282006da47e8821bc09d",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "adec5f570fff71e4456420fc71d5dbd5de4673f3fb4d47cac866842cf9cc0746",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rebel_cobot_6_dof__r002.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "sdk:igus:irc_ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/igus/irc_ros2",
+        "repository_url": "https://github.com/CommonplaceRobotics/iRC_ROS.git",
+        "code_tree_sha256": "6e11f50faaff549cecda1d7588de6727ebf5dd5e60bdac3a7ab17ad0779bebb3",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "f615ac200515cdb2c7437e8bfeabdde8b91da5a3236b559846449db1a67d7dfb"
+          },
+          {
+            "path": "irc_ros_bringup/README.md",
+            "sha256": "35d28f2278d61f17995f983c8a1633f7f25b05387c8701bfa80923214e78d2d2"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "aa75af9f212103975e178773c750f894bd6edc3dd72990c54cd07f3b7063fe37"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "native:igus_cri",
+        "kind": "native_sdk_adapter",
+        "adapter": "vendor_native",
+        "native_family": "igus_cri",
+        "controller_choices": [
+          "igus Robot Control CRI"
+        ],
+        "sdk_version_requirement": "CRI-Python-Lib pinned source",
+        "source_candidates": [
+          "sdk:igus:irc_ros2"
+        ],
+        "operations": [
+          "connect",
+          "read_joints",
+          "move_joint_request"
+        ],
+        "constraints": [
+          "iRC model configuration and axes count require deployment confirmation",
+          "SDK/model deployment calibration is explicit; no assets or upstream source checkout required at runtime",
+          "Mixed axes require explicit per-axis types/units and source evidence; generic unit support is not model qualification"
+        ],
+        "qualification": {
+          "implementation": "implemented",
+          "model_controller": "not_verified",
+          "axis_types": "axis_types_unknown_explicit_deployment_declaration_required",
+          "offline_adapter": "vendor_family_boundary_exercised",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        },
+        "offline_evidence": {
+          "receipt": "igus_cri-receipt.json",
+          "receipt_sha256": "c94c36dc7e7cde2a5b280cf2249242af5d41c0d4be59e06422290903141edc88",
+          "adapter_sha256": "9828810741d337a350bdb5aed1626b4bc3e6806f86eb55ff319fed1265f1497a",
+          "scope": "vendor SDK family boundary; this model was not individually connected"
+        },
+        "redistribution": "External SDK installation; no vendor SDK binaries included in brand package"
+      }
+    ],
+    "hardware_match_scope": "sdk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "IGUS.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "ReBeL Cobot 6 DOF",
+          "manufacturer": "Igus",
+          "variant": "",
+          "path": "Components/Igus/Robots/ReBeL Cobot 6 DOF.vcmx",
+          "type": "Robots",
+          "payload": "2",
+          "reach": "664",
+          "vcid": "016ae61f-fdde-4586-ba90-2871c5d650a1",
+          "library_assets": [
+            "6cd349cc-9519-5d1e-9312-a7342d5a8ecd"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/ReBeL Cobot 6 DOF.vcmx",
+        "path": "simready_usd/ReBeL Cobot 6 DOF.vcmx",
+        "sha256": "78ff528d900dc09fbe2f9b7dc6ee35af6fa9f9d56bf2282006da47e8821bc09d"
+      }
+    ],
+    "published_revision_mapping_sha256": "f64c7476d5990ce770ae3312ff8c413e1d01388eeaa871cb531d4fce346fb8ff"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

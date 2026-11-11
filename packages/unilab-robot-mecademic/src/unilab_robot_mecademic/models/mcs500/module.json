@@ -1,0 +1,391 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "mecademic",
+  "model": "mcs500",
+  "title": "Mecademic MCS500",
+  "asset": {
+    "asset_id": "38dfaf80-8f1b-5844-b726-93940550a6aa",
+    "package_digest": "4028df58e351d097185f6765ebd018900952b0396205dcf7f30ef0ece7913891",
+    "package_path": "04_设备/mecademic/mcs500__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "38dfaf80-8f1b-5844-b726-93940550a6aa",
+      "package_digest": "4028df58e351d097185f6765ebd018900952b0396205dcf7f30ef0ece7913891",
+      "package_path": "04_设备/mecademic/mcs500__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "generic_axis_directions": 64,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          3.141592653589793,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "mm",
+          "degree"
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "prismatic",
+          "revolute"
+        ],
+        "lower": [
+          -140.0,
+          -145.0,
+          -102.0,
+          -3600.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            125.0,
+            0.0,
+            109.0
+          ],
+          [
+            3.141592653589793,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mechanism_type": 2,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "excluded": "five-axis swap, links!=axes+1, unrecognized joint-type/extensions and non-unit scale",
+          "generic_direction_mapping": "0x1405dbe20",
+          "generic_fallback": "0x1405dafb0",
+          "joint_input_mapping": "0x14055e6a0",
+          "joint_type": "MDH row[4]==0 revolute; row[4]==1 prismatic; other nonzero values conservatively rejected",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ and prismatic input millimeters; Rx/Ry/Rz and MDH alpha/theta radians; revolute input degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          -1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; per-axis joint_input_units",
+        "upper": [
+          140.0,
+          145.0,
+          0.0,
+          3600.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "fe10b060502feba2eb8236ea99dab5cbeb49f99401c781182c499a2146f8dab3",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 4,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 5
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/mcs500__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 4,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:apimecademic",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimecademic.py",
+        "sha256": "fc3fcb898a093a01502875962cf50f1c1aafc4c9ae70daef6de3fb56039e2b6c",
+        "bytes": 1357,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimecademic.pyc",
+            "sha256": "6764763b70b910db6c2cea3f25c01f1044a2aa4d0a438f97ba194c9388c387c2"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimecademic.pyc",
+            "sha256": "2a3f36a3a6f87736a3729cf6d07c96f1db6c4e8e3d2d805c96eb1b270a1ebda7"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimecademic.pyc",
+            "sha256": "74abfb3d1da737d20d936e3a087be209d945206cacd312c9e2b4d5de3ba43b66"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimecademic.pyc",
+            "sha256": "90506b84c1e58aec71ba691e85a9a48155cd2b52eaa43d49310cecfceb6c8837"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimecademic.pyc",
+            "sha256": "b56990a01dde0227d10cbc02233945eaa00b8c0e4a2172ba399097233bffb75d"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mecademic controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:apimecademicpy",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/apimecademicpy.py",
+        "sha256": "7b214d144a7bc1c66111d186932900027687bedf678e6647d893b2232d267694",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/apimecademicpy.pyc",
+            "sha256": "70347c7829689763988797040d0d9527d2e3e4e2b3bf60669fc4b54a177008ac"
+          },
+          {
+            "relative_path": "api/Robot/v311/apimecademicpy.pyc",
+            "sha256": "c177bc2c32ab5f0775ee26b5d36c980001e47fc940c923009a4d54c6545e2302"
+          },
+          {
+            "relative_path": "api/Robot/v312/apimecademicpy.pyc",
+            "sha256": "368d127ecf4e2ebb888c33c7c97b4f4d15281fef503e14e2cea568be2ede8810"
+          },
+          {
+            "relative_path": "api/Robot/v38/apimecademicpy.pyc",
+            "sha256": "323c7cf5fcfae0f573ff09a8159ffb990ad091b34205fd83ba613d45e43d478b"
+          },
+          {
+            "relative_path": "api/Robot/v39/apimecademicpy.pyc",
+            "sha256": "94e521c275d0deb96454a11a93a9a06d008faa49a11b56ed260038c7944908d2"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "mecademic controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Mecademic.py",
+      "Mecademic_Python.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/mecademic/python_api",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/mecademic/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "MCS500",
+          "manufacturer": "Mecademic",
+          "variant": "",
+          "display": "Mecademic MCS500",
+          "path": "robots/models/Mecademic-MCS500.robot",
+          "type": "robots",
+          "payload": 0.5,
+          "reach": 225,
+          "axes": 4,
+          "library_assets": [
+            "38dfaf80-8f1b-5844-b726-93940550a6aa"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Mecademic-MCS500.robot",
+        "path": "simready_usd/Mecademic-MCS500.robot",
+        "sha256": "48922bbc8d90c423493488efe80d949047ad7618353ae7689db02c647093dd63"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

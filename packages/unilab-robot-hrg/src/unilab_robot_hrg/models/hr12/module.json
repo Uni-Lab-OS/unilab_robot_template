@@ -1,0 +1,106 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "hrg",
+  "model": "hr12",
+  "title": "HR12",
+  "asset": {
+    "asset_id": "fb88d097-4d9b-5730-886b-f054c190ce01",
+    "package_digest": "59626fe0d217cc3cbc26c0b6c3f392f95a8df07950bb2f6189993a37ca453e6b",
+    "package_path": "04_设备/hrg/hr12__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "fb88d097-4d9b-5730-886b-f054c190ce01",
+      "package_digest": "59626fe0d217cc3cbc26c0b6c3f392f95a8df07950bb2f6189993a37ca453e6b",
+      "package_path": "04_设备/hrg/hr12__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "mass_properties": {
+        "entities": [],
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "6cf58f056b01eab053c00e9932470c9ccf360887407afc17612aee38e9e10ca4",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "a1e434f00d8345f0c17ef58e3e5d7af2ed28d05cc3a09d0abebda347260f1e83",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/hr12__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "VC": [
+        {
+          "name": "HR12",
+          "manufacturer": "HRG",
+          "variant": "",
+          "path": "Components/HRG/Robots/HR12.vcmx",
+          "type": "Robots",
+          "payload": "12",
+          "reach": "1618",
+          "vcid": "8b9302a6-4dc1-4ec5-9c48-877f87d41d31",
+          "library_assets": [
+            "fb88d097-4d9b-5730-886b-f054c190ce01"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/HR12.vcmx",
+        "path": "simready_usd/HR12.vcmx",
+        "sha256": "6cf58f056b01eab053c00e9932470c9ccf360887407afc17612aee38e9e10ca4"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

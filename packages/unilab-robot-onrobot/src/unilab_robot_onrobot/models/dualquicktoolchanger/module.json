@@ -1,0 +1,89 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "onrobot",
+  "model": "dualquicktoolchanger",
+  "title": "OnRobot Dual Quick Tool Changer",
+  "asset": {
+    "asset_id": "6d349811-eecc-5d29-aebe-1b183ee7c90b",
+    "package_digest": "e4b209d455feddbbe1fc96e5c4feaa7d02b9fa540a3e19dc9eef1d2079f98ed4",
+    "package_path": "01_零部件/onrobot/dual_quick_tool_changer__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "6d349811-eecc-5d29-aebe-1b183ee7c90b",
+      "package_digest": "e4b209d455feddbbe1fc96e5c4feaa7d02b9fa540a3e19dc9eef1d2079f98ed4",
+      "package_path": "01_零部件/onrobot/dual_quick_tool_changer__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "2c32eb56e89c46dca467ed158105d25510431171f667dfec144a95f3c1c7f4a4",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/dual_quick_tool_changer__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "Dual Quick Tool Changer",
+          "manufacturer": "OnRobot",
+          "variant": "",
+          "display": "OnRobot Dual Quick Tool Changer",
+          "path": "tools/models/OnRobot-Dual-Quick-Tool-Changer.tool",
+          "type": "tools",
+          "payload": null,
+          "reach": null,
+          "axes": 0,
+          "library_assets": [
+            "6d349811-eecc-5d29-aebe-1b183ee7c90b"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/OnRobot-Dual-Quick-Tool-Changer.tool",
+        "path": "simready_usd/OnRobot-Dual-Quick-Tool-Changer.tool",
+        "sha256": "dfe3e32bfef09654b64da8cb02d9672b8f741aa42c795a69b1a5303648d28dcf"
+      }
+    ]
+  }
+}

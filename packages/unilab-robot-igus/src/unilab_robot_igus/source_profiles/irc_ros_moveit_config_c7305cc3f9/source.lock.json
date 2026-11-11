@@ -1,0 +1,94 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "irc_ros_moveit_config_c7305cc3f9",
+  "source": {
+    "url": "https://github.com/CommonplaceRobotics/iRC_ROS.git",
+    "commit": "41701e6df3398087d217f0f478622e60f694de41",
+    "path": "robots/igus/irc_ros2/irc_ros_moveit_config",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "1cb3e1206bad115de2ce91e4c4ed78dd3f9ab0489bcf7c52a4a686b5191ad4c8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/controllers.yaml",
+      "sha256": "ba8e5ae0d2b63b6afde7f0c01d7a2f7f4b44dc63e1bb7372232e1545d1559da5",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/igus_rebel_6dof.srdf.xacro",
+      "sha256": "33b9202dddd6c65622b51272e33e5b6d8a3c8d454ee91fe076f4377c3334b31f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/initial_positions.yaml",
+      "sha256": "ac16197d40da0cc4820db98694ac1d1c3188e7ee209dbaceb207297301f2c0ab",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/joint_limits.yaml",
+      "sha256": "08155cb89b756e9a2d3c54c3ed00880dc8d073eb6bcb196c0b35b578b80cfd96",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "e4bb1e3deff6bfd6b282da73abe83552386837e3ac9535e80749cb4ec49fc0a3",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "285acea93eb6c6ae6162c00c201d980dd8cb0f44c0158de682003f9fc4381b74",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_py.yaml",
+      "sha256": "4ebf98ff188ad162355b0f42d59841fbc881a1b910b5820c1d910f6c3ae44671",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl.yaml",
+      "sha256": "4fbaab3ab2881dc4dd4405ba21235093a37fe5b3bcdfe9767335716490410388",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/pilz_cartesian_limits.yaml",
+      "sha256": "7681764d4b71edbe5b7096a3b4dcac48d71cfa1bc65068bdc3c247b5ed289b1b",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ros2_controllers.yaml",
+      "sha256": "8e353fbb32cc2ebce32c20320f82a014b7eec5c2c7833a3850dd189e5d89b5b6",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/rebel.launch.py",
+      "sha256": "5cc6823729fa6e1ba2e311ee3dc333ad0e77abcc70c7bdee99455617d958e130",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "68b37c8e8ca7027b9a09996c2bfd4e41c5485d6474ead9e8ff0155e99235f575",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "6c7104720a62f710429838ae19aed8eec53e4fe12963f5f8fa67ab89850a348f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/moveit.rviz",
+      "sha256": "2dad510952679dc5934ea76937fa5379dafc9d7adc1f76cf9bb84fc9018e7cb4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "aa75af9f212103975e178773c750f894bd6edc3dd72990c54cd07f3b7063fe37"
+    }
+  ]
+}

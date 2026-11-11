@@ -1,0 +1,229 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "universal_robots",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "ur10": {
+      "title": "UR10｜多源合并",
+      "asset": {
+        "asset_id": "d7cafc6e-184e-5087-a70a-597882ddc9a7",
+        "package_digest": "2087f27ff7571d6069809a1ea56df9b7b78b828c8229dbd62b8de21a7939693d",
+        "package_path": "04_设备/universal_robots/ur10__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur10/module.json",
+      "module_sha256": "4ece6c47d8baf26a076c5386c93a59c93746f6db68b5f047d490ccd4e405b205"
+    },
+    "ur10e": {
+      "title": "UR10e｜多源合并",
+      "asset": {
+        "asset_id": "aa988981-d070-5c3a-a2d8-136bedb3f0f8",
+        "package_digest": "0cdfc3293a5072ba48249488f31a66b0326d6c1c822889e5d73e96bc4643d167",
+        "package_path": "04_设备/universal_robots/ur10e__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur10e/module.json",
+      "module_sha256": "d3d70251e8c5264ccd2c92a625a546898c59402c5692f96aca117afe8c2030c0"
+    },
+    "ur15": {
+      "title": "UR15｜多源合并",
+      "asset": {
+        "asset_id": "8545a104-1bfe-5d06-a316-e8caf8e51a38",
+        "package_digest": "1d7dfd0b9400fc838ec44fce5932c0dfaae08adf77ce5feef085d10b1e927e0a",
+        "package_path": "04_设备/universal_robots/ur15__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur15/module.json",
+      "module_sha256": "9468f7b3e1eca1c7d8f1c608337d4dfcb7a0f77d3a5bb31cb08494e4b4213e9a"
+    },
+    "ur16e": {
+      "title": "UR16e｜多源合并",
+      "asset": {
+        "asset_id": "fbe5df77-6d66-5ac9-83a0-5931d8c6f68c",
+        "package_digest": "129189578c5461211c078732048a94f90e40b73a1a7446b3cfbfd20f3d063a1b",
+        "package_path": "04_设备/universal_robots/ur16e__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur16e/module.json",
+      "module_sha256": "161759767c16c827d65ddf49cb6cf7c129d8779ff243ce05f7a74e7c8236a505"
+    },
+    "ur20": {
+      "title": "UR20｜多源合并",
+      "asset": {
+        "asset_id": "b7112f48-136d-5a0d-bdb9-8c51ca453e89",
+        "package_digest": "326d4eec67920c6dfacb9e1fb150231c137ac207d8701c89722e4700ad67e2c2",
+        "package_path": "04_设备/universal_robots/ur20__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur20/module.json",
+      "module_sha256": "8945bc4755033e2a9a83c03cc42bafb5d597277fb0547d87b726ebf2c0d3bfca"
+    },
+    "ur3": {
+      "title": "UR3｜多源合并",
+      "asset": {
+        "asset_id": "eb3d9cd7-3f4c-54c2-824c-3d12205db6a3",
+        "package_digest": "32f67f7aa5239611a7e244aeec88be99026cb3a6d8c7b6ea5a2b4601b947d616",
+        "package_path": "04_设备/universal_robots/ur3__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur3/module.json",
+      "module_sha256": "35ff1f378c2687c6d6b66bec8bda529eb78c1e9f92402bec3c14bbb4bd6f8157"
+    },
+    "ur30": {
+      "title": "UR30｜多源合并",
+      "asset": {
+        "asset_id": "4e2e9e3e-b93f-5c1c-bbdf-74965d7c0365",
+        "package_digest": "c39fef08e6c1e1d00c1f0592512791ef57b682e21fe20e957035cc836b8ca0c6",
+        "package_path": "04_设备/universal_robots/ur30__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur30/module.json",
+      "module_sha256": "77ad712c9400d72f148423a17e696b2ae5f8cbb041b3e6533fff8bf76cf2a7c9"
+    },
+    "ur3e": {
+      "title": "UR3e｜多源合并",
+      "asset": {
+        "asset_id": "ce75c11b-b5f5-59dc-a004-d5e84809d310",
+        "package_digest": "2f01c5ec90ba0b1b1049c407e7634e781b2d39dded61e6dbc7bdc434eb71e069",
+        "package_path": "04_设备/universal_robots/ur3e__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur3e/module.json",
+      "module_sha256": "d47ca4f103c3a7015b5fefe4a2321b2dab6c458fdac5a61ceb7afaf76654c2ec"
+    },
+    "ur5": {
+      "title": "UR5｜多源合并",
+      "asset": {
+        "asset_id": "03dc42af-d6ae-5c90-b917-0bd16b444f37",
+        "package_digest": "2ce3c2aabfcb2d268670fbff7c237c7e3d386360a38033b5b8f380dbc0308fa9",
+        "package_path": "04_设备/universal_robots/ur5__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur5/module.json",
+      "module_sha256": "3df48f6ad20296f5d8454fb18f12770179239764456b9e34f2ca7944bde1ab3f"
+    },
+    "ur5e": {
+      "title": "UR5e｜多源合并",
+      "asset": {
+        "asset_id": "bc4a1aa9-42f9-5bae-bce5-4ccb3928297f",
+        "package_digest": "6e2b8213c91a0d22e8ce347433acb2bee3e0fb57724aa9224d95963cb7d799a3",
+        "package_path": "04_设备/universal_robots/ur5e__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur5e/module.json",
+      "module_sha256": "825a34900624aecb964440a29f745cb0c0953983fbd9851b4878d584a214a0b0"
+    },
+    "ur8long": {
+      "title": "UR8 Long｜多源合并",
+      "asset": {
+        "asset_id": "7b752eed-818e-52e9-a40b-c34077840d11",
+        "package_digest": "247fbab450c2124ae3051afef1614b10f81eb44f020c8b68f700250d9f8607ff",
+        "package_path": "04_设备/universal_robots/ur8long__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/ur8long/module.json",
+      "module_sha256": "1a9d162c8f43039d507f83427f3408f1c8929a9639d069dacd06badc23ceee3d"
+    },
+    "ur12e": {
+      "title": "UR12e",
+      "asset": {
+        "asset_id": "60c30ea8-0c5c-59b1-aad2-1aa342027139",
+        "package_digest": "adf2a6922b82c473e5ed13a41d704ec63e7b726ac766331b00dab944b7c19472",
+        "package_path": "04_设备/universal_robots/ur12e__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ur12e/module.json",
+      "module_sha256": "c5b2ca53deba6e6dd6d7cd4303faa98bfef20cd0a4c47ce560ecdcbaf6fb4a47"
+    },
+    "ur18": {
+      "title": "UR18",
+      "asset": {
+        "asset_id": "32b8a084-c08f-59b8-8b59-8fd23836ccc2",
+        "package_digest": "ed3f94ba8456ed9867ef2f5529bed5ee6c3a5710de43e53745baa44bb950d111",
+        "package_path": "04_设备/universal_robots/ur18__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ur18/module.json",
+      "module_sha256": "aff0d868473b2e95fc71037f6bddf89b734b36a9d8cbeb62ddc3c19eb89ed07c"
+    },
+    "ur7e": {
+      "title": "UR7e",
+      "asset": {
+        "asset_id": "326c9ddb-af58-591a-bfb2-cecd3f626957",
+        "package_digest": "6a8663f82178d06d0a1d3cdc2dc7f37ba2251614d94b28d141dec51a811fdee7",
+        "package_path": "04_设备/universal_robots/ur7e__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ur7e/module.json",
+      "module_sha256": "837577a191af7d910568d4af7ab4a699d47ce08b8639d92354208045710f8e57"
+    }
+  },
+  "source_profiles": []
+}

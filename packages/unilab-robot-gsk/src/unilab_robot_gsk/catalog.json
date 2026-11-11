@@ -1,0 +1,142 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "gsk",
+  "models": {
+    "rb03a1": {
+      "title": "GSK RB03A1",
+      "asset": {
+        "asset_id": "9cb5e9ee-bb7c-5094-ab86-74f8fb92bf74",
+        "package_digest": "d10b621a80c7aa201008a39888f2e7efe2bbf92f51da9920dcdd409543b604f0",
+        "package_path": "04_设备/gsk/rb03a1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb03a1/module.json",
+      "module_sha256": "43ddbe29f9243d4038a363931d752fd3eab9ea43662b30d5b79d8da2f8e28cf4"
+    },
+    "rb06l": {
+      "title": "GSK RB06L",
+      "asset": {
+        "asset_id": "2880982f-8bed-562c-99a0-ea2534d4bdaa",
+        "package_digest": "e5fa50ad3d1616ba53e6584aa9b59912cae1a70db907c5782dcd798ed286a60f",
+        "package_path": "04_设备/gsk/rb06l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb06l/module.json",
+      "module_sha256": "279050dad7c6c34701e2438618e1c38b2a6aa4ecc5b7ba55decb0dd2198601ea"
+    },
+    "rb08": {
+      "title": "GSK RB08",
+      "asset": {
+        "asset_id": "a09223f2-70ae-5a26-ae2c-ee6d7c87c184",
+        "package_digest": "6a3da9db7a68224a69f63956cda303a19d26b9c749846416fb510791ad6daf81",
+        "package_path": "04_设备/gsk/rb08__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb08/module.json",
+      "module_sha256": "217c2b906c79caf10e19f707c4e4070492f1956d41cf30deba7e0cd38c5f9df5"
+    },
+    "rb08a1": {
+      "title": "GSK RB08A1",
+      "asset": {
+        "asset_id": "7b148e8c-e727-5786-acc2-b81a65e4f6c5",
+        "package_digest": "f9748a8505818fcd85106b65c686eb63d0c1ac18ee301e3eb9945e75d08b2dd6",
+        "package_path": "04_设备/gsk/rb08a1__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb08a1/module.json",
+      "module_sha256": "4c4e8026792a851c7d45727c68f1190a8280963b0a23edbe4908508c44a200fe"
+    },
+    "rb10": {
+      "title": "GSK RB10",
+      "asset": {
+        "asset_id": "dc390320-1bbe-557d-9446-22ffff52aed0",
+        "package_digest": "b696fb692e2a91783f95df62a1e1faec3067ad8e95a2f14b1c4c90a97d0c48cf",
+        "package_path": "04_设备/gsk/rb10__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb10/module.json",
+      "module_sha256": "40d558b84b30854fd3946461fdbdab381fa2806137ba27f0717acfefa8bfb093"
+    },
+    "rb15l": {
+      "title": "GSK RB15L",
+      "asset": {
+        "asset_id": "f8c7d75a-10d5-5d14-928a-9face9e22597",
+        "package_digest": "2939ba08b411d040f7dbe68dea8e234b0d9344e820770386c3e2c10052f460ea",
+        "package_path": "04_设备/gsk/rb15l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb15l/module.json",
+      "module_sha256": "d3b6efcdcf985f8f981a4c69b2ca27d797e52ed105f058a2bfc18d1a96ca409e"
+    },
+    "rb165a1:2790": {
+      "title": "GSK RB165A1-2790",
+      "asset": {
+        "asset_id": "f93d43e9-bb1f-51db-a6ec-8de5507f5f0c",
+        "package_digest": "4addb95bcb36cf7898425c39eeb2a9d4cbdd193134b6acfb3d2ffa897e3282ad",
+        "package_path": "04_设备/gsk/rb165a1-2790__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb165a1_2790_bcc2067e/module.json",
+      "module_sha256": "2530fb7b9db40f48ba05e10f4991774bff3144a02be86f7216d7aa3d2e474e72"
+    },
+    "rb20": {
+      "title": "GSK RB20",
+      "asset": {
+        "asset_id": "f43925ce-753c-552b-9f2d-a3b3580f04ab",
+        "package_digest": "ae5d7a6cf772de05d92f182789ef12f8f5ea65d4198f6809b212db36e7b11140",
+        "package_path": "04_设备/gsk/rb20__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb20/module.json",
+      "module_sha256": "58f52e4d118426dd3bd338f30dd40b5d46a75ebb4fd0c38271cb6d2dff7c6d5b"
+    },
+    "rb50": {
+      "title": "GSK RB50",
+      "asset": {
+        "asset_id": "bb4154cb-e0de-54dc-ac2e-f9c03830eef4",
+        "package_digest": "74125cd2d4f6220a36959752feb4ce5613a70c425609be60d2a2f5363ab82220",
+        "package_path": "04_设备/gsk/rb50__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/rb50/module.json",
+      "module_sha256": "608af103a6aea24f41af80a262bef1d59ba0fc6aa317e1ed0e3b257a61ba62ad"
+    }
+  },
+  "source_profiles": []
+}

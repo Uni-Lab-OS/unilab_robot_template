@@ -1,0 +1,362 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "otc",
+  "library_index_sha256": "bb576404dd5a3092771e871a97f8d53d33ca83f8e97948814222d6e1e9533a0f",
+  "models": {
+    "fdb4": {
+      "title": "Daihen OTC FD-B4｜多源合并",
+      "asset": {
+        "asset_id": "26778de5-b27c-5346-9a1a-13cd9554aaba",
+        "package_digest": "810c2cedf9daa6cd0eef8d8f5f51daa8c0f6feb500c2ba0b9abcfa83aaf539dc",
+        "package_path": "04_设备/otc_daihen/fdb4__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdb4/module.json",
+      "module_sha256": "c5c92626dc12d857aeef74deeb8944a7fa8fc43d3a53f5ddfe541a00ff22468f"
+    },
+    "fdb4l": {
+      "title": "Daihen OTC FD-B4L｜多源合并",
+      "asset": {
+        "asset_id": "186a7835-2794-5180-9998-90a9a9d20dda",
+        "package_digest": "5a286cc0b0d79f7ff960f9788e81d829d6a6b090d449fdde93bda6059a432d9d",
+        "package_path": "04_设备/otc_daihen/fdb4l__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdb4l/module.json",
+      "module_sha256": "f84ab2c2e4109e18ee60b072c3fe81b246920e16e2bf7a04413f13c6dec6c5bb"
+    },
+    "fdv6": {
+      "title": "Daihen OTC FD-V6｜多源合并",
+      "asset": {
+        "asset_id": "4a3f3913-23c1-5ba3-b617-6ad6f7e29da5",
+        "package_digest": "81680e418fe1b880a0f43a3e3c780299b1a3f3843395719a92afa5641ee2977e",
+        "package_path": "04_设备/otc_daihen/fdv6__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv6/module.json",
+      "module_sha256": "4372d184adb3f5dbacea418f2299a155a7476cbd1fcb79b83530e48dcdf20875"
+    },
+    "fdv6ls": {
+      "title": "Daihen OTC FD-V6Ls｜多源合并",
+      "asset": {
+        "asset_id": "6406d163-4ce2-5567-9b8a-7679f0219779",
+        "package_digest": "a5aa5bf1111465ee93d3f1ec1e5ca89cc3caf83c46642a0ddc01d95e3b52e654",
+        "package_path": "04_设备/otc_daihen/fdv6ls__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv6ls/module.json",
+      "module_sha256": "742c30dc030c6fb3c3a371653a91e5be095a183efa003598cda89da20676a61a"
+    },
+    "fdv8": {
+      "title": "Daihen OTC FD-V8｜多源合并",
+      "asset": {
+        "asset_id": "9c56a60d-ed3f-5bc4-aa95-f7c2136e4edc",
+        "package_digest": "4b165e99a3790a0b87f54b875773e9954efb96c96b7465d42d24f0543426ec3d",
+        "package_path": "04_设备/otc_daihen/fdv8__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv8/module.json",
+      "module_sha256": "b9458265940ec41373f646e52f84fd7bb2fcfa93b6ffbbeec29fae97a902033f"
+    },
+    "fdv80": {
+      "title": "Daihen OTC FD-V80｜多源合并",
+      "asset": {
+        "asset_id": "e77eec3f-3cd4-5986-884d-a0a899d0a99a",
+        "package_digest": "cedbbec1be19d88d5a58848e8d00203d3285349a7489ca40f1420b99c6ddd031",
+        "package_path": "04_设备/otc_daihen/fdv80__多源合并_r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv80/module.json",
+      "module_sha256": "1be47a6860fd5f01f4e91b84cc736c8014771f4a33317197b37872e089ce5785"
+    },
+    "fdv6l": {
+      "title": "Daihen OTC FD-V6L｜多源合并",
+      "asset": {
+        "asset_id": "f7651b6b-cb74-56d1-880b-a7daf6970195",
+        "package_digest": "3b27a6a4f3f480131e7afbac82981f595379e66acdcbefa9720ab34439159727",
+        "package_path": "04_设备/otc_daihen/fdv6l__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv6l/module.json",
+      "module_sha256": "73d6380107241dfedb917c4bcc8b1f857ca3c5b20c1150e366cbb7e62589614e"
+    },
+    "fdb6l": {
+      "title": "Daihen OTC FD-B6L｜多源合并",
+      "asset": {
+        "asset_id": "71f341c6-1d97-574f-8a2c-2c418e84a1a8",
+        "package_digest": "87e8bdf707d60de5302b932bbfedd52a6390dc91ecafdab8f18fc4a2b205a180",
+        "package_path": "04_设备/otc_daihen/fdb6l__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdb6l/module.json",
+      "module_sha256": "4ccc6172143f41832f92ea83be68d9fbb4c6c2338a4345a0f5dc4df01e8968f8"
+    },
+    "fdv6s": {
+      "title": "Daihen OTC FD-V6S｜多源合并",
+      "asset": {
+        "asset_id": "66e24a46-99b0-5ed2-8388-221059f10f1c",
+        "package_digest": "72110b0bc494998194f38aae253f451851ba06f224e1838d2092e2a3c4f28837",
+        "package_path": "04_设备/otc_daihen/fdv6s__多源合并_r003"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "not_qualified",
+        "hardware": "not_qualified"
+      },
+      "model_equivalence": "not_verified",
+      "module_path": "models/fdv6s/module.json",
+      "module_sha256": "17858b57e3346f4f75c628924b4a8ea87efc5a599147d654345334daa5154dce"
+    },
+    "axmv4lap": {
+      "title": "AX-MV4LAP",
+      "asset": {
+        "asset_id": "d2076978-8ead-532e-a0b6-a069a1524dae",
+        "package_digest": "1602a95a0a4afc135a7970fb40589282f12ba3cf26a93e0770b6cb6ec90bdce7",
+        "package_path": "04_设备/otc_daihen/ax-mv4lap__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/axmv4lap/module.json",
+      "module_sha256": "d61ab134fd4b71b86ac195cdf12f7d0fd33772e9c49e6367697885f97ad7b365"
+    },
+    "axmv6l": {
+      "title": "AX-MV6L",
+      "asset": {
+        "asset_id": "3c4fc0fa-5869-5a62-9455-f07c3e74a2c1",
+        "package_digest": "cbd30d7464a09ba9037794d50e1b6b1365066b2a27c067567652f93763d734a8",
+        "package_path": "04_设备/otc_daihen/ax-mv6l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/axmv6l/module.json",
+      "module_sha256": "36e17f396f4af9b32de1b0b55967406e7bb4f6cd3d1ca69549c4dcf37b175007"
+    },
+    "axv4": {
+      "title": "Daihen OTC AX-V4",
+      "asset": {
+        "asset_id": "74b983eb-1d14-517d-9175-865b4a4cb5e8",
+        "package_digest": "a953a710609edf9add65b4cf76d7aeff2917825442750dcd0afb4b55835852fa",
+        "package_path": "04_设备/otc_daihen/ax-v4__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/axv4/module.json",
+      "module_sha256": "2f8ce36e81c0d92447c7cba31bea5b0c9057461dfdcfe2974602e21fa48b8360"
+    },
+    "axv6l": {
+      "title": "Daihen OTC AX-V6L",
+      "asset": {
+        "asset_id": "613b754b-d6c1-5299-94bf-55ad9e22bf2e",
+        "package_digest": "17a98e4984d33f327dd5f209b8cfee76d58bdb9f5e52cd89ee9079924a42b903",
+        "package_path": "04_设备/otc_daihen/ax-v6l__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/axv6l/module.json",
+      "module_sha256": "4dd12d19f373ad6e16376bd9b494b6e5186ffb7fd413b020edf3e51653f82a1d"
+    },
+    "fd19h5": {
+      "title": "Daihen OTC FD19-H5",
+      "asset": {
+        "asset_id": "19fb980a-a9f6-53ee-abca-21251fef698f",
+        "package_digest": "1a6d32805fd55fe480acc1ca63ac3622fba2f1513c9150e57a07cb040368d183",
+        "package_path": "04_设备/otc_daihen/fd19-h5__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fd19h5/module.json",
+      "module_sha256": "bd64c0b38924021e8194ab0433b081860cb0287e1cf638b36df0416c8e388d28"
+    },
+    "fdb26": {
+      "title": "Daihen OTC FD-B26",
+      "asset": {
+        "asset_id": "3b8e2a93-b757-558f-97ca-051752eed0ea",
+        "package_digest": "f5774d3f84963be98b0aa358be66345d93740e6ec565eb7c7cb1b73583eed372",
+        "package_path": "04_设备/otc_daihen/fd-b26__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fdb26/module.json",
+      "module_sha256": "db61fd5c03215a7a928afb4273b6d37a78b1de0ab8a7ab1b43d48476f35e8739"
+    },
+    "fdnv6ls": {
+      "title": "Daihen OTC FD-NV6Ls",
+      "asset": {
+        "asset_id": "9281dacc-fa44-5458-a49b-282742238e73",
+        "package_digest": "ee1ea6826a7504b26944b5ed36dad2a43bb048ce97cb121c4d0159b4ddfc7c60",
+        "package_path": "04_设备/otc_daihen/fd-nv6ls__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fdnv6ls/module.json",
+      "module_sha256": "7c105640bb6adca044275c4461a5163ac8201abe25935f7cb3bc01165feb673c"
+    },
+    "fdv166": {
+      "title": "Daihen OTC FD-V166",
+      "asset": {
+        "asset_id": "eb64586c-ac53-5262-85d0-76684a4b4cd8",
+        "package_digest": "ce887083783aedcad68ee3cc1114a504bcb0b51de861a10d08de01c9e24282aa",
+        "package_path": "04_设备/otc_daihen/fd-v166__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fdv166/module.json",
+      "module_sha256": "0d3dbfd7c52fc2f847e04703b8258035c05667c7e3615380ed2aa5309ae3088e"
+    },
+    "nv8ls2": {
+      "title": "Daihen OTC NV8LS2",
+      "asset": {
+        "asset_id": "149a48fe-2132-5e33-9585-20f908bee54f",
+        "package_digest": "764c7666705b11676b40b96e7fd3259f43186a3308660cb2fe5d0117bee91478",
+        "package_path": "04_设备/otc_daihen/nv8ls2__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/nv8ls2/module.json",
+      "module_sha256": "5cd5f9a5eefeb559f9bbfba75fbf49803213d1d95e60a5562b048d3523ff25d4"
+    },
+    "fd84weldinggun": {
+      "title": "OTC Daihen FD-84 Welding Gun",
+      "asset": {
+        "asset_id": "510a64fa-5345-5928-998b-522f1f2f9e45",
+        "package_digest": "bd4abd8a593c372c042ef5cff2e49dd1a2ae5e64061bcf113d125db1b6d46c1c",
+        "package_path": "01_零部件/otc_daihen/fd-84_welding_gun__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/fd84weldinggun/module.json",
+      "module_sha256": "396019b4413f557b8155230af3ff3a7bc85b7780d3b87ae11e27b25fb04fb3e0"
+    },
+    "mwxc3501": {
+      "title": "MWXC-3501",
+      "asset": {
+        "asset_id": "a66cd7e7-9674-59c6-a8cc-bbe78df91f33",
+        "package_digest": "7d98a25266a8b0da41d0d29e51a3deac37a6750878e6bfe67d36c9d49b9434a0",
+        "package_path": "03_机构模块/otc_daihen/mwxc-3501__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/mwxc3501/module.json",
+      "module_sha256": "65c36ea97eacd5866725f464317e5b60bb89f115edbe70ea62228bd28d001712"
+    },
+    "ssbrtw5000h": {
+      "title": "SSB-RTW5000H",
+      "asset": {
+        "asset_id": "91e9a5a2-db56-52ac-8b0f-1bf6a1603146",
+        "package_digest": "af688dd96606dd4d12fe5bdebdaeaec98191b60a3ba0210b9ec0644d3a42bb8a",
+        "package_path": "03_机构模块/otc_daihen/ssb-rtw5000h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ssbrtw5000h/module.json",
+      "module_sha256": "9a7317bc1e49f5d7a4fff2aa617dc79574246e127837c61ea136f65295f25bbc"
+    },
+    "ssvrt3500h": {
+      "title": "SSV-RT3500H",
+      "asset": {
+        "asset_id": "50439028-66da-5bbf-a0bb-c8a30705c617",
+        "package_digest": "8724e7a21537b1d05d92e98b22959163f65f21a90408bc9eadab210163a1077f",
+        "package_path": "03_机构模块/otc_daihen/ssv-rt3500h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ssvrt3500h/module.json",
+      "module_sha256": "93130f74d01e8e489d017d30ec5cb257626ffa8b5ad220d2ea934ad7ce6a1b79"
+    },
+    "ssvrtw5000h": {
+      "title": "SSV-RTW5000H",
+      "asset": {
+        "asset_id": "e58c19b1-5135-5b45-9e5e-f82efb0e4870",
+        "package_digest": "8fa488c25741a17fa28b4de72eb3321f65efb4c7a60e5f5bab3f19135dbea327",
+        "package_path": "03_机构模块/otc_daihen/ssv-rtw5000h__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/ssvrtw5000h/module.json",
+      "module_sha256": "bf724d08e0b9023a53b76204d2d789954e8f7a57e3025228a919ea256310cefb"
+    }
+  },
+  "source_profiles": []
+}

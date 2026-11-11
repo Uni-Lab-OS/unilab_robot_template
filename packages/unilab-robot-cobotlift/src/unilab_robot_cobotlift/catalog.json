@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "cobotlift",
+  "models": {
+    "boxsuctioncup": {
+      "title": "Box Suction Cup",
+      "asset": {
+        "asset_id": "3b9178b9-9778-54d6-bc2c-c38730cfce5f",
+        "package_digest": "54f2ff7b18048c567bf1c8f184dc08ca23a95df3c091a590571c067bfb11ab06",
+        "package_path": "03_机构模块/cobot_lift/box_suction_cup__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/boxsuctioncup/module.json",
+      "module_sha256": "1533e2c4747ed833796651720efbe01748ac9a3c058a118a7d0cb3ff57277f1b"
+    },
+    "manuallifter": {
+      "title": "Manual Lifter",
+      "asset": {
+        "asset_id": "b42f999d-89f2-5d0d-971b-4a73021a5dbc",
+        "package_digest": "30b8578160cd4b116ed8d4e9590f8b63cdc42175d55e92718dfc26ab65065ef6",
+        "package_path": "03_机构模块/cobot_lift/manual_lifter__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/manuallifter/module.json",
+      "module_sha256": "2d4a02764d34d686936dcb0a3cdce566308f07175483603f35718d716ca0e095"
+    },
+    "quickconnectorbottom": {
+      "title": "Quick Connector Bottom",
+      "asset": {
+        "asset_id": "8104acfc-afad-5ef0-9d74-09be5e4377dc",
+        "package_digest": "0cd6bd34a0e20efad4af41d06014bf47896148c1361792323b68207e482c9682",
+        "package_path": "03_机构模块/cobot_lift/quick_connector_bottom__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quickconnectorbottom/module.json",
+      "module_sha256": "60bb6053bdd51774f77b9386b02f4b676db01a30599bede9cb89c8f7b3c5de2c"
+    },
+    "quickconnectortop": {
+      "title": "Quick Connector Top",
+      "asset": {
+        "asset_id": "726942a2-28b9-5c7c-b8b4-cef77630d79e",
+        "package_digest": "1e683f8c77164e4f3d3bce4df00f69f157050ab8979347e0d9eab10ddfa08e56",
+        "package_path": "03_机构模块/cobot_lift/quick_connector_top__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/quickconnectortop/module.json",
+      "module_sha256": "8df110043fe7f5d7852f777e8a0b5855e57880095ffe5f70cff14301438b46f0"
+    },
+    "suctionhead": {
+      "title": "Suction Head",
+      "asset": {
+        "asset_id": "0dd34cc4-c362-5966-b6d0-95c6c3f6011f",
+        "package_digest": "17a1e4bf39d40cf3ff2bb63d14bb14a3074075c6b6e90810b3bff932383771ea",
+        "package_path": "03_机构模块/cobot_lift/suction_head__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/suctionhead/module.json",
+      "module_sha256": "2a820b50ecc1d915f7933960982b4f25dc373b5fd0a28c9805f1816d9398151b"
+    }
+  },
+  "source_profiles": []
+}

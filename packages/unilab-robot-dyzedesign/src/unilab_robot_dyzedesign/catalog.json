@@ -1,0 +1,52 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "dyzedesign",
+  "models": {
+    "pulsaratomextruder": {
+      "title": "DYZE Pulsar Atom Extruder",
+      "asset": {
+        "asset_id": "ce4f8bb0-3e77-5038-a31b-086f7cd944c1",
+        "package_digest": "78050a30c19e1f859ae651929029483d99c792383d7a68e7d025fb0df11fa859",
+        "package_path": "01_零部件/dyze_design/pulsar_atom_extruder__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pulsaratomextruder/module.json",
+      "module_sha256": "cdb61d0221ead893cf779afdef622e2cd4d1a9f6ff605c6a48294960e396b32b"
+    },
+    "pulsaratomextruderair": {
+      "title": "DYZE Pulsar Atom Extruder Air",
+      "asset": {
+        "asset_id": "9c652f46-4e6a-5545-8a25-67a501e52589",
+        "package_digest": "bad657cdcf619ddc49326881759e1a8339a39f06bed5b4a73f55a6771bd749a1",
+        "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_air__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pulsaratomextruderair/module.json",
+      "module_sha256": "a219afc8839e42a04fa063f74f2ee6c15eb53ac43eca856f13aa221bb54788b3"
+    },
+    "pulsaratomextruderliquid": {
+      "title": "DYZE Pulsar Atom Extruder Liquid",
+      "asset": {
+        "asset_id": "0d292438-b064-55ea-872c-9fda5fefddd2",
+        "package_digest": "4d82fcf899a78da54e2cdbf7f89b80ae8f0e608a476c9eab21a0e614beee8a04",
+        "package_path": "01_零部件/dyze_design/pulsar_atom_extruder_liquid__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "tool_geometry_binding_not_arm_planner",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/pulsaratomextruderliquid/module.json",
+      "module_sha256": "942842083c59b826d990f0120ef3b24414e308f8e2b92e9d4f2266646ba2c8e2"
+    }
+  },
+  "source_profiles": []
+}

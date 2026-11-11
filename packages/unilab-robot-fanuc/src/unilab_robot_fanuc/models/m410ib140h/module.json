@@ -1,0 +1,573 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "fanuc",
+  "model": "m410ib140h",
+  "title": "Fanuc M-410iB/140H｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "28d968a4-56b4-5f8a-a146-4bcaa27b9f37",
+    "package_digest": "2b4ead560f43f965f4ee00442fc7808119426a119b3b10544af922d4aba62578",
+    "package_path": "04_设备/fanuc/m410ib140h__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "28d968a4-56b4-5f8a-a146-4bcaa27b9f37",
+      "package_digest": "2b4ead560f43f965f4ee00442fc7808119426a119b3b10544af922d4aba62578",
+      "package_path": "04_设备/fanuc/m410ib140h__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:8153",
+            "id": "dof:8876",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -180.0,
+              180.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:9180",
+            "id": "dof:9629",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -55.0,
+              100.0
+            ],
+            "parent_node_id": "node:8153",
+            "source_axis_label": "+Y",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:9906",
+            "id": "dof:10207",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:9180",
+            "source_axis_label": "+Y",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:10370",
+            "id": "dof:10671",
+            "independent": false,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": null,
+            "parent_node_id": "node:9906",
+            "source_axis_label": "+Y",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:10836",
+            "id": "dof:11284",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -75.0,
+              10.0
+            ],
+            "parent_node_id": "node:9180",
+            "source_axis_label": "+Y",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          },
+          {
+            "child_node_id": "node:11563",
+            "id": "dof:12012",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -10.0,
+              10.0
+            ],
+            "parent_node_id": "node:10836",
+            "source_axis_label": "+Y",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_5"
+          },
+          {
+            "child_node_id": "node:12289",
+            "id": "dof:12737",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:11563",
+            "source_axis_label": "+X",
+            "source_type": "Custom",
+            "standard_axis_limits": null,
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_6"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "7689024c446f98c0562e4017053ba35ca8324b4a6d5231dd97c666286a2b7c1f",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "933f72e942e670ae9416b4d69809b1e4ec8a933a53429560af4b948f5de29c78",
+        "physics_contract_sha256": "af6aa3795bf694a48405f88ee5ac7c460993a3f3f26d63b072f26963a378b392",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "7689024c446f98c0562e4017053ba35ca8324b4a6d5231dd97c666286a2b7c1f",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "M-410iB/140H",
+              "source": "robots/models/Fanuc-M-410iB-140H.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            }
+          ],
+          "status": "source_single",
+          "unit": "count",
+          "value": 5.0
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "M-410iB/140H",
+              "source": "robots/models/Fanuc-M-410iB-140H.robot",
+              "source_family": "RoboDK",
+              "value": 140.0
+            },
+            {
+              "model": "M-410iB/140H",
+              "source": "Components/Fanuc/Robots/M-410iB_140H.vcmx",
+              "source_family": "VC",
+              "value": 140.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "kg",
+          "value": 140.0
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "M-410iB/140H",
+              "source": "robots/models/Fanuc-M-410iB-140H.robot",
+              "source_family": "RoboDK",
+              "value": 2850.0
+            },
+            {
+              "model": "M-410iB/140H",
+              "source": "Components/Fanuc/Robots/M-410iB_140H.vcmx",
+              "source_family": "VC",
+              "value": 2850.0
+            }
+          ],
+          "status": "source_agreement",
+          "unit": "mm",
+          "value": 2850.0
+        }
+      },
+      "source_models": [
+        {
+          "axes": 5,
+          "converted_parameters": [],
+          "display": "Fanuc M-410iB/140H",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "M-410iB/140H",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Fanuc-M-410iB-140H.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-410ib-140h/Fanuc-M-410iB-140H.robot",
+            "sha256": "7721282bcfd06cd746f0a81362a2ecc5add11db20643ba4a6138340ad0f48edf"
+          },
+          "path": "robots/models/Fanuc-M-410iB-140H.robot",
+          "payload": 140,
+          "reach": 2850,
+          "type": "robots",
+          "variant": ""
+        },
+        {
+          "converted_parameters": [],
+          "family": "VC",
+          "library_assets": [],
+          "manufacturer": "Fanuc",
+          "name": "M-410iB/140H",
+          "original": {
+            "family": "VC",
+            "original_name": "M-410iB_140H.vcmx",
+            "path": "simready_usd/source_assets/VC/0_m-410ib_140h/M-410iB_140H.vcmx",
+            "sha256": "7689024c446f98c0562e4017053ba35ca8324b4a6d5231dd97c666286a2b7c1f"
+          },
+          "path": "Components/Fanuc/Robots/M-410iB_140H.vcmx",
+          "payload": "140",
+          "reach": "2850",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "a0fe17f5-4bfa-4781-ac1f-e21b60af5266"
+        }
+      ]
+    },
+    "configuration": "selected-robodk",
+    "entrypoints": {
+      "usd": "simready_usd/m410ib140h__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Fanuc M-410iB/140H｜多源合并",
+          "id": "merged_robot_28d968a4_56b4_5f8a_a146_4bcaa27b9f37",
+          "metadata": {
+            "asset_id": "28d968a4-56b4-5f8a-a146-4bcaa27b9f37",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py",
+      "linkage.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:FanucSM",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucSM.exe",
+        "sha256": "17d8f5a34a88d84bd7ee64c6d3e9cb63dff2ab6d50f20d8fc42756475f4c3d9f",
+        "bytes": 52736,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC Socket Messaging"
+        ],
+        "constraints": [
+          "R636/R648 socket messaging, R641 PC Interface, R632 KAREL and matching RDK_S3/GO_MJ programs; UTOOL/UFRAME 1 and registers 50..52 affected",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "robodk:FanucPCDK",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/FanucPCDK.exe",
+        "sha256": "2f9a0752bc5391b5859fa652e5596eb68265149b24a78d1b0c4e01dfa005dac8",
+        "bytes": 2316288,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "FANUC PCDK"
+        ],
+        "constraints": [
+          "PCDK option required",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robots-Fanuc.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros2_driver",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros2_driver",
+        "repository_url": "https://github.com/FANUC-CORPORATION/fanuc_driver.git",
+        "code_tree_sha256": "aca0488baf6102befc76b4104ee722d29b125dfcaa8695fe9780b1102a337350",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "93971d4222c59466d44201d7fb91e7be68268795c97666e149970cf5ec03c8be"
+          },
+          {
+            "path": "fanuc_forward_command/README.md",
+            "sha256": "9a8674507ac3f634d9afd80d05579d88b38653266113d0d4ac84a1ec71a25ae6"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "82d8a5c6b24098af67be67b4ae2ccc885124db057cbdc6990d277cea7140c805"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:fanuc:ros_industrial_melodic_source",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/fanuc/ros_industrial_melodic_source",
+        "repository_url": "https://github.com/ros-industrial/fanuc.git",
+        "code_tree_sha256": "8e40b55eeaecb811c1238ea211b123b10b1fc65a61dce8370a34befeea94c741",
+        "source_evidence": [
+          {
+            "path": "readme.md",
+            "sha256": "bb9873a22992eba9d0e4dce2920f2b226da6410c42847539895b1e320e966109"
+          },
+          {
+            "path": "fanuc/readme.md",
+            "sha256": "47a3859c51667d15e61190bc7b6e74f850d6b32cc0561dafae2ca37dc7a304dc"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "a07d873d862d0dcc846396184afb427ead9ce459e3b70a818ebef4cb7e6091c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Fanuc_R30i.py",
+      "Fanuc_RJ3.py",
+      "Fanuc_RJ3_DripFeed.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "original_name": "Fanuc-M-410iB-140H.robot",
+        "path": "simready_usd/source/Fanuc-M-410iB-140H.robot",
+        "sha256": "7721282bcfd06cd746f0a81362a2ecc5add11db20643ba4a6138340ad0f48edf"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Fanuc-M-410iB-140H.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_fanuc-m-410ib-140h/Fanuc-M-410iB-140H.robot",
+        "sha256": "7721282bcfd06cd746f0a81362a2ecc5add11db20643ba4a6138340ad0f48edf"
+      },
+      {
+        "family": "VC",
+        "original_name": "M-410iB_140H.vcmx",
+        "path": "simready_usd/source_assets/VC/0_m-410ib_140h/M-410iB_140H.vcmx",
+        "sha256": "7689024c446f98c0562e4017053ba35ca8324b4a6d5231dd97c666286a2b7c1f"
+      }
+    ],
+    "merge": {
+      "conflicts": [],
+      "key": [
+        "fanuc",
+        "m410ib140h"
+      ],
+      "label": "RoboDK+VC｜公开资料核验待完成",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {},
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "RoboDK",
+        "original_asset_id": "d3a799f9-2ec2-500a-b0c0-cef67a5e89ce",
+        "original_package_digest": "165570a5b862eda2c0a52aa6ef387d2f7111b7fd1644d09c5d1561e9318f4698",
+        "source": "robots/models/Fanuc-M-410iB-140H.robot"
+      },
+      "source_families": [
+        "RoboDK",
+        "VC"
+      ],
+      "source_flags": [],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "9533c84565093daa406b3247d926aadcc5141924d80eb0e5e431e51431834e11"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

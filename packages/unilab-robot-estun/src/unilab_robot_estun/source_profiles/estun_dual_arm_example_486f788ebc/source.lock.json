@@ -1,0 +1,94 @@
+{
+  "schema": "unilab.moveit-source-profile/1",
+  "id": "estun_dual_arm_example_486f788ebc",
+  "source": {
+    "url": "https://github.com/ESTUN-R-D/estun_ros2.git",
+    "commit": "2bfd09fe4fc704b3305116a197144478c31fcb86",
+    "path": "robots/estun/ros2_driver/estun_dual_arm_example",
+    "authority": "file_hashes; working tree may differ from commit"
+  },
+  "status": "source_preserved_not_runtime_enabled",
+  "model_mapping": "unreviewed",
+  "dependencies": "package.xml and source URI references retained; execution closure not yet qualified",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "6576b302c01ae9af8df1d15680a7184688ae971f68dfb139a02d927d2a535829",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/kinematics.yaml",
+      "sha256": "8ba4ce03140698dca60f02e596b7b34452069b1d6c6582a5d2ec61e533cb545e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/moveit_controllers.yaml",
+      "sha256": "360d331da165e40b77055b4538a0bc625da9513a9d8a011583225c24d2ed7917",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "config/ompl_planning.yaml",
+      "sha256": "39948f970739ad66cd88377619782a811359903de51a0cc51ca1dde9734653af",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/dual_control.launch.py",
+      "sha256": "86b3bb66091e9ecbd82d5b82507426351b6e6e1a15239d77cfcffed004daa867",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "launch/dual_moveit.launch.py",
+      "sha256": "464bd5fda295833f94f090cb236c97b3348821d88e049e123e1816e3a3e821fc",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "package.xml",
+      "sha256": "cdf553470b3942e4b9206eedfbd04c4e139861ab7f5dcb9da524174a0f9e13b4",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "49003efbb5c687b05706ef7f696135921e4e895eb3de6ca106893fc654e4539e",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "dc9c8c15c983e0773601e7029944a969151d81142d11456f5f71feb86d924708",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "rviz/dual_moveit.rviz",
+      "sha256": "cad87412199f77a7bc4ef88c9da5a89a1201fac305dc7ec4f8659a10b50603ec",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "scripts/joint_state_merger.py",
+      "sha256": "35ad598859051985c3b3a083e04ae7eff11cf415df2776ee4121ffd042e76bb8",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "srdf/dual_arm.srdf",
+      "sha256": "8e20f10da767ec97779eb803f9845393101c8e97a977a2079d4addf3997e5705",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_dual_control_launch.py",
+      "sha256": "b3314fc8f85339a418adb593649d9d6cfa88ae39f8ea8000c0f14b4e3dfb601f",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "test/test_joint_state_merger.py",
+      "sha256": "f0f3c1d9a045fc569ce11629d4d7abdc8fa8f0661daf55ea6ae6c3d0f7149266",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "urdf/dual_arm.urdf.xacro",
+      "sha256": "6f3a69855cfbc7845ceb269941cd372d6cbd3d0cfab4e46d6d18d535e8cc3be0",
+      "git_lfs_pointer": false
+    },
+    {
+      "path": "upstream_notices/LICENSE",
+      "sha256": "b7d0373f53d8d213519f23184b1fe9d1dc7fb3fe250cc5d970f6b9d32b5a112e"
+    }
+  ]
+}

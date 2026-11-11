@@ -1,0 +1,217 @@
+{
+  "schema": "unilab.robot-brand/1",
+  "brand": "duco",
+  "models": {
+    "gcr10:1300": {
+      "title": "DUCO GCR10-1300",
+      "asset": {
+        "asset_id": "08c13f46-00a8-5a27-9d6b-eb393aafded9",
+        "package_digest": "9f57963e75a17dd00c5b3becdc71760e80a0dc120c39e16f463065748023f93b",
+        "package_path": "04_设备/duco/gcr10-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr10_1300_63f967f3/module.json",
+      "module_sha256": "2845c2fc5291d4ad0014fcac7ced519b228615b50869be173b94ca6e1376728a"
+    },
+    "gcr10:1300w": {
+      "title": "GCR10-1300-W",
+      "asset": {
+        "asset_id": "8347f13b-3eaa-5669-b492-a369f2ce84a9",
+        "package_digest": "5bbb66102d5774a70748bf85e113bad17af0d3f24919439b8f50fd52b630d264",
+        "package_path": "04_设备/duco/gcr10-1300-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr10_1300w_5f796ce0/module.json",
+      "module_sha256": "1ae5fbee97a2bf69d0dfa1235124128ea58308f25b08ce3f9bfb289ac16c9985"
+    },
+    "gcr12:1300": {
+      "title": "DUCO GCR12-1300",
+      "asset": {
+        "asset_id": "ae3630a0-9e6c-5134-8caa-5b8aec611d75",
+        "package_digest": "0b8f9839e93347a52c36faed5236ae6e98763cabd89c7fdd8522484c4d372522",
+        "package_path": "04_设备/duco/gcr12-1300__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr12_1300_d0b88ec6/module.json",
+      "module_sha256": "bcb98b703a0f0fceb4008076579aa70ce08508dd3457ddea6e3a4051f23aef27"
+    },
+    "gcr14:1400": {
+      "title": "DUCO GCR14-1400",
+      "asset": {
+        "asset_id": "ce331a4d-b379-5865-9f6c-21b6694fc0ad",
+        "package_digest": "1207c675d16f7c4a4be1baf69e09bdd60e038123c51c73358ee7b47f97f9fcdc",
+        "package_path": "04_设备/duco/gcr14-1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr14_1400_449eb885/module.json",
+      "module_sha256": "09f100d882eb4f0a1d3ae3c2fd8b22f72b7834946061f5c5c0b5bc72cb0fe13a"
+    },
+    "gcr16:2000": {
+      "title": "DUCO GCR16-2000",
+      "asset": {
+        "asset_id": "3f49b186-c6b4-53ba-9dba-f3c0cdf54f54",
+        "package_digest": "7b070736509c5718e08f8aba9b90c7baab635616a20e5fa01273119ef56745e6",
+        "package_path": "04_设备/duco/gcr16-2000__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr16_2000_863f5ce0/module.json",
+      "module_sha256": "da1fb993985887205ab010fd4bb295d8e478a59f8b8f9feb5f908eef1f9c0714"
+    },
+    "gcr16:960": {
+      "title": "DUCO GCR16-960",
+      "asset": {
+        "asset_id": "10392b8a-1924-5074-b4cf-4fc9c629678a",
+        "package_digest": "565af3ddd162dd8595715657c125137e8263ddcea6598d6e33721828ed1aac28",
+        "package_path": "04_设备/duco/gcr16-960__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr16_960_3ace519b/module.json",
+      "module_sha256": "590e160cfc37a5e55fb576b7e6a678a77b76b5ecd2df610e7f8c982ab8deba65"
+    },
+    "gcr20:1100": {
+      "title": "DUCO GCR20-1100",
+      "asset": {
+        "asset_id": "5135cfaf-62b7-5324-901d-7a570cbd0930",
+        "package_digest": "ddf9a21d0e2589f0e51fae5238f111f18caa3b27f15680ca72632aef53c621e9",
+        "package_path": "04_设备/duco/gcr20-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr20_1100_d8a042bc/module.json",
+      "module_sha256": "7420a92156c7851d9cca17baf1974c61f15cebabbbbbb5b7bcab29c10a2f484f"
+    },
+    "gcr20:1400": {
+      "title": "DUCO GCR20-1400",
+      "asset": {
+        "asset_id": "ebf2a999-2a4c-5416-a482-a581e230310b",
+        "package_digest": "7e0b2b24180e12b309161693b151b78a5ca0f07d05daca943a6d60251c9ed835",
+        "package_path": "04_设备/duco/gcr20-1400__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr20_1400_1a3e926d/module.json",
+      "module_sha256": "42947b2dc392a24edfc44727697fe66e63036ce47d2a991f2996f0012344ce37"
+    },
+    "gcr25:1800": {
+      "title": "DUCO GCR25-1800",
+      "asset": {
+        "asset_id": "51efc200-b61c-58c1-9812-85794e5ab908",
+        "package_digest": "13e6027bf5a97d076f63281babf7012b9b0d55a3974f492bef8ae13dd3df1b27",
+        "package_path": "04_设备/duco/gcr25-1800__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr25_1800_011328a3/module.json",
+      "module_sha256": "8d95c1bfc587d69600682f03c6dfdc29d3ef1a591fff30108e3c9b07da64a23a"
+    },
+    "gcr30:1100": {
+      "title": "DUCO GCR30-1100",
+      "asset": {
+        "asset_id": "b5053fad-c598-5470-9729-ee3895c1be61",
+        "package_digest": "ff9548882074c88c455ec34c1a460a49c722b5f64289ce1aed1a56652c1e8d39",
+        "package_path": "04_设备/duco/gcr30-1100__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr30_1100_85405a7d/module.json",
+      "module_sha256": "f93cf61a257beb12c3d5434c8e8fb3a9e8f2cb6a245c919e2e7edbafb18cf4d3"
+    },
+    "gcr3:618": {
+      "title": "DUCO GCR3-618",
+      "asset": {
+        "asset_id": "369d999f-2b67-5739-80ec-8931f15c232a",
+        "package_digest": "f005d00f9b4b9f4581abfa248295fbf6da4bb87b905aa07e893657f780fe37e3",
+        "package_path": "04_设备/duco/gcr3-618__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr3_618_dfebd3dc/module.json",
+      "module_sha256": "5206d0127a8cb703824b08d3f0e8e8e51d7e30ad4a041900e8ad9f80f37566ae"
+    },
+    "gcr3:618w": {
+      "title": "GCR3-618-W",
+      "asset": {
+        "asset_id": "39c42a12-adae-5358-a7ad-3c8b8d6fb425",
+        "package_digest": "ea39c8316345eb778b3f01b42f3e81af23c2739198a72a17acc7a4a3821edd11",
+        "package_path": "04_设备/duco/gcr3-618-w__r002"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr3_618w_6860d8b6/module.json",
+      "module_sha256": "ee41f1fb347910fb13bbd6f34e39d1ba6ba45cad5cf0e3f1111fb8bf6bc5bd7f"
+    },
+    "gcr5:910": {
+      "title": "DUCO GCR5-910",
+      "asset": {
+        "asset_id": "cc053aaf-2434-5317-bc5d-d06d6f56dd13",
+        "package_digest": "4fc59772a22808e3232726134a95805958102cd5d723e84a06e9b5776746e9de",
+        "package_path": "04_设备/duco/gcr5-910__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr5_910_46daa04a/module.json",
+      "module_sha256": "784429430d32138892b0100176cc1ab940baa45fd516f424b1884845d5ceea36"
+    },
+    "gcr7:910": {
+      "title": "DUCO GCR7-910",
+      "asset": {
+        "asset_id": "7ef05b1d-4f60-5855-a096-289c76cc7fc9",
+        "package_digest": "1661fcf70fa1543b5b1b278525f1e17b57300ecbd2072cded30f158961c63218",
+        "package_path": "04_设备/duco/gcr7-910__r001"
+      },
+      "provider": null,
+      "capabilities": {
+        "planning": "asset_adapter_available_not_engine_qualified",
+        "hardware": "not_qualified"
+      },
+      "module_path": "models/gcr7_910_dc02feed/module.json",
+      "module_sha256": "1fb12f5fab00aed26f9da9f29e3682d12a4f3201fcb63cf4a01648dd5a3400e3"
+    }
+  },
+  "source_profiles": []
+}

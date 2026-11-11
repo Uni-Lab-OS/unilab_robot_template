@@ -1,0 +1,670 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "doosan",
+  "model": "p3020",
+  "title": "Doosan Robotics P3020｜多源合并",
+  "ownership": "brand package maintains module; standard library publishes fixed mechanical representations",
+  "asset": {
+    "asset_id": "bf499732-0184-547a-ab4d-937e153f4dcb",
+    "package_digest": "89027f188cf7e8c4bb8763b79ac9bbe9906986f0a98a790459c48d42ae531dc1",
+    "package_path": "04_设备/doosan_robotics/p3020__多源合并_r003"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "not_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "bf499732-0184-547a-ab4d-937e153f4dcb",
+      "package_digest": "89027f188cf7e8c4bb8763b79ac9bbe9906986f0a98a790459c48d42ae531dc1",
+      "package_path": "04_设备/doosan_robotics/p3020__多源合并_r003"
+    },
+    "scope": "Selected reusable assembly only; site installation and station coordination belong to domain package"
+  },
+  "motion_model": {
+    "source_types": [
+      "Robots",
+      "robots"
+    ],
+    "parameters": {
+      "controller_consumer_contract": {
+        "domain": "serialized conditional input bounds; followers dependent",
+        "dynamics": "disabled connectivity; no physical solver qualification",
+        "implementation": "behavior/vc_joint_pipeline.py:apply",
+        "input": "source active Dof name/id; degrees or source millimetres",
+        "program_attribute": "unilab:vcJointProgram"
+      },
+      "kinematics": {
+        "gaps": [],
+        "joints": [
+          {
+            "child_node_id": "node:7402",
+            "id": "dof:7925",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:2",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_0"
+          },
+          {
+            "child_node_id": "node:8209",
+            "id": "dof:8457",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -125.0,
+              125.0
+            ],
+            "parent_node_id": "node:7402",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -125.0,
+                125.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -125.0,
+                125.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_1"
+          },
+          {
+            "child_node_id": "node:8741",
+            "id": "dof:8989",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -160.0,
+              160.0
+            ],
+            "parent_node_id": "node:8209",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -160.0,
+                160.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -160.0,
+                160.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_2"
+          },
+          {
+            "child_node_id": "node:9273",
+            "id": "dof:9521",
+            "independent": true,
+            "initial_source": 90.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:8741",
+            "source_axis_label": "+Y",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_3"
+          },
+          {
+            "child_node_id": "node:9805",
+            "id": "dof:10054",
+            "independent": true,
+            "initial_source": 0.0,
+            "input_limits_at_initial_configuration": [
+              -360.0,
+              360.0
+            ],
+            "parent_node_id": "node:9273",
+            "source_axis_label": "+Z",
+            "source_type": "Rotational",
+            "standard_axis_limits": {
+              "affine_source_map": [
+                1.0,
+                0.0
+              ],
+              "limits": [
+                -360.0,
+                360.0
+              ],
+              "scope": "Only constant independent affine controller map; conditional bounds and followers not approximated",
+              "source_input_bounds": [
+                -360.0,
+                360.0
+              ],
+              "unit": "degree"
+            },
+            "type": "revolute",
+            "usd_path": "/Asset/SourceKinematics/J_4"
+          }
+        ],
+        "schema": "vc-offline-kinematics/2",
+        "scope": "complete source forward program; no native runtime or physical qualification",
+        "source_sha256": "f40baf073c601f0bd5a7bc1b8de6db8292dcedff1526df24275d8d0ecf86e8b3",
+        "status": "source_forward_program_evaluated"
+      },
+      "mass_properties": {
+        "entities": [],
+        "geometry_contract_sha256": "77291eb1bb382dd922ecb6a93301b0d973d1a1a1d9bb824e7c871167a19fa4ca",
+        "physics_contract_sha256": "4788737ab61da74ad5b1af8eb145747b044e482dae29dad723ec1ea745b66d34",
+        "policy": {
+          "embedded_python_executed": false,
+          "historical_runtime_input": false,
+          "mass_api_authorized": false,
+          "native_parity": "pending",
+          "vc_dll_loaded": false,
+          "vc_started": false
+        },
+        "schema": "unilab.vcmx-offline-mass/1",
+        "source_sha256": "f40baf073c601f0bd5a7bc1b8de6db8292dcedff1526df24275d8d0ecf86e8b3",
+        "status": "normalized_with_declared_feature_diagnostics",
+        "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+      },
+      "product_catalog": {
+        "axes": {
+          "claims": [
+            {
+              "model": "P3020",
+              "source": "robots/models/Doosan-Robotics-P3020.robot",
+              "source_family": "RoboDK",
+              "value": 5.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "count",
+          "value": 5,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed product catalog fields only",
+              "title": "Doosan P3020 official product specifications",
+              "url": "https://www.doosanrobotics.com/en/product-solutions/product/p-series/p3020/"
+            }
+          ]
+        },
+        "payload": {
+          "claims": [
+            {
+              "model": "P3020",
+              "source": "Components/Doosan Robotics/Robots/P3020.vcmx",
+              "source_family": "VC",
+              "value": 30.0
+            },
+            {
+              "model": "P3020",
+              "source": "robots/models/Doosan-Robotics-P3020.robot",
+              "source_family": "RoboDK",
+              "value": 30.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "kg",
+          "value": 30,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed product catalog fields only",
+              "title": "Doosan P3020 official product specifications",
+              "url": "https://www.doosanrobotics.com/en/product-solutions/product/p-series/p3020/"
+            }
+          ]
+        },
+        "reach": {
+          "claims": [
+            {
+              "model": "P3020",
+              "source": "Components/Doosan Robotics/Robots/P3020.vcmx",
+              "source_family": "VC",
+              "value": 2029.9999999999998
+            },
+            {
+              "model": "P3020",
+              "source": "robots/models/Doosan-Robotics-P3020.robot",
+              "source_family": "RoboDK",
+              "value": 1900.0
+            }
+          ],
+          "status": "manufacturer_verified",
+          "unit": "mm",
+          "value": 2030,
+          "verification": [
+            {
+              "reviewed_at": "2026-11-08",
+              "scope": "Listed product catalog fields only",
+              "title": "Doosan P3020 official product specifications",
+              "url": "https://www.doosanrobotics.com/en/product-solutions/product/p-series/p3020/"
+            }
+          ]
+        }
+      },
+      "source_models": [
+        {
+          "converted_parameters": [
+            {
+              "asset_id": "a0ca20f2-9121-5252-9202-586362d6a45c",
+              "entrypoints": {
+                "usd": "simready_usd/p3020__r001.usdc"
+              },
+              "package_digest": "c9323f7890f03ddeba200150f417df666e4d25cb32514a2a5b141aa932004e54",
+              "parameters": {
+                "mass_properties": {
+                  "entities": [],
+                  "schema": "unilab.vcmx-offline-mass/1",
+                  "source_sha256": "f40baf073c601f0bd5a7bc1b8de6db8292dcedff1526df24275d8d0ecf86e8b3",
+                  "status": "normalized_with_declared_feature_diagnostics",
+                  "support_rules_sha256": "7a72492dc7639718bf6f457e557b86039d604a401bc0cc2b4869da324d73e890"
+                },
+                "usd_content": {
+                  "authored_field_names": [
+                    "physics:axis",
+                    "physics:body0",
+                    "physics:body1",
+                    "physics:jointEnabled",
+                    "physics:localPos0",
+                    "physics:localPos1",
+                    "physics:localRot0",
+                    "physics:localRot1",
+                    "physics:lowerLimit",
+                    "physics:upperLimit"
+                  ],
+                  "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+                  "source_usd_sha256": "50006b7431c8dac0d55eb1c7ba8d0865ee183463b0e16471e159dd910500ad8e",
+                  "usd_authored": {
+                    "collision_api": 0,
+                    "enabled_joints": 0,
+                    "enabled_rigid_bodies": 0,
+                    "joints": 5,
+                    "mass_api": 0,
+                    "physical_material_bindings": 0,
+                    "physics_materials": 0,
+                    "rigid_bodies": 0
+                  }
+                }
+              }
+            }
+          ],
+          "family": "VC",
+          "library_assets": [
+            "a0ca20f2-9121-5252-9202-586362d6a45c"
+          ],
+          "manufacturer": "Doosan Robotics",
+          "name": "P3020",
+          "original": {
+            "family": "VC",
+            "original_name": "P3020.vcmx",
+            "path": "simready_usd/P3020.vcmx",
+            "sha256": "f40baf073c601f0bd5a7bc1b8de6db8292dcedff1526df24275d8d0ecf86e8b3"
+          },
+          "path": "Components/Doosan Robotics/Robots/P3020.vcmx",
+          "payload": "30",
+          "reach": "2029.9999999999998",
+          "type": "Robots",
+          "variant": "",
+          "vcid": "b717a92a-b81c-4cc3-8844-a1027354ee2a"
+        },
+        {
+          "axes": 5,
+          "converted_parameters": [],
+          "display": "Doosan Robotics P3020",
+          "family": "RoboDK",
+          "library_assets": [],
+          "manufacturer": "Doosan Robotics",
+          "name": "P3020",
+          "original": {
+            "family": "RoboDK",
+            "original_name": "Doosan-Robotics-P3020.robot",
+            "path": "simready_usd/source_assets/RoboDK/0_doosan-robotics-p3020/Doosan-Robotics-P3020.robot",
+            "sha256": "71fa174391d7c19e2ae2f47f44ad21f25f3018260ec5c132ccd0af6c980e8eac"
+          },
+          "path": "robots/models/Doosan-Robotics-P3020.robot",
+          "payload": 30,
+          "reach": 1900,
+          "type": "robots",
+          "variant": ""
+        }
+      ]
+    },
+    "configuration": "selected-vc",
+    "entrypoints": {
+      "usd": "simready_usd/p3020__多源合并_r003.usdc"
+    }
+  },
+  "behavior": {
+    "adapted_actions": [
+      "move_joints",
+      "transfer"
+    ],
+    "exports": {
+      "robot": {
+        "declaration": {
+          "category": [
+            "mechanical_assets",
+            "robot"
+          ],
+          "description": "Explicit source-asset action adapter; project runtime required; no automatic hardware transport",
+          "displayname": "Doosan Robotics P3020｜多源合并",
+          "id": "merged_robot_bf499732_0184_547a_ab4d_937e153f4dcb",
+          "metadata": {
+            "asset_id": "bf499732-0184-547a-ab4d-937e153f4dcb",
+            "behavior_scope": "adapter_contract_not_vendor_runtime_equivalence"
+          }
+        },
+        "implementation": "device:SourceRobot"
+      }
+    },
+    "files": [
+      "__init__.py",
+      "device.py"
+    ],
+    "implementation": "device:SourceRobot",
+    "inventory_authority": "OS material_transfer",
+    "kind": "asset_python",
+    "mode": "project_injected_runtime",
+    "rejected": "device:Rejected",
+    "requires": [
+      "unilabos"
+    ],
+    "runtime_requirements": [
+      "joint_limits in selected SI joint order",
+      "move_joints(positions) execution witness",
+      "transfer(material, source, target, source_site, target_site) execution witness"
+    ],
+    "source_callbacks": "preserved; no automatic OnRun/AutoConfigure replay",
+    "source_root": "simready_usd/behavior",
+    "unsupported": [
+      "vendor inverse-kinematics solver",
+      "signal auto-wiring",
+      "tool mount/unmount callbacks",
+      "swept volume and trace callbacks",
+      "arbitrary custom scripts"
+    ]
+  },
+  "drivers": {
+    "implementation_module": null,
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:DoosanDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/DoosanDriver.exe",
+        "sha256": "3786ac682ef91a6e52f46f081682a9befc5b068d1f0c5ecd81c58faed6df40ff",
+        "bytes": 56320,
+        "compiled_python_versions": [],
+        "compiled_entrypoints": [],
+        "runtime_dependencies": {
+          "driver_python": null,
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "doosan controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:doosan:ros2",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/doosan/ros2",
+        "repository_url": "https://github.com/DoosanRobotics/doosan-robot2.git",
+        "code_tree_sha256": "dc0cde231fbf374684cbf1050a3fba0a4726f591d549490fd045eb28fe346a60",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "fd056f67a353e5d8799f14aa9ca3cd47351ebdc62613bab6233651972d203e6f"
+          },
+          {
+            "path": "dsr_mujoco/README.md",
+            "sha256": "5b8cb55b269bfc0c0a2c1a5a44104c225453bd5298164552b58dc8e1fd481058"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "97bf488c404871bbc446828ebaf629f5832b2f9804fcc5276f0ccf98802fd3c0"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      },
+      {
+        "id": "sdk:doosan:drfl",
+        "kind": "sdk_or_ros_driver_candidate",
+        "adapter": null,
+        "source_ref": "robots/doosan/drfl",
+        "repository_url": "https://github.com/DoosanRobotics/API-DRFL.git",
+        "code_tree_sha256": "5b2892bcc6f8d835bca74fc57feeb83ef2f386c8150cd47a2a564b6b8aadc616",
+        "source_evidence": [
+          {
+            "path": "README.md",
+            "sha256": "e98cc1041fcd38e0748cd1e611735cc1d025f9297aad9ede7aabe17e7fceb7e1"
+          },
+          {
+            "path": "LICENSE",
+            "sha256": "26568700d9d9d61bddd2919bf2058cedc658c030f79877bf0f426c00bfe4adfa"
+          }
+        ],
+        "constraints": [
+          "SDK repository candidate; exact model/controller compatibility not established",
+          "Runtime requires separately installed SDK/ROS dependencies; no upstream checkout lookup"
+        ],
+        "license_status": "files_preserved_not_blanket_redistribution_approval",
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "both",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Doosan_Robotics.py"
+    ],
+    "excluded_driver_sources": []
+  },
+  "planning": {
+    "provider": null,
+    "source_profile_candidates": [],
+    "scope": "Source profile is never selected automatically or treated as an executable provider"
+  },
+  "representation_correspondence": {
+    "selected_usd_vs_provider": "not_verified"
+  },
+  "source_provenance": {
+    "sources": [
+      {
+        "family": "VC",
+        "original_name": "P3020.vcmx",
+        "path": "simready_usd/P3020.vcmx",
+        "sha256": "f40baf073c601f0bd5a7bc1b8de6db8292dcedff1526df24275d8d0ecf86e8b3"
+      },
+      {
+        "family": "RoboDK",
+        "original_name": "Doosan-Robotics-P3020.robot",
+        "path": "simready_usd/source_assets/RoboDK/0_doosan-robotics-p3020/Doosan-Robotics-P3020.robot",
+        "sha256": "71fa174391d7c19e2ae2f47f44ad21f25f3018260ec5c132ccd0af6c980e8eac"
+      }
+    ],
+    "merge": {
+      "conflicts": [
+        {
+          "details": {
+            "claims": [
+              {
+                "model": "P3020",
+                "source": "Components/Doosan Robotics/Robots/P3020.vcmx",
+                "source_family": "VC",
+                "value": 2029.9999999999998
+              },
+              {
+                "model": "P3020",
+                "source": "robots/models/Doosan-Robotics-P3020.robot",
+                "source_family": "RoboDK",
+                "value": 1900.0
+              }
+            ],
+            "status": "manufacturer_verified",
+            "unit": "mm",
+            "value": 2030,
+            "verification": [
+              {
+                "reviewed_at": "2026-11-08",
+                "scope": "Listed product catalog fields only",
+                "title": "Doosan P3020 official product specifications",
+                "url": "https://www.doosanrobotics.com/en/product-solutions/product/p-series/p3020/"
+              }
+            ]
+          },
+          "field": "reach",
+          "resolution": "manufacturer_verified",
+          "values": [
+            1900.0,
+            2029.9999999999998
+          ]
+        }
+      ],
+      "geometry_model_fidelity": "Selected source geometry retained; manufacturer catalog correction does not certify geometry dimensions or kinematic equivalence",
+      "key": [
+        "doosanrobotics",
+        "p3020"
+      ],
+      "label": "VC+RoboDK+公开资料核验（已列字段）",
+      "link_parameter_transfer": "No cross-source inertial/joint overwrite without explicit frame/link mapping",
+      "manufacturer_verification": {
+        "evidence": [
+          {
+            "reviewed_at": "2026-11-08",
+            "scope": "Listed product catalog fields only",
+            "title": "Doosan P3020 official product specifications",
+            "url": "https://www.doosanrobotics.com/en/product-solutions/product/p-series/p3020/"
+          }
+        ],
+        "fields": {
+          "axes": {
+            "status": "manufacturer_verified",
+            "value": 5
+          },
+          "payload": {
+            "status": "manufacturer_verified",
+            "value": 30
+          },
+          "reach": {
+            "status": "manufacturer_verified",
+            "value": 2030
+          }
+        }
+      },
+      "public_sources": [],
+      "schema": "unilab.product-merge/1",
+      "selected_geometry": {
+        "family": "VC",
+        "original_asset_id": "a0ca20f2-9121-5252-9202-586362d6a45c",
+        "original_package_digest": "c9323f7890f03ddeba200150f417df666e4d25cb32514a2a5b141aa932004e54",
+        "source": "Components/Doosan Robotics/Robots/P3020.vcmx"
+      },
+      "source_families": [
+        "VC",
+        "RoboDK"
+      ],
+      "source_flags": [
+        "reach_disagrees"
+      ],
+      "variants": "Source pose, controller, load rating and reach datum retained separately; one selected USD configuration"
+    },
+    "published_revision_mapping_sha256": "496096f444049438a2f10b7835c7fd1c44c2189821e970a2d6996d2b22cb9e60"
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

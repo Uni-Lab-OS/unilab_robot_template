@@ -1,0 +1,211 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "rainbowrobotics",
+  "model": "rb3:630es",
+  "title": "RB3-630ES",
+  "asset": {
+    "asset_id": "41165572-94e5-597c-87ae-4db21d81b18a",
+    "package_digest": "8ba05556ac71f02a3d61c693ff8276b0e464f0a2862c381d8b085f9d660decb6",
+    "package_path": "04_设备/rainbow_robotics/rb3-630es__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "41165572-94e5-597c-87ae-4db21d81b18a",
+      "package_digest": "8ba05556ac71f02a3d61c693ff8276b0e464f0a2862c381d8b085f9d660decb6",
+      "package_path": "04_设备/rainbow_robotics/rb3-630es__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "field_indices": {
+          "flange": 560,
+          "home": 680,
+          "joint_directions": 64,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          90.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -165.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            145.3
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            -1.5707963267948966,
+            -6.45
+          ],
+          [
+            0.0,
+            286.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            344.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            99.15
+          ]
+        ],
+        "mechanism_type": 1,
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          165.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "159e4dc076195c44d353fd0155a98767c51417e29f8f4cd0cab5384de2762850",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rb3-630es__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "post_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "RainbowRobotics.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/rainbow/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RB3-630ES",
+          "manufacturer": "Rainbow Robotics",
+          "variant": "",
+          "display": "RB3-630ES",
+          "path": "robots/models/RB3-630ES.robot",
+          "type": "robots",
+          "payload": 3,
+          "reach": 630,
+          "axes": 6,
+          "library_assets": [
+            "41165572-94e5-597c-87ae-4db21d81b18a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/RB3-630ES.robot",
+        "path": "simready_usd/RB3-630ES.robot",
+        "sha256": "9eb0fa779dcb492120e066c397615275f34002386bcc86dc86581803885273fb"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

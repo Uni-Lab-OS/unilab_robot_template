@@ -1,0 +1,82 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "unbranded_robodk",
+  "model": "ceadextrudere25",
+  "title": "CEAD Extruder E25",
+  "asset": {
+    "asset_id": "04edb10e-50f2-545e-b52f-7e3b937b373c",
+    "package_digest": "b95f31cc69c772658480c422eb57bba8a72191a3eb4708607612b896a3e563ab",
+    "package_path": "01_零部件/未知厂家/cead_extruder_e25__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "tool_geometry_binding_not_arm_planner",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "04edb10e-50f2-545e-b52f-7e3b937b373c",
+      "package_digest": "b95f31cc69c772658480c422eb57bba8a72191a3eb4708607612b896a3e563ab",
+      "package_path": "01_零部件/未知厂家/cead_extruder_e25__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "usd_content": {
+        "authored_field_names": [],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "cfff538bfd2964e08828966b7c498157dbe7bffdb3d11422d552c3ec3346ccfc",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 0,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 0
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/cead_extruder_e25__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": null,
+    "usd_joints": 0,
+    "source_profile_candidates": []
+  },
+  "asset_role": [
+    "tool"
+  ],
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [],
+    "hardware_match_scope": "unmatched",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "CEAD Extruder E25",
+          "manufacturer": null,
+          "type": "tools",
+          "path": "tools/models/CEAD-Extruder-E25.tool",
+          "axes": 0
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/CEAD-Extruder-E25.tool",
+        "path": "simready_usd/CEAD-Extruder-E25.tool",
+        "sha256": "40c5c7bfedb18835ca660bfc7b28e88bbf0c29d32f0dcb1ec6f3fdbfcabc5781"
+      }
+    ]
+  }
+}

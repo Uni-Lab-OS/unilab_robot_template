@@ -1,0 +1,364 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "productiverobotics",
+  "model": "ob7",
+  "title": "Productive Robotics OB7",
+  "asset": {
+    "asset_id": "054ea891-fe14-5fdf-a26e-f3165496acaa",
+    "package_digest": "0ab3a10f213e654d2d326641e12f6daffd9f43c2329653d8e0ea8eca3090f059",
+    "package_path": "04_设备/productive_robotics/ob7__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "054ea891-fe14-5fdf-a26e-f3165496acaa",
+      "package_digest": "0ab3a10f213e654d2d326641e12f6daffd9f43c2329653d8e0ea8eca3090f059",
+      "package_path": "04_设备/productive_robotics/ob7__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300,
+            320
+          ],
+          "seven_axis_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "flange_z_radians": -0.0,
+        "home": [
+          0.0,
+          0.0,
+          0.0,
+          90.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joint_directions": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_input_units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree"
+        ],
+        "joint_source_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "joint_types": [
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute",
+          "revolute"
+        ],
+        "lower": [
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            346.4
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            209.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            442.74
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            -170.691
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            383.051
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            124.251
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            119.8
+          ]
+        ],
+        "mechanism_type": -3,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "dispatch": "abs(header20) in {3,23}; both branches call 0x1405b7280",
+          "joint_input_mapping": "0x14055c4d0",
+          "link_pose_dispatch": "0x1406033f0",
+          "mapping_scales": "mode0/1 identity; mode2/7 scale by h64+source_index before permutation",
+          "seven_axis_core": "0x1405b7280",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "source_index_order": "mode0/7 [0,1,2,3,4,5,6]; mode1/2 [0,1,6,2,3,4,5]",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "q_coordinate_space": "original source controller order; joint_source_indices maps chain slots to controller indices",
+        "raw_controller_mapping_fields": [
+          0.0,
+          7.0,
+          500.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; original controller input joints degrees",
+        "upper": [
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "72b32e0be0ac1574e0493b7466b339399ecd5e81773337dc8917166453d3d4ce",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 7,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 8
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/ob7__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 7,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:ProductiveDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/ProductiveDriver.py",
+        "sha256": "b559b25821067621f42e810c3ea721c108d24d75856d999793cb5fce4e6b45b0",
+        "bytes": 1369,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/ProductiveDriver.pyc",
+            "sha256": "e3a1c449878e365cbb659b4052680e58fe811ad2eecd68a38bf18635f86e9ec8"
+          },
+          {
+            "relative_path": "api/Robot/v311/ProductiveDriver.pyc",
+            "sha256": "2820ca36f871e00223b8329097c9703aef51657ab088173b26a935fc9e761c60"
+          },
+          {
+            "relative_path": "api/Robot/v312/ProductiveDriver.pyc",
+            "sha256": "c555618e286c10c79e78a5d14118dca0234694f36f8138282722f83634e554a7"
+          },
+          {
+            "relative_path": "api/Robot/v38/ProductiveDriver.pyc",
+            "sha256": "3ee829371d7cf241c422214f8e3cb4a26a283a8868e45ea0e0ad372a4a4c8bc8"
+          },
+          {
+            "relative_path": "api/Robot/v39/ProductiveDriver.pyc",
+            "sha256": "b237bbc7b14456e7524188210f248cc4d0a87d8f64c8a1cd1d62a9105f5c22c7"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "productiverobotics controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [],
+    "excluded_driver_sources": []
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "OB7",
+          "manufacturer": "Productive Robotics",
+          "variant": "",
+          "display": "Productive Robotics OB7",
+          "path": "robots/models/Productive-Robotics-OB7.robot",
+          "type": "robots",
+          "payload": 5,
+          "reach": 1000,
+          "axes": 7,
+          "library_assets": [
+            "054ea891-fe14-5fdf-a26e-f3165496acaa"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Productive-Robotics-OB7.robot",
+        "path": "simready_usd/Productive-Robotics-OB7.robot",
+        "sha256": "f67495311d45883d6a4394a0ace69fb8f85ab7fe1f9d3cd85e4a8a719ec8a29c"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}

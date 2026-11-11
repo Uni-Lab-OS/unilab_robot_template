@@ -1,0 +1,336 @@
+{
+  "schema": "unilab.robot-module/1",
+  "brand": "kawasaki",
+  "model": "rd80n",
+  "title": "Kawasaki RD80N",
+  "asset": {
+    "asset_id": "687e42b2-09ac-5cdf-9ff9-2acd88e13e7a",
+    "package_digest": "7be14ce5c5a09160ca7c274da0a19469220b89be23f858af397105bb5dcb9411",
+    "package_path": "04_设备/kawasaki/rd80n__r001"
+  },
+  "provider": null,
+  "capabilities": {
+    "planning": "asset_adapter_available_not_engine_qualified",
+    "hardware": "not_qualified"
+  },
+  "composition": {
+    "root_asset": {
+      "asset_id": "687e42b2-09ac-5cdf-9ff9-2acd88e13e7a",
+      "package_digest": "7be14ce5c5a09160ca7c274da0a19469220b89be23f858af397105bb5dcb9411",
+      "package_path": "04_设备/kawasaki/rd80n__r001"
+    }
+  },
+  "motion_model": {
+    "parameters": {
+      "robot_parameters": {
+        "base_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          -680.0,
+          0.0,
+          0.0,
+          1.5707963267948966
+        ],
+        "controller_to_mdh_mode": 7,
+        "field_indices": {
+          "base": 180,
+          "controller_mapping_mode": 61,
+          "flange": 560,
+          "home": 680,
+          "lower": 600,
+          "mdh_rows": [
+            200,
+            220,
+            240,
+            260,
+            280,
+            300
+          ],
+          "mode12_axis2_axis3_coupling": [
+            71,
+            72,
+            73
+          ],
+          "mode7_joint_directions": 64,
+          "upper": 620
+        },
+        "flange_translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "flange_xyz_rx_ry_rz": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.5707963267948966
+        ],
+        "flange_z_radians": -1.5707963267948966,
+        "home": [
+          0.0,
+          0.0,
+          -90.0,
+          0.0,
+          -90.0,
+          0.0
+        ],
+        "joint_directions": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "lower": [
+          -180.0,
+          -105.0,
+          -205.0,
+          -0.01,
+          -145.0,
+          -360.0
+        ],
+        "mdh": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            680.0
+          ],
+          [
+            -1.5707963267948966,
+            150.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            0.0,
+            870.0,
+            -1.5707963267948966,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            0.0,
+            1080.0
+          ],
+          [
+            1.5707963267948966,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.5707963267948966,
+            0.0,
+            3.141592653589793,
+            165.0
+          ]
+        ],
+        "mechanism_type": 1,
+        "native_static_provenance": {
+          "artifact": "RoboDK.exe",
+          "authority": "static PE instructions and bounded Ghidra decompilation; no vendor execution",
+          "base_application": "First returned graphical link pose is the base transform; subsequent poses postmultiply MDH",
+          "base_binding": "0x140337691: member0x868=model+0x20800=header+180*8",
+          "joint_input_mapping": "0x14055e6a0",
+          "link_pose_dispatch": "0x1406033f0",
+          "sha256": "83fa63bb2d41719e27ae7e07664a48de004e5dc1f1d5fe7818a2df60252efc06",
+          "type1_and_type8_core": "0x1405b0c10",
+          "type6_core": "0x140622ed0",
+          "units": "source XYZ millimeters and Rx/Ry/Rz radians; joints degrees",
+          "xyz_rx_ry_rz": "0x1406455a0"
+        },
+        "raw_controller_mapping_fields": [
+          2.0,
+          7.0,
+          500.0,
+          0.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "raw_joint_direction_field": [
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0
+        ],
+        "units": "MDH alpha/theta radians, a/d millimeters; input joints degrees",
+        "upper": [
+          180.0,
+          140.0,
+          40.0,
+          0.01,
+          145.0,
+          360.0
+        ]
+      },
+      "usd_content": {
+        "authored_field_names": [
+          "physics:axis",
+          "physics:body0",
+          "physics:body1",
+          "physics:jointEnabled",
+          "physics:localPos0",
+          "physics:localPos1",
+          "physics:localRot0",
+          "physics:localRot1",
+          "physics:lowerLimit",
+          "physics:rigidBodyEnabled",
+          "physics:upperLimit"
+        ],
+        "scope": "Authored declaration inventory, not native equivalence or physics qualification; source cached values may be stale.",
+        "source_usd_sha256": "54cd4edc78dedbb9ec0a63e49559243347c3a76f20604724c5829dd16d69b1b9",
+        "usd_authored": {
+          "collision_api": 0,
+          "enabled_joints": 0,
+          "enabled_rigid_bodies": 0,
+          "joints": 6,
+          "mass_api": 0,
+          "physical_material_bindings": 0,
+          "physics_materials": 0,
+          "rigid_bodies": 7
+        }
+      }
+    },
+    "entrypoints": {
+      "usd": "simready_usd/rd80n__r001.usdc"
+    }
+  },
+  "planning": {
+    "adapter": "unilab_robot_runtime.asset_moveit",
+    "usd_joints": 6,
+    "source_profile_candidates": []
+  },
+  "drivers": {
+    "status": "not_implemented",
+    "hardware_candidates": [
+      {
+        "id": "robodk:KawasakiDriver",
+        "kind": "external_online_driver",
+        "adapter": "robodk_stdio",
+        "relative_path": "api/Robot/KawasakiDriver.py",
+        "sha256": "83e73e60317840b1d1c0a61666125c20523638c46c92f1ebd0a10f1a5dc0a129",
+        "bytes": 1363,
+        "compiled_python_versions": [
+          "v310",
+          "v311",
+          "v312",
+          "v38",
+          "v39"
+        ],
+        "compiled_entrypoints": [
+          {
+            "relative_path": "api/Robot/v310/KawasakiDriver.pyc",
+            "sha256": "f2c9dab6e5b98ab6519d661d5327f9b57d915fb7e0c8ba061e77c5d583ef817d"
+          },
+          {
+            "relative_path": "api/Robot/v311/KawasakiDriver.pyc",
+            "sha256": "ed7c727804483795ab5f1ed4f5b515d5c836dc67d7ca740fa4fda5ba12567238"
+          },
+          {
+            "relative_path": "api/Robot/v312/KawasakiDriver.pyc",
+            "sha256": "d987bd44d7c9e59d2b308f66278f2359d13de0605395c0b17487d3edce78347b"
+          },
+          {
+            "relative_path": "api/Robot/v38/KawasakiDriver.pyc",
+            "sha256": "c2fc4de56785d853473c35f33477a4ea200eabf81551584a4498de04c7c55ad6"
+          },
+          {
+            "relative_path": "api/Robot/v39/KawasakiDriver.pyc",
+            "sha256": "04f5c77caadf02a9552248f585b67c582bb0b5ac42d781ea35de9d5d3646f54e"
+          }
+        ],
+        "runtime_dependencies": {
+          "driver_python": "one of compiled_python_versions",
+          "native_runtime": "vendor SDK/DLL and controller-side programs may be required",
+          "complete_dependency_closure": "not_verified"
+        },
+        "license": "external_installation_only; redistribution_not_granted",
+        "source_url": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "protocol_url": "https://robodk.com/doc/en/PythonAPI/driver.html",
+        "controller_choices": [
+          "kawasaki controller (exact generation unresolved)"
+        ],
+        "constraints": [
+          "Brand-family file only; controller, firmware, options, model compatibility require deployment evidence",
+          "Exact controller firmware, installed options and calibrated model mapping are not inferred"
+        ],
+        "model_compatibility": "family_candidate_only",
+        "documentation": "https://robodk.com/doc/en/Robot-Drivers.html",
+        "operations": [
+          "connect",
+          "read_joints",
+          "joint_move_with_explicit_driver_pose"
+        ],
+        "qualification": {
+          "file_evidence": "present",
+          "family_match": "candidate",
+          "model_controller": "not_verified",
+          "offline_adapter": "not_run",
+          "live_connection": "not_run",
+          "hardware_execution": "not_run"
+        }
+      }
+    ],
+    "hardware_match_scope": "robodk_only",
+    "hardware_match_reason": "Controller-family candidates do not grant model compatibility or execution capability",
+    "offline_posts": [
+      "Kawasaki.py"
+    ],
+    "excluded_driver_sources": [
+      {
+        "source": "robots/kawasaki/ros",
+        "reason": "empty_or_no_driver_code"
+      },
+      {
+        "source": "robots/kawasaki/ros2",
+        "reason": "empty_or_no_driver_code"
+      }
+    ]
+  },
+  "behavior": {},
+  "source_provenance": {
+    "crosswalk_sources": {
+      "RoboDK": [
+        {
+          "name": "RD80N",
+          "manufacturer": "Kawasaki",
+          "variant": "",
+          "display": "Kawasaki RD80N",
+          "path": "robots/models/Kawasaki-RD80N.robot",
+          "type": "robots",
+          "payload": 80,
+          "reach": 2100,
+          "axes": 5,
+          "library_assets": [
+            "687e42b2-09ac-5cdf-9ff9-2acd88e13e7a"
+          ]
+        }
+      ]
+    },
+    "sources": [
+      {
+        "original_name": "simready_usd/Kawasaki-RD80N.robot",
+        "path": "simready_usd/Kawasaki-RD80N.robot",
+        "sha256": "0dcf75611662b96aa808aea76568f014288e558196b295b84107d49699df2e29"
+      }
+    ]
+  },
+  "asset_role": [
+    "arm"
+  ]
+}
