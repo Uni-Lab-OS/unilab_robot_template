@@ -17,9 +17,12 @@ dependencies = [
 [project.optional-dependencies]
 collision = ["numpy>=1.24", "python-fcl>=0.7.0.11,<0.8"]
 kinematics = ["numpy>=1.24", "scipy>=1.10"]
+asset-model = ["numpy>=1.24", "scipy>=1.10", "usd-core>=24.11"]
+asset-oss = ["oss2>=2.19,<3"]
 
 [project.scripts]
 unilab-robot-maintenance = "unilab_robot_runtime.cli:main"
+unilab-robot-asset-model = "unilab_robot_runtime.asset_moveit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
