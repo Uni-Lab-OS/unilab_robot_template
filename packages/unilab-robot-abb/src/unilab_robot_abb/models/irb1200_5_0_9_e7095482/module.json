@@ -13,7 +13,7 @@
   "capabilities": {
     "planning": "not_qualified",
     "hardware": "not_qualified",
-    "asset_planning": "revalidation_required_after_asset_revision"
+    "asset_planning": "validated_moveit_fcl_and_os_usd_kinematics"
   },
   "composition": {
     "root_asset": {
@@ -832,7 +832,23 @@
     "provider": null,
     "source_profile_candidates": [],
     "scope": "Source profile is never selected automatically or treated as an executable provider",
-    "asset_adapter_status": "revalidation_required_after_asset_revision"
+    "asset_adapter_status": "validated_moveit_fcl_and_os_usd_kinematics",
+    "public_catalog_validation": {
+      "status": "validated_moveit_fcl_and_os_usd_kinematics",
+      "asset": {
+        "asset_id": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+        "package_digest": "37513471132676a1d43f8f7517e28873a95b4f1086d010772a52a6ea590bbf6c",
+        "package_path": "04_设备/abb/irb1200_5_0.9__多源合并_r002"
+      },
+      "catalog_uuid": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a",
+      "compiled_model_sha256": "3156f59119df99337899cd7397058c1125628369d19c043c778ae107cec626e8",
+      "evidence": {
+        "abb.json": "a0555781da601223b023aa516cf6675643f8ac098f92caa933f18d662b6aa2ad",
+        "abb-os.json": "b9a06763792c1590d45774dca41a170624e28a9e85474dc3aa46bd800e213ba4"
+      },
+      "scope": "joint/pose planning, sampled FCL, OS JSON driver dispatch, USD kinematic motion; no hardware, dynamics or full workflow",
+      "simulation_driver": "unilab_robot_runtime.public_robot_device:PublicRobotSimulationDevice"
+    }
   },
   "representation_correspondence": {
     "selected_usd_vs_provider": "not_verified"
@@ -1065,5 +1081,9 @@
   },
   "asset_role": [
     "arm"
-  ]
+  ],
+  "public_catalog": {
+    "contract": "unilab.public-entry/2",
+    "uuid": "aa3a4f67-5e11-5e58-a06f-84120fbaa64a"
+  }
 }

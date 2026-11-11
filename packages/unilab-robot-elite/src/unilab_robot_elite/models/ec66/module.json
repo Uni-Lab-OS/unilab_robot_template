@@ -13,7 +13,7 @@
   "capabilities": {
     "planning": "not_qualified",
     "hardware": "not_qualified",
-    "asset_planning": "revalidation_required_after_asset_revision"
+    "asset_planning": "validated_moveit_fcl_and_os_usd_kinematics"
   },
   "composition": {
     "root_asset": {
@@ -641,7 +641,23 @@
     "provider": null,
     "source_profile_candidates": [],
     "scope": "Source profile is never selected automatically or treated as an executable provider",
-    "asset_adapter_status": "revalidation_required_after_asset_revision"
+    "asset_adapter_status": "validated_moveit_fcl_and_os_usd_kinematics",
+    "public_catalog_validation": {
+      "status": "validated_moveit_fcl_and_os_usd_kinematics",
+      "asset": {
+        "asset_id": "711d0d6a-f5ba-538a-b13a-ece7aa020ec8",
+        "package_digest": "e25b158d14e020fad86d24e3704067fd1ff437c5d15da4964dca1709eacabe02",
+        "package_path": "04_设备/elite_robots/ec66__多源合并_r002"
+      },
+      "catalog_uuid": "711d0d6a-f5ba-538a-b13a-ece7aa020ec8",
+      "compiled_model_sha256": "3dfc7b8274cace0b4298b798abf99574bd03db82d3f7725a95805ad3879c0b41",
+      "evidence": {
+        "elite.json": "99d875537fe798bbdd75804b654b953e14aa066d1f50d2a093c124885d39f393",
+        "elite-os.json": "baad90fa0f026bfb9d88c7d76e21244a37ae15b3cc589cef6116e5f9de2b8bc3"
+      },
+      "scope": "joint/pose planning, sampled FCL, OS JSON driver dispatch, USD kinematic motion; no hardware, dynamics or full workflow",
+      "simulation_driver": "unilab_robot_runtime.public_robot_device:PublicRobotSimulationDevice"
+    }
   },
   "representation_correspondence": {
     "selected_usd_vs_provider": "not_verified"
@@ -690,5 +706,9 @@
   },
   "asset_role": [
     "arm"
-  ]
+  ],
+  "public_catalog": {
+    "contract": "unilab.public-entry/2",
+    "uuid": "711d0d6a-f5ba-538a-b13a-ece7aa020ec8"
+  }
 }

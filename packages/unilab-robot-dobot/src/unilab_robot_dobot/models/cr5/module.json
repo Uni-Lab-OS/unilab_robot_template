@@ -13,7 +13,7 @@
   "capabilities": {
     "planning": "existing_provider_contract",
     "hardware": "requires_explicit_backend_qualification",
-    "asset_planning": "revalidation_required_after_asset_revision"
+    "asset_planning": "validated_moveit_fcl_and_os_usd_kinematics"
   },
   "composition": {
     "root_asset": {
@@ -596,7 +596,23 @@
       }
     ],
     "scope": "Source profile is never selected automatically or treated as an executable provider",
-    "asset_adapter_status": "revalidation_required_after_asset_revision"
+    "asset_adapter_status": "validated_moveit_fcl_and_os_usd_kinematics",
+    "public_catalog_validation": {
+      "status": "validated_moveit_fcl_and_os_usd_kinematics",
+      "asset": {
+        "asset_id": "bc490ad0-03b8-56be-865e-57b61c7ff7ff",
+        "package_digest": "47dc8059dd8e9962c7134463a73597a1df268c8f5db9341bc0023e2363f87b18",
+        "package_path": "04_设备/dobot/cr5__多源合并_r002"
+      },
+      "catalog_uuid": "bc490ad0-03b8-56be-865e-57b61c7ff7ff",
+      "compiled_model_sha256": "6cbea7ce4781c2de87f2f57531112c31f990c1e3437ad624ea7b34fa7d7d95e1",
+      "evidence": {
+        "dobot.json": "0a156d08b2ba600a3132d4c7c9f7b2f01bc91afe841056f3d359cfe954509d71",
+        "dobot-os.json": "61b09abb5f51e25d58294fb15b673b110477ce5093c352968f95d5b881b9c0c5"
+      },
+      "scope": "joint/pose planning, sampled FCL, OS JSON driver dispatch, USD kinematic motion; no hardware, dynamics or full workflow",
+      "simulation_driver": "unilab_robot_runtime.public_robot_device:PublicRobotSimulationDevice"
+    }
   },
   "representation_correspondence": {
     "selected_usd_vs_provider": "not_verified",
@@ -750,5 +766,9 @@
   },
   "asset_role": [
     "arm"
-  ]
+  ],
+  "public_catalog": {
+    "contract": "unilab.public-entry/2",
+    "uuid": "bc490ad0-03b8-56be-865e-57b61c7ff7ff"
+  }
 }

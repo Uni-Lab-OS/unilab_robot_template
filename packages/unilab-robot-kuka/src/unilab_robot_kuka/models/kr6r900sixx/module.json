@@ -13,7 +13,7 @@
   "capabilities": {
     "planning": "not_qualified",
     "hardware": "not_qualified",
-    "asset_planning": "revalidation_required_after_asset_revision"
+    "asset_planning": "validated_moveit_fcl_and_os_usd_kinematics"
   },
   "composition": {
     "root_asset": {
@@ -727,7 +727,23 @@
     "provider": null,
     "source_profile_candidates": [],
     "scope": "Source profile is never selected automatically or treated as an executable provider",
-    "asset_adapter_status": "revalidation_required_after_asset_revision"
+    "asset_adapter_status": "validated_moveit_fcl_and_os_usd_kinematics",
+    "public_catalog_validation": {
+      "status": "validated_moveit_fcl_and_os_usd_kinematics",
+      "asset": {
+        "asset_id": "95b37ab7-8340-57df-bfc4-880c6b18c031",
+        "package_digest": "4ce08e6e7fe79b39e926f7e09d055176e8578301473f277c20cbddb37445d21b",
+        "package_path": "04_设备/kuka/kr6r900sixx__多源合并_r003"
+      },
+      "catalog_uuid": "95b37ab7-8340-57df-bfc4-880c6b18c031",
+      "compiled_model_sha256": "b20661b6b5e1e008709b7dba899fd412b7f45359ec46743818243d81148f28f2",
+      "evidence": {
+        "kuka.json": "e5bedbbae4c1e2d47d78255fd33d15afdb1591bf808f4af61ce4443ac9bbb45a",
+        "kuka-os.json": "124dc8e8d6642da37769b7fc4c314618ebc473336d000bb2b82cc1258967723e"
+      },
+      "scope": "joint/pose planning, sampled FCL, OS JSON driver dispatch, USD kinematic motion; no hardware, dynamics or full workflow",
+      "simulation_driver": "unilab_robot_runtime.public_robot_device:PublicRobotSimulationDevice"
+    }
   },
   "representation_correspondence": {
     "selected_usd_vs_provider": "not_verified"
@@ -838,5 +854,9 @@
   },
   "asset_role": [
     "arm"
-  ]
+  ],
+  "public_catalog": {
+    "contract": "unilab.public-entry/2",
+    "uuid": "95b37ab7-8340-57df-bfc4-880c6b18c031"
+  }
 }
