@@ -23,3 +23,6 @@ unilab-robot-maintenance = "unilab_robot_runtime.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+unilab_robot_runtime = ["native/*.cpp"]
