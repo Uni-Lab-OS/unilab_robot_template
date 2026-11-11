@@ -15,6 +15,7 @@ from .kinematic_model import (
     describe_model_provider,
 )
 from .rail_module import RailAxisPort, RailModule
+from .configuration import RailConfiguration, build_configured_model
 from .standalone_device import StandaloneRailDevice
 
 __version__ = MODULE_VERSION
@@ -27,6 +28,8 @@ __all__ = [
     "RailAxisPort",
     "RailKinematicModelBundle",
     "RailModule",
+    "RailConfiguration",
+    "build_configured_model",
     "StandaloneRailDevice",
     "build_joint_state_name_map",
     "build_kinematic_model",

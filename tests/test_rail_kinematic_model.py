@@ -51,8 +51,8 @@ def test_rail_kinematic_model_declares_one_prismatic_joint() -> None:
     )
 
 
-def test_rail_carriage_visual_sits_above_the_bed_section() -> None:
-    """滑座必须有大于轨截面的可见平台，床身 STL 仍留在固定 base。"""
+def test_rail_carriage_does_not_duplicate_domain_geometry() -> None:
+    """轴 provider 只提供挂载坐标；真实床身与滑座由领域资产装配。"""
 
     urdf = ET.fromstring(build_kinematic_model(device_id="rail").render_urdf)
     carriage = next(
@@ -60,15 +60,8 @@ def test_rail_carriage_visual_sits_above_the_bed_section() -> None:
         for link in urdf.findall("link")
         if link.attrib["name"] == "rail_rail_carriage"
     )
-    visual = carriage.find("visual")
-    box = visual.find("geometry/box")
-    origin = visual.find("origin")
-    size = tuple(float(part) for part in box.attrib["size"].split())
-
-    assert size[0] >= 0.28
-    assert size[1] >= 0.22
-    assert origin is not None
-    assert float(origin.attrib["xyz"].split()[2]) >= 0.15
+    assert carriage.find("visual") is None
+    assert carriage.find("collision") is None
     assert "collision.stl" not in ET.tostring(carriage, encoding="unicode")
 
 

@@ -37,6 +37,7 @@ class RailKinematicModelBundle:
     topology_digest: str
     mesh_paths: tuple[Path, ...] = ()
     mount_link: str = ""
+    srdf: str = ""
 
 
 def build_kinematic_model(
@@ -89,6 +90,9 @@ def build_kinematic_model(
             "velocity": f"{velocity}",
         },
     )
+    semantic = ET.Element("robot", name=f"{normalized}_rail")
+    group = ET.SubElement(semantic, "group", name=f"{normalized}_axis")
+    ET.SubElement(group, "joint", name=joint_name)
     return RailKinematicModelBundle(
         render_urdf=ET.tostring(robot, encoding="unicode"),
         source_digest=_SOURCE_DIGEST,
@@ -99,6 +103,7 @@ def build_kinematic_model(
             qualified_joint_names=qualified,
         ),
         mount_link=carriage,
+        srdf=ET.tostring(semantic, encoding="unicode"),
     )
 
 

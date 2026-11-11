@@ -14,6 +14,10 @@ dependencies = [
   "unilab-robot-contracts>=0.1,<0.2",
 ]
 
+[project.optional-dependencies]
+collision = ["numpy>=1.24", "python-fcl>=0.7.0.11,<0.8"]
+kinematics = ["numpy>=1.24", "scipy>=1.10"]
+
 [project.scripts]
 unilab-robot-maintenance = "unilab_robot_runtime.cli:main"
 

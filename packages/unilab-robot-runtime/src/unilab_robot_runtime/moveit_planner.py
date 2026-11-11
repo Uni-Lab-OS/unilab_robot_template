@@ -71,13 +71,15 @@ class MoveItPlannerConfig:
     max_joint_sample_step_rad: float = 0.02
     collision_contacts: int = 30
     fallback_step_m: float = 1e-3
+    #: 与 move_group 相同的显式仿真假设，不是厂家加速度限位。
+    joint_acceleration_rad_s2: float = 0.5
 
     def __post_init__(self) -> None:
         if not str(self.node_name).strip():
             raise ValueError("node_name 不能为空")
         if not str(self.pipeline).strip() or not str(self.planner_id).strip():
             raise ValueError("pipeline/planner_id 不能为空")
-        for attr in ("planning_time_s", "velocity_scaling", "acceleration_scaling"):
+        for attr in ("planning_time_s", "velocity_scaling", "acceleration_scaling", "joint_acceleration_rad_s2"):
             value = float(getattr(self, attr))
             if not math.isfinite(value) or value <= 0.0:
                 raise ValueError(f"{attr} 必须是正有限数")
@@ -276,34 +278,28 @@ def _geometry_to_native(geometry: CollisionGeometry) -> tuple[Any, Any, Any]:
 
 
 def _object_to_native(obj: CollisionObject, *, frame_id: str = "world") -> Any:
+    """保留对象位姿及每个形状的局部位姿；不把复合几何压到对象原点。"""
     from moveit_msgs.msg import CollisionObject as NativeCollisionObject
-    from shape_msgs.msg import Mesh, MeshTriangle
 
     native = NativeCollisionObject()
     native.id = obj.object_id
     native.header.frame_id = frame_id
     native.pose = _pose_matrix_to_message(obj.world_pose)
     native.operation = NativeCollisionObject.ADD
-    combined_mesh = Mesh()
-    for geometry in obj.geometry:
+    identity = ((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1))
+    for index, geometry in enumerate(obj.geometry):
         mesh, primitive, primitive_pose = _geometry_to_native(geometry)
+        local = obj.geometry_poses[index] if obj.geometry_poses else identity
+        if primitive_pose is not None:
+            local = tuple(tuple(sum(local[i][k] * primitive_pose[k][j] for k in range(4))
+                                for j in range(4)) for i in range(4))
+        pose = _pose_matrix_to_message(local)
         if mesh is not None:
-            offset = len(combined_mesh.vertices)
-            combined_mesh.vertices.extend(mesh.vertices)
-            combined_mesh.triangles.extend(
-                MeshTriangle(
-                    vertex_indices=[index + offset for index in triangle.vertex_indices]
-                )
-                for triangle in mesh.triangles
-            )
+            native.meshes.append(mesh)
+            native.mesh_poses.append(pose)
         elif primitive is not None:
             native.primitives.append(primitive)
-            native.primitive_poses.append(
-                _pose_matrix_to_message(primitive_pose or ((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)))
-            )
-    if combined_mesh.triangles:
-        native.meshes.append(combined_mesh)
-        native.mesh_poses.append(_pose_matrix_to_message(((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1))))
+            native.primitive_poses.append(pose)
     if not native.meshes and not native.primitives:
         raise ValueError(f"对象 {obj.object_id} 没有可装载几何")
     return native
@@ -357,6 +353,11 @@ class MoveItPlanner:
         if request.goal.kind == "pose" and not robot.kinematics:
             raise ValueError("位姿目标必须在 RobotModel.kinematics 中声明 IK 求解器")
         pipeline = self.config.pipeline
+        from .moveit_move_group import MoveGroupPlannerConfig, build_move_group_parameters
+        timing = build_move_group_parameters(robot, MoveGroupPlannerConfig(
+            joint_acceleration_rad_s2=self.config.joint_acceleration_rad_s2,
+            acceleration_scaling=self.config.acceleration_scaling),
+            rail_axis=request.rail_axis)['robot_description_planning']
         # MoveIt ≤2.5.x 只读单数 `planning_plugin`（缺省时按 pluginlib 声明顺序
         # 取第一个，即 chomp_interface/CHOMPPlanner，静默退回 CHOMP）；2.10+ 用
         # 生成的参数监听器只读复数 `planning_plugins`，未知的单数键被忽略。
@@ -390,8 +391,9 @@ class MoveItPlanner:
             "robot_description": robot.urdf_xml,
             "robot_description_semantic": robot.srdf_xml,
             "robot_description_kinematics": dict(robot.kinematics),
+            "robot_description_planning": timing,
             "planning_pipelines": {
-                "pipeline_names": sorted({pipeline, "ompl", "pilz"})
+                "pipeline_names": [pipeline]
             },
             "ompl": ompl,
             "pilz": pilz,
@@ -445,14 +447,16 @@ class MoveItPlanner:
         values = request.robot.validate_joint_positions(q, name="state")
         with self._monitor.read_only() as scene:
             state = copy.copy(scene.current_state)
-        state.set_joint_group_positions(
-            request.planning_group or request.robot.planning_group, list(values)
-        )
+        active = dict(zip(request.robot.joint_names, values, strict=True))
         if request.rail_axis is not None:
             value = request.start_rail_m if rail is None else rail
             if value is None:
                 raise ValueError("请求声明了导轨轴却没有导轨坐标")
-            state.set_joint_positions([request.rail_axis.axis_id], [float(value)])
+            active[request.rail_axis.axis_id] = float(value)
+        from .urdf_tree import complete_joint_positions
+        # MoveItPy 的公开属性接收关节名映射；不能调用不存在的 set_joint_positions。
+        state.joint_positions = complete_joint_positions(
+            request.robot.urdf_xml, active, request.options.get('passive_joint_positions'))
         state.update()
         return state
 
@@ -597,7 +601,7 @@ class MoveItPlanner:
                 f"MoveIt planning raised {type(error).__name__}: {error}"
             ) from error
         elapsed = time.monotonic() - started
-        if not result:
+        if result is None:
             return {
                 "ok": False,
                 "status": "unreachable",
@@ -683,10 +687,17 @@ class MoveItPlanner:
         result = CollisionResult()
         with self._monitor.read_only() as scene:
             scene.check_collision(collision_request, result, state)
-        return {
-            "collision": bool(result.collision),
-            "contacts": [str(key) for key in result.contacts],
-        }
+        report = {"collision": bool(result.collision), "contacts": []}
+        try:
+            report["contacts"] = [str(key) for key in result.contacts]
+        except TypeError as error:
+            # 部分 MoveItPy 发行版未绑定 Contact 类型。碰撞布尔值仍有效，
+            # 不把缺失诊断当作无碰撞；原生 verbose 日志保留碰撞对。
+            report["contact_details_error"] = str(error)
+            collision_request.verbose = True
+            with self._monitor.read_only() as scene:
+                scene.check_collision(collision_request, CollisionResult(), state)
+        return report
 
     def _dense_check(
         self,
@@ -743,7 +754,13 @@ class MoveItPlanner:
 
         if not isinstance(request, PlanRequest):
             raise TypeError("request 必须是 PlanRequest")
-        return self._plan_body(request).with_payload(request)
+        from dataclasses import replace
+        result = self._plan_body(request).with_payload(request)
+        return replace(result, digest="", diagnostics={**result.diagnostics,
+            'simulation_timing_assumption': {
+                'hardware': False,
+                'joint_acceleration_rad_s2': self.config.joint_acceleration_rad_s2,
+                'source': 'shared_move_group_simulation_parameters_not_manufacturer_limits'}})
 
     def _plan_body(self, request: PlanRequest) -> PlanResult:
         """规划主体：装载场景、分段调用 MoveItPy 与离散碰撞复核。"""

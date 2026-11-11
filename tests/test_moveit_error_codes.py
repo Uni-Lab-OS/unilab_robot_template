@@ -145,7 +145,9 @@ def test_both_backends_share_one_table():
     assert moveit_move_group._ERROR_CODES is MOVEIT_ERROR_CODES
 
 
-def test_move_group_native_segment_reports_category_and_official_name():
+def test_move_group_native_segment_reports_category_and_official_name(monkeypatch):
+    from unilab_robot_runtime import planning_scene_sync
+    monkeypatch.setattr(planning_scene_sync, "sync_robot_state", lambda *a, **kw: None)
     class _Request:
         def __init__(self) -> None:
             self.motion_plan_request = SimpleNamespace(goal_constraints=[])
@@ -165,6 +167,7 @@ def test_move_group_native_segment_reports_category_and_official_name():
     planner._group = lambda request: "arm"
     planner._state = lambda request, q, rail=None: SimpleNamespace()
     planner._goal_constraints = lambda request, **kwargs: SimpleNamespace()
+    planner._path_constraints = lambda request: SimpleNamespace()
 
     segment = planner._native_segment(
         plan_request(),
@@ -229,3 +232,54 @@ def test_moveitpy_plan_preserves_raw_code_in_diagnostics(
     assert result.diagnostics["moveit_error_name"] == name
     assert result.diagnostics["failure_category"] == category
     planner.close()
+
+
+@pytest.mark.parametrize("code", [-10, -26, -31])
+def test_moveitpy_falsy_native_response_keeps_error_code(monkeypatch, code):
+    class FailedResponse:
+        error_code = SimpleNamespace(val=code)
+        def __bool__(self): return False
+    planner = moveit_planner.MoveItPlanner()
+    planner._component = SimpleNamespace(
+        set_start_state=lambda **kw: None, set_goal_state=lambda **kw: None,
+        set_path_constraints=lambda value: None,
+        plan=lambda **kw: FailedResponse())
+    monkeypatch.setattr(planner, "_require_native", lambda: (None, lambda *a: SimpleNamespace(), None))
+    monkeypatch.setattr(planner, "_state", lambda *a: SimpleNamespace(update=lambda: None))
+    monkeypatch.setattr(planner, "_path_constraints", lambda *a: None)
+    result = planner._native_segment(plan_request(), (0.,), object(), seed_q=(0.,), timeout_s=1.)
+    assert result['error_code'] == code
+    assert result['error_name'] == MOVEIT_ERROR_CODES[code].name
+    assert result['status'] == MOVEIT_ERROR_CODES[code].status
+
+
+def test_owned_native_session_restores_environment_and_closes_process_on_failure(tmp_path, monkeypatch):
+    import os, subprocess
+    from types import SimpleNamespace
+    from unilab_robot_runtime import moveit_move_group as native
+    from unilab_robot_runtime.ros_environment import native_planning_session
+    class Process:
+        pid=123
+        returncode=None
+        def poll(self):return self.returncode
+        def terminate(self):self.returncode=-1
+        def wait(self,timeout):return self.returncode
+    process=Process();closed=[]
+    class Planner:
+        def __init__(self,config):pass
+        def wait_ready(self):
+            assert os.environ["ROS_DOMAIN_ID"]=="92"
+            return True
+        def close(self):closed.append(True)
+    monkeypatch.setattr(subprocess,"Popen",lambda *a,**kw:process)
+    monkeypatch.setattr(native,"MoveGroupPlanner",Planner)
+    monkeypatch.setattr(native,"build_move_group_parameters",
+        lambda *a,**kw:{"ompl":{"arm":{}}})
+    monkeypatch.setenv("ROS_DOMAIN_ID","15")
+    robot=SimpleNamespace(planning_group="arm",digest="a"*64)
+    import pytest
+    with pytest.raises(RuntimeError,match="execution failed"):
+        with native_planning_session(robot,None,tmp_path,domain_id=92):
+            raise RuntimeError("execution failed")
+    assert os.environ["ROS_DOMAIN_ID"]=="15"
+    assert closed==[True] and process.returncode==-1

@@ -201,3 +201,21 @@ scene access and native-scene reconciliation after candidate rollback.
 Keep station targets, process guards, material followers and approved contact
 pairs in the domain package. OS owns inventory, claims and workflow scheduling;
 the robot runtime does not acquire a second inventory or scheduler.
+
+
+### 内容绑定的模型身份
+
+`RobotModel.mesh_sha256` 可显式覆盖 URDF 中的每一个网格 URI。公共
+`bind_mesh_identity(model, root=...)` 读取当前文件并核验内容；已绑定模型遇到
+字节漂移即拒绝。内容绑定的 `urdf_sha256` 用 `sha256:<内容摘要>` 取代本机
+网格路径后计算，因此安装目录或 Windows/Linux 路径改变不影响模型身份。
+实际执行仍使用原始 URDF 路径；原始 XML 哈希由运行记录另存。未提供内容
+绑定时保持旧摘要行为，不能声称自动具备跨主机可移植身份。
+
+## 直接消费场景校验、后处理和轨迹执行
+
+领域调用 check_scene_state(planner, request, world_body_ids=...)，由公共实现同步场景、检查机器人、明确声明的世界运动体以及全部附件的同 link 接触；任何查询或恢复异常都传播。world_body_ids 为空只表示调用者没有声明世界体运动，不能推断整站世界体两两无碰撞。
+
+validate_smoothed_motion 与 build_shortcut_candidate 分别位于既有 trajectory_quality、bounded_shortcut 模块，领域不维护同名包装文件。shortcut 的速度、加速度和 jerk 限值以及复验的水平/直线误差、Cartesian 速度限值由部署显式传入；姿态约束从原始产物读取，不重建另一组默认约束。复验报告限定为运动段，明确标注未重验事件；输出仍需完整事件验收。
+
+SceneMotionSampler.play 接受 apply 与 observe，向独立执行场景提供与预览相同的全场景采样。开始前核对关节、物料归属和每个运动体位姿；保留全部原始路点、事件边界和事件采样，逐采样检查读回。它是运动学执行合同，不授予物理、控制器插值或硬件资格。规划候选末态不能代替 execute 的反馈，也不能自动结算 OS 库存。

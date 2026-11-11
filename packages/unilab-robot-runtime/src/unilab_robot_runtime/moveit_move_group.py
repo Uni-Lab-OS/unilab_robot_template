@@ -691,6 +691,10 @@ class MoveGroupPlanner:
                 raise ValueError("请求声明了导轨轴却没有导轨坐标")
             names.append(request.rail_axis.axis_id)
             positions.append(float(value))
+        from .urdf_tree import complete_joint_positions
+        complete=complete_joint_positions(request.robot.urdf_xml,dict(zip(names,positions)),
+            request.options.get('passive_joint_positions'))
+        names=list(complete);positions=list(complete.values())
         state = self._session.messages["RobotState"]()
         state.joint_state.name = names
         state.joint_state.position = positions
@@ -759,8 +763,12 @@ class MoveGroupPlanner:
                 item = messages["JointConstraint"]()
                 item.joint_name = name
                 item.position = float(value)
-                item.tolerance_above = tolerance
-                item.tolerance_below = tolerance
+                value = (float(request.options.get("rail_goal_tolerance_m", tolerance))
+                         if request.rail_axis and name == request.rail_axis.axis_id else tolerance)
+                if not math.isfinite(value) or value <= 0:
+                    raise ValueError("Joint goal tolerance must be finite and positive")
+                item.tolerance_above = value
+                item.tolerance_below = value
                 item.weight = 1.0
                 constraints.joint_constraints.append(item)
             return constraints
@@ -1094,7 +1102,8 @@ class MoveGroupPlanner:
             summary = {
                 key: segment.get(key)
                 for key in ("group", "status", "error_code", "error_name",
-                            "failure_category", "planning_time_s", "start_error", "times")
+                            "failure_category", "planning_time_s", "start_error", "times",
+                            "rejected_trajectory", "timing_normalization")
             }
             summary["points"] = len(segment.get("points", ()))
             segments.append(summary)
@@ -1305,6 +1314,8 @@ class MoveGroupPlanner:
                     "error_code": code, "error_name": failure.name,
                     "error_message": failure.message,
                     "first_attempt": first_attempt,
+                    "rejected_trajectory": self._rejected_trajectory(
+                        request, getattr(result.trajectory, "joint_trajectory", None), start_q, rail_start),
                     "planning_time_s": float(result.planning_time or elapsed)}
         trajectory = result.trajectory.joint_trajectory
         names = list(trajectory.joint_names)
@@ -1349,6 +1360,7 @@ class MoveGroupPlanner:
             return {"ok": False, "status": "invalid", "group": group,
                     "failure_category": "empty_or_malformed_trajectory",
                     "error_code": code}
+        normalization = _coalesce_terminal_stop(points, times)
         if (len(times) < 2 or abs(times[0]) > 1e-9
                 or any(not math.isfinite(t) for t in times)
                 or any(b <= a for a, b in zip(times, times[1:]))):
@@ -1364,7 +1376,48 @@ class MoveGroupPlanner:
         return {"ok": True, "points": points, "times": times, "group": group,
                 "error_code": code,
                 "planning_time_s": float(result.planning_time or elapsed),
-                "pipeline": pipeline, "planner_id": planner_id}
+                "pipeline": pipeline, "planner_id": planner_id,
+                "timing_normalization": normalization}
+
+    def _rejected_trajectory(self, request, trajectory, start_q, rail_start):
+        """Keep native rejection evidence separate from executable waypoints."""
+        if trajectory is None:
+            return dict(joint_names=[],points=[],executable=False,checked_states=0,
+                        first_invalid_state=None,validation_error="native_response_has_no_trajectory")
+        names = list(trajectory.joint_names)
+        evidence = {"joint_names": names, "points": [], "executable": False,
+                    "checked_states": 0, "first_invalid_state": None}
+        for point in trajectory.points:
+            evidence["points"].append({
+                "positions": list(point.positions),
+                "time_s": point.time_from_start.sec + point.time_from_start.nanosec / 1e9})
+        known = set(request.robot.joint_names)
+        rail_joint = request.rail_axis.axis_id if request.rail_axis else None
+        if rail_joint:
+            known.add(rail_joint)
+        if not names or len(names) != len(set(names)) or not set(names) <= known:
+            evidence["validation_error"] = "malformed_joint_names"
+            return evidence
+        for index, point in enumerate(evidence["points"]):
+            values = point["positions"]
+            if len(values) != len(names) or not all(math.isfinite(v) for v in values):
+                evidence["validation_error"] = "malformed_positions"
+                break
+            mapping = dict(zip(names, values, strict=True))
+            q = [mapping.get(name, float(start_q[i]))
+                 for i, name in enumerate(request.robot.joint_names)]
+            rail = mapping.get(rail_joint, float(rail_start))
+            try:
+                validity = self._state_validity(request, q, rail, whole_robot=True)
+            except Exception as error:
+                evidence["validation_error"] = f"{type(error).__name__}: {error}"
+                break
+            evidence["checked_states"] += 1
+            if not validity["valid"]:
+                evidence["first_invalid_state"] = dict(
+                    index=index, q=q, rail_m=rail, validation=validity)
+                break
+        return evidence
 
     # ------------------------------------------------------------------ 收尾
     def close(self) -> None:
@@ -1393,6 +1446,43 @@ class MoveGroupPlanner:
     def __exit__(self, exc_type: object, exc: object, traceback: object) -> None:
         self.close()
 
+
+
+def _coalesce_terminal_stop(points, times):
+    """Keep the native final stop when Pilz repeats its terminal timestamp.
+
+    Only identical positions and already-zero velocities qualify. The previous
+    point may still carry the deceleration; the explicit final zero acceleration
+    owns that instant. No interior point or nonzero motion is retimed.
+    """
+    if len(points) < 3 or len(points) != len(times):
+        return None
+    if not (math.isfinite(times[-1]) and times[-3] < times[-2] == times[-1]):
+        return None
+    left, right = points[-2:]
+    if left["q"] != right["q"] or left["rail"] != right["rail"]:
+        return None
+    if not all(math.isfinite(v) for v in (*right["q"], right["rail"])):
+        return None
+    for point in (left, right):
+        if "velocities" not in point or "rail_velocity" not in point:
+            return None
+        if not all(abs(v) <= 1e-12 for v in (*point["velocities"], point["rail_velocity"])):
+            return None
+        if "accelerations" not in point or "rail_acceleration" not in point:
+            return None
+        if not all(math.isfinite(v) for v in (*point["accelerations"], point["rail_acceleration"])):
+            return None
+    if "accelerations" not in right or "rail_acceleration" not in right:
+        return None
+    if not all(abs(v) <= 1e-12 for v in (*right["accelerations"], right["rail_acceleration"])):
+        return None
+    receipt = dict(kind="duplicate_terminal_stop", time_s=times[-1],
+                   discarded=dict(left), retained=dict(right),
+                   positions_unchanged=True, duration_unchanged=True)
+    points.pop(-2)
+    times.pop(-2)
+    return receipt
 
 def _zero_motion(request: PlanRequest) -> bool:
     """目标已在显式关节容差内时保留实际状态，不制造零时长运动。"""

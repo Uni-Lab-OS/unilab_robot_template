@@ -228,6 +228,7 @@ class RobotModel:
     joint_names: tuple[str, ...]
     joint_limits: tuple[tuple[float, float], ...] | None = None
     kinematics: Mapping[str, Any] = field(default_factory=dict)
+    mesh_sha256: Mapping[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "model_id", _text(self.model_id, "model_id"))
@@ -268,6 +269,26 @@ class RobotModel:
                 limits.append((low, high))
             object.__setattr__(self, "joint_limits", tuple(limits))
         object.__setattr__(self, "kinematics", _mapping(self.kinematics, "kinematics"))
+        meshes = dict(self.mesh_sha256)
+        if meshes:
+            expected = {m.get("filename") for m in ET.fromstring(self.urdf_xml).findall(".//mesh")}
+            if set(meshes) != expected:
+                raise ValueError("mesh_sha256 must cover every URDF mesh exactly")
+            if any(not isinstance(v, str) or len(v) != 64 or any(c not in "0123456789abcdef" for c in v)
+                   for v in meshes.values()):
+                raise ValueError("mesh_sha256 requires lowercase SHA-256 values")
+        object.__setattr__(self, "mesh_sha256", _mapping(meshes, "mesh_sha256"))
+
+    @property
+    def identity_urdf_xml(self) -> str:
+        """显式内容绑定时以网格 SHA 标识模型，运行时仍使用原 URDF 路径。"""
+        if not self.mesh_sha256:
+            return self.urdf_xml
+        root = ET.fromstring(self.urdf_xml)
+        for mesh in root.findall(".//mesh"):
+            mesh.set("filename", "sha256:" + self.mesh_sha256[mesh.get("filename")])
+        return ET.tostring(root, encoding="unicode")
+
 
     @property
     def dof(self) -> int:
@@ -300,7 +321,7 @@ class RobotModel:
             "joint_limits": [list(limit) for limit in self.joint_limits]
             if self.joint_limits is not None
             else None,
-            "urdf_sha256": hashlib.sha256(self.urdf_xml.encode("utf-8")).hexdigest(),
+            "urdf_sha256": hashlib.sha256(self.identity_urdf_xml.encode("utf-8")).hexdigest(),
             "srdf_sha256": hashlib.sha256(self.srdf_xml.encode("utf-8")).hexdigest(),
         }
 

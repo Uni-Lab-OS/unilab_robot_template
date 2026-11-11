@@ -70,6 +70,7 @@ def test_both_config_builders_emit_the_singular_ompl_plugin() -> None:
     assert "chomp" not in params
 
     config = moveit_planner.MoveItPlanner()._build_config(plan_request())
+    assert config["planning_pipelines"]["pipeline_names"] == ["ompl"]
     assert require_ompl_planning_plugin(config["ompl"]) == OMPL_PLANNING_PLUGIN
     assert config["ompl"]["planning_plugin"] == OMPL_PLANNING_PLUGIN
     assert config["ompl"]["planning_plugins"] == [OMPL_PLANNING_PLUGIN]
@@ -148,3 +149,12 @@ def test_simplification_flag_reaches_humble_planner_configuration():
         ompl = build_move_group_parameters(robot_model(), config)["ompl"]
         assert ompl["planner_configs"][config.planner_id]["simplify_solutions"] == int(enabled)
         assert "simplify_solutions" not in ompl["arm"]
+
+
+def test_moveitpy_uses_shared_explicit_timing_limits():
+    config = moveit_planner.MoveItPlanner(
+        moveit_planner.MoveItPlannerConfig(joint_acceleration_rad_s2=0.7))._build_config(plan_request())
+    limit = config['robot_description_planning']['joint_limits']['joint_1']
+    assert limit['has_acceleration_limits'] and limit['max_acceleration'] == 0.7
+    with pytest.raises(ValueError):
+        moveit_planner.MoveItPlannerConfig(joint_acceleration_rad_s2=0.)
